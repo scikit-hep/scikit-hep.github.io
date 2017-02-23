@@ -1,0 +1,156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Constants (skhep.constants) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/scikit-hep.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mathjax_conf.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="API" href="api.html" />
+    <link rel="next" title="Description of datasets (skhep.dataset)" href="dataset.html" />
+    <link rel="prev" title="API" href="api.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=scikit-hep&repo=scikit-hep&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../documentation.html">Documentation</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="api.html" title="previous chapter">API</a></li>
+      <li>Next: <a href="dataset.html" title="next chapter">Description of datasets (<cite>skhep.dataset</cite>)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-skhep.constants">
+<span id="constants-skhep-constants"></span><span id="constants"></span><h1>Constants (<cite>skhep.constants</cite>)<a class="headerlink" href="#module-skhep.constants" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackage-for-constants">
+<h2>Subpackage for constants<a class="headerlink" href="#subpackage-for-constants" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Physical constants.</li>
+<li>Common/handy constants.</li>
+</ul>
+</div></blockquote>
+<p>Typical use case:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.constants</span> <span class="kn">import</span> <span class="n">c_light</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span>     <span class="kn">import</span> <span class="n">picosecond</span><span class="p">,</span> <span class="n">micrometer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tau_Bs</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">picosecond</span>    <span class="c1"># a particle lifetime, say the Bs meson&#39;s</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctau_Bs</span> <span class="o">=</span> <span class="n">c_light</span> <span class="o">*</span> <span class="n">tau_Bs</span>   <span class="c1"># ctau of the particle, roughly 450 microns</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">ctau_Bs</span>   <span class="c1"># result in HEP units, so mm ;-)</span>
+<span class="go">0.449688687</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">ctau_Bs</span> <span class="o">/</span> <span class="n">micrometer</span>   <span class="c1"># result in micrometers</span>
+<span class="go">449.688687</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2016-2017, The Scikit-HEP Developers.
+      
+      |
+      <a href="../_sources/api/constants.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

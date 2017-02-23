@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to the Scikit-HEP project! &mdash; Scikit-HEP 0.0.1 documentation</title>
+    <title>About &mdash; Scikit-HEP 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -27,9 +27,10 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/mathjax_conf.js"></script>
-    <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="#" />
-    <link rel="next" title="About" href="about.html" />
+    <link rel="author" title="About these documents" href="#" />
+    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="prev" title="Welcome to the Scikit-HEP project!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -43,7 +44,7 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
-  <a href="#">
+  <a href="index.html">
     <img class="logo" src="_static/logo.svg" alt="Logo"/>
     
   </a>
@@ -64,8 +65,13 @@
 
 
 <h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-team">Core team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributors">Contributors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
@@ -75,8 +81,9 @@
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="about.html" title="next chapter">About</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to the Scikit-HEP project!</a></li>
+      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
   </ul></li>
 </ul>
 </div>
@@ -99,20 +106,44 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-the-scikit-hep-project">
-<h1>Welcome to the Scikit-HEP project!<a class="headerlink" href="#welcome-to-the-scikit-hep-project" title="Permalink to this headline">¶</a></h1>
-<p>To get started, first <a class="reference internal" href="installation.html#installation"><span>install the skhep module</span></a> and then read the <a class="reference internal" href="documentation.html#documentation"><span>main documentation</span></a>.</p>
-<p>If there&#8217;s a feature missing you&#8217;d like to see, you can <a class="reference internal" href="contributing.html#contributing"><span>contribute to Scikit-HEP</span></a> or check out the <a class="reference internal" href="affiliations.html#affiliations"><span>list of affiliated packages</span></a></p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+  <div class="section" id="about">
+<h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>The Scikit-HEP project is a community-driven and community-oriented project with the aim of providing Particle Physics at large with a Python package containing core and common tools.</p>
+<p>The project started in Autumn 2016 and is presently being prepared for an initial beta release.</p>
+<p>The software package defines a set of five <em>pillars</em>, which are seen to embrace all major topics involved in a physicist&#8217;s worlk.
+These are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Datasets: data in various sources, such as ROOT, Numpy/Pandas, databases, wrapped in a common interface.</li>
+<li>Aggregations: e.g. histograms that summarize or project a dataset.</li>
+<li>Modeling: data models and fitting utilities.</li>
+<li>Simulation: wrappers for Monte Carlo engines and other generators of simulated data.</li>
+<li>Visualization: interface to graphics engines, from ROOT and Matplotlib to maybe even d3 or plot.ly.</li>
 </ul>
+</div></blockquote>
+<div class="section" id="core-team">
+<h2>Core team<a class="headerlink" href="#core-team" title="Permalink to this headline">¶</a></h2>
+<p>Project startup team:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Vanya Belyaev (ITEP, Moscow - LHCb)</li>
+<li>Noel Dawe (University of Melbourne - ATLAS)</li>
+<li>David Lange (Princeton University - CMS, DIANA)</li>
+<li>Sasha Mazurov (University of Birmingham - LHCb)</li>
+<li>Jim Pivarski (Princeton University - CMS, DIANA)</li>
+<li>Eduardo Rodrigues (University of Cincinnati - DIANA, LHCb)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<p>Every project (sub)package is under the responsibility of a coordinator/maintainer. The list will be provided in due time.</p>
+<p>We look forward to contributions from the community!</p>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>The software package is under a BDS 3-clause license.</p>
+</div>
 </div>
 
 
@@ -125,7 +156,7 @@
       &copy;2016-2017, The Scikit-HEP Developers.
       
       |
-      <a href="_sources/index.txt"
+      <a href="_sources/about.txt"
           rel="nofollow">Page source</a>
     </div>
 

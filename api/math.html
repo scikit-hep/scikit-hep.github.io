@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mathematical utilities (skhep.math) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/scikit-hep.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mathjax_conf.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="API" href="api.html" />
+    <link rel="next" title="Simulation utilities (skhep.simulation)" href="simulation.html" />
+    <link rel="prev" title="Description of datasets (skhep.dataset)" href="dataset.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=scikit-hep&repo=scikit-hep&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../documentation.html">Documentation</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="dataset.html" title="previous chapter">Description of datasets (<cite>skhep.dataset</cite>)</a></li>
+      <li>Next: <a href="simulation.html" title="next chapter">Simulation utilities (<cite>skhep.simulation</cite>)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-skhep.math">
+<span id="mathematical-utilities-skhep-math"></span><span id="math"></span><h1>Mathematical utilities (<cite>skhep.math</cite>)<a class="headerlink" href="#module-skhep.math" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackage-for-mathematical-functions-and-utilities">
+<h2>Subpackage for mathematical functions and utilities<a class="headerlink" href="#subpackage-for-mathematical-functions-and-utilities" title="Permalink to this headline">¶</a></h2>
+</div>
+<span class="target" id="module-skhep.math.kinematics"></span><div class="section" id="mathematical-functions-relevant-to-kinematics">
+<h2>Mathematical functions relevant to kinematics<a class="headerlink" href="#mathematical-functions-relevant-to-kinematics" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="skhep.math.kinematics.Kallen_function">
+<code class="descclassname">skhep.math.kinematics.</code><code class="descname">Kallen_function</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Kallen_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#kallen" id="id1">[Kallen]</a> function, aka triangle or lambda function,
+named after physicist Anders Olof Gunnar Kallen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Definition:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="math">
+\[\begin{split}\begin{eqnarray}
+\lambda(x,y,z) &amp;=&amp; x^2 + y^2 + z^2 - 2 x y - 2 y z - 2 z x \\
+                &amp;=&amp; (x-y-z)^2 - 4 y z \\
+                &amp;=&amp; [ x - (\sqrt{y}+\sqrt{z})^2 ] [ x - (\sqrt{y}-\sqrt{z})^2 ] \,\,\,\mathrm{if} \,\,\,y, z &gt; 0
+\end{eqnarray}\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Calculate in the rest frame of a particle of mass M decaying to 2 particles labeled 1 and 2,
+<span class="math">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="kn">import</span> <span class="n">Kallen_function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="kn">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="mf">5.279</span> <span class="o">*</span> <span class="n">GeV</span><span class="p">;</span> <span class="n">m1</span> <span class="o">=</span> <span class="mf">493.7</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">;</span> <span class="n">m2</span> <span class="o">=</span> <span class="mf">139.6</span> <span class="o">*</span> <span class="n">MeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">Kallen_function</span><span class="p">(</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m2</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">p</span> <span class="o">/</span> <span class="n">GeV</span>   <span class="c1"># print the CMS momentum in GeV</span>
+<span class="go">2.61453580221</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Reference:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kallen" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2016-2017, The Scikit-HEP Developers.
+      
+      |
+      <a href="../_sources/api/math.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

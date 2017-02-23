@@ -1,0 +1,346 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Simulation utilities (skhep.simulation) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/scikit-hep.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/mathjax_conf.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="API" href="api.html" />
+    <link rel="next" title="Units (skhep.units)" href="units.html" />
+    <link rel="prev" title="Mathematical utilities (skhep.math)" href="math.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=scikit-hep&repo=scikit-hep&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../documentation.html">Documentation</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="math.html" title="previous chapter">Mathematical utilities (<cite>skhep.math</cite>)</a></li>
+      <li>Next: <a href="units.html" title="next chapter">Units (<cite>skhep.units</cite>)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-skhep.simulation">
+<span id="simulation-utilities-skhep-simulation"></span><span id="simulation"></span><h1>Simulation utilities (<cite>skhep.simulation</cite>)<a class="headerlink" href="#module-skhep.simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackage-for-simulation-utilities">
+<h2>Subpackage for simulation utilities<a class="headerlink" href="#subpackage-for-simulation-utilities" title="Permalink to this headline">¶</a></h2>
+</div>
+<span class="target" id="module-skhep.simulation.pdgid"></span><div class="section" id="subpackage-for-pdg-id-methods">
+<h2>Subpackage for PDG ID methods<a class="headerlink" href="#subpackage-for-pdg-id-methods" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-HEP simply wraps the functionality provided by the PyPDT package [1]
+to access in Python what is otherwise provided by the HepPID package in C++.
+HepPID translates the standard PDG numbering scheme.</p>
+<p>All methods from PyPDT applicable to the PDG particle identification codes,
+a.k.a. PDG IDs, are available.</p>
+<p>Functions available:
+[&#8216;isValid&#8217;, &#8216;charge&#8217;, &#8216;threeCharge&#8217;, &#8216;jSpin&#8217;, &#8216;lSpin&#8217;, &#8216;sSpin&#8217;, &#8216;hasFundamentalAnti&#8217;, &#8216;hasDown&#8217;, &#8216;hasUp&#8217;, &#8216;hasStrange&#8217;, &#8216;hasCharm&#8217;, &#8216;hasBottom&#8217;, &#8216;hasTop&#8217;, &#8216;isLepton&#8217;, &#8216;isHadron&#8217;, &#8216;isBaryon&#8217;, &#8216;isMeson&#8217;, &#8216;isNucleus&#8217;, &#8216;isDiQuark&#8217;, &#8216;isDyon&#8217;, &#8216;isPentaquark&#8217;, &#8216;isQBall&#8217;, &#8216;isRhadron&#8217;, &#8216;isSUSY&#8217;, &#8216;ionA&#8217;, &#8216;ionNlambda&#8217;, &#8216;ionZ&#8217;]</p>
+<dl class="docutils">
+<dt>Standard use case:</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.simulation</span> <span class="kn">import</span> <span class="n">pdgid</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pdgid</span><span class="o">.</span><span class="n">isLepton</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pdgid</span><span class="o">.</span><span class="n">charge</span><span class="p">(</span><span class="o">-</span><span class="mi">4444</span><span class="p">)</span>  <span class="c1"># anti Omega_ccc^++</span>
+<span class="go">-2.0</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>References</strong></p>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><a class="reference external" href="https://pypi.python.org/pypi/PyPDT">https://pypi.python.org/pypi/PyPDT</a>.</td></tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isValid">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isValid</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isValid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this is a valid PID</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.charge">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">charge</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>The actual charge</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.threeCharge">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">threeCharge</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.threeCharge" title="Permalink to this definition">¶</a></dt>
+<dd><p>3 times the charge (so that it can always be returned as an int)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.jSpin">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">jSpin</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.jSpin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 2J+1, where J is the total angular momentum.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.lSpin">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">lSpin</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.lSpin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 2L+1, where L is the orbital angular momentum</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.sSpin">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">sSpin</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.sSpin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns 2S+1, where S is the spin.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasFundamentalAnti">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasFundamentalAnti</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasFundamentalAnti" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this is a fundamental particle, does it have a valid antiparticle?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasDown">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasDown</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasDown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain a down quark?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasUp">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasUp</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain an up quark?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasStrange">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasStrange</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasStrange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain an strange quark?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasCharm">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasCharm</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasCharm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain a charm quark?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasBottom">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasBottom</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasBottom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain a bottom quark?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.hasTop">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">hasTop</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.hasTop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does this particle contain a top quark? Really?!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isLepton">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isLepton</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isLepton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is this a valid lepton ID?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isHadron">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isHadron</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isHadron" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is this a valid hadron ID?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isBaryon">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isBaryon</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isBaryon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this is a valid baryon</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isMeson">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isMeson</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isMeson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this is a valid meson</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isNucleus">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isNucleus</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isNucleus" title="Permalink to this definition">¶</a></dt>
+<dd><p>This implements the 2006 Monte Carlo nuclear code scheme.
+Ion numbers are +/- 10LZZZAAAI.
+AAA is A - total baryon number
+ZZZ is Z - total charge
+L is the total number of strange quarks.
+I is the isomer number, with I=0 corresponding to the ground state.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isDiQuark">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isDiQuark</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isDiQuark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this is a valid diquark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isDyon">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isDyon</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isDyon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is this a Dyon (magnetic monopole)?</p>
+<p>Magnetic monopoles and Dyons are assumed to have one unit of Dirac monopole
+charge and a variable integer number xyz units of electric charge.</p>
+<p>Codes 411xyz0 are then used when the magnetic and electrical charge sign
+agree and 412xyz0 when they disagree, with the overall sign of the particle
+set by the magnetic charge.  For now no spin information is provided.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isPentaquark">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isPentaquark</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isPentaquark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if this is a valid pentaquark.</p>
+<p>A pentaquark code is of the form 9abcdej, where j is the spin and a-e are
+quarks.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isQBall">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isQBall</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isQBall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for QBalls</p>
+<p>The ad-hoc numbering for such particles is 100xxxx0, where xxxx is the charge in tenths.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isRhadron">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isRhadron</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isRhadron" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is this an R-hadron?</p>
+<p>An R-hadron code is of the form 10abcdj, 100abcj, or 1000abj where j is the
+spin, b, c, and d are quarks or gluons, and a (the digit following the
+zeros) is a SUSY particle.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.isSUSY">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">isSUSY</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.isSUSY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is this a SUSY particle?
+Fundamental SUSY particles have n = 1 or 2 and nr = 0.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.ionA">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">ionA</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.ionA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ion A number. Ion numbers are +/- 10LZZZAAAI. Returns None if not an ion.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.ionNlambda">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">ionNlambda</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.ionNlambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ion nLambda number. Ion numbers are +/- 10LZZZAAAI. Returns None if not an ion.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.simulation.pdgid.ionZ">
+<code class="descclassname">skhep.simulation.pdgid.</code><code class="descname">ionZ</code><span class="sig-paren">(</span><em>pid</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.simulation.pdgid.ionZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ion Z number. Ion numbers are +/- 10LZZZAAAI. Returns None if not an ion.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2016-2017, The Scikit-HEP Developers.
+      
+      |
+      <a href="../_sources/api/simulation.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

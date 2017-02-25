@@ -113,25 +113,25 @@
             
   <div class="section" id="module-skhep.constants">
 <span id="constants-skhep-constants"></span><span id="constants"></span><h1>Constants (<cite>skhep.constants</cite>)<a class="headerlink" href="#module-skhep.constants" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackage-for-constants">
-<h2>Subpackage for constants<a class="headerlink" href="#subpackage-for-constants" title="Permalink to this headline">¶</a></h2>
+<p>This package <cite>skhep.constants</cite> contains 2 sorts of constants:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Physical constants.</li>
-<li>Common/handy constants.</li>
+<li>Common and/or handy constants.</li>
 </ul>
 </div></blockquote>
+<p>All constants are computed in the HEP System of Units
+as defined in the <cite>skhep.units</cite> package.</p>
 <p>Typical use case:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.constants</span> <span class="kn">import</span> <span class="n">c_light</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span>     <span class="kn">import</span> <span class="n">picosecond</span><span class="p">,</span> <span class="n">micrometer</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tau_Bs</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">picosecond</span>    <span class="c1"># a particle lifetime, say the Bs meson&#39;s</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ctau_Bs</span> <span class="o">=</span> <span class="n">c_light</span> <span class="o">*</span> <span class="n">tau_Bs</span>   <span class="c1"># ctau of the particle, roughly 450 microns</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">ctau_Bs</span>   <span class="c1"># result in HEP units, so mm ;-)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ctau_Bs</span> <span class="o">=</span> <span class="n">c_light</span> <span class="o">*</span> <span class="n">tau_Bs</span>   <span class="c1"># ctau of the particle, ~450 microns</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">ctau_Bs</span>                <span class="c1"># result in HEP units, so mm ;-)</span>
 <span class="go">0.449688687</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">ctau_Bs</span> <span class="o">/</span> <span class="n">micrometer</span>   <span class="c1"># result in micrometers</span>
 <span class="go">449.688687</span>
 </pre></div>
-</div>
 </div>
 </div>
 

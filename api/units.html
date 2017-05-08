@@ -30,7 +30,7 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
     <link rel="up" title="API" href="api.html" />
-    <link rel="next" title="Frequently asked questions" href="../faq.html" />
+    <link rel="next" title="Utilities (skhep.utils)" href="utils.html" />
     <link rel="prev" title="Simulation utilities (skhep.simulation)" href="simulation.html" />
    
   <link rel="stylesheet" href="../static/custom.css" type="text/css" />
@@ -87,7 +87,7 @@
   <li><a href="../documentation.html">Documentation</a><ul>
   <li><a href="api.html">API</a><ul>
       <li>Previous: <a href="simulation.html" title="previous chapter">Simulation utilities (<cite>skhep.simulation</cite>)</a></li>
-      <li>Next: <a href="../faq.html" title="next chapter">Frequently asked questions</a></li>
+      <li>Next: <a href="utils.html" title="next chapter">Utilities (<cite>skhep.utils</cite>)</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -114,9 +114,37 @@
             
   <div class="section" id="module-skhep.units">
 <span id="units-skhep-units"></span><span id="units"></span><h1>Units (<cite>skhep.units</cite>)<a class="headerlink" href="#module-skhep.units" title="Permalink to this headline">¶</a></h1>
-<p>Package for physical units and commonly-used unit prefixes.</p>
-<p>In HEP the standard set of basic units was originally defined by the <a class="reference internal" href="#clhep" id="id1">[CLHEP]</a> project:</p>
-<table border="1" class="docutils">
+<p>Subpackage for the HEP System of Units, (derived) physical units
+and commonly-used unit prefixes.</p>
+<p>The HEP System of Units is the set of basic units originally defined by the CLHEP project.</p>
+<span class="target" id="module-skhep.units.prefixes"></span><div class="section" id="common-unit-prefixes">
+<h2>Common unit prefixes<a class="headerlink" href="#common-unit-prefixes" title="Permalink to this headline">¶</a></h2>
+<p>There are 2 types of prefixes:</p>
+<blockquote>
+<div><ul class="simple">
+<li>SI prefixes <a class="reference internal" href="#si-prefixes" id="id1">[SI_prefixes]</a>.</li>
+<li>Binary prefixes <a class="reference internal" href="#binary-prefixes" id="id2">[Binary_prefixes]</a>.</li>
+</ul>
+</div></blockquote>
+<p><strong>References</strong></p>
+<table class="docutils citation" frame="void" id="si-prefixes" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[SI_prefixes]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/International_System_of_Units#Prefixes">https://en.wikipedia.org/wiki/International_System_of_Units#Prefixes</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="binary-prefixes" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Binary_prefixes]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Unit_prefix#Binary_prefixes">https://en.wikipedia.org/wiki/Unit_prefix#Binary_prefixes</a>.</td></tr>
+</tbody>
+</table>
+</div>
+<span class="target" id="module-skhep.units.units"></span><div class="section" id="module-of-hep-basic-units">
+<h2>Module of HEP basic units<a class="headerlink" href="#module-of-hep-basic-units" title="Permalink to this headline">¶</a></h2>
+<p>In HEP the System of Units consists of the basic units originally defined by the <a class="reference internal" href="#clhep" id="id3">[CLHEP]</a> project:</p>
+<blockquote>
+<div><table border="1" class="docutils">
 <colgroup>
 <col width="46%" />
 <col width="44%" />
@@ -167,7 +195,8 @@
 </tr>
 </tbody>
 </table>
-<p>It is largely based on the international system of units (<a class="reference internal" href="#si" id="id2">[SI]</a>)</p>
+</div></blockquote>
+<p>It is largely based on the international system of units (<a class="reference internal" href="#si" id="id4">[SI]</a>)</p>
 <blockquote>
 <div><table border="1" class="docutils">
 <colgroup>
@@ -213,7 +242,8 @@
 </tbody>
 </table>
 </div></blockquote>
-<p>but augments it with handy definitions as well as changing the basic length and time units.</p>
+<p>but augments it with handy definitions, changing the basic length and time units.</p>
+<p>This module also defines an extensive set of derived units.</p>
 <p>Typical use cases:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># add two quantities with length units and get the result im meters</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
@@ -233,96 +263,13 @@
 <table class="docutils citation" frame="void" id="clhep" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[CLHEP]</a></td><td><a class="reference external" href="http://proj-clhep.web.cern.ch/proj-clhep/">http://proj-clhep.web.cern.ch/proj-clhep/</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id3">[CLHEP]</a></td><td><a class="reference external" href="http://proj-clhep.web.cern.ch/proj-clhep/">http://proj-clhep.web.cern.ch/proj-clhep/</a>.</td></tr>
 </tbody>
 </table>
 <table class="docutils citation" frame="void" id="si" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[SI]</a></td><td><a class="reference external" href="http://www.physics.nist.gov/cuu/Units/index.html">http://www.physics.nist.gov/cuu/Units/index.html</a>.</td></tr>
-</tbody>
-</table>
-<span class="target" id="module-skhep.units.prefixes"></span><div class="section" id="common-unit-prefixes">
-<h2>Common unit prefixes<a class="headerlink" href="#common-unit-prefixes" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li>SI prefixes <a class="reference internal" href="#si-prefixes" id="id3">[SI_prefixes]</a>.</li>
-<li>Binary prefixes <a class="reference internal" href="#binary-prefixes" id="id4">[Binary_prefixes]</a>.</li>
-</ul>
-</div></blockquote>
-<p><strong>References</strong></p>
-<table class="docutils citation" frame="void" id="si-prefixes" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[SI_prefixes]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/International_System_of_Units#Prefixes">https://en.wikipedia.org/wiki/International_System_of_Units#Prefixes</a>.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="binary-prefixes" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[Binary_prefixes]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/Unit_prefix#Binary_prefixes">https://en.wikipedia.org/wiki/Unit_prefix#Binary_prefixes</a>.</td></tr>
-</tbody>
-</table>
-</div>
-<span class="target" id="module-skhep.units.units"></span><div class="section" id="module-of-hep-basic-units">
-<h2>Module of HEP basic units<a class="headerlink" href="#module-of-hep-basic-units" title="Permalink to this headline">¶</a></h2>
-<p>In HEP the standard set of basic units was originally defined by the CLHEP <a class="footnote-reference" href="#id6" id="id5">[1]</a> project. It is:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="46%" />
-<col width="44%" />
-<col width="10%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Quantity</th>
-<th class="head">Name</th>
-<th class="head">Unit</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Length</td>
-<td>millimeter</td>
-<td>mm</td>
-</tr>
-<tr class="row-odd"><td>Time</td>
-<td>nanosecond</td>
-<td>ns</td>
-</tr>
-<tr class="row-even"><td>Energy</td>
-<td>Mega electron Volt</td>
-<td>MeV</td>
-</tr>
-<tr class="row-odd"><td>Positron charge</td>
-<td>eplus</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Temperature</td>
-<td>kelvin</td>
-<td>K</td>
-</tr>
-<tr class="row-odd"><td>Amount of substance</td>
-<td>mole</td>
-<td>mol</td>
-</tr>
-<tr class="row-even"><td>Luminous intensity</td>
-<td>candela</td>
-<td>cd</td>
-</tr>
-<tr class="row-odd"><td>Plane angle</td>
-<td>radian</td>
-<td>rad</td>
-</tr>
-<tr class="row-even"><td>Solid angle</td>
-<td>steradian</td>
-<td>sr</td>
-</tr>
-</tbody>
-</table>
-<p><strong>References</strong></p>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[1]</a></td><td><a class="reference external" href="http://proj-clhep.web.cern.ch/proj-clhep/">http://proj-clhep.web.cern.ch/proj-clhep/</a>.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id4">[SI]</a></td><td><a class="reference external" href="http://www.physics.nist.gov/cuu/Units/index.html">http://www.physics.nist.gov/cuu/Units/index.html</a>.</td></tr>
 </tbody>
 </table>
 </div>

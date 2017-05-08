@@ -114,14 +114,92 @@
             
   <div class="section" id="module-skhep.dataset">
 <span id="description-of-datasets-skhep-dataset"></span><span id="dataset"></span><h1>Description of datasets (<cite>skhep.dataset</cite>)<a class="headerlink" href="#module-skhep.dataset" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="subpackage-for-the-description-of-datasets">
-<h2>Subpackage for the description of datasets<a class="headerlink" href="#subpackage-for-the-description-of-datasets" title="Permalink to this headline">¶</a></h2>
+<p>Subpackage for the description of datasets.</p>
+<span class="target" id="module-skhep.dataset.defs"></span><div class="section" id="module-for-dataset-related-definitions">
+<h2>Module for Dataset-related definitions<a class="headerlink" href="#module-for-dataset-related-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The module contains the definition of the <code class="docutils literal"><span class="pre">Dataset</span></code> abstract base class
+and a series of mixin classes.</p>
+<dl class="class">
+<dt id="skhep.dataset.defs.Dataset">
+<em class="property">class </em><code class="descclassname">skhep.dataset.defs.</code><code class="descname">Dataset</code><a class="headerlink" href="#skhep.dataset.defs.Dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class for all dataset classes.</p>
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.data">
+<code class="descname">data</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data underlying this Dataset.</p>
+<p>Use this to pass the data to an external library (without provenance).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.datashape">
+<code class="descname">datashape</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.datashape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every Dataset has a datashape, which describes its data types in a unified way.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.immutable">
+<code class="descname">immutable</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.immutable" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, this Dataset cannot be modified in place, only transformed.</p>
+<p>Opposite of mutable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.mutable">
+<code class="descname">mutable</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.mutable" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, this Dataset can be modified in place.</p>
+<p>Opposite of immutable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.persistent">
+<code class="descname">persistent</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.persistent" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, this Dataset exists in a form that survives the Python session, such as a file or database.</p>
+<p>If mutable, changes in this Dataset are reflected in that persistent form.</p>
+<p>Opposite of transient.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.provenance">
+<code class="descname">provenance</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.provenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The series of transformations that produced this dataset as a tuple.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="skhep.dataset.defs.Dataset.transient">
+<code class="descname">transient</code><a class="headerlink" href="#skhep.dataset.defs.Dataset.transient" title="Permalink to this definition">¶</a></dt>
+<dd><p>If True, this Dataset only exists in the Python session; changes will be lost if it is not saved.</p>
+<p>If mutable, changes in this Dataset do not propagate back to its source, if any.</p>
+<p>Opposite of persistent.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <span class="target" id="module-skhep.dataset.numpydataset"></span><div class="section" id="module-for-numpydataset">
 <h2>Module for NumpyDataset<a class="headerlink" href="#module-for-numpydataset" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">NumpyDataset</span></code> class is the implementation of the <code class="docutils literal"><span class="pre">Dataset</span></code> abstract base class
+for the <a class="reference internal" href="#numpy" id="id1">[NumPy]</a> package.</p>
+<p>Note: usage of course requires that NumPy is installed.</p>
+<p><strong>References</strong></p>
+<table class="docutils citation" frame="void" id="numpy" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[NumPy]</a></td><td><a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>.</td></tr>
+</tbody>
+</table>
 </div>
 <span class="target" id="module-skhep.dataset.rootdataset"></span><div class="section" id="module-for-rootdataset">
 <h2>Module for ROOTDataset<a class="headerlink" href="#module-for-rootdataset" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">ROOTDataset</span></code> class is the implementation of the <code class="docutils literal"><span class="pre">Dataset</span></code> abstract base class
+for the <a class="reference internal" href="#root" id="id2">[ROOT]</a> package.</p>
+<p>Note: usage of course requires that ROOT is installed.</p>
+<p><strong>References</strong></p>
+<table class="docutils citation" frame="void" id="root" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[ROOT]</a></td><td><a class="reference external" href="https://root.cern.ch/">https://root.cern.ch/</a>.</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 

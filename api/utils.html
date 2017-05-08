@@ -1,0 +1,289 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Utilities (skhep.utils) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../static/mathjax_conf.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
+    <link rel="up" title="API" href="api.html" />
+    <link rel="next" title="Frequently asked questions" href="../faq.html" />
+    <link rel="prev" title="Units (skhep.units)" href="units.html" />
+   
+  <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=scikit-hep&repo=scikit-hep&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources.html">Miscellaneous resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../documentation.html">Documentation</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="units.html" title="previous chapter">Units (<cite>skhep.units</cite>)</a></li>
+      <li>Next: <a href="../faq.html" title="next chapter">Frequently asked questions</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-skhep.utils">
+<span id="utilities-skhep-utils"></span><span id="utils"></span><h1>Utilities (<cite>skhep.utils</cite>)<a class="headerlink" href="#module-skhep.utils" title="Permalink to this headline">¶</a></h1>
+<p>Module for miscellaneous and general utilities.</p>
+<span class="target" id="module-skhep.utils.decorators"></span><div class="section" id="submodule-for-decorators">
+<h2>Submodule for decorators<a class="headerlink" href="#submodule-for-decorators" title="Permalink to this headline">¶</a></h2>
+<p>Note: not meant for user code in general, though possible.</p>
+<dl class="function">
+<dt id="skhep.utils.decorators.inheritdoc">
+<code class="descclassname">skhep.utils.decorators.</code><code class="descname">inheritdoc</code><span class="sig-paren">(</span><em>cls</em>, <em>gap='\n\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.decorators.inheritdoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to automatize the inheritance of documentation from a class method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.decorators</span> <span class="kn">import</span> <span class="n">inheritdoc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ADerivedClass</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">):</span>                 
+<span class="gp">... </span>   <span class="nd">@inheritdoc</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">)</span>                       
+<span class="gp">... </span>   <span class="k">def</span> <span class="nf">amethod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>                       
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<span class="target" id="module-skhep.utils.dependencies"></span><div class="section" id="submodule-for-helpers-to-deal-with-dependencies">
+<h2>Submodule for helpers to deal with dependencies<a class="headerlink" href="#submodule-for-helpers-to-deal-with-dependencies" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="skhep.utils.dependencies.softimport">
+<code class="descclassname">skhep.utils.dependencies.</code><code class="descname">softimport</code><span class="sig-paren">(</span><em>modulename</em>, <em>lazy=True</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.dependencies.softimport" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function that one calls to import a module softly.</p>
+</dd></dl>
+
+</div>
+<span class="target" id="module-skhep.utils.provenance"></span><div class="section" id="submodule-for-helpers-to-the-dataset-like-classes">
+<h2>Submodule for helpers to the Dataset-like classes<a class="headerlink" href="#submodule-for-helpers-to-the-dataset-like-classes" title="Permalink to this headline">¶</a></h2>
+<p>User-facing classes that structure the provenance information,
+i.e. the history of operations performed on the dataset.</p>
+<p><strong>Available classes:</strong></p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Provenance</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Origin</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">ObjectOrigin</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">FileOrigin</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Transformation</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Formatting</span></code>.</li>
+</ul>
+<dl class="class">
+<dt id="skhep.utils.provenance.FileOrigin">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">FileOrigin</code><span class="sig-paren">(</span><em>files</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.FileOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the dataset came from a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>files: str or iterable of str or file objects</dt>
+<dd>File name(s) or object(s).</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="skhep.utils.provenance.Formatting">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Formatting</code><span class="sig-paren">(</span><em>format</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.Formatting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the dataset was reformatted, keeping its semantic meaning, but changed in representation.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="skhep.utils.provenance.ObjectOrigin">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">ObjectOrigin</code><span class="sig-paren">(</span><em>detail</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.ObjectOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the dataset came from some Python object.
+Its history prior to that is unknown.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>detail: str</dt>
+<dd>String providing detailed information about the object origin.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.provenance</span> <span class="kn">import</span> <span class="n">ObjectOrigin</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span>
+<span class="go">&lt;ObjectOrigin&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span><span class="o">.</span><span class="n">detail</span>
+<span class="go">&quot;array(&#39;i&#39;, [1, 2, 3])&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">provenance2</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="s1">&#39;array_of_ints&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">provenance2</span><span class="o">.</span><span class="n">detail</span>
+<span class="go">&#39;array_of_ints&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="skhep.utils.provenance.Origin">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Origin</code><a class="headerlink" href="#skhep.utils.provenance.Origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class for all classes describing the first object in a provenance list.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="skhep.utils.provenance.Provenance">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Provenance</code><a class="headerlink" href="#skhep.utils.provenance.Provenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class for all classes containing provenance information.</p>
+<dl class="attribute">
+<dt id="skhep.utils.provenance.Provenance.detail">
+<code class="descname">detail</code><a class="headerlink" href="#skhep.utils.provenance.Provenance.detail" title="Permalink to this definition">¶</a></dt>
+<dd><p>String providing detailed information about the origin, transformation, or formatting.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="skhep.utils.provenance.Transformation">
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Transformation</code><span class="sig-paren">(</span><em>name</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.Transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that the dataset was transformed by some mathematical operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>name: str</dt>
+<dd>String detailing how the dataset got transformed.</dd>
+<dt>args: iterable, optional</dt>
+<dd>Optional set of arguments given extra detail on the transformation.</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2016-2017, The Scikit-HEP Developers.
+      
+      |
+      <a href="../sources/api/utils.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -45,6 +45,7 @@ The current list of contact persons is the following:
     ===================   =================================
     Experiment            Name(s)
     ===================   =================================
+    Belle II              Nils Braun
     DUNE                  Dorota Stefan, Robert Sulej
     LHCb
     ===================   =================================

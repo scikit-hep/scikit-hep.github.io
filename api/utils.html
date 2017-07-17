@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Utilities (skhep.utils) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    <title>Utilities (skhep.utils) &#8212; Scikit-HEP 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -19,17 +19,18 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="API" href="api.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Frequently asked questions" href="../faq.html" />
     <link rel="prev" title="Units (skhep.units)" href="units.html" />
    
@@ -96,14 +97,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -130,7 +128,7 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.decorators</span> <span class="kn">import</span> <span class="n">inheritdoc</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.decorators</span> <span class="k">import</span> <span class="n">inheritdoc</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ADerivedClass</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">):</span>                 
 <span class="gp">... </span>   <span class="nd">@inheritdoc</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">)</span>                       
 <span class="gp">... </span>   <span class="k">def</span> <span class="nf">amethod</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">pass</span>                       
@@ -210,8 +208,8 @@ Its history prior to that is unknown.</p>
 </tr>
 </tbody>
 </table>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.provenance</span> <span class="kn">import</span> <span class="n">ObjectOrigin</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.provenance</span> <span class="k">import</span> <span class="n">ObjectOrigin</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="k">import</span> <span class="n">array</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span>
@@ -220,7 +218,7 @@ Its history prior to that is unknown.</p>
 <span class="go">&quot;array(&#39;i&#39;, [1, 2, 3])&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">provenance2</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="s1">&#39;array_of_ints&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">provenance2</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="s1">&#39;array_of_ints&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">provenance2</span><span class="o">.</span><span class="n">detail</span>
 <span class="go">&#39;array_of_ints&#39;</span>
 </pre></div>
@@ -278,7 +276,7 @@ Its history prior to that is unknown.</p>
       &copy;2016-2017, The Scikit-HEP Developers.
       
       |
-      <a href="../sources/api/utils.txt"
+      <a href="../sources/api/utils.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

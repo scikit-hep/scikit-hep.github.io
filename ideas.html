@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Forum on project ideas &mdash; Scikit-HEP 0.0.1 documentation</title>
+    <title>Forum on project ideas &#8212; Scikit-HEP 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -19,16 +19,18 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
    
   <link rel="stylesheet" href="static/custom.css" type="text/css" />
   
@@ -81,14 +83,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -127,12 +126,60 @@ The direct links to the project proposals are the following:</p>
 </li>
 </ul>
 </div>
+<div class="section" id="data-aggregation">
+<h2>Data aggregation<a class="headerlink" href="#data-aggregation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Data aggregation largely means histogramming. An interesting idea would be to exploit the</li>
+</ul>
+<p><a class="reference external" href="http://histogrammar.org/">Histogrammar</a> package implementation in Python as a powerful way of dealing with data aggregation in Scikit-HEP. <img alt="Aggregations_open" src="images/Aggregations-open-orange.png" /></p>
+</div>
+<div class="section" id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Datasets are central in HEP and Scikit-HEP too. This important package needs further development and lack parts of the implementation.</li>
+</ul>
+<p>Get in touch with <cite>Jim</cite> and <cite>Eduardo</cite> ifthe topic is of interest to you. <img alt="Datasets_open" src="images/Datasets-open-orange.png" /></p>
+</div>
+<div class="section" id="math-modules">
+<h2>Math modules<a class="headerlink" href="#math-modules" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The 3D and Lorentz vector classes need to be improved to exploit NumPy arrays.</li>
+</ul>
+<p>There is also functionality to be implemented.
+Contact <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_ongoing" src="images/Math-ongoing-yellowgreen.png" /></p>
+<ul class="simple">
+<li>Now that 3D and Lorentz vector classes are available, though in development, it would be handy to build on them.</li>
+</ul>
+<p>Needed are a 3D point class and then a set of mathematical functions implementing handy geometry-related calculations commonly used in HEP.
+Contact <cite>Vanya</cite> and <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_open" src="images/Math-open-orange.png" /></p>
+</div>
+<div class="section" id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
+<p>Means &#8220;data models and fitting utilities&#8221; at large. <img alt="Modeling_open" src="images/Modeling-open-orange.png" />
+Ideas?</p>
+</div>
 <div class="section" id="simulation">
 <h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Creation of a decay generator base class. A concrete class using ROOT&#8217;s
 <code class="docutils literal"><span class="pre">TGenPhaseSpace</span></code> should be an immediate example.
 Contact <cite>Eduardo</cite> if you want to get involved. <img alt="Simulation_ongoing" src="images/Simulation-ongoing-yellowgreen.png" /></li>
+</ul>
+</div>
+<div class="section" id="root-pandas">
+<h2>ROOT-Pandas<a class="headerlink" href="#root-pandas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Include the <a class="reference external" href="https://github.com/ibab/root_pandas">root_pandas</a> project into scikit-hep and see how it fits together with the rest of the framework. It is an excellent candidate for an affiliated package.</li>
+<li>Define which parts are still missing and find developers for this part of the project.</li>
+<li>See if users of this project may want to use scikit-hep as their starting point instead of installing <cite>root_pandas</cite>, to increase the awareness of this project. <img alt="AffiliatedPackages_open" src="images/AffiliatedPackages-open-orange.png" /></li>
+</ul>
+</div>
+<div class="section" id="analysis-development">
+<h2>Analysis Development<a class="headerlink" href="#analysis-development" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Give users as early as possible an idea on how the project may contribute to and/or help with their analysis,
+e.g. by giving a small example analysis using the project toolchain.</li>
+<li>Think about including &#8220;framework&#8221; tools for an analysis, e.g. workflow managers (for example luigi).</li>
 </ul>
 </div>
 </div>
@@ -147,7 +194,7 @@ Contact <cite>Eduardo</cite> if you want to get involved. <img alt="Simulation_o
       &copy;2016-2017, The Scikit-HEP Developers.
       
       |
-      <a href="sources/ideas.txt"
+      <a href="sources/ideas.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

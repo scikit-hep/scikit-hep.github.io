@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Units (skhep.units) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    <title>Units (skhep.units) &#8212; Scikit-HEP 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -19,17 +19,18 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="API" href="api.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Utilities (skhep.utils)" href="utils.html" />
     <link rel="prev" title="Simulation utilities (skhep.simulation)" href="simulation.html" />
    
@@ -96,14 +97,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -171,7 +169,7 @@ and commonly-used unit prefixes.</p>
 </tr>
 <tr class="row-odd"><td>Positron charge</td>
 <td>eplus</td>
-<td>&nbsp;</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>Temperature</td>
 <td>kelvin</td>
@@ -245,11 +243,11 @@ and commonly-used unit prefixes.</p>
 <p>but augments it with handy definitions, changing the basic length and time units.</p>
 <p>This module also defines an extensive set of derived units.</p>
 <p>Typical use cases:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># add two quantities with length units and get the result im meters</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># add two quantities with length units and get the result im meters</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep</span> <span class="k">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">meter</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span> <span class="o">/</span> <span class="n">u</span><span class="o">.</span><span class="n">meter</span>
 <span class="go">1.05</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="kn">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="k">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">massWindow</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">MeV</span>    <span class="c1"># define a 100 MeV mass window</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">energy_resolution</span><span class="p">():</span>
 <span class="gp">... </span>   <span class="c1"># returns the energy resolution of 100 MeV</span>
@@ -285,7 +283,7 @@ and commonly-used unit prefixes.</p>
       &copy;2016-2017, The Scikit-HEP Developers.
       
       |
-      <a href="../sources/api/units.txt"
+      <a href="../sources/api/units.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

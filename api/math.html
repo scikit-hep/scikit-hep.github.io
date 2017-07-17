@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Mathematical utilities (skhep.math) &mdash; Scikit-HEP 0.0.1 documentation</title>
+    <title>Mathematical utilities (skhep.math) &#8212; Scikit-HEP 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -19,17 +19,18 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
-    <link rel="top" title="Scikit-HEP 0.0.1 documentation" href="../index.html" />
-    <link rel="up" title="API" href="api.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Simulation utilities (skhep.simulation)" href="simulation.html" />
     <link rel="prev" title="Description of datasets (skhep.dataset)" href="dataset.html" />
    
@@ -96,14 +97,11 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -115,9 +113,120 @@
   <div class="section" id="module-skhep.math">
 <span id="mathematical-utilities-skhep-math"></span><span id="math"></span><h1>Mathematical utilities (<cite>skhep.math</cite>)<a class="headerlink" href="#module-skhep.math" title="Permalink to this headline">¶</a></h1>
 <p>Module for mathematical functions and utilities.</p>
+<span class="target" id="module-skhep.math.kinematics"></span><div class="section" id="mathematical-functions-relevant-to-kinematics">
+<h2>Mathematical functions relevant to kinematics<a class="headerlink" href="#mathematical-functions-relevant-to-kinematics" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="skhep.math.kinematics.Kallen_function">
+<code class="descclassname">skhep.math.kinematics.</code><code class="descname">Kallen_function</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Kallen_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Kallen function, aka triangle or lambda function,
+named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id1">[Kallen]</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Definition:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="math">
+\[\begin{split}\begin{eqnarray}
+\lambda(x,y,z) &amp;=&amp; x^2 + y^2 + z^2 - 2 x y - 2 y z - 2 z x \\
+                &amp;=&amp; (x-y-z)^2 - 4 y z \\
+                &amp;=&amp; [ x - (\sqrt{y}+\sqrt{z})^2 ] [ x - (\sqrt{y}-\sqrt{z})^2 ] \,\,\,\mathrm{if} \,\,\,y, z &gt; 0
+\end{eqnarray}\end{split}\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Calculate in the rest frame of a particle of mass M decaying to 2 particles labeled 1 and 2,
+<span class="math">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="k">import</span> <span class="n">Kallen_function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="k">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="mf">5.279</span> <span class="o">*</span> <span class="n">GeV</span><span class="p">;</span> <span class="n">m1</span> <span class="o">=</span> <span class="mf">493.7</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">;</span> <span class="n">m2</span> <span class="o">=</span> <span class="mf">139.6</span> <span class="o">*</span> <span class="n">MeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">Kallen_function</span><span class="p">(</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m2</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">p</span> <span class="o">/</span> <span class="n">GeV</span>   <span class="c1"># print the CMS momentum in GeV</span>
+<span class="go">2.61453580221</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Reference:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="kallen" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.math.kinematics.lifetime_to_width">
+<code class="descclassname">skhep.math.kinematics.</code><code class="descname">lifetime_to_width</code><span class="sig-paren">(</span><em>tau</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.lifetime_to_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from a particle lifetime to a decay width.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>tau <span class="classifier-delimiter">:</span> <span class="classifier">float &gt; 0</span></dt>
+<dd>Particle lifetime, typically in picoseconds (any HEP time unit is OK).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Particle decay width, in the HEP standard energy unit MeV.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="skhep.math.kinematics.width_to_lifetime">
+<code class="descclassname">skhep.math.kinematics.</code><code class="descname">width_to_lifetime</code><span class="sig-paren">(</span><em>Gamma</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.width_to_lifetime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert from a particle decay width to a lifetime.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Gamma <span class="classifier-delimiter">:</span> <span class="classifier">float &gt; 0</span></dt>
+<dd>Particle decay width, typically in MeV (any HEP energy unit is OK).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Particle lifetime, in the HEP standard time unit ns.</p>
+</dd></dl>
+
+</div>
 <span class="target" id="module-skhep.math.vectors"></span><div class="section" id="vector-classes">
 <h2>Vector classes<a class="headerlink" href="#vector-classes" title="Permalink to this headline">¶</a></h2>
-<p>Two vector-like classes are available:</p>
+<p>Two vector classes are available:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">Vector3D</span></code>     : a 3-dimensional vector.</li>
 <li><dl class="first docutils">
@@ -137,17 +246,23 @@ The 4-vector components can be seen as (x,y,z,t) or (px,py,pz,E).</p>
 <dt>Constructors:</dt>
 <dd>__init__(x=0., y=0., z=0., t=0.)
 from4vector(avector)
-from3vector(vector3D, t)</dd>
+from3vector(vector3d, t)</dd>
 </dl>
+<dl class="method">
+<dt id="skhep.math.vectors.LorentzVector.beta">
+<code class="descname">beta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.beta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <span class="math">\(\beta = v/c\)</span>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="skhep.math.vectors.LorentzVector.dot">
 <code class="descname">dot</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.dot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dot product with another Lorentz vector.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.e">
-<code class="descname">e</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.e" title="Permalink to this definition">¶</a></dt>
+<code class="descname">e</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.e" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the energy/time component, aka momentum coordinate at position 3.</p>
 </dd></dl>
 
@@ -159,7 +274,7 @@ from3vector(vector3D, t)</dd>
 
 <dl class="classmethod">
 <dt id="skhep.math.vectors.LorentzVector.from3vector">
-<em class="property">classmethod </em><code class="descname">from3vector</code><span class="sig-paren">(</span><em>vector3D</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.from3vector" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">from3vector</code><span class="sig-paren">(</span><em>vector3d</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.from3vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor from a 3D-vector and the time/energy component.</p>
 </dd></dl>
 
@@ -167,6 +282,12 @@ from3vector(vector3D, t)</dd>
 <dt id="skhep.math.vectors.LorentzVector.from4vector">
 <em class="property">classmethod </em><code class="descname">from4vector</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.from4vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="skhep.math.vectors.LorentzVector.gamma">
+<code class="descname">gamma</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.gamma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <span class="math">\(\gamma = 1/\sqrt{1-\beta^2}\)</span>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -187,39 +308,39 @@ from3vector(vector3D, t)</dd>
 <dd><p>Check if Lorentz vector is time-like.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.m">
-<code class="descname">m</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.m" title="Permalink to this definition">¶</a></dt>
+<code class="descname">m</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.m" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the invariant mass.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.m2">
-<code class="descname">m2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.m2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">m2</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.m2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the square of the invariant mass.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.mag">
-<code class="descname">mag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mag</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Magnitude, a.k.a. norm, of the Lorentz vector.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.mag2">
-<code class="descname">mag2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mag2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mag2</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mag2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Square of the magnitude, a.k.a. norm, of the Lorentz vector.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.mass">
-<code class="descname">mass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mass" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mass</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the invariant mass.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.mass2">
-<code class="descname">mass2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mass2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mass2</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.mass2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the square of the invariant mass.</p>
 </dd></dl>
 
@@ -239,21 +360,21 @@ from3vector(vector3D, t)</dd>
 <dd><p>&#8220;Return the pseudorapidity. Alternative to eta() method.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.px">
-<code class="descname">px</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.px" title="Permalink to this definition">¶</a></dt>
+<code class="descname">px</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.px" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate px, aka first momentum coordinate at position 0.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.py">
-<code class="descname">py</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.py" title="Permalink to this definition">¶</a></dt>
+<code class="descname">py</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.py" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate px, aka second momentum coordinate at position 1.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.pz">
-<code class="descname">pz</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.pz" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pz</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.pz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate pz, aka third momentum coordinate at position 2.</p>
 </dd></dl>
 
@@ -293,33 +414,9 @@ from3vector(vector3D, t)</dd>
 <dd><p>Update/set the pz component.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="skhep.math.vectors.LorentzVector.sett">
-<code class="descname">sett</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.sett" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the time/energy component.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="skhep.math.vectors.LorentzVector.setx">
-<code class="descname">setx</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.setx" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the x component.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="skhep.math.vectors.LorentzVector.sety">
-<code class="descname">sety</code><span class="sig-paren">(</span><em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.sety" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the y component.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="skhep.math.vectors.LorentzVector.setz">
-<code class="descname">setz</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.setz" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the z component.</p>
-</dd></dl>
-
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.t">
-<code class="descname">t</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.t" title="Permalink to this definition">¶</a></dt>
+<code class="descname">t</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the time/energy component, aka coordinate at position 3.</p>
 </dd></dl>
 
@@ -339,21 +436,21 @@ from3vector(vector3D, t)</dd>
 <dd><p>Return the transverse mass.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.x">
-<code class="descname">x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.x" title="Permalink to this definition">¶</a></dt>
+<code class="descname">x</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate x, aka first coordinate at position 0.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.y">
-<code class="descname">y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.y" title="Permalink to this definition">¶</a></dt>
+<code class="descname">y</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate x, aka second coordinate at position 1.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.z">
-<code class="descname">z</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.z" title="Permalink to this definition">¶</a></dt>
+<code class="descname">z</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the 3D-vector coordinate z, aka third coordinate at position 2.</p>
 </dd></dl>
 
@@ -459,15 +556,15 @@ Two vectors are parallel if they have the same direction but not necessarily the
 <dd><p>Check if another vector is perpendicular.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.mag">
-<code class="descname">mag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.mag" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mag</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.mag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Magnitude, a.k.a. norm, of the vector.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.mag2">
-<code class="descname">mag2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.mag2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mag2</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.mag2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Square of the magnitude, a.k.a. norm, of the vector.</p>
 </dd></dl>
 
@@ -484,9 +581,9 @@ Equivalent to the default constructor Vector3D().</p>
 <dd><p>Return the vector perpendicular to itself.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.phi">
-<code class="descname">phi</code><span class="sig-paren">(</span><em>deg=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.phi" title="Permalink to this definition">¶</a></dt>
+<code class="descname">phi</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.phi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the spherical or cylindrical coordinate phi.</p>
 <dl class="docutils">
 <dt>Options:</dt>
@@ -494,39 +591,21 @@ Equivalent to the default constructor Vector3D().</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.rho">
-<code class="descname">rho</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.rho" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rho</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.rho" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the cylindrical coordinate rho.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="skhep.math.vectors.Vector3D.set">
 <code class="descname">set</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.set" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set all components at once.</p>
+<dd><p>Update the vector components all at once.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="skhep.math.vectors.Vector3D.setx">
-<code class="descname">setx</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.setx" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the x component.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="skhep.math.vectors.Vector3D.sety">
-<code class="descname">sety</code><span class="sig-paren">(</span><em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.sety" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the y component.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="skhep.math.vectors.Vector3D.setz">
-<code class="descname">setz</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.setz" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update/set the z component.</p>
-</dd></dl>
-
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.theta">
-<code class="descname">theta</code><span class="sig-paren">(</span><em>deg=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.theta" title="Permalink to this definition">¶</a></dt>
+<code class="descname">theta</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.theta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the spherical coordinate theta.</p>
 <dl class="docutils">
 <dt>Options:</dt>
@@ -546,135 +625,24 @@ Equivalent to the default constructor Vector3D().</p>
 <dd><p>Return the normalized vector, i.e. the unit vector along the direction of itself.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.x">
-<code class="descname">x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.x" title="Permalink to this definition">¶</a></dt>
+<code class="descname">x</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the x, aka first coordinate at position 0.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.y">
-<code class="descname">y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.y" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the x, aka second coordinate at position 1.</p>
+<code class="descname">y</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the y, aka second coordinate at position 1.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="attribute">
 <dt id="skhep.math.vectors.Vector3D.z">
-<code class="descname">z</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.z" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the x, aka third coordinate at position 2.</p>
+<code class="descname">z</code><a class="headerlink" href="#skhep.math.vectors.Vector3D.z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the z, aka third coordinate at position 2.</p>
 </dd></dl>
 
-</dd></dl>
-
-</div>
-<span class="target" id="module-skhep.math.kinematics"></span><div class="section" id="mathematical-functions-relevant-to-kinematics">
-<h2>Mathematical functions relevant to kinematics<a class="headerlink" href="#mathematical-functions-relevant-to-kinematics" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="skhep.math.kinematics.Kallen_function">
-<code class="descclassname">skhep.math.kinematics.</code><code class="descname">Kallen_function</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Kallen_function" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kallen function, aka triangle or lambda function,
-named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id1">[Kallen]</a>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Definition:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<div class="math">
-\[\begin{split}\begin{eqnarray}
-\lambda(x,y,z) &amp;=&amp; x^2 + y^2 + z^2 - 2 x y - 2 y z - 2 z x \\
-                &amp;=&amp; (x-y-z)^2 - 4 y z \\
-                &amp;=&amp; [ x - (\sqrt{y}+\sqrt{z})^2 ] [ x - (\sqrt{y}-\sqrt{z})^2 ] \,\,\,\mathrm{if} \,\,\,y, z &gt; 0
-\end{eqnarray}\end{split}\]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<p>Calculate in the rest frame of a particle of mass M decaying to 2 particles labeled 1 and 2,
-<span class="math">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="kn">import</span> <span class="n">Kallen_function</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="kn">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="mf">5.279</span> <span class="o">*</span> <span class="n">GeV</span><span class="p">;</span> <span class="n">m1</span> <span class="o">=</span> <span class="mf">493.7</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">;</span> <span class="n">m2</span> <span class="o">=</span> <span class="mf">139.6</span> <span class="o">*</span> <span class="n">MeV</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">Kallen_function</span><span class="p">(</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m2</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">p</span> <span class="o">/</span> <span class="n">GeV</span>   <span class="c1"># print the CMS momentum in GeV</span>
-<span class="go">2.61453580221</span>
-</pre></div>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Reference:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="kallen" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="skhep.math.kinematics.lifetime_to_width">
-<code class="descclassname">skhep.math.kinematics.</code><code class="descname">lifetime_to_width</code><span class="sig-paren">(</span><em>tau</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.lifetime_to_width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert from a particle lifetime to a decay width.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>tau <span class="classifier-delimiter">:</span> <span class="classifier">float &gt; 0</span></dt>
-<dd>Particle lifetime, typically in picoseconds (any HEP time unit is OK).</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<p>Particle decay width, in the HEP standard energy unit MeV.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="skhep.math.kinematics.width_to_lifetime">
-<code class="descclassname">skhep.math.kinematics.</code><code class="descname">width_to_lifetime</code><span class="sig-paren">(</span><em>Gamma</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.width_to_lifetime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert from a particle decay width to a lifetime.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Gamma <span class="classifier-delimiter">:</span> <span class="classifier">float &gt; 0</span></dt>
-<dd>Particle decay width, typically in MeV (any HEP energy unit is OK).</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<p>Particle lifetime, in the HEP standard time unit ns.</p>
 </dd></dl>
 
 </div>
@@ -690,7 +658,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
       &copy;2016-2017, The Scikit-HEP Developers.
       
       |
-      <a href="../sources/api/math.txt"
+      <a href="../sources/api/math.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

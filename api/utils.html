@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Utilities (skhep.utils) &#8212; Scikit-HEP 0.0.1 documentation</title>
+    <title>Utilities (skhep.utils) &#8212; Scikit-HEP 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.0.1',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -31,7 +31,7 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Frequently asked questions" href="../faq.html" />
+    <link rel="next" title="Data Visualization (skhep.visual)" href="visual.html" />
     <link rel="prev" title="Units (skhep.units)" href="units.html" />
    
   <link rel="stylesheet" href="../static/custom.css" type="text/css" />
@@ -72,9 +72,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../help.html">Get help</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../faq.html">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../resources.html">Miscellaneous resources</a></li>
 </ul>
 </li>
@@ -89,7 +89,7 @@
   <li><a href="../documentation.html">Documentation</a><ul>
   <li><a href="api.html">API</a><ul>
       <li>Previous: <a href="units.html" title="previous chapter">Units (<cite>skhep.units</cite>)</a></li>
-      <li>Next: <a href="../faq.html" title="next chapter">Frequently asked questions</a></li>
+      <li>Next: <a href="visual.html" title="next chapter">Data Visualization (<cite>skhep.visual</cite>)</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -116,19 +116,15 @@
 <p>Module for miscellaneous and general utilities.</p>
 <span class="target" id="module-skhep.utils.decorators"></span><div class="section" id="submodule-for-decorators">
 <h2>Submodule for decorators<a class="headerlink" href="#submodule-for-decorators" title="Permalink to this headline">¶</a></h2>
-<p>Note: not meant for user code in general, though possible.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">not meant for user code in general, though possible.</p>
+</div>
 <dl class="function">
 <dt id="skhep.utils.decorators.inheritdoc">
-<code class="descclassname">skhep.utils.decorators.</code><code class="descname">inheritdoc</code><span class="sig-paren">(</span><em>cls</em>, <em>gap='\n\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.decorators.inheritdoc" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">skhep.utils.decorators.</code><code class="descname">inheritdoc</code><span class="sig-paren">(</span><em>cls</em>, <em>gap='\n'</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.decorators.inheritdoc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to automatize the inheritance of documentation from a class method.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<p class="rubric">Example</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.decorators</span> <span class="k">import</span> <span class="n">inheritdoc</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ADerivedClass</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">):</span>                 
 <span class="gp">... </span>   <span class="nd">@inheritdoc</span><span class="p">(</span><span class="n">ABaseClass</span><span class="p">)</span>                       
@@ -149,12 +145,11 @@
 </div>
 <span class="target" id="module-skhep.utils.provenance"></span><div class="section" id="submodule-for-helpers-to-the-dataset-like-classes">
 <h2>Submodule for helpers to the Dataset-like classes<a class="headerlink" href="#submodule-for-helpers-to-the-dataset-like-classes" title="Permalink to this headline">¶</a></h2>
-<p>User-facing classes that structure the provenance information,
-i.e. the history of operations performed on the dataset.</p>
+<p>User-facing classes that structure the provenance information, i.e. the history of operations performed on the dataset.</p>
 <p><strong>Available classes:</strong></p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">Provenance</span></code>.</li>
-<li><code class="docutils literal"><span class="pre">Origin</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Provenance</span></code> (abstract base class).</li>
+<li><code class="docutils literal"><span class="pre">Origin</span></code> (abstract base class).</li>
 <li><code class="docutils literal"><span class="pre">ObjectOrigin</span></code>.</li>
 <li><code class="docutils literal"><span class="pre">FileOrigin</span></code>.</li>
 <li><code class="docutils literal"><span class="pre">Transformation</span></code>.</li>
@@ -163,19 +158,22 @@ i.e. the history of operations performed on the dataset.</p>
 <dl class="class">
 <dt id="skhep.utils.provenance.FileOrigin">
 <em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">FileOrigin</code><span class="sig-paren">(</span><em>files</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.FileOrigin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares that the dataset came from a file.</p>
+<dd><p>Declares that the dataset came from a file or a set of files.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>files</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a><em> or </em><em>iterable of str</em><em> or </em><em>file objects</em>) &#8211; File name(s) or object(s).</td>
 </tr>
 </tbody>
 </table>
-<dl class="docutils">
-<dt>files: str or iterable of str or file objects</dt>
-<dd>File name(s) or object(s).</dd>
-</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils</span> <span class="k">import</span> <span class="n">FileOrigin</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prov</span> <span class="o">=</span> <span class="n">FileOrigin</span><span class="p">([</span><span class="s1">&#39;file1.root&#39;</span><span class="p">,</span> <span class="s1">&#39;file2.root&#39;</span><span class="p">,</span><span class="s1">&#39;file3.root&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prov</span>
+<span class="go">&lt;FileOrigin (3 files)&gt;</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="class">
@@ -193,23 +191,12 @@ Its history prior to that is unknown.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>detail</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; String providing detailed information about the object origin.</td>
 </tr>
 </tbody>
 </table>
-<dl class="docutils">
-<dt>detail: str</dt>
-<dd>String providing detailed information about the object origin.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils.provenance</span> <span class="k">import</span> <span class="n">ObjectOrigin</span>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils</span> <span class="k">import</span> <span class="n">ObjectOrigin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="k">import</span> <span class="n">array</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">provenance1</span> <span class="o">=</span> <span class="n">ObjectOrigin</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
@@ -230,12 +217,14 @@ Its history prior to that is unknown.</p>
 <dt id="skhep.utils.provenance.Origin">
 <em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Origin</code><a class="headerlink" href="#skhep.utils.provenance.Origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class for all classes describing the first object in a provenance list.</p>
+<p>Trying to instantiate it raises an exception. Instantiate one of its subclasses instead.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="skhep.utils.provenance.Provenance">
 <em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Provenance</code><a class="headerlink" href="#skhep.utils.provenance.Provenance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class for all classes containing provenance information.</p>
+<p>Trying to instantiate it raises an exception. Instantiate one of its subclasses instead.</p>
 <dl class="attribute">
 <dt id="skhep.utils.provenance.Provenance.detail">
 <code class="descname">detail</code><a class="headerlink" href="#skhep.utils.provenance.Provenance.detail" title="Permalink to this definition">¶</a></dt>
@@ -246,22 +235,27 @@ Its history prior to that is unknown.</p>
 
 <dl class="class">
 <dt id="skhep.utils.provenance.Transformation">
-<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Transformation</code><span class="sig-paren">(</span><em>name</em>, <em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.Transformation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">skhep.utils.provenance.</code><code class="descname">Transformation</code><span class="sig-paren">(</span><em>name</em>, <em>args=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.utils.provenance.Transformation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that the dataset was transformed by some mathematical operation.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; String detailing how the dataset got transformed.</li>
+<li><strong>args</strong> (<em>iterable</em><em>, </em><em>optional</em>) &#8211; Optional set of arguments given extra detail on the transformation.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
-<dl class="docutils">
-<dt>name: str</dt>
-<dd>String detailing how the dataset got transformed.</dd>
-<dt>args: iterable, optional</dt>
-<dd>Optional set of arguments given extra detail on the transformation.</dd>
-</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.utils</span> <span class="k">import</span> <span class="n">Transformation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transf</span> <span class="o">=</span> <span class="n">Transformation</span><span class="p">(</span><span class="s1">&#39;all elms * 2&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transf</span>
+<span class="go">&lt;Transformation(all elms * 2)&gt;</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

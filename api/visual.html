@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Data Visualization (skhep.visual) &#8212; Scikit-HEP 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../static/mathjax_conf.js"></script>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="../examples/examples.html" />
+    <link rel="prev" title="Utilities (skhep.utils)" href="utils.html" />
+   
+  <link rel="stylesheet" href="../static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../static/logo.svg" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=scikit-hep&repo=scikit-hep&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Get help</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources.html">Miscellaneous resources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../documentation.html">Documentation</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="utils.html" title="previous chapter">Utilities (<cite>skhep.utils</cite>)</a></li>
+      <li>Next: <a href="../examples/examples.html" title="next chapter">Examples</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="data-visualization-skhep-visual">
+<span id="visual"></span><h1>Data Visualization (<cite>skhep.visual</cite>)<a class="headerlink" href="#data-visualization-skhep-visual" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="skhep.visual.MplPlotter">
+<em class="property">class </em><code class="descclassname">skhep.visual.</code><code class="descname">MplPlotter</code><span class="sig-paren">(</span><em>show_backend=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.visual.MplPlotter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="staticmethod">
+<dt id="skhep.visual.MplPlotter.hist">
+<em class="property">static </em><code class="descname">hist</code><span class="sig-paren">(</span><em>x</em>, <em>bins='auto'</em>, <em>range=None</em>, <em>weights=None</em>, <em>errorbars=False</em>, <em>normed=False</em>, <em>scale=None</em>, <em>stacked=False</em>, <em>histtype='stepfilled'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.visual.MplPlotter.hist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enhanced histogram, based on <cite>hist</cite> function from matplotlib and astroML.
+The main additional features are the ability to use data-driven binning algorithms, the
+addition of errorbars, scaling options (like dividing all bin values by their widths), and
+marker-style draw options.  <cite>hist</cite> function wraps <cite>HistContainer</cite> class, which does the
+majority of work.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>array_like</em><em>, or </em><em>list of array_like</em>) &#8211; Array of data to be histogrammed.</li>
+<li><strong>bins</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a><em> or </em><em>List</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a><em>, </em><em>optional</em>) &#8211; <p>If <cite>int</cite>, <cite>bins</cite> number of equal-width bins are
+generated.  The width is determined by either equal divison of the given <cite>range</cite>, or
+equal division between the first and last data point if no <cite>range</cite> is specified.</p>
+<p>If <cite>List</cite>, bin edges are taken directly from <cite>List</cite> (can be unequal width).</p>
+<dl class="docutils">
+<dt>If <cite>str</cite>, then it must be one of</dt>
+<dd>&#8216;blocks&#8217; : use bayesian blocks for dynamic bin widths.<p class="last">&#8216;auto&#8217; : use <cite>auto</cite> feature from numpy.histogram.</p>
+</dd>
+</dl>
+<p>Defaults to &#8216;auto&#8217;.</p>
+</li>
+<li><strong>range</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>If specificed, data will only be considered and shown
+for the range given.  Otherwise, <cite>range</cite> will be between the highest and lowest
+datapoint.</p>
+<p>Defaults to None.</p>
+</li>
+<li><strong>weights</strong> (<em>array_like</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>Weights associated with each data point.  If
+specified, bin content will be equal to the sum of all relevant weights.</p>
+<p>Defaults to None.</p>
+</li>
+<li><strong>errorbars</strong> (<em>boolean</em><em> or </em><em>array_like</em><em>, </em><em>optional</em>) &#8211; <p>If True, errorbars will be calculated and
+displayed based on the <cite>err_*</cite> arguments. The errorbars will be appropriately
+modified if <cite>scale</cite> and/or <cite>normed</cite> is True. If an array is specificed, those values
+will be used (and will not be modifed by any other methods).</p>
+<p>Defaults to False.</p>
+</li>
+<li><strong>normed</strong> (<em>boolean</em><em>, </em><em>optional</em>) &#8211; <p>If True, histogram will be normalized such that the integral
+over all bins with be equal to 1.  In general, this will NOT mean that the sum of
+all bin contents will be 1, unless all bin widths are equal to 1. If used with
+<cite>scale</cite> option, normalization happens before scale.</p>
+<p>Defaults to False</p>
+</li>
+<li><strong>scale</strong> (<em>Number</em><em> or </em><em>'binwidth'</em><em>, </em><em>optional</em>) &#8211; <p>If Number, all bin contents are multiplied by
+the given value.  If &#8216;binwidth&#8217;, every bin content is divided by the bin width. If
+used with <cite>normed</cite> option, scaling occurs after normalization (&#8216;binwidth&#8217; will be
+ignored in this case, because it is handled automatically when normalizing).</p>
+<p>Defaults to None</p>
+</li>
+<li><strong>stacked</strong> (<em>boolean</em><em>, </em><em>optional</em>) &#8211; <p>If True, multiple input data sets will be layered on top of
+each other, such that the height of each bin is the sum of all the relevant dataset
+contributions.  If used with errorbars, the bars will be associated with the bin
+totals, not the individual components.</p>
+<p>Defaults to False.</p>
+</li>
+<li><strong>histtype</strong> (<em>stepfilled'</em><em>, </em><em>'step'</em><em>, </em><em>'bar'</em><em>, or </em><em>'marker'</em>) &#8211; <p>Draw options for histograms.
+&#8216;stepfilled&#8217;, &#8216;step&#8217;, and &#8216;bar&#8217; inherit from <cite>matplotlib</cite>.  &#8216;marker&#8217; places a single
+point at the center of each bin (best used with error bars).  &#8216;marker&#8217; will throw an
+exception if used with &#8216;stacked&#8217; option.</p>
+<p>Defaults to &#8216;stepfilled&#8217;.</p>
+</li>
+<li><strong>**kwargs</strong> &#8211; <ul>
+<li><dl class="first docutils">
+<dt>ax (matplotlib axes instance):</dt>
+<dd>Specify the Axes on which to draw the histogram.  If not specified, then the
+current active axes will be used, or a new axes instance will be generated.<p class="last">Defaults to current axis.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>err_style (&#8216;band&#8217; or &#8216;line&#8217;):</dt>
+<dd>Draw style for errorbars.<p class="last">Defaults depend on <cite>histtype</cite>,
+where histtype=&#8217;stepfilled&#8217; corresponds to &#8216;band&#8217;, and all others correspond to
+&#8216;line&#8217;.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>err_color (&#8216;auto&#8217; or valid <cite>matplotlib</cite> colors):</dt>
+<dd>Color for error bars.  If &#8216;auto&#8217; is
+chosen and <cite>stacked</cite> is False, The color will be a slightly darker version of
+the associated histogram color.  If <cite>stacked</cite> is True, color will be the next in
+the current color cycle.<p class="last">Defaults to &#8216;auto&#8217;.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>err_type (&#8216;sumW2&#8217; or &#8216;gaussian&#8217;):</dt>
+<dd>Method of calculating error bars, if no error is given.  The &#8216;gaussian&#8217; method
+displays the error of each bin as the square root of the bin content.   The
+&#8216;sumW2&#8217; method displays the error as the square of the sum of the squares of the
+weights.<p class="last">Defaults to &#8216;gaussian&#8217; if no weights are given, else &#8216;sumW2&#8217;.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>err_return (bool):</dt>
+<dd>Return additional objects corresponding to the values of the error associated
+with each bin, and the patches used to display the error bars.<p class="last">Defaults to &#8216;False&#8217;</p>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><strong>keyword arguments are described in pylab.hist</strong><strong>(</strong><strong>)</strong><strong></strong> (<em>Other</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>The values of the histogram bins. See normed or</dt>
+<dd><p class="first last">density and weights for a description of the possible semantics. If input x is an
+array, then this is an array of length nbins. If input is a sequence arrays [data1,
+data2,..], then this is a list of arrays with the values of the histograms for each
+of the arrays in the same order.</p>
+</dd>
+<dt>bin_edges (array): The edges of the bins. Length nbins + 1 (nbins left edges and right</dt>
+<dd><p class="first last">edge of last bin). Always a single array even when multiple data sets are passed in.</p>
+</dd>
+<dt>error_bars (array or list of arrays, optional): The values of the error bars</dt>
+<dd><p class="first last">associated with each bin.  It is only returned if <cite>errorbars</cite> is <cite>True</cite> and
+<cite>err_return</cite> is True.</p>
+</dd>
+<dt>bin_patches (list or list of lists): Silent list of individual patches used to create</dt>
+<dd><p class="first last">the histogram or list of such list if multiple input datasets.</p>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bin_content (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)">array</a> or list of arrays)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Brian Pollack, 2017</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="skhep.visual.MplPlotter.ratio_plot">
+<em class="property">static </em><code class="descname">ratio_plot</code><span class="sig-paren">(</span><em>hist_dict1</em>, <em>hist_dict2</em>, <em>bins=None</em>, <em>range=None</em>, <em>ratio_range=None</em>, <em>err_style='band'</em>, <em>err_color='dimgray'</em>, <em>ratio_mode='default'</em>, <em>grid=False</em>, <em>unity_line='red'</em>, <em>logx=False</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.visual.MplPlotter.ratio_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for creating ratio plots (comparing two histograms by dividing their bin content).
+The call structure is very similar to producing two individual histograms, with additional
+arguments specifying the nature of the ratio plot.  The number of bins and ranges for both
+histograms must be equal.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2016-2017, The Scikit-HEP Developers.
+      
+      |
+      <a href="../sources/api/visual.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/scikit-hep/scikit-hep" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

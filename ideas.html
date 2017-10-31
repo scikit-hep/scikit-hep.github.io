@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Forum on project ideas &#8212; Scikit-HEP 0.0.1 documentation</title>
+    <title>Forum on project ideas &#8212; Scikit-HEP 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -117,12 +117,11 @@ The direct links to the project proposals are the following:</p>
 <ul>
 <li><div class="first line-block">
 <div class="line"><a class="reference external" href="http://hepsoftwarefoundation.org/gsoc/proposal_ScikitHEP.html">Python bindings for the Hydra C++ library for analysis on massively multi-threaded platforms</a>.</div>
-<div class="line">Student: Deepanshu Thakur. <img alt="Miscellaneous_ongoing" src="images/Miscellaneous-ongoing-yellowgreen.png" /></div>
+<div class="line">Student: Deepanshu Thakur. <img alt="Miscellaneous_done" src="images/Miscellaneous-done-lightgrey.png" /></div>
 </div>
 </li>
 <li><div class="first line-block">
-<div class="line"><a class="reference external" href="http://hepsoftwarefoundation.org/gsoc/proposal_ScikitHEPviz.html">Visualization tools for Scikit-HEP</a>.</div>
-<div class="line">Student: Chetan Malhotra. <img alt="Visualization_ongoing" src="images/Visualization-ongoing-yellowgreen.png" /></div>
+<div class="line"><a class="reference external" href="http://hepsoftwarefoundation.org/gsoc/proposal_ScikitHEPviz.html">Visualization tools for Scikit-HEP</a>. <img alt="Visualization_open" src="images/Visualization-open-orange.png" /></div>
 </div>
 </li>
 </ul>
@@ -130,29 +129,28 @@ The direct links to the project proposals are the following:</p>
 <div class="section" id="data-aggregation">
 <h2>Data aggregation<a class="headerlink" href="#data-aggregation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Data aggregation largely means histogramming. An interesting idea would be to exploit the</li>
+<li>Data aggregation largely means histogramming. An interesting idea would be to exploit
+the <a class="reference external" href="http://histogrammar.org/">Histogrammar</a> package implementation in Python
+as a powerful way of dealing with data aggregation in Scikit-HEP. <img alt="Aggregations_open" src="images/Aggregations-open-orange.png" /></li>
 </ul>
-<p><a class="reference external" href="http://histogrammar.org/">Histogrammar</a> package implementation in Python as a powerful way of dealing with data aggregation in Scikit-HEP. <img alt="Aggregations_open" src="images/Aggregations-open-orange.png" /></p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Datasets are central in HEP and Scikit-HEP too. This important package needs further development and lack parts of the implementation.</li>
+<li>Datasets are central in HEP and Scikit-HEP too. This important package needs further development and lack parts of the implementation.
+Get in touch with <cite>Jim</cite> and <cite>Eduardo</cite> if the topic is of interest to you. <img alt="Datasets_open" src="images/Datasets-open-orange.png" /></li>
 </ul>
-<p>Get in touch with <cite>Jim</cite> and <cite>Eduardo</cite> ifthe topic is of interest to you. <img alt="Datasets_open" src="images/Datasets-open-orange.png" /></p>
 </div>
 <div class="section" id="math-modules">
 <h2>Math modules<a class="headerlink" href="#math-modules" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>The 3D and Lorentz vector classes need to be improved to exploit NumPy arrays.</li>
+<li>The 3D and Lorentz vector classes need to be improved to exploit NumPy arrays.
+There is also functionality to be implemented.
+| Contact <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_ongoing" src="images/Math-ongoing-yellowgreen.png" /></li>
+<li>Now that 3D and Lorentz vector classes are available, though in development, it would be handy to build on them.
+Needed are a 3D point class and then a set of mathematical functions implementing handy geometry-related calculations commonly used in HEP.
+Contact <cite>Vanya</cite> and <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_ongoing" src="images/Math-ongoing-yellowgreen.png" /></li>
 </ul>
-<p>There is also functionality to be implemented.
-Contact <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_ongoing" src="images/Math-ongoing-yellowgreen.png" /></p>
-<ul class="simple">
-<li>Now that 3D and Lorentz vector classes are available, though in development, it would be handy to build on them.</li>
-</ul>
-<p>Needed are a 3D point class and then a set of mathematical functions implementing handy geometry-related calculations commonly used in HEP.
-Contact <cite>Vanya</cite> and <cite>Eduardo</cite> if such a development is of interest to you. <img alt="Math_open" src="images/Math-open-orange.png" /></p>
 </div>
 <div class="section" id="modeling">
 <h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
@@ -170,9 +168,10 @@ Contact <cite>Eduardo</cite> if you want to get involved. <img alt="Simulation_o
 <div class="section" id="root-pandas">
 <h2>ROOT-Pandas<a class="headerlink" href="#root-pandas" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Include the <a class="reference external" href="https://github.com/ibab/root_pandas">root_pandas</a> project into scikit-hep and see how it fits together with the rest of the framework. It is an excellent candidate for an affiliated package.</li>
-<li>Define which parts are still missing and find developers for this part of the project.</li>
-<li>See if users of this project may want to use scikit-hep as their starting point instead of installing <cite>root_pandas</cite>, to increase the awareness of this project. <img alt="AffiliatedPackages_open" src="images/AffiliatedPackages-open-orange.png" /></li>
+<li>Include the <a class="reference external" href="https://github.com/ibab/root_pandas">root_pandas</a> project into Scikit-HEP and see how it fits together with the rest of the framework.
+It is an excellent candidate for an affiliated package. <img alt="AffiliatedPackages_done" src="images/AffiliatedPackages-done-lightgrey.png" /></li>
+<li>Define which parts are still missing and find developers for this part of the project. <img alt="AffiliatedPackages_ongoing" src="images/AffiliatedPackages-ongoing-yellowgreen.png" /></li>
+<li>See if users of this project may want to use scikit-hep as their starting point instead of installing <cite>root_pandas</cite>, to increase the awareness of this project. <img alt="AffiliatedPackages_ongoing" src="images/AffiliatedPackages-ongoing-yellowgreen.png" /></li>
 </ul>
 </div>
 <div class="section" id="analysis-development">
@@ -181,6 +180,15 @@ Contact <cite>Eduardo</cite> if you want to get involved. <img alt="Simulation_o
 <li>Give users as early as possible an idea on how the project may contribute to and/or help with their analysis,
 e.g. by giving a small example analysis using the project toolchain.</li>
 <li>Think about including &#8220;framework&#8221; tools for an analysis, e.g. workflow managers (for example luigi).</li>
+</ul>
+</div>
+<div class="section" id="continuous-integration-testing-code-health-etc">
+<h2>Continuous integration, testing, code health, etc.<a class="headerlink" href="#continuous-integration-testing-code-health-etc" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Worth adding CI tests with <a class="reference external" href="https://circleci.com/">CircleCI</a>? <img alt="Miscellaneous_open" src="images/Miscellaneous-open-orange.png" /></li>
+<li>Add CI on Windows for as long as possible - nice since a totally different plaform compared to Linux. <img alt="Miscellaneous_open" src="images/Miscellaneous-open-orange.png" /></li>
+<li>How do <a class="reference external" href="https://coveralls.io">coveralls</a> and <a class="reference external" href="https://codecov.io">codecov</a> compare? Worth having both? That would mean adding codecov. <img alt="Miscellaneous_open" src="images/Miscellaneous-open-orange.png" /></li>
+<li>Look at <a class="reference external" href="https://landscape.io">Landscape</a> and decide if worth having such code quality metrics automatically handled. <img alt="Miscellaneous_open" src="images/Miscellaneous-open-orange.png" /></li>
 </ul>
 </div>
 </div>

@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Frequently asked questions &#8212; Scikit-HEP 0.0.1 documentation</title>
+    <title>FAQ &#8212; Scikit-HEP 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -32,7 +32,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Miscellaneous resources" href="resources.html" />
-    <link rel="prev" title="Utilities (skhep.utils)" href="api/utils.html" />
+    <link rel="prev" title="Error Bars" href="examples/visual/errorbars.html" />
    
   <link rel="stylesheet" href="static/custom.css" type="text/css" />
   
@@ -72,9 +72,9 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Get help</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="documentation.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="examples/examples.html">Examples</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/api.html">API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Frequently asked questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/examples.html">Examples</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FAQ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html">Miscellaneous resources</a></li>
 </ul>
 </li>
@@ -87,7 +87,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="documentation.html">Documentation</a><ul>
-      <li>Previous: <a href="api/utils.html" title="previous chapter">Utilities (<cite>skhep.utils</cite>)</a></li>
+      <li>Previous: <a href="examples/visual/errorbars.html" title="previous chapter">Error Bars</a></li>
       <li>Next: <a href="resources.html" title="next chapter">Miscellaneous resources</a></li>
   </ul></li>
   </ul></li>
@@ -109,8 +109,35 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="frequently-asked-questions">
-<span id="faq"></span><h1>Frequently asked questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="faq">
+<span id="id1"></span><h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-the-exact-project-name">
+<h2>What is the exact project name?<a class="headerlink" href="#what-is-the-exact-project-name" title="Permalink to this headline">¶</a></h2>
+<p>The project is called <cite>Scikit-HEP</cite>. Notice the upper-case &#8220;S&#8221; and &#8220;HEP&#8221;.
+That is distinct from the core package, which is <cite>scikit-hep</cite>.</p>
+</div>
+<div class="section" id="how-to-pronounce-the-project-name">
+<h2>How to pronounce the project name?<a class="headerlink" href="#how-to-pronounce-the-project-name" title="Permalink to this headline">¶</a></h2>
+<p>Like &#8220;sy-kit happ&#8221;(y), forgetting about the &#8220;y&#8221; in &#8220;happy&#8221;.
+Of course &#8220;sci&#8221; stands for science.</p>
+</div>
+<div class="section" id="how-to-get-started-contributing">
+<h2>How to get started contributing?<a class="headerlink" href="#how-to-get-started-contributing" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to the link <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">contributing to Scikit-HEP</span></a>
+for details on how to get involved.</p>
+</div>
+<div class="section" id="is-there-support-for-pypy">
+<h2>Is there support for PyPy?<a class="headerlink" href="#is-there-support-for-pypy" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s a nice idea. Support for <a class="reference external" href="http://pypy.org/">PyPy</a> could be envisaged in the near future
+<cite>but only once</cite> the scientific stack based on <a class="reference external" href="http://www.numpy.org/">NumPy</a> supports it.</p>
+</div>
+<div class="section" id="is-there-support-for-gpus">
+<h2>Is there support for GPUs?<a class="headerlink" href="#is-there-support-for-gpus" title="Permalink to this headline">¶</a></h2>
+<p>Support for GPU-oriented code is not foreseen in the core package <cite>scikit-hep</cite> itself in the near- or even medium-term future.
+This would introduce non-trivial dependencies.
+This being said, there are already ideas to bring along <a class="reference internal" href="affiliations.html#affiliations"><span class="std std-ref">affiliated packages</span></a> specifically targetting data-intensive work,
+so code running on both CPUs and GPUs.</p>
+</div>
 </div>
 
 

@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &#8212; Scikit-HEP 0.0.1 documentation</title>
+    <title>Installation &#8212; Scikit-HEP 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -69,7 +69,12 @@
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-installation">Basic installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Get help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
@@ -103,8 +108,59 @@
             
   <div class="section" id="installation">
 <span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>Instructions will be provided in due course once a first development
-or beta release gets prepared.</p>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The scikit-hep package requires a few packages upon installation.
+In striving to keep support for many Python versions in use in HEP, in particular 2.6,
+a requirements matrix is needed for specific packages:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="30%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Python</strong></th>
+<th class="head">2.6</th>
+<th class="head">2.7</th>
+<th class="head">3.x</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>PyPDT</strong></td>
+<td colspan="3">&gt;= 0.7.4</td>
+</tr>
+<tr class="row-odd"><td><strong>NumPy</strong></td>
+<td>1.11.0 , &lt;1.12.0</td>
+<td colspan="2">&gt;= 1.11.0</td>
+</tr>
+<tr class="row-even"><td><strong>matplotlib</strong></td>
+<td>&lt; 1.5</td>
+<td colspan="2">&gt; 2.0.0 , &lt; 2.1</td>
+</tr>
+<tr class="row-odd"><td><strong>pandas</strong></td>
+<td>== 0.16.2</td>
+<td colspan="2">no requirement</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="basic-installation">
+<h2>Basic installation<a class="headerlink" href="#basic-installation" title="Permalink to this headline">¶</a></h2>
+<p>The simplest installation is done with just:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">hep</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>The test suite is built atop <a class="reference external" href="http://docs.pytest.org/">pytest</a> and requires pytest &gt;= 3.0.</p>
+<p>After installation, the complete test suite can be run from outside the source directory with the command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">tests</span><span class="o">/</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">r</span> <span class="n">a</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

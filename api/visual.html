@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data Visualization (skhep.visual) &#8212; Scikit-HEP 0.1.0 documentation</title>
+    <title>Data Visualization (skhep.visual) &#8212; Scikit-HEP 0.1.1 documentation</title>
     
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -129,16 +129,17 @@ majority of work.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>array_like</em><em>, or </em><em>list of array_like</em>) &#8211; Array of data to be histogrammed.</li>
+<li><strong>x</strong> (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em>, or </em><em>list of array</em>) &#8211; Array of data to be histogrammed.</li>
 <li><strong>bins</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a><em> or </em><em>List</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a><em>, </em><em>optional</em>) &#8211; <p>If <cite>int</cite>, <cite>bins</cite> number of equal-width bins are
 generated.  The width is determined by either equal divison of the given <cite>range</cite>, or
 equal division between the first and last data point if no <cite>range</cite> is specified.</p>
 <p>If <cite>List</cite>, bin edges are taken directly from <cite>List</cite> (can be unequal width).</p>
-<dl class="docutils">
-<dt>If <cite>str</cite>, then it must be one of</dt>
-<dd>&#8216;blocks&#8217; : use bayesian blocks for dynamic bin widths.<p class="last">&#8216;auto&#8217; : use <cite>auto</cite> feature from numpy.histogram.</p>
-</dd>
-</dl>
+<p>If <cite>str</cite>, then it must be one of:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;blocks&#39;</span> <span class="p">:</span> <span class="n">use</span> <span class="n">bayesian</span> <span class="n">blocks</span> <span class="k">for</span> <span class="n">dynamic</span> <span class="nb">bin</span> <span class="n">widths</span><span class="o">.</span>
+
+<span class="s1">&#39;auto&#39;</span> <span class="p">:</span> <span class="n">use</span> <span class="s1">&#39;auto&#39;</span> <span class="n">feature</span> <span class="kn">from</span> <span class="nn">numpy.histogram.</span>
+</pre></div>
+</div>
 <p>Defaults to &#8216;auto&#8217;.</p>
 </li>
 <li><strong>range</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>If specificed, data will only be considered and shown
@@ -146,12 +147,12 @@ for the range given.  Otherwise, <cite>range</cite> will be between the highest 
 datapoint.</p>
 <p>Defaults to None.</p>
 </li>
-<li><strong>weights</strong> (<em>array_like</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>Weights associated with each data point.  If
+<li><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>Weights associated with each data point.  If
 specified, bin content will be equal to the sum of all relevant weights.</p>
 <p>Defaults to None.</p>
 </li>
-<li><strong>errorbars</strong> (<em>boolean</em><em> or </em><em>array_like</em><em>, </em><em>optional</em>) &#8211; <p>If True, errorbars will be calculated and
-displayed based on the <cite>err_*</cite> arguments. The errorbars will be appropriately
+<li><strong>errorbars</strong> (<em>boolean</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em>, </em><em>optional</em>) &#8211; <p>If True, errorbars will be calculated and
+displayed based on the <cite>err_*</cite> arguments.  The errorbars will be appropriately
 modified if <cite>scale</cite> and/or <cite>normed</cite> is True. If an array is specificed, those values
 will be used (and will not be modifed by any other methods).</p>
 <p>Defaults to False.</p>
@@ -223,32 +224,33 @@ with each bin, and the patches used to display the error bars.<p class="last">De
 </li>
 </ul>
 </li>
-<li><strong>keyword arguments are described in pylab.hist</strong><strong>(</strong><strong>)</strong><strong></strong> (<em>Other</em>) &#8211; </li>
+<li><strong>Note</strong> &#8211; Other keyword arguments are described in <cite>pylab.hist()</cite>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
-<dt>The values of the histogram bins. See normed or</dt>
-<dd><p class="first last">density and weights for a description of the possible semantics. If input x is an
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p>(bin_content, bin_edges, bin_errors (optional), patches)</p>
+<dl class="docutils">
+<dt>bin_content (array or list of array):</dt>
+<dd><p class="first last">The values of the histogram bins. See normed or
+density and weights for a description of the possible semantics. If input x is an
 array, then this is an array of length nbins. If input is a sequence arrays [data1,
 data2,..], then this is a list of arrays with the values of the histograms for each
 of the arrays in the same order.</p>
 </dd>
-<dt>bin_edges (array): The edges of the bins. Length nbins + 1 (nbins left edges and right</dt>
-<dd><p class="first last">edge of last bin). Always a single array even when multiple data sets are passed in.</p>
+<dt>bin_edges (array):</dt>
+<dd><p class="first last">The edges of the bins. Length nbins + 1 (nbins left edges and right edge of last
+bin). Always a single array even when multiple data sets are passed in.</p>
 </dd>
-<dt>error_bars (array or list of arrays, optional): The values of the error bars</dt>
-<dd><p class="first last">associated with each bin.  It is only returned if <cite>errorbars</cite> is <cite>True</cite> and
-<cite>err_return</cite> is True.</p>
+<dt>bin_errors (array or list of arrays, optional):</dt>
+<dd><p class="first last">The values of the error bars associated with each bin.  It is only returned if
+<cite>errorbars</cite> is <cite>True</cite> and <cite>err_return</cite> is True.</p>
 </dd>
-<dt>bin_patches (list or list of lists): Silent list of individual patches used to create</dt>
-<dd><p class="first last">the histogram or list of such list if multiple input datasets.</p>
+<dt>bin_patches (list or list of lists):</dt>
+<dd><p class="first last">Silent list of individual patches used to create the histogram or list of such list
+if multiple input datasets.</p>
 </dd>
 </dl>
 </p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bin_content (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)">array</a> or list of arrays)</p>
 </td>
 </tr>
 </tbody>
@@ -263,6 +265,10 @@ of the arrays in the same order.</p>
 The call structure is very similar to producing two individual histograms, with additional
 arguments specifying the nature of the ratio plot.  The number of bins and ranges for both
 histograms must be equal.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Addition documentation soon.</p>
+</div>
 </dd></dl>
 
 </dd></dl>

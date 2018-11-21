@@ -1,32 +1,21 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Forum on project ideas &#8212; Scikit-HEP 0.1.1 documentation</title>
-    
+    <title>Forum on project ideas &#8212; Scikit-HEP 0.3.1 documentation</title>
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="static/scikit-hep.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="static/documentation_options.js"></script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -37,8 +26,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body role="document">
+  </head><body>
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -83,12 +71,14 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -154,24 +144,15 @@ Contact <cite>Vanya</cite> and <cite>Eduardo</cite> if such a development is of 
 </div>
 <div class="section" id="modeling">
 <h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
-<p>Means &#8220;data models and fitting utilities&#8221; at large. <img alt="Modeling_open" src="images/Modeling-open-orange.png" />
+<p>Means “data models and fitting utilities” at large. <img alt="Modeling_open" src="images/Modeling-open-orange.png" />
 Ideas?</p>
 </div>
 <div class="section" id="simulation">
 <h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Creation of a decay generator base class. A concrete class using ROOT&#8217;s
-<code class="docutils literal"><span class="pre">TGenPhaseSpace</span></code> should be an immediate example.
+<li>Creation of a decay generator base class. A concrete class using ROOT’s
+<code class="docutils literal notranslate"><span class="pre">TGenPhaseSpace</span></code> should be an immediate example.
 Contact <cite>Eduardo</cite> if you want to get involved. <img alt="Simulation_ongoing" src="images/Simulation-ongoing-yellowgreen.png" /></li>
-</ul>
-</div>
-<div class="section" id="root-pandas">
-<h2>ROOT-Pandas<a class="headerlink" href="#root-pandas" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Include the <a class="reference external" href="https://github.com/ibab/root_pandas">root_pandas</a> project into Scikit-HEP and see how it fits together with the rest of the framework.
-It is an excellent candidate for an affiliated package. <img alt="AffiliatedPackages_done" src="images/AffiliatedPackages-done-lightgrey.png" /></li>
-<li>Define which parts are still missing and find developers for this part of the project. <img alt="AffiliatedPackages_ongoing" src="images/AffiliatedPackages-ongoing-yellowgreen.png" /></li>
-<li>See if users of this project may want to use scikit-hep as their starting point instead of installing <cite>root_pandas</cite>, to increase the awareness of this project. <img alt="AffiliatedPackages_ongoing" src="images/AffiliatedPackages-ongoing-yellowgreen.png" /></li>
 </ul>
 </div>
 <div class="section" id="analysis-development">
@@ -179,7 +160,7 @@ It is an excellent candidate for an affiliated package. <img alt="AffiliatedPack
 <ul class="simple">
 <li>Give users as early as possible an idea on how the project may contribute to and/or help with their analysis,
 e.g. by giving a small example analysis using the project toolchain.</li>
-<li>Think about including &#8220;framework&#8221; tools for an analysis, e.g. workflow managers (for example luigi).</li>
+<li>Think about including “framework” tools for an analysis, e.g. workflow managers (for example luigi).</li>
 </ul>
 </div>
 <div class="section" id="continuous-integration-testing-code-health-etc">
@@ -200,7 +181,7 @@ e.g. by giving a small example analysis using the project toolchain.</li>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2017, The Scikit-HEP Developers.
+      &copy;2016-2018, The Scikit-HEP Developers.
       
       |
       <a href="sources/ideas.rst.txt"

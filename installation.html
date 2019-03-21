@@ -1,21 +1,32 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installation &#8212; Scikit-HEP 0.3.1 documentation</title>
+    
+    <title>Installation &#8212; Scikit-HEP 0.4.0 documentation</title>
+    
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="static/scikit-hep.css" type="text/css" />
-    <script type="text/javascript" src="static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="static/jquery.js"></script>
     <script type="text/javascript" src="static/underscore.js"></script>
     <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -28,7 +39,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,6 +79,7 @@
 <li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="affiliations.html">Affiliated packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Release history</a></li>
 </ul>
 
 <div class="relations">
@@ -80,14 +93,12 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -105,27 +116,32 @@ In striving to keep support for many Python versions in use in HEP, in particula
 a requirements matrix is needed for specific packages:</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="55%" />
-<col width="23%" />
-<col width="23%" />
+<col width="38%" />
+<col width="30%" />
+<col width="16%" />
+<col width="16%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><strong>Python</strong></th>
+<th class="head">2.6</th>
 <th class="head">2.7</th>
 <th class="head">3.x</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><strong>PyPDT</strong></td>
-<td colspan="2">&gt;= 0.7.4</td>
+<td colspan="3">&gt;= 0.7.4</td>
 </tr>
 <tr class="row-odd"><td><strong>NumPy</strong></td>
+<td>1.11.0 , &lt;1.12.0</td>
 <td colspan="2">&gt;= 1.11.0</td>
 </tr>
 <tr class="row-even"><td><strong>matplotlib</strong></td>
+<td>&lt; 1.5</td>
 <td colspan="2">&gt; 2.0.0 , &lt; 2.1</td>
 </tr>
 <tr class="row-odd"><td><strong>pandas</strong></td>
+<td>== 0.16.2</td>
 <td colspan="2">no requirement</td>
 </tr>
 </tbody>
@@ -134,7 +150,7 @@ a requirements matrix is needed for specific packages:</p>
 <div class="section" id="basic-installation">
 <h2>Basic installation<a class="headerlink" href="#basic-installation" title="Permalink to this headline">¶</a></h2>
 <p>The simplest installation is done with just:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">hep</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">hep</span>
 </pre></div>
 </div>
 </div>
@@ -142,7 +158,7 @@ a requirements matrix is needed for specific packages:</p>
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
 <p>The test suite is built atop <a class="reference external" href="http://docs.pytest.org/">pytest</a> and requires pytest &gt;= 3.0.</p>
 <p>After installation, the complete test suite can be run from outside the source directory with the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">tests</span><span class="o">/</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">r</span> <span class="n">a</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="n">tests</span><span class="o">/</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">r</span> <span class="n">a</span>
 </pre></div>
 </div>
 </div>
@@ -155,7 +171,7 @@ a requirements matrix is needed for specific packages:</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2018, The Scikit-HEP Developers.
+      &copy;2016-2017, The Scikit-HEP Developers.
       
       |
       <a href="sources/installation.rst.txt"

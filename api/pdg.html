@@ -1,21 +1,32 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>PDG utilities (skhep.pdg) &#8212; Scikit-HEP 0.3.1 documentation</title>
+    
+    <title>PDG utilities (skhep.pdg) &#8212; Scikit-HEP 0.4.0 documentation</title>
+    
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +39,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -68,6 +80,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Release history</a></li>
 </ul>
 
 <div class="relations">
@@ -85,14 +98,12 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -108,7 +119,7 @@
 <h2>Subpackage to handle Particle Data Tables<a class="headerlink" href="#subpackage-to-handle-particle-data-tables" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Standard use case:</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.pdg</span> <span class="k">import</span> <span class="n">ParticleDataTable</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.pdg</span> <span class="k">import</span> <span class="n">ParticleDataTable</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tbl</span> <span class="o">=</span> <span class="n">ParticleDataTable</span><span class="p">(</span><span class="s1">&#39;data/mass_width_2017.mcd&#39;</span><span class="p">)</span>    
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tbl</span><span class="p">[</span><span class="mi">9000221</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>                                      
 <span class="go">f(0)(500)0                                                 </span>
@@ -185,7 +196,7 @@ accessed via the mean_disp(energy) method.</p>
 <dd><p>Wrapper object for a whole database of ParticleData objects, indexed by their PDG ID codes.</p>
 <p>By default, the input database file will be the mass_width_2016.mcd file
 from the most recent PDG Review of Particle Properties, which is installed
-along with this package. If you want a different db file, or don’t have AFS
+along with this package. If you want a different db file, or don&#8217;t have AFS
 mounted, specify an explicit file path, or set the PYPDT_DB environment variable.</p>
 <dl class="method">
 <dt id="skhep.pdg.pdt.ParticleDataTable.clear">
@@ -224,9 +235,8 @@ scheme). These are the available keys for db lookup.</p>
 <dl class="method">
 <dt id="skhep.pdg.pdt.ParticleDataTable.particle">
 <code class="descname">particle</code><span class="sig-paren">(</span><em>id</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.pdg.pdt.ParticleDataTable.particle" title="Permalink to this definition">¶</a></dt>
-<dd><p>‘Square bracket’ access to particles in the table by PID code. Returns
-None rather than throwing an exception if the requested PID does not exist
-in the table.</p>
+<dd><p>Get the particle data for the supplied particle ID. Alternatively
+usable as particle(id, default) or tbl[id].</p>
 </dd></dl>
 
 <dl class="method">
@@ -270,7 +280,7 @@ access via the PDT.dbfiles attribute.</p>
 <dl class="attribute">
 <dt id="skhep.pdg.pdt.PDT">
 <code class="descclassname">skhep.pdg.pdt.</code><code class="descname">PDT</code><a class="headerlink" href="#skhep.pdg.pdt.PDT" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pypdt.pdt.ParticleDataTable</span></code></p>
+<dd><p>alias of <a class="reference internal" href="#skhep.pdg.pdt.ParticleDataTable" title="skhep.pdg.pdt.ParticleDataTable"><code class="xref py py-class docutils literal"><span class="pre">ParticleDataTable</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -283,7 +293,7 @@ access via the PDT.dbfiles attribute.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2018, The Scikit-HEP Developers.
+      &copy;2016-2017, The Scikit-HEP Developers.
       
       |
       <a href="../sources/api/pdg.rst.txt"

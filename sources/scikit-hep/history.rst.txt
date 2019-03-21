@@ -1,0 +1,13 @@
+.. _history:
+
+Release history
+===============
+
+A summary of "what's new" in every major release in given here.
+Full details on each release are provided in the changelog.
+
+.. toctree::
+    :maxdepth: 1
+
+    What's new <whats_new.rst>
+    Full changelog <changelog>

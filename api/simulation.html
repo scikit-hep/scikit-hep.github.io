@@ -1,21 +1,32 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Simulation utilities (skhep.simulation) &#8212; Scikit-HEP 0.3.1 documentation</title>
+    
+    <title>Simulation utilities (skhep.simulation) &#8212; Scikit-HEP 0.1.0 documentation</title>
+    
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +39,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -68,6 +80,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Release history</a></li>
 </ul>
 
 <div class="relations">
@@ -85,14 +98,12 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -112,10 +123,10 @@ HepPID translates the standard PDG numbering scheme.</p>
 <p>All methods from PyPDT applicable to the PDG particle identification codes,
 a.k.a. PDG IDs, are available.</p>
 <p>Functions available:</p>
-<p>[‘isValid’, ‘charge’, ‘threeCharge’, ‘jSpin’, ‘lSpin’, ‘sSpin’, ‘hasFundamentalAnti’, ‘hasDown’, ‘hasUp’, ‘hasStrange’, ‘hasCharm’, ‘hasBottom’, ‘hasTop’, ‘isLepton’, ‘isHadron’, ‘isBaryon’, ‘isMeson’, ‘isNucleus’, ‘isDiQuark’, ‘isDyon’, ‘isPentaquark’, ‘isQBall’, ‘isRhadron’, ‘isSUSY’, ‘ionA’, ‘ionNlambda’, ‘ionZ’]</p>
+<p>[&#8216;isValid&#8217;, &#8216;charge&#8217;, &#8216;threeCharge&#8217;, &#8216;jSpin&#8217;, &#8216;lSpin&#8217;, &#8216;sSpin&#8217;, &#8216;hasFundamentalAnti&#8217;, &#8216;hasDown&#8217;, &#8216;hasUp&#8217;, &#8216;hasStrange&#8217;, &#8216;hasCharm&#8217;, &#8216;hasBottom&#8217;, &#8216;hasTop&#8217;, &#8216;isLepton&#8217;, &#8216;isHadron&#8217;, &#8216;isBaryon&#8217;, &#8216;isMeson&#8217;, &#8216;isNucleus&#8217;, &#8216;isDiQuark&#8217;, &#8216;isDyon&#8217;, &#8216;isPentaquark&#8217;, &#8216;isQBall&#8217;, &#8216;isRhadron&#8217;, &#8216;isSUSY&#8217;, &#8216;ionA&#8217;, &#8216;ionNlambda&#8217;, &#8216;ionZ&#8217;]</p>
 <dl class="docutils">
 <dt>Standard use case:</dt>
-<dd><div class="first last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.simulation</span> <span class="k">import</span> <span class="n">pdgid</span>
+<dd><div class="first last highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.simulation</span> <span class="k">import</span> <span class="n">pdgid</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pdgid</span><span class="o">.</span><span class="n">isLepton</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
 <span class="go">True</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pdgid</span><span class="o">.</span><span class="n">charge</span><span class="p">(</span><span class="o">-</span><span class="mi">4444</span><span class="p">)</span>  <span class="c1"># anti Omega_ccc^++</span>
@@ -320,7 +331,7 @@ Fundamental SUSY particles have n = 1 or 2 and nr = 0.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2018, The Scikit-HEP Developers.
+      &copy;2016-2017, The Scikit-HEP Developers.
       
       |
       <a href="../sources/api/simulation.rst.txt"

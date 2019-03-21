@@ -1,21 +1,32 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mathematical utilities (skhep.math) &#8212; Scikit-HEP 0.3.1 documentation</title>
+    
+    <title>Mathematical utilities (skhep.math) &#8212; Scikit-HEP 0.1.0 documentation</title>
+    
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +39,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -68,6 +80,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Release history</a></li>
 </ul>
 
 <div class="relations">
@@ -85,14 +98,12 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -114,55 +125,11 @@
 <span class="target" id="module-skhep.math.kinematics"></span><div class="section" id="mathematical-functions-relevant-to-kinematics">
 <h2>Mathematical functions relevant to kinematics<a class="headerlink" href="#mathematical-functions-relevant-to-kinematics" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="skhep.math.kinematics.Armenteros_Podolanski_variables">
-<code class="descclassname">skhep.math.kinematics.</code><code class="descname">Armenteros_Podolanski_variables</code><span class="sig-paren">(</span><em>pplus_3Dvec</em>, <em>pminus_3Dvec</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Armenteros_Podolanski_variables" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate the Armenteros Podolanski <a class="reference internal" href="#appaper" id="id1">[APPaper]</a> variables <span class="math notranslate nohighlight">\((\alpha,q_T)\)</span> for a 2-body decay.</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\alpha = \frac{p_L^+ - p_L^-}{p_L^+ + p_L^-}\\q_T = \frac{| p^- \times p^{\mathrm mother}|}{|p^{\mathrm mother}|}\end{aligned}\end{align} \]</div>
-<p>where the longitudinal momentum along the direction of flight of the mother particle is</p>
-<div class="math notranslate nohighlight">
-\[p_L^\pm = \frac{p^\pm \cdot p^{\mathrm mother}}{|p^{\mathrm mother}|}\]</div>
-<p>and <span class="math notranslate nohighlight">\(q_T\)</span> is the transverse momentum of the daughter particles with respect
-to the direction of flight of the mother particle.</p>
-<p>These expressions can be simplified to</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\alpha = \frac{|p^+|^2 - |p^-|^2}{|p^+ + p^-|^2}\\q_T = \frac{| p^+ \times p^- |}{|p^+ + p^-|}\end{aligned}\end{align} \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>pplus_3Dvec</strong> (<a class="reference internal" href="#skhep.math.geometry.Vector3D" title="skhep.math.geometry.Vector3D"><em>Vector3D</em></a>) – 3D-momentum vector of the positively-charged daughter particle.</li>
-<li><strong>pminus_3Dvec</strong> (<a class="reference internal" href="#skhep.math.geometry.Vector3D" title="skhep.math.geometry.Vector3D"><em>Vector3D</em></a>) – 3D-momentum vector of the negatively-charged daughter particle.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Tuple <span class="math notranslate nohighlight">\((\alpha,q_T)\)</span>.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="appaper" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[APPaper]</a></td><td><ol class="first last upperalpha simple" start="10">
-<li>Podolanski and R. Armenteros, III. Analysis of V-events, The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science 45 (1954) 13, <a class="reference external" href="http://dx.doi.org/10.1080/14786440108520416">http://dx.doi.org/10.1080/14786440108520416</a></li>
-</ol>
-</td></tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
 <dt id="skhep.math.kinematics.Kallen_function">
 <code class="descclassname">skhep.math.kinematics.</code><code class="descname">Kallen_function</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Kallen_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kallen function, aka triangle or lambda function,
-named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id2">[Kallen]</a>.</p>
-<div class="math notranslate nohighlight">
+named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id1">[Kallen]</a>:</p>
+<div class="math">
 \[\begin{split}\begin{eqnarray}
 \lambda(x,y,z) &amp;=&amp; x^2 + y^2 + z^2 - 2 x y - 2 y z - 2 z x \\
                 &amp;=&amp; (x-y-z)^2 - 4 y z \\
@@ -170,8 +137,8 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 \end{eqnarray}\end{split}\]</div>
 <p class="rubric">Example</p>
 <p>Calculate in the rest frame of a particle of mass M decaying to 2 particles labeled 1 and 2,
-<span class="math notranslate nohighlight">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math notranslate nohighlight">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="k">import</span> <span class="n">Kallen_function</span>
+<span class="math">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="k">import</span> <span class="n">Kallen_function</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="k">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="mf">5.279</span> <span class="o">*</span> <span class="n">GeV</span><span class="p">;</span> <span class="n">m1</span> <span class="o">=</span> <span class="mf">493.7</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">;</span> <span class="n">m2</span> <span class="o">=</span> <span class="mf">139.6</span> <span class="o">*</span> <span class="n">MeV</span>
@@ -184,7 +151,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <table class="docutils citation" frame="void" id="kallen" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -197,7 +164,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tau</strong> (<em>float &gt; 0</em>) – Particle lifetime, typically in picoseconds (any HEP time unit is OK).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tau</strong> (<em>float &gt; 0</em>) &#8211; Particle lifetime, typically in picoseconds (any HEP time unit is OK).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
 </tr>
@@ -215,7 +182,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Gamma</strong> (<em>float &gt; 0</em>) – Particle decay width, typically in MeV (any HEP energy unit is OK).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Gamma</strong> (<em>float &gt; 0</em>) &#8211; Particle decay width, typically in MeV (any HEP energy unit is OK).</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"></td>
 </tr>
@@ -230,9 +197,9 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <h2>Vector classes<a class="headerlink" href="#vector-classes" title="Permalink to this headline">¶</a></h2>
 <p>Two vector classes are available:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Vector3D</span></code>     : a 3-dimensional vector.</li>
+<li><code class="docutils literal"><span class="pre">Vector3D</span></code>     : a 3-dimensional vector.</li>
 <li><dl class="first docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">LorentzVector</span></code>: a Lorentz vector, i.e. a 4-dimensional Minkowski space-time vector</dt>
+<dt><code class="docutils literal"><span class="pre">LorentzVector</span></code>: a Lorentz vector, i.e. a 4-dimensional Minkowski space-time vector</dt>
 <dd>or a 4-momentum vector.
 The metric is (-1,-1,-1,+1).</dd>
 </dl>
@@ -253,7 +220,7 @@ from3vector(vector3d, t)</dd>
 <dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.beta">
 <code class="descname">beta</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.beta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <span class="math notranslate nohighlight">\(\beta = v/c\)</span>.</p>
+<dd><p>Return <span class="math">\(\beta = v/c\)</span>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -273,7 +240,7 @@ from3vector(vector3d, t)</dd>
 <code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a copy of the LorentzVector.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v1</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -288,20 +255,20 @@ from3vector(vector3d, t)</dd>
 <dl class="method">
 <dt id="skhep.math.vectors.LorentzVector.deltaeta">
 <code class="descname">deltaeta</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.deltaeta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the pseudorapidity difference, <span class="math notranslate nohighlight">\(\Delta \eta\)</span>, with another Lorentz vector.</p>
+<dd><p>Return the pseudorapidity difference, <span class="math">\(\Delta \eta\)</span>, with another Lorentz vector.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="skhep.math.vectors.LorentzVector.deltaphi">
 <code class="descname">deltaphi</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.deltaphi" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the phi angle difference, <span class="math notranslate nohighlight">\(\Delta \phi\)</span>, with another Lorentz vector.</p>
+<dd><p>Return the phi angle difference, <span class="math">\(\Delta \phi\)</span>, with another Lorentz vector.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="skhep.math.vectors.LorentzVector.deltar">
 <code class="descname">deltar</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.LorentzVector.deltar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <span class="math notranslate nohighlight">\(\Delta R\)</span> the distance in (eta,phi) space with another Lorentz vector, defined as:
-<span class="math notranslate nohighlight">\(\Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}\)</span></p>
+<dd><p>Return <span class="math">\(\Delta R\)</span> the distance in (eta,phi) space with another Lorentz vector, defined as:
+<span class="math">\(\Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}\)</span></p>
 </dd></dl>
 
 <dl class="method">
@@ -351,7 +318,7 @@ and the length equals 4.</p>
 <dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.gamma">
 <code class="descname">gamma</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.gamma" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return <span class="math notranslate nohighlight">\(\gamma = 1/\sqrt{1-\beta^2}\)</span>.</p>
+<dd><p>Return <span class="math">\(\gamma = 1/\sqrt{1-\beta^2}\)</span>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -446,7 +413,7 @@ and the length equals 4.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -455,7 +422,7 @@ and the length equals 4.</p>
 <dl class="attribute">
 <dt id="skhep.math.vectors.LorentzVector.pseudorapidity">
 <code class="descname">pseudorapidity</code><a class="headerlink" href="#skhep.math.vectors.LorentzVector.pseudorapidity" title="Permalink to this definition">¶</a></dt>
-<dd><p>“Return the pseudorapidity. Alternative to eta() method.</p>
+<dd><p>&#8220;Return the pseudorapidity. Alternative to eta() method.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -556,7 +523,7 @@ and the length equals 4.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -628,7 +595,7 @@ fromiterable(values)</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -639,7 +606,7 @@ fromiterable(values)</dd>
 <code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a copy of the vector.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v1</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -654,7 +621,7 @@ fromiterable(values)</dd>
 <dl class="method">
 <dt id="skhep.math.vectors.Vector3D.costheta">
 <code class="descname">costheta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.costheta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the cosine of the spherical coordinate theta.</p>
+<dd><p>Return the cosinus of the spherical coordinate theta.</p>
 </dd></dl>
 
 <dl class="method">
@@ -678,9 +645,9 @@ fromiterable(values)</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
-<li><strong>z</strong> (<em>height</em>) – </li>
+<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>z</strong> (<em>height</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -711,9 +678,9 @@ and the length equals 3.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) – </li>
-<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
+<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -787,7 +754,7 @@ Equivalent to the default constructor Vector3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -843,7 +810,7 @@ Equivalent to the default constructor Vector3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -885,9 +852,9 @@ Equivalent to the default constructor Vector3D().</p>
 <span class="target" id="module-skhep.math.geometry"></span><div class="section" id="geometry-classes">
 <h2>Geometry classes<a class="headerlink" href="#geometry-classes" title="Permalink to this headline">¶</a></h2>
 <p>Three geometry classes are available:
-* <code class="docutils literal notranslate"><span class="pre">Point3D</span></code>      : a point in 3-dimensional space
-* <code class="docutils literal notranslate"><span class="pre">Line3D</span></code>       : a line  in 3-dimensional space
-* <code class="docutils literal notranslate"><span class="pre">Plane3D</span></code>      : a plane in 3-dimensional space</p>
+* <code class="docutils literal"><span class="pre">Point3D</span></code>      : a point in 3-dimensional space
+* <code class="docutils literal"><span class="pre">Line3D</span></code>       : a line  in 3-dimensional space
+* <code class="docutils literal"><span class="pre">Plane3D</span></code>      : a plane in 3-dimensional space</p>
 <dl class="class">
 <dt id="skhep.math.geometry.Vector3D">
 <em class="property">class </em><code class="descclassname">skhep.math.geometry.</code><code class="descname">Vector3D</code><span class="sig-paren">(</span><em>x=0.0</em>, <em>y=0.0</em>, <em>z=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Vector3D" title="Permalink to this definition">¶</a></dt>
@@ -910,7 +877,7 @@ fromiterable(values)</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -921,7 +888,7 @@ fromiterable(values)</dd>
 <code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Vector3D.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a copy of the vector.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">v1</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -936,7 +903,7 @@ fromiterable(values)</dd>
 <dl class="method">
 <dt id="skhep.math.geometry.Vector3D.costheta">
 <code class="descname">costheta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Vector3D.costheta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the cosine of the spherical coordinate theta.</p>
+<dd><p>Return the cosinus of the spherical coordinate theta.</p>
 </dd></dl>
 
 <dl class="method">
@@ -960,9 +927,9 @@ fromiterable(values)</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
-<li><strong>z</strong> (<em>height</em>) – </li>
+<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>z</strong> (<em>height</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -993,9 +960,9 @@ and the length equals 3.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) – </li>
-<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
+<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1069,7 +1036,7 @@ Equivalent to the default constructor Vector3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -1125,7 +1092,7 @@ Equivalent to the default constructor Vector3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -1176,7 +1143,7 @@ Equivalent to the default constructor Vector3D().</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Point3D.distance">
 <code class="descname">distance</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Point3D.distance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get ‘distance’ between point  and other object.</p>
+<dd><p>Get &#8216;distance&#8217; between point  and other object.</p>
 </dd></dl>
 
 <dl class="classmethod">
@@ -1188,9 +1155,9 @@ Equivalent to the default constructor Vector3D().</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
-<li><strong>z</strong> (<em>height</em>) – </li>
+<li><strong>rho</strong> (<em>radial distance from the z-axis</em><em> (</em><em>rho &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>-pi</em><em>, </em><em>pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>z</strong> (<em>height</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1221,9 +1188,9 @@ and the length equals 3.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) – </li>
-<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) – </li>
-<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) – </li>
+<li><strong>r</strong> (<em>radius</em><em>, </em><em>the radial distance from the origin</em><em> (</em><em>r &gt; 0</em><em>)</em>) &#8211; </li>
+<li><strong>theta</strong> (<em>inclination in radians</em><em> (</em><em>theta in</em><em> [</em><em>0</em><em>, </em><em>pi</em><em>] </em><em>rad</em><em>)</em>) &#8211; </li>
+<li><strong>phi</strong> (<em>azimuthal angle in radians</em><em> (</em><em>phi in</em><em> [</em><em>0</em><em>, </em><em>2pi</em><em>) </em><em>rad</em><em>)</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1276,7 +1243,7 @@ Equivalent to the default constructor Point3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -1296,7 +1263,7 @@ Equivalent to the default constructor Point3D().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.7)"><em>float</em></a><em>, </em><em>optional</em>) – Return the angle in degrees (default is radians).</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>deg</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a><em>, </em><em>optional</em>) &#8211; Return the angle in degrees (default is radians).</td>
 </tr>
 </tbody>
 </table>
@@ -1336,7 +1303,7 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.angle">
 <code class="descname">angle</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.angle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘angle’ between a line and other object.</p>
+<dd><p>Get the &#8216;angle&#8217; between a line and other object.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1344,7 +1311,7 @@ Line is defined by a point on line and by the direction.</p>
 <code class="descname">closest_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.closest_point" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the point on line that is closest to the given point in space.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">closest</span>  <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">closest_point</span> <span class="p">(</span> <span class="n">point</span> <span class="p">)</span>
 </pre></div>
@@ -1354,9 +1321,9 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.closest_point_param">
 <code class="descname">closest_point_param</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.closest_point_param" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘mu’ parameter of the point on line that is closest to the given point in space.</p>
+<dd><p>Get the &#8216;mu&#8217; parameter of the point on line that is closest to the given point in space.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span>    <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">closest_point_param</span> <span class="p">(</span> <span class="n">point</span> <span class="p">)</span>
 </pre></div>
@@ -1368,7 +1335,7 @@ Line is defined by a point on line and by the direction.</p>
 <code class="descname">closest_points</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.closest_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get two points on lines that is closest to each other.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line2</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="p">,</span> <span class="n">p2</span>  <span class="o">=</span> <span class="n">line1</span><span class="o">.</span><span class="n">closest_points</span> <span class="p">(</span> <span class="n">line2</span> <span class="p">)</span>
 </pre></div>
@@ -1378,9 +1345,9 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.closest_points_params">
 <code class="descname">closest_points_params</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.closest_points_params" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘mu’ parameters of two points on lines that is closest to each other.</p>
+<dd><p>Get the &#8216;mu&#8217; parameters of two points on lines that is closest to each other.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line2</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mu1</span> <span class="p">,</span> <span class="n">mu2</span>  <span class="o">=</span> <span class="n">line1</span><span class="o">.</span><span class="n">closest_points_param</span> <span class="p">(</span> <span class="n">line2</span> <span class="p">)</span>
 </pre></div>
@@ -1396,9 +1363,9 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.distance">
 <code class="descname">distance</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.distance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get ‘distance’ between line and other object.</p>
+<dd><p>Get &#8216;distance&#8217; between line and other object.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line2</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span> <span class="o">=</span> <span class="o">...</span>
@@ -1424,8 +1391,8 @@ Line is defined by a point on line and by the direction.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>point1</strong> (<em>the first point on the line</em>) – </li>
-<li><strong>point2</strong> (<em>the second point on the line</em>) – </li>
+<li><strong>point1</strong> (<em>the first point on the line</em>) &#8211; </li>
+<li><strong>point2</strong> (<em>the second point on the line</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1436,7 +1403,7 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.intersect">
 <code class="descname">intersect</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.intersect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘intersection’ between a line and other object.</p>
+<dd><p>Get the &#8216;intersection&#8217; between a line and other object.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1454,9 +1421,9 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Line3D.point_on_line">
 <code class="descname">point_on_line</code><span class="sig-paren">(</span><em>mu</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Line3D.point_on_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the point on line, that  corresponds to parameter ‘mu’.</p>
+<dd><p>Get the point on line, that  corresponds to parameter &#8216;mu&#8217;.</p>
 <p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p0</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">point_on_line</span> <span class="p">(</span> <span class="mi">0</span> <span class="p">)</span> <span class="c1">## should be equal to line.point</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">point_on_line</span> <span class="p">(</span> <span class="mi">1</span> <span class="p">)</span> <span class="c1">## shodul be equal to line.point+line.vector</span>
 </pre></div>
@@ -1472,7 +1439,7 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Plane3D.angle">
 <code class="descname">angle</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Plane3D.angle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘angle’ between a plane and other object.</p>
+<dd><p>Get the &#8216;angle&#8217; between a plane and other object.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1484,9 +1451,9 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Plane3D.distance">
 <code class="descname">distance</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Plane3D.distance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get ‘distance’ between plane and other object.</p>
+<dd><p>Get &#8216;distance&#8217; between plane and other object.</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line2</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">plane</span> <span class="o">=</span> <span class="o">...</span>
@@ -1506,8 +1473,8 @@ Line is defined by a point on line and by the direction.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>line</strong> (<em>the line in plane</em>) – </li>
-<li><strong>point</strong> (<em>the point in plane</em>) – </li>
+<li><strong>line</strong> (<em>the line in plane</em>) &#8211; </li>
+<li><strong>point</strong> (<em>the point in plane</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1524,9 +1491,9 @@ Line is defined by a point on line and by the direction.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>point1</strong> (<em>the first  point on the plane</em>) – </li>
-<li><strong>point2</strong> (<em>the second point on the plane</em>) – </li>
-<li><strong>point3</strong> (<em>the third  point on the plane</em>) – </li>
+<li><strong>point1</strong> (<em>the first  point on the plane</em>) &#8211; </li>
+<li><strong>point2</strong> (<em>the second point on the plane</em>) &#8211; </li>
+<li><strong>point3</strong> (<em>the third  point on the plane</em>) &#8211; </li>
 </ul>
 </td>
 </tr>
@@ -1537,7 +1504,7 @@ Line is defined by a point on line and by the direction.</p>
 <dl class="method">
 <dt id="skhep.math.geometry.Plane3D.intersect">
 <code class="descname">intersect</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Plane3D.intersect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the ‘intersection’ between a line and other object</p>
+<dd><p>Get the &#8216;intersection&#8217; between a line and other object</p>
 </dd></dl>
 
 <dl class="method">
@@ -1553,7 +1520,7 @@ Line is defined by a point on line and by the direction.</p>
 <code class="descclassname">skhep.math.geometry.</code><code class="descname">distance</code><span class="sig-paren">(</span><em>obj1</em>, <em>obj2</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate 3D-distance between two geometry objects (points, lines, planes).</p>
 <p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span>  <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">line1</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">line2</span>  <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point1</span> <span class="o">=</span> <span class="o">...</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">point2</span> <span class="o">=</span> <span class="o">...</span>
@@ -1576,7 +1543,7 @@ Line is defined by a point on line and by the direction.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2018, The Scikit-HEP Developers.
+      &copy;2016-2017, The Scikit-HEP Developers.
       
       |
       <a href="../sources/api/math.rst.txt"

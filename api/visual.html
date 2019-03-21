@@ -1,21 +1,32 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Data Visualization (skhep.visual) &#8212; Scikit-HEP 0.3.1 documentation</title>
+    
+    <title>Data Visualization (skhep.visual) &#8212; Scikit-HEP 0.1.0 documentation</title>
+    
     <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../static/scikit-hep.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../static/mathjax_conf.js"></script>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -28,7 +39,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head><body>
+  </head>
+  <body role="document">
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -68,6 +80,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../affiliations.html">Affiliated packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Release history</a></li>
 </ul>
 
 <div class="relations">
@@ -85,14 +98,12 @@
 </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -119,63 +130,59 @@ majority of work.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>x</strong> (<em>array</em><em>, or </em><em>list of array</em>) – Array of data to be histogrammed.</li>
-<li><strong>bins</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a><em> or </em><em>List</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a><em>, </em><em>optional</em>) – <p>If <cite>int</cite>, <cite>bins</cite> number of equal-width bins are
+<li><strong>x</strong> (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em>, or </em><em>list of array</em>) &#8211; Array of data to be histogrammed.</li>
+<li><strong>bins</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a><em> or </em><em>List</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a><em>, </em><em>optional</em>) &#8211; <p>If <cite>int</cite>, <cite>bins</cite> number of equal-width bins are
 generated.  The width is determined by either equal divison of the given <cite>range</cite>, or
 equal division between the first and last data point if no <cite>range</cite> is specified.</p>
 <p>If <cite>List</cite>, bin edges are taken directly from <cite>List</cite> (can be unequal width).</p>
 <p>If <cite>str</cite>, then it must be one of:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;blocks&#39;</span> <span class="p">:</span> <span class="n">use</span> <span class="n">bayesian</span> <span class="n">blocks</span> <span class="k">for</span> <span class="n">dynamic</span> <span class="nb">bin</span> <span class="n">widths</span><span class="o">.</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;blocks&#39;</span> <span class="p">:</span> <span class="n">use</span> <span class="n">bayesian</span> <span class="n">blocks</span> <span class="k">for</span> <span class="n">dynamic</span> <span class="nb">bin</span> <span class="n">widths</span><span class="o">.</span>
 
 <span class="s1">&#39;auto&#39;</span> <span class="p">:</span> <span class="n">use</span> <span class="s1">&#39;auto&#39;</span> <span class="n">feature</span> <span class="kn">from</span> <span class="nn">numpy.histogram.</span>
-
-<span class="s1">&#39;fd&#39;</span><span class="p">,</span> <span class="s1">&#39;doane&#39;</span><span class="p">,</span> <span class="s1">&#39;scott&#39;</span><span class="p">,</span> <span class="s1">&#39;rice&#39;</span><span class="p">,</span> <span class="s1">&#39;sturges&#39;</span><span class="p">,</span> <span class="s1">&#39;sqrt&#39;</span> <span class="p">:</span> <span class="n">see</span> <span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span> <span class="k">for</span>
-    <span class="n">details</span><span class="o">.</span>
-    <span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">scipy</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">numpy</span><span class="o">/</span><span class="n">reference</span><span class="o">/</span><span class="n">generated</span><span class="o">/</span><span class="n">numpy</span><span class="o">.</span><span class="n">histogram</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Defaults to ‘auto’.</p>
+<p>Defaults to &#8216;auto&#8217;.</p>
 </li>
-<li><strong>range</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.7)"><em>tuple</em></a><em> or </em><em>None</em><em>, </em><em>optional</em>) – <p>If specificed, data will only be considered and shown
+<li><strong>range</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#tuple" title="(in Python v2.7)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>If specificed, data will only be considered and shown
 for the range given.  Otherwise, <cite>range</cite> will be between the highest and lowest
 datapoint.</p>
 <p>Defaults to None.</p>
 </li>
-<li><strong>weights</strong> (<em>array</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – <p>Weights associated with each data point.  If
+<li><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em> or </em><a class="reference external" href="https://docs.python.org/2/library/constants.html#None" title="(in Python v2.7)"><em>None</em></a><em>, </em><em>optional</em>) &#8211; <p>Weights associated with each data point.  If
 specified, bin content will be equal to the sum of all relevant weights.</p>
 <p>Defaults to None.</p>
 </li>
-<li><strong>errorbars</strong> (<em>boolean</em><em> or </em><em>array</em><em>, </em><em>optional</em>) – <p>If True, errorbars will be calculated and
+<li><strong>errorbars</strong> (<em>boolean</em><em> or </em><a class="reference external" href="https://docs.python.org/2/library/array.html#module-array" title="(in Python v2.7)"><em>array</em></a><em>, </em><em>optional</em>) &#8211; <p>If True, errorbars will be calculated and
 displayed based on the <cite>err_*</cite> arguments.  The errorbars will be appropriately
 modified if <cite>scale</cite> and/or <cite>normed</cite> is True. If an array is specificed, those values
 will be used (and will not be modifed by any other methods).</p>
 <p>Defaults to False.</p>
 </li>
-<li><strong>normed</strong> (<em>boolean</em><em>, </em><em>optional</em>) – <p>If True, histogram will be normalized such that the integral
+<li><strong>normed</strong> (<em>boolean</em><em>, </em><em>optional</em>) &#8211; <p>If True, histogram will be normalized such that the integral
 over all bins with be equal to 1.  In general, this will NOT mean that the sum of
 all bin contents will be 1, unless all bin widths are equal to 1. If used with
 <cite>scale</cite> option, normalization happens before scale.</p>
 <p>Defaults to False</p>
 </li>
-<li><strong>scale</strong> (<em>Number</em><em> or </em><em>'binwidth'</em><em>, </em><em>optional</em>) – <p>If Number, all bin contents are multiplied by
-the given value.  If ‘binwidth’, every bin content is divided by the bin width. If
-used with <cite>normed</cite> option, scaling occurs after normalization (‘binwidth’ will be
+<li><strong>scale</strong> (<em>Number</em><em> or </em><em>'binwidth'</em><em>, </em><em>optional</em>) &#8211; <p>If Number, all bin contents are multiplied by
+the given value.  If &#8216;binwidth&#8217;, every bin content is divided by the bin width. If
+used with <cite>normed</cite> option, scaling occurs after normalization (&#8216;binwidth&#8217; will be
 ignored in this case, because it is handled automatically when normalizing).</p>
 <p>Defaults to None</p>
 </li>
-<li><strong>stacked</strong> (<em>boolean</em><em>, </em><em>optional</em>) – <p>If True, multiple input data sets will be layered on top of
+<li><strong>stacked</strong> (<em>boolean</em><em>, </em><em>optional</em>) &#8211; <p>If True, multiple input data sets will be layered on top of
 each other, such that the height of each bin is the sum of all the relevant dataset
 contributions.  If used with errorbars, the bars will be associated with the bin
 totals, not the individual components.</p>
 <p>Defaults to False.</p>
 </li>
-<li><strong>histtype</strong> (<em>stepfilled'</em><em>, </em><em>'step'</em><em>, </em><em>'bar'</em><em>, or </em><em>'marker'</em>) – <p>Draw options for histograms.
-‘stepfilled’, ‘step’, and ‘bar’ inherit from <cite>matplotlib</cite>.  ‘marker’ places a single
-point at the center of each bin (best used with error bars).  ‘marker’ will throw an
-exception if used with ‘stacked’ option.</p>
-<p>Defaults to ‘stepfilled’.</p>
+<li><strong>histtype</strong> (<em>stepfilled'</em><em>, </em><em>'step'</em><em>, </em><em>'bar'</em><em>, or </em><em>'marker'</em>) &#8211; <p>Draw options for histograms.
+&#8216;stepfilled&#8217;, &#8216;step&#8217;, and &#8216;bar&#8217; inherit from <cite>matplotlib</cite>.  &#8216;marker&#8217; places a single
+point at the center of each bin (best used with error bars).  &#8216;marker&#8217; will throw an
+exception if used with &#8216;stacked&#8217; option.</p>
+<p>Defaults to &#8216;stepfilled&#8217;.</p>
 </li>
-<li><strong>**kwargs</strong> – <ul>
+<li><strong>**kwargs</strong> &#8211; <ul>
 <li><dl class="first docutils">
 <dt>ax (matplotlib axes instance):</dt>
 <dd>Specify the Axes on which to draw the histogram.  If not specified, then the
@@ -184,41 +191,41 @@ current active axes will be used, or a new axes instance will be generated.<p cl
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>err_style (‘band’ or ‘line’):</dt>
+<dt>err_style (&#8216;band&#8217; or &#8216;line&#8217;):</dt>
 <dd>Draw style for errorbars.<p class="last">Defaults depend on <cite>histtype</cite>,
-where histtype=’stepfilled’ corresponds to ‘band’, and all others correspond to
-‘line’.</p>
+where histtype=&#8217;stepfilled&#8217; corresponds to &#8216;band&#8217;, and all others correspond to
+&#8216;line&#8217;.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>err_color (‘auto’ or valid <cite>matplotlib</cite> colors):</dt>
-<dd>Color for error bars.  If ‘auto’ is
+<dt>err_color (&#8216;auto&#8217; or valid <cite>matplotlib</cite> colors):</dt>
+<dd>Color for error bars.  If &#8216;auto&#8217; is
 chosen and <cite>stacked</cite> is False, The color will be a slightly darker version of
 the associated histogram color.  If <cite>stacked</cite> is True, color will be the next in
-the current color cycle.<p class="last">Defaults to ‘auto’.</p>
+the current color cycle.<p class="last">Defaults to &#8216;auto&#8217;.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>err_type (‘sumW2’ or ‘gaussian’):</dt>
-<dd>Method of calculating error bars, if no error is given.  The ‘gaussian’ method
+<dt>err_type (&#8216;sumW2&#8217; or &#8216;gaussian&#8217;):</dt>
+<dd>Method of calculating error bars, if no error is given.  The &#8216;gaussian&#8217; method
 displays the error of each bin as the square root of the bin content.   The
-‘sumW2’ method displays the error as the square of the sum of the squares of the
-weights.<p class="last">Defaults to ‘gaussian’ if no weights are given, else ‘sumW2’.</p>
+&#8216;sumW2&#8217; method displays the error as the square of the sum of the squares of the
+weights.<p class="last">Defaults to &#8216;gaussian&#8217; if no weights are given, else &#8216;sumW2&#8217;.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt>err_return (bool):</dt>
 <dd>Return additional objects corresponding to the values of the error associated
-with each bin, and the patches used to display the error bars.<p class="last">Defaults to ‘False’</p>
+with each bin, and the patches used to display the error bars.<p class="last">Defaults to &#8216;False&#8217;</p>
 </dd>
 </dl>
 </li>
 </ul>
 </li>
-<li><strong>Note</strong> – Other keyword arguments are described in <cite>pylab.hist()</cite>.</li>
+<li><strong>Note</strong> &#8211; Other keyword arguments are described in <cite>pylab.hist()</cite>.</li>
 </ul>
 </td>
 </tr>
@@ -276,7 +283,7 @@ histograms must be equal.</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &copy;2016-2018, The Scikit-HEP Developers.
+      &copy;2016-2017, The Scikit-HEP Developers.
       
       |
       <a href="../sources/api/visual.rst.txt"

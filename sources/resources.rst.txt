@@ -10,11 +10,31 @@ on, or related to, the Scikit-HEP project.
 Presentations
 -------------
 
+* **21 May 2019:** `BelleII`_ experiment `Analysis Software Developers' Meeting <https://indico.belle2.org/event/193/>`_
+
+  * *Particles and decays in the Scikit-HEP project*, Eduardo Rodrigues, Henry Schreiner
+
+* **13 May 2019:** `IRIS-HEP`_ project `topical meeting <https://indico.cern.ch/event/818864/>`__:
+
+  * *Particles and decays in the Scikit-HEP project*, Eduardo Rodrigues, Henry Schreiner
+
+* **17 April 2019:** `IRIS-HEP`_ project `topical meeting <https://indico.cern.ch/event/808630/>`__:
+
+  * *Awkward Array: Numba*, Jim Pivarski
+
+  * *Awkward Array: Pandas*, Michael Hedges
+
+* **15 April 2019:** `IRIS-HEP`_ project `topical meeting <https://indico.cern.ch/event/803122/>`__:
+
+  * *boost-histogram and hist*, Henry Schreiner
+
+  * *Aghast*, Jim Pivarski
+
 * **21 March 2019:** `PyGamma19 Workshop <https://indico.cern.ch/event/783425/>`_, Heidelberg, Germany:
 
   * *Python in High-Energy Physics*, Hans Dembinski
 
-* **15 Oct. 2018:** `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/754335/>`_:
+* **15 Oct. 2018:** `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/754335/>`__:
 
   * *I/O for uproot*, Pratyush Das
 
@@ -34,12 +54,12 @@ Presentations
 
   * *Uproot: rapidly moving data from ROOT to Numpy and Pandas*, Jim Pivarski
 
-* **23 Oct. 2017:** `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/664968/>`_, CERN:
+* **23 Oct. 2017:** `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/664968/>`__, CERN:
 
   * *numpythia & pyjet - interfacing PYTHIA and FastJet with NumPy*, Noel Dawe
 
 * **11 Sep. 2017:** project status report,
-  `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/650630/>`_, CERN:
+  `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/650630/>`__, CERN:
 
   * *Scikit-HEP project status*, Eduardo Rodrigues
 
@@ -49,12 +69,14 @@ Presentations
   * *The Scikit-HEP project*, Eduardo Rodrigues
 
 * **27 Feb. 2017:** first presentation of the project,
-  `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/596272/>`_, CERN:
+  `DIANA/HEP`_ project `topical meeting <https://indico.cern.ch/event/596272/>`__, CERN:
 
   * *The Scikit-HEP project*, Eduardo Rodrigues
   * *Ostap concepts in Scikit-HEP*, Vanya Belyaev
   * *Rootpy and root_numpy concepts in Scikit-HEP*, Noel Dawe
 
 
+.. _BelleII : https://www.belle2.org/
 .. _DIANA/HEP : http://www.diana-hep.org/
+.. _IRIS-HEP : https://iris-hep.org/
 .. _LHCb experiment : http://lhcb.cern.ch/

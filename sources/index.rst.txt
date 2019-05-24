@@ -82,6 +82,7 @@ from the Python scientific software stack.
    documentation.rst
    faq.rst
    get-in-touch.rst
+   projusers.rst
    resources.rst
 
 .. _GitHub repository : https://github.com/scikit-hep/

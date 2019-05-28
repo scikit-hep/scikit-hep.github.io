@@ -79,9 +79,9 @@ from the Python scientific software stack.
    :hidden:
    :maxdepth: 1
 
-   documentation.rst
-   faq.rst
    get-in-touch.rst
+   faq.rst
+   documentation.rst
    projusers.rst
    resources.rst
 

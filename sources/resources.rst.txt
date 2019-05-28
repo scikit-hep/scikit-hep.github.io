@@ -6,11 +6,18 @@ Miscellaneous resources
 A collection of presentations, videos and publications
 on, or related to, the Scikit-HEP project.
 
+Proceedings
+-----------
+
+* *The Scikit-HEP project*, Eduardo Rodrigues,
+  proceedings of the `CHEP 2018 Conference <http://chep2018.org/>`_, Sofia, Bulgaria;
+  `arXiv:1905.00002 [physics.comp-ph] <https://arxiv.org/abs/1905.00002>`_
+
 
 Presentations
 -------------
 
-* **21 May 2019:** `BelleII`_ experiment `Analysis Software Developers' Meeting <https://indico.belle2.org/event/193/>`_
+* **21 May 2019:** `Belle II`_ experiment `Analysis Software Developers' Meeting <https://indico.belle2.org/event/193/>`_
 
   * *Particles and decays in the Scikit-HEP project*, Eduardo Rodrigues, Henry Schreiner
 
@@ -76,7 +83,7 @@ Presentations
   * *Rootpy and root_numpy concepts in Scikit-HEP*, Noel Dawe
 
 
-.. _BelleII : https://www.belle2.org/
+.. _Belle II : https://www.belle2.org/
 .. _DIANA/HEP : http://www.diana-hep.org/
 .. _IRIS-HEP : https://iris-hep.org/
 .. _LHCb experiment : http://lhcb.cern.ch/

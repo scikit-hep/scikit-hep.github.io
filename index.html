@@ -38,12 +38,13 @@
   <div class="section" id="scikit-hep-project-welcome">
 <h1>Scikit-HEP project - welcome!<a class="headerlink" href="#scikit-hep-project-welcome" title="Permalink to this headline">¶</a></h1>
 <p>The <cite>Scikit-HEP project</cite> is a community-driven and community-oriented project
-with the aim of providing Particle Physics at large with a Python package
-containing core and common tools. The project started in Autumn 2016 and is under active development.</p>
+with the aim of providing Particle Physics at large with an ecosystem for data analysis in Python.
+The project started in Autumn 2016 and is under active development.</p>
+<p>It is not just about providing core and common tools for the community.
+It is also about improving the interoperability between HEP tools
+and the scientific ecosystem in Python,
+and about improving on discoverability of utility packages and projects.</p>
 <p>For what concerns the project grand structure, it should be seen as a <em>toolset</em> rather than a <em>toolkit</em>.
-It is not just about providing common tools for the community. It is also about improving on discoverability of utility packages
-and projects.</p>
-<p>Scikit-HEP should be seen as a toolset of Python packages.
 The project defines a set of five <em>pillars</em>, which are seen to embrace
 all major topics involved in a physicist’s work. These are:</p>
 <blockquote>
@@ -61,11 +62,20 @@ all major topics involved in a physicist’s work. These are:</p>
 <p>The list of presently available packages follows, together with a very short description of their goals:</p>
 <p><strong>Interoperability and data manipulation:</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/scikit-hep/awkward-array">awkward-array</a>: manipulate arrays of complex data structures as easily as Numpy.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/uproot">uproot</a>: minimalist ROOT I/O in pure Python and Numpy.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/uproot-methods">uproot-methods</a>: Pythonic behaviours for non-I/O related ROOT classes.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/root_numpy">root_numpy</a>: interface between ROOT and NumPy.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/root_pandas">root_pandas</a>: module for conveniently loading/saving ROOT files as pandas DataFrames.</li>
+<li><a class="reference external" href="https://github.com/scikit-hep/formulate">formulate</a>: easy conversions between different styles of expressions.</li>
+</ul>
+<p><strong>Interface to HEP libraries:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/scikit-hep/numpythia">numpythia</a>: interface between Pythia and NumPy.</li>
+<li><a class="reference external" href="https://github.com/scikit-hep/pyjet">pyjet</a>: interface between FastJet and NumPy.</li>
+</ul>
+<p><strong>Event processing:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/scikit-hep/awkward-array">awkward-array</a>: manipulate arrays of complex data structures as easily as Numpy.</li>
 </ul>
 <p><strong>Particles and decays:</strong></p>
 <ul class="simple">
@@ -75,6 +85,7 @@ all major topics involved in a physicist’s work. These are:</p>
 <p><strong>Histogramming:</strong></p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/scikit-hep/boost-histogram">boost-histogram</a>: Python bindings for the C++14 Boost::Histogram library.</li>
+<li><a class="reference external" href="https://github.com/scikit-hep/aghast">aghast</a>: aggregated, histogram-like statistics, sharable as Flatbuffers.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/histbook">histbook</a>: versatile, high-performance histogram toolkit for Numpy.</li>
 </ul>
 <p><strong>Fitting:</strong></p>
@@ -90,17 +101,17 @@ all major topics involved in a physicist’s work. These are:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/scikit-hep/NNDrone">NNDrone</a>: collection of tools and algorithms to enable conversion of HEP ML to mass usage model.</li>
 </ul>
-<p><strong>Visualisation:</strong></p>
+<p><strong>Visualization:</strong></p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/scikit-hep/vegascope">vegascope</a>: view Vega/Vega-Lite plots in your web browser from local or remote Python processes.</li>
 </ul>
+<p><strong>Units and constants:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/scikit-hep/hepunits">hepunits</a>: units and constants in the HEP system of units.</li>
+</ul>
 <p><strong>Miscellaneous:</strong></p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/scikit-hep/formulate">formulate</a>: easy conversions between different styles of expressions.</li>
-<li><a class="reference external" href="https://github.com/scikit-hep/hepunits">hepunits</a>: units and constants in the HEP system of units.</li>
-<li><a class="reference external" href="https://github.com/scikit-hep/numpythia">numpythia</a>: interface between Pythia and NumPy.</li>
-<li><a class="reference external" href="https://github.com/scikit-hep/pyjet">pyjet</a>: interface between FastJet and NumPy.</li>
-<li><a class="reference external" href="https://github.com/scikit-hep/scikit-hep">scikit-hep</a>: toolset of interfaces and tools for Particle Physics.</li>
+<li><a class="reference external" href="https://github.com/scikit-hep/scikit-hep">scikit-hep</a>: toolset of interfaces and tools for Particle Physics. To become a metapackage.</li>
 <li><a class="reference external" href="https://github.com/scikit-hep/scikit-hep-testdata">scikit-hep-testdata</a>: common package to provide example files (e.g., ROOT) for testing and developing packages against.</li>
 </ul>
 <p>In some cases, the packages have to do with bridging between different technologies and/or popular packages

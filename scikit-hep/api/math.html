@@ -7,62 +7,32 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Mathematical utilities (skhep.math) &#8212; Scikit-HEP 0.4.0 documentation</title>
-    <link rel="stylesheet" href="../../static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../static/scikit-hep.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../static/jquery.js"></script>
-    <script type="text/javascript" src="../../static/underscore.js"></script>
-    <script type="text/javascript" src="../../static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <title>Mathematical utilities (skhep.math) &#8212; Scikit-HEP</title>
+    <link rel="stylesheet" href="../static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../static/scikit-hep.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="../static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    <script type="text/javascript" src="../../static/mathjax_conf.js"></script>
-    <link rel="author" title="About these documents" href="../../about.html" />
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <script type="text/javascript" src="../static/mathjax_conf.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Modeling (skhep.modeling)" href="modeling.html" />
     <link rel="prev" title="Description of datasets (skhep.dataset)" href="dataset.html" />
    
-  <link rel="stylesheet" href="../../static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../static/custom.css" type="text/css" />
   
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  <div class="document">
-    
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">Welcome to the Scikit-HEP project!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../help.html">Get help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../documentation.html">Documentation</a></li>
-</ul>
+  
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../documentation.html">Documentation</a><ul>
-  <li><a href="api.html">API</a><ul>
-      <li>Previous: <a href="dataset.html" title="previous chapter">Description of datasets (<cite>skhep.dataset</cite>)</a></li>
-      <li>Next: <a href="modeling.html" title="next chapter">Data Modeling (<cite>skhep.modeling</cite>)</a></li>
-  </ul></li>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
-
-
-
-
-
-
-
-
-        </div>
-      </div>
+    <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           
@@ -82,10 +52,54 @@
 <span class="target" id="module-skhep.math.kinematics"></span><div class="section" id="mathematical-functions-relevant-to-kinematics">
 <h2>Mathematical functions relevant to kinematics<a class="headerlink" href="#mathematical-functions-relevant-to-kinematics" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
+<dt id="skhep.math.kinematics.Armenteros_Podolanski_variables">
+<code class="descclassname">skhep.math.kinematics.</code><code class="descname">Armenteros_Podolanski_variables</code><span class="sig-paren">(</span><em>pplus_3Dvec</em>, <em>pminus_3Dvec</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Armenteros_Podolanski_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the Armenteros Podolanski <a class="reference internal" href="#appaper" id="id1">[APPaper]</a> variables <span class="math notranslate nohighlight">\((\alpha,q_T)\)</span> for a 2-body decay.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\alpha = \frac{p_L^+ - p_L^-}{p_L^+ + p_L^-}\\q_T = \frac{| p^- \times p^{\mathrm mother}|}{|p^{\mathrm mother}|}\end{aligned}\end{align} \]</div>
+<p>where the longitudinal momentum along the direction of flight of the mother particle is</p>
+<div class="math notranslate nohighlight">
+\[p_L^\pm = \frac{p^\pm \cdot p^{\mathrm mother}}{|p^{\mathrm mother}|}\]</div>
+<p>and <span class="math notranslate nohighlight">\(q_T\)</span> is the transverse momentum of the daughter particles with respect
+to the direction of flight of the mother particle.</p>
+<p>These expressions can be simplified to</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\alpha = \frac{|p^+|^2 - |p^-|^2}{|p^+ + p^-|^2}\\q_T = \frac{| p^+ \times p^- |}{|p^+ + p^-|}\end{aligned}\end{align} \]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>pplus_3Dvec</strong> (<a class="reference internal" href="#skhep.math.vectors.Vector3D" title="skhep.math.vectors.Vector3D"><em>Vector3D</em></a>) – 3D-momentum vector of the positively-charged daughter particle.</li>
+<li><strong>pminus_3Dvec</strong> (<a class="reference internal" href="#skhep.math.vectors.Vector3D" title="skhep.math.vectors.Vector3D"><em>Vector3D</em></a>) – 3D-momentum vector of the negatively-charged daughter particle.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Tuple <span class="math notranslate nohighlight">\((\alpha,q_T)\)</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="appaper" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[APPaper]</a></td><td><ol class="first last upperalpha simple" start="10">
+<li>Podolanski and R. Armenteros, III. Analysis of V-events, The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science 45 (1954) 13, <a class="reference external" href="http://dx.doi.org/10.1080/14786440108520416">http://dx.doi.org/10.1080/14786440108520416</a></li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="skhep.math.kinematics.Kallen_function">
 <code class="descclassname">skhep.math.kinematics.</code><code class="descname">Kallen_function</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.kinematics.Kallen_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Kallen function, aka triangle or lambda function,
-named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id1">[Kallen]</a>:</p>
+named after physicist Anders Olof Gunnar Kallen <a class="reference internal" href="#kallen" id="id2">[Kallen]</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{eqnarray}
 \lambda(x,y,z) &amp;=&amp; x^2 + y^2 + z^2 - 2 x y - 2 y z - 2 z x \\
@@ -96,7 +110,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <p>Calculate in the rest frame of a particle of mass M decaying to 2 particles labeled 1 and 2,
 <span class="math notranslate nohighlight">\(P (M) \to p1 (m1) + p2 (m2)\)</span>, the momenta of 1 and 2 given by <span class="math notranslate nohighlight">\(p = |\mathbf{p1}| = |\mathbf{p2}|\)</span>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.math</span>  <span class="k">import</span> <span class="n">Kallen_function</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skhep.units</span> <span class="k">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">hepunits.units</span> <span class="k">import</span> <span class="n">MeV</span><span class="p">,</span> <span class="n">GeV</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="mf">5.279</span> <span class="o">*</span> <span class="n">GeV</span><span class="p">;</span> <span class="n">m1</span> <span class="o">=</span> <span class="mf">493.7</span> <span class="o">*</span> <span class="n">MeV</span><span class="p">;</span> <span class="n">m2</span> <span class="o">=</span> <span class="mf">139.6</span> <span class="o">*</span> <span class="n">MeV</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span> <span class="n">Kallen_function</span><span class="p">(</span> <span class="n">M</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">m2</span><span class="o">**</span><span class="mi">2</span> <span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">M</span><span class="p">)</span>
@@ -108,7 +122,7 @@ named after physicist Anders Olof Gunnar Kallen <a class="reference internal" hr
 <table class="docutils citation" frame="void" id="kallen" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[Kallen]</a></td><td><a class="reference external" href="https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function">https://en.wikipedia.org/wiki/K%C3%A4ll%C3%A9n_function</a></td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -578,7 +592,7 @@ fromiterable(values)</dd>
 <dl class="method">
 <dt id="skhep.math.vectors.Vector3D.costheta">
 <code class="descname">costheta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.vectors.Vector3D.costheta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the cosinus of the spherical coordinate theta.</p>
+<dd><p>Return the cosine of the spherical coordinate theta.</p>
 </dd></dl>
 
 <dl class="method">
@@ -860,7 +874,7 @@ fromiterable(values)</dd>
 <dl class="method">
 <dt id="skhep.math.geometry.Vector3D.costheta">
 <code class="descname">costheta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#skhep.math.geometry.Vector3D.costheta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the cosinus of the spherical coordinate theta.</p>
+<dd><p>Return the cosine of the spherical coordinate theta.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1498,13 +1512,51 @@ Line is defined by a point on line and by the direction.</p>
           
         </div>
       </div>
-    <div class="clearer"></div>
-  </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../static/logo.svg" alt="Logo"/>
+            </a></p><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dataset.html">Description of datasets (<cite>skhep.dataset</cite>)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mathematical utilities (<cite>skhep.math</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modeling.html">Data Modeling (<cite>skhep.modeling</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utilities (<cite>skhep.utils</cite>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visual.html">Data Visualization (<cite>skhep.visual</cite>)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/examples.html">Examples</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="api.html">API</a><ul>
+      <li>Previous: <a href="dataset.html" title="previous chapter">Description of datasets (<cite>skhep.dataset</cite>)</a></li>
+      <li>Next: <a href="modeling.html" title="next chapter">Data Modeling (<cite>skhep.modeling</cite>)</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
     <div class="footer">
       &copy;2016-2019, The Scikit-HEP Administrators.
       
       |
-      <a href="../../sources/scikit-hep/api/math.rst.txt"
+      <a href="../sources/api/math.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

@@ -1,0 +1,7 @@
+name: formulate
+description: Easy conversions between different styles of expressions.
+url: https://github.com/scikit-hep/formulate
+readme: https://github.com/scikit-hep/formulate/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

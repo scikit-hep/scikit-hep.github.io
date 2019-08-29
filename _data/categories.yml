@@ -1,0 +1,22 @@
+- name: manipulation
+  title: Interoperability and data manipulation
+- name: interface
+  title: Interface to HEP libraries
+- name: event
+  title: Event processing
+- name: particle
+  title: Particles and decays
+- name: histogramming
+  title: Histogramming
+- name: fitting
+  title: Fitting
+- name: simulation
+  title: Simulation
+- name: ml
+  title: Machine Learning
+- name: visualization
+  title: Visualization
+- name: units
+  title: Units and constants
+- name: misc
+  title: Miscellaneous

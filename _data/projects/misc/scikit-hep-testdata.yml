@@ -1,0 +1,7 @@
+name: scikit-hep-testdata
+description: Common package to provide example files (e.g., ROOT) for testing and developing packages against.
+url: https://github.com/scikit-hep/scikit-hep-testdata
+readme: https://github.com/scikit-hep/scikit-hep-testdata/blob/master/README.md
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

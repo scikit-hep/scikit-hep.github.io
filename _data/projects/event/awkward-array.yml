@@ -1,0 +1,7 @@
+name: awkward-array
+description: Manipulate arrays of complex data structures as easily as Numpy.
+url: https://github.com/scikit-hep/awkward-array
+readme: https://github.com/scikit-hep/awkward-array/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

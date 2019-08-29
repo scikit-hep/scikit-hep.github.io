@@ -1,0 +1,7 @@
+name: vegascope
+description: View Vega/Vega-Lite plots in your web browser from local or remote Python processes.
+url: https://github.com/scikit-hep/vegascope
+readme: https://github.com/scikit-hep/vegascope/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

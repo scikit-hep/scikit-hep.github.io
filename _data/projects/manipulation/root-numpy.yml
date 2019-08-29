@@ -1,0 +1,7 @@
+name: root\_numpy
+description: Interface between ROOT and NumPy.
+url: https://github.com/scikit-hep/root_numpy
+readme: https://github.com/scikit-hep/root_numpy/blob/master/README.rst
+docs: http://scikit-hep.org/root_numpy/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

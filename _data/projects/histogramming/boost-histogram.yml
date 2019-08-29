@@ -1,0 +1,7 @@
+name: boost-histogram
+description: Python bindings for the C++14 Boost::Histogram library.
+url: https://github.com/scikit-hep/boost-histogram
+readme: https://github.com/scikit-hep/boost-histogram/blob/develop/README.md
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

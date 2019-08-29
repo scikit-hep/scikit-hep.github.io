@@ -1,0 +1,7 @@
+name: scikit-hep
+description: Toolset of interfaces and tools for Particle Physics. To become a metapackage.
+url: https://github.com/scikit-hep/scikit-hep
+readme: https://github.com/scikit-hep/scikit-hep/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

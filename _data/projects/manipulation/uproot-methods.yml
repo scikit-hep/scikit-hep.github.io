@@ -1,0 +1,7 @@
+name: uproot-methods
+description: Pythonic behaviours for non-I/O related ROOT classes.
+url: https://github.com/scikit-hep/uproot-methods
+readme: https://github.com/scikit-hep/uproot-methods/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

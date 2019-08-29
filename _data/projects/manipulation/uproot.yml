@@ -1,0 +1,7 @@
+name: uproot
+description: Minimalist ROOT I/O in pure Python and Numpy.
+url: https://github.com/scikit-hep/uproot
+readme: https://github.com/scikit-hep/uproot/blob/master/README.rst
+docs: https://uproot.readthedocs.io/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

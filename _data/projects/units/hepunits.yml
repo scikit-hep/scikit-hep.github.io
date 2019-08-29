@@ -1,0 +1,7 @@
+name: hepunits
+description: Units and constants in the HEP system of units.
+url: https://github.com/scikit-hep/hepunits
+readme: https://github.com/scikit-hep/hepunits/blob/master/README.rst
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

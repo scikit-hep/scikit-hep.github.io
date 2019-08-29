@@ -1,0 +1,7 @@
+name: probfit
+description: Cost function builder. For fitting distributions.
+url: https://github.com/scikit-hep/probfit
+readme: https://github.com/scikit-hep/probfit/blob/master/README.rst
+docs: https://probfit.readthedocs.io/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

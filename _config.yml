@@ -6,7 +6,7 @@ description: >-
   ecosystem for data analysis in Python. The project started in Autumn
   2016 and is under active development.
 baseurl: "/"
-url: "https://scikit-hep.org"
+url: "http://scikit-hep.org"
 github_username:  scikit-hep
 
 # Build settings

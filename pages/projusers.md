@@ -60,7 +60,12 @@ Coffea may become Scikit-HEP packages as development continues.
 [img-coffea]: {{ site.baseurl }}{% link /assets/images/projusers/logo_coffea.jpg %}
 {: width="70px"}
 
+[![img-zfit]][zfit]
+
 The [zfit](https://zfit.github.io/zfit/) project - it provides a model
 fitting library based on TensorFlow and optimised for simple and direct
 manipulation of probability density functions.
 
+[zfit]: https://github.com/zfit
+[img-zfit]: {{ site.baseurl }}{% link /assets/images/projusers/logo_zfit.png %}
+{: width="70px"}

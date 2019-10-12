@@ -9,7 +9,7 @@ nav_order: 6
 Affiliated Packages {#affiliated_packages}
 ====================
 
-In the following, projects are described that work closely together with scikit-hep
+In the following, projects are described that work closely together with scikit-hep. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of scikit-hep.
 
 
 zfit: scalable pythonic fitting

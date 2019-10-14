@@ -22,7 +22,7 @@ fitting API and workflow. This comes together with an implementation of the fitt
 
 The core of zfit is a class-based approach for model building, composition and customization capabilities.
 
-The project consists of additional libraries which extend the capabilities of the core.
+The project consists of additional libraries extending the capabilities of the core package.
 
 [zfit]: https://github.com/zfit
 [img-zfit]: {{ site.baseurl }}{% link /assets/images/projusers/logo_zfit.png %}

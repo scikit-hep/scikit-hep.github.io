@@ -1,7 +1,5 @@
 - name: manipulation
-  title: Interoperability and data manipulation
-- name: interface
-  title: Interface to HEP libraries
+  title: Data manipulation and interoperability
 - name: event
   title: Event processing
 - name: particle
@@ -12,11 +10,15 @@
   title: Fitting
 - name: simulation
   title: Simulation
-- name: ml
-  title: Machine Learning
+- name: interface
+  title: Interface to HEP libraries
+- name: statistics
+  title: Statistics
 - name: visualization
   title: Visualization
 - name: units
   title: Units and constants
+- name: ml
+  title: Machine Learning
 - name: misc
   title: Miscellaneous

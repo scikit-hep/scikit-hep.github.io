@@ -9,7 +9,7 @@ nav_order: 6
 Affiliated packages {#affiliated_packages}
 ====================
 
-In the following, projects that work closely together with scikit-hep are described. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of scikit-hep.
+In the following, projects that work closely together with Scikit-HEP are described. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of Scikit-HEP.
 
 
 zfit: scalable pythonic fitting
@@ -18,12 +18,15 @@ zfit: scalable pythonic fitting
 [![img-zfit]][zfit]
 
 The [zfit](https://zfit.github.io/zfit/) project brings together the different efforts of fitting in Python by providing a stable model
-fitting API and workflow. This comes together with an implementation of the fitting library that is based on TensorFlow, a deep learning framework built for high performance computing on modern architectures. While traditional functionalities such as loading ROOT-files or using the Minuit minimizer are integrated (thanks to scikit-hep packages), it is completely independent of the ROOT project and has no dependency on it.
+fitting API and workflow. The implementation of the fitting library is based on [TensorFlow], a deep learning framework built for high performance computing on modern architectures, which is though mostly hidden to the user. While traditional functionalities such as loading [ROOT]-files or using the [Minuit] minimizer are integrated in zfit, it is completely independent of the ROOT project and has no dependency on it thanks to Scikit-HEP packages.
 
-The core of zfit is a class-based approach for model building, composition and customization capabilities.
+zfit uses a class-based approach for every part in the workflow and contains convenient base classes that allow for simple customization. Moreover, zfit offers extensive model building, composition and customization capabilities.
 
 The project consists of additional libraries extending the capabilities of the core package.
 
 [zfit]: https://github.com/zfit
 [img-zfit]: {{ site.baseurl }}{% link /assets/images/projusers/logo_zfit.png %}
 {: width="70px"}
+[ROOT]: https://root.cern.ch/
+[Minuit]: https://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/
+[TensorFlow]: https://www.tensorflow.org/

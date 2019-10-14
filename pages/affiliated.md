@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Affiliated Packages
+title: Affiliated packages
 permalink: /affiliated
 nav_order: 6
 ---

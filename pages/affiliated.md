@@ -6,7 +6,7 @@ nav_order: 6
 ---
 
 
-Affiliated Packages {#affiliated_packages}
+Affiliated packages {#affiliated_packages}
 ====================
 
 In the following, projects that work closely together with scikit-hep are described. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of scikit-hep.

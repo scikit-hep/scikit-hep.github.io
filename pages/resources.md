@@ -30,17 +30,17 @@ Presentations
 
 -   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:
     -   *The Scikit-HEP project*, Eduardo Rodrigues
-         [PDF](https://indico.cern.ch/event/833895/contributions/3576797/attachments/1927163/3190523/EduardoRodrigues_PyHEP2019_Scikit-HEP.pdf)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3576797/attachments/1927163/3190523/EduardoRodrigues_PyHEP2019_Scikit-HEP.pdf)\]
     -   *Particles and decays*, Eduardo Rodrigues
-         [PDF](https://indico.cern.ch/event/833895/contributions/3577807/attachments/1927720/3192069/ParticlesAndDecays.slides.html)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3577807/attachments/1927720/3192069/ParticlesAndDecays.slides.html)\]
     -   *Writing files with uproot*, Pratyush Das
-         [PDF](https://indico.cern.ch/event/833895/contributions/3577892/attachments/1927752/3191883/uproot-pyhep.pdf)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3577892/attachments/1927752/3191883/uproot-pyhep.pdf)\]
     -   *Awkward 1.0*, Jim Pivarski
-         [PDF](https://indico.cern.ch/event/833895/contributions/3577882/attachments/1916947/3186146/pivarski-pyhep-awkward.pdf)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3577882/attachments/1916947/3186146/pivarski-pyhep-awkward.pdf)\]
     -   *Histogramming*, Henry Schreiner
-         [PDF](https://indico.cern.ch/event/833895/contributions/3577833/attachments/1927872/3192134/histogramming.pdf)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3577833/attachments/1927872/3192134/histogramming.pdf)\]
     -   *Introduction to iminuit*, Hans Dembinski
-         [PDF](https://indico.cern.ch/event/833895/contributions/3577808/attachments/1927550/3191336/iminuit_intro.html)
+         \[[PDF](https://indico.cern.ch/event/833895/contributions/3577808/attachments/1927550/3191336/iminuit_intro.html)\]
 -   **18 June 2019:** [LHCb experiment](http://lhcb.cern.ch/) Week, CERN:
     -   *Particles and decays in the Scikit-HEP project*, Eduardo Rodrigues
         \[[PDF]({{ site.baseurl }}{% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]

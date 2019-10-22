@@ -28,7 +28,7 @@ Proceedings and publications
 Presentations
 -------------
 
--   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019, Abingdon, U.K.:
+-   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:
     -   *The Scikit-HEP project*, Eduardo Rodrigues
          [PDF](https://indico.cern.ch/event/833895/contributions/3576797/attachments/1927163/3190523/EduardoRodrigues_PyHEP2019_Scikit-HEP.pdf)
     -   *Particles and decays*, Eduardo Rodrigues

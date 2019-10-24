@@ -2,7 +2,7 @@
 layout: page
 title: Getting in touch
 permalink: /getting-in-touch
-nav_order: 3
+nav_order: 2
 ---
 
 Getting in touch {#get_in_touch}
@@ -35,4 +35,3 @@ On GitHub
 
 You can also get in touch via the GitHub pages of the package of
 interest, e.g. asking a question.
-

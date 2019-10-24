@@ -2,7 +2,7 @@
 layout: page
 title: Documentation
 permalink: /documentation
-nav_order: 4
+nav_order: 3
 ---
 
 Documentation
@@ -28,6 +28,3 @@ READMEs still contain handy \"getting started\" sections.
 | [{{project.name}}](project.url) | [README]({{project.readme}}) | {{docs}} |
 {% endfor -%}
 {%- endfor %}
-
-
-

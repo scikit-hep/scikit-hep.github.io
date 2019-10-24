@@ -2,7 +2,7 @@
 layout: page
 title: Miscellaneous resources
 permalink: /resources
-nav_order: 7
+nav_order: 6
 ---
 
 

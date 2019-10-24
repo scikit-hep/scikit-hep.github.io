@@ -2,7 +2,7 @@
 layout: page
 title: FAQ
 permalink: /faq
-nav_order: 2
+nav_order: 7
 ---
 
 

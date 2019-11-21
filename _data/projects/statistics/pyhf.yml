@@ -2,6 +2,6 @@ name: pyhf
 description: pure-Python implementation of HistFactory models.
 url: https://github.com/scikit-hep/pyhf
 readme: https://github.com/scikit-hep/pyhf/blob/master/README.md
-# docs: <url>
+docs: https://scikit-hep.org/pyhf/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

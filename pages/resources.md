@@ -28,6 +28,8 @@ Proceedings and publications
 Presentations
 -------------
 
+-   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
+    -   *An introduction to pyhf and HistFactory likelihoods*, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 -   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:
     -   *The Scikit-HEP project*, Eduardo Rodrigues
          \[[PDF](https://indico.cern.ch/event/833895/contributions/3576797/attachments/1927163/3190523/EduardoRodrigues_PyHEP2019_Scikit-HEP.pdf)\]

@@ -30,8 +30,18 @@ Gitter channel
 [Scikit-HEP/community](https://gitter.im/Scikit-HEP/community) for
 informal exchanges.
 
+StackOverflow
+-------------
+
+Certain packages recommend that general questions be asked with relevant
+[StackOverflow tags](https://stackoverflow.com/tags) when the README
+does not immediately provide an answer. The available package tags are:
+
+- [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
+- [`awkward-array`](https://stackoverflow.com/questions/tagged/awkward-array)
+
 On GitHub
 ---------
 
 You can also get in touch via the GitHub pages of the package of
-interest, e.g. asking a question.
+interest, e.g. to issue a bug.

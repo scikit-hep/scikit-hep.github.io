@@ -33,6 +33,15 @@ Switzerland.
 [img-CMS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_cms.gif %}
 {: width="70px"}
 
+[![img-KM3NeT]][KM3NeT]
+
+[KM3NeT](https://www.km3net.org/) - the Kilometre Cube Neutrino Telescope,
+an Astroparticle Physics European research infrastructure located in the Mediterranean Sea.
+
+[KM3NeT]: https://www.km3net.org/
+[img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
+{: width="70px"}
+
 Phenomenology projects
 ----------------------
 

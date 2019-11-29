@@ -40,7 +40,7 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 
 [KM3NeT]: https://www.km3net.org/
 [img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
-{: width="70px"}
+{: width="140px"}
 
 Phenomenology projects
 ----------------------

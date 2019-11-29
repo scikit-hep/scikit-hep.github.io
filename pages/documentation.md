@@ -25,6 +25,6 @@ READMEs still contain handy \"getting started\" sections.
 {%- else -%}
 {%- assign docs="" -%}
 {%- endif -%}
-| [{{project.name}}](project.url) | [README]({{project.readme}}) | {{docs}} |
+| [{{project.name}}]({{project.url}}) | [README]({{project.readme}}) | {{docs}} |
 {% endfor -%}
 {%- endfor %}

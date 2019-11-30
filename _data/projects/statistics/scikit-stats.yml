@@ -1,7 +1,0 @@
-name: scikit-stats
-description: Statistics tools and utilities.
-url: https://github.com/scikit-hep/scikit-stats
-readme: https://github.com/scikit-hep/scikit-stats/blob/master/README.md
-# docs: <url>
-# affiliated: set to true for affiliated packages
-# repo: only if different from url

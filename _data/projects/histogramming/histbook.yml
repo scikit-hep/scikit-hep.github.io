@@ -1,5 +1,6 @@
 name: histbook
-description: Versatile, high-performance histogram toolkit for Numpy.
+logo: /assets/images/projlogo/logo_histbook.png
+description: Versatile, high-performance histogram toolkit for Numpy. (Archived)
 url: https://github.com/scikit-hep/histbook
 readme: https://github.com/scikit-hep/histbook/blob/master/README.rst
 docs: https://histbook.readthedocs.io/

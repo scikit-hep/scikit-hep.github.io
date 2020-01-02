@@ -50,6 +50,8 @@ short description of their goals:
 - {:.affiliated} [{{project.name}}]({{project.url}}): {{project.description}} 👥 *Affiliated package* 
 {%- else -%}
 - [{{project.name}}]({{project.url}}): {{project.description}}
+{%- endif %} {% if project.logo -%}
+![{{project.name}} logo]({{site.baseurl}}{{ project.logo | link }}){: style="height:24px"}
 {%- endif %}
 {% endfor %}
 

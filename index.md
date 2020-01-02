@@ -46,7 +46,11 @@ short description of their goals:
 
 {% for item in site.data.projects[cat.name] -%}
 {%- assign project = item[1] -%}
+{%- if project.affiliated -%}
+- {:.affiliated} [{{project.name}}]({{project.url}}): {{project.description}} 👥 *Affiliated package* 
+{%- else -%}
 - [{{project.name}}]({{project.url}}): {{project.description}}
+{%- endif %}
 {% endfor %}
 
 {% endfor %}

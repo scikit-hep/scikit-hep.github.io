@@ -9,12 +9,12 @@ To contain:
 
 ## Developer info
 
-To build locally, install rbenv. Then:
+To build locally, install rbenv (remember to run `rbenv init` after installing, and `rbenv install 2.6.5`). Then:
 
 ```bash
-rbenv local 2.6.3
+rbenv local 2.6.5
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
 The pages are in markdown in `pages/`. Images and datafiles are in `assets/`.

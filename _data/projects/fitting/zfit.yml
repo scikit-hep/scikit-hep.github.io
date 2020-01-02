@@ -1,0 +1,7 @@
+name: zfit
+description: Tensorflow powered fitter
+url: https://github.com/zfit/zfit
+readme: https://github.com/zfit/zfit/blob/master/README.rst
+docs: https://zfit.readthedocs.io/
+affiliated: true
+# repo: only if different from url

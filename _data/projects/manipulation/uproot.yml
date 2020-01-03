@@ -1,4 +1,5 @@
 name: uproot
+projlogo: /assets/images/projlogo/logo_uproot.png
 description: Minimalist ROOT I/O in pure Python and Numpy.
 url: https://github.com/scikit-hep/uproot
 readme: https://github.com/scikit-hep/uproot/blob/master/README.rst

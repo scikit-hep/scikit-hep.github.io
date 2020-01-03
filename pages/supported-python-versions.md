@@ -23,7 +23,7 @@ Individual packages within Scikit-HEP may have user communities or needs that re
 Statement on Python 2
 ---------------------
 
-Python 2 reaches [end of life January 1st, 2020][py2clock]. No more bugfix releases will be made past that point. Numpy, IPython, Matplotlib, Pandas, and other major packages have already dropped support for Python 2, and many more packages have made a [pledge to do so][py3statement].
+Python 2 has reached [end of life as of January 1st, 2020][py2clock]. No more code changes to fix bugs and security flaws will be made past that point (the final 2.7 release in April 2020). Numpy, IPython, Matplotlib, Pandas, and other major packages have already dropped support for Python 2, and many more packages have made a [pledge to do so][py3statement].
 
 The above plan currently deviates from [NEP 29][] primarily in the support of Python 2 (LTS releases for Python 2, and some packages continuing support for Python 2).
 This is currently necessary due to the prevalence of Python 2 in our field.

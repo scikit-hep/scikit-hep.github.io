@@ -1,0 +1,7 @@
+name: azure-wheel-helpers
+description: A collection of helpers for building binary Python wheels on Azure.
+url: https://github.com/scikit-hep/azure-wheel-helpers
+readme: https://github.com/scikit-hep/azure-wheel-helpers/blob/master/README.md
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

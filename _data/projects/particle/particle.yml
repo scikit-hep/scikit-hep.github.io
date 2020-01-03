@@ -1,4 +1,5 @@
 name: Particle
+projlogo: /assets/images/projlogo/logo_particle.png
 description: PDG particle data and identification codes.
 url: https://github.com/scikit-hep/particle
 readme: https://github.com/scikit-hep/particle/blob/master/README.rst

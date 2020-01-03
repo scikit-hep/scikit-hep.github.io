@@ -1,4 +1,5 @@
 name: boost-histogram
+projlogo: /assets/images/projlogo/logo_boost_histogram.png
 description: Python bindings for the C++14 Boost::Histogram library.
 url: https://github.com/scikit-hep/boost-histogram
 readme: https://github.com/scikit-hep/boost-histogram/blob/develop/README.md

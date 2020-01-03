@@ -1,0 +1,20 @@
+name: zfit
+projlogo: /assets/images/projlogo/logo_zfit.png
+description: Scalable Pythonic fitting
+url: https://github.com/zfit/zfit
+readme: https://github.com/zfit/zfit/blob/master/README.rst
+docs: https://zfit.readthedocs.io/
+affiliated: true
+# repo: only if different from url
+image: /assets/images/projusers/logo_zfit.png
+longdescription: |
+
+    The [zfit](https://zfit.github.io/zfit/) project brings together the different model fitting efforts in Python for HEP by providing a stable API and workflow. The implementation of the fitting library is based on [TensorFlow], a deep learning framework built for high performance computing on modern architectures, which is mostly hidden to the user. While traditional functionalities such as loading [ROOT]-files or using the [Minuit] minimizer are integrated in zfit, the library is completely independent of the ROOT project and has no dependency on it thanks to Scikit-HEP packages.
+
+    zfit uses a class-based approach for every part in the workflow and contains convenient base classes that allow for simple customization. Moreover, zfit offers extensive model building, composition and customization capabilities.
+
+    The project consists of additional libraries extending the capabilities of the core package.
+
+    [ROOT]: https://root.cern.ch/
+    [Minuit]: https://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/
+    [TensorFlow]: https://www.tensorflow.org/

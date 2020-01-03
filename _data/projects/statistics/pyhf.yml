@@ -1,4 +1,5 @@
 name: pyhf
+projlogo: /assets/images/projlogo/logo_pyhf.png
 description: pure-Python implementation of HistFactory models.
 url: https://github.com/scikit-hep/pyhf
 readme: https://github.com/scikit-hep/pyhf/blob/master/README.md

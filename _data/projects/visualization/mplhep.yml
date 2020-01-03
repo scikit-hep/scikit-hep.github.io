@@ -1,0 +1,8 @@
+name: mplhep
+projlogo: /assets/images/projlogo/logo_mplhep.png
+description: Plotting and styling helpers for matplotlib.
+url: https://github.com/scikit-hep/mplhep
+readme: https://github.com/scikit-hep/mplhep/blob/master/README.md
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url

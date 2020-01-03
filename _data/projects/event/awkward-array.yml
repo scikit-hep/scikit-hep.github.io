@@ -1,5 +1,5 @@
 name: awkward-array
-logo: /assets/images/projlogo/logo_awk.png
+projlogo: /assets/images/projlogo/logo_awkward_array.png
 description: Manipulate arrays of complex data structures as easily as Numpy.
 url: https://github.com/scikit-hep/awkward-array
 readme: https://github.com/scikit-hep/awkward-array/blob/master/README.rst

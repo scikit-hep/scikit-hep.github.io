@@ -1,5 +1,5 @@
 name: DecayLanguage
-logo: /assets/images/projlogo/logo_decay.png
+projlogo: /assets/images/projlogo/logo_decay_language.png
 description: Describe and convert particle decays between digital representations.
 url: https://github.com/scikit-hep/decaylanguage
 readme: https://github.com/scikit-hep/decaylanguage/blob/master/README.md

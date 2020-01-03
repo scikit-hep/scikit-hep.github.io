@@ -1,5 +1,5 @@
 name: aghast
-logo: /assets/images/projlogo/logo_aghast.png
+projlogo: /assets/images/projlogo/logo_aghast.png
 description: Convert between histogram representations
 url: https://github.com/scikit-hep/aghast
 readme: https://github.com/scikit-hep/aghast/blob/master/README.md

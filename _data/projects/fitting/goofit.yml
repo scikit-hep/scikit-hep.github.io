@@ -1,0 +1,13 @@
+name: GooFit
+projlogo: /assets/images/projlogo/logo_goofit.png
+description: GPU/OpenMP fitting in Python and C++.
+url: https://github.com/GooFit/GooFit
+readme: https://github.com/GooFit/GooFit/blob/master/README.md
+docs: https://goofit.github.io
+affiliated: true
+# repo: only if different from url
+image: /assets/images/projusers/logo_goofit.png
+longdescription: |
+    [GooFit] is a powerful, fast fitting library designed to mimic the familiar syntax of [ROOT](https://root.cern.ch)'s [RooFit](http://roofit.sourceforge.net). The code and installation instructions are [available here, on GitHub][GooFit], and a description of the fitting process and API is available on [GitHub IO](https://GooFit.github.io/GooFit).
+
+    [GooFit]:            https://github.com/GooFit/GooFit

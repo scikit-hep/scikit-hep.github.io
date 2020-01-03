@@ -1,5 +1,5 @@
 name: zfit
-logo: /assets/images/projlogo/logo_zfit.png
+projlogo: /assets/images/projlogo/logo_zfit.png
 description: Scalable Pythonic fitting
 url: https://github.com/zfit/zfit
 readme: https://github.com/zfit/zfit/blob/master/README.rst

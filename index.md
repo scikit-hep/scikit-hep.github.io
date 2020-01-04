@@ -42,9 +42,10 @@ The list of presently available packages follows, together with a very
 short description of their goals:
 
 {% for cat in site.data.categories -%}
+{%- assign listing = site.data.projects[cat.name] | sort -%}
 ### {{cat.title}}:
 
-{% for item in site.data.projects[cat.name] -%}
+{% for item in listing -%}
 {%- assign project = item[1] -%}
 {%- if project.affiliated -%}
 - {:.affiliated} [{{project.name}}]({{project.url}}): {{project.description}} 🤝 *Affiliated package* 

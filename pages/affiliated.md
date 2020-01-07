@@ -15,7 +15,12 @@ In the following, projects that work closely together with Scikit-HEP are descri
 {% for item in site.data.projects[cat.name] -%}
 {%- assign project = item[1] -%}
 {%- if project.affiliated -%}
-[![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }})]({{project.url}})
+{%- if project.image -%}
+---
+[![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }})]({{project.url}}){:.largelogo}
+{%- else -%}
+---
+{%- endif %}
 
 ### [{{project.name}}]({{project.url}}): {{project.description}}
 

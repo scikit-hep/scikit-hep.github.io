@@ -35,10 +35,7 @@ physicist\'s work. These are:
 Toolset packages {#index_toolset_packages}
 ----------------
 
-To get started, have a look at our [GitHub repository][].
-
-
-The list of presently available packages follows, together with a very
+To get started, have a look at our [GitHub repository][]. The list of presently available packages follows, together with a very
 short description of their goals:
 
 {% for cat in site.data.categories -%}
@@ -58,7 +55,7 @@ short description of their goals:
 
 {% endfor %}
 
-In some cases, the packages have to do with bridging between different
+In some cases, the packages provide a bridge between different
 technologies and/or popular packages from the Python scientific software
 stack.
 

@@ -18,3 +18,6 @@ longdescription: |
     [ROOT]: https://root.cern.ch/
     [Minuit]: https://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/
     [TensorFlow]: https://www.tensorflow.org/
+badges:
+  pypi: zfit
+

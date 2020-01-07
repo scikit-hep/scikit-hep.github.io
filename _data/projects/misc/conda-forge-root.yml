@@ -40,3 +40,6 @@ longdescription: |
     [miniconda]:      https://docs.conda.io/en/latest/miniconda.html
     [Conda-Forge]:    https://conda-forge.org
     [binder]:         https://mybinder.org
+
+badges:
+  conda-forge: root

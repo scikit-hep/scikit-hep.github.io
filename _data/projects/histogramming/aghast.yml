@@ -6,3 +6,6 @@ readme: https://github.com/scikit-hep/aghast/blob/master/README.md
 # docs: https://aghast.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: aghast
+

@@ -5,3 +5,7 @@ readme: https://github.com/scikit-hep/iminuit/blob/master/README.rst
 docs: https://iminuit.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: iminuit
+  conda-forge: iminuit
+

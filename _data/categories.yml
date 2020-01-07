@@ -1,24 +1,20 @@
+- name: basic
+  title: Basics
 - name: manipulation
   title: Data manipulation and interoperability
-- name: event
-  title: Event processing
-- name: particle
-  title: Particles and decays
 - name: histogramming
   title: Histogramming
+- name: particle
+  title: Particles and decays
 - name: fitting
   title: Fitting
-- name: simulation
-  title: Simulation
-- name: interface
-  title: Interface to HEP libraries
 - name: statistics
   title: Statistics
-- name: visualization
-  title: Visualization
-- name: units
-  title: Units and constants
+- name: interface
+  title: Interface to HEP libraries
 - name: ml
   title: Machine Learning
+- name: visualization
+  title: Visualization
 - name: misc
   title: Miscellaneous

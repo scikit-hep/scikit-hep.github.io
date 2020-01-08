@@ -6,3 +6,7 @@ readme: https://github.com/scikit-hep/uproot/blob/master/README.rst
 docs: https://uproot.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: uproot
+  conda-forge: uproot
+

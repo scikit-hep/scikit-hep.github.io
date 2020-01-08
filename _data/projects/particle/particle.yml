@@ -6,3 +6,6 @@ readme: https://github.com/scikit-hep/particle/blob/master/README.rst
 # docs: <url>
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: Particle
+

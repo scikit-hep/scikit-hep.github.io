@@ -1,6 +1,10 @@
 $link-color: #7092be;
 
-li.affiliated em {
+em.affiliated {
   color: #ff6347;
 }
 
+a.package {
+  font-size: larger;
+  font-weight: bold;
+}

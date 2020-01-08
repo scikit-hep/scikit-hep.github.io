@@ -6,3 +6,6 @@ readme: https://github.com/scikit-hep/histbook/blob/master/README.rst
 docs: https://histbook.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: histbook
+

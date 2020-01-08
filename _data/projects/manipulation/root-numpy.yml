@@ -5,3 +5,6 @@ readme: https://github.com/scikit-hep/root_numpy/blob/master/README.rst
 docs: http://scikit-hep.org/root_numpy/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+badges:
+  pypi: root-numpy
+

@@ -8,4 +8,5 @@ readme: https://github.com/scikit-hep/aghast/blob/master/README.md
 # repo: only if different from url
 badges:
   pypi: aghast
+  conda-forge: aghast
 

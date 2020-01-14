@@ -20,4 +20,5 @@ longdescription: |
     [TensorFlow]: https://www.tensorflow.org/
 badges:
   pypi: zfit
+  conda-forge: zfit
 

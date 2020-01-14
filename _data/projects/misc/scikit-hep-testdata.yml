@@ -7,3 +7,4 @@ readme: https://github.com/scikit-hep/scikit-hep-testdata/blob/master/README.md
 # repo: only if different from url
 badges:
   pypi: scikit-hep-testdata
+  conda-forge: scikit-hep-testdata

@@ -7,4 +7,5 @@ readme: https://github.com/scikit-hep/uproot-methods/blob/master/README.rst
 # repo: only if different from url
 badges:
   pypi: uproot-methods
+  conda-forge: uproot-methods
 

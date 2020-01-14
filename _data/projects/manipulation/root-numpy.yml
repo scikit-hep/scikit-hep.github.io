@@ -7,4 +7,5 @@ docs: http://scikit-hep.org/root_numpy/
 # repo: only if different from url
 badges:
   pypi: root-numpy
+  conda-forge: root_numpy
 

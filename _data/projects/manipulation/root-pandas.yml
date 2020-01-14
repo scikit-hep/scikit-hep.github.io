@@ -7,4 +7,5 @@ readme: https://github.com/scikit-hep/root_pandas/blob/master/README.md
 # repo: only if different from url
 badges:
   pypi: root-pandas
+  conda-forge: root_pandas
 

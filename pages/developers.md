@@ -11,7 +11,7 @@ Developer Information
 Badges: Scikit-HEP
 ------------------
 
-In your readme, you should have a scikit-hep project badge:
+In your README, you should have a Scikit-HEP project badge:
 
 
 ```md

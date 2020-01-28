@@ -28,17 +28,13 @@ Or an affiliated package badge if you are an affiliated package:
 [sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
 ```
 
-If you use RestructuredText, use:
+If you use RestructuredText, use one of these:
 
 ```rst
-|Scikit-HEP badge|
-
-.. |Scikit-HEP badge| image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
    :target: https://scikit-hep.org
 
-|Scikit-HEP affiliated|
-
-.. |Scikit-HEP affiliated| image:: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
+.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
    :target: https://scikit-hep.org
 ```
 

@@ -14,5 +14,5 @@ longdescription: |
     [GooFit]:            https://github.com/GooFit/GooFit
 badges:
   pypi: goofit
-  conda-forge: goofit-split
+  conda-forge: goofit
 

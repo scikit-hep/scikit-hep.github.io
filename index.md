@@ -51,10 +51,10 @@ short description of their goals:
 {%-    if project.badges -%}
 <br/>{{" "}}
 {%-      if project.badges.pypi -%}
-           {{" "}}[![PyPI](https://img.shields.io/pypi/v/{{project.badges.pypi}}?color=blue&logo=PyPI&logoColor=white)](https://pypi.org/project/{{project.badges.pypi}}/){:.badge}
+           {{" "}}[![PyPI](https://img.shields.io/pypi/v/{{project.badges.pypi}}?color=blue&logo=PyPI&logoColor=white)](https://pypi.org/project/{{project.badges.pypi}}){:.badge}
 {%-      endif -%}
 {%-      if project.badges.conda-forge -%}
-           {{" "}}[![PyPI](https://img.shields.io/conda/vn/conda-forge/{{project.badges.conda-forge}}.svg?logo=Conda-Forge&color=green&logoColor=white)](https://github.com/conda-forge/{{project.badges.conda-forge}}/){:.badge}
+           {{" "}}[![PyPI](https://img.shields.io/conda/vn/conda-forge/{{ project.badges.conda-forge}}.svg?logo=Conda-Forge&color=green&logoColor=white)](https://github.com/conda-forge/{{ project.badges.conda-forge-feedstock | default: project.badges.conda-forge}}-feedstock){:.badge}
 {%-      endif -%}
 {%-    endif -%}
 {%-    if project.affiliated -%}

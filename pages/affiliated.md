@@ -17,7 +17,7 @@ In the following, projects that work closely together with Scikit-HEP are descri
 {%- if project.affiliated -%}
 {%- if project.image -%}
 ---
-[![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }})]({{project.url}}){:.largelogo}
+[![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }}){: style="{{ project.image-style | default: "height:64px;"}}"}]({{project.url}}){: .largelogo }
 {%- else -%}
 ---
 {%- endif %}

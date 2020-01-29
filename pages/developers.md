@@ -11,7 +11,8 @@ Developer Information
 Badges: Scikit-HEP
 ------------------
 
-In your README, you should have a Scikit-HEP project badge:
+In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-badge]](https://scikit-hep.org/)
+
 
 
 ```md
@@ -20,7 +21,7 @@ In your README, you should have a Scikit-HEP project badge:
 [sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
 ```
 
-Or an affiliated package badge if you are an affiliated package:
+Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)
 
 ```md
 [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)
@@ -28,9 +29,12 @@ Or an affiliated package badge if you are an affiliated package:
 [sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
 ```
 
+[sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+[sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
+
 If you use RestructuredText, use one of these:
 
-```rst
+```
 .. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
    :target: https://scikit-hep.org
 

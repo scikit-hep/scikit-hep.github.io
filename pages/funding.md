@@ -22,18 +22,19 @@ to work on this project part-time.
 provided funding for Eduardo Rodrigues (2016-2019), Henry Schreiner (2019)
 and Jim Pivarski (2016-2019) to work on this project part-time.
 
-[![img-stfc]][STFC]  [![img-liverpool]][[University of Liverpool]
+[![img-stfc]][STFC]
+[![img-liverpool]][UniversityOfLiverpool]
 
 The UK Science and Technology Facilities Council ([STFC][]) and the
-[University of Liverpool][] provide funding for Eduardo Rodrigues (2020-)
-to work on this project part-time.
+[University of Liverpool][UniversityOfLiverpool]
+provide funding for Eduardo Rodrigues (2020-) to work on this project part-time.
 
 
 [DIANA/HEP]: https://diana-hep.org/
 [IRIS-HEP]: https://iris-hep.org/
 [NSF]: https://nsf.gov/
-[STFC]: stfc.ukri.org/
-[University of Liverpool]: https://www.liverpool.ac.uk/
+[STFC]: https://stfc.ukri.org/
+[UniversityOfLiverpool]: https://www.liverpool.ac.uk/
 [OAC-1450377]: https://nsf.gov/awardsearch/showAward?AWD_ID=1450377
 [OAC-1836650]: https://nsf.gov/awardsearch/showAward?AWD_ID=1836650
 [img-nsf]: {{ site.baseurl }}{% link /assets/images/funding/nsf-logo-128.png %}

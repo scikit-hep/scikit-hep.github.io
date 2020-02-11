@@ -39,6 +39,7 @@ does not immediately provide an answer. The available package tags are:
 
 - [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
 - [`awkward-array`](https://stackoverflow.com/questions/tagged/awkward-array)
+- [`zfit`](https://stackoverflow.com/questions/tagged/zfit)
 
 On GitHub
 ---------

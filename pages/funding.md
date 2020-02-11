@@ -24,16 +24,21 @@ and Jim Pivarski (2016-2019) to work on this project part-time.
 
 [![img-stfc]][STFC]  [![img-liverpool]][Liverpool]
 
-The UK Science and Technology Facilities Council (STFC) and the
-University of Liverpool provide funding for Eduardo Rodrigues (2020-)
+The UK Science and Technology Facilities Council ([STFC][]) and the
+[University of Liverpool][] provide funding for Eduardo Rodrigues (2020-)
 to work on this project part-time.
 
 
 [DIANA/HEP]: https://diana-hep.org/
 [IRIS-HEP]: https://iris-hep.org/
-[NSF]: https://nsf.gov
+[NSF]: https://nsf.gov/
+[STFC]: stfc.ukri.org/
+[University of Liverpool]: https://www.liverpool.ac.uk/
 [OAC-1450377]: https://nsf.gov/awardsearch/showAward?AWD_ID=1450377
 [OAC-1836650]: https://nsf.gov/awardsearch/showAward?AWD_ID=1836650
-[img-nsf]: {{ site.baseurl }}{% link /assets/images/funding/nsf-logo-128.png %}{: width="70px"}
-[img-stfc]: {{ site.baseurl }}{% link /assets/images/funding/UKRI_STF_Council-Logo_Horiz-RGB.png %}{: width="70px"}
-[img-liverpool]: {{ site.baseurl }}{% link /assets/images/funding/university-liverpool-logo.png %}{: width="70px"}
+[img-nsf]: {{ site.baseurl }}{% link /assets/images/funding/nsf-logo-128.png %}
+{: width="70px"}
+[img-stfc]: {{ site.baseurl }}{% link /assets/images/funding/UKRI_STF_Council-Logo_Horiz-RGB.png %}
+{: width="70px"}
+[img-liverpool]: {{ site.baseurl }}{% link /assets/images/funding/university-liverpool-logo.png %}
+{: width="70px"}

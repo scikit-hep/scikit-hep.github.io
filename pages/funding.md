@@ -15,8 +15,8 @@ many of which were part of the [DIANA/HEP][] project.
 [![img-nsf]][NSF]
 
 - The US National Science Foundation cooperative agreement [OAC-1836650][] ([IRIS-HEP][])
-has been providing funding for Henry Schreiner (2019-) and Jim Pivarski (2019-)
-to work on this project part-time.
+has been providing funding for Henry Schreiner (2019-), Jim Pivarski (2019-),
+and Matthew Feickert (2019-) to work on this project part-time.
 
 - The US National Science Foundation cooperative agreement [OAC-1450377][] ([DIANA/HEP][])
 provided funding for Eduardo Rodrigues (2016-2019), Henry Schreiner (2019)

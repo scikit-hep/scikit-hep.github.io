@@ -2,7 +2,7 @@ name: hepstats
 description: Statistics tools and utilities.
 url: https://github.com/scikit-hep/hepstats
 readme: https://github.com/scikit-hep/hepstats/blob/master/README.md
-docs: https://hepstats.readthedocs.io
+docs: https://scikit-hep.org/hepstats/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
 badges:

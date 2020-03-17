@@ -4,6 +4,7 @@ url: https://github.com/scikit-hep/probfit
 readme: https://github.com/scikit-hep/probfit/blob/master/README.rst
 docs: https://probfit.readthedocs.io/
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url
 badges:
   pypi: probfit

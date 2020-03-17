@@ -12,7 +12,7 @@ Funding {#funding}
 The project started in Autumn 2016 with a core group of half-a-dozen people,
 many of which were part of the [DIANA/HEP][] project.
 
-[![img-nsf]][NSF]
+[![img-nsf]][NSF]{:.badge}
 
 - The US National Science Foundation cooperative agreement [OAC-1836650][] ([IRIS-HEP][])
 has been providing funding for Henry Schreiner (2019-), Jim Pivarski (2019-),
@@ -22,8 +22,8 @@ and Matthew Feickert (2019-) to work on this project part-time.
 provided funding for Eduardo Rodrigues (2016-2019), Henry Schreiner (2019)
 and Jim Pivarski (2016-2019) to work on this project part-time.
 
-[![img-stfc]][STFC]
-[![img-liverpool]][UniversityOfLiverpool]
+[![img-stfc]][STFC]{:.badge}
+[![img-liverpool]][UniversityOfLiverpool]{:.badge}
 
 The UK Science and Technology Facilities Council ([STFC][]) and the
 [University of Liverpool][UniversityOfLiverpool]

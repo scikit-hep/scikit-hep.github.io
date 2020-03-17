@@ -1,10 +1,43 @@
 $link-color: #7092be;
 
-em.affiliated {
+div.noted {
   color: #ff6347;
+  font-weight: bold;
+  float: right;
 }
 
 a.package {
   font-size: larger;
   font-weight: bold;
+}
+
+div.project {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 5px 5px #88888840;
+  margin: 10px 0px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #f5f6fa;
+}
+
+div.project.affiliated {
+  background-color: #d9ffe0;
+}
+
+div.project.deprecated {
+  background-color: #ffdad9;
+}
+
+div.project .nameorlogo {
+  flex-basis: 200px;
+  flex-shrink: 0;
+  padding: 2px;
+  text-align: center;
+}
+
+div.project .description {
+  flex-basis: auto;
+  flex-grow: 1;
+  padding: 2px;
 }

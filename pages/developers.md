@@ -11,7 +11,7 @@ Developer Information
 Badges: Scikit-HEP
 ------------------
 
-In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-badge]](https://scikit-hep.org/)
+In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-badge]](https://scikit-hep.org/){:.badge}
 
 
 
@@ -21,7 +21,7 @@ In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-ba
 [sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
 ```
 
-Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)
+Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/){:.badge}
 
 ```md
 [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)

@@ -11,7 +11,7 @@ nav_order: 1
 
 The Scikit-HEP project is a community-driven and community-oriented project
 with the aim of providing Particle Physics at large with an ecosystem for data
-analysis in Python.
+analysis in Python. [Read more →]({{site.baseurl}}{% link pages/about.md %} )
 
 {% include package_table.html %}
 

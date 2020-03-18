@@ -76,5 +76,5 @@ fitting library based on TensorFlow and optimised for simple and direct
 manipulation of probability density functions.
 
 [zfit]: https://github.com/zfit
-[img-zfit]: {{ site.baseurl }}{% link /assets/images/projusers/logo_zfit.png %}
+[img-zfit]: {{ site.baseurl }}{% link /assets/images/projlogo/logo_zfit.png %}
 {: width="70px"}

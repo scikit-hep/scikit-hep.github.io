@@ -2,7 +2,8 @@
 layout: page
 title: About
 permalink: /about
-nav_order: 12
+nav_order: 100
+has_children: true
 ---
 
 About {#about}

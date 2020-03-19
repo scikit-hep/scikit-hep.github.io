@@ -12,7 +12,7 @@ Getting in touch {#get_in_touch}
 Gitter
 ------
 
-The fastest way to contact us is via Gitter channel
+The fastest way to contact us is via the Gitter channel
 [Scikit-HEP/community][], ideal for
 informal exchanges.
 See also related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][].

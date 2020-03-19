@@ -2,7 +2,7 @@
 layout: page
 title: Who uses Scikit-HEP?
 permalink: /projusers
-nav_order: 40
+nav_order: 50
 ---
 
 

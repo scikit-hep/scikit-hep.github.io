@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Miscellaneous resources
+title: Resources
 permalink: /resources
-nav_order: 5
-parent: About
+nav_order: 40
 ---
 
 

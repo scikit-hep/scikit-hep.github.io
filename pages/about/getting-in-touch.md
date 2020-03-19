@@ -15,7 +15,7 @@ Gitter
 The fastest way to contact us is via the Gitter channel
 [Scikit-HEP/community][], ideal for
 informal exchanges.
-See also related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][].
+See also related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HEP Software Foundation (HSF).
 
 [Scikit-HEP/community]: https://gitter.im/Scikit-HEP/community
 [HSF/PyHEP]:            https://gitter.im/HSF/PyHEP

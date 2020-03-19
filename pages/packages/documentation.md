@@ -3,7 +3,7 @@ layout: page
 title: Documentation
 permalink: /documentation
 nav_order: 3
-parent: Projects
+parent: Packages
 ---
 
 Documentation

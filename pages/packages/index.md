@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Projects
-permalink: /projects
+title: Packages
+permalink: /packages
 nav_order: 2
 has_children: true
 ---

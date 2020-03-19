@@ -3,7 +3,7 @@ layout: page
 title: Affiliated packages
 permalink: /affiliated
 nav_order: 1
-parent: Projects
+parent: Packages
 ---
 
 

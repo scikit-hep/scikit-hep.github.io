@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Supported Python Versions
+title: Python Version Policy
 permalink: /supported-python-versions
-nav_order: 9
+nav_order: 60
 ---
 
 Supported Python Versions

@@ -3,6 +3,8 @@ description: MINUIT from Python - Fitting like a boss.
 url: https://github.com/scikit-hep/iminuit
 readme: https://github.com/scikit-hep/iminuit/blob/master/README.rst
 docs: https://iminuit.readthedocs.io/
+projlogo: /assets/images/projlogo/logo_iminuit.png
+affiliated: true
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
 badges:

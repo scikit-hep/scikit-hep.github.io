@@ -9,17 +9,17 @@ parent: Developer information
 # Packaging
 
 The libraries in Scikit-HEP have a variety of different packaging styles, but
-this document is intended to outline a recommended style that new packages should
-follow, and existing packages should slowly adopt. The reasoning for each decision is
-outlined as well.
+this document is intended to outline a recommended style that new packages
+should follow, and existing packages should slowly adopt. The reasoning for
+each decision is outlined as well.
 
 ## Package structure (medium priority)
 
 All packages *should* have a `src` folder, with the package code residing
-inside it, such as `src/<package>/`.  This may seem like extra hassle;
-after all, you can type "python" in the main directory and avoid installing it
-if you don't have a src folder! However, this is a bad practice, and it causes
-several common bugs, such as running pytest and getting the local version
+inside it, such as `src/<package>/`.  This may seem like extra hassle; after
+all, you can type "`python`" in the main directory and avoid installing it if
+you don't have a `src` folder! However, this is a bad practice, and it causes
+several common bugs, such as running `pytest` and getting the local version
 instead of the installed version - this obviously tends to break if you build
 parts of the library or if you access package metadata.
 
@@ -42,21 +42,21 @@ this file is present, Pip creates a virtual environment, installs exactly what
 it sees here, then builds a wheel. It then discards the environment, and
 installs the wheel.  This a) make the build process reproducible and b) makes
 local developer installs match the standard install procedure. It also c)
-allows complete specification of the environment that setup.py runs in, so you
-can add packages that can be imported in setup.py. You should *not* be using
-`setup_requires`; it does not work properly and is deprecated. If you want to
-have source builds that work in pip 9 or earlier (not common), you can have it
-as a backup.
+allows complete specification of the environment that `setup.py` runs in, so
+you can add packages that can be imported in `setup.py`. You should *not* be
+using `setup_requires`; it does not work properly and is deprecated. If you
+want to have source builds that work in Pip 9 or earlier (not common), you can
+have it as a backup.
 
-You can also use this to use a different build system, such as Flit. No
-scikit-hep packages currently use flit since it does not allow binary packages
+You can also use this to use a different build system, such as [Flit][]. No
+Scikit-HEP packages currently use Flit since it does not allow binary packages
 and a few common developer needs, like editable installs, look slightly
-different in flit, but its usage is not discouraged.
+different in Flit, but its usage is not discouraged.
 
-### Special additions: Numpy
+### Special additions: NumPy
 
-You may want to build against Numpy (mostly for Cython packages, PyBind11 does
-not need to access the Numpy headers). This is the recommendation for
+You may want to build against NumPy (mostly for Cython packages, PyBind11 does
+not need to access the NumPy headers). This is the recommendation for
 Scikit-HEP:
 
 ```python
@@ -66,9 +66,9 @@ Scikit-HEP:
     "numpy==1.17.3; python_version>='3.8'",
 ```
 
-This ensures the wheels built work with all versions of Numpy supported by
+This ensures the wheels built work with all versions of NumPy supported by
 Scikit-HEP. Whether you build the wheel locally or on CI, you can transfer it
-to someone else and it will work as long as the user has Numpy 1.13.3 or later.
+to someone else and it will work as long as the user has NumPy 1.13.3 or later.
 
 ## Versioning (medium/high priority)
 
@@ -91,8 +91,8 @@ get the following benefits:
     * Simpler release procedure
     * No more mistakes / confusion
 * A new version every commit (both commits since last tag and git hash encoded)
-  - binaries no longer incorrectly "cache" when installing from pip directly
-    from git
+    * Binaries no longer incorrectly "cache" when installing from pip directly
+      from git
 * SDists and wheels contain the version file/number just like normal
 
 If you want to set a template, you can control the details of this file if
@@ -109,10 +109,11 @@ there.
 
 ## Setup configuration (medium priority)
 
-You should put as much as possible in your setup.cfg, and leave setup.py for
-*only* parts that need custom logic or binary building. This keeps your
-setup.py cleaner, and many things that normally require a bit of custom code
-can be written without it, such as importing version and descriptions. Here's an example:
+You should put as much as possible in your `setup.cfg`, and leave `setup.py`
+for *only* parts that need custom logic or binary building. This keeps your
+`setup.py` cleaner, and many things that normally require a bit of custom code
+can be written without it, such as importing version and descriptions. Here's
+an example:
 
 ```ini
 [metadata]
@@ -186,9 +187,9 @@ setup()
 ```
 
 Note that we do not recommend overriding or changing the behavior of `python
-setup.py test` or `python setup.py pytest`; the test command through setup.py
-is deprecated and discouraged - anything that directly calls setup.py assumes a
-setup.py is present, which is not true for Flit packages and other systems.
+setup.py test` or `python setup.py pytest`; the test command through `setup.py`
+is deprecated and discouraged - anything that directly calls `setup.py` assumes a
+`setup.py` is present, which is not true for [Flit][] packages and other systems.[^1]
 Instead, assume users call pytest directly.
 
 ## Extras (low/medium priority)
@@ -209,7 +210,8 @@ mpl =
   matplotlib >= 2.0
 ```
 
-And a complex one, that does some logic (like combining the requirements into an "all" extra), placed in setup.py:
+And a complex one, that does some logic (like combining the requirements into
+an "all" extra), placed in setup.py:
 
 ```python
 extras = {
@@ -229,4 +231,7 @@ extras["all"] = sum(extras.values(), [])
 setup(extras_require=extras)
 ```
 
+[^1]: Actually, Flit produces a backward-compatible `setup.py` by default when
+      making an sdist - it's only "missing" from the GitHub repository.
 
+[Flit]:  https://flit.readthedocs.io/en/latest/

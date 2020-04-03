@@ -41,7 +41,7 @@ repos:
 
 [Black](https://black.readthedocs.io/en/latest/) is a popular auto-formatter
 from the Python Software Foundation. One of the main features of Black is that
-is "opinionated"; that is, it is almost completely unconfigurable. Instead of
+it is "opinionated"; that is, it is almost completely unconfigurable. Instead of
 allowing you to come up with your own format, it enforces one on you. While I
 am quite sure you can come up with a better format, having a single standard
 makes it possible to learn to read code very fast - you can immediately see
@@ -56,9 +56,9 @@ make the same change, they get the same formatting, and merge requests are
 easier.
 
 There are a *few* options, mostly to enable/disable certain files and to change
-the line length, and those go in your pyproject.toml file.
+the line length, and those go in your `pyproject.toml` file.
 
-Here is the snippet to add Black to your pre-commit config:
+Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black

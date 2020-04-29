@@ -1,0 +1,9 @@
+name: pylhe
+description: Lightweight Python interface to read Les Houches Event (LHE) files.
+url: https://github.com/scikit-hep/pylhe
+readme: https://github.com/scikit-hep/pylhe/blob/master/README.md
+docs: https://scikit-hep.org/pylhe/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: pylhe

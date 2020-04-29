@@ -45,9 +45,9 @@ does not immediately provide an answer. The available package tags are:
 
 - [`awkward-array`](https://stackoverflow.com/questions/tagged/awkward-array)
 - [`boost-histogram`](https://stackoverflow.com/questions/tagged/boost-histogram)
+- [`pyhf`](https://stackoverflow.com/questions/tagged/pyhf)
 - [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
 - [`zfit`](https://stackoverflow.com/questions/tagged/zfit)
-- [`pyhf`](https://stackoverflow.com/questions/tagged/pyhf)
 
 On GitHub
 ---------

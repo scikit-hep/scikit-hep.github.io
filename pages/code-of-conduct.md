@@ -1,4 +1,11 @@
-# Contributor Covenant Code of Conduct
+---
+layout: page
+title: Code of conduct
+permalink: /code-of-conduct
+nav_order: 95
+---
+
+# Contributor Covenant Code of Conduct {#code-of-conduct}
 
 ## Our Pledge
 

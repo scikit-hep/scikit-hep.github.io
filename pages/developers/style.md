@@ -53,7 +53,7 @@ all Scikit-HEP developers can quickly read any package's code.
 
 Also, properly formatted code has other benefits, such as if two developers
 make the same change, they get the same formatting, and merge requests are
-easier.
+easier. The style choices in Black were explicitly made to optimize git diffs!
 
 There are a *few* options, mostly to enable/disable certain files and to change
 the line length, and those go in your `pyproject.toml` file.
@@ -67,7 +67,9 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
   - id: black
 ```
 
-And you can add a Black badge to your repo as well if you want.
+You can also add `language_version: python3.6` or similar if you want to target
+a specific version. And you can add a Black badge to your repo as well if you
+want.
 
 ```md
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -84,7 +86,7 @@ And you can add a Black badge to your repo as well if you want.
 highly recommended tool that verifies you have working SDists. You can install
 it from PyPI. Run it on your repository and see what it says. If you want to ignore
 files (like test folders, example folders, docs, etc) you can add these into your config
-files, either pyproject.toml or setup.cfg:
+files, either `pyproject.toml` or `setup.cfg`:
 
 ```
 # pyproject.toml
@@ -107,9 +109,34 @@ Add the following to your pre-commit config:
   - id: check-manifest
 ```
 
+## Type checking (new)
+
+One of the most exciting advancements in Python in the last 10 years has been
+static type hints. Scikit-HEP is just beginning to make sure packages are
+type-hint ready.  One of the challenges for providing static type hints is that
+it was developed in the Python 3 era and it really shines in a Python 3.7+
+codebase (due to `from __future__ import annotations`, which turns annotations
+into strings and allows you to use future Python features in Python 3.7+
+annotations as long as your type checker supports them). For now, it is
+recommended that you make an attempt to support type checking through your
+public API in the best way that you can (based on your supported Python
+versions). Stub files or type comments allow Python 2 or Python 3.5 to be
+supported.  [MyPy](https://mypy.readthedocs.io/en/stable/) is suggested for
+type checking, though there are several other good options to try, as well.
+
+The MyPy addition for pre-commit:
+
+```yaml
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v0.770
+  hooks:
+  - id: mypy
+```
+
 ## Clang-format (C++ only)
 
-If you have C++ code, you should have a .clang-format file and use the following pre-commit config:
+If you have C++ code, you should have a `.clang-format` file and use the
+following pre-commit config:
 
 ```yaml
 - repo: local

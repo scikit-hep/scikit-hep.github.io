@@ -13,6 +13,22 @@ this document is intended to outline a recommended style that new packages
 should follow, and existing packages should slowly adopt. The reasoning for
 each decision is outlined as well.
 
+> #### Note
+>
+> Raw source lives in git and has a `setup.py`. You *can* install directly from
+> git via pip, but normally users install from distributions hosted on PyPI. There
+> are three options: **A)** A source package, which ends in `.tar.gz`. This is a copy
+> of the github repository, stripped of a few specifics like CI files, and possibly
+> with submodules included (if there are any). **B)** A pure python wheel, which
+> ends in `.whl` - this is only possible if there are no compiled extensions in the
+> library. This does *not* contain a setup.py, but rather a `PKG_INFO` file that is
+> rendered from setup.py (or from another build system). **C)** If not pure
+> Python, a collection of wheels for every binary platform, generally one per
+> supported Python version and OS as well.
+> 
+> Developer requirements (users of A or git) are generally higher than the
+> requirements to use B or C.
+
 ## Package structure (medium priority)
 
 All packages *should* have a `src` folder, with the package code residing
@@ -40,13 +56,13 @@ build-backend = "setuptools.build_meta"
 This completely changes your build process if you have Pip 10 or later. When
 this file is present, Pip creates a virtual environment, installs exactly what
 it sees here, then builds a wheel. It then discards the environment, and
-installs the wheel.  This a) make the build process reproducible and b) makes
-local developer installs match the standard install procedure. It also c)
-allows complete specification of the environment that `setup.py` runs in, so
-you can add packages that can be imported in `setup.py`. You should *not* be
-using `setup_requires`; it does not work properly and is deprecated. If you
-want to have source builds that work in Pip 9 or earlier (not common), you can
-have it as a backup.
+installs the wheel.  This **a)** makes the build process reproducible and
+**b)** makes local developer installs match the standard install procedure. It
+also **c)** allows complete specification of the environment that `setup.py`
+runs in, so you can add packages that can be imported in `setup.py`. You should
+*not* be using `setup_requires`; it does not work properly and is deprecated.
+If you want to have source builds that work in Pip 9 or earlier (not common),
+you can have it as a backup.
 
 You can also use this to use a different build system, such as [Flit][]. No
 Scikit-HEP packages currently use Flit since it does not allow binary packages
@@ -71,6 +87,8 @@ Scikit-HEP. Whether you build the wheel locally or on CI, you can transfer it
 to someone else and it will work as long as the user has NumPy 1.13.3 or later.
 
 ## Versioning (medium/high priority)
+
+### Official PPA method
 
 One more section is very useful in your `pyproject.toml` file:
 

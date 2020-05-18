@@ -4,7 +4,7 @@ title: Intro to development
 permalink: /developer/intro
 nav_order: 1
 parent: Developer information
----
+---                                                                                                                                                                                                                                                             
 
 # Intro to development
 
@@ -17,21 +17,25 @@ up a development environment. It is recommended as a basis for `CONTRIBUTING.md`
 
 ## Development environment: Pip
 
-If you want to work on Python software, you should *always* have a virtual environment.
-You do not want to risk breaking your main system environment, you want full control over
-versions of libraries, and you want to avoid "leaking" your main environment in, causing
-you to not notice when you have extra dependencies. Virtual environments are disposable,
-while it is very hard to cleanup or update a main system environment.
+If you want to work on Python software, you should *always* have a virtual
+environment. A user may not always have one, but a developer always should.
+You do not want to risk breaking your main system environment, you want full
+control over versions of libraries, and you want to avoid "leaking" your main
+environment in, causing you to not notice when you have extra dependencies.
+Virtual environments are disposable, while it is very hard to cleanup or update
+a main system environment.
 
-Any common modern system to create environments should be fine. Here is the most basic
-one that comes by default with Python 3:
+Any common modern system to create environments should be fine. Here is the
+most basic one, `venv`, that comes by default with Python 3:
 
 ```bash
 python3 -m venv .env
 ```
 
-This creates a new virtual environment in a local folder, named `.env`. There are a few options,
-but usually they are not necessary.
+This creates a new virtual environment in a local folder, named `.env`. There
+are a few options, but usually they are not necessary. If you don't mind a
+(very common) dependency, you can use the `virtualenv` package, which has the
+same syntax, is a little faster, and works in Python 2 as well.
 
 To activate the virtual environment, type:
 
@@ -47,8 +51,9 @@ script installs a function `deactivate`; type that at any time to leave the
 environment (or just close your shell). It also adds a bit of text to your
 prompt so you don't forget that you are in an environment.
 
-Finally, you need to install the package. Most packages support several extra options when
-installing; for development, you may want `[test]`, `[dev]`, or `[all]`. Here is an example:
+Finally, you need to install the package. Most packages support several extra
+options when installing; for development, you may want `[test]`, `[dev]`, or
+`[all]`. Here is an example:
 
 ```bash
 pip install -e .[dev]
@@ -60,6 +65,16 @@ to rerun `pip install -e .` if there are binary components and you edit those.
 
 Never edit your `PATH` or `PYTHONPATH` manually, or depend on the current
 directory for library development.
+
+> #### Warning
+>
+> *Always* use pip to install, do not call `python setup.py` directly for
+> building or installing. Pip inserts shims into setup.py to fix common issues
+> and enable features like PEP 517/518 builds. The only time you directly call
+> setup.py is when making sdists, and even then there are hacks involved.
+>
+> Remember a "normal" user will always use pip. You need to simulate that in
+> development.
 
 ## Development environment: Conda
 
@@ -87,3 +102,22 @@ conda activate env_name
 ```
 
 To deactivate, use `conda deactivate`, or leave your shell.
+
+> #### Warning
+>
+> Building binary components for conda packages takes some care. In general, if
+> there are any binary components, you must use conda-forge's build system to
+> provide binaries to users.
+
+## Using an IDE
+
+IDE's can provide useful additions, such as extended type checking, type aware
+completions, and more. We currently do not provide IDE files in our
+repositories, but PyCharm community edition is suggested by some of our members
+for developers looking for an IDE. It includes an extension, IdeaVIM, for VIM
+emulation for users used to that editor.  Setting up an IDE takes extra time
+but often provides tools (like smart renaming) that are useful, and if you use
+type hints, will probably pay for the setup time quite quickly when developing.
+
+You can instruct PyCharm to use the virtual environment (regular or Conda) that you
+set up, or it can follow the environment.yml or requirements to make one for you.

@@ -88,6 +88,8 @@ to someone else and it will work as long as the user has NumPy 1.13.3 or later.
 
 ## Versioning (medium/high priority)
 
+Packages in Scikit-HEP should use one of the two following systems:
+
 ### Official PPA method
 
 One more section is very useful in your `pyproject.toml` file:
@@ -124,6 +126,13 @@ from .version import version as __version__
 In docs, there are a few minor tweaks necessary to make sure the version is
 picked up correctly; just make sure you install the package and access it from
 there.
+
+### PyHF Versioning system
+
+PyHF has [custom version
+system](https://scikit-hep.org/pyhf/development.html#publishing) based on
+GitHub actions and bumpversion. At least one other package in Scikit-HEP is
+using this, as well.
 
 ## Setup configuration (medium priority)
 

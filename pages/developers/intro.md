@@ -14,6 +14,46 @@ being converted to use best practices). The following outlines the basics for se
 up a development environment. It is recommended as a basis for `CONTRIBUTING.md` or
 `.github/CONTRIBUTING.md` in the packages.
 
+<details><summary>CONTRIBUTING.md template (click to expand)</summary>
+<pre>
+See the [Scikit-HEP Developer introduction][skhep-dev-intro] for a
+detailed description of best practices for developing Scikit-HEP packages.
+
+[skhep-dev-intro]: https://scikit-hep.org/developer/intro
+
+# Setting up a development environment
+
+You can set up a development environment by running:
+
+```bash
+python3 -m venv .env
+source ./.env/bin/activate
+pip install -v -e .[all]
+```
+
+# Post setup
+
+You should prepare pre-commit, which will help you by checking that commits
+pass required checks:
+
+```bash
+pip install pre-commit # or brew install pre-commit on macOS
+pre-commit install # Will install a pre-commit hook into the git repo
+```
+
+You can also/alternatively run `pre-commit run` (changes only) or `pre-commit
+run --all-files` to check even without installing the hook.
+
+# Testing
+
+Use PyTest to run the unit checks:
+
+```bash
+pytest
+```
+</pre>
+</details>
+
 
 ## Development environment: Pip
 
@@ -53,7 +93,8 @@ prompt so you don't forget that you are in an environment.
 
 Finally, you need to install the package. Most packages support several extra
 options when installing; for development, you may want `[test]`, `[dev]`, or
-`[all]`. Here is an example:
+`[all]` or `[complete]` (packages use different conventions, check). Here is an
+example:
 
 ```bash
 pip install -e .[dev]

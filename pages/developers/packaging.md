@@ -127,6 +127,10 @@ In docs, there are a few minor tweaks necessary to make sure the version is
 picked up correctly; just make sure you install the package and access it from
 there.
 
+If you want to create artifacts for use in-between versions, then you should
+disable shallow checkouts in your CI, since a non-tagged version cannot be
+computed correctly from a checkout that is too shallow.
+
 ### PyHF Versioning system
 
 PyHF has [custom version

@@ -131,6 +131,20 @@ The MyPy addition for pre-commit:
   rev: v0.770
   hooks:
   - id: mypy
+    files: [src]
+```
+
+## Warnings
+
+Python hides important warnings by default, mostly because it's trying to be
+nice. You are a developer, you don't want it to be "nice". You want to find and
+fix warnings before they cause user errors! Always either run Python/PyTest
+with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment. You can also
+add the following to your `setup.cfg` file:
+
+```ini
+[tool:pytest]
+addopts = -Wd
 ```
 
 ## Clang-format (C++ only)

@@ -1,4 +1,6 @@
 name: hepstats
+projlogo: /assets/images/projlogo/logo_hepstats.png
+projlogo-style: height:65px;
 description: Statistics tools and utilities.
 url: https://github.com/scikit-hep/hepstats
 readme: https://github.com/scikit-hep/hepstats/blob/master/README.md

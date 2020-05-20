@@ -131,9 +131,9 @@ If you want to create artifacts for use in-between versions, then you should
 disable shallow checkouts in your CI, since a non-tagged version cannot be
 computed correctly from a checkout that is too shallow.
 
-### PyHF Versioning system
+### pyhf Versioning system
 
-PyHF has [custom version
+pyhf has a [custom version
 system](https://scikit-hep.org/pyhf/development.html#publishing) based on
 GitHub actions and bumpversion. At least one other package in Scikit-HEP is
 using this, as well.

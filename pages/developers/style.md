@@ -21,20 +21,29 @@ allows you to check and add them. You can always override the hook with `-n`.
 
 [pre-commit]: https://pre-commit.com
 
-Here is a minimal `.pre-commit-config.yaml` file:
+Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.5.0
+  rev: v3.1.0
   hooks:
   - id: check-added-large-files
-  - id: mixed-line-ending
-  - id: trailing-whitespace
-  - id: check-merge-conflict
   - id: check-case-conflict
+  - id: check-merge-conflict
   - id: check-symlinks
   - id: check-yaml
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+  - id: requirements-txt-fixer
+  - id: trailing-whitespace
+```
+
+For a Python 2+3 codebase, the following is also useful:
+
+```yaml
+  - id: fix-encoding-pragma
 ```
 
 ## Black
@@ -104,7 +113,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.39"
+  rev: "0.42"
   hooks:
   - id: check-manifest
 ```
@@ -122,7 +131,9 @@ recommended that you make an attempt to support type checking through your
 public API in the best way that you can (based on your supported Python
 versions). Stub files or type comments allow Python 2 or Python 3.5 to be
 supported.  [MyPy](https://mypy.readthedocs.io/en/stable/) is suggested for
-type checking, though there are several other good options to try, as well.
+type checking, though there are several other good options to try, as well. If
+you have built-in support for type checking, you need to add empty `py.typed`
+files to all packages/subpackages to indicate that you support it.
 
 The MyPy addition for pre-commit:
 
@@ -131,16 +142,22 @@ The MyPy addition for pre-commit:
   rev: v0.770
   hooks:
   - id: mypy
-    files: [src]
+    files: src
+```
+
+You can also add items to the virtual environment setup for mypy by pre-commit, for example:
+
+```yaml
+    additional_dependencies: [attrs==19.3.0]
 ```
 
 ## Warnings
 
 Python hides important warnings by default, mostly because it's trying to be
-nice. You are a developer, you don't want it to be "nice". You want to find and
-fix warnings before they cause user errors! Always either run Python/PyTest
-with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment. You can also
-add the following to your `setup.cfg` file:
+nice to users. You are a developer, you don't want it to be "nice". You want to
+find and fix warnings before they cause user errors! Always either run
+Python/PyTest with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment.
+You can also add the following to your `setup.cfg` file:
 
 ```ini
 [tool:pytest]

@@ -41,7 +41,7 @@ you use a develop branch, you probably will want to include that.
 
 ## Pre-commit
 
-If you use pre-commit (and you should), this is a job that will check pre-commit for you:
+If you use [pre-commit](https://pre-commit.com) (and you should), this is a job that will check pre-commit for you:
 
 ```yaml
   pre-commit:
@@ -63,7 +63,8 @@ If you use pre-commit (and you should), this is a job that will check pre-commit
 
 Implementing unit tests is also easy. Since you should be following best
 practices listed in the previous sections, this becomes an almost directly
-copy-and-paste formula, regardless of the package details.
+copy-and-paste formula, regardless of the package details. You might need
+to adjust the Python versions to suit your taste.
 
 ```yaml
   checks:
@@ -99,8 +100,9 @@ You need to use version 1 of the checkout, since version 2 strips too much
 from the repository for `setuptools_scm` to work.
 
 The formula here for installing should be identical for all users; and using
-PEP 517/518 builds, you are even guaranteed a consistent wheel will be produced
-just as if you were building a final package.
+[PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
+builds, you are even guaranteed a consistent wheel will be produced just as if
+you were building a final package.
 
 ## Distribution: Pure Python wheels
 
@@ -116,10 +118,10 @@ package, the procedure is simple.
       with:
         python-version: 3.8
 
-    - name: Install wheel and sdist requirements
+    - name: Install wheel and SDist requirements
       run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=3.4" "wheel"
 
-    - name: Build sdist
+    - name: Build SDist
       run: python setup.py sdist
 
     - name: Build wheel
@@ -146,7 +148,7 @@ A few things to note that are new to this job:
 We install SDist requirements by hand since `python setup.py sdist` does not
 get the benefits of having pip install things. If you have any special
 requirements in your `pyproject.toml`, you'll need to list them here. This is
-special just for the sdist, not for making wheels (which should be done by the
+special just for the SDist, not for making wheels (which should be done by the
 PEP 517/518 process for you).
 
 You need to put your base package name in for `<packagename>` in the copy

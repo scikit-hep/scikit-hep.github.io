@@ -153,7 +153,7 @@ PEP 517/518 process for you).
 
 You need to put your base package name in for `<packagename>` in the copy
 command; pip will put all wheels needed in the directory you specify, and you
-need to just pick out your wheels for upload. You don't want to upload numpy or
+need to just pick out your wheels for upload. You don't want to upload NumPy or
 some other wheel it had to build (not common anymore, but can happen).
 
 We upload the artifact just to make it available via the GitHub PR/Checks API.
@@ -162,5 +162,23 @@ You can download a file to test locally if you want without making a release.
 Finally, only  on release tags, we publish to PyPI. You'll need to go to PyPI,
 generate a token for your project, and put it into `pypi_password` on your
 repo's secrets page.
+
+## Advanced: Testing against the latest development Python
+
+If you want to add development versions of python, such as `3.9-dev`, add it to your matrix and then use this
+instead of the `setup-python` action above:
+
+```yaml
+- uses: actions/setup-python@v2
+  if: "!endswith(matrix.python-version, 'dev')"
+  with:
+    python-version: ${{ matrix.python-version }}
+- uses: deadsnakes/action@v1.0.0
+  if: "endswith(matrix.python-version, 'dev')"
+  with:
+    python-version: ${{ matrix.python-version }}
+```
+
+Warning, though; changes in Python 3.9 are currently incompatible with PyBind11.
 
 

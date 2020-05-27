@@ -43,6 +43,7 @@ you use a develop branch, you probably will want to include that.
 
 If you use [pre-commit](https://pre-commit.com) (and you should), this is a job that will check pre-commit for you:
 
+{% raw %}
 ```yaml
   pre-commit:
     name: Format
@@ -58,6 +59,7 @@ If you use [pre-commit](https://pre-commit.com) (and you should), this is a job 
         key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
     - uses: pre-commit/action@v1.1.0
 ```
+{% endraw %}
 
 ## Unit tests
 
@@ -66,6 +68,8 @@ practices listed in the previous sections, this becomes an almost directly
 copy-and-paste formula, regardless of the package details. You might need
 to adjust the Python versions to suit your taste.
 
+
+{% raw %}
 ```yaml
   checks:
     runs-on: ubuntu-latest
@@ -79,7 +83,9 @@ to adjust the Python versions to suit your taste.
     name: Check Python ${{ matrix.python-version }}
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-python@v2
+
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -89,6 +95,7 @@ to adjust the Python versions to suit your taste.
     - name: Test package
       run: python -m pytest
 ```
+{% endraw %}
 
 A few things to note from above:
 
@@ -96,8 +103,9 @@ The matrix should contain the versions you are interested in. You can also test
 on other OS's if you are building any extensions or are worried about your
 package on macOS or Windows. Fail-fast is optional.
 
-You need to use version 1 of the checkout, since version 2 strips too much
-from the repository for `setuptools_scm` to work.
+It currently is still simplest to use version 1 of the checkout, since version
+2 strips too much from the repository for `setuptools_scm` to work. Recently,
+using `with: fetch-depth: 0` started recovering tag history (it didn't originally).
 
 The formula here for installing should be identical for all users; and using
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
@@ -109,6 +117,7 @@ you were building a final package.
 We will cover binary wheels later, but for a simple universal (pure Python)
 package, the procedure is simple.
 
+{% raw %}
 ```yaml
   dist:
     runs-on: ubuntu-latest
@@ -119,7 +128,7 @@ package, the procedure is simple.
         python-version: 3.8
 
     - name: Install wheel and SDist requirements
-      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=3.4" "wheel"
+      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel"
 
     - name: Build SDist
       run: python setup.py sdist
@@ -131,9 +140,8 @@ package, the procedure is simple.
         mkdir -p dist &&
         cp wheels/<packagename>*any.whl dist/
 
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       with:
-        name: DistPackage
         path: dist
 
     - uses: pypa/gh-action-pypi-publish@master
@@ -142,6 +150,7 @@ package, the procedure is simple.
         password: ${{ secrets.pypi_password }}
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
 ```
+{% endraw %}
 
 A few things to note that are new to this job:
 
@@ -168,6 +177,7 @@ repo's secrets page.
 If you want to add development versions of python, such as `3.9-dev`, add it to your matrix and then use this
 instead of the `setup-python` action above:
 
+{% raw %}
 ```yaml
 - uses: actions/setup-python@v2
   if: "!endswith(matrix.python-version, 'dev')"
@@ -178,6 +188,7 @@ instead of the `setup-python` action above:
   with:
     python-version: ${{ matrix.python-version }}
 ```
+{% endraw %}
 
 Warning, though; changes in Python 3.9 are currently incompatible with PyBind11.
 

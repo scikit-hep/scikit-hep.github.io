@@ -29,7 +29,7 @@ name: Wheels
 
 on:
   push:
-    branch:
+    branches:
       - wheels
     tags:
       - "v*"
@@ -116,7 +116,7 @@ The core of the work is down here:
     - name: Build wheel
       run: python -m cibuildwheel --output-dir wheelhouse
       env:
-        CIBW_SKIP: pp* cp27-win* cp35-win* cp35-mac*
+        CIBW_SKIP: pp* cp27-win* cp35-win*
 
     - name: Upload wheels
       uses: actions/upload-artifact@v2
@@ -148,7 +148,8 @@ expressions. You can use `pp*` to filter PyPy, and you should probably filter
 `CIBW_BUILD` to select the platforms you want to build for - see the [docs
 here][cibw custom] for
 all the identifiers. Note that the ARM and other alternative architectures need
-support from the CI, (so basically Travis for now) to run.
+support from the CI, (so basically Travis for now) to run. Windows Python 3.5
+seems to be buggy in PEP 517 support.
 
 You can also select different base images (the *default* is manylinux2010).
 If you want manylinux1, just do:

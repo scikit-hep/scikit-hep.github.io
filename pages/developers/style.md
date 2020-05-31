@@ -151,7 +151,65 @@ You can also add items to the virtual environment setup for mypy by pre-commit, 
     additional_dependencies: [attrs==19.3.0]
 ```
 
-## Warnings
+MyPy has a config section in `setup.cfg` that looks like this:
+
+
+```ini
+[mypy]
+warn_unused_configs = True
+pretty = True
+files = src
+
+[mypy-numpy]
+ignore_missing_imports = True
+```
+
+There are a lot of options, and you can start with only typing global code and
+functions with at least one type annotation (the default) and enable more
+checks as you go. You can ignore missing imports on libraries as shown above,
+on section each. And you can disable MyPy on a line with `  # type: ignore`.
+
+## Flake8
+
+Flake8 can check a collection of good practices for you, ranging from simple style to things
+that might confuse or detract users, such as unused imports and more. Here is a suggested
+`setup.cfg` to enable compatibility with Black:
+
+```ini
+[flake8]
+ignore = E203, E501, W503
+select = C,E,F,W
+```
+
+One recommended plugin for flake8 is `flake8-bugbear`, which catches many
+common bugs.  It is highly opinionated an can be made more so with the `B9`
+setting. You can also set a max complexity, which bugs you when you have
+complex functions that should be broken up. Here is an opinionated config:
+
+```ini
+[flake8]
+max-complexity = 12
+ignore = E501
+select = C,E,F,W,B,B9
+```
+
+Here is the flake8 addition for precommit, with the `bugbear` plugin:
+
+```yaml
+- repo: https://gitlab.com/pycqa/flake8
+  rev: ''  # pick a git hash / tag to point to
+  hooks:
+  - id: flake8
+    additional_dependencies: [flake8-docstrings, flake8-bugbear]
+```
+
+This *will* be too much at first, so you can disable or enable any test by it's
+label. You can also disable a check or a list of checks inline with
+`  # noqa: X###` (where you list the check label(s)). Over time, you can fix
+and enable more checks.
+
+
+## Python warnings
 
 Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to

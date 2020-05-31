@@ -184,7 +184,7 @@ ignore_missing_imports = True
 There are a lot of options, and you can start with only typing global code and
 functions with at least one type annotation (the default) and enable more
 checks as you go. You can ignore missing imports on libraries as shown above,
-on section each. And you can disable MyPy on a line with `  # type: ignore`.
+on section each. And you can disable MyPy on a line with `# type: ignore`.
 
 ## Flake8
 
@@ -223,7 +223,7 @@ Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 This *will* be too much at first, so you can disable or enable any test by it's
 label. You can also disable a check or a list of checks inline with
-`  # noqa: X###` (where you list the check label(s)). Over time, you can fix
+`# noqa: X###` (where you list the check label(s)). Over time, you can fix
 and enable more checks.
 
 

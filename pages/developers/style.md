@@ -46,6 +46,11 @@ For a Python 2+3 codebase, the following is also useful:
   - id: fix-encoding-pragma
 ```
 
+Helpful tip: Pre-commit runs top-to-bottom, so put checks that modify content
+(like the one above, black) above checks that might be more likely to pass
+after the modification (like flake8).
+
+
 ## Black
 
 [Black](https://black.readthedocs.io/en/latest/) is a popular auto-formatter
@@ -116,6 +121,18 @@ Add the following to your pre-commit config:
   rev: "0.42"
   hooks:
   - id: check-manifest
+```
+
+Warning: For a complex package, this may be slow. You can optionally set
+`stages: [manual]` just below the id, and then only run this explicitly
+(probably in CI only).  In GHA, you would add, placed just below the normal
+check:
+
+```yaml
+    - name: Check manifest
+      uses: pre-commit/action@v1.1.0
+      with:
+        extra_args: --hook-stage manual check-manifest
 ```
 
 ## Type checking (new)
@@ -189,7 +206,7 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
-ignore = E501
+ignore = E203, E501, W503
 select = C,E,F,W,B,B9
 ```
 
@@ -197,7 +214,7 @@ Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: ''  # pick a git hash / tag to point to
+  rev: 3.8.2 
   hooks:
   - id: flake8
     additional_dependencies: [flake8-docstrings, flake8-bugbear]

@@ -171,7 +171,7 @@ on section each. And you can disable MyPy on a line with `  # type: ignore`.
 
 ## Flake8
 
-Flake8 can check a collection of good practices for you, ranging from simple style to things
+[Flake8][] can check a collection of good practices for you, ranging from simple style to things
 that might confuse or detract users, such as unused imports and more. Here is a suggested
 `setup.cfg` to enable compatibility with Black:
 
@@ -193,7 +193,7 @@ ignore = E501
 select = C,E,F,W,B,B9
 ```
 
-Here is the flake8 addition for precommit, with the `bugbear` plugin:
+Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
@@ -244,4 +244,21 @@ following pre-commit config:
 You can make a similar non-docker file, but that should sit beside the docker
 one for use on CI. You can install this non-docker file locally if you want it
 and have clang already installed. Note that formatting changes between versions,
-so only the above recipe is guaranteed to work identically to CI.
+so only the above recipe is guaranteed to work identically to CI. The local one
+would look like this:
+
+```yaml
+- repo: local
+  hooks:
+  - id: clang-format
+    name: Clang Format
+    language: system
+    types:
+    - c++
+    entry: clang-format
+    args:
+    - -style=file
+    - -i
+```
+
+[Flake8]: https://gitlab.com/pycqa/flake8

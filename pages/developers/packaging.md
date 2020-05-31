@@ -55,19 +55,27 @@ build-backend = "setuptools.build_meta"
 
 This completely changes your build process if you have Pip 10 or later. When
 this file is present, Pip creates a virtual environment, installs exactly what
-it sees here, then builds a wheel. It then discards the environment, and
-installs the wheel.  This **a)** makes the build process reproducible and
-**b)** makes local developer installs match the standard install procedure. It
-also **c)** allows complete specification of the environment that `setup.py`
-runs in, so you can add packages that can be imported in `setup.py`. You should
-*not* be using `setup_requires`; it does not work properly and is deprecated.
-If you want to have source builds that work in Pip 9 or earlier (not common),
-you can have it as a backup.
+it sees here, then builds a wheel (as described in PEP 518). It then discards
+that environment, and installs the wheel.  This **a)** makes the build process
+reproducible and **b)** makes local developer installs match the standard
+install procedure.  Also, **c)** the build requirements do not leak into the
+dev or install environments -- you do not need to have `wheel` installed in
+your dev environment, for example. It also **d)** allows complete specification
+of the environment that `setup.py` runs in, so you can add packages that can be
+imported in `setup.py`. You should *not* be using `setup_requires`; it does not
+work properly and is deprecated.  If you want to have source builds that work
+in Pip 9 or earlier (not common), you should have dev instructions on how to
+install requirements needed to run `setup.py`.
 
-You can also use this to use a different build system, such as [Flit][]. No
-Scikit-HEP packages currently use Flit since it does not allow binary packages
-and a few common developer needs, like editable installs, look slightly
-different in Flit, but its usage is not discouraged.
+You can also use this to select your entire build system; we use setuptools
+above but you can also use others, such as [Flit][] or [Poetry][]. This is
+possible due to the `build-backend` selection, as described in PEP 517. No
+Scikit-HEP packages currently use these since they usually do not allow binary
+packages to be created and a few common developer needs, like editable
+installs, look slightly different (a way to include editable installs in PEP
+517 is being worked on). Usage of these "[hypermodern][]" packaging tools are
+generally not found in Scikit-HEP, but not discouraged; all tools build the
+same wheels (and they often build setuptools compliant SDists, as well).
 
 ### Special additions: NumPy
 
@@ -265,4 +273,6 @@ setup(extras_require=extras)
 [^1]: Actually, Flit produces a backward-compatible `setup.py` by default when
       making an sdist - it's only "missing" from the GitHub repository.
 
-[Flit]:  https://flit.readthedocs.io/en/latest/
+[Flit]:  https://flit.readthedocs.io
+[Poetry]: https://python-poetry.org
+[hypermodern]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/

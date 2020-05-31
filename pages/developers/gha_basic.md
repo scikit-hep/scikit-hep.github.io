@@ -8,8 +8,8 @@ parent: Developer information
 
 # GitHub Actions
 
-The recommended CI for Scikit-HEP is GitHub Actions (GHA), although it's
-predecessor (Azure) is also in heavy usage, and other popular services (Travis,
+The recommended CI for Scikit-HEP is GitHub Actions (GHA), although its
+predecessor Azure is also in heavy usage, and other popular services (Travis,
 Appveyor, and Circle CI) may be found in a few packages. GHA is preferred due
 to the flexible, extensible design and the tight integration with the GitHub
 permissions model (and UI). Here is a guide in setting up a new package with GHA.

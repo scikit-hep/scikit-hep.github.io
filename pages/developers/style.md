@@ -47,8 +47,8 @@ For a Python 2+3 codebase, the following is also useful:
 ```
 
 Helpful tip: Pre-commit runs top-to-bottom, so put checks that modify content
-(like the one above, black) above checks that might be more likely to pass
-after the modification (like flake8).
+(like the several of the pre-commit-hooks above, or Black) above
+checks that might be more likely to pass after the modification (like flake8).
 
 
 ## Black
@@ -188,9 +188,10 @@ on section each. And you can disable MyPy on a line with `  # type: ignore`.
 
 ## Flake8
 
-[Flake8][] can check a collection of good practices for you, ranging from simple style to things
-that might confuse or detract users, such as unused imports and more. Here is a suggested
-`setup.cfg` to enable compatibility with Black:
+[Flake8][] can check a collection of good practices for you, ranging from
+simple style to things that might confuse or detract users, such as unused
+imports, named values that are never used, mutable default arguments, and more.
+Here is a suggested `setup.cfg` to enable compatibility with Black:
 
 ```ini
 [flake8]
@@ -199,7 +200,7 @@ select = C,E,F,W
 ```
 
 One recommended plugin for flake8 is `flake8-bugbear`, which catches many
-common bugs.  It is highly opinionated an can be made more so with the `B9`
+common bugs.  It is highly opinionated and can be made more so with the `B9`
 setting. You can also set a max complexity, which bugs you when you have
 complex functions that should be broken up. Here is an opinionated config:
 

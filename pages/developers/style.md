@@ -46,6 +46,11 @@ For a Python 2+3 codebase, the following is also useful:
   - id: fix-encoding-pragma
 ```
 
+Helpful tip: Pre-commit runs top-to-bottom, so put checks that modify content
+(like the several of the pre-commit-hooks above, or Black) above
+checks that might be more likely to pass after the modification (like flake8).
+
+
 ## Black
 
 [Black](https://black.readthedocs.io/en/latest/) is a popular auto-formatter
@@ -118,6 +123,18 @@ Add the following to your pre-commit config:
   - id: check-manifest
 ```
 
+Warning: For a complex package, this may be slow. You can optionally set
+`stages: [manual]` just below the id, and then only run this explicitly
+(probably in CI only).  In GHA, you would add, placed just below the normal
+check:
+
+```yaml
+    - name: Check manifest
+      uses: pre-commit/action@v1.1.0
+      with:
+        extra_args: --hook-stage manual check-manifest
+```
+
 ## Type checking (new)
 
 One of the most exciting advancements in Python in the last 10 years has been
@@ -151,7 +168,66 @@ You can also add items to the virtual environment setup for mypy by pre-commit, 
     additional_dependencies: [attrs==19.3.0]
 ```
 
-## Warnings
+MyPy has a config section in `setup.cfg` that looks like this:
+
+
+```ini
+[mypy]
+warn_unused_configs = True
+pretty = True
+files = src
+
+[mypy-numpy]
+ignore_missing_imports = True
+```
+
+There are a lot of options, and you can start with only typing global code and
+functions with at least one type annotation (the default) and enable more
+checks as you go. You can ignore missing imports on libraries as shown above,
+on section each. And you can disable MyPy on a line with `  # type: ignore`.
+
+## Flake8
+
+[Flake8][] can check a collection of good practices for you, ranging from
+simple style to things that might confuse or detract users, such as unused
+imports, named values that are never used, mutable default arguments, and more.
+Here is a suggested `setup.cfg` to enable compatibility with Black:
+
+```ini
+[flake8]
+ignore = E203, E501, W503
+select = C,E,F,W
+```
+
+One recommended plugin for flake8 is `flake8-bugbear`, which catches many
+common bugs.  It is highly opinionated and can be made more so with the `B9`
+setting. You can also set a max complexity, which bugs you when you have
+complex functions that should be broken up. Here is an opinionated config:
+
+```ini
+[flake8]
+max-complexity = 12
+ignore = E203, E501, W503
+select = C,E,F,W,B,B9
+```
+
+Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
+
+```yaml
+- repo: https://gitlab.com/pycqa/flake8
+  rev: 3.8.2 
+  hooks:
+  - id: flake8
+    additional_dependencies: [flake8-docstrings, flake8-bugbear]
+```
+
+This *will* be too much at first, so you can disable or enable any test by it's
+label. You can also disable a check or a list of checks inline with
+`  # noqa: X###` (where you list the check label(s)). Over time, you can fix
+and enable more checks.
+
+
+## Python warnings
 
 Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to
@@ -186,4 +262,21 @@ following pre-commit config:
 You can make a similar non-docker file, but that should sit beside the docker
 one for use on CI. You can install this non-docker file locally if you want it
 and have clang already installed. Note that formatting changes between versions,
-so only the above recipe is guaranteed to work identically to CI.
+so only the above recipe is guaranteed to work identically to CI. The local one
+would look like this:
+
+```yaml
+- repo: local
+  hooks:
+  - id: clang-format
+    name: Clang Format
+    language: system
+    types:
+    - c++
+    entry: clang-format
+    args:
+    - -style=file
+    - -i
+```
+
+[Flake8]: https://gitlab.com/pycqa/flake8

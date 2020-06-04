@@ -204,6 +204,9 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
         DISTUTILS_USE_SDK: 1
         MSSdk: 1
 
+    - name: Check metadata
+      run: python -m twine check wheelhouse/*
+
     - uses: actions/upload-artifact@v2
       with:
         path: wheelhouse/*.whl
@@ -227,17 +230,15 @@ job per wheel would be overkill!
       with:
         python-version: "3.8"
 
-    - name: Install dependencies
-      run: python -m pip install twine "setuptools>=42" "setuptools_scm[toml]>=4.1.0"
+    - name: Install dependencies for SDist
+      run: python -m pip install "setuptools>=42" "setuptools_scm[toml]>=4.1.0"
 
     - uses: actions/download-artifact@v2
       with:
         name: artifact
         path: dist
 
-    - run: twine check dist/*
-
-    - uses: pypa/gh-action-pypi-publish@master
+    - uses: pypa/gh-action-pypi-publish@v1.2.2
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -247,7 +248,8 @@ job per wheel would be overkill!
 
 If you have multiple jobs, you will want to collect your artifacts from above.
 If you only have one job, you can combine this into a single job like we did
-for pure Python wheels, using dist instead of wheelhouse.
+for pure Python wheels, using dist instead of wheelhouse. You can split the
+SDist into another job if you'd like to, then the publish job is trivial.
 
 Remember to set `pypi_password` to your token in secrets.
 

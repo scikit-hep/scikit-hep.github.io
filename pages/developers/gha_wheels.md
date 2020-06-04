@@ -61,8 +61,8 @@ build verbosity (`-v` in pip) if you want to.
 You probably should not forget about making an SDist! A simple job, like before, will work:
 
 ```yaml
-  build_sdist:
-    name: Build SDist
+  make_sdist:
+    name: Make SDist
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -85,6 +85,7 @@ You probably should not forget about making an SDist! A simple job, like before,
         path: dist/*.tar.gz
 ```
 
+Using `checkout@v1` here is easier for now than `v2` if you use `setuptools_scm`.
 
 ## The core job (3 main OS's)
 
@@ -128,7 +129,7 @@ The core of the work is down here:
 There are several things to note here. First, one of the reasons this works is
 because you followed the suggestions in the previous sections, and your package
 builds nicely into a wheel without strange customizations (if you *really* need
-them, check out [`CIBW_BEFORE_BUILD`][] and [`CIBW_ENVIRONMENT`][].
+them, check out [`CIBW_BEFORE_BUILD`][] and [`CIBW_ENVIRONMENT`][]).
 
 
 This lists all three OS's; if you do not support Windows, you can remove that
@@ -217,21 +218,14 @@ example though of how flexible this is; you can split up jobs however you like.
 However, keep in mind there is a setup cost for starting/ending a job, so one
 job per wheel would be overkill!
 
+
 ## Publishing
 
 {% raw %}
 ```yaml
   upload_all:
-    needs: [build_wheels, build_win27_wheels, build_sdist]
+    needs: [build_wheels, build_win27_wheels, make_sdist]
     runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
-
-    - name: Install dependencies for SDist
-      run: python -m pip install "setuptools>=42" "setuptools_scm[toml]>=4.1.0"
 
     - uses: actions/download-artifact@v2
       with:
@@ -248,8 +242,7 @@ job per wheel would be overkill!
 
 If you have multiple jobs, you will want to collect your artifacts from above.
 If you only have one job, you can combine this into a single job like we did
-for pure Python wheels, using dist instead of wheelhouse. You can split the
-SDist into another job if you'd like to, then the publish job is trivial.
+for pure Python wheels, using dist instead of wheelhouse.
 
 Remember to set `pypi_password` to your token in secrets.
 

@@ -29,19 +29,24 @@ on:
   pull_request:
   push:
     branches: master
-    tags:
-    - 'v*'
+  release:
+    types:
+    - published
+
 
 jobs:
 ```
 
 This gives the workflow a nice name, and defines the conditions under which it
-runs. This will run on pull requests or pushes to master, and on version tags. If
-you use a develop branch, you probably will want to include that.
+runs. This will run on pull requests or pushes to master, and on GitHub
+releases. If you use a develop branch, you probably will want to include that.
+If you want tags instead of releases, you can add the `on: push: tags: "v*"`
+key instead of the releases.
 
 ## Pre-commit
 
-If you use [pre-commit](https://pre-commit.com) (and you should), this is a job that will check pre-commit for you:
+If you use [pre-commit](https://pre-commit.com) (and you should), this is a job
+that will check pre-commit for you:
 
 {% raw %}
 ```yaml
@@ -65,8 +70,10 @@ If you use [pre-commit](https://pre-commit.com) (and you should), this is a job 
 
 Implementing unit tests is also easy. Since you should be following best
 practices listed in the previous sections, this becomes an almost directly
-copy-and-paste formula, regardless of the package details. You might need
-to adjust the Python versions to suit your taste.
+copy-and-paste formula, regardless of the package details. You might need to
+adjust the Python versions to suit your taste; you can also test on different
+OS's if you'd like by adding them to the matrix and inputting them into
+`runs-on`.
 
 
 {% raw %}
@@ -128,27 +135,26 @@ package, the procedure is simple.
         python-version: 3.8
 
     - name: Install wheel and SDist requirements
-      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel"
+      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel" "twine"
 
     - name: Build SDist
       run: python setup.py sdist
 
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dist/*
+
     - name: Build wheel
       run: >
-        python -m pip wheel . -w wheels &&
-        ls -lh wheels &&
-        mkdir -p dist &&
-        cp wheels/<packagename>*any.whl dist/
+        python -m pip wheel . -w wheels
 
     - uses: actions/upload-artifact@v2
       with:
-        path: dist
+        path: wheels/<packagename>*.whl
 
-    - uses: pypa/gh-action-pypi-publish@master
-      with:
-        user: __token__
-        password: ${{ secrets.pypi_password }}
-      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+    - name: Check metadata
+      run: twine check dist/* wheels/*
+
 ```
 {% endraw %}
 
@@ -160,7 +166,7 @@ requirements in your `pyproject.toml`, you'll need to list them here. This is
 special just for the SDist, not for making wheels (which should be done by the
 PEP 517/518 process for you).
 
-You need to put your base package name in for `<packagename>` in the copy
+You need to put your base package name in for `<packagename>` in the upload
 command; pip will put all wheels needed in the directory you specify, and you
 need to just pick out your wheels for upload. You don't want to upload NumPy or
 some other wheel it had to build (not common anymore, but can happen).
@@ -168,14 +174,39 @@ some other wheel it had to build (not common anymore, but can happen).
 We upload the artifact just to make it available via the GitHub PR/Checks API.
 You can download a file to test locally if you want without making a release.
 
-Finally, only  on release tags, we publish to PyPI. You'll need to go to PyPI,
-generate a token for your project, and put it into `pypi_password` on your
-repo's secrets page.
+We also add an optional check using twine for the metadata (it will be tested
+later in the upload action for the release job, as well).
+
+And then, you need a release job:
+
+{% raw %}
+```yaml
+  publish:
+    needs: [dist]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: artifact
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@v1.2.2
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
+```
+{% endraw %}
+
+When you make a GitHub release in the web UI, we publish to PyPI. You'll need
+to go to PyPI, generate a token for your project, and put it into
+`pypi_password` on your repo's secrets page.
 
 ## Advanced: Testing against the latest development Python
 
-If you want to add development versions of python, such as `3.9-dev`, add it to your matrix and then use this
-instead of the `setup-python` action above:
+If you want to add development versions of python, such as `3.9-dev`, add it to
+your matrix and then use this instead of the `setup-python` action above:
 
 {% raw %}
 ```yaml
@@ -183,6 +214,7 @@ instead of the `setup-python` action above:
   if: "!endswith(matrix.python-version, 'dev')"
   with:
     python-version: ${{ matrix.python-version }}
+
 - uses: deadsnakes/action@v1.0.0
   if: "endswith(matrix.python-version, 'dev')"
   with:

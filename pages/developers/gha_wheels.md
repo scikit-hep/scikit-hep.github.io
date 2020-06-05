@@ -9,13 +9,11 @@ parent: Developer information
 # GitHub Actions for Binary Wheels
 
 Building binary wheels is a bit more involved, but can still be done
-effectively with GHA. This document will introduce
-[cibuildwheel][] for use in
-Scikit-HEP, replacing our in-house
-[azure-wheel-helpers][].  The
-benefits of cibuildwheel are a larger user base, fast fixes from CI and pip,
-works on all major CI vendors (no lock-in), and covers cases we were not able
-to cover (like ARM). We will focus on GHA below.
+effectively with GHA. This document will introduce [cibuildwheel][] for use in
+Scikit-HEP, replacing our in-house [azure-wheel-helpers][].  The benefits of
+cibuildwheel are a larger user base, fast fixes from CI and pip, works on all
+major CI vendors (no lock-in), and covers cases we were not able to cover (like
+ARM). We will focus on GHA below.
 
 ## Header
 
@@ -30,20 +28,21 @@ name: Wheels
 on:
   push:
     branches:
-      - wheels
-    tags:
-      - "v*"
+    - wheels
   release:
+    types:
+    - published
 ```
 
-This will run on version tags and releases. If you use a develop branch, you
-probably will want to include `pull_request: branch: master`. Since GHA does not
-have manual triggers, this adds a "wheels" branch - just make a wheels branch
-to trigger a build. Remove the branch when done.
+This will run on releases. If you use a develop branch, you probably will want
+to include `pull_request: branch: master`. Since GHA does not have manual
+triggers, this adds a "wheels" branch - just make a wheels branch to trigger a
+build. Remove the branch when done.
 
 ### Useful suggestion:
 
-Since these variables will be used by all jobs, you could make them available on all steps:
+Since these variables will be used by all jobs, you could make them available
+on all steps:
 
 ```yaml
 env:
@@ -58,7 +57,8 @@ build verbosity (`-v` in pip) if you want to.
 
 ## Making an SDist
 
-You probably should not forget about making an SDist! A simple job, like before, will work:
+You probably should not forget about making an SDist! A simple job, like
+before, will work:
 
 ```yaml
   make_sdist:
@@ -85,7 +85,7 @@ You probably should not forget about making an SDist! A simple job, like before,
         path: dist/*.tar.gz
 ```
 
-Using `checkout@v1` here is easier for now than `v2` if you use `setuptools_scm`.
+Using `checkout@v1` here is easier than `v2` if you use `setuptools_scm`, at least for now.
 
 ## The core job (3 main OS's)
 
@@ -205,9 +205,6 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
         DISTUTILS_USE_SDK: 1
         MSSdk: 1
 
-    - name: Check metadata
-      run: python -m twine check wheelhouse/*
-
     - uses: actions/upload-artifact@v2
       with:
         path: wheelhouse/*.whl
@@ -226,6 +223,7 @@ job per wheel would be overkill!
   upload_all:
     needs: [build_wheels, build_win27_wheels, make_sdist]
     runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
 
     - uses: actions/download-artifact@v2
       with:
@@ -236,7 +234,6 @@ job per wheel would be overkill!
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
-      if: github.event_name == 'release' && github.event.action == 'published'
 ```
 {% endraw %}
 

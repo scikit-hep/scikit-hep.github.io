@@ -50,6 +50,8 @@ Helpful tip: Pre-commit runs top-to-bottom, so put checks that modify content
 (like the several of the pre-commit-hooks above, or Black) above
 checks that might be more likely to pass after the modification (like flake8).
 
+Keeping pinned versions fresh: You can use `pre-commit autoupdate` to move your
+tagged versions forward to the latest tags!
 
 ## Black
 
@@ -156,7 +158,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.770
+  rev: v0.780
   hooks:
   - id: mypy
     files: src
@@ -173,9 +175,11 @@ MyPy has a config section in `setup.cfg` that looks like this:
 
 ```ini
 [mypy]
-warn_unused_configs = True
-pretty = True
 files = src
+pretty = True
+python_version = 3.6
+warn_unused_configs = True
+warn_unused_ignores = True
 
 [mypy-numpy]
 ignore_missing_imports = True
@@ -184,18 +188,25 @@ ignore_missing_imports = True
 There are a lot of options, and you can start with only typing global code and
 functions with at least one type annotation (the default) and enable more
 checks as you go. You can ignore missing imports on libraries as shown above,
-on section each. And you can disable MyPy on a line with `# type: ignore`.
+on section each. And you can disable MyPy on a line with `# type: ignore`. Once
+you are ready to start checking more, you can look at adding
+`check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
+more, up until `strict`.
+
 
 ## Flake8
 
 [Flake8][] can check a collection of good practices for you, ranging from
 simple style to things that might confuse or detract users, such as unused
 imports, named values that are never used, mutable default arguments, and more.
-Here is a suggested `setup.cfg` to enable compatibility with Black:
+Unlike black and some other tools, flake8 does not correct problems, it just
+reports them. Some of the checks could have had automated fixes, sadly (which
+is why Black is nice).  Here is a suggested `setup.cfg` to enable compatibility
+with Black:
 
 ```ini
 [flake8]
-ignore = E203, E501, W503
+ignore = E203, E231, E501, W503
 select = C,E,F,W
 ```
 
@@ -207,24 +218,29 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
-ignore = E203, E501, W503
+ignore = E203, E231, E501, E722, W503
 select = C,E,F,W,B,B9
 ```
 
-Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
+(Error E722 is identical to B001.) Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
   rev: 3.8.2 
   hooks:
   - id: flake8
-    additional_dependencies: [flake8-docstrings, flake8-bugbear]
+    additional_dependencies: [flake8-bugbear]
 ```
 
 This *will* be too much at first, so you can disable or enable any test by it's
 label. You can also disable a check or a list of checks inline with
 `# noqa: X###` (where you list the check label(s)). Over time, you can fix
-and enable more checks.
+and enable more checks. A few interesting plugins:
+
+* [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs.
+* [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker.
+* [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker.
+* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice).
 
 
 ## Python warnings

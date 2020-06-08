@@ -96,6 +96,14 @@ want.
     :target: https://github.com/psf/black
 ```
 
+In *very* specific situations, you may want to retain special formatting. After
+carefully deciding that it is a special use case, you can use `# fmt: on` and
+`#fmt: off` around a code block to have it keep custom formatting. *Always*
+consider refactoring before you try this option! Most of the time, you can find
+a way to make the Blacked code look better by rewriting your code; factor out
+long unreadable portions into a variable, avoid writing matrices as 1D lists,
+etc.
+
 ## Check-Manifest
 
 [Check-manifest](https://pypi.org/project/check-manifest/) is a fantastic,

@@ -46,11 +46,11 @@ For a Python 2+3 codebase, the following is also useful:
   - id: fix-encoding-pragma
 ```
 
-Helpful tip: Pre-commit runs top-to-bottom, so put checks that modify content
+**Helpful tip**: Pre-commit runs top-to-bottom, so put checks that modify content
 (like the several of the pre-commit-hooks above, or Black) above
 checks that might be more likely to pass after the modification (like flake8).
 
-Keeping pinned versions fresh: You can use `pre-commit autoupdate` to move your
+**Keeping pinned versions fresh**: You can use `pre-commit autoupdate` to move your
 tagged versions forward to the latest tags!
 
 ## Black
@@ -125,7 +125,7 @@ Add the following to your pre-commit config:
   - id: check-manifest
 ```
 
-Warning: For a complex package, this may be slow. You can optionally set
+**Warning**: For a complex package, this may be slow. You can optionally set
 `stages: [manual]` just below the id, and then only run this explicitly
 (probably in CI only).  In GHA, you would add, placed just below the normal
 check:
@@ -191,7 +191,8 @@ checks as you go. You can ignore missing imports on libraries as shown above,
 on section each. And you can disable MyPy on a line with `# type: ignore`. Once
 you are ready to start checking more, you can look at adding
 `check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
-more, up until `strict`.
+more, up until `strict`. You can add these *per file* by adding a `# mypy:
+strict` (or any other less stringent check) at the top of the file.
 
 
 ## Flake8

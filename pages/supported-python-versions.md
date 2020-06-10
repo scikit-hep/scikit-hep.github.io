@@ -8,15 +8,15 @@ nav_order: 60
 Supported Python Versions
 =========================
 
-The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy, NumPy, and scikit-image have come together and agreed on a plan for Python and Numpy version support called [NEP 29][]. In light of this plan, the Scikit-HEP developers have adopted the following guidelines for the Scikit-HEP packages.
+The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy, NumPy, and scikit-image have come together and agreed on a plan for Python and NumPy version support called [NEP 29][]. In light of this plan, the Scikit-HEP developers have adopted the following guidelines for the Scikit-HEP packages.
 
 
 * All packages in Scikit-HEP must support Python 3, with minimum Python 3 versions listed in [NEP 29][].
-* New packages in Scikit-HEP are *recommended* to have one complete release (1.0 or equivalent) for Python 2.7. If users request fixes/patches be available for Python 2.7, they can be applied to a branch on top of this release (this can be viewed as an LTS release, similar to IPython 5). Users of Python 2.7 can pin this version (and recent versions of `pip` can recognize this automatically, as well).
+* New packages in Scikit-HEP are *allowed* to have one complete release (1.0 or equivalent) for Python 2.7. If users request fixes/patches be available for Python 2.7, they can be applied to a branch on top of this release (this can be viewed as an LTS release, similar to IPython 5). Users of Python 2.7 can pin this version (and recent versions of `pip` can recognize this automatically, as well).
 * After this point, packages in Scikit-HEP are recommended to drop Python 2 support for all future versions, starting immediately (unless they have not reached the 1.0 status yet).
 * New packages introduced into Scikit-HEP are *not required* to have a Python 2 compatible release.
 
-Beyond these guidelines, NEP 29 can be followed exactly. We do not expect to be able to maintain anything Numpy does not.
+Beyond these guidelines, NEP 29 can be followed exactly. We do not expect to be able to maintain anything NumPy does not.
 
 Individual packages within Scikit-HEP may have user communities or needs that require specific support to be maintained. Package maintainers can choose to be more lenient than this plan recommends, though they will have to take on the required burden of doing so.
 

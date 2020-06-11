@@ -2,7 +2,7 @@
 layout: page
 title: Packaging
 permalink: /developer/packaging
-nav_order: 3
+nav_order: 5
 parent: Developer information
 ---
 
@@ -25,7 +25,7 @@ each decision is outlined as well.
 > rendered from setup.py (or from another build system). **C)** If not pure
 > Python, a collection of wheels for every binary platform, generally one per
 > supported Python version and OS as well.
-> 
+>
 > Developer requirements (users of A or git) are generally higher than the
 > requirements to use B or C.
 

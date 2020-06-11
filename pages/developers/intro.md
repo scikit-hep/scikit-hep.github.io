@@ -2,7 +2,7 @@
 layout: page
 title: Intro to development
 permalink: /developer/intro
-nav_order: 1
+nav_order: 2
 parent: Developer information
 ---                                                                                                                                                                                                                                                             
 
@@ -124,7 +124,7 @@ you need to be using Conda, and it is a great way to have control over the versi
 of Python you are using. If so, then the creation of an environment looks like this:
 
 ```bash
-conda create -n env_name python=3.8 
+conda create -n env_name python=3.8
 ```
 
 You can use `-n name` or `-p path` to specify the environment by name or

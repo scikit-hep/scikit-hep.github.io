@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Package requirements and guidelines
-permalink: /guidelines
+permalink: /developer/guidelines
 nav_order: 1
 parent: Developer information
 ---

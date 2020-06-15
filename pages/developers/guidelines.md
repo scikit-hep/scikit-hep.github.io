@@ -10,6 +10,8 @@ parent: Developer information
 
 The below provides requirements and guidelines for Scikit-HEP packages,
 which we hope help providing high-quality packages with some level of homogeneity across them.
+New packages should adhere to these minimum requirements.
+Further optional suggestions are in the following pages.
 
 ### Package license
 

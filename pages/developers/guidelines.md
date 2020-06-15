@@ -17,7 +17,7 @@ Every package is required to have a license.
 As a  guideline, we try to be as open as possible with licensing,
 following what most of the other packages use in the wide Python scientific community;
 Scikit-HEP packages typically use the BSD-3 license.
-It is acknowledged that exceptions are needed and "sticky licenses" such as GPL may be the only viable way.
+It is acknowledged that exceptions are needed and "sticky licenses" such as GPL may be the only viable option.
 
 ### README
 

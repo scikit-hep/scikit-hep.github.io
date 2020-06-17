@@ -25,7 +25,7 @@
       </div>
       <div class="description">
         <div class="inner">
-          {{project.description | markdownify | strip_html }}
+          {{project.description | markdownify }}
           {%- if project.affiliated -%}
             <div class="noted">🤝 Affiliated</div> 
           {%- endif %}

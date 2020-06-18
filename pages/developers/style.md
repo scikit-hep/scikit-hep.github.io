@@ -2,7 +2,7 @@
 layout: page
 title: Style
 permalink: /developer/style
-nav_order: 5
+nav_order: 6
 parent: Developer information
 ---
 
@@ -235,7 +235,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.2 
+  rev: 3.8.2
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]

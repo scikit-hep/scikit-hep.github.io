@@ -28,20 +28,21 @@ name: CI
 on:
   pull_request:
   push:
-    branches: master
+    branches:
+    - master
   release:
     types:
     - published
-
 
 jobs:
 ```
 
 This gives the workflow a nice name, and defines the conditions under which it
-runs. This will run on pull requests or pushes to master, and on GitHub
+runs. This will run on all pull requests, or pushes to master, and on GitHub
 releases. If you use a develop branch, you probably will want to include that.
 If you want tags instead of releases, you can add the `on: push: tags: "v*"`
-key instead of the releases.
+key instead of the releases. You can also specify specific branches for pull
+requests.
 
 ## Pre-commit
 

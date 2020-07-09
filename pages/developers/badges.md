@@ -2,7 +2,7 @@
 layout: page
 title: Badges
 permalink: /badges
-nav_order: 9
+nav_order: 12
 parent: Developer information
 ---
 

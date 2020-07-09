@@ -1,7 +1,6 @@
-
 ---
 layout: page
-title: GitHub Actions for pure Wheels
+title: "GHA: Pure Python wheels"
 permalink: /developer/gha_pure
 nav_order: 8
 parent: Developer information

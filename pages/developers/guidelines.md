@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Package requirements and guidelines
+title: New package guidelines
 permalink: /developer/guidelines
 nav_order: 1
 parent: Developer information
 ---
 
-# Package requirements and guidelines
+# New package requirements and guidelines
 
 The guidelines on this page provide minimum requirements for Scikit-HEP
 packages, which we hope help providing high-quality packages with some level of

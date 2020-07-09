@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GitHub Actions
+title: "GHA: GitHub Actions intro"
 permalink: /developer/gha_basic
 nav_order: 7
 parent: Developer information

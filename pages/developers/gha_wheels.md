@@ -26,18 +26,20 @@ build at any time via the web interface.
 name: Wheels
 
 on:
-  push:
-    branches:
-    - wheels
+  workflow_dispatch:
   release:
     types:
     - published
 ```
 
-This will run on releases. If you use a develop branch, you probably will want
-to include `pull_request: branch: master`. Since GHA does not have manual
-triggers, this adds a "wheels" branch - just make a wheels branch to trigger a
-build. Remove the branch when done.
+This will run on releases. If you use a develop branch, you could include
+`pull_request: branches: [master]`, since it changes rarely.  GitHub actions
+also [has a `workflow_dispatch` option][workflow_dispatch], which will allow
+you to click a button in the GUI to trigger a build, which is perfect for
+testing wheels before making a release; you can download them from "artifacts".
+You can even define variables that you can set in the GUI and access in the CI!
+
+[workflow_dispatch]: https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/ 
 
 ### Useful suggestion:
 

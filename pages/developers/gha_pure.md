@@ -87,7 +87,7 @@ with the name "CI/CD", you can just combine the two `on` dicts.
 
     - uses: actions/upload-artifact@v2
       with:
-        path: wheels/<packagename>*.whl
+        path: wheels/<packagename>-*.whl
 
     - name: Check metadata
       run: twine check dist/* wheels/*

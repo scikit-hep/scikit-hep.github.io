@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Package requirements and guidelines
+title: Package requirements
 permalink: /developer/guidelines
 nav_order: 1
 parent: Developer information

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: GitHub Actions for Binary Wheels
+title: "GHA: Binary wheels"
 permalink: /developer/gha_wheels
-nav_order: 8
+nav_order: 9
 parent: Developer information
 ---
 

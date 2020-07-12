@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GitHub Actions
+title: "GHA: GitHub Actions intro"
 permalink: /developer/gha_basic
 nav_order: 7
 parent: Developer information
@@ -30,19 +30,15 @@ on:
   push:
     branches:
     - master
-  release:
-    types:
-    - published
 
 jobs:
 ```
 
 This gives the workflow a nice name, and defines the conditions under which it
-runs. This will run on all pull requests, or pushes to master, and on GitHub
-releases. If you use a develop branch, you probably will want to include that.
-If you want tags instead of releases, you can add the `on: push: tags: "v*"`
-key instead of the releases. You can also specify specific branches for pull
-requests.
+runs. This will run on all pull requests, or pushes to master. If you use a
+develop branch, you probably will want to include that.  You can also specify
+specific branches for pull requests instead of running on all PRs (will run on
+PRs targeting those branches only).
 
 ## Pre-commit
 
@@ -119,90 +115,6 @@ The formula here for installing should be identical for all users; and using
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
 builds, you are even guaranteed a consistent wheel will be produced just as if
 you were building a final package.
-
-## Distribution: Pure Python wheels
-
-We will cover binary wheels later, but for a simple universal (pure Python)
-package, the procedure is simple.
-
-{% raw %}
-```yaml
-  dist:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
-      with:
-        python-version: 3.8
-
-    - name: Install wheel and SDist requirements
-      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel" "twine"
-
-    - name: Build SDist
-      run: python setup.py sdist
-
-    - uses: actions/upload-artifact@v2
-      with:
-        path: dist/*
-
-    - name: Build wheel
-      run: >
-        python -m pip wheel . -w wheels
-
-    - uses: actions/upload-artifact@v2
-      with:
-        path: wheels/<packagename>*.whl
-
-    - name: Check metadata
-      run: twine check dist/* wheels/*
-
-```
-{% endraw %}
-
-A few things to note that are new to this job:
-
-We install SDist requirements by hand since `python setup.py sdist` does not
-get the benefits of having pip install things. If you have any special
-requirements in your `pyproject.toml`, you'll need to list them here. This is
-special just for the SDist, not for making wheels (which should be done by the
-PEP 517/518 process for you).
-
-You need to put your base package name in for `<packagename>` in the upload
-command; pip will put all wheels needed in the directory you specify, and you
-need to just pick out your wheels for upload. You don't want to upload NumPy or
-some other wheel it had to build (not common anymore, but can happen).
-
-We upload the artifact just to make it available via the GitHub PR/Checks API.
-You can download a file to test locally if you want without making a release.
-
-We also add an optional check using twine for the metadata (it will be tested
-later in the upload action for the release job, as well).
-
-And then, you need a release job:
-
-{% raw %}
-```yaml
-  publish:
-    needs: [dist]
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release' && github.event.action == 'published'
-
-    steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: artifact
-        path: dist
-
-    - uses: pypa/gh-action-pypi-publish@v1.2.2
-      with:
-        user: __token__
-        password: ${{ secrets.pypi_password }}
-```
-{% endraw %}
-
-When you make a GitHub release in the web UI, we publish to PyPI. You'll need
-to go to PyPI, generate a token for your project, and put it into
-`pypi_password` on your repo's secrets page.
 
 ## Advanced: Testing against the latest development Python
 

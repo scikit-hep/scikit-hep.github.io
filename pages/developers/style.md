@@ -140,7 +140,7 @@ check:
 
 ```yaml
     - name: Check manifest
-      uses: pre-commit/action@v1.1.0
+      uses: pre-commit/action@v2.0.0
       with:
         extra_args: --hook-stage manual check-manifest
 ```

@@ -78,6 +78,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
         - 2.7
         - 3.6
         - 3.8
+        - 3.9.0-beta.4  # Optional!
     name: Check Python ${{ matrix.python-version }}
     steps:
     - uses: actions/checkout@v1
@@ -109,26 +110,3 @@ The formula here for installing should be identical for all users; and using
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
 builds, you are even guaranteed a consistent wheel will be produced just as if
 you were building a final package.
-
-## Advanced: Testing against the latest development Python
-
-If you want to add development versions of python, such as `3.9-dev`, add it to
-your matrix and then use this instead of the `setup-python` action above:
-
-{% raw %}
-```yaml
-- uses: actions/setup-python@v2
-  if: "!endswith(matrix.python-version, 'dev')"
-  with:
-    python-version: ${{ matrix.python-version }}
-
-- uses: deadsnakes/action@v1.0.0
-  if: "endswith(matrix.python-version, 'dev')"
-  with:
-    python-version: ${{ matrix.python-version }}
-```
-{% endraw %}
-
-Warning, though; changes in Python 3.9 are currently incompatible with PyBind11.
-
-

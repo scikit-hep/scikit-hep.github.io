@@ -78,7 +78,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
         - 2.7
         - 3.6
         - 3.8
-        - 3.9.0-beta.4  # Optional!
+        - 3.9-dev  # Optional!
     name: Check Python ${{ matrix.python-version }}
     steps:
     - uses: actions/checkout@v1

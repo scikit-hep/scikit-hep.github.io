@@ -83,9 +83,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
   - id: black
 ```
 
-You can also add `language_version: python3.6` or similar if you want to target
-a specific version. And you can add a Black badge to your repo as well if you
-want.
+You can add a Black badge to your repo as well if you want.
 
 ```md
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -166,7 +164,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.780
+  rev: v0.782
   hooks:
   - id: mypy
     files: src
@@ -235,7 +233,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.2
+  rev: 3.8.3
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]
@@ -250,6 +248,7 @@ and enable more checks. A few interesting plugins:
 * [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker.
 * [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker.
 * [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice).
+* [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules
 
 
 ## Python warnings

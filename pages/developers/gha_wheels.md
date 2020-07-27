@@ -114,12 +114,12 @@ The core of the work is down here:
         python-version: '3.7'
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.4.2
+      run: python -m pip install cibuildwheel==1.5.5
 
     - name: Build wheel
       run: python -m cibuildwheel --output-dir wheelhouse
       env:
-        CIBW_SKIP: pp* cp27-win* cp35-win*
+        CIBW_SKIP: pp* cp27-win*
 
     - name: Upload wheels
       uses: actions/upload-artifact@v2
@@ -151,8 +151,7 @@ expressions. You can use `pp*` to filter PyPy, and you should probably filter
 `CIBW_BUILD` to select the platforms you want to build for - see the [docs
 here][cibw custom] for
 all the identifiers. Note that the ARM and other alternative architectures need
-support from the CI, (so basically Travis for now) to run. Windows Python 3.5
-seems to be buggy in PEP 517 support.
+support from the CI, (so basically Travis for now) to run.
 
 You can also select different base images (the *default* is manylinux2010).
 If you want manylinux1, just do:
@@ -185,7 +184,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
         python-version: '3.7'  # Host Python, not target Python
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.4.2
+      run: python -m pip install cibuildwheel==1.5.5
 
     - uses: ilammy/msvc-dev-cmd@v1
 
@@ -232,7 +231,7 @@ job per wheel would be overkill!
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.2.2
+    - uses: pypa/gh-action-pypi-publish@v1.3.1
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -241,7 +240,10 @@ job per wheel would be overkill!
 
 If you have multiple jobs, you will want to collect your artifacts from above.
 If you only have one job, you can combine this into a single job like we did
-for pure Python wheels, using dist instead of wheelhouse.
+for pure Python wheels, using dist instead of wheelhouse. If you upload from
+mutiple places, you can set `skip_existing` (but generally it's better to
+not try to upload the same file from two places - you can trick Travis into
+avoiding the sdist, for example).
 
 Remember to set `pypi_password` to your token in secrets.
 

@@ -182,7 +182,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
 
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.7'
+        python-version: '3.7'  # Host Python, not target Python
 
     - name: Install cibuildwheel
       run: python -m pip install cibuildwheel==1.4.2

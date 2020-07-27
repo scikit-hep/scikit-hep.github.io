@@ -71,10 +71,8 @@ before, will work:
       with:
         submodules: true    # Optional if you have submodules
 
-    - name: Setup Python 3.7
+    - name: Setup Python
       uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'
 
     - name: Install deps
       run: python -m pip install "setuptools>=42" "setuptools_scm[toml]>=4.1.0"
@@ -108,10 +106,8 @@ The core of the work is down here:
       with:
         submodules: true
 
-    - name: Setup Python 3.7
+    - name: Setup Python
       uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'
 
     - name: Install cibuildwheel
       run: python -m pip install cibuildwheel==1.5.5
@@ -180,8 +176,6 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
         submodules: true
 
     - uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'  # Host Python, not target Python
 
     - name: Install cibuildwheel
       run: python -m pip install cibuildwheel==1.5.5
@@ -214,7 +208,9 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
 Users will need the current redistributable for Visual Studio. This is a good
 example though of how flexible this is; you can split up jobs however you like.
 However, keep in mind there is a setup cost for starting/ending a job, so one
-job per wheel would be overkill!
+job per wheel would be overkill! Note the setup-python action above sets the
+environment for the _host_, not the target you will be building with cibuildwheel,
+which is self-containted.
 
 
 ## Publishing

@@ -25,6 +25,8 @@ search_enabled: true
 aux_links:
     "Scikit-HEP on GitHub":
       - "//github.com/scikit-hep"
+    "Source":
+      - "//github.com/scikit-hep/scikit-hep.github.io"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -48,15 +48,3 @@ div.description .inner p {
   display: inline;
 }
 
-nav > ul.navigation-list {
-  list-style-type: none;
-  padding-inline-start: 12px;
-}
-
-nav > ul.navigation-list > li > ul {
-  padding-inline-start: 24px;
-}
-
-nav > ul.navigation-list li.active > a {
-  font-weight: bold;
-}

@@ -1,5 +1,16 @@
 $link-color: #7092be;
 
+@media (min-width: 50rem) {
+  div.site-header {
+    height: 264px;
+    max-height: 264px;
+  }
+}
+
+a.site-title {
+  padding: 0px 6px 0px 6px;
+}
+
 div.noted {
   color: #ff6347;
   font-weight: bold;
@@ -48,15 +59,3 @@ div.description .inner p {
   display: inline;
 }
 
-nav > ul.navigation-list {
-  list-style-type: none;
-  padding-inline-start: 12px;
-}
-
-nav > ul.navigation-list > li > ul {
-  padding-inline-start: 24px;
-}
-
-nav > ul.navigation-list li.active > a {
-  font-weight: bold;
-}

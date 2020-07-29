@@ -1,5 +1,16 @@
 $link-color: #7092be;
 
+@media (min-width: 50rem) {
+  div.site-header {
+    height: 264px;
+    max-height: 264px;
+  }
+}
+
+a.site-title {
+  padding: 0px 6px 0px 6px;
+}
+
 div.noted {
   color: #ff6347;
   font-weight: bold;

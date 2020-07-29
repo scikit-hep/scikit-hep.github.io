@@ -18,6 +18,8 @@ plugins:
 
 # Theme settings
 
+logo: "/assets/images/logo.png"
+
 # Enable or disable the site search
 search_enabled: true
 
@@ -25,8 +27,12 @@ search_enabled: true
 aux_links:
     "Scikit-HEP on GitHub":
       - "//github.com/scikit-hep"
-    "Source":
-      - "//github.com/scikit-hep/scikit-hep.github.io"
+
+gh_edit_link: true
+gh_edit_link_text: "View source for this page on GitHub."
+gh_edit_repository: "https://github.com/scikit-hep/scikit-hep.github.io"
+gh_edit_branch: "master"
+gh_edit_view_mode: "tree" # "tree" or "edit"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

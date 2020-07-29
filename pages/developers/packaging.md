@@ -18,7 +18,7 @@ each decision is outlined as well.
 > Raw source lives in git and has a `setup.py`. You *can* install directly from
 > git via pip, but normally users install from distributions hosted on PyPI. There
 > are three options: **A)** A source package, which ends in `.tar.gz`. This is a copy
-> of the github repository, stripped of a few specifics like CI files, and possibly
+> of the GitHub repository, stripped of a few specifics like CI files, and possibly
 > with submodules included (if there are any). **B)** A pure python wheel, which
 > ends in `.whl` - this is only possible if there are no compiled extensions in the
 > library. This does *not* contain a setup.py, but rather a `PKG_INFO` file that is
@@ -211,7 +211,7 @@ testpaths =
     tests
 ```
 
-And, a possible setup.py:
+And, a possible `setup.py`:
 
 ```python
 #!/usr/bin/env python
@@ -236,7 +236,7 @@ Instead, assume users call pytest directly.
 It is recommended to use extras instead of or in addition to making requirement
 files. These extras a) correctly interact with install requires and other
 built-in tools, b) are available directly when installing via PyPI, and c) are
-allowed in requirements.txt, `install_requires`, pyproject.toml, and most other
+allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most other
 places requirements are passed.
 
 Here is an example of a simple extras, placed in setup.cfg:
@@ -246,7 +246,7 @@ Here is an example of a simple extras, placed in setup.cfg:
 test =
   pytest >=4.6
 mpl =
-  matplotlib >= 2.0
+  matplotlib >=2.0
 ```
 
 And a complex one, that does some logic (like combining the requirements into

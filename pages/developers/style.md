@@ -110,7 +110,7 @@ it from PyPI. Run it on your repository and see what it says. If you want to ign
 files (like test folders, example folders, docs, etc) you can add these into your config
 files, either `pyproject.toml` or `setup.cfg`:
 
-```
+```ini
 # pyproject.toml
 [tool.check-manifest]
 ignore = [".travis.yml"]
@@ -131,6 +131,10 @@ Add the following to your pre-commit config:
   - id: check-manifest
 ```
 
+<details><summary>If this is too slow: (click here)</summary>
+
+{%- capture "mymarkdown" -%}
+
 **Warning**: For a complex package, this may be slow. You can optionally set
 `stages: [manual]` just below the id, and then only run this explicitly
 (probably in CI only).  In GHA, you would add, placed just below the normal
@@ -142,6 +146,13 @@ check:
       with:
         extra_args: --hook-stage manual check-manifest
 ```
+
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+
+</details>
+
 
 ## Type checking (new)
 
@@ -249,7 +260,30 @@ and enable more checks. A few interesting plugins:
 * [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker.
 * [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice).
 * [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules
+* [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in.
 
+<details><summary>Flake8-print details: (click here)</summary>
+
+{%- capture "mymarkdown" -%}
+
+Having something verify you don't add a print statement by mistake is _very_
+useful.  A common need for the print checker would be to add it to a single
+directory (`src` if you are following the convention recommended). You can do
+the next best thing by removing directories and file just for this check (`T`)
+in your flake8 config:
+
+```ini
+[flake8]
+select = C,E,F,W,T
+per-file-ignores =
+    tests/*: T
+    examples/*: T
+```
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+
+</details>
 
 ## Python warnings
 
@@ -283,6 +317,11 @@ following pre-commit config:
     - -i
 ```
 
+
+<details><summary>For a non-docker version: (click here)</summary>
+
+{%- capture "mymarkdown" -%}
+
 You can make a similar non-docker file, but that should sit beside the docker
 one for use on CI. You can install this non-docker file locally if you want it
 and have clang already installed. Note that formatting changes between versions,
@@ -302,5 +341,11 @@ would look like this:
     - -style=file
     - -i
 ```
+
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+
+</details>
 
 [Flake8]: https://gitlab.com/pycqa/flake8

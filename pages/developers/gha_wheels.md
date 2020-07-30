@@ -163,9 +163,11 @@ If you want manylinux1, just do:
 ```
 
 You can even put any docker image here, including [Scikit-HEP's
-`skhep/manylinuxgcc-*`][manylinuxgcc] images.
+`skhep/manylinuxgcc-*`][manylinuxgcc] images with GCC 9.
 
-## Windows 2.7 (why?)
+<details><summary>If you want to support Python 2.7 on Windows: (click here)</summary>
+
+{%- capture "mymarkdown" -%}
 
 If you have to support Python 2.7 on Windows, you can use a custom job:
 
@@ -216,6 +218,11 @@ example though of how flexible this is; you can split up jobs however you like.
 However, keep in mind there is a setup cost for starting/ending a job, so one
 job per wheel would be overkill!
 
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+
+</details>
 
 ## Publishing
 
@@ -241,14 +248,14 @@ job per wheel would be overkill!
 If you have multiple jobs, you will want to collect your artifacts from above.
 If you only have one job, you can combine this into a single job like we did
 for pure Python wheels, using dist instead of wheelhouse. If you upload from
-mutiple places, you can set `skip_existing` (but generally it's better to
+multiple places, you can set `skip_existing` (but generally it's better to
 not try to upload the same file from two places - you can trick Travis into
 avoiding the sdist, for example).
 
 Remember to set `pypi_password` to your token in secrets.
 
 
-> On Travis, cibuildwheel even has the ability to create ARM and PowerPC
+> On Travis, `cibuildwheel` even has the ability to create ARM and PowerPC
 > builds. IBM Z builds are also available but in beta.
 
 

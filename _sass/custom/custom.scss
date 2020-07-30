@@ -7,6 +7,10 @@ $link-color: #7092be;
   }
 }
 
+details > summary {
+  font-weight: bold;
+}
+
 div.site-logo {
   background-position: center center;
 }

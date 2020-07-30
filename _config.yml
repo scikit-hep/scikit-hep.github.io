@@ -18,6 +18,8 @@ plugins:
 
 # Theme settings
 
+color_scheme: skhep
+
 logo: "/assets/images/logo.png"
 
 # Enable or disable the site search

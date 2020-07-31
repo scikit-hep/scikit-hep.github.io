@@ -68,8 +68,6 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
 
     - name: Install wheel and SDist requirements
       run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel" "twine"

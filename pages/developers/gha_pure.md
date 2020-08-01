@@ -23,7 +23,7 @@ to make a "built" wheel is simple.
 > * Wheels pre-compile bytecode when they install
 >   - Initial import is not slower than subsequent import
 >   - Less chance of a permission issue
-> * You can look in the `.whl` (it's a `.tar.gz`, really) and see where everything is going to go
+> * You can look in the `.whl` (it's a `.zip`, really) and see where everything is going to go
 
 
 [on the next page]: {{ site.baseurl }}{% link pages/developers/gha_wheels.md %}

@@ -9,4 +9,4 @@ docs: https://scikit-hep.org/pyhf/
 # repo: only if different from url
 badges:
   pypi: pyhf
-
+  conda-forge: pyhf

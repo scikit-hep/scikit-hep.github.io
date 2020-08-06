@@ -3,7 +3,7 @@ projlogo: /assets/images/projlogo/logo_pyhf.png
 projlogo-style: height:96px;
 description: pure-Python implementation of HistFactory models.
 url: https://github.com/scikit-hep/pyhf
-readme: https://github.com/scikit-hep/pyhf/blob/master/README.md
+readme: https://github.com/scikit-hep/pyhf/blob/master/README.rst
 docs: https://scikit-hep.org/pyhf/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

@@ -131,6 +131,12 @@ Add the following to your pre-commit config:
   - id: check-manifest
 ```
 
+If you use `setuptools_scm`, you might want to add:
+
+```yaml
+    additional-dependencies: [setuptools_scm, toml]
+```
+
 <details><summary>If this is too slow: (click here)</summary>
 
 {%- capture "mymarkdown" -%}

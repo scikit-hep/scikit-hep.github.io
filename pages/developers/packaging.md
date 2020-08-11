@@ -121,7 +121,11 @@ get the following benefits:
 * A new version every commit (both commits since last tag and git hash encoded)
     * Binaries no longer incorrectly "cache" when installing from pip directly
       from git
+    * You can always tell the exact commit of every sdist/wheel/install
 * SDists and wheels contain the version file/number just like normal
+    * Note that reading the version number for the SDist requires
+      `setuptools_scm` and `toml` unless you add a workaround to `setup.py`.
+      This is not required for wheels (`setup.py` is not even part of a wheel).
 
 If you want to set a template, you can control the details of this file if
 needed for historical compatibility, but it is better for new/young projects to
@@ -138,6 +142,16 @@ there.
 If you want to create artifacts for use in-between versions, then you should
 disable shallow checkouts in your CI, since a non-tagged version cannot be
 computed correctly from a checkout that is too shallow.
+
+The one place where the pep518 requirements do not get picked up is when you
+manually run `setup.py`, such as when doing `python setup.py sdist`. If you
+are missing `setuptools_scm` or `toml`, you will get silently get version 0.0.0.
+To make this a much more helpful error, add this to your `setup.py`:
+
+```python
+import setuptools_scm  # noqa: F401
+import toml  # noqa: F401
+```
 
 ### pyhf Versioning system
 
@@ -271,7 +285,7 @@ setup(extras_require=extras)
 ```
 
 [^1]: Actually, Flit produces a backward-compatible `setup.py` by default when
-      making an sdist - it's only "missing" from the GitHub repository.
+      making an SDist - it's only "missing" from the GitHub repository.
 
 [Flit]:  https://flit.readthedocs.io
 [Poetry]: https://python-poetry.org

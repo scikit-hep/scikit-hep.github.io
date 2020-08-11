@@ -255,12 +255,12 @@ label. You can also disable a check or a list of checks inline with
 `# noqa: X###` (where you list the check label(s)). Over time, you can fix
 and enable more checks. A few interesting plugins:
 
-* [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs.
-* [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker.
-* [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker.
-* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice).
-* [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules
-* [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in.
+* [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs. Codes: `B`, `B9`
+* [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker. `--docstring-convention=pep257` is default, `numpy` and `google` also allowed.
+* [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker. Code: `SC`
+* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice). Code: `I`
+* [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules. Code: `N`
+* [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in. Code: `T`
 
 <details><summary>Flake8-print details: (click here)</summary>
 

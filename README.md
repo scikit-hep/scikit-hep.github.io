@@ -9,10 +9,10 @@ To contain:
 
 ## Developer info
 
-To build locally, install rbenv (remember to run `rbenv init` after installing, and `rbenv install 2.6.5`). Then:
+To build locally, install rbenv (remember to run `rbenv init` after installing, and `rbenv install 2.7.1`). Then:
 
 ```bash
-rbenv local 2.6.5
+rbenv local 2.7.1
 bundle install
 bundle exec jekyll serve --livereload
 ```

@@ -296,7 +296,7 @@ per-file-ignores =
 Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to
 find and fix warnings before they cause user errors! Always either run
-Python/PyTest with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment.
+Python/PyTest 3.1+ with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment.
 You can also add the following to your `setup.cfg` file:
 
 ```ini

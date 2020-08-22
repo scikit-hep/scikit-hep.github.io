@@ -143,14 +143,13 @@ If you use `setuptools_scm`, you might want to add:
 
 **Warning**: For a complex package, this may be slow. You can optionally set
 `stages: [manual]` just below the id, and then only run this explicitly
-(probably in CI only).  In GHA, you would add, placed just below the normal
-check:
+(probably in CI only).  In GHA, you should enable the manual stage, which will
+run all checks:
 
 ```yaml
-    - name: Check manifest
-      uses: pre-commit/action@v2.0.0
+    - uses: pre-commit/action@v2.0.0
       with:
-        extra_args: --hook-stage manual check-manifest
+        extra_args: --hook-stage manual
 ```
 
 {%- endcapture -%}

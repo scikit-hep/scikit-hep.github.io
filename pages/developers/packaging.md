@@ -100,7 +100,7 @@ to someone else and it will work as long as the user has NumPy 1.13.3 or later.
 
 Packages in Scikit-HEP should use one of the following systems:
 
-### Git tags: official PPA method
+### Git tags: official PyPA method
 
 One more section is very useful in your `pyproject.toml` file:
 

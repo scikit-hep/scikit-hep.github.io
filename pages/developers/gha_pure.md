@@ -111,8 +111,9 @@ some other wheel it had to build (not common anymore, but can happen).
 {% -capture "mymarkdown" %}
 
 You can use [Python-Build](https://python-build.readthedocs.io/en/latest/), a
-new build tool designed to make building wheels and SDists easy. It can get PEP
-518 requirements even for making SDists. To use it, all you need is:
+new build tool designed to make building wheels and SDists easy. It run a [PEP
+517][] backend and can get [PEP 518][] requirements even for making SDists. To
+use it, all you need is:
 
 ```python
 python -m pip install build # (optionally twine too, if you need to check/publish)
@@ -131,7 +132,7 @@ a different input folder if you want.
 
 This will be moved to the recommended method in the page above [when it is
 accepted](https://github.com/FFY00/python-build/issues/42) as an official
-package by PPA.
+package by PyPA.
 
 
 {%- endcapture -%}
@@ -170,3 +171,6 @@ And then, you need a release job:
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
 to go to PyPI, generate a token for your project, and put it into
 `pypi_password` on your repo's secrets page.
+
+[PEP 517]: https://www.python.org/dev/peps/pep-0517/
+[PEP 518]: https://www.python.org/dev/peps/pep-0518/

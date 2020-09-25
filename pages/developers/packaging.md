@@ -53,19 +53,21 @@ requires = [
 build-backend = "setuptools.build_meta"
 ```
 
-This completely changes your build process if you have Pip 10 or later. When
-this file is present, Pip creates a virtual environment, installs exactly what
-it sees here, then builds a wheel (as described in PEP 518). It then discards
-that environment, and installs the wheel.  This **a)** makes the build process
-reproducible and **b)** makes local developer installs match the standard
-install procedure.  Also, **c)** the build requirements do not leak into the
-dev or install environments -- you do not need to have `wheel` installed in
-your dev environment, for example. It also **d)** allows complete specification
-of the environment that `setup.py` runs in, so you can add packages that can be
-imported in `setup.py`. You should *not* be using `setup_requires`; it does not
-work properly and is deprecated.  If you want to have source builds that work
-in Pip 9 or earlier (not common), you should have dev instructions on how to
-install requirements needed to run `setup.py`.
+This completely changes your build process if you have Pip 10 or later (you can
+disable it with `--no-build-isolation` in special cases, like when writing
+custom conda-forge recipes). When this file is present, Pip creates a virtual
+environment, installs exactly what it sees here, then builds a wheel (as
+described in PEP 518). It then discards that environment, and installs the
+wheel.  This **a)** makes the build process reproducible and **b)** makes local
+developer installs match the standard install procedure.  Also, **c)** the
+build requirements do not leak into the dev or install environments -- you do
+not need to have `wheel` installed in your dev environment, for example. It
+also **d)** allows complete specification of the environment that `setup.py`
+runs in, so you can add packages that can be imported in `setup.py`. You should
+*not* be using `setup_requires`; it does not work properly and is deprecated.
+If you want to have source builds that work in Pip 9 or earlier (not common),
+you should have dev instructions on how to install requirements needed to run
+`setup.py`.
 
 You can also use this to select your entire build system; we use setuptools
 above but you can also use others, such as [Flit][] or [Poetry][]. This is
@@ -96,9 +98,9 @@ to someone else and it will work as long as the user has NumPy 1.13.3 or later.
 
 ## Versioning (medium/high priority)
 
-Packages in Scikit-HEP should use one of the two following systems:
+Packages in Scikit-HEP should use one of the following systems:
 
-### Official PPA method
+### Git tags: official PyPA method
 
 One more section is very useful in your `pyproject.toml` file:
 
@@ -118,14 +120,19 @@ get the following benefits:
 * No manual file to change with the version number - always in sync with Git
     * Simpler release procedure
     * No more mistakes / confusion
+    * You can force a version with an environment variable
+      `SETUPTOOLS_SCM_PRETEND_VERSION` without source code changes.
 * A new version every commit (both commits since last tag and git hash encoded)
     * Binaries no longer incorrectly "cache" when installing from pip directly
       from git
     * You can always tell the exact commit of every sdist/wheel/install
+    * If your working directory is "dirty" (changes/new files that are not
+      ignored), you will get a version that indicates this.
 * SDists and wheels contain the version file/number just like normal
     * Note that reading the version number for the SDist requires
       `setuptools_scm` and `toml` unless you add a workaround to `setup.py`.
       This is not required for wheels (`setup.py` is not even part of a wheel).
+
 
 If you want to set a template, you can control the details of this file if
 needed for historical compatibility, but it is better for new/young projects to
@@ -139,10 +146,6 @@ In docs, there are a few minor tweaks necessary to make sure the version is
 picked up correctly; just make sure you install the package and access it from
 there.
 
-If you want to create artifacts for use in-between versions, then you should
-disable shallow checkouts in your CI, since a non-tagged version cannot be
-computed correctly from a checkout that is too shallow.
-
 The one place where the pep518 requirements do not get picked up is when you
 manually run `setup.py`, such as when doing `python setup.py sdist`. If you
 are missing `setuptools_scm` or `toml`, you will get silently get version 0.0.0.
@@ -152,6 +155,52 @@ To make this a much more helpful error, add this to your `setup.py`:
 import setuptools_scm  # noqa: F401
 import toml  # noqa: F401
 ```
+
+If you want to create artifacts for use in-between versions, then you should
+disable shallow checkouts in your CI, since a non-tagged version cannot be
+computed correctly from a checkout that is too shallow. For GitHub Actions,
+either use `actions/checkout@v1` or `with: fetch-depth: 0` on `v2`.
+
+For GitHub actions, you can add a few lines that will enable you to manually
+trigger builds with custom versions:
+
+```yaml
+on:
+  workflow_dispatch:
+    inputs:
+      overrideVersion:
+        description: Manually force a version
+env:
+  SETUPTOOLS_SCM_PRETEND_VERSION: ${{ github.event.inputs.overrideVersion }}
+```
+
+If you fill in the override version setting when triggering a manual workflow
+run, that version will be forced, otherwise, it works as normal.
+
+> Note: Make sure you have a good gitignore, probably starting from [GitHub's
+> Python one](https://github.com/github/gitignore/blob/master/Python.gitignore)
+> or using a [generator site](https://www.toptal.com/developers/gitignore).
+
+### Classic in-source versioning
+
+Recent versions of `setuptools` have improved in-source versioning. If you have
+a simple file that includes a line with a simple PEP 440 style version, like
+`version = "2.3.4.beta1"`, then you can use a line like this in your
+`setup.cfg`:
+
+```ini
+[metadata]
+version = attr: package._version.version
+```
+
+Setuptools will look in the AST of `_verison.py` for a simple assignment; if
+that works, it will not actually import your package during the setup phase
+(which is bad). Older versions of setuptools or complex version files will
+import your package; if it is not importable with the pyproject.toml
+requirements only, this will fail.
+
+Flit will always look for `package.__version__`, and so will always import your
+package; you just have to deal with that if you use Flit.
 
 ### pyhf Versioning system
 

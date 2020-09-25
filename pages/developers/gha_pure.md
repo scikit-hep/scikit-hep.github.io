@@ -106,7 +106,39 @@ command; pip will put all wheels needed in the directory you specify, and you
 need to just pick out your wheels for upload. You don't want to upload NumPy or
 some other wheel it had to build (not common anymore, but can happen).
 
-> You can also use `pep518.build` here instead of pip.
+<details><summary>New, simpler build tool! Click to expand.</summary>
+
+{% -capture "mymarkdown" %}
+
+You can use [Python-Build](https://python-build.readthedocs.io/en/latest/), a
+new build tool designed to make building wheels and SDists easy. It run a [PEP
+517][] backend and can get [PEP 518][] requirements even for making SDists. To
+use it, all you need is:
+
+```python
+python -m pip install build # (optionally twine too, if you need to check/publish)
+```
+
+Then, you can just run:
+
+```python
+python -m build
+```
+
+And you will make an SDist and a wheel from the package in the current
+directory, and they will be placed in `./dist`. You can only build SDist
+(`-s`), only build wheel (`-w`), change the output folder (`-o <dir>`) or give
+a different input folder if you want.
+
+This will be moved to the recommended method in the page above [when it is
+accepted](https://github.com/FFY00/python-build/issues/42) as an official
+package by PyPA.
+
+
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+</details>
 
 We upload the artifact just to make it available via the GitHub PR/Checks API.
 You can download a file to test locally if you want without making a release.
@@ -139,3 +171,6 @@ And then, you need a release job:
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
 to go to PyPI, generate a token for your project, and put it into
 `pypi_password` on your repo's secrets page.
+
+[PEP 517]: https://www.python.org/dev/peps/pep-0517/
+[PEP 518]: https://www.python.org/dev/peps/pep-0518/

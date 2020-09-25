@@ -108,7 +108,7 @@ some other wheel it had to build (not common anymore, but can happen).
 
 <details><summary>New, simpler build tool! Click to expand.</summary>
 
-{% -capture "mymarkdown" %}
+{%- capture "mymarkdown" -%}
 
 You can use [Python-Build](https://python-build.readthedocs.io/en/latest/), a
 new build tool designed to make building wheels and SDists easy. It run a [PEP

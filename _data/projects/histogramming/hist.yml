@@ -1,0 +1,9 @@
+name: hist
+description: Hist is a analyst friendly front-end for boost-histogram, designed for Python 3.6+.
+url: https://github.com/scikit-hep/hist
+readme: https://github.com/scikit-hep/hist/blob/develop/README.md
+docs: https://hist.readthedocs.io/en/latest/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: hist

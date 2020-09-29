@@ -85,8 +85,8 @@ You may want to build against NumPy (mostly for Cython packages, PyBind11 does
 not need to access the NumPy headers). This is the recommendation for
 Scikit-HEP:
 
-```python
-# requires = [ ...
+```toml
+requires = [
     "numpy==1.13.3; python_version<='3.6'",
     "numpy==1.14.5; python_version=='3.7'",
     "numpy==1.17.3; python_version>='3.8'",
@@ -105,10 +105,11 @@ Packages in Scikit-HEP should use one of the following systems:
 One more section is very useful in your `pyproject.toml` file:
 
 ```toml
-# requires = [ ...
+requires = [
     "setuptools>=42",
-    "setuptools_scm[toml]>=3.4"
-# ]
+    "setuptools_scm[toml]>=3.4",
+    # ...
+]
 
 [tool.setuptools_scm]
 write_to = "src/<package>/version.py"

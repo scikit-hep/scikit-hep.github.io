@@ -62,10 +62,10 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 ```
 
-This will enable build-isolation, consistant build environments, and will keep build tools from
+This will enable build isolation, consistent build environments, and will keep build tools from
 triggering `setuptools.build_meta:__legacy__`, which is probably not what you want.
 
-You must have a `python_requires` (or equivelent for non-Setuptools builds). You must always
+You must have a `python_requires` (or equivalent for non-setuptools builds). You must always
 test the lowest item in your `python_requires`; if you drop a version, change your `python_requires`
 before release.
 

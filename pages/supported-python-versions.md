@@ -13,8 +13,8 @@ The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy, NumPy,
 
 * All packages in Scikit-HEP must support Python 3, with minimum Python 3 versions listed in [NEP 29][].
 * New packages in Scikit-HEP are *allowed* to have one complete release (1.0 or equivalent) for Python 2.7. If users request fixes/patches be available for Python 2.7, they can be applied to a branch on top of this release (this can be viewed as an LTS release, similar to IPython 5). Users of Python 2.7 can pin this version; `python_requires` will ensure this version is selected, as well.
-* All packages in Scikit-HEP are required to add `python_required` to `setup.cfg` or `setup.py`, or the equivelent setting for other PEP 517 build systems.
-    - Pip tries to install the latest package, but checks `python_required`. If it fails, it tries the next oldest version, until it finds one that matches. Never drop a version from your CI without also changing `python_requires`.
+* All packages in Scikit-HEP are required to add `python_requires` to `setup.cfg` or `setup.py`, or the equivalent setting for other PEP 517 build systems.
+    - Pip tries to install the latest package, but checks `python_requires`. If it fails, it tries the next oldest version until it finds one that matches. Never drop a version from your CI without also changing `python_requires`.
 * After this point, packages in Scikit-HEP are recommended to drop Python 2 support for all future versions, starting immediately (unless they have not reached the 1.0 status yet).
 * New packages introduced into Scikit-HEP are *not required* to have a Python 2 compatible release.
 

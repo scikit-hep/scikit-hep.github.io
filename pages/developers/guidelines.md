@@ -50,6 +50,25 @@ coverage.  We require at least some tests, with [pytest][] being our recommended
 You should run your tests in CI; see [our GitHub Actions (GHA) page]({{ site.baseurl }}{% link
 pages/developers/gha_basic.md %}) for a simple introduction to setting up CI.
 
+### Packaging (required)
+
+You must have a `pyproject.toml`, and if you use setuptools, a `setup.cfg` and/or a `setup.py`.
+You should have basic information filled out about your project. A minimal `pyproject.toml` for
+setuptools is:
+
+```toml
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+```
+
+This will enable build isolation, consistent build environments, and will keep build tools from
+triggering `setuptools.build_meta:__legacy__`, which is probably not what you want.
+
+You must have a `python_requires` (or equivalent for non-setuptools builds). You must always
+test the lowest item in your `python_requires`; if you drop a version, change your `python_requires`
+before release.
+
 ### Wheels (required)
 
 Except in special circumstances, you must provide SDists and wheels on PyPI.
@@ -60,6 +79,9 @@ pages/developers/gha_wheels.md %}), we recommend setuptools. It is highly recomm
 automate the building and uploading process so that other Scikit-HEP admins can
 make emergency (patch) releases if the need arises; non-standard/non-trivial
 processes should be avoided and documented if unavoidable.
+
+If you have a pure Python package, `pip install build; python -m build` will build your
+package's SDist and wheel using the specified PEP 517 backend in `pyproject.toml`.
 
 
 [Black]: https://black.readthedocs.io/en/latest/

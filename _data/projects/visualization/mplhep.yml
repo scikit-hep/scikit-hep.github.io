@@ -4,7 +4,7 @@ projlogo-style: height:72px;
 description: Plotting and styling helpers for matplotlib.
 url: https://github.com/scikit-hep/mplhep
 readme: https://github.com/scikit-hep/mplhep/blob/master/README.md
-docs: https://mplhep.readthedocs.io/en/latest/?badge=latest
+docs: https://mplhep.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
 badges:

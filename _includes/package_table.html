@@ -1,7 +1,7 @@
 
 {% for cat in site.data.categories -%}
   {%- assign listing = site.data.projects[cat.name] | sort -%}
-  <h3>{{cat.title}}:</h3>
+  <h3 id="{{cat.name}}">{{cat.title}}:</h3>
   {% for item in listing -%}
     {%- assign project = item[1] -%}
     {%- assign classes = "project" -%}
@@ -11,7 +11,7 @@
     {%- if project.deprecated -%}
       {%- assign classes = classes | append: " deprecated" -%}
     {%- endif -%}
-    <div class="{{classes}}">
+    <div class="{{classes}}" id="{{item[0]}}">
       <div class="nameorlogo">
         {%- if project.projlogo -%}
           <a href="{{project.url}}" class="logo">

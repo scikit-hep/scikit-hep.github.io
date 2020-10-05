@@ -149,7 +149,7 @@ run all checks:
 ```yaml
     - uses: pre-commit/action@v2.0.0
       with:
-        extra_args: --hook-stage manual
+        extra_args: --all-files --hook-stage manual
 ```
 
 {%- endcapture -%}

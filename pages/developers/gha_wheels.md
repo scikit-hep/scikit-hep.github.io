@@ -234,7 +234,7 @@ which is self-containted.
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.3.1
+    - uses: pypa/gh-action-pypi-publish@v1.4.1
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}

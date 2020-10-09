@@ -8,9 +8,11 @@ parent: Developer information
 
 
 
-We will cover binary wheels [on the next page][], but if you do not have a compiled
-extension, this is called a universal (pure Python) package, and the procedure
-to make a "built" wheel is simple.
+We will cover binary wheels [on the next page][], but if you do not have a
+compiled extension, this is called a universal (pure Python) package, and the
+procedure to make a "built" wheel is simple. At the end of this page, there is
+a recipe that can often be used exactly for pure Python wheels (if the previous
+recommendations were followed).
 
 > Note: Why make a wheel when there is nothing to compile? There are a multitude of reasons
 > that a wheel is better than only providing an sdist:
@@ -106,7 +108,7 @@ command; pip will put all wheels needed in the directory you specify, and you
 need to just pick out your wheels for upload. You don't want to upload NumPy or
 some other wheel it had to build (not common anymore, but can happen).
 
-<details><summary>New, simpler build tool! Click to expand.</summary>
+<details><summary>New, simpler build tool! (Click to expand)</summary>
 
 {%- capture "mymarkdown" -%}
 
@@ -171,6 +173,70 @@ And then, you need a release job:
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
 to go to PyPI, generate a token for your project, and put it into
 `pypi_password` on your repo's secrets page.
+
+<details><summary>Complete recipe (click to expand)</summary>
+
+This can be used on almost any package with a standard
+`.github/workflows/cd.yml` recipe. This works because `pyproject.toml`
+describes exactly how to build your package, hence all packages build exactly via
+the same interface:
+
+{%- capture "mymarkdown" -%}
+{% raw %}
+```yaml
+name: CD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  release:
+    types:
+    - published
+
+jobs:
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v2
+
+    - name: Install wheel and SDist requirements
+      run: python -m pip install "build" "twine"
+
+    - name: Build SDist & wheel
+      run: python -m build
+
+    - name: Check metadata
+      run: twine check dist/*
+
+    - uses: actions/upload-artifact@v2
+      with:
+        path: dist/*
+
+
+  publish:
+    needs: [dist]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+
+    steps:
+    - uses: actions/download-artifact@v2
+      with:
+        name: artifact
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@v1.4.1
+      with:
+        password: ${{ secrets.pypi_password }}
+```
+{% endraw %}
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
+
+</details>
 
 [PEP 517]: https://www.python.org/dev/peps/pep-0517/
 [PEP 518]: https://www.python.org/dev/peps/pep-0518/

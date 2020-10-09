@@ -178,7 +178,7 @@ to go to PyPI, generate a token for your project, and put it into
 
 This can be used on almost any package with a standard
 `.github/workflows/cd.yml` recipe. This works because `pyproject.toml`
-describes exactly how to build your package, so all package build exactly via
+describes exactly how to build your package, hence all packages build exactly via
 the same interface:
 
 {%- capture "mymarkdown" -%}

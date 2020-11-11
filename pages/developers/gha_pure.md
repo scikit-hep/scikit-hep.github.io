@@ -69,6 +69,7 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - uses: actions/setup-python@v2
 
     - name: Install wheel and SDist requirements
@@ -163,7 +164,7 @@ And then, you need a release job:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.2.2
+    - uses: pypa/gh-action-pypi-publish@v1.4.1
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -200,6 +201,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+
     - uses: actions/setup-python@v2
 
     - name: Install wheel and SDist requirements

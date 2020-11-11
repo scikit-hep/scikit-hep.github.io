@@ -165,6 +165,7 @@ either use `actions/checkout@v1` or `with: fetch-depth: 0` on `v2`.
 For GitHub actions, you can add a few lines that will enable you to manually
 trigger builds with custom versions:
 
+{% raw %}
 ```yaml
 on:
   workflow_dispatch:
@@ -174,6 +175,7 @@ on:
 env:
   SETUPTOOLS_SCM_PRETEND_VERSION: ${{ github.event.inputs.overrideVersion }}
 ```
+{% endraw %}
 
 If you fill in the override version setting when triggering a manual workflow
 run, that version will be forced, otherwise, it works as normal.

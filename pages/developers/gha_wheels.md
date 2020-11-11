@@ -110,7 +110,7 @@ The core of the work is down here:
       uses: actions/setup-python@v2
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.5.5
+      run: python -m pip install cibuildwheel==1.6.4
 
     - name: Build wheel
       run: python -m cibuildwheel --output-dir wheelhouse
@@ -180,7 +180,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
     - uses: actions/setup-python@v2
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.5.5
+      run: python -m pip install cibuildwheel==1.6.4
 
     - uses: ilammy/msvc-dev-cmd@v1
 

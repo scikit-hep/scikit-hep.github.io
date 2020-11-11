@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.1.0
+  rev: v3.3.0
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -78,7 +78,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 19.10b0
+  rev: 20.08b1
   hooks:
   - id: black
 ```
@@ -126,7 +126,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.42"
+  rev: "0.45"
   hooks:
   - id: check-manifest
 ```
@@ -180,7 +180,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.782
+  rev: v0.790
   hooks:
   - id: mypy
     files: src
@@ -249,7 +249,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.3
+  rev: 3.8.4
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]

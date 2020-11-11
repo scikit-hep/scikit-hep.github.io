@@ -110,3 +110,34 @@ The formula here for installing should be identical for all users; and using
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
 builds, you are even guaranteed a consistent wheel will be produced just as if
 you were building a final package.
+
+
+## Updating
+
+If you use non-default actions in your repository (you will see some in the
+following pages), then it's a good idea to keep them up to date. GitHub
+provided a way to do this with dependabot. Just add the following file as
+`.github/dependabot.yml`:
+
+```yaml
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      # Offical actions have moving tags like v1
+      # that are used, so they don't need updates here
+      - dependency-name: "actions/*"
+```
+
+As shown above, you can ignore certain dependencies - this file ignores any
+official action, because they are very reliable in keeping a `vX` tag that
+moves and points at the latests `vX.Y.Z` release, and API is stable between
+major versions. For all other actions, this will check to see if there are
+updates to the action daily, and will make a PR if there are updates, including
+the changelog and commit summary in the PR.
+
+You can use this for other ecosystems too, including Python.

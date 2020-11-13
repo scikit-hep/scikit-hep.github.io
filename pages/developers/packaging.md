@@ -89,7 +89,8 @@ Scikit-HEP:
 requires = [
     "numpy==1.13.3; python_version<='3.6'",
     "numpy==1.14.5; python_version=='3.7'",
-    "numpy==1.17.3; python_version>='3.8'",
+    "numpy==1.17.3; python_version=='3.8'",
+    "numpy==1.19.4; python_version>='3.9'",
 ```
 
 This ensures the wheels built work with all versions of NumPy supported by

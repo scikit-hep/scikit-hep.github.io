@@ -1,0 +1,17 @@
+name: cibuildwheel
+description: >
+  A utility for building all PyPI supported binary wheels on all CI systems.
+  [See our guide for instructions](https://scikit-hep.org/developer/gha_wheels).
+url: https://github.com/joerick/cibuildwheel
+readme: https://github.com/joerick/cibuildwheel/blob/master/README.md
+docs: https://cibuildwheel.readthedocs.io
+affiliated: true
+longdescription: |
+
+  The [cibuildwheel](https://cibuildwheel.readthedocs.io) project provides a Python package that can be installed on CI systems to build Python wheels. All wheels possible for an OS are built, using best practices for installing Python for building compatibly. Extensive environment variable configuration allow exact version specification, manylinux wheel selection, tests, and much more. Specialty architectures and PyPy are also supported.
+  
+  This replaced the [azure-wheel-helpers]()https://github.com/scikit-hep/azure-wheel-helpers repository that was previously used to build wheels for Scikit-HEP. For up-to-date instructions, check the [Scikit-HEP developer pages](https://scikit-hep.org/developer/gha_wheels).
+
+# repo: only if different from url
+badges:
+  pypi: cibuildwheel

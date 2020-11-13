@@ -10,7 +10,7 @@ parent: Packages
 Affiliated projects and packages {#affiliated_packages}
 ================================
 
-In the following, projects that work closely together with Scikit-HEP are described. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of Scikit-HEP.
+In the following, projects that work closely together with Scikit-HEP are described. They extend the Python ecosystem in HEP and remain, due to their size and scope, generally independent of Scikit-HEP. In most cases, at least one Scikit-HEP core developer is on the maintainer team of these packages. These packages are highly recommended for Scikit-HEP developers and users.
 
 {% for cat in site.data.categories -%}
 {% for item in site.data.projects[cat.name] -%}

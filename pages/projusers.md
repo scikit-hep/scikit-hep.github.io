@@ -42,6 +42,17 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 [img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
 {: width="140px"}
 
+Computing and software institutes
+---------------------------------
+
+[![img-iris-hep]][iris-hep]
+
+[IRIS-HEP](https://iris-hep.org/) - the Institute for Research and Innovation in Software for High Energy Physics.
+
+[iris-hep]: https://iris-hep.org/
+[img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
+{: width="70px"}
+
 Phenomenology projects
 ----------------------
 

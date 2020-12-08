@@ -51,7 +51,7 @@ Computing and software institutes
 
 [iris-hep]: https://iris-hep.org/
 [img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
-{: width="70px"}
+{: width="100px"}
 
 Phenomenology projects
 ----------------------

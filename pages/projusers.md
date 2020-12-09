@@ -48,6 +48,9 @@ Computing and software institutes
 [![img-iris-hep]][iris-hep]
 
 [IRIS-HEP](https://iris-hep.org/) - the Institute for Research and Innovation in Software for High Energy Physics.
+IRIS-HEP both uses and contributes to Scikit-HEP: several colleagues are the principal developers of,
+or contributors to, several core project packages.
+[Read on funding →]({{site.baseurl}}{% link pages/about/funding.md %} )
 
 [iris-hep]: https://iris-hep.org/
 [img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}

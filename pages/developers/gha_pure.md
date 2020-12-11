@@ -73,70 +73,51 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     - uses: actions/setup-python@v2
 
     - name: Install wheel and SDist requirements
-      run: python -m pip install "setuptools>=42.0" "setuptools_scm[toml]>=4.1" "wheel" "twine"
+      run: python -m pip install build
 
-    - name: Build SDist
-      run: python setup.py sdist
+    - name: Build SDist and wheel
+      run: python -m build
 
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*
 
-    - name: Build wheel
-      run: >
-        python -m pip wheel . -w wheels
-
-    - uses: actions/upload-artifact@v2
-      with:
-        path: wheels/<packagename>-*.whl
-
     - name: Check metadata
-      run: twine check dist/* wheels/*
+      run: twine check dist/*
 
 ```
 {% endraw %}
 
-A few things to note that are new to this job:
-
-We install SDist requirements by hand since `python setup.py sdist` does not
-get the benefits of having pip install things. If you have any special
-requirements in your `pyproject.toml`, you'll need to list them here. This is
-special just for the SDist, not for making wheels (which should be done by the
-PEP 517/518 process for you).
-
-You need to put your base package name in for `<packagename>` in the upload
-command; pip will put all wheels needed in the directory you specify, and you
-need to just pick out your wheels for upload. You don't want to upload NumPy or
-some other wheel it had to build (not common anymore, but can happen).
-
-<details><summary>New, simpler build tool! (Click to expand)</summary>
-
-{%- capture "mymarkdown" -%}
-
-You can use [Python-Build](https://python-build.readthedocs.io/en/latest/), a
+We use [PyPA-Build](https://pypa-build.readthedocs.io/en/latest/), a
 new build tool designed to make building wheels and SDists easy. It run a [PEP
-517][] backend and can get [PEP 518][] requirements even for making SDists. To
-use it, all you need is:
+517][] backend and can get [PEP 518][] requirements even for making SDists.
 
-```python
-python -m pip install build # (optionally twine too, if you need to check/publish)
-```
-
-Then, you can just run:
-
-```python
-python -m build
-```
-
-And you will make an SDist and a wheel from the package in the current
+By default this will make an SDist and a wheel from the package in the current
 directory, and they will be placed in `./dist`. You can only build SDist
 (`-s`), only build wheel (`-w`), change the output folder (`-o <dir>`) or give
 a different input folder if you want.
 
-This will be moved to the recommended method in the page above [when it is
-accepted](https://github.com/FFY00/python-build/issues/42) as an official
-package by PyPA.
+<details><summary>Breaking up or classic SDist buils (Click to expand)</summary>
 
+{%- capture "mymarkdown" -%}
+
+If you don't have a pyproject.toml, you might need to use the raw `setup.py` commands.
+This is the classic way to do things, though you should consider direct usage of setup.py
+to be an implementation detail, and setup.py is not even required in modern packages.
+
+You must install SDist requirements by hand since `python setup.py sdist` does not
+get the benefits of having pip install things. If you have any special
+requirements in your `pyproject.toml` (and still don't want to use `build`),
+you'll need to list them. This is special just for the SDist, not for making wheels
+(which should be done by the PEP 517/518 process for you because you will use
+`build` or `pip`).
+
+To build the wheel, you can use `python -m pip wheel . -w wheelhouse`. Unlike build,
+this is a wheelhouse, not the output wheel; any wheels it makes during the process
+will be put here, not just the one you wanted to upload. Be sure to use something
+like `wheelhouse/my_package*.whl` when you pick your items from this folder so as
+not to pick a random dependency that didn't have a binary wheel already. Or just
+use PyPA-Build.
 
 {%- endcapture -%}
 

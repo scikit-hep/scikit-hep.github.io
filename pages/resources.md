@@ -16,24 +16,34 @@ to, the Scikit-HEP project.
 Proceedings and publications
 ----------------------------
 
--   *The Scikit HEP Project - overview and prospects*, Eduardo Rodrigues et al.,
+-   *Recent developments in histogram libraries*,
+    H. Dembinski, J. Pivarski and H. Schreiner,
+    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
+    [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014);
+-   *Boost-histogram: High-Performance Histograms as Objects*,
+    Henry Schreiner, Hans Dembinski, Shuo Liu, Jim Pivarski,
+    proceedings of the [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
+    [10.25080/Majora-342d178e-009](https://doi.org/10.25080/Majora-342d178e-009);
+-   *The Scikit HEP Project - overview and prospects*,
+    Eduardo Rodrigues et al.,
     proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
     [EPJ Web of Conferences 245, 06028 (2020)](https://doi.org/10.1051/epjconf/202024506028);
-    [arXiv:1905.00002
-    \[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
+    [arXiv:1905.00002\[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
 -   *The Scikit-HEP project*, Eduardo Rodrigues, proceedings of the
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
     [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);
-    [arXiv:1905.00002
-    \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
--   *Bayesian Block Histogramming for High Energy Physics*, Brian
-    Pollack, Saptaparna Bhattacharya, Michael Schmitt, [arXiv:1708.00810
-    \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
+    [arXiv:1905.00002 \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
+-   *Bayesian Block Histogramming for High Energy Physics*,
+    Brian Pollack, Saptaparna Bhattacharya, Michael Schmitt,
+    [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
 
 
 Presentations
 -------------
 
+-   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
+    -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
+        \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
     -   *Introduction to the Scikit HEP project*, Eduardo Rodrigues
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:

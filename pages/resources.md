@@ -19,7 +19,7 @@ Proceedings and publications
 -   *Recent developments in histogram libraries*,
     H. Dembinski, J. Pivarski and H. Schreiner,
     proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
-    [EPJ Web of Conferances 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014);
+    [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014);
 -   *Boost-histogram: High-Performance Histograms as Objects*,
     Henry Schreiner, Hans Dembinski, Shuo Liu, Jim Pivarski,
     proceedings of the [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
@@ -41,7 +41,7 @@ Proceedings and publications
 Presentations
 -------------
 
--   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/event/882824/overview), Virtual:
+-   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
     -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
         \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:

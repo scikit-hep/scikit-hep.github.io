@@ -51,7 +51,24 @@ For a Python 2+3 codebase, the following is also useful:
 checks that might be more likely to pass after the modification (like flake8).
 
 **Keeping pinned versions fresh**: You can use `pre-commit autoupdate` to move your
-tagged versions forward to the latest tags!
+tagged versions forward to the latest tags! Due to the design of pre-commit's
+caching system, these _must_ point at fixed tags, never put a branch here.
+
+**Checking in CI**: You can have this checked and often automatically corrected
+for you using [results.pre-commit.ci](https:/results.pre-commit.ci). It will even
+update your `rev:` versions every week or so if your checks update!
+
+To use, just go to [results.pre-commit.ci](https:/results.pre-commit.ci), click
+"Log in with GitHub", click "Add an Installation" if adding for the first time
+for an org or user, or "Manage repos on GitHub" for an existing installation
+(like Scikit-HEP), then add your repository from the list in GitHub's interface.
+
+Now there will be a new check, and pre-commit.ci will commit changes if the
+pre-commit check made any changes. Note that there are a couple of missing features:
+Docker based checks will not work (pre-commit.ci already runs in docker), you
+cannot enable a `--manual` flag, so extra checks will not run, and jobs should not
+download packages (use `additional-dependencies:` to add what you need).
+
 
 ## Black
 

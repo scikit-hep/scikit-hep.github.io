@@ -42,8 +42,9 @@ PRs targeting those branches only).
 
 ## Pre-commit
 
-If you use [pre-commit](https://pre-commit.com) (and you should), this is a job
-that will check pre-commit for you:
+If you use [pre-commit](https://pre-commit.com) (and you should), and you don't
+want to / can't use [results.pre-commit.ci](https://results.pre-commit.ci) yet,
+then this is a job that will check pre-commit for you:
 
 {% raw %}
 ```yaml
@@ -56,6 +57,11 @@ that will check pre-commit for you:
     - uses: pre-commit/action@v2.0.0
 ```
 {% endraw %}
+
+If you do use [results.pre-commit.ci](https://results.pre-commit.ci), but you
+need this job to run a manual check, like check-manifest, then you can keep it
+but just use `with: extra_args: --all-files --hook-stage manual check-manifest`
+to run just this one check.
 
 ## Unit tests
 

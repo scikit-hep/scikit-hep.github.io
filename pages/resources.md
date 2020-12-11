@@ -16,8 +16,14 @@ to, the Scikit-HEP project.
 Proceedings and publications
 ----------------------------
 
+-   *The Scikit HEP Project - overview and prospects*, Eduardo Rodrigues et al.,
+    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
+    [EPJ Web of Conferences 245, 06028 (2020)](https://doi.org/10.1051/epjconf/202024506028);
+    [arXiv:1905.00002
+    \[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
 -   *The Scikit-HEP project*, Eduardo Rodrigues, proceedings of the
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
+    [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);
     [arXiv:1905.00002
     \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
 -   *Bayesian Block Histogramming for High Energy Physics*, Brian
@@ -28,6 +34,8 @@ Proceedings and publications
 Presentations
 -------------
 
+-   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
+    -   *Introduction to the Scikit HEP project*, Eduardo Rodrigues
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
     -   *An introduction to pyhf and HistFactory likelihoods*, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 -   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:

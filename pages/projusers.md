@@ -17,7 +17,7 @@ Experiment collaborations
 
 [![img-ATLAS]][ATLAS]
 
-[ATLAS](https://atlas.cern/) - A Toroidal LHC ApparatuS at CERN, Switzerland.
+[ATLAS](https://atlas.cern/) - the ATLAS experiment at CERN, Switzerland.
 
 [ATLAS]: https://atlas.cern/
 [img-ATLAS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_atlas.png %}

@@ -15,10 +15,17 @@ of the Scikit-HEP project.
 Experiment collaborations
 -------------------------
 
+[![img-ATLAS]][ATLAS]
+
+[ATLAS](https://atlas.cern/) - A Toroidal LHC ApparatuS at CERN, Switzerland.
+
+[ATLAS]: https://atlas.cern/
+[img-ATLAS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_atlas.png %}
+{: width="120px"}
+
 [![img-belle2]][BelleII]
 
-[BelleII](https://www.belle2.org/) - the Belle II experiment at KEK,
-Japan.
+[BelleII](https://www.belle2.org/) - the Belle II experiment at KEK, Japan.
 
 [BelleII]: https://www.belle2.org/
 [img-belle2]: {{ site.baseurl }}{% link /assets/images/projusers/logo_belle2.png %}
@@ -26,8 +33,7 @@ Japan.
 
 [![img-CMS]][CMS]
 
-[CMS](https://cms.cern/) - the Compact Muon Solenoid experiment at CERN,
-Switzerland.
+[CMS](https://cms.cern/) - the Compact Muon Solenoid experiment at CERN, Switzerland.
 
 [CMS]: https://cms.cern/
 [img-CMS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_cms.gif %}

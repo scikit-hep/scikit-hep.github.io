@@ -69,16 +69,16 @@ before, will work:
     steps:
     - uses: actions/checkout@v1
       with:
-        submodules: true    # Optional if you have submodules
+        submodules: true  # Optional if you have submodules
 
     - name: Setup Python
       uses: actions/setup-python@v2
 
     - name: Install deps
-      run: python -m pip install "setuptools>=42" "setuptools_scm[toml]>=4.1.0"
+      run: python -m pip install build
 
     - name: Build SDist
-      run: python setup.py sdist
+      run: python -m build -s
 
     - uses: actions/upload-artifact@v2
       with:
@@ -110,7 +110,7 @@ The core of the work is down here:
       uses: actions/setup-python@v2
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.6.4
+      run: python -m pip install cibuildwheel==1.7.1
 
     - name: Build wheel
       run: python -m cibuildwheel --output-dir wheelhouse
@@ -180,7 +180,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
     - uses: actions/setup-python@v2
 
     - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.6.4
+      run: python -m pip install cibuildwheel==1.7.1
 
     - uses: ilammy/msvc-dev-cmd@v1
 

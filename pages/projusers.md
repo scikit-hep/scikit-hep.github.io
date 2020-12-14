@@ -21,7 +21,7 @@ Experiment collaborations
 
 [ATLAS]: https://atlas.cern/
 [img-ATLAS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_atlas.png %}
-{: width="120px"}
+{: width="140px"}
 
 [![img-belle2]][BelleII]
 
@@ -60,7 +60,7 @@ or contributors to, several core project packages.
 
 [iris-hep]: https://iris-hep.org/
 [img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
-{: width="100px"}
+{: width="120px"}
 
 Phenomenology projects
 ----------------------

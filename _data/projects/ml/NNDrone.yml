@@ -1,7 +1,6 @@
 name: NNDrone
 description: Collection of tools and algorithms to enable conversion of HEP ML to mass usage model.
 url: https://github.com/scikit-hep/NNDrone
-readme: https://github.com/scikit-hep/NNDrone/blob/master/README.md
 # docs: <url>
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

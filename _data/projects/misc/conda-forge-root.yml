@@ -1,7 +1,6 @@
 name: conda-forge ROOT
 description: CERN's ROOT on Conda-Forge.
 url: https://github.com/conda-forge/root-feedstock
-readme: https://github.com/conda-forge/root-feedstock/blob/master/README.md
 image: /assets/images/projlogo/logo_root_conda_forge.png
 projlogo: /assets/images/projlogo/logo_root_conda_forge.png
 projlogo-style: height:72px;

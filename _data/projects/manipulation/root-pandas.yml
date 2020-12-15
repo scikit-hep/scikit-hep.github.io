@@ -1,7 +1,6 @@
 name: root\_pandas
 description: Module for conveniently loading/saving ROOT files as pandas DataFrames.
 url: https://github.com/scikit-hep/root_pandas
-readme: https://github.com/scikit-hep/root_pandas/blob/master/README.md
 # docs: <url>
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

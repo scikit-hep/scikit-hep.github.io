@@ -2,7 +2,6 @@ name: uproot
 projlogo: /assets/images/projlogo/logo_uproot.png
 description: ROOT I/O in pure Python and NumPy.
 url: https://github.com/scikit-hep/uproot4
-readme: https://github.com/scikit-hep/uproot4/blob/main/README.md
 docs: https://uproot.readthedocs.io/
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

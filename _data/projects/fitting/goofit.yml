@@ -3,7 +3,6 @@ projlogo: /assets/images/projlogo/logo_goofit.png
 projlogo-style: height:72px;
 description: GPU/OpenMP fitting in Python and C++.
 url: https://github.com/GooFit/GooFit
-readme: https://github.com/GooFit/GooFit/blob/master/README.md
 docs: https://goofit.github.io
 affiliated: true
 # repo: only if different from url

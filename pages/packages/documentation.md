@@ -31,5 +31,11 @@ READMEs still contain handy \"getting started\" sections.
 {%- else -%}
 {%- assign docs="" -%}
 {%- endif -%}
-| [{{project.name}}]({{project.url}}) | [README]({{project.readme}}) | {{docs}} |
+| [{{project.name}}]({{project.url}}) | [README](
+{%- if project.readme -%}
+{{project.readme}}
+{%- else -%}
+{{project.url}}/#readme
+{%- endif -%}
+) | {{docs}} |
 {% endfor %}

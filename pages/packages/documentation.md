@@ -27,7 +27,7 @@ READMEs still contain handy \"getting started\" sections.
 |---------|--------|---------------|
 {% for project in items %}
 {%- if project.docs  -%}
-{%- capture docs -%} [Read the Docs]({{project.docs}}) {%- endcapture -%}
+{%- capture docs -%} [{{project.docs-title | default: "Read the Docs"}}]({{project.docs}}) {%- endcapture -%}
 {%- else -%}
 {%- assign docs="" -%}
 {%- endif -%}

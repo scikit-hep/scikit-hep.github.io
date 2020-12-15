@@ -1,8 +1,8 @@
 name: awkward-array
 projlogo: /assets/images/projlogo/logo_awkward_array.png
-description: Manipulate arrays of complex data structures as easily as Numpy.
+description: Manipulate JSON-like data with NumPy-like idioms.
 url: https://github.com/scikit-hep/awkward-1.0
-readme: https://github.com/scikit-hep/awkward-1.0/blob/main/README.rst
+readme: https://github.com/scikit-hep/awkward-1.0/blob/main/README.md
 docs: https://awkward-array.org
 badges:
   pypi: awkward

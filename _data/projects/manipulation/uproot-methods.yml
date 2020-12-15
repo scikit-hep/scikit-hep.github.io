@@ -5,6 +5,7 @@ readme: https://github.com/scikit-hep/uproot-methods/blob/master/README.rst
 # docs: <url>
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
+deprecated: true
 badges:
   pypi: uproot-methods
   conda-forge: uproot-methods

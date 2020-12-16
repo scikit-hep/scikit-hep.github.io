@@ -3,7 +3,7 @@ projlogo: /assets/images/projlogo/logo_awkward_array.png
 description: Manipulate JSON-like data with NumPy-like idioms.
 url: https://github.com/scikit-hep/awkward-1.0
 docs: https://awkward-array.org
-docs-title: Website
+docs-title: awkward-array.org
 badges:
   pypi: awkward
   conda-forge: awkward

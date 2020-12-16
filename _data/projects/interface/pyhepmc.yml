@@ -1,7 +1,6 @@
 name: pyhepmc
 description: Next generation Python bindings for HepMC3.
 url: https://github.com/scikit-hep/pyhepmc
-readme: https://github.com/scikit-hep/pyhepmc/blob/master/README.md
 # docs: <url>
 # affiliated: set to true for affiliated packages
 # repo: only if different from url

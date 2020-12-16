@@ -3,7 +3,6 @@ description: >
   A utility for building all PyPI supported binary wheels on all CI systems.
   [See our guide for instructions](https://scikit-hep.org/developer/gha_wheels).
 url: https://github.com/joerick/cibuildwheel
-readme: https://github.com/joerick/cibuildwheel/blob/master/README.md
 docs: https://cibuildwheel.readthedocs.io
 affiliated: true
 longdescription: |

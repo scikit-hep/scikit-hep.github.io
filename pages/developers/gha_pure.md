@@ -73,7 +73,7 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     - uses: actions/setup-python@v2
 
     - name: Install wheel and SDist requirements
-      run: python -m pip install build
+      run: python -m pip install "build" "twine"
 
     - name: Build SDist and wheel
       run: python -m build

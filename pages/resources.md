@@ -16,6 +16,10 @@ to, the Scikit-HEP project.
 Proceedings and publications
 ----------------------------
 
+-   *zfit: scalable pythonic fitting*,
+    Jonas Eschle, Albert Navarro Puig, Rafael Silva Coutinho and Nicola Serra,
+    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
+    [EPJ Web Conf., 245 (2020) 06025](https://doi.org/10.1051/epjconf/202024506025);
 -   *Recent developments in histogram libraries*,
     H. Dembinski, J. Pivarski and H. Schreiner,
     proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
@@ -44,6 +48,11 @@ Presentations
 -   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
     -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
         \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
+    -   *Model building and statistical inference with zfit and hepstats*, Jonas Eschle and Matthieu Marinangeli
+        \[[link](https://indico.cern.ch/event/882824/contributions/3932489/)\]
+    -   *zfit - TensorFlow 2.0: dynamic and compiled HPC*, Jonas Eschle
+        \[[link](https://indico.cern.ch/event/882824/contributions/3932493/)\]
+
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
     -   *Introduction to the Scikit HEP project*, Eduardo Rodrigues
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:

@@ -13,21 +13,32 @@ this document is intended to outline a recommended style that new packages
 should follow, and existing packages should slowly adopt. The reasoning for
 each decision is outlined as well.
 
+There are currently three popular packaging systems. This guide covers
+[Setuptools][], which is currently the only system that supports compiled
+extensions. If you are not planning on writing C/C++ code, [Flit][] and
+[Poetry][] are the other two systems, and are drastically simpler - most of
+this page is unneeded for those systems.
+
+Also see the [Python packaging guide][], though the material here is currently
+more consistent, practical, and up-to-date.
+
 > #### Note
 >
 > Raw source lives in git and has a `setup.py`. You *can* install directly from
-> git via pip, but normally users install from distributions hosted on PyPI. There
-> are three options: **A)** A source package, which ends in `.tar.gz`. This is a copy
-> of the GitHub repository, stripped of a few specifics like CI files, and possibly
-> with submodules included (if there are any). **B)** A pure python wheel, which
-> ends in `.whl` - this is only possible if there are no compiled extensions in the
-> library. This does *not* contain a setup.py, but rather a `PKG_INFO` file that is
+> git via pip, but normally users install from distributions hosted on PyPI.
+> There are three options: **A)** A source package, called an SDist and has a
+> name that ends in `.tar.gz`.  This is a copy of the GitHub repository,
+> stripped of a few specifics like CI files, and possibly with submodules
+> included (if there are any). **B)** A pure python wheel, which ends in `.whl`
+> - this is only possible if there are no compiled extensions in the library.
+> This does *not* contain a setup.py, but rather a `PKG_INFO` file that is
 > rendered from setup.py (or from another build system). **C)** If not pure
 > Python, a collection of wheels for every binary platform, generally one per
 > supported Python version and OS as well.
 >
 > Developer requirements (users of A or git) are generally higher than the
-> requirements to use B or C.
+> requirements to use B or C. Poetry creates SDists that include a setup.py,
+> and both alternate packing systems produce "normal" wheels.
 
 ## Package structure (medium priority)
 
@@ -149,7 +160,7 @@ picked up correctly; just make sure you install the package and access it from
 there.
 
 The one place where the pep518 requirements do not get picked up is when you
-manually run `setup.py`, such as when doing `python setup.py sdist`. If you
+manually run `setup.py`, such as when doing `python setup.py sdist` [^1]. If you
 are missing `setuptools_scm` or `toml`, you will get silently get version 0.0.0.
 To make this a much more helpful error, add this to your `setup.py`:
 
@@ -218,14 +229,14 @@ using this, as well.
 You should put as much as possible in your `setup.cfg`, and leave `setup.py`
 for *only* parts that need custom logic or binary building. This keeps your
 `setup.py` cleaner, and many things that normally require a bit of custom code
-can be written without it, such as importing version and descriptions. Here's
-an example:
+can be written without it, such as importing version and descriptions. [The
+official docs are excellent for setup.cfg][setuptools cfg]. Here's a practical example:
 
 ```ini
 [metadata]
 name = package
 author = My Name
-author_email=me@email.com
+author_email = me@email.com
 maintainer = Scikit-HEP
 maintainer_email = scikit-hep-admins@googlegroups.com
 url = https://github.com/scikit-hep/package
@@ -245,10 +256,10 @@ classifiers =
     Operating System :: Unix
     Programming Language :: Python
     Programming Language :: Python :: 2.7
-    Programming Language :: Python :: 3.5
     Programming Language :: Python :: 3.6
     Programming Language :: Python :: 3.7
     Programming Language :: Python :: 3.8
+    Programming Language :: Python :: 3.9
     Programming Language :: C++
     Topic :: Scientific/Engineering
     Topic :: Scientific/Engineering :: Information Analysis
@@ -258,10 +269,12 @@ classifiers =
     Topic :: Utilities
 
 [options]
-python_requires = >=2.7, !=3.0, !=3.1, !=3.2, !=3.3, !=3.4
+python_requires = >=2.7, !=3.0, !=3.1, !=3.2, !=3.3, !=3.4, !=3.5
 packages = find:
 package_dir =
     =src
+include_package_data = True
+zip_safe = False
 install_requires =
     numpy >=1.13.3
 
@@ -295,8 +308,12 @@ setup()
 Note that we do not recommend overriding or changing the behavior of `python
 setup.py test` or `python setup.py pytest`; the test command through `setup.py`
 is deprecated and discouraged - anything that directly calls `setup.py` assumes a
-`setup.py` is present, which is not true for [Flit][] packages and other systems.[^1]
+`setup.py` is present, which is not true for [Flit][] packages and other systems.[^2]
 Instead, assume users call pytest directly.
+
+If you need to have custom package data, such as data stored in one place in
+the SDist structure that shows up in another place in the package, then replace
+`include_package_data` with an `options.package_data` section and a mapping.
 
 ## Extras (low/medium priority)
 
@@ -337,9 +354,58 @@ extras["all"] = sum(extras.values(), [])
 setup(extras_require=extras)
 ```
 
-[^1]: Actually, Flit produces a backward-compatible `setup.py` by default when
+## MANIFEST.in (usually required)
+
+Python packaging goes through a 3-stage procedure if you have the above
+recommended `pyproject.toml` file. If you type `pip install .`, then
+
+1. Source is processed to make an SDist (in a virtual environment mandated by
+   pyproject.toml).
+2. SDist is processed to make a wheel (same virtual environment).
+3. The wheel is installed.
+
+The wheel does _not_ contain `setup.*`, `pyproject.toml`, or other build code.
+It simply is a `.tar.gz` file that is named `.whl` and has a simple mapping of
+directories to installation paths and a generic metadata format. "Installing"
+really is just copying files around, and pip also pre-compiles some bytecode
+for you while doing so.
+
+If you don't have a MANIFEST.in, the "legacy" build procedure will skip the
+SDist step, making it possible for a development build to work while a
+published PyPI SDist could fail. Also, development mode (`-e`) is not covered
+by this procedure, so you should have at least one CI run that does not include
+the `-e`. (it's not yet supported by PEP 517, actually, so `pip -e` only
+supports setuptools, other backends have their own non-unified methods to do
+development installs).
+
+The files that go into the SDist are controlled by [MANIFEST.in][], which generally
+should be specified. If you use `setuptools_scm`, the [default should be all of
+git][setuptools_scm file]; if you do not, the default is a few common files,
+like any `.py` files and standard tooling. Here is a useful default for
+complete control over a src structure, though be sure to update it to include
+any files that need to be included:
+
+```
+prune *
+graft src
+graft tests
+
+include LICENSE README.md pyproject.toml setup.py setup.cfg
+global-exclude __pycache__ *.py[cod] .*
+```
+
+[^1]: You shouldn't ever have to run commands like this, they are implementation
+      details of setuptools. For this command, you should use `python -m build -s`
+      instead (and `pip install build`).
+
+[^2]: Actually, Flit produces a backward-compatible `setup.py` by default when
       making an SDist - it's only "missing" from the GitHub repository.
 
 [Flit]:  https://flit.readthedocs.io
 [Poetry]: https://python-poetry.org
 [hypermodern]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
+[setuptools_scm file]: https://github.com/pypa/setuptools_scm/#file-finders-hook-makes-most-of-manifestin-unnecessary
+[MANIFEST.in]: https://packaging.python.org/guides/using-manifest-in/
+[setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
+[setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
+[Python packaging guide]: https://packaging.python.org

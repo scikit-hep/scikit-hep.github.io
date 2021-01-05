@@ -160,7 +160,7 @@ picked up correctly; just make sure you install the package and access it from
 there.
 
 The one place where the pep518 requirements do not get picked up is when you
-manually run `setup.py`, such as when doing `python setup.py sdist`[^1]. If you
+manually run `setup.py`, such as when doing `python setup.py sdist` [^1]. If you
 are missing `setuptools_scm` or `toml`, you will get silently get version 0.0.0.
 To make this a much more helpful error, add this to your `setup.py`:
 
@@ -312,7 +312,7 @@ is deprecated and discouraged - anything that directly calls `setup.py` assumes 
 Instead, assume users call pytest directly.
 
 If you need to have custom package data, such as data stored in one place in
-the sdist structure that shows up in another place in the package, then replace
+the SDist structure that shows up in another place in the package, then replace
 `include_package_data` with an `options.package_data` section and a mapping.
 
 ## Extras (low/medium priority)
@@ -370,7 +370,7 @@ directories to installation paths and a generic metadata format. "Installing"
 really is just copying files around, and pip also pre-compiles some bytecode
 for you while doing so.
 
-If you don't have a manifest.in, the "legacy" build procedure will skip the
+If you don't have a MANIFEST.in, the "legacy" build procedure will skip the
 SDist step, making it possible for a development build to work while a
 published PyPI SDist could fail. Also, development mode (`-e`) is not covered
 by this procedure, so you should have at least one CI run that does not include

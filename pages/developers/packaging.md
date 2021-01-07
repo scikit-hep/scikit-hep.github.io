@@ -307,40 +307,24 @@ setup()
 
 Note that we do not recommend overriding or changing the behavior of `python
 setup.py test` or `python setup.py pytest`; the test command through `setup.py`
-is deprecated and discouraged - anything that directly calls `setup.py` assumes a
-`setup.py` is present, which is not true for [Flit][] packages and other systems.[^2]
-Instead, assume users call pytest directly.
+is deprecated and discouraged - anything that directly calls `setup.py` assumes
+a `setup.py` is present, which is not true for [Flit][] packages and other
+systems.[^2] Instead, assume users call pytest directly.
 
 If you need to have custom package data, such as data stored in one place in
 the SDist structure that shows up in another place in the package, then replace
 `include_package_data` with an `options.package_data` section and a mapping.
 
-#### Python Requires
-
-In general, never set an upper limit for `python_requires`. The point of
-`python_requires` is to fill the appropriate slot in the metadata. When pip
-finds a package, it selects the most recent version possible, then checks
-`python_requires`. If it does not match, it checks the next oldest version
-until it finds one that matches. This is the wrong behavior for an upper limit,
-as older versions are not _more_ likely to be support a new Python!
-
-This is also why it's critical to always be truthful here. Never keep an older
-Python version "supported" after you deactivate CI for it using this value. If
-your final version that claims to support Python 2.7 doesn't, then your package
-will no longer install on Python 2.7; while if you are truthful and mark this
-correctly as Python 3.5+ only when or before it changes, then PIP will get a
-working older version instead. Fixing this after a release requires yanking
-releases and is not fun. Just always match CI and this value. This is why most
-packages (IPython, NumPy, etc) still install on Python 2.7 and 3.5, even though
-they have long ago dropped support for them.
+See our [Supported Python Versions][] statement for more information on
+`python_requires`.
 
 ## Extras (low/medium priority)
 
 It is recommended to use extras instead of or in addition to making requirement
 files. These extras a) correctly interact with install requires and other
 built-in tools, b) are available directly when installing via PyPI, and c) are
-allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most other
-places requirements are passed.
+allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most
+other places requirements are passed.
 
 Here is an example of a simple extras, placed in setup.cfg:
 
@@ -397,10 +381,10 @@ the `-e`. (it's not yet supported by PEP 517, actually, so `pip -e` only
 supports setuptools, other backends have their own non-unified methods to do
 development installs).
 
-The files that go into the SDist are controlled by [MANIFEST.in][], which generally
-should be specified. If you use `setuptools_scm`, the [default should be all of
-git][setuptools_scm file]; if you do not, the default is a few common files,
-like any `.py` files and standard tooling. Here is a useful default for
+The files that go into the SDist are controlled by [MANIFEST.in][], which
+generally should be specified. If you use `setuptools_scm`, the [default should
+be all of git][setuptools_scm file]; if you do not, the default is a few common
+files, like any `.py` files and standard tooling. Here is a useful default for
 complete control over a src structure, though be sure to update it to include
 any files that need to be included:
 
@@ -428,3 +412,4 @@ global-exclude __pycache__ *.py[cod] .*
 [setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
 [setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
 [Python packaging guide]: https://packaging.python.org
+[Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}

@@ -231,7 +231,8 @@ on section each. And you can disable MyPy on a line with `# type: ignore`. Once
 you are ready to start checking more, you can look at adding
 `check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
 more, up until `strict`. You can add these *per file* by adding a `# mypy:
-strict` (or any other less stringent check) at the top of the file.
+strict` (or any other less stringent check) at the top of the file. MyPy does
+not support pyproject.toml configuration yet.
 
 
 ## Flake8
@@ -242,7 +243,7 @@ imports, named values that are never used, mutable default arguments, and more.
 Unlike black and some other tools, flake8 does not correct problems, it just
 reports them. Some of the checks could have had automated fixes, sadly (which
 is why Black is nice).  Here is a suggested `setup.cfg` to enable compatibility
-with Black:
+with Black (flake8 does not support pyproject.toml configuration, sadly):
 
 ```ini
 [flake8]
@@ -280,7 +281,7 @@ and enable more checks. A few interesting plugins:
 * [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs. Codes: `B`, `B9`
 * [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker. `--docstring-convention=pep257` is default, `numpy` and `google` also allowed.
 * [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker. Code: `SC`
-* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (which are quite nice). Code: `I`
+* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (you may prefer isort). Code: `I`
 * [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules. Code: `N`
 * [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in. Code: `T`
 
@@ -306,6 +307,58 @@ per-file-ignores =
 {{ mymarkdown | markdownify }}
 
 </details>
+
+
+## isort (extra)
+
+You can have your imports sorted automatically by [isort][]. This will sort your
+imports, and is black compatible. One reason to have sorted imports is to
+reduce merge conflicts. Another is to clarify where imports come from -
+standard library imports are in a group above third party imports, which are
+above local imports. All this is configurable, as well. To use isort, the
+following pre-commit config will work:
+
+[isort]: https://pycqa.github.io/isort/
+
+
+```yaml
+- repo: https://github.com/PyCQA/isort
+  rev: 5.7.0
+  hooks:
+  - id: isort
+```
+
+In order to use it, you need to add some configuration. You can add it to
+either `pyproject.toml` or `setup.cfg` (shown):
+
+```ini
+[tool:isort]
+profile = black
+multi_line_output = 3
+```
+
+[isort]: https://pycqa.github.io/isort/
+
+<!-- TODO: let's have a toggle here and show both forms for tools that support it -->
+
+## PyUpgrade (extra)
+
+Another useful tool is [PyUpgrade][], which monitors your codebase for "old" style
+syntax. Most useful to keep Python 2 outdated constructs out, it can even do
+some code updates for different versions of Python 3, like adding f-strings
+when clearly better (please always use them, they are faster) if you set
+`--py36-plus` (for example). This is a recommended addition when you drop
+Python 2 support.
+
+```yaml
+- repo: https://github.com/asottile/pyupgrade
+  rev: v2.7.4
+  hooks:
+  - id: pyupgrade
+    args: ["--py36-plus"]
+```
+
+[PyUpgrade]: https://github.com/asottile/pyupgrade: 
 
 ## Python warnings
 

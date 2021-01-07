@@ -29,12 +29,12 @@ more consistent, practical, and up-to-date.
 > There are three options: **A)** A source package, called an SDist and has a
 > name that ends in `.tar.gz`.  This is a copy of the GitHub repository,
 > stripped of a few specifics like CI files, and possibly with submodules
-> included (if there are any). **B)** A pure python wheel, which ends in `.whl`
-> - this is only possible if there are no compiled extensions in the library.
-> This does *not* contain a setup.py, but rather a `PKG_INFO` file that is
-> rendered from setup.py (or from another build system). **C)** If not pure
-> Python, a collection of wheels for every binary platform, generally one per
-> supported Python version and OS as well.
+> included (if there are any). **B)** A pure python wheel, which ends in
+> `.whl`;  this is only possible if there are no compiled extensions in the
+> library. This does *not* contain a setup.py, but rather a `PKG_INFO` file
+> that is rendered from setup.py (or from another build system). **C)** If not
+> pure Python, a collection of wheels for every binary platform, generally one
+> per supported Python version and OS as well.
 >
 > Developer requirements (users of A or git) are generally higher than the
 > requirements to use B or C. Poetry creates SDists that include a setup.py,

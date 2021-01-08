@@ -307,21 +307,24 @@ setup()
 
 Note that we do not recommend overriding or changing the behavior of `python
 setup.py test` or `python setup.py pytest`; the test command through `setup.py`
-is deprecated and discouraged - anything that directly calls `setup.py` assumes a
-`setup.py` is present, which is not true for [Flit][] packages and other systems.[^2]
-Instead, assume users call pytest directly.
+is deprecated and discouraged - anything that directly calls `setup.py` assumes
+a `setup.py` is present, which is not true for [Flit][] packages and other
+systems.[^2] Instead, assume users call pytest directly.
 
 If you need to have custom package data, such as data stored in one place in
 the SDist structure that shows up in another place in the package, then replace
 `include_package_data` with an `options.package_data` section and a mapping.
+
+See our [Supported Python Versions][] statement for more information on
+`python_requires`.
 
 ## Extras (low/medium priority)
 
 It is recommended to use extras instead of or in addition to making requirement
 files. These extras a) correctly interact with install requires and other
 built-in tools, b) are available directly when installing via PyPI, and c) are
-allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most other
-places requirements are passed.
+allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most
+other places requirements are passed.
 
 Here is an example of a simple extras, placed in setup.cfg:
 
@@ -378,10 +381,10 @@ the `-e`. (it's not yet supported by PEP 517, actually, so `pip -e` only
 supports setuptools, other backends have their own non-unified methods to do
 development installs).
 
-The files that go into the SDist are controlled by [MANIFEST.in][], which generally
-should be specified. If you use `setuptools_scm`, the [default should be all of
-git][setuptools_scm file]; if you do not, the default is a few common files,
-like any `.py` files and standard tooling. Here is a useful default for
+The files that go into the SDist are controlled by [MANIFEST.in][], which
+generally should be specified. If you use `setuptools_scm`, the [default should
+be all of git][setuptools_scm file]; if you do not, the default is a few common
+files, like any `.py` files and standard tooling. Here is a useful default for
 complete control over a src structure, though be sure to update it to include
 any files that need to be included:
 
@@ -409,3 +412,4 @@ global-exclude __pycache__ *.py[cod] .*
 [setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
 [setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
 [Python packaging guide]: https://packaging.python.org
+[Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}

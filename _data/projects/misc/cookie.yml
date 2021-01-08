@@ -1,0 +1,6 @@
+name: cookie
+description: >
+  A utility for building a new Python package with multiple backends.
+  [Based on and in sync with our Developer pages](https://scikit-hep.org/developer).
+
+url: https://github.com/scikit-hep/cookie

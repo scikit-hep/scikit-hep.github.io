@@ -25,6 +25,8 @@ your package, on for [pure Python][gha_pure], and one for [compiled extensions][
 
 Finally, there are [badge recommendations][badges] for your readme, including the Scikit-HEP badge!
 
+Once you have completed the guidelines, there is a [cookiecutter][] project, [Scikit-HEP/cookie][], that implements these guidelines and lets you setup a new package from a template in less than 60 seconds!
+
 [guidelines]: {{ site.baseurl }}{% link pages/developers/guidelines.md %}
 [intro]: {{ site.baseurl }}{% link pages/developers/intro.md %}
 [style]: {{ site.baseurl }}{% link pages/developers/style.md %}
@@ -33,3 +35,6 @@ Finally, there are [badge recommendations][badges] for your readme, including th
 [gha_pure]: {{ site.baseurl }}{% link pages/developers/gha_pure.md %}
 [gha_wheels]: {{ site.baseurl }}{% link pages/developers/gha_wheels.md %}
 [badges]: {{ site.baseurl }}{% link pages/developers/badges.md %}
+
+[cookiecutter]: https://cookiecutter.readthedocs.io
+[Scikit-HEP/cookie]: https://github.com/scikit-hep/cookie

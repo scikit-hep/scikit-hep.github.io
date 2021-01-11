@@ -95,7 +95,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 20.08b1
+  rev: 20.8b1
   hooks:
   - id: black
 ```

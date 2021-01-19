@@ -10,19 +10,25 @@ nav_order: 40
 Miscellaneous resources {#resources}
 =======================
 
-A collection of presentations, videos and publications on, or related
-to, the Scikit-HEP project.
+A collection of tutorials and presentations, videos and publications on,
+or related to, the Scikit-HEP project.
+
+Scikit-HEP tutorials
+--------------------
+
+See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
+
 
 Proceedings and publications
 ----------------------------
 
 -   *zfit: scalable pythonic fitting*,
     Jonas Eschle, Albert Navarro Puig, Rafael Silva Coutinho and Nicola Serra,
-    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
-    [EPJ Web Conf., 245 (2020) 06025](https://doi.org/10.1051/epjconf/202024506025);
+    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
+    [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025);
 -   *Recent developments in histogram libraries*,
     H. Dembinski, J. Pivarski and H. Schreiner,
-    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia; 
+    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
     [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014);
 -   *Boost-histogram: High-Performance Histograms as Objects*,
     Henry Schreiner, Hans Dembinski, Shuo Liu, Jim Pivarski,

@@ -13,12 +13,21 @@ Gitter
 
 The fastest way to contact us is via the Gitter channel
 [Scikit-HEP/community][], ideal for
-informal exchanges.
-See also related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HEP Software Foundation (HSF).
+informal exchanges. The organisation provides the following topical Gitter channels,
+with some channels of broad interest hosted under the
+[HEP Software Foundation](https://hepsoftwarefoundation.org/) (HSF):
 
-[Scikit-HEP/community]: https://gitter.im/Scikit-HEP/community
-[HSF/PyHEP]:            https://gitter.im/HSF/PyHEP
-[HSF/PyHEP-newcomers]:  https://gitter.im/HSF/PyHEP-newcomers
+- [`awkward-array`](https://gitter.im/Scikit-HEP/awkward-array)
+- [On histogramming](https://gitter.im/HSF/PyHEP-histogramming)
+- [`iminuit`](https://gitter.im/Scikit-HEP/iminuit)
+- [`uproot`](https://gitter.im/Scikit-HEP/uproot)
+
+It is worth to mention the related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HSF,
+which are of particular interest for general exchanges with the "Python in HEP" community.
+
+[Scikit-HEP/community]:     https://gitter.im/Scikit-HEP/community
+[HSF/PyHEP]:                https://gitter.im/HSF/PyHEP
+[HSF/PyHEP-newcomers]:      https://gitter.im/HSF/PyHEP-newcomers
 
 Mailing lists
 -------------

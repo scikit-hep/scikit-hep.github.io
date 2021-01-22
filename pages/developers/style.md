@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.3.0
+  rev: v3.4.0
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -95,7 +95,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 20.08b1
+  rev: 20.8b1
   hooks:
   - id: black
 ```
@@ -206,7 +206,7 @@ The MyPy addition for pre-commit:
 You can also add items to the virtual environment setup for mypy by pre-commit, for example:
 
 ```yaml
-    additional_dependencies: [attrs==19.3.0]
+    additional_dependencies: [attrs==20.3.0]
 ```
 
 MyPy has a config section in `setup.cfg` that looks like this:

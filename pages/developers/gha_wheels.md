@@ -71,21 +71,17 @@ before, will work:
       with:
         submodules: true  # Optional if you have submodules
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
-
-    - name: Install deps
-      run: python -m pip install build
-
     - name: Build SDist
-      run: python -m build -s
+      run: pipx run --spec build pyproject-build --sdist
 
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*.tar.gz
 ```
 
-Using `checkout@v1` here is easier than `v2` if you use `setuptools_scm`, at least for now.
+Using `checkout@v1` here is easier than `v2` if you use `setuptools_scm`, at
+least for now. You can instead install build via pip and use `python -m build
+--sdist`. You can also pin the version with `pipx run --spec build==...`.
 
 ## The core job (3 main OS's)
 
@@ -106,14 +102,7 @@ The core of the work is down here:
       with:
         submodules: true
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
-
-    - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.7.1
-
-    - name: Build wheel
-      run: python -m cibuildwheel --output-dir wheelhouse
+    - uses: joerick/cibuildwheel@v1.8.0
       env:
         CIBW_SKIP: pp* cp27-win*
 
@@ -133,12 +122,6 @@ them, check out [`CIBW_BEFORE_BUILD`][] and [`CIBW_ENVIRONMENT`][]).
 This lists all three OS's; if you do not support Windows, you can remove that
 here.
 
-After Python is prepared, cibuildwheel is installed. This is a normal Python
-package, however, do not run it locally, just in a container or on CI, since it
-installs the Python versions it needs to global locations. Python 3.6+ should
-be fine, but we are following the official example and using Python 3.7. The
-Python version running cibuildwheel does not affect the wheels created.
-
 The build step is controlled almost exclusively through environment variables,
 which makes it easier (usually) to setup in CI. The main variable needed here
 is `CIBW_SKIP`, which filters the build identifiers based on simple
@@ -147,7 +130,7 @@ expressions. You can use `pp*` to filter PyPy, and you should probably filter
 `CIBW_BUILD` to select the platforms you want to build for - see the [docs
 here][cibw custom] for
 all the identifiers. Note that the ARM and other alternative architectures need
-support from the CI, (so basically Travis for now) to run.
+emulation, so are not shown here (adds one extra step).
 
 You can also select different base images (the *default* is manylinux2010).
 If you want manylinux1, just do:
@@ -177,15 +160,9 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
       with:
         submodules: true
 
-    - uses: actions/setup-python@v2
-
-    - name: Install cibuildwheel
-      run: python -m pip install cibuildwheel==1.7.1
-
     - uses: ilammy/msvc-dev-cmd@v1
 
-    - name: Build 64-bit wheel
-      run: python -m cibuildwheel --output-dir wheelhouse
+    - uses: joerick/cibuildwheel@v1.8.0
       env:
         CIBW_BUILD: cp27-win_amd64
         DISTUTILS_USE_SDK: 1
@@ -195,8 +172,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
       with:
         arch: x86
 
-    - name: Build 32-bit wheel
-      run: python -m cibuildwheel --output-dir wheelhouse
+    - uses: joerick/cibuildwheel@v1.8.0
       env:
         CIBW_BUILD: cp27-win32
         DISTUTILS_USE_SDK: 1

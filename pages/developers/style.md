@@ -215,7 +215,6 @@ MyPy has a config section in `setup.cfg` that looks like this:
 ```ini
 [mypy]
 files = src
-pretty = True
 python_version = 3.6
 warn_unused_configs = True
 warn_unused_ignores = True
@@ -230,9 +229,9 @@ checks as you go. You can ignore missing imports on libraries as shown above,
 on section each. And you can disable MyPy on a line with `# type: ignore`. Once
 you are ready to start checking more, you can look at adding
 `check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
-more, up until `strict`. You can add these *per file* by adding a `# mypy:
-strict` (or any other less stringent check) at the top of the file. MyPy does
-not support pyproject.toml configuration yet.
+more. You can add these *per file* by adding a `# mypy: <option>` the top of
+the file. MyPy does not support pyproject.toml configuration yet. You can also
+pass `--strict` on the command line.
 
 
 ## Flake8

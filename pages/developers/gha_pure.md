@@ -70,20 +70,15 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     steps:
     - uses: actions/checkout@v1
 
-    - uses: actions/setup-python@v2
-
-    - name: Install wheel and SDist requirements
-      run: python -m pip install "build" "twine"
-
     - name: Build SDist and wheel
-      run: python -m build
+      run: pipx run --spec build pyproject-build
 
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*
 
     - name: Check metadata
-      run: twine check dist/*
+      run: pipx run twine check dist/*
 
 ```
 {% endraw %}
@@ -96,6 +91,15 @@ By default this will make an SDist and a wheel from the package in the current
 directory, and they will be placed in `./dist`. You can only build SDist
 (`-s`), only build wheel (`-w`), change the output folder (`-o <dir>`) or give
 a different input folder if you want.
+
+You could use the setup-python action, install `build` and `twine` with `pip`,
+and then use `python -m build` or `pyproject-build`, but it's better to use
+`pipx` to install and run python applications. Pipx is provided by default by
+Github Actions (in fact, they use it to setup other applications).
+
+Also, we currently have to use `pipx run --spec build pyproject-build` because
+the module name (`build`) and the program `pyproject-build` do not match. A
+future update to pipx and build may fix this so `pipx run build` will be enough.
 
 <details><summary>Breaking up or classic SDist buils (Click to expand)</summary>
 
@@ -183,16 +187,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - uses: actions/setup-python@v2
-
-    - name: Install wheel and SDist requirements
-      run: python -m pip install "build" "twine"
-
-    - name: Build SDist & wheel
-      run: python -m build
+    - name: Build wheel and SDist
+      run: pipx run --spec build pyproject-build
 
     - name: Check metadata
-      run: twine check dist/*
+      run: pipx run twine check dist/*
 
     - uses: actions/upload-artifact@v2
       with:

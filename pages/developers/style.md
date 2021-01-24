@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.3.0
+  rev: v3.4.0
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -197,7 +197,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.790
+  rev: v0.800
   hooks:
   - id: mypy
     files: src
@@ -206,7 +206,7 @@ The MyPy addition for pre-commit:
 You can also add items to the virtual environment setup for mypy by pre-commit, for example:
 
 ```yaml
-    additional_dependencies: [attrs==19.3.0]
+    additional_dependencies: [attrs==20.3.0]
 ```
 
 MyPy has a config section in `setup.cfg` that looks like this:
@@ -215,7 +215,6 @@ MyPy has a config section in `setup.cfg` that looks like this:
 ```ini
 [mypy]
 files = src
-pretty = True
 python_version = 3.6
 warn_unused_configs = True
 warn_unused_ignores = True
@@ -230,9 +229,9 @@ checks as you go. You can ignore missing imports on libraries as shown above,
 on section each. And you can disable MyPy on a line with `# type: ignore`. Once
 you are ready to start checking more, you can look at adding
 `check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
-more, up until `strict`. You can add these *per file* by adding a `# mypy:
-strict` (or any other less stringent check) at the top of the file. MyPy does
-not support pyproject.toml configuration yet.
+more. You can add these *per file* by adding a `# mypy: <option>` the top of
+the file. MyPy does not support pyproject.toml configuration yet. You can also
+pass `--strict` on the command line.
 
 
 ## Flake8

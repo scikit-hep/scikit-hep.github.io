@@ -203,7 +203,8 @@ The MyPy addition for pre-commit:
     files: src
 ```
 
-You can also add items to the virtual environment setup for mypy by pre-commit, for example:
+You can also add items to the virtual environment setup for mypy by pre-commit,
+for example:
 
 ```yaml
     additional_dependencies: [attrs==20.3.0]
@@ -217,9 +218,8 @@ MyPy has a config section in `setup.cfg` that looks like this:
 files = src
 python_version = 3.6
 warn_unused_configs = True
-warn_unused_ignores = True
 
-[mypy-numpy]
+[mypy-numpy.*]
 ignore_missing_imports = True
 ```
 
@@ -230,7 +230,7 @@ on section each. And you can disable MyPy on a line with `# type: ignore`. Once
 you are ready to start checking more, you can look at adding
 `check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
 more. You can add these *per file* by adding a `# mypy: <option>` the top of
-the file. MyPy does not support pyproject.toml configuration yet. You can also
+the file. MyPy does not support `pyproject.toml` configuration yet. You can also
 pass `--strict` on the command line.
 
 

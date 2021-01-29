@@ -38,6 +38,11 @@ div.project {
   padding: 2px;
   border-radius: 5px;
   background-color: #f5f6fa;
+  @media (prefers-color-scheme: dark) {
+      background-color: #000000;
+      box-shadow: 0px 0px 5px rgb(106, 143, 188);
+  }
+
 }
 
 div.project.affiliated {
@@ -45,6 +50,9 @@ div.project.affiliated {
 
 div.project.deprecated {
   background-color: #ffdad9;
+  @media (prefers-color-scheme: dark) {
+    background-color: #501109;
+  }
 }
 
 div.project .nameorlogo {

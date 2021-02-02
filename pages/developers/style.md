@@ -143,7 +143,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.45"
+  rev: "0.46"
   hooks:
   - id: check-manifest
 ```
@@ -219,17 +219,33 @@ files = src
 python_version = 3.6
 warn_unused_configs = True
 
+# Currently (0.800) identical to --strict
+disallow_any_generics = True
+disallow_subclassing_any = True
+disallow_untyped_calls = True
+disallow_untyped_defs = True
+disallow_incomplete_defs = True
+check_untyped_defs = True
+disallow_untyped_decorators = True
+no_implicit_optional = True
+warn_redundant_casts = True
+warn_unused_ignores = True
+warn_return_any = True
+no_implicit_reexport = True
+strict_equality = True
+
 [mypy-numpy.*]
 ignore_missing_imports = True
 ```
 
 There are a lot of options, and you can start with only typing global code and
 functions with at least one type annotation (the default) and enable more
-checks as you go. You can ignore missing imports on libraries as shown above,
-on section each. And you can disable MyPy on a line with `# type: ignore`. Once
-you are ready to start checking more, you can look at adding
-`check_untyped_defs`, `disallow_untyped_defs`, `disallow_incomplete_defs`, and
-more. You can add these *per file* by adding a `# mypy: <option>` the top of
+checks as you go (possibly by slowly uncommenting items in the list above).
+You can ignore missing imports on libraries as shown above,
+on section each. And you can disable MyPy on a line with `# type: ignore`.
+One strategy would be to enable `check_untyped_defs` first, followed by
+`disallow_untyped_defs` then `disallow_incomplete_defs`.
+You can add these *per file* by adding a `# mypy: <option>` the top of
 the file. MyPy does not support `pyproject.toml` configuration yet. You can also
 pass `--strict` on the command line.
 
@@ -258,7 +274,7 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
-ignore = E203, E231, E501, E722, W503
+ignore = E203, E231, E501, E722, W503, B950
 select = C,E,F,W,B,B9
 ```
 
@@ -347,7 +363,7 @@ syntax. Most useful to keep Python 2 outdated constructs out, it can even do
 some code updates for different versions of Python 3, like adding f-strings
 when clearly better (please always use them, they are faster) if you set
 `--py36-plus` (for example). This is a recommended addition when you drop
-Python 2 support.
+Python 2.6 support, 2.7 support, and expecially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
@@ -363,9 +379,9 @@ Python 2 support.
 
 Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to
-find and fix warnings before they cause user errors! Always either run
-Python/PyTest 3.1+ with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment.
-You can also add the following to your `setup.cfg` file:
+find and fix warnings before they cause user errors! Always run with `-Wd`, or
+set `export PYTHONWARNINGS=d` in your environment.
+You can also add the following to your `setup.cfg` file for PyTest:
 
 ```ini
 [tool:pytest]

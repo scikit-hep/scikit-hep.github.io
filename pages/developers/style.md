@@ -241,13 +241,12 @@ ignore_missing_imports = True
 There are a lot of options, and you can start with only typing global code and
 functions with at least one type annotation (the default) and enable more
 checks as you go (possibly by slowly uncommenting items in the list above).
-You can ignore missing imports on libraries as shown above,
-on section each. And you can disable MyPy on a line with `# type: ignore`.
-One strategy would be to enable `check_untyped_defs` first, followed by
-`disallow_untyped_defs` then `disallow_incomplete_defs`.
-You can add these *per file* by adding a `# mypy: <option>` the top of
-the file. MyPy does not support `pyproject.toml` configuration yet. You can also
-pass `--strict` on the command line.
+You can ignore missing imports on libraries as shown above, one section each.
+And you can disable MyPy on a line with `# type: ignore`.  One strategy would
+be to enable `check_untyped_defs` first, followed by `disallow_untyped_defs`
+then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
+mypy: <option>` at the top of a file. MyPy does not support `pyproject.toml`
+configuration yet. You can also pass `--strict` on the command line.
 
 
 ## Flake8
@@ -363,7 +362,7 @@ syntax. Most useful to keep Python 2 outdated constructs out, it can even do
 some code updates for different versions of Python 3, like adding f-strings
 when clearly better (please always use them, they are faster) if you set
 `--py36-plus` (for example). This is a recommended addition when you drop
-Python 2.6 support, 2.7 support, and expecially once you drop 3.6 support.
+Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade

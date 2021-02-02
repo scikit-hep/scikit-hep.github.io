@@ -19,8 +19,7 @@ extensions. If you are not planning on writing C/C++ code, [Flit][] and
 [Poetry][] are the other two systems, and are drastically simpler - most of
 this page is unneeded for those systems.
 
-Also see the [Python packaging guide][], though the material here is currently
-more consistent, practical, and up-to-date.
+Also see the [Python packaging guide][], especially the [Python packaging tutorial][].
 
 > #### Note
 >
@@ -417,4 +416,5 @@ global-exclude __pycache__ *.py[cod] .*
 [setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
 [setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
 [Python packaging guide]: https://packaging.python.org
+[Python packaging tutorial]: https://packaging.python.org/tutorials/packaging-projects/
 [Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}

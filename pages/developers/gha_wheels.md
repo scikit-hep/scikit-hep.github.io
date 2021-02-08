@@ -51,7 +51,7 @@ env:
   CIBW_TEST_EXTRAS: test
   CIBW_TEST_COMMAND: pytest {project}/tests
   CIBW_BUILD_VERBOSITY: 1
-  # Optional: support Universal2 for Apple Silicon support with these two lines:
+  # Optional: support Universal2 for Apple Silicon with these two lines:
   CIBW_ARCHS_MACOS: auto universal2
   CIBW_TEST_SKIP: "*univeral2:arm64"
 ```

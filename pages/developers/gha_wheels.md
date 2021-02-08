@@ -63,7 +63,7 @@ you can add the final two lines, the first of which enables the `universal2`
 wheel, which has both Intel and AS architectures in it, and the second
 explicitly skips testing the AS part of the wheel, since it can't be tested on
 Intel. If you use CMake instead of pure setuptools, you will likely need further
-customizations for AS cross-compiling. Only Python 3.9+ supprt Apple Silicon.
+customizations for AS cross-compiling. Only Python 3.9+ support Apple Silicon.
 
 ## Making an SDist
 

@@ -19,8 +19,7 @@ extensions. If you are not planning on writing C/C++ code, [Flit][] and
 [Poetry][] are the other two systems, and are drastically simpler - most of
 this page is unneeded for those systems.
 
-Also see the [Python packaging guide][], though the material here is currently
-more consistent, practical, and up-to-date.
+Also see the [Python packaging guide][], especially the [Python packaging tutorial][].
 
 > #### Note
 >
@@ -98,15 +97,20 @@ Scikit-HEP:
 
 ```toml
 requires = [
-    "numpy==1.13.3; python_version<='3.6'",
-    "numpy==1.14.5; python_version=='3.7'",
-    "numpy==1.17.3; python_version=='3.8'",
-    "numpy==1.19.4; python_version>='3.9'",
+    "numpy==1.13.3; python_version<'3.5'",
+    "oldest-supported-numpy; python_version>='3.5'",
 ```
 
 This ensures the wheels built work with all versions of NumPy supported by
 Scikit-HEP. Whether you build the wheel locally or on CI, you can transfer it
-to someone else and it will work as long as the user has NumPy 1.13.3 or later.
+to someone else and it will work as long as the user has NumPy 1.13.3 or later. The
+`oldest-supported-numpy` package is a SciPy metapackage that tracks the [correct version
+of NumPy to build wheels against for each version of Python and for each
+OS/implementation](https://github.com/scipy/oldest-supported-numpy/blob/master/setup.cfg).
+Otherwise, you would have to list the earliest version of NumPy that had support
+for each Python version here. The package only goes back to Python 3.5, so you need
+to add the other line shown to include Python 2.7 (Scikit-HEP does not support NumPy
+older than 1.13).
 
 ## Versioning (medium/high priority)
 
@@ -412,4 +416,5 @@ global-exclude __pycache__ *.py[cod] .*
 [setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
 [setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
 [Python packaging guide]: https://packaging.python.org
+[Python packaging tutorial]: https://packaging.python.org/tutorials/packaging-projects/
 [Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}

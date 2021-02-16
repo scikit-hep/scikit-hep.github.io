@@ -38,7 +38,7 @@ Proceedings and publications
     Eduardo Rodrigues et al.,
     proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
     [EPJ Web of Conferences 245, 06028 (2020)](https://doi.org/10.1051/epjconf/202024506028);
-    [arXiv:1905.00002\[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
+    [arXiv:2007.03577 \[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
 -   *The Scikit-HEP project*, Eduardo Rodrigues, proceedings of the
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
     [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);

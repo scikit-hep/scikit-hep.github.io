@@ -6,4 +6,4 @@ url: https://github.com/scikit-hep/hepunits
 # repo: only if different from url
 badges:
   pypi: hepunits
-
+  conda-forge: hepunits

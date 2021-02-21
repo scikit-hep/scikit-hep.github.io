@@ -6,3 +6,4 @@ docs: https://hist.readthedocs.io/en/latest/
 # repo: only if different from url
 badges:
   pypi: hist
+  conda-forge: hist

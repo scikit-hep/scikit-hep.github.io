@@ -1,0 +1,9 @@
+name: histoprint
+description: Histoprint nicely displays histograms in the terminal.
+url: https://github.com/scikit-hep/histoprint
+# docs: 
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: histoprint
+  conda-forge: histoprint

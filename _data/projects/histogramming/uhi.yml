@@ -1,0 +1,8 @@
+name: uhi
+description: Unified Histogram Interface, providing static tools and documentation for the common behavior and interaction between histogram libraries.
+url: https://github.com/scikit-hep/uhi
+docs: https://uhi.readthedocs.io/en/latest/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: uhi

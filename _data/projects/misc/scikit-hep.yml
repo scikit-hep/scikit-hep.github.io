@@ -6,3 +6,4 @@ url: https://github.com/scikit-hep/scikit-hep
 # repo: only if different from url
 badges:
   pypi: scikit-hep
+  conda-forge: scikit-hep

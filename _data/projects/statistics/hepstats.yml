@@ -8,4 +8,5 @@ docs: https://scikit-hep.org/hepstats/
 # repo: only if different from url
 badges:
   pypi: hepstats
+  conda-forge: hepstats
 

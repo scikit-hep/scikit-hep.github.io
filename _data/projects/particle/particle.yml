@@ -6,5 +6,5 @@ url: https://github.com/scikit-hep/particle
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
 badges:
-  pypi: Particle
-
+  pypi: particle
+  conda-forge: particle

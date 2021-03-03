@@ -7,7 +7,6 @@ parent: Developer information
 ---
 
 
-
 We will cover binary wheels [on the next page][], but if you do not have a
 compiled extension, this is called a universal (pure Python) package, and the
 procedure to make a "built" wheel is simple. At the end of this page, there is
@@ -101,7 +100,7 @@ Also, we currently have to use `pipx run --spec build pyproject-build` because
 the module name (`build`) and the program `pyproject-build` do not match. A
 future update to pipx and build may fix this so `pipx run build` will be enough.
 
-<details><summary>Breaking up or classic SDist buils (Click to expand)</summary>
+<details><summary>Classic SDist builds (click to expand)</summary>
 
 {%- capture "mymarkdown" -%}
 
@@ -121,7 +120,7 @@ this is a wheelhouse, not the output wheel; any wheels it makes during the proce
 will be put here, not just the one you wanted to upload. Be sure to use something
 like `wheelhouse/my_package*.whl` when you pick your items from this folder so as
 not to pick a random dependency that didn't have a binary wheel already. Or just
-use PyPA-Build.
+use PyPA/build.
 
 {%- endcapture -%}
 

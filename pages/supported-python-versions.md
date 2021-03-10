@@ -44,11 +44,11 @@ Conda, brew, pyenv, or other tools should be used to build an environment for an
 Individual packages within Scikit-HEP may have user communities or needs that
 require specific support to be maintained. Package maintainers can choose to be
 more lenient than this plan recommends, though they will have to take on the
-required burden of doing so. Community maintaince will strongly gravitate to the
+required burden of doing so. Community maintenance will strongly gravitate to the
 above plan.
 
 Users are *highly recommended* to use an interpreter that will be supported by
-NEP 29 during the lifetime of their project (or be willing to upgrade interpeters
+NEP 29 during the lifetime of their project (or be willing to upgrade interpreters
 once a year for projects that span more than 42 months).
 
 Statement on Python 2
@@ -56,7 +56,7 @@ Statement on Python 2
 
 Python 2 has reached [end of life as of January 1st, 2020][py2clock]. No more
 code changes to fix bugs and security flaws will be made (the final 2.7 release
-was in April 2020). Pip, Packaging, manylinux2010, Numpy, IPython, Matplotlib,
+was in April 2020). Pip, Packaging, manylinux2010, NumPy, IPython, Matplotlib,
 Pandas, and other major packages have already dropped support for Python 2, and
 many more packages have made a [pledge to do so][py3statement]. Supporting Python
 2 makes API design weaker, static typing harder, and burns extra CI time and

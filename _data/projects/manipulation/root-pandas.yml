@@ -3,6 +3,7 @@ description: Module for conveniently loading/saving ROOT files as pandas DataFra
 url: https://github.com/scikit-hep/root_pandas
 # docs: <url>
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url
 badges:
   pypi: root-pandas

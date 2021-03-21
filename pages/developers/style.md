@@ -337,7 +337,7 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: 5.7.0
+  rev: 5.8.0
   hooks:
   - id: isort
 ```
@@ -366,7 +366,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.7.4
+  rev: v2.11.0
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]
@@ -374,7 +374,21 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 [PyUpgrade]: https://github.com/asottile/pyupgrade: 
 
-## Python warnings
+
+## Setup.cfg format (extra)
+
+There is a tool that keeps your setup.cfg organized, and makes sure that
+important parts (like Python classifiers) are in sync. This tool,
+`setup-cfg-fmt`, has native support for pre-commit:
+
+```yaml
+- repo: https://github.com/asottile/setup-cfg-fmt
+  rev: v1.17.0
+  hooks:
+  - id: setup-cfg-fmt
+```
+
+## Python warnings (extra)
 
 Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to

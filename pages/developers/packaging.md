@@ -239,32 +239,36 @@ official docs are excellent for setup.cfg][setuptools cfg]. Here's a practical e
 ```ini
 [metadata]
 name = package
+description = A great package.
+long_description = file: README.md
+long_description_content_type = text/markdown
+url = https://github.com/scikit-hep/package
 author = My Name
 author_email = me@email.com
 maintainer = Scikit-HEP
 maintainer_email = scikit-hep-admins@googlegroups.com
-url = https://github.com/scikit-hep/package
-description = A great package.
-long_description = file: README.md
-long_description_content_type = text/markdown
-license = BSD 3-Clause License
+license = BSD-3-Clause
+license_file = LICENSE
 classifiers =
     Development Status :: 4 - Beta
     Intended Audience :: Developers
     Intended Audience :: Information Technology
     Intended Audience :: Science/Research
     License :: OSI Approved :: BSD License
-    Operating System :: Microsoft :: Windows
     Operating System :: MacOS
+    Operating System :: Microsoft :: Windows
     Operating System :: POSIX
     Operating System :: Unix
+    Programming Language :: C++
     Programming Language :: Python
+    Programming Language :: Python :: 2
     Programming Language :: Python :: 2.7
+    Programming Language :: Python :: 3
+    Programming Language :: Python :: 3.5
     Programming Language :: Python :: 3.6
     Programming Language :: Python :: 3.7
     Programming Language :: Python :: 3.8
     Programming Language :: Python :: 3.9
-    Programming Language :: C++
     Topic :: Scientific/Engineering
     Topic :: Scientific/Engineering :: Information Analysis
     Topic :: Scientific/Engineering :: Mathematics
@@ -273,14 +277,14 @@ classifiers =
     Topic :: Utilities
 
 [options]
-python_requires = >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
 packages = find:
+install_requires =
+    numpy>=1.13.3
+python_requires = >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+include_package_data = True
 package_dir =
     =src
-include_package_data = True
 zip_safe = False
-install_requires =
-    numpy >=1.13.3
 
 [options.packages.find]
 where = src

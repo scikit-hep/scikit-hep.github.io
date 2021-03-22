@@ -377,7 +377,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ## Setup.cfg format (extra)
 
-There is a tool that keeps your setup.cfg organized, and makes sure that
+There is a tool that keeps your `setup.cfg` organized, and makes sure that
 important parts (like Python classifiers) are in sync. This tool,
 `setup-cfg-fmt`, has native support for pre-commit:
 

@@ -53,7 +53,7 @@ env:
   CIBW_BUILD_VERBOSITY: 1
   # Optional: support Universal2 for Apple Silicon with these two lines:
   CIBW_ARCHS_MACOS: auto universal2
-  CIBW_TEST_SKIP: "*univeral2:arm64"
+  CIBW_TEST_SKIP: "*universal2:arm64"
 ```
 
 The `CIBW_TEST_EXTRAS` will cause the pip install to use `[test]`. The
@@ -103,7 +103,7 @@ The core of the work is down here:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, windows-2019, macos-10.15]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
     - uses: actions/checkout@v1

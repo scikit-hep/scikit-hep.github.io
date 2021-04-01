@@ -53,7 +53,7 @@ env:
   CIBW_BUILD_VERBOSITY: 1
   # Optional: support Universal2 for Apple Silicon with these two lines:
   CIBW_ARCHS_MACOS: auto universal2
-  CIBW_TEST_SKIP: "*univeral2:arm64"
+  CIBW_TEST_SKIP: "*universal2:arm64"
 ```
 
 The `CIBW_TEST_EXTRAS` will cause the pip install to use `[test]`. The
@@ -214,7 +214,7 @@ which is self-contained.
     needs: [build_wheels, build_win27_wheels, make_sdist]
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'published'
-
+    steps:
     - uses: actions/download-artifact@v2
       with:
         name: artifact

@@ -214,7 +214,7 @@ which is self-contained.
     needs: [build_wheels, build_win27_wheels, make_sdist]
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'published'
-
+    steps:
     - uses: actions/download-artifact@v2
       with:
         name: artifact

@@ -103,7 +103,7 @@ The core of the work is down here:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-20.04, windows-2019, macos-10.15]
 
     steps:
     - uses: actions/checkout@v1

@@ -275,6 +275,12 @@ classifiers =
     Topic :: Scientific/Engineering :: Physics
     Topic :: Software Development
     Topic :: Utilities
+project_urls =
+    Documentation = https://package.readthedocs.io/
+    Bug Tracker = https://github.com/scikit-hep/package/issues
+    Discussions = https://github.com/scikit-hep/package/discussions
+    Changelog = https://package.readthedocs.io/en/latest/changelog.html
+
 
 [options]
 packages = find:

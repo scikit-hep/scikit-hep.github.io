@@ -70,7 +70,7 @@ with the name "CI/CD", you can just combine the two `on` dicts.
     - uses: actions/checkout@v1
 
     - name: Build SDist and wheel
-      run: pipx run --spec build pyproject-build
+      run: pipx run build
 
     - uses: actions/upload-artifact@v2
       with:
@@ -95,10 +95,6 @@ You could use the setup-python action, install `build` and `twine` with `pip`,
 and then use `python -m build` or `pyproject-build`, but it's better to use
 `pipx` to install and run python applications. Pipx is provided by default by
 Github Actions (in fact, they use it to setup other applications).
-
-Also, we currently have to use `pipx run --spec build pyproject-build` because
-the module name (`build`) and the program `pyproject-build` do not match. A
-future update to pipx and build may fix this so `pipx run build` will be enough.
 
 <details><summary>Classic SDist builds (click to expand)</summary>
 
@@ -187,7 +183,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Build wheel and SDist
-      run: pipx run --spec build pyproject-build
+      run: pipx run build
 
     - name: Check metadata
       run: pipx run twine check dist/*

@@ -80,7 +80,7 @@ before, will work:
         submodules: true  # Optional if you have submodules
 
     - name: Build SDist
-      run: pipx run --spec build pyproject-build --sdist
+      run: pipx run build --sdist
 
     - uses: actions/upload-artifact@v2
       with:
@@ -89,7 +89,7 @@ before, will work:
 
 Using `checkout@v1` here is easier than `v2` if you use `setuptools_scm`, at
 least for now. You can instead install build via pip and use `python -m build
---sdist`. You can also pin the version with `pipx run --spec build==...`.
+--sdist`. You can also pin the version with `pipx run build==...`.
 
 ## The core job (3 main OS's)
 

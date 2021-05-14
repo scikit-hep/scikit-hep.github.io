@@ -1,5 +1,5 @@
 name: iminuit
-description: MINUIT from Python - Fitting like a boss.
+description: Jupyter-friendly Python interface for the Minuit2 C++ library.
 url: https://github.com/scikit-hep/iminuit
 docs: https://iminuit.readthedocs.io/
 projlogo: /assets/images/projlogo/logo_iminuit.png

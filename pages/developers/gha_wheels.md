@@ -53,7 +53,7 @@ env:
   CIBW_BUILD_VERBOSITY: 1
   # Optional: support Universal2 for Apple Silicon with these two lines:
   CIBW_ARCHS_MACOS: auto universal2
-  CIBW_TEST_SKIP: "*univeral2:arm64"
+  CIBW_TEST_SKIP: "*universal2:arm64"
 ```
 
 The `CIBW_TEST_EXTRAS` will cause the pip install to use `[test]`. The
@@ -80,7 +80,7 @@ before, will work:
         submodules: true  # Optional if you have submodules
 
     - name: Build SDist
-      run: pipx run --spec build pyproject-build --sdist
+      run: pipx run build --sdist
 
     - uses: actions/upload-artifact@v2
       with:
@@ -89,7 +89,7 @@ before, will work:
 
 Using `checkout@v1` here is easier than `v2` if you use `setuptools_scm`, at
 least for now. You can instead install build via pip and use `python -m build
---sdist`. You can also pin the version with `pipx run --spec build==...`.
+--sdist`. You can also pin the version with `pipx run build==...`.
 
 ## The core job (3 main OS's)
 
@@ -214,7 +214,7 @@ which is self-contained.
     needs: [build_wheels, build_win27_wheels, make_sdist]
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'published'
-
+    steps:
     - uses: actions/download-artifact@v2
       with:
         name: artifact

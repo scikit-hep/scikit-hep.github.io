@@ -62,6 +62,10 @@ div.project .nameorlogo {
   text-align: center;
 }
 
+div.project .nameorlogo a img {
+  vertical-align: middle;
+}
+
 div.project .description {
   flex-basis: 150px;
   flex-shrink: 0;

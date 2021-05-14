@@ -1,4 +1,5 @@
 name: hist
+projlogo: /assets/images/projlogo/histlogo.png
 description: Hist is a analyst friendly front-end for boost-histogram, designed for Python 3.6+.
 url: https://github.com/scikit-hep/hist
 docs: https://hist.readthedocs.io/en/latest/

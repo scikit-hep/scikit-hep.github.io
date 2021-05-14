@@ -3,6 +3,7 @@ description: Interface between ROOT and NumPy.
 url: https://github.com/scikit-hep/root_numpy
 docs: http://scikit-hep.org/root_numpy/
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url
 badges:
   pypi: root-numpy

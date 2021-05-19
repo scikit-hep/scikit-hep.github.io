@@ -403,7 +403,7 @@ complete control over a src structure, though be sure to update it to include
 any files that need to be included:
 
 ```
-prune *
+prune **
 graft src
 graft tests
 

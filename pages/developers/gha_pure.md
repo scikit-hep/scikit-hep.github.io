@@ -144,7 +144,7 @@ And then, you need a release job:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.4.1
+    - uses: pypa/gh-action-pypi-publish@v1.4.2
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -172,6 +172,7 @@ on:
   push:
     branches:
       - master
+      - main
   release:
     types:
     - published
@@ -185,12 +186,12 @@ jobs:
     - name: Build wheel and SDist
       run: pipx run build
 
-    - name: Check metadata
-      run: pipx run twine check dist/*
-
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*
+
+    - name: Check metadata
+      run: pipx run twine check dist/*
 
 
   publish:
@@ -204,7 +205,7 @@ jobs:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.4.1
+    - uses: pypa/gh-action-pypi-publish@v1.4.2
       with:
         password: ${{ secrets.pypi_password }}
 ```

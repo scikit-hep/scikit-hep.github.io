@@ -197,7 +197,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.800
+  rev: v0.812
   hooks:
   - id: mypy
     files: src
@@ -207,7 +207,7 @@ You can also add items to the virtual environment setup for mypy by pre-commit,
 for example:
 
 ```yaml
-    additional_dependencies: [attrs==20.3.0]
+    additional_dependencies: [attrs==21.2.0]
 ```
 
 MyPy has a config section in `setup.cfg` that looks like this:
@@ -219,7 +219,7 @@ files = src
 python_version = 3.6
 warn_unused_configs = True
 
-# Currently (0.800) identical to --strict
+# Currently (0.812) identical to --strict
 disallow_any_generics = True
 disallow_subclassing_any = True
 disallow_untyped_calls = True

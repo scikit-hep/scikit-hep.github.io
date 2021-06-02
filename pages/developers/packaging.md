@@ -128,7 +128,7 @@ requires = [
 ]
 
 [tool.setuptools_scm]
-write_to = "src/<package>/version.py"
+write_to = "src/<package>/_version.py"
 ```
 
 This will write a version file when you build from the GitHub repository. You
@@ -156,7 +156,7 @@ needed for historical compatibility, but it is better for new/young projects to
 use the default layout and include this in your `__init__.py`:
 
 ```python
-from .version import version as __version__
+from ._version import version as __version__
 ```
 
 In docs, there are a few minor tweaks necessary to make sure the version is

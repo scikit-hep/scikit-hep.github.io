@@ -14,8 +14,8 @@ Scikit-HEP uses [pre-commit][] to check code style. It can be installed through
 `brew` (macOS) or `pip` (anywhere). There are two modes to use it locally; you
 can check manually with `pre-commit run` (changes only) or `pre-commit run
 --all-files` (all). You can also run `pre-commit install` to add checks as a
-git precommit hook (which is where it gets its name). It's worth trying, even
-if you've tried and failed to set up a custom precommit hook before; it's quite
+git pre-commit hook (which is where it gets its name). It's worth trying, even
+if you've tried and failed to set up a custom pre-commit hook before; it's quite
 elegant and does not add or commit the changes, it just makes the changes and
 allows you to check and add them. You can always override the hook with `-n`.
 
@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v3.4.0
+  rev: v4.0.1
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -55,10 +55,10 @@ tagged versions forward to the latest tags! Due to the design of pre-commit's
 caching system, these _must_ point at fixed tags, never put a branch here.
 
 **Checking in CI**: You can have this checked and often automatically corrected
-for you using [results.pre-commit.ci](https:/results.pre-commit.ci). It will even
+for you using [pre-commit.ci](https://pre-commit.ci). It will even
 update your `rev:` versions every week or so if your checks update!
 
-To use, just go to [results.pre-commit.ci](https:/results.pre-commit.ci), click
+To use, just go to [pre-commit.ci](https://pre-commit.ci), click
 "Log in with GitHub", click "Add an Installation" if adding for the first time
 for an org or user, or "Manage repos on GitHub" for an existing installation
 (like Scikit-HEP), then add your repository from the list in GitHub's interface.
@@ -95,7 +95,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 20.8b1
+  rev: 21.5b2
   hooks:
   - id: black
 ```
@@ -164,7 +164,7 @@ If you use `setuptools_scm`, you might want to add:
 run all checks:
 
 ```yaml
-    - uses: pre-commit/action@v2.0.0
+    - uses: pre-commit/action@v2.0.3
       with:
         extra_args: --all-files --hook-stage manual
 ```
@@ -197,7 +197,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.812
+  rev: v0.901
   hooks:
   - id: mypy
     files: src
@@ -210,7 +210,7 @@ for example:
     additional_dependencies: [attrs==21.2.0]
 ```
 
-MyPy has a config section in `setup.cfg` that looks like this:
+MyPy has a config section in `setup.cfg` (or pyproject.toml) that looks like this:
 
 
 ```ini
@@ -281,7 +281,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.8.4
+  rev: 3.9.2
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]
@@ -366,7 +366,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.11.0
+  rev: v2.19.2
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]

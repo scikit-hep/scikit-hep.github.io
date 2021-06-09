@@ -110,7 +110,7 @@ The core of the work is down here:
       with:
         submodules: true
 
-    - uses: pypa/cibuildwheel@v1.11.0
+    - uses: pypa/cibuildwheel@v1.11.1
       env:
         CIBW_SKIP: pp* cp27-win*
 
@@ -172,7 +172,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
 
     - uses: ilammy/msvc-dev-cmd@v1
 
-    - uses: pypa/cibuildwheel@v1.11.0
+    - uses: pypa/cibuildwheel@v1.11.1
       env:
         CIBW_BUILD: cp27-win_amd64
         DISTUTILS_USE_SDK: 1
@@ -182,7 +182,7 @@ If you have to support Python 2.7 on Windows, you can use a custom job:
       with:
         arch: x86
 
-    - uses: pypa/cibuildwheel@v1.11.0
+    - uses: pypa/cibuildwheel@v1.11.1
       env:
         CIBW_BUILD: cp27-win32
         DISTUTILS_USE_SDK: 1
@@ -220,7 +220,7 @@ which is self-contained.
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.4.1
+    - uses: pypa/gh-action-pypi-publish@v1.4.2
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}

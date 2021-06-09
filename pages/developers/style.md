@@ -366,7 +366,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.19.2
+  rev: v2.19.1
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]

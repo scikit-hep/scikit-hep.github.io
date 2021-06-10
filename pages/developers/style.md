@@ -124,18 +124,14 @@ etc.
 [Check-manifest](https://pypi.org/project/check-manifest/) is a fantastic,
 highly recommended tool that verifies you have working SDists. You can install
 it from PyPI. Run it on your repository and see what it says. If you want to ignore
-files (like test folders, example folders, docs, etc) you can add these into your config
-files, either `pyproject.toml` or `setup.cfg`:
+files (like test folders, example folders, docs, etc) you can add these into your
+`pyproject.toml` file:
 
-```ini
-# pyproject.toml
+```toml
 [tool.check-manifest]
-ignore = [".travis.yml"]
-
-# setup.cfg or tox.ini
-[check-manifest]
-ignore =
-    .travis.yml    
+ignore = [
+    ".travis.yml",
+]
 ```
 
 
@@ -210,32 +206,34 @@ for example:
     additional_dependencies: [attrs==21.2.0]
 ```
 
-MyPy has a config section in `setup.cfg` (or pyproject.toml) that looks like this:
+MyPy has a config section in `pyproject.toml` that looks like this:
 
 
 ```ini
 [mypy]
-files = src
-python_version = 3.6
-warn_unused_configs = True
+files = "src"
+python_version = "3.6"
+warn_unused_configs = true
 
 # Currently (0.812) identical to --strict
-disallow_any_generics = True
-disallow_subclassing_any = True
-disallow_untyped_calls = True
-disallow_untyped_defs = True
-disallow_incomplete_defs = True
-check_untyped_defs = True
-disallow_untyped_decorators = True
-no_implicit_optional = True
-warn_redundant_casts = True
-warn_unused_ignores = True
-warn_return_any = True
-no_implicit_reexport = True
-strict_equality = True
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+no_implicit_reexport = true
+strict_equality = true
 
-[mypy-numpy.*]
-ignore_missing_imports = True
+# You can disable imports or control per-module/file settings here
+[[tool.mypy.overrides]]
+module = [ "numpy.*", ]
+ignore_missing_imports = true
 ```
 
 There are a lot of options, and you can start with only typing global code and
@@ -245,8 +243,8 @@ You can ignore missing imports on libraries as shown above, one section each.
 And you can disable MyPy on a line with `# type: ignore`.  One strategy would
 be to enable `check_untyped_defs` first, followed by `disallow_untyped_defs`
 then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
-mypy: <option>` at the top of a file. MyPy does not support `pyproject.toml`
-configuration yet. You can also pass `--strict` on the command line.
+mypy: <option>` at the top of a file. You can also pass `--strict` on the
+command line.
 
 
 ## Flake8
@@ -256,8 +254,9 @@ simple style to things that might confuse or detract users, such as unused
 imports, named values that are never used, mutable default arguments, and more.
 Unlike black and some other tools, flake8 does not correct problems, it just
 reports them. Some of the checks could have had automated fixes, sadly (which
-is why Black is nice).  Here is a suggested `setup.cfg` to enable compatibility
-with Black (flake8 does not support pyproject.toml configuration, sadly):
+is why Black is nice).  Here is a suggested `.flake8` or `setup.cfg` to enable
+compatibility with Black (flake8 does not support pyproject.toml configuration,
+sadly):
 
 ```ini
 [flake8]
@@ -343,11 +342,11 @@ following pre-commit config will work:
 ```
 
 In order to use it, you need to add some configuration. You can add it to
-either `pyproject.toml` or `setup.cfg` (shown):
+either `pyproject.toml`:
 
 ```ini
-[tool:isort]
-profile = black
+[tool.isort]
+profile = "black"
 multi_line_output = 3
 ```
 
@@ -394,11 +393,11 @@ Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to
 find and fix warnings before they cause user errors! Always run with `-Wd`, or
 set `export PYTHONWARNINGS=d` in your environment.
-You can also add the following to your `setup.cfg` file for PyTest:
+You can also add the following to your `pyproject.toml` file for PyTest:
 
 ```ini
-[tool:pytest]
-addopts = -Wd
+[tool.pytest]
+addopts = "-Wd"
 ```
 
 ## Clang-format (C++ only)

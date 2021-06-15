@@ -59,7 +59,6 @@ requires = [
     "setuptools>=42",
     "wheel"
 ]
-
 build-backend = "setuptools.build_meta"
 ```
 
@@ -91,7 +90,7 @@ same wheels (and they often build setuptools compliant SDists, as well).
 
 ### Special additions: NumPy
 
-You may want to build against NumPy (mostly for Cython packages, PyBind11 does
+You may want to build against NumPy (mostly for Cython packages, pybind11 does
 not need to access the NumPy headers). This is the recommendation for
 Scikit-HEP:
 
@@ -298,14 +297,11 @@ where = src
 # exclude =
 #     tests
 #     extern
-
-[tool:pytest]
-junit_family=xunit2
-testpaths =
-    tests
 ```
 
-And, a possible `setup.py`:
+And, a possible `setup.py`; though in recent versions of pip, there no longer
+is a need to include a legacy `setup.py` file, even for editable installs,
+unless you are building extensions.
 
 ```python
 #!/usr/bin/env python
@@ -332,6 +328,16 @@ the SDist structure that shows up in another place in the package, then replace
 See our [Supported Python Versions][] statement for more information on
 `python_requires`.
 
+With the exception of Flit, all package configuration should be possible via
+`pyproject.toml`, such as PyTest>6:
+
+
+```toml
+[tool.pytest]
+junit_family = "xunit2"
+testpaths = ["tests"]
+```
+
 ## Extras (low/medium priority)
 
 It is recommended to use extras instead of or in addition to making requirement
@@ -345,7 +351,7 @@ Here is an example of a simple extras, placed in setup.cfg:
 ```ini
 [options.extras_require]
 test =
-  pytest >=4.6
+  pytest >=6.0
 mpl =
   matplotlib >=2.0
 ```
@@ -410,6 +416,8 @@ graft tests
 include LICENSE README.md pyproject.toml setup.py setup.cfg
 global-exclude __pycache__ *.py[cod] .*
 ```
+
+Note that Scikit-build currently may have issues with MANIFEST.in.
 
 [^1]: You shouldn't ever have to run commands like this, they are implementation
       details of setuptools. For this command, you should use `python -m build -s`

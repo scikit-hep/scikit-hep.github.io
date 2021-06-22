@@ -54,7 +54,7 @@ then this is a job that will check pre-commit for you:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - uses: pre-commit/action@v2.0.0
+    - uses: pre-commit/action@v2.0.3
 ```
 {% endraw %}
 

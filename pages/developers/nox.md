@@ -18,11 +18,11 @@ custom script, and they can hide what is actually happening.
 We are carefully allowing an exception: [nox][]. Nox has two strong points that
 help with the above concerns. First, it is very explicit, and even prints what
 it is doing as it operates. Unlike the older tox, it does not have any implicit
-assumptions built-in. Second, it has very elegant build-in support for both
+assumptions built-in. Second, it has very elegant built-in support for both
 virtual and Conda environments. This can greatly reduce new contributor
 friction with your codebase.
 
-A daily developer is not expected to use nox for simple tasks, like running
+A daily developer is _not_ expected to use nox for simple tasks, like running
 tests or linting. You should _not_ rely on nox to make a task that should be
 made simple and standard (like building a package) complicated. You are not
 expected to use nox for linting on CI, or often even for testing on CI, even if
@@ -63,7 +63,7 @@ On GitHub Actions or Azure, pipx is available by default, so you should use
 ```
 
 You can now access all versions of Python from nox. At least in GitHub Actions,
-you should add `--force-color` to your nox runs to get color output in your
+you should add `--forcecolor` to your nox runs to get color output in your
 logs.
 
 ### Introduction
@@ -213,7 +213,7 @@ import shutil
 DIR = Path(__file__).parent.resolve()
 
 @nox.session
-def build(session):
+def build(session: nox.Session) -> None:
     """
     Build an SDist and wheel.
     """
@@ -248,8 +248,8 @@ pip-tools' compile on every Python version to pin dependencies, as well as provi
 a standard interface to update Python and project listing update scripts. The docs
 job there runs mkdocs instead of Sphinx. Other PyPA projects using nox include
 [pip](https://github.com/pypa/pip/blob/main/noxfile.py),
-[pipx](https://github.com/pypa/pipx/blob/main/noxfile.py),
+[pipx](https://github.com/pypa/pipx/blob/master/noxfile.py),
+[manylinux]((https://github.com/pypa/manylinux/blob/master/noxfile.py),
 [packaging](https://github.com/pypa/packaging/blob/main/noxfile.py), and
 [packaging.python.org](https://github.com/pypa/packaging.python.org/blob/main/noxfile.py).
-
 

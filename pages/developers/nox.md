@@ -29,7 +29,8 @@ expected to use nox for linting on CI, or often even for testing on CI, even if
 those tasks are provided for users. Nox is a few seconds slower than running
 directly in a custom environment - but for new users, and rarely run tasks, it
 is _much_ faster than explaining how to get setup or manually messing with
-virtual environments.
+virtual environments. It is also highly reproducible, creating and destroying the
+temporary environment each time.
 
 You _should_ use nox to make it easy and simple for new contributors to run
 things. You _should_ use nox to make specialized developer tasks easy. You
@@ -252,4 +253,3 @@ job there runs mkdocs instead of Sphinx. Other PyPA projects using nox include
 [manylinux]((https://github.com/pypa/manylinux/blob/master/noxfile.py),
 [packaging](https://github.com/pypa/packaging/blob/main/noxfile.py), and
 [packaging.python.org](https://github.com/pypa/packaging.python.org/blob/main/noxfile.py).
-

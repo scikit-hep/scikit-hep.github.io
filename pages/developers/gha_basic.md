@@ -29,7 +29,7 @@ on:
   pull_request:
   push:
     branches:
-    - master
+    - main
 
 jobs:
 ```
@@ -43,13 +43,13 @@ PRs targeting those branches only).
 ## Pre-commit
 
 If you use [pre-commit](https://pre-commit.com) (and you should), and you don't
-want to / can't use [results.pre-commit.ci](https://results.pre-commit.ci) yet,
+want to / can't use [pre-commit.ci](https://pre-commit.ci) yet,
 then this is a job that will check pre-commit for you:
 
 {% raw %}
 ```yaml
-  pre-commit:
-    name: Format
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -58,10 +58,11 @@ then this is a job that will check pre-commit for you:
 ```
 {% endraw %}
 
-If you do use [results.pre-commit.ci](https://results.pre-commit.ci), but you
+If you do use [pre-commit.ci](https://pre-commit.ci), but you
 need this job to run a manual check, like check-manifest, then you can keep it
 but just use `with: extra_args: --all-files --hook-stage manual check-manifest`
-to run just this one check.
+to run just this one check. You can also use `needs: lint` in your other jobs
+to keep them from running if the lint check does not pass.
 
 ## Unit tests
 
@@ -75,7 +76,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
 
 {% raw %}
 ```yaml
-  checks:
+  tests:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -83,11 +84,12 @@ OS's if you'd like by adding them to the matrix and inputting them into
         python-version:
         - 2.7
         - 3.6
-        - 3.8
-        - 3.9  # No Numba yet
+        - 3.9
     name: Check Python ${{ matrix.python-version }}
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Only needed if using setuptools-scm
 
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
@@ -107,10 +109,6 @@ A few things to note from above:
 The matrix should contain the versions you are interested in. You can also test
 on other OS's if you are building any extensions or are worried about your
 package on macOS or Windows. Fail-fast is optional.
-
-It currently is still simplest to use version 1 of the checkout, since version
-2 strips too much from the repository for `setuptools_scm` to work. Recently,
-using `with: fetch-depth: 0` started recovering tag history (it didn't originally).
 
 The formula here for installing should be identical for all users; and using
 [PEP 517](https://www.python.org/dev/peps/pep-0517/)/[518](https://www.python.org/dev/peps/pep-0518/)
@@ -147,3 +145,57 @@ updates to the action daily, and will make a PR if there are updates, including
 the changelog and commit summary in the PR.
 
 You can use this for other ecosystems too, including Python.
+
+## Common needs
+
+### Single OS steps
+
+If you need to have a step run only on a specific OS, use an if on that step with `runner.os`:
+
+```yaml
+      if: runner.os != 'Windows' # also 'macOS' and 'Linux'
+```
+
+Using `runner.os` is better than `matrix.<something>`. You also have an
+environment variable `$RUNNER_OS` as well. Single quotes are required here.
+
+### Changing the environment in a step
+
+If you need to change environment variables for later steps, such combining
+with an if condition for only for one OS, then you add it to a special file:
+
+```yaml
+      run: echo "MY_VAR=1" >> $GITHUB_ENV
+```
+
+Later steps will see this environment variable.
+
+### Common useful actions
+
+There are a variety of useful actions. There are GitHub supplied ones:
+
+* [actions/checkout](https://github.com/actions/checkout): Almost always the first action. v2 does not keep Git history unless `with: fetch-depth: 0` is included.
+* [actions/setup-python](https://github.com/actions/setup-python): Always use v2, as that can setup any Python, including uninstalled ones and pre-releases. 
+* [actions/cache](https://github.com/actions/cache): Can store files and restore them on future runs, with a settable key. Use v2.
+* [actions/upload-artifact](https://github.com/actions/upload-artifact): Upload a file to be accessed from the UI or from a later job. Use v2. 
+* [actions/download-artifact](https://github.com/actions/download-artifact): Download a file that was previously uploaded, often for releasing. Match upload-artifact version. 
+
+And many other useful ones:
+
+* [ilammy/msvc-dev-cmd](https://github.com/ilammy/msvc-dev-cmd): Setup MSVC compilers.
+* [jwlawson/actions-setup-cmake](https://github.com/jwlawson/actions-setup-cmake): Setup any version of CMake on almost any image.
+* [excitedleigh/setup-nox](https://github.com/excitedleigh/setup-nox): Setup all versions of Python and provide nox.
+* [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish): Publish Python packages to PyPI.
+* [pre-commit/action](https://github.com/pre-commit/action): Run pre-commit with built-in caching.
+* [conda-incubator/setup-miniconda](https://github.com/conda-incubator/setup-miniconda): Setup conda or mamba on GitHub Actions.
+* [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages): Deploy built files to to GitHub Pages
+* [ruby/setup-miniconda](https://github.com/ruby/setup-ruby) Setup Ruby if you need it for something.
+
+There are also a few useful tools installed which can really simplify your workflow or adding custom actions:
+
+* [pipx](https://github.com/pypy/pipx): This is pre-installed on all runners (GitHub uses to set up other things), and is kept up to date. It enables you to use any PyPI application in a single line with `pipx run <app>`.
+
+
+### Custom actions
+
+You can [write your own actions](https://docs.github.com/en/actions/creating-actions) locally or in a shared GitHub repo in either a shell (called "composite", but they only support shell steps and merge the outputs - so basically a shell action), JavaScript, or Docker. Combined with pipx, shell actions are very easy to write!

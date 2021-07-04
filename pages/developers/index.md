@@ -17,7 +17,7 @@ Veteran developers should still check out [introduction][intro], as it has a gui
 
 Following that, there are recommendations for [style][], intended to promote
 good practices and to ensure continuity across the packages. There is a
-[dedicated page for static type checking][mypy]. There is then a guide on
+[dedicated page for static type checking with MyPy][mypy]. There is then a guide on
 [packaging][], which should help in ensuring a consistent developer and user
 experience when working with distribution.
 

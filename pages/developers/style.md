@@ -172,7 +172,7 @@ run all checks:
 </details>
 
 
-## Type checking (new)
+## Type checking
 
 One of the most exciting advancements in Python in the last 10 years has been
 static type hints. Scikit-HEP is just beginning to make sure packages are
@@ -188,6 +188,8 @@ supported.  [MyPy](https://mypy.readthedocs.io/en/stable/) is suggested for
 type checking, though there are several other good options to try, as well. If
 you have built-in support for type checking, you need to add empty `py.typed`
 files to all packages/subpackages to indicate that you support it.
+
+Read more about type checking on the [dedicated page][mypy page].
 
 The MyPy addition for pre-commit:
 
@@ -246,6 +248,7 @@ then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
 mypy: <option>` at the top of a file. You can also pass `--strict` on the
 command line.
 
+[mypy page]: {{ site.baseurl }}{% link pages/developers/mypy.md %}
 
 ## Flake8
 

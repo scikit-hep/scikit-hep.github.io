@@ -2,7 +2,7 @@
 layout: page
 title: "GHA: Binary wheels"
 permalink: /developer/gha_wheels
-nav_order: 9
+nav_order: 12
 parent: Developer information
 ---
 

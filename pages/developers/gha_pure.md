@@ -2,7 +2,7 @@
 layout: page
 title: "GHA: Pure Python wheels"
 permalink: /developer/gha_pure
-nav_order: 8
+nav_order: 11
 parent: Developer information
 ---
 

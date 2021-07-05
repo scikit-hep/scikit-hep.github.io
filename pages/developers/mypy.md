@@ -2,7 +2,7 @@
 layout: page
 title: "Static Type Checking"
 permalink: /developer/mypy
-nav_order: 4
+nav_order: 7
 parent: Developer information
 ---
 

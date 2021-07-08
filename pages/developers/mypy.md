@@ -90,18 +90,102 @@ type hints for (mostly) the standard library.
 Third party libraries that are typed sometimes forget this last step, by the
 way!
 
+## Features
+
+### Type narrowing
+
+One of the key features of type checking is type narrowing. The type checker
+monitors the types of a variable, and "narrows" it when something restricts it.
+For example:
+
+```python
+x: Union[A, B]
+if isinstance(x, A):
+    reveal_type(x)
+else:
+    reveal_type(x)
+```
+
+This will print `A`, then `B`. It prints `A` because that's the only thing that
+can exist in the first branch, and then the remaining types (`B`) must be the
+type in the second branch. And it prints both because it's not actually running
+the code, just type checking it, so both sides of the if are checked.
+
+You can manually force type narrowing with assert:
+
+```python
+x: Union[A, B]
+assert isinstance(x, A)
+reveal_type(x)
+```
+
+This will print `A` because you removed B via the type narrowing using the
+`assert`.
+
+
+### Protocols
+
+One of the best features of MyPy is support for structural subtyping via
+Protocols - formalized duck-typing, basically. This allows cross library
+interoperability, unlike traditional inheritance. Here’s how it works:
+
+```python
+from typing import Protocol  # or typing_extensions for < 3.8
+
+
+class Duck(Protocol):
+    def quack() -> str:
+        ...
+```
+
+Now any object that can "quack" (and return a string) is a Duck. We can even
+add `@runtime_checkable` which will allow us to check this (minus the types) at
+runtime in `isinstance`. So now we can design code like this:
+
+```python
+def pester_duck(a_duck: Duck) -> None:
+    print(a_duck.quack())
+    print(a_duck.quack())
+```
+
+And the type checker will ensure we only write code valid on all `Duck`s. And,
+we can write a duck implementation and test it like this:
+
+```python
+class MyDuck:
+    def quack() -> str:
+        return "quack"
+```
+
+This will pass a check for being a `Duck`, for example something like this:
+
+```python
+import typing
+
+if typing.TYPE_CHECKING:
+    _: Duck = typing.cast(MyDuck, None)
+```
+
+Notice the complete lack of dependencies here. We don’t need `MyDuck` to write
+`pester_duck`, or vice-versa. And, we don't even need `Duck` to write either one at
+runtime! The dependence on `Duck` for `pester_duck` is entirely a type-check-time
+dependence (unless we want to use a `runtime_checkable` powered `isinstance`).
+
+There are lots of built-in Protocols, most of which pre-date typing and are
+available in an Abstract Base Class form. Most of them check for one or more
+special methods, like `Iterable`, `Iterator`, etc.
+
 ### Other features
 
 Static typing has some great features worth checking out:
 
 * Unions (New syntax coming in Python 3.10)
 * Generic Types (New syntax in Python 3.9)
-* Protocols
 * Literals
 * TypedDict
 * Nicer NamedTuple definition (very popular in Python 3 code)
-* MyPy validates the Python version you ask for, regardless of what version you
-  are running.
+* MyPy validates with the Python version you ask for, regardless of what
+  version you are actually running.
 
 
 ## Complete example

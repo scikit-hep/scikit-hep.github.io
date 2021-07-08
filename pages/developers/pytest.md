@@ -14,7 +14,7 @@ Tests are crucial to writing reliable software. A good test suite allows you to:
 * Refactor and cleanup your code with confidence,
 * Evaluate the effect of additions and changes.
 
-Python used to have three major choices for tests; but now PyTest is used almost exclusively. Testing is never an install requirement, so there's no harm in using PyTest. The goals of writing good tests are:
+Python used to have three major choices for tests; but now [PyTest][] is used almost exclusively. Testing is never an install requirement, so there's no harm in using PyTest. The goals of writing good tests are:
 
 * Simplicity: the easer / nicer you tests are to write, the more you will write.
 * Coverage: using as many inputs as possible increases the chances of finding something that breaks.
@@ -23,7 +23,7 @@ Python used to have three major choices for tests; but now PyTest is used almost
 
 > ### What about other choices?
 >
-> The alternative library, "nose", has been abandoned in favor of PyTest, which can run nose-style tests. The standard library has a test suite as well, but it's extremely verbose and complex; and since "developers" run tests, your test requirements don't affect users. And PyTest can run stdlib style testing too. So just use PyTest. All major packages use it too, including NumPy. Most other choices, like Hypothosis, are related to PyTest.
+> The alternative library, "nose", has been abandoned in favor of PyTest, which can run nose-style tests. The standard library has a test suite as well, but it's extremely verbose and complex; and since "developers" run tests, your test requirements don't affect users. And PyTest can run stdlib style testing too. So just use PyTest. All major packages use it too, including NumPy. Most other choices, like [Hypothesis][], are related to PyTest.
 
 ### Basic test structure
 
@@ -40,6 +40,32 @@ This looks simple, but it is doing several things:
 
 * The name of the function includes `test`, so it will run as a test.
 * The Python `assert` statement is rewritten by PyTest to capture exactly what happens. If it fails, you will get a clear, detailed report on what each value was.
+
+
+### Configuring PyTest
+
+PyTest supports configuration in `pytest.ini`, `setup.cfg`, or, since version 6, `pyproject.toml`. If you can require PyTest 6 (in other words, if Python 3.6+ is fine - PyTest is a developer requirement, not a user one, so limiting it is fine), then use `pyproject.toml`. This is an example configuration:
+
+```toml
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra"
+testpaths = [
+    "tests",
+]
+```
+
+The `minversion` will print a nicer error if your PyTest is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The addopts setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. Finally, `testpaths` will limit pytest to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
+
+PyTest also checks the current and parent directories for a `conftest.py` file. If it finds them, they will get run top-to-bottom. These files let you add fixtures and other python configuration per-directory.
+
+In general, do not place a `__init__.py` file in your tests; there's not often a reason to make the test directory importable, and it can confuse package discovery algorithms.
+
+### Running PyTest
+
+You can run pytest directly with `pytest` or `python -m pytest`. You can optionally give a directory or file to run on. You can also select just some subset of tests with `-k <expression>`, or an exact test with `filename.py::test_name`.
+
+If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--show-locals` will print out the local values in the tracebacks. You can run pytest with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). PyTest also supports `breakpoint()` in Python 3.7+. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
 
 ## Guidelines for writing good tests
 
@@ -156,7 +182,9 @@ Now every test in the file this is in (or the directory that this is in if in co
 
 ### Tests should be organized
 
-You can use `pytest.mark.*` to mark tests, so you can easily turn on or off groups of tests, or do something else special with marked tests, like tests marked "slow", for example. Probably the most useful built-in mark is `skipif`:
+You can use `pytest.mark.*` to [mark](https://docs.pytest.org/en/stable/mark.html) tests, so you can easily turn on or off groups of tests, or do something else special with marked tests, like tests marked "slow", for example. Just add `-m <marker>` when running PyTest to run a group of marked tests. This is an expression; you can use `not <marker>` as well.
+
+Probably the most useful built-in mark is `skipif`:
 
 ```python
 @pytest.mark.skipif("sys.version_info < (3, 8)")
@@ -217,6 +245,10 @@ If this changes, we immediately know exactly what changed - and this runs
 instantly, we aren't making any images! While this is a little work to set up,
 it pays off in the long run.
 
-The documentation at [pytest-mock](https://pypi.org/project/pytest-mock/) is
-helpful, though most of it just redirects to the standard library
-[unittest.mock](https://docs.python.org/3/library/unittest.mock.html).
+The documentation at [pytest-mock][] is helpful, though most of it just
+redirects to the standard library [unittest.mock][].
+
+[Hypothesis]: https://hypothesis.readthedocs.io
+[PyTest]: https://docs.pytest.org 
+[pytest-mock]: https://pypi.org/project/pytest-mock/
+[unittest.mock]: https://docs.python.org/3/library/unittest.mock.html

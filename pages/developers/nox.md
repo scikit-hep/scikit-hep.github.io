@@ -120,6 +120,7 @@ You can parametrize sessions. either on Python or on any other item.
 ```python
 # Shortcut to parametrize Python
 @nox.session(python=["3.6", "3.7])
+def my_session(session: nox.Session) -> None: ...
 
 # General parametrization
 @nox.session

@@ -4,6 +4,14 @@
   <h3 id="{{cat.name}}">{{cat.title}}:</h3>
   {% for item in listing -%}
     {%- assign project = item[1] -%}
+    {% if include.deprecated %}
+      {%- assign include_not_deprecated = false -%}
+    {% else %}
+      {%- assign include_not_deprecated = true -%}
+    {% endif %}
+    {%- if include_not_deprecated and project.deprecated -%}
+      {%- continue -%}
+    {%- endif -%}
     {%- assign classes = "project" -%}
     {%- if project.affiliated -%}
       {%- assign classes = classes | append: " affiliated" -%}

@@ -9,4 +9,4 @@ has_children: true
 Projects {#projects}
 ========
 
-{% include package_table.html badges="True" %}
+{% include package_table.html badges="True" deprecated="True" %}

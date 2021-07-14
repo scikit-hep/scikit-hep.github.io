@@ -70,7 +70,7 @@ local types.
 
 By default, MyPy does as little as possible, so that you can add it iteratively
 to a code base. By default:
-    
+
 * All untyped variables and return values will be `Any`.
 * Code inside untyped functions is not checked _at all_.
 
@@ -208,7 +208,7 @@ def g(x: Union[str, int]) -> None:
         print("string", x.lower())
     else:
         print("int", x)
-    
+
     # Calling x.lower() is invalid here!
 ```
 

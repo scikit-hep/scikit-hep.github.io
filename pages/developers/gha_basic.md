@@ -175,10 +175,10 @@ Later steps will see this environment variable.
 There are a variety of useful actions. There are GitHub supplied ones:
 
 * [actions/checkout](https://github.com/actions/checkout): Almost always the first action. v2 does not keep Git history unless `with: fetch-depth: 0` is included.
-* [actions/setup-python](https://github.com/actions/setup-python): Always use v2, as that can setup any Python, including uninstalled ones and pre-releases. 
+* [actions/setup-python](https://github.com/actions/setup-python): Always use v2, as that can setup any Python, including uninstalled ones and pre-releases.
 * [actions/cache](https://github.com/actions/cache): Can store files and restore them on future runs, with a settable key. Use v2.
-* [actions/upload-artifact](https://github.com/actions/upload-artifact): Upload a file to be accessed from the UI or from a later job. Use v2. 
-* [actions/download-artifact](https://github.com/actions/download-artifact): Download a file that was previously uploaded, often for releasing. Match upload-artifact version. 
+* [actions/upload-artifact](https://github.com/actions/upload-artifact): Upload a file to be accessed from the UI or from a later job. Use v2.
+* [actions/download-artifact](https://github.com/actions/download-artifact): Download a file that was previously uploaded, often for releasing. Match upload-artifact version.
 
 And many other useful ones:
 

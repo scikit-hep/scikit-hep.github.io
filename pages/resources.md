@@ -114,7 +114,7 @@ Presentations
     -   *The Scikit-HEP project*, Matthieu Marinangeli
 -   **28 Feb 2018:** [IML
     Meeting](https://indico.cern.ch/event/686641/), CERN:
-    -   *Uproot: rapidly moving data from ROOT to Numpy and Pandas*, Jim
+    -   *Uproot: rapidly moving data from ROOT to NumPy and Pandas*, Jim
         Pivarski
 -   **23 Oct. 2017:** [DIANA/HEP](http://www.diana-hep.org/) project
     [topical meeting](https://indico.cern.ch/event/664968/), CERN:

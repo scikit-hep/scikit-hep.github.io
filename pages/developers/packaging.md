@@ -329,7 +329,7 @@ See our [Supported Python Versions][] statement for more information on
 `python_requires`.
 
 With the exception of Flit, all package configuration should be possible via
-`pyproject.toml`, such as PyTest>6:
+`pyproject.toml`, such as pytest>6:
 
 
 ```toml

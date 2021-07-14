@@ -6,4 +6,3 @@ url: https://github.com/scikit-hep/pyhepmc
 # repo: only if different from url
 badges:
   pypi: pyhepmc
-

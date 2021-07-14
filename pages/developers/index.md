@@ -24,7 +24,7 @@ experience when working with distribution.
 A section on CI follows, with a [general setup guide][gha_basic], and then two
 choices for using CI to distribute your package, on for [pure
 Python][gha_pure], and one for [compiled extensions][gha_wheels]. You can read
-about setting up good tests on the [PyTest page][pytest].
+about setting up good tests on the [pytest page][pytest].
 
 Finally, there are [badge recommendations][badges] for your readme, including the Scikit-HEP badge!
 

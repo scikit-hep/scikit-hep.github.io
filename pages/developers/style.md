@@ -374,7 +374,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
     args: ["--py36-plus"]
 ```
 
-[PyUpgrade]: https://github.com/asottile/pyupgrade: 
+[PyUpgrade]: https://github.com/asottile/pyupgrade:
 
 
 ## Setup.cfg format (extra)
@@ -396,7 +396,7 @@ Python hides important warnings by default, mostly because it's trying to be
 nice to users. You are a developer, you don't want it to be "nice". You want to
 find and fix warnings before they cause user errors! Always run with `-Wd`, or
 set `export PYTHONWARNINGS=d` in your environment.
-You can also add the following to your `pyproject.toml` file for PyTest:
+You can also add the following to your `pyproject.toml` file for pytest:
 
 ```ini
 [tool.pytest]

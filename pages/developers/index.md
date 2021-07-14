@@ -21,8 +21,10 @@ good practices and to ensure continuity across the packages. There is a
 [packaging][], which should help in ensuring a consistent developer and user
 experience when working with distribution.
 
-A section on CI follows, with a [general setup guide][gha_basic], and then two choices for using CI to distribute
-your package, on for [pure Python][gha_pure], and one for [compiled extensions][gha_wheels].
+A section on CI follows, with a [general setup guide][gha_basic], and then two
+choices for using CI to distribute your package, on for [pure
+Python][gha_pure], and one for [compiled extensions][gha_wheels]. You can read
+about setting up good tests on the [PyTest page][pytest].
 
 Finally, there are [badge recommendations][badges] for your readme, including the Scikit-HEP badge!
 
@@ -36,6 +38,7 @@ Once you have completed the guidelines, there is a [cookiecutter][] project, [Sc
 [gha_basic]: {{ site.baseurl }}{% link pages/developers/gha_basic.md %}
 [gha_pure]: {{ site.baseurl }}{% link pages/developers/gha_pure.md %}
 [gha_wheels]: {{ site.baseurl }}{% link pages/developers/gha_wheels.md %}
+[pytest]: {{ site.baseurl }}{% link pages/developers/pytest.md %}
 [badges]: {{ site.baseurl }}{% link pages/developers/badges.md %}
 
 [cookiecutter]: https://cookiecutter.readthedocs.io

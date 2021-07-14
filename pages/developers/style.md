@@ -405,7 +405,7 @@ addopts = "-Wd"
 
 ## Spelling (extra)
 
-You can and should check for spelling errors in your code too. If you want 
+You can and should check for spelling errors in your code too. If you want
 to add this, you can use `codespell` for common spelling mistakes. For example:
 
 ```yaml

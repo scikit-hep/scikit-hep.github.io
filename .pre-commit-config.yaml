@@ -19,3 +19,10 @@ repos:
     language: pygrep
     entry: PyBind|Numpy|Cmake|CCache|PyTest
     exclude: .pre-commit-config.yaml
+
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.1.0
+  hooks:
+  - id: codespell
+    exclude: ^Gemfile.lock$
+    args: ["-L", "hist"]

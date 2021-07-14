@@ -132,7 +132,7 @@ updates:
     schedule:
       interval: "daily"
     ignore:
-      # Offical actions have moving tags like v1
+      # Official actions have moving tags like v1
       # that are used, so they don't need updates here
       - dependency-name: "actions/*"
 ```

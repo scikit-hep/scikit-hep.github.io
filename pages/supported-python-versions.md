@@ -82,7 +82,7 @@ already dropped it, and it really limits use of static typing
 "foundational" Scikit-HEP libraries have not yet dropped 3.6 support since we are
 in more active development than the libraries that prompted NEP 29, but some
 packages already are dropping support and more will follow. Users should make an
-effort to always use at least Python 3.7 in analysis, and perferably the highest
+effort to always use at least Python 3.7 in analysis, and preferably the highest
 version possible. Note that due to usage of "internal" bytecode, Numba can take up
 to 5 months to update after a Python release.
 

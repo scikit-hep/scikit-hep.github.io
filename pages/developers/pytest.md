@@ -16,7 +16,7 @@ Tests are crucial to writing reliable software. A good test suite allows you to:
 
 Python used to have three major choices for tests; but now [pytest][] is used almost exclusively. Testing is never an install requirement, so there's no harm in using pytest. The goals of writing good tests are:
 
-* Simplicity: the easer / nicer your tests are to write, the more you will write.
+* Simplicity: the easier / nicer your tests are to write, the more you will write.
 * Coverage: using as many inputs as possible increases the chances of finding something that breaks.
 * Performance: the faster the tests, the more situations you can run your tests in CI.
 * Reporting: when things break, you should get good information about what broke.

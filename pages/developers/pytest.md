@@ -16,7 +16,7 @@ Tests are crucial to writing reliable software. A good test suite allows you to:
 
 Python used to have three major choices for tests; but now [PyTest][] is used almost exclusively. Testing is never an install requirement, so there's no harm in using PyTest. The goals of writing good tests are:
 
-* Simplicity: the easer / nicer you tests are to write, the more you will write.
+* Simplicity: the easer / nicer your tests are to write, the more you will write.
 * Coverage: using as many inputs as possible increases the chances of finding something that breaks.
 * Performance: the faster the tests, the more situations you can run your tests in CI.
 * Reporting: when things break, you should get good information about what broke.
@@ -55,7 +55,7 @@ testpaths = [
 ]
 ```
 
-The `minversion` will print a nicer error if your PyTest is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The addopts setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. Finally, `testpaths` will limit pytest to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
+The `minversion` will print a nicer error if your PyTest is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The `addopts` setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. Finally, `testpaths` will limit PyTest to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
 
 PyTest also checks the current and parent directories for a `conftest.py` file. If it finds them, they will get run top-to-bottom. These files let you add fixtures and other python configuration per-directory.
 
@@ -63,7 +63,7 @@ In general, do not place a `__init__.py` file in your tests; there's not often a
 
 ### Running PyTest
 
-You can run pytest directly with `pytest` or `python -m pytest`. You can optionally give a directory or file to run on. You can also select just some subset of tests with `-k <expression>`, or an exact test with `filename.py::test_name`.
+You can run PyTest directly with `pytest` or `python -m pytest`. You can optionally give a directory or file to run on. You can also select just some subset of tests with `-k <expression>`, or an exact test with `filename.py::test_name`.
 
 If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--show-locals` will print out the local values in the tracebacks. You can run pytest with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). PyTest also supports `breakpoint()` in Python 3.7+. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
 

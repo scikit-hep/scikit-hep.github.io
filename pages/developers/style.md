@@ -403,6 +403,36 @@ You can also add the following to your `pyproject.toml` file for pytest:
 addopts = "-Wd"
 ```
 
+## Spelling (extra)
+
+You can and should check for spelling errors in your code too. If you want 
+to add this, you can use codespell for common spelling errors. For example:
+
+```yaml
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.1.0
+  hooks:
+  - id: codespell
+    args: ["-L", "sur"]
+```
+
+You can list allowed spellings in a comma separated string passed to `-L` (or
+`--ignore-words-list` - usually it is better to use long options when you are
+not typing things live). The example above will allow "Big Sur".
+
+You can also use a local pygrep check to eliminate common capitalization
+errors, such as the one below:
+
+```yaml
+- repo: local
+  hooks:
+  - id: disallow-caps
+    name: Disallow improper capitalization
+    language: pygrep
+    entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
+    exclude: .pre-commit-config.yaml
+```
+
 ## Clang-format (C++ only)
 
 If you have C++ code, you should have a `.clang-format` file and use the

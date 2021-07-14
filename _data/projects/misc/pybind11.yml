@@ -1,0 +1,30 @@
+name: pybind11
+description: >
+  A C++11 API for CPython and PyPy. Can create extension modules written purely
+  in C++ or in C++ and Python; no new language, separate generation step or
+  tooling required (header only templated C++).
+url: https://github.com/pybind/pybind11
+docs: https://pybind11.readthedocs.io
+affiliated: true
+longdescription: |
+
+  The [pybind11](https://pybind11.readthedocs.io) project provides a clean and
+  familiar interface between Python and C++. Unlike the project that inspired
+  it, [Boost.Python](https://www.boost.org/doc/libs/1_76_0/libs/python/doc/html/index.html),
+  it is header only, depending only on C++11 features and works with any build
+  system, including setuptools and CMake, without adding any dependencies.
+  Unlike [Cython](https://cython.readthedocs.io), there is no new language
+  required - you'll just be working in vanilla C++11. Unlike
+  [SWIG](http://swig.org), you can build up your bindings one part at a time,
+  adding Pythonizations or custom interfaces. And unlike
+  [ROOT](https://root.cern) or
+  [cppyy](https://cppyy.readthedocs.io/en/latest/), it creates compiled
+  binaries that are easy to distribute without requiring extra user
+  dependencies (though those tools can bind templates without specializing them
+  as a result).  It also supports going the other direction and embedding
+  Python in a C++ application.
+
+# repo: only if different from url
+badges:
+  pypi: pybind11
+  conda: pybind11

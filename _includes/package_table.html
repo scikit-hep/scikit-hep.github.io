@@ -35,10 +35,10 @@
         <div class="inner">
           {{project.description | markdownify }}
           {%- if project.affiliated -%}
-            <div class="noted">🤝 Affiliated</div> 
+            <div class="noted">🤝 Affiliated</div>
           {%- endif %}
           {%- if project.deprecated -%}
-            <div class="noted">❌ Deprecated</div> 
+            <div class="noted">❌ Deprecated</div>
           {%- endif %}
         </div>
         {%- if include.badges -%}
@@ -47,7 +47,7 @@
               <img src="https://img.shields.io/conda/vn/conda-forge/{{ project.badges.conda-forge}}.svg?logo=Conda-Forge&color=brightgreen&logoColor=white"
                    alt="Conda-Forge"/>
             </a>
-          {%- endif -%}  
+          {%- endif -%}
           {%- if project.badges.pypi -%}
             <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
               <img src="https://img.shields.io/pypi/v/{{project.badges.pypi}}?color=blue&logo=PyPI&logoColor=white"
@@ -72,11 +72,10 @@
             <a class="badge" href="{{project.docs}}">
               <img src="https://img.shields.io/badge/docs-available-brightgreen"
                    alt="Docs available"/>
-            </a> 
+            </a>
           {%- endif -%}
         {%- endif -%}
       </div>
     </div>
   {% endfor %}
 {% endfor %}
-

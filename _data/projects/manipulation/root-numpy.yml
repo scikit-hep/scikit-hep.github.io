@@ -8,4 +8,3 @@ deprecated: true
 badges:
   pypi: root-numpy
   conda-forge: root_numpy
-

@@ -1,6 +1,6 @@
 name: histbook
 projlogo: /assets/images/projlogo/logo_histbook.png
-description: Versatile, high-performance histogram toolkit for Numpy.
+description: Versatile, high-performance histogram toolkit for NumPy.
 url: https://github.com/scikit-hep/histbook
 docs: https://histbook.readthedocs.io/
 deprecated: true
@@ -8,4 +8,3 @@ deprecated: true
 # repo: only if different from url
 badges:
   pypi: histbook
-

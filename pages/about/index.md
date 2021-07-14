@@ -24,7 +24,7 @@ For what concerns the project grand structure, it should be seen as a
 *pillars*, which are seen to embrace all major topics involved in a
 physicist\'s work. These are:
 
-- **Datasets**: data in various sources, such as ROOT, Numpy/Pandas,
+- **Datasets**: data in various sources, such as ROOT, NumPy/Pandas,
   databases, wrapped in a common interface.
 - **Aggregations**: e.g. histograms that summarize or project a
   dataset.

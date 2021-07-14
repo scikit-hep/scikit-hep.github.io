@@ -71,7 +71,7 @@ logs.
 
 Nox is a tool for running tasks, called "sessions", inside temporary virtual
 environments. It is configured through Python and is designed to resemble
-PyTest. The file it looks for is called `noxfile.py` by default. This is an example of a simple nox file:
+pytest. The file it looks for is called `noxfile.py` by default. This is an example of a simple nox file:
 
 ```python
 import nox
@@ -91,7 +91,7 @@ use `.install()` to install inside the environment, and `.run()` to run inside
 the environment. We are also using `session.posargs` to allow extra arguments
 to be passed through to pytest. There are
 [more useful methods](https://nox.thea.codes/en/stable/config.html#module-nox.sessions)
-as well. 
+as well.
 
 You can run this using:
 
@@ -129,7 +129,7 @@ def my_session(session: nox.Session, letter: str) -> None: ...
 ```
 
 The optional `ids=` parameter can give the parametrization nice names, like in
-PyTest.
+pytest.
 
 If a user does not have a particular version of Python installed, it will be
 skipped. You can use a Docker container to run in an environment where all

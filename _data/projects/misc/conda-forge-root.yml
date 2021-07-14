@@ -38,7 +38,7 @@ longdescription: |
       - root       # Conda-Forge ROOT
       - uproot     # Can be mixed with other Scikit-HEP packages
     ```
-    
+
     [ROOT]:           https://root.cern
     [miniconda]:      https://docs.conda.io/en/latest/miniconda.html
     [Conda-Forge]:    https://conda-forge.org

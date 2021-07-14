@@ -9,4 +9,3 @@ docs: https://boost-histogram.readthedocs.io/en/latest/
 badges:
   pypi: boost-histogram
   conda-forge: boost-histogram
-

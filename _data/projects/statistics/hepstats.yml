@@ -9,4 +9,3 @@ docs: https://scikit-hep.org/hepstats/
 badges:
   pypi: hepstats
   conda-forge: hepstats
-

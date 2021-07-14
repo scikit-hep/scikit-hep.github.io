@@ -39,7 +39,7 @@ you to click a button in the GUI to trigger a build, which is perfect for
 testing wheels before making a release; you can download them from "artifacts".
 You can even define variables that you can set in the GUI and access in the CI!
 
-[workflow_dispatch]: https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/ 
+[workflow_dispatch]: https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 
 ### Useful suggestion:
 

@@ -57,7 +57,7 @@ testpaths = [
 
 The `minversion` will print a nicer error if your PyTest is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The `addopts` setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. Finally, `testpaths` will limit PyTest to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
 
-PyTest also checks the current and parent directories for a `conftest.py` file. If it finds them, they will get run top-to-bottom. These files let you add fixtures and other python configuration per-directory.
+PyTest also checks the current and parent directories for a `conftest.py` file. If it finds them, they will get run outer-most to inner-most. These files let you add fixtures and other PyTest configurations (like hooks for test discovery, etc) for each directory. For example, you could have a "mock" folder, and in that folder, you could have a `conftest.py` that has a mock fixture with `autouse=True`, then every test in that folder will get this mock applied.
 
 In general, do not place a `__init__.py` file in your tests; there's not often a reason to make the test directory importable, and it can confuse package discovery algorithms.
 

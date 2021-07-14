@@ -406,7 +406,7 @@ addopts = "-Wd"
 ## Spelling (extra)
 
 You can and should check for spelling errors in your code too. If you want 
-to add this, you can use codespell for common spelling errors. For example:
+to add this, you can use `codespell` for common spelling mistakes. For example:
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell

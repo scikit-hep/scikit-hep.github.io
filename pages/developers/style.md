@@ -195,7 +195,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.901
+  rev: v0.910
   hooks:
   - id: mypy
     files: src
@@ -350,7 +350,6 @@ either `pyproject.toml`:
 ```ini
 [tool.isort]
 profile = "black"
-multi_line_output = 3
 ```
 
 [isort]: https://pycqa.github.io/isort/
@@ -388,6 +387,7 @@ important parts (like Python classifiers) are in sync. This tool,
   rev: v1.17.0
   hooks:
   - id: setup-cfg-fmt
+    args: [--max-py-version=3.10]
 ```
 
 ## Python warnings (extra)
@@ -405,8 +405,10 @@ addopts = "-Wd"
 
 ## Spelling (extra)
 
-You can and should check for spelling errors in your code too. If you want
-to add this, you can use `codespell` for common spelling mistakes. For example:
+You can and should check for spelling errors in your code too. If you want to
+add this, you can use `codespell` for common spelling mistakes. Unlike most
+spell checkers, this has a list of mistakes it looks for, rather than a list of
+"valid" words. To use:
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell

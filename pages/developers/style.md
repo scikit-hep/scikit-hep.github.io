@@ -406,7 +406,7 @@ addopts = "-Wd"
 ## Spelling (extra)
 
 You can and should check for spelling errors in your code too. If you want to
-add this, you can use `codespell` for common spelling mistakes. Unlike most
+add this, you can use [codespell][] for common spelling mistakes. Unlike most
 spell checkers, this has a list of mistakes it looks for, rather than a list of
 "valid" words. To use:
 
@@ -420,7 +420,13 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 You can list allowed spellings in a comma separated string passed to `-L` (or
 `--ignore-words-list` - usually it is better to use long options when you are
-not typing things live). The example above will allow "Big Sur".
+not typing things live). The example above will allow "Big Sur". You can instead
+use a comma seperated list in `setup.cfg` or `.codespellrc`:
+
+```ini
+[codespell]
+ignore-words-list = sur
+```
 
 You can also use a local pygrep check to eliminate common capitalization
 errors, such as the one below:
@@ -434,6 +440,8 @@ errors, such as the one below:
     entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
     exclude: .pre-commit-config.yaml
 ```
+
+[codespell]: https://github.com/codespell-project/codespell
 
 ## Clang-format (C++ only)
 

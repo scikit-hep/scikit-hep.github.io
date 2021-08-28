@@ -23,7 +23,7 @@ Python used to have three major choices for tests; but now [pytest][] is used al
 
 > ### What about other choices?
 >
-> The alternative library, "nose", has been abandoned in favor of pytest, which can run nose-style tests. The standard library has a test suite as well, but it's extremely verbose and complex; and since "developers" run tests, your test requirements don't affect users. And pytest can run stdlib style testing too. So just use pytest. All major packages use it too, including NumPy. Most other choices, like [Hypothesis][], are related to pytest and just extend it
+> The alternative library, `nose`, has been abandoned in favor of `pytest`, which can run nose-style tests. The standard library has a test suite as well, but it's extremely verbose and complex; and since "developers" run tests, your test requirements don't affect users. And `pytest` can run stdlib style testing too. So just use `pytest`. All major packages use it too, including `NumPy`. Most other choices, like [Hypothesis][], are related to `pytest` and just extend it.
 
 ### Basic test structure
 
@@ -65,7 +65,7 @@ In general, do not place a `__init__.py` file in your tests; there's not often a
 
 You can run pytest directly with `pytest` or `python -m pytest`. You can optionally give a directory or file to run on. You can also select just some subset of tests with `-k <expression>`, or an exact test with `filename.py::test_name`.
 
-If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--show-locals` will print out the local values in the tracebacks. You can run pytest with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). pytest also supports `breakpoint()` in Python 3.7+. You can also start out in your debugger at the beginning of the last failed test with `--trace --lf`. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
+If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--show-locals` will print out the local values in the tracebacks. You can run `pytest` with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). `pytest` also supports `breakpoint()` in Python 3.7+. You can also start out in your debugger at the beginning of the last failed test with `--trace --lf`. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
 
 ## Guidelines for writing good tests
 
@@ -193,7 +193,7 @@ def test_only_on_37plus():
     assert f"{x = }" == "x = 3"
 ```
 
-Now this test will only run on Python 3.7 or newer, and will be skipped on earlier versions. You don't have to use a string for the condition, but if you don't, add a `reason=` so there will still be nice printout explaining why the test was skipped.
+Now this test will only run on Python 3.7 or newer, and will be skipped on earlier versions. You don't have to use a string for the condition, but if you don't, add a `reason=` so there will still be a nice printout explaining why the test was skipped.
 
 You can also use `xfail` for tests that are expected to fail (you can even strictly test them as failing if you want). You can use `parametrize` to make a single parameterized test instead of sharing them (with fixtures). There's a `filterwarnings` mark, too.
 

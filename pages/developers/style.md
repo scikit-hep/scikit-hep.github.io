@@ -421,7 +421,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 You can list allowed spellings in a comma separated string passed to `-L` (or
 `--ignore-words-list` - usually it is better to use long options when you are
 not typing things live). The example above will allow "Big Sur". You can instead
-use a comma seperated list in `setup.cfg` or `.codespellrc`:
+use a comma separated list in `setup.cfg` or `.codespellrc`:
 
 ```ini
 [codespell]

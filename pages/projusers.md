@@ -54,7 +54,7 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 
 [LHCb]: http://lhcb.web.cern.ch/
 [img-LHCb]: {{ site.baseurl }}{% link /assets/images/projusers/logo_lhcb.png %}
-{: width="140px"}
+{: width="120px"}
 
 
 Computing and software institutes

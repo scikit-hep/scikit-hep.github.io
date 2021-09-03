@@ -48,6 +48,15 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 [img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
 {: width="140px"}
 
+[![img-LHCb]][LHCb]
+
+[LHCb](http://lhcb.web.cern.ch/) - the LHCb (Large Hadron Collider beauty) experiment at CERN, Switzerland.
+
+[LHCb]: http://lhcb.web.cern.ch/
+[img-LHCb]: {{ site.baseurl }}{% link /assets/images/projusers/logo_lhcb.png %}
+{: width="140px"}
+
+
 Computing and software institutes
 ---------------------------------
 

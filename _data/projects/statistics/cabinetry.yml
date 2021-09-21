@@ -1,0 +1,9 @@
+name: cabinetry
+projlogo: /assets/images/projlogo/logo_cabinetry.png
+description: Design and steer profile likelihood fits.
+url: https://github.com/scikit-hep/scikit-hep
+docs: https://cabinetry.readthedocs.io/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: cabinetry

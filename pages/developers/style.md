@@ -449,48 +449,12 @@ If you have C++ code, you should have a `.clang-format` file and use the
 following pre-commit config:
 
 ```yaml
-- repo: local
-  hooks:
-  - id: docker-clang-format
-    name: Docker Clang Format
-    language: docker_image
-    types:
-    - c++
-    entry: unibeautify/clang-format:latest
-    args:
-    - -style=file
-    - -i
-```
-
-
-<details><summary>For a non-docker version: (click here)</summary>
-
-{%- capture "mymarkdown" -%}
-
-You can make a similar non-docker file, but that should sit beside the docker
-one for use on CI. You can install this non-docker file locally if you want it
-and have clang already installed. Note that formatting changes between versions,
-so only the above recipe is guaranteed to work identically to CI. The local one
-would look like this:
-
-```yaml
-- repo: local
+- repo: https://github.com/ssciwr/clang-format-precommit
+  rev: v12.0.1
   hooks:
   - id: clang-format
-    name: Clang Format
-    language: system
-    types:
-    - c++
-    entry: clang-format
-    args:
-    - -style=file
-    - -i
 ```
 
-{%- endcapture -%}
-
-{{ mymarkdown | markdownify }}
-
-</details>
+This will use 1-2 MB binary wheels from PyPI on all common platforms.
 
 [Flake8]: https://gitlab.com/pycqa/flake8

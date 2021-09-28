@@ -250,6 +250,27 @@ command line.
 
 [mypy page]: {{ site.baseurl }}{% link pages/developers/mypy.md %}
 
+## PyCln
+
+[PyCln][] will clean up your imports if you have any that are not needed. There is
+a Flake8 check for this, but it's usually nicer to automatically do the cleanup
+instead of forcing a user to manually delete unneeded imports.
+
+```yaml
+- repo: https://github.com/hadialqattan/pycln
+  rev: v1.0.3
+  hooks:
+  - id: pycln
+    args: [--config=pyproject.toml]
+```
+
+You can configure it in the `[tool.pycln]` section of your `pyproject.toml`:
+
+```toml
+[tool.pycln]
+all = true
+```
+
 ## Flake8
 
 [Flake8][] can check a collection of good practices for you, ranging from
@@ -494,3 +515,4 @@ would look like this:
 </details>
 
 [Flake8]: https://gitlab.com/pycqa/flake8
+[PyCln]: https://hadialqattan.github.io/pycln

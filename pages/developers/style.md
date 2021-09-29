@@ -470,7 +470,7 @@ If you have C++ code, you should have a `.clang-format` file and use the
 following pre-commit config:
 
 ```yaml
-- repo: https://github.com/ssciwr/clang-format-precommit
+- repo: https://github.com/ssciwr/clang-format-hook
   rev: v12.0.1
   hooks:
   - id: clang-format

@@ -246,7 +246,7 @@ And you can disable MyPy on a line with `# type: ignore`.  One strategy would
 be to enable `check_untyped_defs` first, followed by `disallow_untyped_defs`
 then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
 mypy: <option>` at the top of a file. You can also pass `--strict` on the
-command line.
+command line. `strict = true` is now allowed in config files, too.
 
 [mypy page]: {{ site.baseurl }}{% link pages/developers/mypy.md %}
 
@@ -360,7 +360,7 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: 5.8.0
+  rev: 5.9.3
   hooks:
   - id: isort
 ```
@@ -388,7 +388,7 @@ Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.19.1
+  rev: v2.29.0
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]
@@ -471,7 +471,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/ssciwr/clang-format-hook
-  rev: v12.0.1
+  rev: v13.0.0
   hooks:
   - id: clang-format
 ```

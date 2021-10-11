@@ -345,6 +345,16 @@ per-file-ignores =
 
 </details>
 
+## YesQA (extra)
+
+Over time, you can end up with extra "noqa" comments that are no longer needed. This is a flake8 helper that removes those comments when they are no longer required.
+
+```yaml
+- repo: https://github.com/asottile/yesqa
+  rev: v1.2.3
+  hooks:
+  - id: yesqa
+```
 
 ## isort (extra)
 
@@ -462,6 +472,24 @@ errors, such as the one below:
     exclude: .pre-commit-config.yaml
 ```
 
+## PyGrep hooks (extra)
+
+This is a [collection of pre-commit extra hooks](https://github.com/pre-commit/pygrep-hooks) repository that protects against some common, easy to detect mistakes. You can pick and choose the hooks you want from the repo, here are some common ones:
+
+```yaml
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: v1.9.0
+  hooks:
+  - id: python-check-blanket-noqa
+  - id: python-check-blanket-type-ignore
+  - id: python-no-log-warn
+  - id: python-no-eval
+  - id: python-use-type-annotations
+  - id: rst-backticks
+  - id: rst-directive-colons
+  - id: rst-inline-touching-normal
+```
+
 [codespell]: https://github.com/codespell-project/codespell
 
 ## Clang-format (C++ only)
@@ -477,6 +505,17 @@ following pre-commit config:
 ```
 
 This will use 1-2 MB binary wheels from PyPI on all common platforms.
+
+## Shellcheck (shell scripts only)
+
+If you have shell scripts, you can protect against common mistakes using [shellcheck](https://github.com/koalaman/shellcheck).
+
+```yaml
+- repo: https://github.com/shellcheck-py/shellcheck-py
+  rev: v0.7.2.1
+  hooks:
+  - id: shellcheck
+```
 
 [Flake8]: https://gitlab.com/pycqa/flake8
 [PyCln]: https://hadialqattan.github.io/pycln

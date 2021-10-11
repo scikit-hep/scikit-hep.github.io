@@ -474,7 +474,7 @@ errors, such as the one below:
 
 ## PyGrep hooks (extra)
 
-This is a [collection of pre-commit extra hooks](https://github.com/pre-commit/pygrep-hooks) repository that protects against some common, easy to detect mistakes. You can pick and choose the hooks you want from the repo, here are some common ones:
+This is a repository with a [collection of pre-commit extra hooks](https://github.com/pre-commit/pygrep-hooks) that protect against some common, easy to detect, mistakes. You can pick and choose the hooks you want from the repo; here are some common ones:
 
 ```yaml
 - repo: https://github.com/pre-commit/pygrep-hooks

@@ -423,7 +423,7 @@ important parts (like Python classifiers) are in sync. This tool,
   - id: setup-cfg-fmt
 ```
 
-Make sure you support Python 3.10! Otherise, add `args: [--max-py-version=3.9]`
+Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
 or whatever your maximum is.
 
 ## Python warnings (extra)

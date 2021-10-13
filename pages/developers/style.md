@@ -95,7 +95,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 21.5b2
+  rev: 21.9b0
   hooks:
   - id: black
 ```
@@ -113,7 +113,7 @@ You can add a Black badge to your repo as well if you want.
 
 In *very* specific situations, you may want to retain special formatting. After
 carefully deciding that it is a special use case, you can use `# fmt: on` and
-`#fmt: off` around a code block to have it keep custom formatting. *Always*
+`# fmt: off` around a code block to have it keep custom formatting. *Always*
 consider refactoring before you try this option! Most of the time, you can find
 a way to make the Blacked code look better by rewriting your code; factor out
 long unreadable portions into a variable, avoid writing matrices as 1D lists,
@@ -426,18 +426,6 @@ important parts (like Python classifiers) are in sync. This tool,
 Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
 or whatever your maximum is.
 
-## Python warnings (extra)
-
-Python hides important warnings by default, mostly because it's trying to be
-nice to users. You are a developer, you don't want it to be "nice". You want to
-find and fix warnings before they cause user errors! Always run with `-Wd`, or
-set `export PYTHONWARNINGS=d` in your environment.
-You can also add the following to your `pyproject.toml` file for pytest:
-
-```toml
-[tool.pytest]
-filterwarnings = ["error"]
-```
 
 ## Spelling (extra)
 

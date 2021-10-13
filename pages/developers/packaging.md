@@ -354,16 +354,32 @@ test =
   pytest >=6.0
 mpl =
   matplotlib >=2.0
-docs =
-  Sphinx>=3.0
-  nbsphinx
-dev =
-  package[test,mpl]
-all =
-  package[test,mpl,docs]
 ```
 
-We recommend providing at least `test`, `docs`, and `dev`.
+And a complex one, that does some logic (like combining the requirements into
+an "all" extra), placed in `setup.py`:
+
+```python
+extras = {
+    "test": ["pytest"],
+    "docs": [
+        "Sphinx>=2.0.0",
+        "recommonmark>=0.5.0",
+        "sphinx_rtd_theme",
+        "nbsphinx",
+        "sphinx_copybutton",
+    ],
+    "examples": ["matplotlib", "numba"],
+    "dev": ["pytest-sugar", "ipykernel"],
+}
+extras["all"] = sum(extras.values(), [])
+
+setup(extras_require=extras)
+```
+
+Self dependencies can be placed in `setup.cfg` using the name of the package,
+such as `dev = package[test,examples]`, but this requires Pip 21.2 or newer. We
+recommend providing at least `test`, `docs`, and `dev`.
 
 ## MANIFEST.in (usually required)
 

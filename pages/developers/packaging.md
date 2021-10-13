@@ -164,12 +164,12 @@ there.
 
 The one place where the pep518 requirements do not get picked up is when you
 manually run `setup.py`, such as when doing `python setup.py sdist` [^1]. If you
-are missing `setuptools_scm` or `toml`, you will get silently get version 0.0.0.
+are missing `setuptools_scm` or possibly the `toml` dependency on old versions
+of `setuptools_scm`, you will get silently get version 0.0.0.
 To make this a much more helpful error, add this to your `setup.py`:
 
 ```python
 import setuptools_scm  # noqa: F401
-import toml  # noqa: F401
 ```
 
 If you want to create artifacts for use in-between versions, then you should
@@ -319,7 +319,7 @@ Note that we do not recommend overriding or changing the behavior of `python
 setup.py test` or `python setup.py pytest`; the test command through `setup.py`
 is deprecated and discouraged - anything that directly calls `setup.py` assumes
 a `setup.py` is present, which is not true for [Flit][] packages and other
-systems.[^2] Instead, assume users call pytest directly.
+systems.[^2] Instead, assume users call pytest directly, or use nox.
 
 If you need to have custom package data, such as data stored in one place in
 the SDist structure that shows up in another place in the package, then replace
@@ -346,7 +346,7 @@ built-in tools, b) are available directly when installing via PyPI, and c) are
 allowed in `requirements.txt`, `install_requires`, `pyproject.toml`, and most
 other places requirements are passed.
 
-Here is an example of a simple extras, placed in setup.cfg:
+Here is an example of a simple extras, placed in `setup.cfg` for a package called `package`:
 
 ```ini
 [options.extras_require]
@@ -354,28 +354,16 @@ test =
   pytest >=6.0
 mpl =
   matplotlib >=2.0
+docs =
+  Sphinx>=3.0
+  nbsphinx
+dev =
+  package[test,mpl]
+all =
+  package[test,mpl,docs]
 ```
 
-And a complex one, that does some logic (like combining the requirements into
-an "all" extra), placed in setup.py:
-
-```python
-extras = {
-    "test": ["pytest"],
-    "docs": [
-        "Sphinx>=2.0.0",
-        "recommonmark>=0.5.0",
-        "sphinx_rtd_theme",
-        "nbsphinx",
-        "sphinx_copybutton",
-    ],
-    "examples": ["matplotlib", "numba"],
-    "dev": ["pytest-sugar", "ipykernel"],
-}
-extras["all"] = sum(extras.values(), [])
-
-setup(extras_require=extras)
-```
+We recommend providing at least `test`, `docs`, and `dev`.
 
 ## MANIFEST.in (usually required)
 
@@ -397,9 +385,7 @@ If you don't have a MANIFEST.in, the "legacy" build procedure will skip the
 SDist step, making it possible for a development build to work while a
 published PyPI SDist could fail. Also, development mode (`-e`) is not covered
 by this procedure, so you should have at least one CI run that does not include
-the `-e`. (it's not yet supported by PEP 517, actually, so `pip -e` only
-supports setuptools, other backends have their own non-unified methods to do
-development installs).
+the `-e` (pip 21.3+ required for non-setuptools editable installs).
 
 The files that go into the SDist are controlled by [MANIFEST.in][], which
 generally should be specified. If you use `setuptools_scm`, the [default should
@@ -424,7 +410,9 @@ Note that Scikit-build currently may have issues with MANIFEST.in.
       instead (and `pip install build`).
 
 [^2]: Actually, Flit produces a backward-compatible `setup.py` by default when
-      making an SDist - it's only "missing" from the GitHub repository.
+      making an SDist - it's only "missing" from the GitHub repository. This
+      default behavior is changing, though, as there's much less reason today
+      to have a legacy `setup.py`.
 
 [Flit]:  https://flit.readthedocs.io
 [Poetry]: https://python-poetry.org

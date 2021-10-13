@@ -498,7 +498,7 @@ If you have C++ code, you should have a `.clang-format` file and use the
 following pre-commit config:
 
 ```yaml
-- repo: https://github.com/ssciwr/clang-format-hook
+- repo: https://github.com/pre-commit/mirrors-clang-format
   rev: v13.0.0
   hooks:
   - id: clang-format

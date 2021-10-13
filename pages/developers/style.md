@@ -429,9 +429,9 @@ find and fix warnings before they cause user errors! Always run with `-Wd`, or
 set `export PYTHONWARNINGS=d` in your environment.
 You can also add the following to your `pyproject.toml` file for pytest:
 
-```ini
+```toml
 [tool.pytest]
-addopts = "-Wd"
+filterwarnings = ["error"]
 ```
 
 ## Spelling (extra)

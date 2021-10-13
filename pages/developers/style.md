@@ -431,7 +431,7 @@ You can also add the following to your `pyproject.toml` file for pytest:
 
 ```ini
 [tool.pytest]
-addopts = "-Wd"
+filterwarnings = ["error"]
 ```
 
 ## Spelling (extra)

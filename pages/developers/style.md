@@ -199,6 +199,7 @@ The MyPy addition for pre-commit:
   hooks:
   - id: mypy
     files: src
+    args: [--show-error-codes]
 ```
 
 You can also add items to the virtual environment setup for mypy by pre-commit,
@@ -304,7 +305,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 3.9.2
+  rev: 4.0.1
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]
@@ -355,6 +356,8 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
   hooks:
   - id: yesqa
 ```
+
+You need to have the same extra dependencies as flake8. In YAML, you can save the list given to yesqa and repeat it in flake8 using `&flake8-dependencies` and `*flake8-dependencies` after the colon.
 
 ## isort (extra)
 
@@ -415,11 +418,13 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: v1.17.0
+  rev: v1.18.0
   hooks:
   - id: setup-cfg-fmt
-    args: [--max-py-version=3.10]
 ```
+
+Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
+or whatever your maximum is.
 
 ## Python warnings (extra)
 
@@ -489,6 +494,8 @@ This is a repository with a [collection of pre-commit extra hooks](https://githu
   - id: rst-directive-colons
   - id: rst-inline-touching-normal
 ```
+
+If you want to add specific type ignores, see [mypy_clean_slate](https://github.com/geo7/mypy_clean_slate) for a tool that will add the specific ignores for you. You'll need to remove the existing type ignores (`git ls-files '*.py' | xargs sed -i '' 's/  # type: ignore//g'`), copy the pre-commit output (with `--show-error-codes` in mypy's args) to a file called `mypy_error_report.txt`, then run `pipx run mypy_clean_slate -a`.
 
 [codespell]: https://github.com/codespell-project/codespell
 

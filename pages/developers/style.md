@@ -285,7 +285,7 @@ sadly):
 
 ```ini
 [flake8]
-ignore = E203, E231, E501, W503
+extend-ignore = E203, E501
 select = C,E,F,W
 ```
 
@@ -297,11 +297,11 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
-ignore = E203, E231, E501, E722, W503, B950
+extend-ignore = E203, E501, E722, B950
 select = C,E,F,W,B,B9
 ```
 
-(Error E722 is identical to B001.) Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
+(Error E722 is important, but it is identical to the activated B001.) Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8

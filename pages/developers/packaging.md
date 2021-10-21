@@ -165,7 +165,7 @@ there.
 The one place where the pep518 requirements do not get picked up is when you
 manually run `setup.py`, such as when doing `python setup.py sdist` [^1]. If you
 are missing `setuptools_scm` or possibly the `toml` dependency on old versions
-of `setuptools_scm`, you will get silently get version 0.0.0.
+of `setuptools_scm`, you will silently get version 0.0.0.
 To make this a much more helpful error, add this to your `setup.py`:
 
 ```python
@@ -319,7 +319,7 @@ Note that we do not recommend overriding or changing the behavior of `python
 setup.py test` or `python setup.py pytest`; the test command through `setup.py`
 is deprecated and discouraged - anything that directly calls `setup.py` assumes
 a `setup.py` is present, which is not true for [Flit][] packages and other
-systems.[^2] Instead, assume users call pytest directly, or use nox.
+systems.[^2] Instead, assume users call `pytest` directly, or use `nox`.
 
 If you need to have custom package data, such as data stored in one place in
 the SDist structure that shows up in another place in the package, then replace

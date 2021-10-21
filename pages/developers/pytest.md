@@ -57,24 +57,24 @@ testpaths = [
 ]
 ```
 
-The `minversion` will print a nicer error if your pytest is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The `addopts` setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. `--showlocals` will print locals in tracebacks. `--strict-markers` will make sure you don't try to use an unspecified fixture. And `--strict-config` will error if you make a mistake in your config. `xfail_strict` will change the default for `xfail` to fail the tests if it doesn't fail - you can still override locally in a specific xfail for a flaky failure. `filter_warnings` will cause all warnings to be errors (you can add allowed warnings here too). Finally, `testpaths` will limit pytest to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
+The `minversion` will print a nicer error if your `pytest` is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The `addopts` setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. `--showlocals` will print locals in tracebacks. `--strict-markers` will make sure you don't try to use an unspecified fixture. And `--strict-config` will error if you make a mistake in your config. `xfail_strict` will change the default for `xfail` to fail the tests if it doesn't fail - you can still override locally in a specific xfail for a flaky failure. `filter_warnings` will cause all warnings to be errors (you can add allowed warnings here too). Finally, `testpaths` will limit `pytest` to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.
 
 pytest also checks the current and parent directories for a `conftest.py` file. If it finds them, they will get run outer-most to inner-most. These files let you add fixtures and other pytest configurations (like hooks for test discovery, etc) for each directory. For example, you could have a "mock" folder, and in that folder, you could have a `conftest.py` that has a mock fixture with `autouse=True`, then every test in that folder will get this mock applied.
 
 In general, do not place a `__init__.py` file in your tests; there's not often a reason to make the test directory importable, and it can confuse package discovery algorithms.
 
 Python hides important warnings by default, mostly because it's trying to be
-nice to users. You are a developer, you don't want it to be "nice". You want to
+nice to users. If you are a developer, you don't want it to be "nice". You want to
 find and fix warnings before they cause user errors! Locally, you should run
-with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment. The pytest
-warning filter "error" will ensure that pytest will fail if it finds any
+with `-Wd`, or set `export PYTHONWARNINGS=d` in your environment. The `pytest`
+warning filter "error" will ensure that `pytest` will fail if it finds any
 warnings.
 
 ### Running pytest
 
 You can run pytest directly with `pytest` or `python -m pytest`. You can optionally give a directory or file to run on. You can also select just some subset of tests with `-k <expression>`, or an exact test with `filename.py::test_name`.
 
-If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--show-locals` will print out the local values in the tracebacks (and can be added by default, see above). You can run `pytest` with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). `pytest` also supports `breakpoint()` in Python 3.7+. You can also start out in your debugger at the beginning of the last failed test with `--trace --lf`. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
+If a test fails, you have lots of options to save time in debugging. Adding `-l`/`--showlocals` will print out the local values in the tracebacks (and can be added by default, see above). You can run `pytest` with `--pdb`, which will drop you into a debugger on each failure. Or you can use `--trace` which will drop you into a debugger at the start of each test selected (so probably use the selection methods above). `pytest` also supports `breakpoint()` in Python 3.7+. You can also start out in your debugger at the beginning of the last failed test with `--trace --lf`. [See the docs](https://docs.pytest.org/en/stable/usage.html) for more running tips.
 
 ## Guidelines for writing good tests
 

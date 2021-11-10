@@ -213,7 +213,7 @@ MyPy has a config section in `pyproject.toml` that looks like this:
 
 
 ```ini
-[mypy]
+[tool.mypy]
 files = "src"
 python_version = "3.6"
 warn_unused_configs = true

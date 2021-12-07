@@ -82,9 +82,8 @@ OS's if you'd like by adding them to the matrix and inputting them into
       fail-fast: false
       matrix:
         python-version:
-        - 2.7
-        - 3.6
-        - 3.9
+        - "3.6"
+        - "3.10"
     name: Check Python ${{ matrix.python-version }}
     steps:
     - uses: actions/checkout@v2
@@ -191,11 +190,34 @@ And many other useful ones:
 * [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages): Deploy built files to to GitHub Pages
 * [ruby/setup-miniconda](https://github.com/ruby/setup-ruby) Setup Ruby if you need it for something.
 
-There are also a few useful tools installed which can really simplify your workflow or adding custom actions:
+There are also a few useful tools installed which can really simplify your workflow or adding custom actions. This includes system package managers (like brew, chocolaty, NuGet, Vcpkg, etc), as well as a fantastic cross platform one:
 
 * [pipx](https://github.com/pypy/pipx): This is pre-installed on all runners (GitHub uses to set up other things), and is kept up to date. It enables you to use any PyPI application in a single line with `pipx run <app>`.
 
 
+You can also run GitHub Actions locally:
+
+* [act](https://github.com/nektos/act): Run GitHub Actions in a docker image locally.
+
+
 ### Custom actions
 
-You can [write your own actions](https://docs.github.com/en/actions/creating-actions) locally or in a shared GitHub repo in either a shell (called "composite", but they only support shell steps and merge the outputs - so basically a shell action), JavaScript, or Docker. Combined with pipx, shell actions are very easy to write!
+You can [write your own actions](https://docs.github.com/en/actions/creating-actions) locally or in a shared GitHub repo in either GitHub actions syntax itself (called "composite"), JavaScript, or Docker. Combined with pipx, composite actions are very easy to write!
+
+You can also make reusable workflows.
+
+## Advanced usage
+
+These are some things you might need.
+
+### Cancel existing runs
+
+If you add the following, you can ensure only one run per PR/branch happens at a time, cancelling the old run when a new one starts:
+
+```yaml
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+```
+
+Anything with a matching group name will count in the same group - the ref is the "from" name for the PR.

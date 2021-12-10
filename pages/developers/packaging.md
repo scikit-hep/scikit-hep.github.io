@@ -260,10 +260,7 @@ classifiers =
     Operating System :: Unix
     Programming Language :: C++
     Programming Language :: Python
-    Programming Language :: Python :: 2
-    Programming Language :: Python :: 2.7
     Programming Language :: Python :: 3
-    Programming Language :: Python :: 3.5
     Programming Language :: Python :: 3.6
     Programming Language :: Python :: 3.7
     Programming Language :: Python :: 3.8
@@ -286,7 +283,7 @@ project_urls =
 packages = find:
 install_requires =
     numpy>=1.13.3
-python_requires = >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+python_requires = >=3.6
 include_package_data = True
 package_dir =
     =src
@@ -329,8 +326,8 @@ the SDist structure that shows up in another place in the package, then replace
 See our [Supported Python Versions][] statement for more information on
 `python_requires`.
 
-With the exception of Flit, all package configuration should be possible via
-`pyproject.toml`, such as pytest>6:
+With the exception of flake8, all package configuration should be possible via
+`pyproject.toml`, such as pytest (6+):
 
 
 ```toml
@@ -382,7 +379,7 @@ Self dependencies can be placed in `setup.cfg` using the name of the package,
 such as `dev = package[test,examples]`, but this requires Pip 21.2 or newer. We
 recommend providing at least `test`, `docs`, and `dev`.
 
-## MANIFEST.in (usually required)
+## Including/excluding files in the SDist
 
 Python packaging goes through a 3-stage procedure if you have the above
 recommended `pyproject.toml` file. If you type `pip install .`, then
@@ -398,7 +395,7 @@ directories to installation paths and a generic metadata format. "Installing"
 really is just copying files around, and pip also pre-compiles some bytecode
 for you while doing so.
 
-If you don't have a MANIFEST.in, the "legacy" build procedure will skip the
+If you don't have a `MANIFEST.in`, the "legacy" build procedure will skip the
 SDist step, making it possible for a development build to work while a
 published PyPI SDist could fail. Also, development mode (`-e`) is not covered
 by this procedure, so you should have at least one CI run that does not include

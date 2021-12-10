@@ -46,8 +46,8 @@ be checked by MyPy. It also keeps you (too?) truthful in your types.
 There are three ways to add types.
 
 1. They can be inline as annotations. Best for Python 3 code, usually.
-2. They can be in special "type comments". Required mostly for Python 2 code,
-   and still requires the proper imports.
+2. They can be in special "type comments". Originally designed for Python 2
+   code, and still requires the proper imports.
 3. They can be in a separate file with the same name but with a `.pyi`
    extension. This is important for type stubs or for cases where you don't
    want to add imports or touch the original code. You can annotate compiled

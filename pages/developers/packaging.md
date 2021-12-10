@@ -96,20 +96,18 @@ Scikit-HEP:
 
 ```toml
 requires = [
-    "numpy==1.13.3; python_version<'3.5'",
-    "oldest-supported-numpy; python_version>='3.5'",
+    "oldest-supported-numpy",
 ```
 
 This ensures the wheels built work with all versions of NumPy supported by
-Scikit-HEP. Whether you build the wheel locally or on CI, you can transfer it
-to someone else and it will work as long as the user has NumPy 1.13.3 or later. The
-`oldest-supported-numpy` package is a SciPy metapackage that tracks the [correct version
-of NumPy to build wheels against for each version of Python and for each
+Scikit-HEP. Whether you build the wheel locally or on CI, you can transfer it to
+someone else and it will work on any supported NumPy. The
+`oldest-supported-numpy` package is a SciPy metapackage from the NumPy
+developers that tracks the [correct version of NumPy to build wheels against for
+each version of Python and for each
 OS/implementation](https://github.com/scipy/oldest-supported-numpy/blob/master/setup.cfg).
 Otherwise, you would have to list the earliest version of NumPy that had support
-for each Python version here. The package only goes back to Python 3.5, so you need
-to add the other line shown to include Python 2.7 (Scikit-HEP does not support NumPy
-older than 1.13).
+for each Python version here.
 
 ## Versioning (medium/high priority)
 

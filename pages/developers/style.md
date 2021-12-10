@@ -40,12 +40,6 @@ repos:
   - id: trailing-whitespace
 ```
 
-For a Python 2+3 codebase, the following is also useful:
-
-```yaml
-  - id: fix-encoding-pragma
-```
-
 **Helpful tip**: Pre-commit runs top-to-bottom, so put checks that modify content
 (like the several of the pre-commit-hooks above, or Black) above
 checks that might be more likely to pass after the modification (like flake8).
@@ -183,11 +177,11 @@ into strings and allows you to use future Python features in Python 3.7+
 annotations as long as your type checker supports them). For now, it is
 recommended that you make an attempt to support type checking through your
 public API in the best way that you can (based on your supported Python
-versions). Stub files or type comments allow Python 2 or Python 3.5 to be
-supported.  [MyPy](https://mypy.readthedocs.io/en/stable/) is suggested for
-type checking, though there are several other good options to try, as well. If
-you have built-in support for type checking, you need to add empty `py.typed`
-files to all packages/subpackages to indicate that you support it.
+versions). Stub files can be used instead for out-of-line typing.
+[MyPy](https://mypy.readthedocs.io/en/stable/) is suggested for type checking,
+though there are several other good options to try, as well. If you have
+built-in support for type checking, you need to add empty `py.typed` files to
+all packages/subpackages to indicate that you support it.
 
 Read more about type checking on the [dedicated page][mypy page].
 
@@ -396,8 +390,7 @@ Another useful tool is [PyUpgrade][], which monitors your codebase for "old" sty
 syntax. Most useful to keep Python 2 outdated constructs out, it can even do
 some code updates for different versions of Python 3, like adding f-strings
 when clearly better (please always use them, they are faster) if you set
-`--py36-plus` (for example). This is a recommended addition when you drop
-Python 2.6 support, 2.7 support, and especially once you drop 3.6 support.
+`--py36-plus` (for example). This is a recommended addition for any project.
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade

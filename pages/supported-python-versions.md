@@ -35,7 +35,7 @@ developers have adopted the following guidelines for the Scikit-HEP packages.
   If a user is on Python 3.6, they get an older version of NumPy, but that is
   likely sufficient.
 * It is not recommended for any package in Scikit-HEP to support older versions
-* of Python than EOL versions (Python 3.5 or less).
+  of Python than EOL versions (Python 3.5 or less).
 * Dropping a Python version should be followed by cleanup using the features of the
   new version; using `pyupgrade` (often via `pre-commit`) is a good start. Also search
   for sys.version_info comparisons. Add mypy checks and static typing were possible, etc.

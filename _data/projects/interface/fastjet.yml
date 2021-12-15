@@ -1,0 +1,8 @@
+name: FastJet
+projlogo: /assets/images/projlogo/logo_fastjet.png
+description: >
+  Official FastJet bindings to Python and Awkward Array.
+url: https://github.com/scikit-hep/fastjet
+docs: https://fastjet.readthedocs.io
+badges:
+  pypi: fastjet

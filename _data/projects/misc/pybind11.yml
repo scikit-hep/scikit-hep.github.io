@@ -1,4 +1,6 @@
 name: pybind11
+projlogo: /assets/images/projlogo/logo_pybind11.png
+image: /assets/images/projlogo/logo_pybind11.png
 description: >
   A C++11 API for CPython and PyPy. Can create extension modules written purely
   in C++ or in C++ and Python; no new language, separate generation step or

@@ -3,7 +3,7 @@ projlogo: /assets/images/projlogo/logo_boost_histogram.png
 projlogo-style: height:72px;
 description: Python bindings for the C++14 Boost::Histogram library.
 url: https://github.com/scikit-hep/boost-histogram
-docs: https://boost-histogram.readthedocs.io/en/latest/
+docs: https://boost-histogram.readthedocs.io
 # affiliated: set to true for affiliated packages
 # repo: only if different from url
 badges:

@@ -82,7 +82,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
       fail-fast: false
       matrix:
         python-version:
-        - "3.6"
+        - "3.7"
         - "3.10"
     name: Check Python ${{ matrix.python-version }}
     steps:

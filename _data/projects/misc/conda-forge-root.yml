@@ -18,8 +18,8 @@ longdescription: |
     which is a popular choice for Scikit-HEP users, the official ROOT team
     recommendation for building it on top of the Conda stack was: too hard,
     don't do it.  But now, the ROOT [Conda-Forge][] package provides a fully
-    featured ROOT binary package for macOS or Linux, Python 2.7 and 3.6--3.8,
-    fully integrated into the Conda environment system!
+    featured ROOT binary package for macOS or Linux, fully integrated into the
+    Conda environment system!
 
     The Conda-Forge ROOT project has been developed by Scikit-HEP admins and is
     used in the Continuous Integration (CI) system of several of our packages

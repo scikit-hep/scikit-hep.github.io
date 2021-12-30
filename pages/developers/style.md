@@ -189,7 +189,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.910
+  rev: v0.930
   hooks:
   - id: mypy
     files: src
@@ -253,7 +253,7 @@ instead of forcing a user to manually delete unneeded imports.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: v1.0.3
+  rev: v1.1.0
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]
@@ -346,7 +346,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 
 ```yaml
 - repo: https://github.com/asottile/yesqa
-  rev: v1.2.3
+  rev: v1.3.0
   hooks:
   - id: yesqa
 ```
@@ -367,13 +367,12 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: 5.9.3
+  rev: 5.10.1
   hooks:
   - id: isort
 ```
 
-In order to use it, you need to add some configuration. You can add it to
-either `pyproject.toml`:
+In order to use it, you need to add some configuration. You can add it to `pyproject.toml` or classic config files:
 
 ```ini
 [tool.isort]
@@ -394,13 +393,24 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.29.0
+  rev: v2.29.1
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]
 ```
 
 [PyUpgrade]: https://github.com/asottile/pyupgrade:
+
+> # Note:
+> If you set this to `--py37-plus`, you can add the annotations import by adding
+> the following line to your isort pre-commit hook configuration:
+>
+> ```yaml
+>     args: ["-a", "from __future__ import annotations"]
+> ```
+>
+> Also make sure isort comes before pyupgrade. Now when you run pre-commit, it will
+> clean up your annotations to 3.7+ style, too!
 
 
 ## Setup.cfg format (extra)
@@ -411,7 +421,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: v1.18.0
+  rev: v1.20.0
   hooks:
   - id: setup-cfg-fmt
 ```
@@ -500,7 +510,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: v0.7.2.1
+  rev: v0.8.0.2
   hooks:
   - id: shellcheck
 ```

@@ -372,8 +372,7 @@ following pre-commit config will work:
   - id: isort
 ```
 
-In order to use it, you need to add some configuration. You can add it to
-either `pyproject.toml`:
+In order to use it, you need to add some configuration. You can add it to `pyproject.toml` or classic config files:
 
 ```ini
 [tool.isort]
@@ -403,13 +402,15 @@ when clearly better (please always use them, they are faster) if you set
 [PyUpgrade]: https://github.com/asottile/pyupgrade:
 
 > # Note:
-> If you set this to `--py37-plus`, you can add the annotations import with:
+> If you set this to `--py37-plus`, you can add the annotations import by adding
+> the following line to your isort pre-commit hook configuration:
 >
-> ```bash
-> git ls-files '*.py' | xargs isort -a "from __future__ import annotations"
+> ```yaml
+>     args: ["-a", "from __future__ import annotations"]
 > ```
 >
-> Now when you run pre-commit, it will clean up your annotations to 3.7+ style, too!
+> Also make sure isort comes before pyupgrade. Now when you run pre-commit, it will
+> clean up your annotations to 3.7+ style, too!
 
 
 ## Setup.cfg format (extra)

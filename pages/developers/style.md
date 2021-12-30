@@ -387,7 +387,7 @@ when clearly better (please always use them, they are faster) if you set
 
 [PyUpgrade]: https://github.com/asottile/pyupgrade:
 
-> # Note:
+> #### Note:
 > If you set this to `--py37-plus`, you can add the annotations import by adding
 > the following line to your isort pre-commit hook configuration:
 >

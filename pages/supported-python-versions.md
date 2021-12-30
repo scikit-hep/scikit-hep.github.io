@@ -32,7 +32,7 @@ developers have adopted the following guidelines for the Scikit-HEP packages.
       this adds a `py2` identifier to the name and can confuse users and pip.
 * Foundational packages in Scikit-HEP _may_ chose to match Python EOL instead of NEP
   29. A key feature of [NEP 29][] is that it targets mature, slowly developing libraries.
-  If a user is on Python 3.6, they get an older version of NumPy, but that is
+  If a user is on Python 3.6 or 3.7, they get an older version of NumPy, but that is
   likely sufficient.
 * It is not recommended for any package in Scikit-HEP to support older versions
   of Python than EOL versions (Python 3.5 or less).
@@ -74,17 +74,17 @@ software too.
 Statement on Python 3.6
 -----------------------
 
-This was a very popular version of Python, and is the "default" version of Python
-on CentOS 7, Ubuntu 18.04, and even CentOS 8 (though not well supported, you should
-use streams there). However, it will hit EOL at the end of 2021, [NEP 29][] has
-already dropped it, and it really limits use of static typing
-(`from __future__ import annotations`, `__class_getitem__`, and more). Many
-"foundational" Scikit-HEP libraries have not yet dropped 3.6 support since we are
-in more active development than the libraries that prompted NEP 29, but some
-packages already are dropping support and more will follow. Users should make an
-effort to always use at least Python 3.7 in analysis, and preferably the highest
-version possible. Note that due to usage of "internal" bytecode, Numba can take up
-to 5 months to update after a Python release.
+This was a very popular version of Python, and is the "default" version of
+Python on CentOS 7, Ubuntu 18.04, and even CentOS 8 (though not well supported,
+you should use streams there). However, it is at EOL, [NEP 29][] has already
+dropped it, and it really limits use of static typing (`from __future__ import
+annotations`, `__class_getitem__`, and more). Many "foundational" Scikit-HEP
+libraries have not yet dropped 3.6 support since we are in more active
+development than the libraries that prompted NEP 29, but some packages already
+are dropping support and more will follow. Users should make an effort to always
+use at least Python 3.7 in analysis, and preferably the highest version
+possible. Note that due to usage of "internal" bytecode, Numba can take up to 5
+months to update after a Python release.
 
 
 [NEP 29]: https://numpy.org/neps/nep-0029-deprecation_policy.html

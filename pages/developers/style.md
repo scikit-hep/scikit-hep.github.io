@@ -209,23 +209,9 @@ MyPy has a config section in `pyproject.toml` that looks like this:
 ```ini
 [tool.mypy]
 files = "src"
-python_version = "3.6"
+python_version = "3.7"
 warn_unused_configs = true
-
-# Currently (0.812) identical to --strict
-disallow_any_generics = true
-disallow_subclassing_any = true
-disallow_untyped_calls = true
-disallow_untyped_defs = true
-disallow_incomplete_defs = true
-check_untyped_defs = true
-disallow_untyped_decorators = true
-no_implicit_optional = true
-warn_redundant_casts = true
-warn_unused_ignores = true
-warn_return_any = true
-no_implicit_reexport = true
-strict_equality = true
+strict = true
 
 # You can disable imports or control per-module/file settings here
 [[tool.mypy.overrides]]

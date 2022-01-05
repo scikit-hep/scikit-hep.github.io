@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.0.1
+  rev: "v4.1.0"
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -89,7 +89,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: 21.9b0
+  rev: "21.12b0"
   hooks:
   - id: black
 ```
@@ -133,7 +133,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.46"
+  rev: "0.47"
   hooks:
   - id: check-manifest
 ```
@@ -189,7 +189,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v0.930
+  rev: "v0.930"
   hooks:
   - id: mypy
     files: src
@@ -239,7 +239,7 @@ instead of forcing a user to manually delete unneeded imports.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: v1.1.0
+  rev: "v1.1.0"
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]
@@ -285,7 +285,7 @@ select = C,E,F,W,B,B9
 
 ```yaml
 - repo: https://gitlab.com/pycqa/flake8
-  rev: 4.0.1
+  rev: "4.0.1"
   hooks:
   - id: flake8
     additional_dependencies: [flake8-bugbear]
@@ -332,7 +332,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 
 ```yaml
 - repo: https://github.com/asottile/yesqa
-  rev: v1.3.0
+  rev: "v1.3.0"
   hooks:
   - id: yesqa
 ```
@@ -353,7 +353,7 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: 5.10.1
+  rev: "5.10.1"
   hooks:
   - id: isort
 ```
@@ -379,7 +379,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: v2.29.1
+  rev: "v2.31.0"
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]
@@ -407,7 +407,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: v1.20.0
+  rev: "v1.20.0"
   hooks:
   - id: setup-cfg-fmt
 ```
@@ -425,7 +425,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: v2.1.0
+  rev: "v2.1.0"
   hooks:
   - id: codespell
     args: ["-L", "sur"]
@@ -460,7 +460,7 @@ This is a repository with a [collection of pre-commit extra hooks](https://githu
 
 ```yaml
 - repo: https://github.com/pre-commit/pygrep-hooks
-  rev: v1.9.0
+  rev: "v1.9.0"
   hooks:
   - id: python-check-blanket-noqa
   - id: python-check-blanket-type-ignore
@@ -483,7 +483,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: v13.0.0
+  rev: "v13.0.0"
   hooks:
   - id: clang-format
 ```
@@ -496,7 +496,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: v0.8.0.2
+  rev: "v0.8.0.3"
   hooks:
   - id: shellcheck
 ```

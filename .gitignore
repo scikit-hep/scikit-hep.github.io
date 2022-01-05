@@ -4,3 +4,4 @@ _site
 .ruby-version
 *env*
 __pycache__/*
+.nox/*

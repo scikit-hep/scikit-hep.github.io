@@ -118,7 +118,7 @@ etc.
 <details><summary>Jupyter notebook support (click here)</summary>
 
 If you want Black for Jupyter notebooks _too_, replace `id: black` with `id:black-jupyter` above.
-You also might like the following hook, which cleans jupyter outputs:
+You also might like the following hook, which cleans Jupyter outputs:
 
 ```yaml
 - repo: https://github.com/kynan/nbstripout

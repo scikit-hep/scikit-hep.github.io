@@ -94,7 +94,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
   - id: black
 ```
 
-You can add a Black badge to your repo as well if you want.
+<details><summary>You can add a Black badge to your repo as well (click here)</summary>
 
 ```md
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -105,6 +105,8 @@ You can add a Black badge to your repo as well if you want.
     :target: https://github.com/psf/black
 ```
 
+</details>
+
 In *very* specific situations, you may want to retain special formatting. After
 carefully deciding that it is a special use case, you can use `# fmt: on` and
 `# fmt: off` around a code block to have it keep custom formatting. *Always*
@@ -112,6 +114,20 @@ consider refactoring before you try this option! Most of the time, you can find
 a way to make the Blacked code look better by rewriting your code; factor out
 long unreadable portions into a variable, avoid writing matrices as 1D lists,
 etc.
+
+<details><summary>Jupyter notebook support (click here)</summary>
+
+If you want Black for Jupyter notebooks _too_, replace `id: black` with `id:black-jupyter` above.
+You also might like the following hook, which cleans Jupyter outputs:
+
+```yaml
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.5.0
+  hooks:
+    - id: nbstripout
+```
+
+</details>
 
 ## Check-Manifest
 

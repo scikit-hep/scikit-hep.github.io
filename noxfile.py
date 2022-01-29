@@ -25,23 +25,19 @@ def bump(session: nox.Session) -> None:
     txt = style.read_text()
     old_versions = {m[1]: m[2].strip('"') for m in VERS.finditer(txt)}
 
-    new_versions = {
-        proj: session.run("lastversion", proj, "--pre", silent=True).strip()
-        for proj in old_versions
-    }
+    for proj, old_version in old_versions.items():
+        new_version = session.run("lastversion", proj, silent=True).strip()
+        
+        if old_version.lstrip("v") == new_version:
+            continue
 
-    changed_versions = {
-        proj: new_versions[proj]
-        for proj in old_versions
-        if old_versions[proj].lstrip("v") != new_versions[proj]
-    }
+        if old_version.startswith("v"):
+            new_version = f"v{new_version}"
 
-    for proj, vers in changed_versions.items():
-        if old_versions[proj].startswith("v"):
-            vers = f"v{vers}"
-        before = REPL_LINE.format(proj, old_versions[proj])
-        after = REPL_LINE.format(proj, vers)
-        session.log(f"Bump: {old_versions[proj]} -> {vers}")
+        before = REPL_LINE.format(proj, old_version)
+        after = REPL_LINE.format(proj, new_version)
+
+        session.log(f"Bump: {old_version} -> {new_version}")
         txt = txt.replace(before, after)
 
     style.write_text(txt)

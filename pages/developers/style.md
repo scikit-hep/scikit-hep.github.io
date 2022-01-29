@@ -89,7 +89,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: "21.12b0"
+  rev: "22.1.0"
   hooks:
   - id: black
 ```
@@ -205,7 +205,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.930"
+  rev: "v0.931"
   hooks:
   - id: mypy
     files: src

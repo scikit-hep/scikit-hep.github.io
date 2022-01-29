@@ -27,7 +27,7 @@ def bump(session: nox.Session) -> None:
 
     for proj, old_version in old_versions.items():
         new_version = session.run("lastversion", proj, silent=True).strip()
-        
+
         if old_version.lstrip("v") == new_version:
             continue
 

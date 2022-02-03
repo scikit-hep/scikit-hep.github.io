@@ -517,5 +517,40 @@ If you have shell scripts, you can protect against common mistakes using [shellc
   - id: shellcheck
 ```
 
+## PyLint (noisy)
+
+PyLint is very opinionated, with a high signal-to-noise ratio. However, by
+limiting the default checks or by starting off a new project using them, you
+can get some very nice linting, including catching some problematic code that
+otherwise is hard to catch. PyLint is generally not a good candidate for
+pre-commit, since it needs to have your package installed - it is less static
+of a static check than flake8. Here is a suggested pyproject.toml entry to get
+you started:
+
+```toml
+[tool.pylint]
+master.py-version = "3.7"
+reports.output-format = "colorized"
+similarities.ignore-imports = "yes"
+messages_control.disable = [
+  "design",
+  "fixme",
+  "line-too-long",
+  "wrong-import-position",
+]
+```
+
+And a noxfile entry:
+
+```python
+@nox.session
+def pylint(session: nox.Session) -> None:
+    session.install("-e", ".")
+    session.install("pylint")
+    session.run("pylint", "src", *sesssion.posargs)
+```
+
+And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
+
 [Flake8]: https://gitlab.com/pycqa/flake8
 [PyCln]: https://hadialqattan.github.io/pycln

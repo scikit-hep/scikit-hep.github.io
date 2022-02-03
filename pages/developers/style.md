@@ -547,7 +547,7 @@ And a noxfile entry:
 def pylint(session: nox.Session) -> None:
     session.install("-e", ".")
     session.install("pylint")
-    session.run("pylint", "src", *sesssion.posargs)
+    session.run("pylint", "src", *session.posargs)
 ```
 
 And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.

@@ -524,7 +524,7 @@ limiting the default checks or by starting off a new project using them, you
 can get some very nice linting, including catching some problematic code that
 otherwise is hard to catch. PyLint is generally not a good candidate for
 pre-commit, since it needs to have your package installed - it is less static
-of a static check than flake8. Here is a suggested pyproject.toml entry to get
+of check than Flake8. Here is a suggested pyproject.toml entry to get
 you started:
 
 ```toml

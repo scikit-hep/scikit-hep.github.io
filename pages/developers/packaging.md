@@ -57,7 +57,6 @@ Packages should provide a `pyproject.toml` file that *at least* looks like this:
 [build-system]
 requires = [
     "setuptools>=42",
-    "wheel"
 ]
 build-backend = "setuptools.build_meta"
 ```
@@ -70,7 +69,8 @@ described in PEP 518). It then discards that environment, and installs the
 wheel.  This **a)** makes the build process reproducible and **b)** makes local
 developer installs match the standard install procedure.  Also, **c)** the
 build requirements do not leak into the dev or install environments -- you do
-not need to have `wheel` installed in your dev environment, for example. It
+not need to have `wheel` installed in your dev environment, for example -
+setuptools declares it needs it via PEP 517 (and only when building wheels!). It
 also **d)** allows complete specification of the environment that `setup.py`
 runs in, so you can add packages that can be imported in `setup.py`. You should
 *not* be using `setup_requires`; it does not work properly and is deprecated.

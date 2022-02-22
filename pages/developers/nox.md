@@ -65,7 +65,9 @@ On GitHub Actions or Azure, pipx is available by default, so you should use
 
 You can now access all versions of Python from nox. At least in GitHub Actions,
 you should add `--forcecolor` to your nox runs to get color output in your
-logs.
+logs, or set `env: FORCE_COLOR: 3`. You should also always add
+`--error-on-missing-interpreters` in CI, because nox considers a missing
+interpreter to be "passing".
 
 ### Introduction
 

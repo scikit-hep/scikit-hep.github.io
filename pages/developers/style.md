@@ -255,7 +255,7 @@ instead of forcing a user to manually delete unneeded imports.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.1.0"
+  rev: "v1.2.0"
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]
@@ -499,12 +499,15 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v13.0.0"
+  rev: "v13.0.1"
   hooks:
   - id: clang-format
+    types_or: [c++, c, cuda]
 ```
 
-This will use 1-2 MB binary wheels from PyPI on all common platforms.
+This will use 1-2 MB binary wheels from PyPI on all common platforms. You can
+generated such a file using `pipx run clang-format -style=llvm -dump-config >
+.clang-format`.
 
 ## Shellcheck (shell scripts only)
 
@@ -512,7 +515,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: "v0.8.0.3"
+  rev: "v0.8.0.4"
   hooks:
   - id: shellcheck
 ```

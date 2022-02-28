@@ -19,8 +19,8 @@ ARM). We will focus on GHA below.
 
 Wheel building should only happen rarely, so you will want to limit it to
 releases, and maybe a rarely moving branch or other special tag (such as
-`master` if you mostly update `develop`. You may occasionally want to trigger
-wheels manually.
+`stable` if you mostly update some other branch. You may occasionally want to
+trigger wheels manually.
 
 ```yaml
 name: Wheels
@@ -33,7 +33,7 @@ on:
 ```
 
 This will run on releases. If you use a develop branch, you could include
-`pull_request: branches: [master]`, since it changes rarely.  GitHub actions
+`pull_request: branches: [stable]`, since it changes rarely.  GitHub actions
 also [has a `workflow_dispatch` option][workflow_dispatch], which will allow
 you to click a button in the GUI to trigger a build, which is perfect for
 testing wheels before making a release; you can download them from "artifacts".

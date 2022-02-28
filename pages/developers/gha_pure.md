@@ -173,7 +173,6 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - master
       - main
   release:
     types:

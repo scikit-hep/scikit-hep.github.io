@@ -35,7 +35,7 @@ jobs:
 ```
 
 This gives the workflow a nice name, and defines the conditions under which it
-runs. This will run on all pull requests, or pushes to master. If you use a
+runs. This will run on all pull requests, or pushes to main. If you use a
 develop branch, you probably will want to include that.  You can also specify
 specific branches for pull requests instead of running on all PRs (will run on
 PRs targeting those branches only).

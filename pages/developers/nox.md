@@ -252,7 +252,7 @@ pip-tools' compile on every Python version to pin dependencies, as well as provi
 a standard interface to update Python and project listing update scripts. The docs
 job there runs mkdocs instead of Sphinx. Other PyPA projects using nox include
 [pip](https://github.com/pypa/pip/blob/main/noxfile.py),
-[pipx](https://github.com/pypa/pipx/blob/master/noxfile.py),
-[manylinux](https://github.com/pypa/manylinux/blob/master/noxfile.py),
+[pipx](https://github.com/pypa/pipx/blob/main/noxfile.py),
+[manylinux](https://github.com/pypa/manylinux/blob/main/noxfile.py),
 [packaging](https://github.com/pypa/packaging/blob/main/noxfile.py), and
 [packaging.python.org](https://github.com/pypa/packaging.python.org/blob/main/noxfile.py).

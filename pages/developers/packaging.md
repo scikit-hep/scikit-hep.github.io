@@ -194,7 +194,7 @@ If you fill in the override version setting when triggering a manual workflow
 run, that version will be forced, otherwise, it works as normal.
 
 > Note: Make sure you have a good gitignore, probably starting from [GitHub's
-> Python one](https://github.com/github/gitignore/blob/master/Python.gitignore)
+> Python one](https://github.com/github/gitignore/blob/main/Python.gitignore)
 > or using a [generator site](https://www.toptal.com/developers/gitignore).
 
 ### Classic in-source versioning

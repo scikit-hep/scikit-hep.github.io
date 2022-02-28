@@ -173,7 +173,7 @@ import setuptools_scm  # noqa: F401
 If you want to create artifacts for use in-between versions, then you should
 disable shallow checkouts in your CI, since a non-tagged version cannot be
 computed correctly from a checkout that is too shallow. For GitHub Actions,
-either use `actions/checkout@v1` or `with: fetch-depth: 0` on `v2`.
+use `actions/checkout@v2` and `with: fetch-depth: 0`.
 
 For GitHub actions, you can add a few lines that will enable you to manually
 trigger builds with custom versions:

@@ -110,8 +110,9 @@ The core of the work is down here:
         os: [ubuntu-20.04, windows-2019, macos-10.15]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
       with:
+        fetch-depth: 0
         submodules: true
 
     - uses: pypa/cibuildwheel@v2.0.0

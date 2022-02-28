@@ -255,7 +255,7 @@ instead of forcing a user to manually delete unneeded imports.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.2.0"
+  rev: "v1.2.4"
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]

@@ -67,7 +67,9 @@ with the name "CI/CD", you can just combine the two `on` dicts.
   dist:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Build SDist and wheel
       run: pipx run build
@@ -181,9 +183,11 @@ jobs:
   dist:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
-    - name: Build wheel and SDist
+    - name: Build SDist and wheel
       run: pipx run build
 
     - uses: actions/upload-artifact@v2

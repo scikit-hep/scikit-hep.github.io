@@ -11,7 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: pipx run nox -s pc_bump
+      env:
+        GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - run: pipx run nox -s gha_bump
+    - run: git diff
     - uses: peter-evans/create-pull-request@v3
       with:
         title: "chore: bump versions"

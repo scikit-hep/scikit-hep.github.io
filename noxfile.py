@@ -65,5 +65,5 @@ def gha_bump(session: nox.Session) -> None:
             print(f"Convert {repo}: {old_version} -> {new_version}")
             for page in pages:
                 txt = page.read_text()
-                txt.replace(f"uses: {repo}@{old_version}", f"uses: {repo}@{new_version}")
+                txt = txt.replace(f"uses: {repo}@{old_version}", f"uses: {repo}@{new_version}")
                 page.write_text(txt)

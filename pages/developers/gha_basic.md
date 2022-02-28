@@ -53,7 +53,7 @@ then this is a job that will check pre-commit for you:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v3
     - uses: pre-commit/action@v2.0.3
 ```
 {% endraw %}
@@ -91,7 +91,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
         fetch-depth: 0  # Only needed if using setuptools-scm
 
     - name: Setup Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 

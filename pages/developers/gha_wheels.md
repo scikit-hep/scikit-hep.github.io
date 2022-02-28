@@ -115,7 +115,7 @@ The core of the work is down here:
         fetch-depth: 0
         submodules: true
 
-    - uses: pypa/cibuildwheel@v2.0.0
+    - uses: pypa/cibuildwheel@v2.3.1
 
     - name: Upload wheels
       uses: actions/upload-artifact@v2
@@ -168,7 +168,7 @@ image, you can set that in the `pyproject.toml` file instead.
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.4.2
+    - uses: pypa/gh-action-pypi-publish@v1.5.0
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}

@@ -96,6 +96,8 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 <details><summary>You can add a Black badge to your repo as well (click here)</summary>
 
+{%- capture "mymarkdown" -%}
+
 ```md
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ```
@@ -104,6 +106,9 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 ```
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
 
 </details>
 
@@ -117,6 +122,8 @@ etc.
 
 <details><summary>Jupyter notebook support (click here)</summary>
 
+{%- capture "mymarkdown" -%}
+
 If you want Black for Jupyter notebooks _too_, replace `id: black` with `id:black-jupyter` above.
 You also might like the following hook, which cleans Jupyter outputs:
 
@@ -126,6 +133,9 @@ You also might like the following hook, which cleans Jupyter outputs:
   hooks:
     - id: nbstripout
 ```
+{%- endcapture -%}
+
+{{ mymarkdown | markdownify }}
 
 </details>
 

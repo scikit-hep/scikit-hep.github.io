@@ -214,10 +214,12 @@ These are some things you might need.
 
 If you add the following, you can ensure only one run per PR/branch happens at a time, cancelling the old run when a new one starts:
 
+{% raw %}
 ```yaml
 concurrency:
   group: test-${{ github.ref }}
   cancel-in-progress: true
 ```
+{% endraw %}
 
 Anything with a matching group name will count in the same group - the ref is the "from" name for the PR.

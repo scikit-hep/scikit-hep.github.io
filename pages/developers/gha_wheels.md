@@ -79,7 +79,7 @@ before, will work:
     name: Make SDist
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0  # Optional, use if you use setuptools_scm
         submodules: true  # Optional, use if you have submodules
@@ -87,7 +87,7 @@ before, will work:
     - name: Build SDist
       run: pipx run build --sdist
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         path: dist/*.tar.gz
 ```
@@ -110,7 +110,7 @@ The core of the work is down here:
         os: [ubuntu-20.04, windows-2019, macos-10.15]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
         submodules: true
@@ -118,7 +118,7 @@ The core of the work is down here:
     - uses: pypa/cibuildwheel@v2.3.1
 
     - name: Upload wheels
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         path: wheelhouse/*.whl
 ```
@@ -163,7 +163,7 @@ image, you can set that in the `pyproject.toml` file instead.
     runs-on: ubuntu-latest
     if: github.event_name == 'release' && github.event.action == 'published'
     steps:
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v3
       with:
         name: artifact
         path: dist

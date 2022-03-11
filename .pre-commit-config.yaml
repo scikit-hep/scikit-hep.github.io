@@ -25,4 +25,4 @@ repos:
   hooks:
   - id: codespell
     exclude: ^Gemfile.lock$
-    args: ["-L", "hist,sur"]
+    args: ["-L", "hist,sur,nd"]

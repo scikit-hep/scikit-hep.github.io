@@ -162,7 +162,7 @@ def lint(session: nox.Session) -> None:
     Run the linter.
     """
     session.install("pre-commit")
-    session.run("pre-commit", "run", "--all-files", *session.posargs)
+    session.run("pre-commit", "run", "--show-diff-on-failure", "--all-files", *session.posargs)
 ```
 
 #### Tests
@@ -235,11 +235,11 @@ def build(session: nox.Session) -> None:
 A standard [powered by nox](https://github.com/scikit-hep/hist/blob/main/noxfile.py)
 package in Pure Python in Scikit-HEP is Hist.
 
-A package that happens to use Poetry is Scikit-HEP UHI, which is
-[powered by nox](https://github.com/scikit-hep/uhi/blob/main/noxfile.py). Nox
-can setup a conda environment with ROOT (slow, but only nox and conda are
-required). There also is a version bump session, which called poetry's bump,
-and does some custom logic too.
+A package that happens to use PDM (like Poetry but better) is Scikit-HEP UHI,
+which is [powered by nox](https://github.com/scikit-hep/uhi/blob/main/noxfile.py).
+Nox can setup a conda environment with ROOT (slow, but only nox and conda are
+required). There also is a version bump session, and does some custom logic
+too.
 
 The complex testing procedure powering Scikit-HEP Cookie is [powered by
 nox](https://github.com/scikit-hep/cookie/blob/main/noxfile.py). It allows the

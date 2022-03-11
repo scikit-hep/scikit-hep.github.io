@@ -82,8 +82,9 @@ Also, properly formatted code has other benefits, such as if two developers
 make the same change, they get the same formatting, and merge requests are
 easier. The style choices in Black were explicitly made to optimize git diffs!
 
-There are a *few* options, mostly to enable/disable certain files and to change
-the line length, and those go in your `pyproject.toml` file.
+There are a *few* options, mostly to enable/disable certain files, remove
+string normalization, and to change the line length, and those go in your
+`pyproject.toml` file.
 
 Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
@@ -129,7 +130,7 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 ```yaml
 - repo: https://github.com/kynan/nbstripout
-  rev: 0.5.0
+  rev: "0.5.0"
   hooks:
     - id: nbstripout
 ```
@@ -167,7 +168,7 @@ Add the following to your pre-commit config:
 If you use `setuptools_scm`, you might want to add:
 
 ```yaml
-    additional-dependencies: [setuptools_scm, toml]
+    additional-dependencies: ["setuptools_scm[toml]"]
 ```
 
 <details><summary>If this is too slow: (click here)</summary>
@@ -182,7 +183,7 @@ run all checks:
 ```yaml
     - uses: pre-commit/action@v2.0.3
       with:
-        extra_args: --all-files --hook-stage manual
+        extra_args: --show-diff-on-failure --all-files --hook-stage manual
 ```
 
 {%- endcapture -%}
@@ -261,7 +262,8 @@ command line. `strict = true` is now allowed in config files, too.
 
 [PyCln][] will clean up your imports if you have any that are not needed. There is
 a Flake8 check for this, but it's usually nicer to automatically do the cleanup
-instead of forcing a user to manually delete unneeded imports.
+instead of forcing a user to manually delete unneeded imports. If you use the manual
+stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
@@ -269,6 +271,7 @@ instead of forcing a user to manually delete unneeded imports.
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]
+    stages: [manual]
 ```
 
 You can configure it in the `[tool.pycln]` section of your `pyproject.toml`:
@@ -292,7 +295,6 @@ sadly):
 ```ini
 [flake8]
 extend-ignore = E203, E501
-select = C,E,F,W
 ```
 
 One recommended plugin for flake8 is `flake8-bugbear`, which catches many
@@ -303,8 +305,8 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
+extend-select = B,B9
 extend-ignore = E203, E501, E722, B950
-select = C,E,F,W,B,B9
 ```
 
 (Error E722 is important, but it is identical to the activated B001.) Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
@@ -341,7 +343,7 @@ in your flake8 config:
 
 ```ini
 [flake8]
-select = C,E,F,W,T
+extend-select = T
 per-file-ignores =
     tests/*: T
     examples/*: T
@@ -392,8 +394,6 @@ profile = "black"
 ```
 
 [isort]: https://pycqa.github.io/isort/
-
-<!-- TODO: let's have a toggle here and show both forms for tools that support it -->
 
 ## PyUpgrade (extra)
 
@@ -454,17 +454,17 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
   rev: "v2.1.0"
   hooks:
   - id: codespell
-    args: ["-L", "sur"]
+    args: ["-L", "sur,nd"]
 ```
 
 You can list allowed spellings in a comma separated string passed to `-L` (or
 `--ignore-words-list` - usually it is better to use long options when you are
-not typing things live). The example above will allow "Big Sur". You can instead
+not typing things live). The example above will allow "Big Sur" and "ND". You can instead
 use a comma separated list in `setup.cfg` or `.codespellrc`:
 
 ```ini
 [codespell]
-ignore-words-list = sur
+ignore-words-list = sur,nd
 ```
 
 You can also use a local pygrep check to eliminate common capitalization
@@ -543,8 +543,10 @@ you started:
 ```toml
 [tool.pylint]
 master.py-version = "3.7"
+master.jobs = "0"
 reports.output-format = "colorized"
 similarities.ignore-imports = "yes"
+messages_control.enable = ["useless-suppression"]
 messages_control.disable = [
   "design",
   "fixme",

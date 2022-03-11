@@ -52,7 +52,7 @@ then this is a job that will check pre-commit for you:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
     - uses: pre-commit/action@v2.0.3
 ```
@@ -86,7 +86,7 @@ OS's if you'd like by adding them to the matrix and inputting them into
         - "3.10"
     name: Check Python ${{ matrix.python-version }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0  # Only needed if using setuptools-scm
 

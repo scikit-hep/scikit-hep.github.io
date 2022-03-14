@@ -160,7 +160,7 @@ Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
-  rev: "0.47"
+  rev: "0.48"
   hooks:
   - id: check-manifest
 ```
@@ -216,7 +216,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.931"
+  rev: "v0.940"
   hooks:
   - id: mypy
     files: src
@@ -267,7 +267,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.2.4"
+  rev: "v1.2.5"
   hooks:
   - id: pycln
     args: [--config=pyproject.toml]
@@ -405,7 +405,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.31.0"
+  rev: "v2.31.1"
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]

@@ -13,15 +13,18 @@ FAQ
 What is the exact project name?
 -------------------------------
 
-The project is called Scikit-HEP. Notice the upper-case
-\"S\" and \"HEP\". That is distinct from the package
-scikit-hep.
+The project is called Scikit-HEP, where HEP stands for High Energy Physics
+(often alternatively named as Particle Physics).
+Notice the upper-case \"S\" and \"HEP\".
+The project name is distinct from the project Python (meta)package `scikit-hep`.
+
+The name took inspiration from the several \"scikits\" - scientific toolboxes built around SciPy.
 
 How to pronounce the project name?
 ----------------------------------
 
-Like \"sy-kit happ\"(y), forgetting about the \"y\" in \"happy\". Of
-course \"sci\" stands for science.
+Like \"sy-kit happ\"(y), forgetting about the \"y\" in \"happy\".
+Of course \"sci\" stands for science.
 
 How to get started contributing?
 --------------------------------
@@ -43,5 +46,5 @@ Is there support for GPUs?
 --------------------------
 
 Support for GPU-oriented code is not foreseen as default but some of the
-packages envisage it in the near- or medium-term future. Please refer to
-the documentation of the various packages.
+packages do provide support, and others envisage it in the near- or medium-term future.
+Please refer to the documentation of the various packages.

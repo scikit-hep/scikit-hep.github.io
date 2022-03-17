@@ -1,6 +1,6 @@
 name: uproot-browser
 projlogo: /assets/images/projlogo/logo_uproot_browser.png
-description: Terminal browser and tools for uproot files
+description: Terminal browser and tools for ROOT files
 url: https://github.com/scikit-hep/uproot-browser
 # docs: <url>
 # affiliated: set to true for affiliated packages

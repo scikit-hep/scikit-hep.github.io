@@ -270,16 +270,10 @@ stage, it's opt-in instead of automatic.
   rev: "v1.2.5"
   hooks:
   - id: pycln
-    args: [--config=pyproject.toml]
+    args: [--all]
     stages: [manual]
 ```
 
-You can configure it in the `[tool.pycln]` section of your `pyproject.toml`:
-
-```toml
-[tool.pycln]
-all = true
-```
 
 ## Flake8
 

@@ -225,7 +225,7 @@ The MyPy addition for pre-commit:
 
 You should always specify args, as the hook's default hides issues - it's
 designed to avoid configuration, but you should add configuration. You can also
-add items to the virtual environment setup for mypy by pre-commit, for example:
+add items to the virtual environment setup for MyPy by pre-commit, for example:
 
 ```yaml
     additional_dependencies: [attrs==21.2.0]

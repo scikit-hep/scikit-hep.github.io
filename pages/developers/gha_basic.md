@@ -129,19 +129,20 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     ignore:
       # Official actions have moving tags like v1
-      # that are used, so they don't need updates here
       - dependency-name: "actions/*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
 ```
 
-As shown above, you can ignore certain dependencies - this file ignores any
-official action, because they are very reliable in keeping a `vX` tag that
-moves and points at the latests `vX.Y.Z` release, and API is stable between
-major versions. For all other actions, this will check to see if there are
-updates to the action daily, and will make a PR if there are updates, including
-the changelog and commit summary in the PR.
+As shown above, you can ignore certain dependencies (all or just updates, like
+minor/patch) - this file ignores any official action minor/patch, because they
+are very reliable in keeping a `vX` tag that moves and points at the latests
+`vX.Y.Z` release, and API is stable between major versions. For all other
+actions, this will check to see if there are updates to the action daily, and
+will make a PR if there are updates, including the changelog and commit summary
+in the PR.
 
 You can use this for other ecosystems too, including Python.
 

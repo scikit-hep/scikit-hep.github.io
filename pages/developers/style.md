@@ -216,15 +216,16 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.940"
+  rev: "v0.941"
   hooks:
   - id: mypy
     files: src
-    args: [--show-error-codes]
+    args: []
 ```
 
-You can also add items to the virtual environment setup for mypy by pre-commit,
-for example:
+You should always specify args, as the hook's default hides issues - it's
+designed to avoid configuration, but you should add configuration. You can also
+add items to the virtual environment setup for MyPy by pre-commit, for example:
 
 ```yaml
     additional_dependencies: [attrs==21.2.0]
@@ -239,6 +240,10 @@ files = "src"
 python_version = "3.7"
 warn_unused_configs = true
 strict = true
+show_error_codes = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+warn_unreachable = true
+
 
 # You can disable imports or control per-module/file settings here
 [[tool.mypy.overrides]]
@@ -256,6 +261,11 @@ then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
 mypy: <option>` at the top of a file. You can also pass `--strict` on the
 command line. `strict = true` is now allowed in config files, too.
 
+The extra strict options shown above (`warn_unreachable`, `redundant-expr`, and
+`truthy-bool`) can trigger too often (like on `sys.platform` checks) and have
+to be ignored occasionally, but can find some signifiant logic errors in your
+typing.
+
 [mypy page]: {{ site.baseurl }}{% link pages/developers/mypy.md %}
 
 ## PyCln
@@ -270,16 +280,10 @@ stage, it's opt-in instead of automatic.
   rev: "v1.2.5"
   hooks:
   - id: pycln
-    args: [--config=pyproject.toml]
+    args: [--all]
     stages: [manual]
 ```
 
-You can configure it in the `[tool.pycln]` section of your `pyproject.toml`:
-
-```toml
-[tool.pycln]
-all = true
-```
 
 ## Flake8
 
@@ -312,7 +316,7 @@ extend-ignore = E203, E501, E722, B950
 (Error E722 is important, but it is identical to the activated B001.) Here is the flake8 addition for pre-commit, with the `bugbear` plugin:
 
 ```yaml
-- repo: https://gitlab.com/pycqa/flake8
+- repo: https://github.com/pycqa/flake8
   rev: "4.0.1"
   hooks:
   - id: flake8

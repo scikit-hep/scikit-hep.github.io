@@ -23,7 +23,7 @@ Project news {#news}
 
 **January 2021:** Package `cookie` joined Scikit-HEP.
 
-**December 2020:** [[ATLAS experiment]][] and [IRIS-HEP institute][] becomes an official user of (some of) our packages.
+**December 2020:** [ATLAS experiment][] and [IRIS-HEP institute][] becomes an official user of (some of) our packages.
 
 **July 2020:** Major release `Hist` 2.0.0.
 
@@ -33,7 +33,12 @@ Project news {#news}
 
 **April 2020:** Package `pylhe` joined Scikit-HEP.
 
+**February 2020:** Package `Hist` created in Scikit-HEP.
+
+**November 2019:** [KM3NeT experiment][] becomes an official user of (some of) our packages.
+
 
 [ATLAS experiment]: https://atlas.cern/
 [IRIS-HEP institute]: https://iris-hep.org/
+[KM3NeT experiment]: https://www.km3net.org/
 [LHCb experiment]: http://lhcb.web.cern.ch/

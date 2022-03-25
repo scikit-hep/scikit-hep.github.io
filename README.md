@@ -1,11 +1,12 @@
-# scikit-hep.github.io
+# Scikit-HEP project website
 
 GitHub pages for the website of the Scikit-HEP project.
 
-To contain:
+It contains:
 
 - General info on the project.
-- Documentation about the scikit-hep Python software package.
+- Basic documentation on the Python packages.
+- Information for contributors and developers.
 
 ## Developer info
 

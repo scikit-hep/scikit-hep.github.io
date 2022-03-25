@@ -9,6 +9,8 @@ nav_order: 30
 Project news {#news}
 ============
 
+**March 2022:** Creation of this *News* page.
+
 **March 2022:** Packages `resample` and `uproot-browser` joined Scikit-HEP.
 
 **September 2021:** Package `cabinetry` joined Scikit-HEP.
@@ -29,7 +31,7 @@ Project news {#news}
 
 **June 2020:** Package `histoprint` joined Scikit-HEP.
 
-**May 2020:** Package `uproot4`  created.
+**May 2020:** Package `uproot4` created.
 
 **April 2020:** Package `pylhe` joined Scikit-HEP.
 
@@ -39,6 +41,18 @@ Project news {#news}
 see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-hep-info.pdf).
 
 **November 2019:** [KM3NeT experiment][] becomes an official user of (some of) our packages.
+
+**November 2019:** Package `mplhep` joined Scikit-HEP.
+
+**June 2019:** Package `scikit-hep-tutorials ` created.
+
+**January 2019:** Package `hepparticle` joined Scikit-HEP, renamed to `Particle`.
+
+**September 2018:** Major release `uproot` 3.0.0.
+
+**August 2018:** Package `DecayLanguage` joined Scikit-HEP.
+
+**June 2018:** Package `vegascope` joined Scikit-HEP.
 
 **November 2017:** Major release `uproot` 2.0.0.
 

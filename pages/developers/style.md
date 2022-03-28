@@ -168,7 +168,7 @@ Add the following to your pre-commit config:
 If you use `setuptools_scm`, you might want to add:
 
 ```yaml
-    additional-dependencies: ["setuptools_scm[toml]"]
+    additional_dependencies: ["setuptools_scm[toml]"]
 ```
 
 <details><summary>If this is too slow: (click here)</summary>
@@ -216,7 +216,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.941"
+  rev: "v0.942"
   hooks:
   - id: mypy
     files: src

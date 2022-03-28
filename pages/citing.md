@@ -1,3 +1,4 @@
+---
 layout: page
 title: Citing
 permalink: /citing

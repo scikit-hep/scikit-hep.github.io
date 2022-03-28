@@ -29,4 +29,4 @@ We suggest the following citation for the project as a whole (in BibTeX format):
 
 Kindly consider citing any specific package if that seems appropriate.
 All package GitHub repositories contain at the very least a Zenodo badge.
-Some may also have a citation page, as for example https://github.com/scikit-hep/iminuit/blob/develop/CITATION.rst.
+Some may also have a citation page, as for example <https://github.com/scikit-hep/iminuit/blob/develop/CITATION.rst>.

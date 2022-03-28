@@ -11,7 +11,7 @@ Citing Scikit-HEP or individual packages {#citing}
 We appreciate if you consider to acknowledge the Scikit-HEP project in case it has made or is having an impact on your work or research.
 We suggest the following citation for the project as a whole (in BibTeX format):
 
-```
+```BibTeX
 @article{Rodrigues:2020syo,
     author = "Rodrigues, Eduardo and others",
     editor = "Doglioni, C. and Kim, D. and Stewart, G. A. and Silvestris, L. and Jackson, P. and Kamleh, W.",

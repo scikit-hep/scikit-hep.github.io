@@ -13,7 +13,9 @@ Project news {#news}
 
 **March 2022:** Packages `resample` and `uproot-browser` joined Scikit-HEP.
 
-**January 2022:** Major release `Particle` 0.20.0 (first Python 3 only).
+**January 2022:** Major releases of `Particle` 0.20.0 (first Python 3 only) and `DecayLanguage` 0.14.0.
+
+**November 2021:** Major release of `DecayLanguage` 0.13.0. (first Python 3 only).
 
 **September 2021:** Package `cabinetry` joined Scikit-HEP.
 

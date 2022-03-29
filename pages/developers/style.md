@@ -571,5 +571,5 @@ def pylint(session: nox.Session) -> None:
 
 And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
 
-[Flake8]: https://gitlab.com/pycqa/flake8
+[Flake8]: https://github.com/pycqa/flake8
 [PyCln]: https://hadialqattan.github.io/pycln

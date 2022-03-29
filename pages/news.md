@@ -37,8 +37,11 @@ rather than including them all in the PyPI package.
 **March 2021:** Package `pyBumpHunter` joined Scikit-HEP.
 
 **March 2021:** Major release `histoprint` 2.0.0 (Python 3 only).
+Major metapackage release `scikit-hep` 3.0.0.
 
 **March 2021:** Package `root_pandas` marked as deprecated.
+
+**February 2021:** Major metapackage release `scikit-hep` 2.0.0.
 
 **January 2021:** Package `UHI` introduced in Scikit-HEP.
 
@@ -56,6 +59,8 @@ package `uproot` renamed to `uproot3` (release 3.14.0),
 package `uproot-methods` renamed to `uproot3-methods` (release 0.10.0).
 
 **November 2020:** Major release `pylhe` 0.2.0 (Python 3 only).
+
+**October 2020:** First release of `scikit-hep` as a metapackage for the project (version 1.0.0).
 
 **September 2020:** Major release `hepunits` 2.0.0.
 
@@ -120,11 +125,15 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **August 2018:** Package `uproot-methods` created in Scikit-HEP.
 
+**July 2018:** Major release `scikit-hep` 0.3.0, dropping Python 2.6 support.
+
 **June 2018:** Packages  `awkward-array`, `histbook` and `vegascope` joined Scikit-HEP.
 
 **March 2018:** Major release `pyjet` 1.1.0 (based on C++ `FastJet` 3.3.0).
 
 **November 2017:** Major release `uproot` 2.0.0.
+
+**October 2017:** First release of package `scikit-hep` (version 0.1.0).
 
 **September 2017:** Package `uproot` joined Scikit-HEP. Release 1.0.0.
 

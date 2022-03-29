@@ -17,9 +17,11 @@ Project news {#news}
 
 **November 2021:** Major release of `DecayLanguage` 0.13.0. (first Python 3 only).
 
+**September 2021:** [LHCb experiment][] becomes an official user of (some of) our packages.
+
 **September 2021:** Package `cabinetry` joined Scikit-HEP.
 
-**September 2021:** [LHCb experiment][] becomes an official user of (some of) our packages.
+**September 2021:** Major release `Particle` 0.16.0, 2021 PDG data table is default.
 
 **September 2021:** Package `pyjet` marked as deprecated, superseded by Scikit-HEP's `fastjet`.
 
@@ -72,6 +74,8 @@ package `uproot-methods` renamed to `uproot3-methods` (release 0.10.0).
 
 **September 2020:** Major release `Hist` 2.0.0.
 
+**August 2020:** Major release `Particle` 0.11.0, 2020 PDG data table is default.
+
 **June 2020:** Package `histoprint` joined Scikit-HEP.
 
 **May 2020:** Package `uproot4` created in Scikit-HEP.
@@ -104,6 +108,8 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 **July 2019:** Package `scikit-stats` renamed to `hepstats`.
 
 **June 2019:** Packages `scikit-hep-tutorials` and `statutils` created in Scikit-HEP.
+
+**June 2019:** Major release `Particle` 0.5.0, 2019 PDG data table is default.
 
 **June 2019:** Major release `DecayLanguage` 0.3.0.
 

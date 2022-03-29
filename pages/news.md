@@ -25,6 +25,8 @@ Project news {#news}
 
 **June 2021:** Major release `UHI` 0.3.0.
 
+**June 2021:** Major release `hepstats` 0.5.0 (Python 3.7+).
+
 **April 2021:** Package `fastjet` created in Scikit-HEP.
 
 **April 2021:** Major release `vector` 0.8.0 (first release to PyPI).
@@ -89,11 +91,17 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **November 2019:** Packages `pyhf` and `mplhep` joined Scikit-HEP.
 
-**October 2019:** Package `vector` created.
+**November 2019:** Major release `hepstats` 0.2.0.
+
+**October 2019:** Package `vector` created in Scikit-HEP.
+
+**September 2019:** Package `statutils` renamed to `scikit-stats`.
 
 **August 2019:** Project's site fully revamped, now based on Jekyll.
 
-**June 2019:** Package `scikit-hep-tutorials ` created in Scikit-HEP.
+**July 2019:** Package `scikit-stats` renamed to `hepstats`.
+
+**June 2019:** Packages `scikit-hep-tutorials` and `statutils` created in Scikit-HEP.
 
 **June 2019:** Major release `DecayLanguage` 0.3.0.
 

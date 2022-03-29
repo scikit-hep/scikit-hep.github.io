@@ -43,6 +43,8 @@ Major metapackage release `scikit-hep` 3.0.0.
 
 **February 2021:** Major metapackage release `scikit-hep` 2.0.0.
 
+**February 2021:** Major release `pyhf` 0.6.0.
+
 **January 2021:** Package `UHI` introduced in Scikit-HEP.
 
 **January 2021:** Package `cookie` joined Scikit-HEP.
@@ -72,10 +74,12 @@ package `uproot-methods` renamed to `uproot3-methods` (release 0.10.0).
 
 **April 2020:** Package `pylhe` joined Scikit-HEP.
 
-**February 2020:** Package `Hist` created in Scikit-HEP.
-
 **February 2020:** Scikit-HEP project listed on the the [PDG][] [online particle physics information][],
 see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-hep-info.pdf).
+
+**February 2020:** Package `Hist` created in Scikit-HEP.
+
+**February 2020:** Major release `pyhf` 0.4.0 (Python 3 only).
 
 **February 2020:** Package `root_numpy` marked as deprecated.
 
@@ -83,7 +87,7 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **November 2019:** [KM3NeT experiment][] becomes an official user of (some of) our packages.
 
-**November 2019:** Package `mplhep` joined Scikit-HEP.
+**November 2019:** Packages `pyhf` and `mplhep` joined Scikit-HEP.
 
 **October 2019:** Package `vector` created.
 

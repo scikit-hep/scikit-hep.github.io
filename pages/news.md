@@ -42,7 +42,8 @@ rather than including them all in the PyPI package.
 
 **March 2021:** Package `pyBumpHunter` joined Scikit-HEP.
 
-**March 2021:** Major release `histoprint` 2.0.0 (Python 3 only).
+**March 2021:** Major release `boost-histogram` 1.0.0 (Python 3 only),
+major release `histoprint` 2.0.0 (Python 3 only).
 Major metapackage release `scikit-hep` 3.0.0.
 
 **March 2021:** Package `root_pandas` marked as deprecated.
@@ -101,6 +102,8 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **October 2019:** Package `vector` created in Scikit-HEP.
 
+**October 2019:** First beta release of `boost-histogram` (version 0.5.0).
+
 **September 2019:** Package `statutils` renamed to `scikit-stats`.
 
 **August 2019:** Project's site fully revamped, now based on Jekyll.
@@ -120,6 +123,8 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 **May 2019:** Major release `hepunits` 1.0.0.
 
 **April 2019:** Package `aghast` joined Scikit-HEP.
+
+**March 2019:** Package `boost-histogram` created in Scikit-HEP.
 
 **February 2019:** First `scikit-hep-testdata` release (0.1.0) on PyPI.
 

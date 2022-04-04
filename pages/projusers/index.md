@@ -6,7 +6,7 @@ nav_order: 50
 has_children: true
 ---
 
-Who uses Scikit-HEP? {#project_users}
+Who uses Scikit-HEP? {#scikit_hep_users}
 ====================
 
 This page gives an overview of who or what is using one or more packages

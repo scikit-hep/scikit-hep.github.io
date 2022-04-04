@@ -7,9 +7,9 @@ parent: Who uses Scikit-HEP?
 ---
 
 
-# Scientific publications using Scikit-HEP
+# Scientific publications using Scikit-HEP {#publication_users}
 
-#### Peer reviewed journal papers
+### Peer reviewed journal papers
 
 - [LHCb Collaboration, JHEP 01 (2022) 166](https://link.springer.com/article/10.1007/JHEP01(2022)166), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - uses `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
 

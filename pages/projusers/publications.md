@@ -20,14 +20,14 @@ parent: Who uses Scikit-HEP?
 - [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - uses `iminuit`.
 - [JHEP 03 (2020) 094](https://doi.org/10.1007/JHEP03(2020)094) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - uses `iminuit`.
 
-#### Astronony, Astrophysics and Cosmology
+#### Astronomy, Astrophysics and Cosmology
 
 - [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - uses `iminuit`.
 - [JCAP 03 (2020) 068](https://doi.org/10.1088/1475-7516/2020/03/068) ([arXiv:1912.02763 [astro-ph.CO]](https://arxiv.org/abs/1912.02763)) - uses `iminuit`.
 - [Phys. Rev. D 101, 063513 (2020)](https://doi.org/10.1103/PhysRevD.101.063513) ([arXiv:1910.08325 [astro-ph.CO]](https://arxiv.org/abs/1910.08325)) - uses `iminuit`.
 - [Monthly Notices of the Royal Astronomical Society, Volume 497, Issue 4, Oct. 2020, Pages 4407-4415](https://doi.org/10.1093/mnras/staa2310) ([arXiv:1906.11219 [astro-ph.CO]](https://arxiv.org/abs/1906.11219)) - uses `iminuit`.
 - [PoS (ICRC2019) 881](https://pos.sissa.it/358/881/pdf) ([arXiv:1909.08365 [astro-ph.HE]](https://arxiv.org/abs/1909.08365)) - uses `iminuit`.
-- [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([	arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - uses `iminuit`.
+- [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - uses `iminuit`.
 - [JCAP 11 (2017) 032](https://doi.org/10.1088/1475-7516/2017/11/032) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - uses `iminuit`.
 
 ### General articles
@@ -41,7 +41,7 @@ parent: Who uses Scikit-HEP?
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - uses `iminuit`.
 - [arXiv:1505.01102 [hep-ph]](https://arxiv.org/abs/1505.01102) - uses `iminuit`.
 
-#### Astronony, Astrophysics and Cosmology
+#### Astronomy, Astrophysics and Cosmology
 
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - uses `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - uses `iminuit`.

@@ -16,3 +16,6 @@ of the Scikit-HEP project:
 - Scientific projects or institutes.
 - Peer reviewed journal papers.
 - General articles.
+
+[projects]: {{ site.baseurl }}{% link pages/projusers/projects.md %}
+[publications]: {{ site.baseurl }}{% link pages/projusers/publications.md %}

@@ -15,4 +15,4 @@ of the Scikit-HEP project:
 - High Energy Physics experiments or collaborations.
 - Scientific projects or institutes.
 - Peer reviewed journal papers.
-- General articles. 
+- General articles.

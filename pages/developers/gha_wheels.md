@@ -115,7 +115,7 @@ The core of the work is down here:
         fetch-depth: 0
         submodules: true
 
-    - uses: pypa/cibuildwheel@v2.3.1
+    - uses: pypa/cibuildwheel@v2.4.0
 
     - name: Upload wheels
       uses: actions/upload-artifact@v3

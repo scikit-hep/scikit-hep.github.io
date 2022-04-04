@@ -437,7 +437,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v1.20.0"
+  rev: "v1.20.1"
   hooks:
   - id: setup-cfg-fmt
 ```

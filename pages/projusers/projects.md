@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Who uses Scikit-HEP?
-permalink: /projusers
-nav_order: 50
+title: Projects using Scikit-HEP
+permalink: /projects
+nav_order: 10
+parent: Who uses Scikit-HEP?
 ---
 
 
-Who uses Scikit-HEP? {#project_users}
-====================
+Projects using Scikit-HEP? {#project_users}
+==========================
 
 This page tries to give an overview of who is using one or more packages
 of the Scikit-HEP project.

@@ -9,6 +9,8 @@ parent: Who uses Scikit-HEP?
 
 # Scientific publications using Scikit-HEP {#publication_users}
 
+A list of publications citing the `pyhf` package or material using it is collected at <https://scikit-hep.org/pyhf/citations.html#use-in-publications>.
+
 ### Peer reviewed journal papers
 
 #### Experimental Particle Physics

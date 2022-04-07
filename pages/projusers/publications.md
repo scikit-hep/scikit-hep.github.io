@@ -22,10 +22,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 #### Particle Physics Phenomenology
 
+- [Eur. Phys. J. C 82, 46 (2022)](https://doi.org/10.1140/epjc/s10052-022-10012-w) ([arXiv:2109.08159 [hep-ph]](https://arxiv.org/abs/2109.08159)) - cites `pyjet`.
+- [JHEP 11 (2021) 066](https://doi.org/10.1007/JHEP11(2021)066) ([arXiv:2107.06625 [hep-ph]](https://arxiv.org/abs/2107.06625)) - cites `pyjet`.
+- [Rep. Prog. Phys. 84, 124201 (2021)](https://doi.org/10.1088/1361-6633/ac36b9) ([arXiv:2101.08320 [hep-ph]](https://arxiv.org/abs/2101.08320)) - cites `pyjet`.
 - [Phys. Rev. D 102, 015032 (2020)](https://doi.org/10.1103/PhysRevD.102.015032) ([arXiv:2006.10630 [hep-ph]](https://arxiv.org/abs/2006.10630)) - cites `pylhe`, Scikit-HEP project.
 - [Phys. Rev. D 102, 015007 (2020)](https://doi.org/10.1103/PhysRevD.102.015007) ([arXiv:2005.03594 [hep-ph]](https://arxiv.org/abs/2005.03594)) - cites `pylhe`, Scikit-HEP project.
-- [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 - [JHEP 03 (2020) 094](https://doi.org/10.1007/JHEP03(2020)094) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - cites `iminuit`.
+- [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 
 #### Astronomy, Astrophysics and Cosmology
 
@@ -56,7 +59,12 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
 - [arXiv:1801.06075 [astro-ph.HE]](https://arxiv.org/abs/1801.06075) - cites `iminuit`.
 
+#### Machine Learning
+
+- [arXiv:2012.11638 [cs.LG]](https://arxiv.org/abs/2012.11638) - cites `pyjet`.
+
 #### Data Analysis, Statistics and Probability
+
 - [arXiv:1811.01242 [physics.data-an]](https://arxiv.org/abs/1811.01242) - cites `iminuit`.
 
 #### Chemical Physics

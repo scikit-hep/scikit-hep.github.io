@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Scientific publications using Scikit-HEP
-permalink: /publications
+permalink: /projusers/publications
 nav_order: 20
 parent: Who uses Scikit-HEP?
 ---

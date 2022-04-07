@@ -22,6 +22,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 #### Particle Physics Phenomenology
 
+- [Phys. Rev. D 102, 015032 (2020)](https://doi.org/10.1103/PhysRevD.102.015032) ([arXiv:2006.10630 [hep-ph]](https://arxiv.org/abs/2006.10630)) - cites `pylhe`, Scikit-HEP project.
+- [Phys. Rev. D 102, 015007 (2020)](https://doi.org/10.1103/PhysRevD.102.015007) ([arXiv:2005.03594 [hep-ph]](https://arxiv.org/abs/2005.03594)) - cites `pylhe`, Scikit-HEP project.
 - [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 - [JHEP 03 (2020) 094](https://doi.org/10.1007/JHEP03(2020)094) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - cites `iminuit`.
 
@@ -43,6 +45,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 #### Particle Physics Phenomenology
 
+- [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621) - cites `scikit-hep`, `uproot3`.
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - cites `iminuit`.
 - [arXiv:1505.01102 [hep-ph]](https://arxiv.org/abs/1505.01102) - cites `iminuit`.

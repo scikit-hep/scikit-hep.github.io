@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: "v4.1.0"
+  rev: "v4.2.0"
   hooks:
   - id: check-added-large-files
   - id: check-case-conflict
@@ -409,7 +409,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.31.1"
+  rev: "v2.32.0"
   hooks:
   - id: pyupgrade
     args: ["--py36-plus"]

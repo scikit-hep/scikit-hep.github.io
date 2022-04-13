@@ -89,7 +89,8 @@ Presentations
     -   *Boost-histogram: High-Performance Histograms as Objects*, Henry Schreiner, Hans Dembinski, Jim Pivarski, and Shuo Liu
         \[[link](https://conference.scipy.org/proceedings/scipy2020/slides.html)\]
 
--   **7-18 June 2021:** Lecture at ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics, Annecy, France (virtual event):
+-   **7-18 June 2021:** Lecture at
+    [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
     -   *Introduction to the Scikit-HEP Big Data Python ecosystem for analysis in Particle Physics*, Eduardo Rodrigues
 
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
@@ -102,7 +103,7 @@ Presentations
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
     -   *An introduction to pyhf and HistFactory likelihoods*, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 
--   **4-8 November 2019:** [CHEP 2019](http://chep2019.org/):
+-   **4-8 November 2019:** [CHEP 2019 conference](http://chep2019.org/):
     -   *The Scikit-HEP project - overview and prospects*, Eduardo Rodrigues et al.
         \[[PDF](https://indico.cern.ch/event/773049/contributions/3476182/attachments/1938227/3213768/EduardoRodrigues_2019-11-05_CHEP2019Adelaide.pdf)\]
     -   *Recent developments in histogram libraries*, Henry Schreiner
@@ -181,6 +182,7 @@ Presentations
 -   **9 July 2018:** [CHEP 2018 Conference](http://chep2018.org/),
     Sofia, Bulgaria:
     -   *The Scikit-HEP project*, Eduardo Rodrigues
+    \[[PDF](https://indico.cern.ch/event/587955/contributions/2937549/attachments/1683232/2705316/2018-07-09_CHEP18Sofia_EduardoRodrigues.pdf)\]
 
 -   **7 July 2018:** [PyHEP 2018
     Workshop](https://indico.cern.ch/event/694818/), Sofia, Bulgaria:

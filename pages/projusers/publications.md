@@ -22,6 +22,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 #### Particle Physics Phenomenology
 
+- [SciPost Phys. 12, 037 (2022)](https://doi.org/10.21468/SciPostPhys.12.1.037) ([arXiv:2109.04981 [hep-ph]](https://arxiv.org/abs/2109.04981)) - cites `cabinetry`, `pyhf`.
 - [Eur. Phys. J. C 82, 46 (2022)](https://doi.org/10.1140/epjc/s10052-022-10012-w) ([arXiv:2109.08159 [hep-ph]](https://arxiv.org/abs/2109.08159)) - cites `pyjet`.
 - [JHEP 11 (2021) 066](https://doi.org/10.1007/JHEP11(2021)066) ([arXiv:2107.06625 [hep-ph]](https://arxiv.org/abs/2107.06625)) - cites `pyjet`.
 - [Rep. Prog. Phys. 84, 124201 (2021)](https://doi.org/10.1088/1361-6633/ac36b9) ([arXiv:2101.08320 [hep-ph]](https://arxiv.org/abs/2101.08320)) - cites `pyjet`.

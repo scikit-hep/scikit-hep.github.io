@@ -22,6 +22,13 @@ See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
 Proceedings and publications
 ----------------------------
 
+-   *Distributed statistical inference with pyhf enabled through funcX*,
+    M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
+    proceedings of the [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+    [EPJ Web Conf. 251 02070 (2021)](https://doi.org/10.1051/epjconf/202125102070);
+-   *pyhf: pure-Python implementation of HistFactory statistical models*,
+    L. Heinrich, M. Feickert, G. Stark and K. Cranmer,
+    [J. Open Source Softw. 6 2823 (2021)](https://doi.org/10.21105/joss.02823)
 -   *zfit: scalable pythonic fitting*,
     Jonas Eschle, Albert Navarro Puig, Rafael Silva Coutinho and Nicola Serra,
     proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
@@ -65,6 +72,10 @@ Presentations
     -   *From data delivery to statistical inference: ServiceX, coffea, cabinetry & pyhf*, Alexander Held
         \[[link](https://indico.cern.ch/event/1076231/contributions/4560405/)\]
 
+-   **27 October 2021:** [Parsl & funcX Fest 2021](https://parsl-project.org/parslfest2021.html):
+    -   *Distributed statistical inference with pyhf powered by funcX*, Matthew Feickert
+        \[[PDF](https://parsl-project.org/parslfest2021-files/feickert-pyhf.pdf)\]
+
 -   **21 September 2021:** [ATLAS SUSY Workshop 2021](https://indico.cern.ch/event/1056428/):
     -   *pyhf and cabinetry*, Alexander Held
         \[[link](https://indico.cern.ch/event/1056428/contributions/4523825/)\]
@@ -77,28 +88,44 @@ Presentations
     -   *High-Performance Histogramming for HEP Analysis*, Henry Schreiner
         \[[link](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
 
+-   **7-18 June 2021:** Lecture at
+    [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
+    -   *Introduction to the Scikit-HEP Big Data Python ecosystem for analysis in Particle Physics*, Eduardo Rodrigues
+
 -   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
     -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
         \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
     -   *Model building and statistical inference with zfit and hepstats*, Jonas Eschle and Matthieu Marinangeli
         \[[link](https://indico.cern.ch/event/882824/contributions/3932489/)\]
+    -   * "pyhf Tutorial: Accelerating analyses and preserving likelihoods"*, Matthew Feickert
+        \[[link](https://indico.cern.ch/event/882824/contributions/3931292/)\]
     -   *zfit - TensorFlow 2.0: dynamic and compiled HPC*, Jonas Eschle
         \[[link](https://indico.cern.ch/event/882824/contributions/3932493/)\]
 
--   **7 July 2021:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
+-   **7 July 2020:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
     -   *Boost-histogram: High-Performance Histograms as Objects*, Henry Schreiner, Hans Dembinski, Jim Pivarski, and Shuo Liu
         \[[link](https://conference.scipy.org/proceedings/scipy2020/slides.html)\]
+    -   *pyhf: a pure Python statistical fitting library with tensors and autograd*, Matthew Feickert
+        \[[link](https://doi.org/10.25080/Majora-342d178e-023)\]
 
--   **7-18 June 2021:** Lecture at
-    [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
-    -   *Introduction to the Scikit-HEP Big Data Python ecosystem for analysis in Particle Physics*, Eduardo Rodrigues
+-   **27 May 2020:** [2020 IRIS-HEP Team Retreat](https://indico.cern.ch/event/896167/):
+    -   *pyhf Roadmap for IRIS-HEP Execution Phase*, Matthew Feickert
+        \[[PDF](https://indico.cern.ch/event/896167/contributions/3880229/attachments/2045450/3428542/Feickert_pyhf-execution-phase_2020-05-27.pdf)\]
 
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
     -   *Introduction to the Scikit HEP project*, Eduardo Rodrigues
 
 -   **27 February 2020:** [IRIS-HEP Poster Session](https://indico.cern.ch/event/894127/):
+    -   *Awkward Array for Analysis Systems* (poster), Jim Pivarski
+        \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3331173/6_-_pivarski-irishep-poster.pdf)\]
     -   *Boost-Histogram for Analysis Systems* (poster), Henry Schreiner
         \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3331172/5_-_BoostHistogram.pdf)\]
+    -   *pyhf: Pure Python Implementation of HistFactory* (poster), Matthew Feickert
+        \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3334540/10_-_IRIS-HEP-2020-poster-session-pyhf.pdf)\]
+
+-   **27 February 2020:** [IRIS-HEP Postdoc Presentations](https://indico.cern.ch/event/897086/):
+    -   *pyhf: A Pure Python Statistical Fitting Library with Tensors and Autograd*, Matthew Feickert
+        \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3334540/10_-_IRIS-HEP-2020-poster-session-pyhf.pdf)\]
 
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
     -   *An introduction to pyhf and HistFactory likelihoods*, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]

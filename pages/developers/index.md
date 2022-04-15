@@ -30,6 +30,8 @@ Finally, there are [badge recommendations][badges] for your readme, including th
 
 Once you have completed the guidelines, there is a [cookiecutter][] project, [Scikit-HEP/cookie][], that implements these guidelines and lets you setup a new package from a template in less than 60 seconds!
 
+You can also evaluate your repository against the guidelines by using [scikit-hep-repo-review][]!
+
 [guidelines]: {{ site.baseurl }}{% link pages/developers/guidelines.md %}
 [intro]: {{ site.baseurl }}{% link pages/developers/intro.md %}
 [style]: {{ site.baseurl }}{% link pages/developers/style.md %}
@@ -41,6 +43,7 @@ Once you have completed the guidelines, there is a [cookiecutter][] project, [Sc
 [gha_wheels]: {{ site.baseurl }}{% link pages/developers/gha_wheels.md %}
 [pytest]: {{ site.baseurl }}{% link pages/developers/pytest.md %}
 [badges]: {{ site.baseurl }}{% link pages/developers/badges.md %}
+[scikit-hep-repo-review]: {{ site.baseurl }}{% link pages/developers/repo_review.md %}
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
 [Scikit-HEP/cookie]: https://github.com/scikit-hep/cookie

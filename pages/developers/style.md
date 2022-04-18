@@ -277,7 +277,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.2.5"
+  rev: "v1.3.1"
   hooks:
   - id: pycln
     args: [--all]
@@ -513,7 +513,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v13.0.1"
+  rev: "v14.0.1"
   hooks:
   - id: clang-format
     types_or: [c++, c, cuda]

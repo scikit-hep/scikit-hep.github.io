@@ -7,7 +7,7 @@ parent: Developer information
 interactive_repo_review: true
 ---
 
-# Scikit-HEP Repo Review
+# Scikit-HEP Repo Review (beta)
 
 You can check the style of a GitHub repository below. Enter any repository, such
 as `scikit-hep/hist`, and the branch you want to check, such as `main` (it must

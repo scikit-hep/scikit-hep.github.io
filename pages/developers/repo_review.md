@@ -21,7 +21,7 @@ You can also run [this tool](https://github.com/henryiii/scikit-hep-repo-review)
 locally:
 
 ```bash
-pipx run scikit-hep-repo-review <path to repo>
+pipx run 'scikit-hep-repo-review[cli]' <path to repo>
 ```
 
 ---

@@ -106,9 +106,11 @@ Presentations
     -   *Uproot Tutorial*, Mason Proffitt
         \[[link](https://indico.cern.ch/event/1058873/timetable/#b-430459-python-for-analysis-2)\]
 
--   **15 July 2021:** [SciPy 2021, 20th Python in Science Conference](https://www.scipy2021.scipy.org/):
+-   **12-18 July 2021:** [SciPy 2021, 20th Python in Science Conference](https://www.scipy2021.scipy.org/):
     -   *Distributed statistical inference with pyhf powered by funcX*, Matthew Feickert
-        \[[link](https://doi.org/10.25080/majora-1b6fd038-023)\]
+        \[[link](https://doi.org/10.25080/majora-1b6fd038-023)\
+    -   *Awkward Array 3-minute update*, Jim Pivarski
+        \[[YouTube](https://youtu.be/hvHedn8bORU?t=1221)\]
 
 -   **5-9 July 2021:** [PyHEP 2021 Workshop](https://indico.cern.ch/e/PyHEP2021):
     -   *High-Performance Histogramming for HEP Analysis*, Henry Schreiner
@@ -138,7 +140,17 @@ Presentations
     [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
     -   *Introduction to the Scikit-HEP Big Data Python ecosystem for analysis in Particle Physics*, Eduardo Rodrigues
 
--   **20 May 2021:** [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/):
+-   **26 May 2021:** [IRIS-HEP Analysis Systems biweekly meeting](https://indico.cern.ch/event/1032972/):
+    -   *Refactoring Awkward Array*, Jim Pivarski
+        \[[PDF](https://indico.cern.ch/event/1032972/contributions/4381811/attachments/2251584/3819590/awkward_refactoring_Jim.pdf)\]
+
+-   **21 May 2021:** [Dask Distributed Summit](https://summit.dask.org/):
+    -   *New Dask collection type for Awkward Arrays*, Jim Pivarski
+        \[[link](https://summit.dask.org/schedule/presentation/24/dask-in-high-energy-physics-community/)\]
+
+-   **17-21 May 2021:** [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/):
+    -   *AwkwardForth: accelerating Uproot with an internal DSL*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/948465/contributions/4324131/)\]
     -   *Distributed statistical inference with pyhf enabled through funcX*, Matthew Feickert
         \[[link](https://indico.cern.ch/event/948465/contributions/4324013/)\]
 
@@ -146,7 +158,7 @@ Presentations
     -   *pyhf Tutorial*, Giordon Stark, Lukas Heinrich, Matthew Feickert
         \[[link](https://indico.cern.ch/event/985425/)\]
 
--   **8 December 2020:** [ Argonne Lunch Seminar](https://indico.fnal.gov/event/46057/):
+-   **8 December 2020:** [Argonne Lunch Seminar](https://indico.fnal.gov/event/46057/):
     -   *Steps Towards Differentiable and Scalable Physics Analyses at the LHC*, Matthew Feickert
         \[[link](https://indico.fnal.gov/event/46057/)\]
 
@@ -188,7 +200,9 @@ Presentations
     -   *mplhep: bridging Matplotlib and HEP*, Andrzej Novak
         \[[link](https://indico.cern.ch/event/882824/contributions/3931303/)\]
 
--   **7 July 2020:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
+-   **6-12 July 2020:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
+    -   *Awkward Array: Manipulating JSON like Data with NumPy like Idioms*, Jim Pivarski
+        \[[YouTube](https://youtu.be/WlnUF3LRBj4)\]
     -   *Boost-histogram: High-Performance Histograms as Objects*, Henry Schreiner, Hans Dembinski, Jim Pivarski, and Shuo Liu
         \[[link](https://conference.scipy.org/proceedings/scipy2020/slides.html)\]
     -   *pyhf: a pure Python statistical fitting library with tensors and autograd*, Matthew Feickert
@@ -233,6 +247,8 @@ Presentations
         \[[PDF](https://indico.cern.ch/event/773049/contributions/3476182/attachments/1938227/3213768/EduardoRodrigues_2019-11-05_CHEP2019Adelaide.pdf)\]
     -   *Recent developments in histogram libraries*, Henry Schreiner
         \[[PDF](https://indico.cern.ch/event/773049/contributions/3473265/attachments/1937714/3211784/HistogramCHEP2019.pdf)\]
+    -   *Ragged, jagged, nested, indirected, very awkward arrays*, Jim Pivarski
+        \[[PDF](https://indico.cern.ch/event/773049/contributions/3473258/attachments/1934835/3206036/pivarski-chep-awkward.pdf)\]
 
 -   **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:
     -   *The Scikit-HEP project*, Eduardo Rodrigues
@@ -248,15 +264,23 @@ Presentations
     -   *Introduction to iminuit*, Hans Dembinski
          \[[PDF](https://indico.cern.ch/event/833895/contributions/3577808/attachments/1927550/3191336/iminuit_intro.html)\]
 
+-   **14 July 2019:** [Strange Loop 2019](https://www.thestrangeloop.com/2019/sessions.html):
+    -   *Jagged, ragged, awkward arrays*, Jim Pivarski
+        \[[link](https://www.thestrangeloop.com/2019/jagged-ragged-awkward-arrays.html)\]
+
 -   **12-13 September 2019:** [2019 IRIS-HEP Institute Retreat](https://indico.cern.ch/event/840472/):
     -   *Histogramming and more*, Henry Schreiner
         \[[PDF](https://indico.cern.ch/event/840472/contributions/3561801/attachments/1906612/3148897/henry_schreiner.pdf)\]
    -   *Boost Histogram Roadmap*, Henry Schreiner
        \[[PDF](https://indico.cern.ch/event/840472/contributions/3564389/attachments/1907193/3150006/bhroadmap.pdf)\]
 
--   **29 July 2020:** [2019 Meeting of the Division of Particles & Fields of the American Physical Society](https://indico.cern.ch/event/782953/overview):
+-   **29 July 2019:** [2019 Meeting of the Division of Particles & Fields of the American Physical Society](https://indico.cern.ch/event/782953/overview):
     -   *IRIS-HEP Tutorial: Fast columnar data analysis with data science tools*, Jim Pivarski
         \[[link](https://indico.cern.ch/event/782953/timetable/?view=standard#b-341418-computing-analysis-to)\]
+
+-   **10 July 2019:** [IRIS-HEP Analysis Systems Biweekly Meeting](https://indico.cern.ch/event/815512/):
+    -   *Motivation and requirements for awkward 1.0*, Jim Pivarski
+        \[[PDF](https://indico.cern.ch/event/815512/contributions/3497823/attachments/1878236/3093661/2019-07-10-awkward-plans-pivarski.pdf)\]
 
 -   **19-20 June 2019:** , [IRIS-HEP Analysis Systems Topical Workshop](https://indico.cern.ch/event/822074/)
     -   *awkward, etc.*, Jim Pivarski
@@ -280,9 +304,13 @@ Presentations
     -   *NumPy, Pandas, PyROOT, and Uproot*, Jim Pivarski
         \[[link](https://indico.cern.ch/event/811577/)\]
 
+-   **29 May 2019:** [Hands-on Training for CMS](https://indico.cern.ch/event/814100/) at the [Fermilab LPC](https://lpc.fnal.gov/):
+    -   *Columnar Analysis Tools HATS*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/814100/)\]
+
 -   **28 May 2019:** [Hands-on Training for CMS](https://indico.cern.ch/event/814895/) at the [Fermilab LPC](https://lpc.fnal.gov/):
     -   *Scientific Python and Uproot HATS*, Jim Pivarski
-        \[[link ](https://indico.cern.ch/event/814895/)\]
+        \[[link](https://indico.cern.ch/event/814895/)\]
 
 -   **21 May 2019:** [Belle II](https://www.belle2.org/) experiment
     [Analysis Software Developers\'

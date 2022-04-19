@@ -107,17 +107,21 @@ Presentations
     -   *Uproot and Awkward Array tutorial*, Jim Pivarski
         \[[link](https://indico.cern.ch/event/1019958/contributions/4430420/)\]
     -   *Fastjet: Vectorizing Jet Finding*, Aryan Roy
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418484/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4418484/)\]
     -   *High-Performance Histogramming for HEP Analysis*, Aman Goel, Henry Schreiner and Shuo Liu
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
     -   *Automating Awkward Array testing*, Santam Choudhury
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418489/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4418489/)\]
     -   *mplhep*, Andrzej Novak
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4420291/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4420291/)\]
     -   *pyBumpHunter : A model agnostic bump hunting tool in python*, Louis Vaslin
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4420292/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4420292/)\]
     -   *Powerful Python Packaging for Scientific Codes*, Henry Schreiner
-        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418546/)\]
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4418546/)\]
+
+-   **14 June 2021:** [Hands-on Advanced Tutorial Session](https://indico.cern.ch/event/1042866/) at the [Fermilab LPC](https://lpc.fnal.gov/):
+    -   *Uproot Awkward Columnar HATS*, Jim Pivarski
+        \[[GitHub repo.](https://github.com/jpivarski-talks/2021-06-14-uproot-awkward-columnar-hats)\]
 
 -   **7-18 June 2021:** Lecture at
     [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
@@ -148,26 +152,40 @@ Presentations
         \[[PDF](https://indico.cern.ch/event/960587/contributions/4070323/attachments/2129368/3585646/Feickert_2020-10-26.pdf)\]
     -   *Lorentz Vector Manipulation and Histogram Handling*, Henry Schreiner
         \[[PDF](https://indico.cern.ch/event/960587/contributions/4070321/attachments/2129362/3585637/Lorentz%20Vector%20Manipulation%20and%20Histogram%20Handling.pdf)\]
+    -   *Access & Manipulation of Complex Data Structures: Uproot & Awkward Array*, Jim Pivarski
+        \[[PDF](https://indico.cern.ch/event/960587/contributions/4070318/attachments/2129252/3585426/pivarski-as-blueprint.pdf)\]
 
 -   **10 August 2020:** [Snowmass 2021 Computational Frontier Workshop](https://indico.fnal.gov/event/43829/):
     -   *Likelihood Publication and Preservation*, Matthew Feickert
         \[[link](https://indico.fnal.gov/event/43829/contributions/193820/)\]
 
 -   **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
+    -   *Uproot and Awkward Array tutorial*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/882824/contributions/3927101/)\]
     -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
         \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
     -   *Model building and statistical inference with zfit and hepstats*, Jonas Eschle and Matthieu Marinangeli
         \[[link](https://indico.cern.ch/event/882824/contributions/3932489/)\]
-    -   * "pyhf Tutorial: Accelerating analyses and preserving likelihoods"*, Matthew Feickert
-        \[[link](https://indico.cern.ch/event/882824/contributions/3931292/)\]
+    -   *iminuit: Past and Future*, Hans Dembinski
+        \[[link](https://indico.cern.ch/event/882824/contributions/3932492/)\]
     -   *zfit - TensorFlow 2.0: dynamic and compiled HPC*, Jonas Eschle
         \[[link](https://indico.cern.ch/event/882824/contributions/3932493/)\]
+    -   *pyhf Tutorial: Accelerating analyses and preserving likelihoods*, Matthew Feickert
+        \[[link](https://indico.cern.ch/event/882824/contributions/3931292/)\]
+    -   *The boost-histogram package*, Hans Dembinski and Henry Schreiner
+        \[[link](https://indico.cern.ch/event/882824/contributions/3931299/)\]
+    -   *mplhep: bridging Matplotlib and HEP*, Andrzej Novak
+        \[[link](https://indico.cern.ch/event/882824/contributions/3931303/)\]
 
 -   **7 July 2020:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
     -   *Boost-histogram: High-Performance Histograms as Objects*, Henry Schreiner, Hans Dembinski, Jim Pivarski, and Shuo Liu
         \[[link](https://conference.scipy.org/proceedings/scipy2020/slides.html)\]
     -   *pyhf: a pure Python statistical fitting library with tensors and autograd*, Matthew Feickert
         \[[link](https://doi.org/10.25080/Majora-342d178e-023)\]
+
+-   **8 June 2020:** [LPC HATS: Hands-on Training for CMS](https://indico.cern.ch/event/917675/):
+    -   *Uproot Awkward columnar HATS*, Jim Pivarski
+        \[[GitHub repo.](https://github.com/jpivarski/2020-06-08-uproot-awkward-columnar-hats)\]
 
 -   **27 May 2020:** [2020 IRIS-HEP Team Retreat](https://indico.cern.ch/event/896167/):
     -   *pyhf Roadmap for IRIS-HEP Execution Phase*, Matthew Feickert

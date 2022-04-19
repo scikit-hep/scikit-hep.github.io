@@ -104,6 +104,20 @@ Presentations
         \[[link](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
     -   *Distributed statistical inference with pyhf*, Matthew Feickert
         \[[link](https://indico.cern.ch/event/1019958/contributions/4418598/)\]
+    -   *Uproot and Awkward Array tutorial*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/1019958/contributions/4430420/)\]
+    -   *Fastjet: Vectorizing Jet Finding*, Aryan Roy
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418484/)\]
+    -   *High-Performance Histogramming for HEP Analysis*, Aman Goel, Henry Schreiner and Shuo Liu
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
+    -   *Automating Awkward Array testing*, Santam Choudhury
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418489/)\]
+    -   *mplhep*, Andrzej Novak
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4420291/)\]
+    -   *pyBumpHunter : A model agnostic bump hunting tool in python*, Louis Vaslin
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4420292/)\]
+    -   *Powerful Python Packaging for Scientific Codes*, Henry Schreiner
+        \[[kink](https://indico.cern.ch/event/1019958/contributions/4418546/)\]
 
 -   **7-18 June 2021:** Lecture at
     [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
@@ -132,6 +146,8 @@ Presentations
 -   **26 October 2020:** [IRIS-HEP Future Analysis Systems and Facilities Blueprint Workshop](https://indico.cern.ch/event/960587/):
     -   *Toward Fitting as a Service with pyhf*, Matthew Feickert
         \[[PDF](https://indico.cern.ch/event/960587/contributions/4070323/attachments/2129368/3585646/Feickert_2020-10-26.pdf)\]
+    -   *Lorentz Vector Manipulation and Histogram Handling*, Henry Schreiner
+        \[[PDF](https://indico.cern.ch/event/960587/contributions/4070321/attachments/2129362/3585637/Lorentz%20Vector%20Manipulation%20and%20Histogram%20Handling.pdf)\]
 
 -   **10 August 2020:** [Snowmass 2021 Computational Frontier Workshop](https://indico.fnal.gov/event/43829/):
     -   *Likelihood Publication and Preservation*, Matthew Feickert

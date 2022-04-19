@@ -22,6 +22,9 @@ See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
 Proceedings and publications
 ----------------------------
 
+-   *An array-oriented Python interface for FastJet*,
+    Aryan Roy, Jim Pivarski and Chad Freer,
+    [arXiv:2202.03911 \[hep-ex\]](https://arxiv.org/abs/2202.03911)
 -   *Distributed statistical inference with pyhf enabled through funcX*,
     M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
     proceedings of the [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
@@ -191,6 +194,10 @@ Presentations
     -   *pyhf Roadmap for IRIS-HEP Execution Phase*, Matthew Feickert
         \[[PDF](https://indico.cern.ch/event/896167/contributions/3880229/attachments/2045450/3428542/Feickert_pyhf-execution-phase_2020-05-27.pdf)\]
 
+-   **8 April 2020:** [Electron Ion Collider User's meeting](https://indico.bnl.gov/event/8242/):
+    -   *Uproot and Awkward Array tutorials for the Electron Ion Collider*, Jim Pivarski
+        \[[GitHub repo.](https://github.com/jpivarski-talks/2020-04-08-eic-jlab)\]
+
 -   **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
     -   *Introduction to the Scikit HEP project*, Eduardo Rodrigues
 
@@ -235,6 +242,10 @@ Presentations
    -   *Boost Histogram Roadmap*, Henry Schreiner
        \[[PDF](https://indico.cern.ch/event/840472/contributions/3564389/attachments/1907193/3150006/bhroadmap.pdf)\]
 
+-   **29 July 2020:** [2019 Meeting of the Division of Particles & Fields of the American Physical Society](https://indico.cern.ch/event/782953/overview):
+    -   *IRIS-HEP Tutorial: Fast columnar data analysis with data science tools*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/782953/timetable/?view=standard#b-341418-computing-analysis-to)\]
+
 -   **19-20 June 2019:** , [IRIS-HEP Analysis Systems Topical Workshop](https://indico.cern.ch/event/822074/)
     -   *awkward, etc.*, Jim Pivarski
          \[[PDF](https://indico.cern.ch/event/822074/contributions/3471451/attachments/1864975/3066189/jim-stuff.pdf)\]
@@ -248,6 +259,10 @@ Presentations
 -   **18 June 2019:** [LHCb experiment](http://lhcb.cern.ch/) Week, CERN:
     -   *Particles and decays in the Scikit-HEP project*, Eduardo Rodrigues
         \[[PDF]({{ site.baseurl }}{% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]
+
+-   **18 June 2019:** [3rd CMS Machine Learning Workshop](https://indico.cern.ch/event/798721/):
+    -   *Uproot: accessing ROOT data in the scientific Python ecosystem*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/798721/contributions/3461343/)\]
 
 -   **21 May 2019:** [Belle II](https://www.belle2.org/) experiment
     [Analysis Software Developers\'
@@ -269,6 +284,10 @@ Presentations
        \[[PDF](https://indico.cern.ch/event/803122/contributions/3339214/attachments/1830213/2997039/bhandhist.pdf)\]
     -   *Aghast*, Jim Pivarski
        \[[PDF](https://indico.cern.ch/event/803122/contributions/3339215/attachments/1830076/2996786/pivarski-2019-04-15-irishep-aghast.pdf)\]
+
+-   **1 April 2019:** [Software Carpentry at Fermilab](https://davidyakobovitch.github.io/2019-04-01_fnal/):
+    -   *PyROOT, uproot, and awkward-arrays*, Jim Pivarski
+        \[[GitHub repo.](https://github.com/jpivarski/2019-04-01-fermilab-carpentries)\]
 
 -   **21 March 2019:** [PyGamma19
     Workshop](https://indico.cern.ch/event/783425/), Heidelberg,

@@ -53,6 +53,10 @@ Proceedings and publications
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
     [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);
     [arXiv:1905.00002 \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
+-   *Columnar data processing for HEP analysis*,
+    Jim Pivarski, Jaydeep Nandi, David Lange and Peter Elmer,
+    proceedings of the [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
+    [EPJ Web of Conferences 214, 06026 (2019)](https://doi.org/10.1051/epjconf/201921406026);
 -   *Bayesian Block Histogramming for High Energy Physics*,
     Brian Pollack, Saptaparna Bhattacharya, Michael Schmitt,
     [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
@@ -97,6 +101,10 @@ Presentations
 -   **13 September 2021:** [STAR Junior's meeting](https://drupal.star.bnl.gov/STAR/meetings/star-collaboration-meeting-september-2021/juniors-day):
     -   *Uproot/Awkward Array tutorial for STAR*, Jim Pivarski
         \[[GitHub repo.](https://github.com/jpivarski-talks/2021-09-13-star-uproot-awkward-tutorial)\]
+
+-   **27 August 2021:** [HEP Software Foundation and IRIS-HEP Software Carpentry](https://indico.cern.ch/event/1058873/), virtual:
+    -   *Uproot Tutorial*, Mason Proffitt
+        \[[link](https://indico.cern.ch/event/1058873/timetable/#b-430459-python-for-analysis-2)\]
 
 -   **15 July 2021:** [SciPy 2021, 20th Python in Science Conference](https://www.scipy2021.scipy.org/):
     -   *Distributed statistical inference with pyhf powered by funcX*, Matthew Feickert
@@ -213,6 +221,10 @@ Presentations
     -   *pyhf: A Pure Python Statistical Fitting Library with Tensors and Autograd*, Matthew Feickert
         \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3334540/10_-_IRIS-HEP-2020-poster-session-pyhf.pdf)\]
 
+-   **29 November 2021:** [HEP Software Foundation and IRIS-HEP Software Carpentry](https://indico.cern.ch/event/834411/):
+    -   *Uproot Tutorial*, Mason Proffitt
+        \[[link](https://indico.cern.ch/event/834411/timetable/#b-351469-python-for-analysis-r)\]
+
 -   **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
     -   *An introduction to pyhf and HistFactory likelihoods*, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 
@@ -263,6 +275,14 @@ Presentations
 -   **18 June 2019:** [3rd CMS Machine Learning Workshop](https://indico.cern.ch/event/798721/):
     -   *Uproot: accessing ROOT data in the scientific Python ecosystem*, Jim Pivarski
         \[[link](https://indico.cern.ch/event/798721/contributions/3461343/)\]
+
+-   **10 June 2019:** [U.S. ATLAS Software Training at Argonne National Lab](https://indico.cern.ch/event/811577/):
+    -   *NumPy, Pandas, PyROOT, and Uproot*, Jim Pivarski
+        \[[link](https://indico.cern.ch/event/811577/)\]
+
+-   **28 May 2019:** [Hands-on Training for CMS](https://indico.cern.ch/event/814895/) at the [Fermilab LPC](https://lpc.fnal.gov/):
+    -   *Scientific Python and Uproot HATS*, Jim Pivarski
+        \[[link ](https://indico.cern.ch/event/814895/)\]
 
 -   **21 May 2019:** [Belle II](https://www.belle2.org/) experiment
     [Analysis Software Developers\'

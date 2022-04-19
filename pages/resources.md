@@ -74,7 +74,7 @@ Conference proceedings
 -   *Nested data structures in array frameworks*,
     J, Pivarski, D. Lange and P. Elmer,
     [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/), Saas Fee, Switzerland;
-    [J. Phys. Conf. Ser. 1525 (2020) 1, 012053](https://doi.org/10.1088/1742-6596/1525/1/012053)
+    [J. Phys. Conf. Ser. 1525 (2020), 012053](https://doi.org/10.1088/1742-6596/1525/1/012053)
 -   *The Scikit-HEP project*, Eduardo Rodrigues,
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
     [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);

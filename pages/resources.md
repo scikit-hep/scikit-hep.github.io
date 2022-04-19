@@ -19,47 +19,70 @@ Scikit-HEP tutorials
 See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
 
 
-Proceedings and publications
-----------------------------
+Publications
+------------
 
 -   *An array-oriented Python interface for FastJet*,
     Aryan Roy, Jim Pivarski and Chad Freer,
     [arXiv:2202.03911 \[hep-ex\]](https://arxiv.org/abs/2202.03911)
--   *Distributed statistical inference with pyhf enabled through funcX*,
-    M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
-    proceedings of the [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
-    [EPJ Web Conf. 251 02070 (2021)](https://doi.org/10.1051/epjconf/202125102070);
 -   *pyhf: pure-Python implementation of HistFactory statistical models*,
     L. Heinrich, M. Feickert, G. Stark and K. Cranmer,
     [J. Open Source Softw. 6 2823 (2021)](https://doi.org/10.21105/joss.02823)
--   *zfit: scalable pythonic fitting*,
-    Jonas Eschle, Albert Navarro Puig, Rafael Silva Coutinho and Nicola Serra,
-    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
-    [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025);
--   *Recent developments in histogram libraries*,
-    H. Dembinski, J. Pivarski and H. Schreiner,
-    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
-    [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014);
+-   *Bayesian Block Histogramming for High Energy Physics*,
+    Brian Pollack, Saptaparna Bhattacharya, Michael Schmitt,
+    [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
+
+
+Conference proceedings
+----------------------
+
+-   *Distributed statistical inference with pyhf enabled through funcX*,
+    M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
+    [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+    [EPJ Web of Conferences 251, 02070 (2021)](https://doi.org/10.1051/epjconf/202125102070)
+-   *AwkwardForth: accelerating Uproot with an internal DSL*,
+    J. Pivarski, I. Osborne, P. Das, D. Lange and P. Elmer,
+    [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+    [EPJ Web of Conferences 251, 03002 (2021)](https://doi.org/10.1051/epjconf/202125103002);
+    [arXiv:2102.13516 \[cs.PL\]](https://arxiv.org/abs/2102.13516)
+-   *Awkward Array: JSON-like data, NumPy-like idioms*,
+    Jim Pivarski, Ianna Osborne, Pratyush Das, Anish Biswas and Peter Elmer,
+    [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
+    [10.25080/Majora-342d178e-00b](https://doi.org/10.25080/Majora-342d178e-00b)
 -   *Boost-histogram: High-Performance Histograms as Objects*,
     Henry Schreiner, Hans Dembinski, Shuo Liu, Jim Pivarski,
-    proceedings of the [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
-    [10.25080/Majora-342d178e-009](https://doi.org/10.25080/Majora-342d178e-009);
+    [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
+    [10.25080/Majora-342d178e-009](https://doi.org/10.25080/Majora-342d178e-009)
+-   *Recent developments in histogram libraries*,
+    H. Dembinski, J. Pivarski and H. Schreiner,
+    [CHEP 2019 Conference](https://chep2019.org/), Adelaide, Australia;
+    [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014)
+-   *Awkward Arrays in Python, C++, and Numba*,
+    J, Pivarski, P. Elmer and D. Lange,
+    [CHEP 2019 Conference](https://chep2019.org/), Adelaide, Australia;
+    [EPJ Web of Conferences 245, 05023 (2020)](https://doi.org/10.1051/epjconf/202024505023);
+    [arXiv:2001.06307 \[cs.MS\]](https://arxiv.org/abs/2001.06307)
+-   *zfit: scalable pythonic fitting*,
+    Jonas Eschle, Albert Navarro Puig, Rafael Silva Coutinho and Nicola Serra,
+    [CHEP 2019 Conference](https://chep2019.org/), Adelaide, Australia;
+    [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025)
 -   *The Scikit HEP Project - overview and prospects*,
     Eduardo Rodrigues et al.,
-    proceedings of the [CHEP 2019 Conference](https://chep2019.org/), Adelaide Australia;
+    [CHEP 2019 Conference](https://chep2019.org/), Adelaide, Australia;
     [EPJ Web of Conferences 245, 06028 (2020)](https://doi.org/10.1051/epjconf/202024506028);
     [arXiv:2007.03577 \[physics.comp-ph\]](https://arxiv.org/abs/2007.03577)
--   *The Scikit-HEP project*, Eduardo Rodrigues, proceedings of the
+-   *Nested data structures in array frameworks*,
+    J, Pivarski, D. Lange and P. Elmer,
+    [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/), Saas Fee, Switzerland;
+    [J. Phys. Conf. Ser. 1525 (2020) 1, 012053](https://doi.org/10.1088/1742-6596/1525/1/012053)
+-   *The Scikit-HEP project*, Eduardo Rodrigues,
     [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
     [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);
     [arXiv:1905.00002 \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
 -   *Columnar data processing for HEP analysis*,
     Jim Pivarski, Jaydeep Nandi, David Lange and Peter Elmer,
-    proceedings of the [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
-    [EPJ Web of Conferences 214, 06026 (2019)](https://doi.org/10.1051/epjconf/201921406026);
--   *Bayesian Block Histogramming for High Energy Physics*,
-    Brian Pollack, Saptaparna Bhattacharya, Michael Schmitt,
-    [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
+    [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
+    [EPJ Web of Conferences 214, 06026 (2019)](https://doi.org/10.1051/epjconf/201921406026)
 
 
 Press articles
@@ -68,6 +91,7 @@ Press articles
 -   **Apr 2021:** CERN Courier May/June 2021, [LHC reinterpreters think long-term](https://cerncourier.com/a/lhc-reinterpreters-think-long-term/)
 -   **Jan 2021:** Symmetry Magazine, [ATLAS releases ‘full orchestra’ of analysis instruments](https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments)
 -   **Jan 2020:** CERN News, [New open release allows theorists to explore LHC data in a new way: The ATLAS collaboration releases full analysis likelihoods, a first for an LHC experiment](https://home.cern/news/news/knowledge-sharing/new-open-release-allows-theorists-explore-lhc-data-new-way)
+
 
 Presentations
 -------------

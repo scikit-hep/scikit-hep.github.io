@@ -81,7 +81,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [arXiv:2002.07678 [physics.chem-ph]](https://arxiv.org/abs/2002.07678) - cites `iminuit`.
 
-### PhD Theses
+### PhD theses
 
 - [Dalila Salamani (Geneva U.), Dec. 2021](https://doi.org/10.13097/archive-ouverte/unige:158540), ATLAS experiment - cites the Scikit-HEP project.
 - [Srishti Bhasin (Bristol U.), Sep. 2021](https://inspirehep.net/literature/1982380), LHCb experiment - cites `scikit-hep`, Scikit-HEP project.

@@ -57,7 +57,8 @@ A list of publications citing the `pyhf` package or material using it is collect
   [CHEP 2019 Conference](https://chep2019.org/) - mentions the Scikit-HEP project.
 - [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/),
   [J. Phys. Conf. Ser. 1525 (2020), 012017](https://doi.org/10.1088/1742-6596/1525/1/012017) - cites the Scikit-HEP project.
-
+- [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001),
+  [CHEP 2018 Conference](https://chep2018.org/) - cites `root_pandas`.
 
 ### General articles
 

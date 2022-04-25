@@ -28,7 +28,7 @@ You can set up a development environment by running:
 ```bash
 python3 -m venv .env
 source ./.env/bin/activate
-pip install -v -e .[all]
+pip install -v -e .[dev]
 ```
 
 # Post setup

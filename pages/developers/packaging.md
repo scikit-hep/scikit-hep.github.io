@@ -55,9 +55,7 @@ Packages should provide a `pyproject.toml` file that *at least* looks like this:
 
 ```toml
 [build-system]
-requires = [
-    "setuptools>=42",
-]
+requires = ["setuptools>=42"]
 build-backend = "setuptools.build_meta"
 ```
 

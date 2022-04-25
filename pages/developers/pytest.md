@@ -53,9 +53,7 @@ addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
 xfail_strict = true
 filterwarnings = ["error"]
 log_cli_level = "info"
-testpaths = [
-    "tests",
-]
+testpaths = ["tests"]
 ```
 
 The `minversion` will print a nicer error if your `pytest` is too old (though, ironically, it won't read this is the version is too old, so setting "6" or less in `pyproject.toml` is rather pointless). The `addopts` setting will add whatever you put there to the command line when you run; `-ra` will print a summary "r"eport of "a"ll results, which gives you a quick way to review what tests failed and were skipped, and why. `--showlocals` will print locals in tracebacks. `--strict-markers` will make sure you don't try to use an unspecified fixture. And `--strict-config` will error if you make a mistake in your config. `xfail_strict` will change the default for `xfail` to fail the tests if it doesn't fail - you can still override locally in a specific xfail for a flaky failure. `filter_warnings` will cause all warnings to be errors (you can add allowed warnings here too). `log_cli_level` will report `INFO` and above log messages on a failure. Finally, `testpaths` will limit `pytest` to just looking in the folders given - useful if it tries to pick up things that are not tests from other directories. [See the docs](https://docs.pytest.org/en/stable/customize.html) for more options.

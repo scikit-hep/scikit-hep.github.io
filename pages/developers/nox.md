@@ -60,7 +60,7 @@ On GitHub Actions or Azure, pipx is available by default, so you should use
 `pipx run nox`. To give it access to all Python versions, you can use this action:
 
 ```yaml
-- uses: excitedleigh/setup-nox@v2.0.0
+- uses: excitedleigh/setup-nox@main
 ```
 
 You can now access all versions of Python from nox. At least in GitHub Actions,

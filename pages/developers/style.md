@@ -216,7 +216,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.942"
+  rev: "v0.950"
   hooks:
   - id: mypy
     files: src
@@ -276,7 +276,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.3.1"
+  rev: "v1.3.2"
   hooks:
   - id: pycln
     args: [--all]

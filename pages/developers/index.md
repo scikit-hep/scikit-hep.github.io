@@ -9,11 +9,16 @@ has_children: true
 Developer Information
 =====================
 
-The pages here are intended for developers who [are making][guidelines] or maintaining a package,
-especially one that is part of Scikit-HEP or being proposed to become part.
+The pages here are intended for developers who are making or maintaining a
+package and want to follow modern best practices in Python. This is especially
+important for packages that are part of Scikit-HEP or being proposed to join -
+if you are here to propose a new package for Scikit-HEP, read [package
+requirements][guidelines] - it is the only Scikit-HEP-specific page.
 
-New developers are encouraged to read the following pages.
-Veteran developers should still check out [introduction][intro], as it has a guide on recommendations for your `CONTRIBUTING.md`.
+New developers are encouraged to read the following pages.  Veteran developers
+should still check out [introduction][intro], as it has a guide on
+recommendations for your `CONTRIBUTING.md`, and at least glance through other
+sections.
 
 Following that, there are recommendations for [style][], intended to promote
 good practices and to ensure continuity across the packages. There is a

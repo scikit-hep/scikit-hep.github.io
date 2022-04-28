@@ -151,8 +151,9 @@ If you want manylinux1, just do:
 
 You can even put any docker image here, including [Scikit-HEP's
 `skhep/manylinuxgcc-*`][manylinuxgcc] images with GCC 9. Note that
-manylinux1 will be discontinued Jan 1, 2022. If you always need a specific
-image, you can set that in the `pyproject.toml` file instead.
+manylinux1 was discontinued on Jan 1, 2022, and updates will cease whenever they
+break. If you always need a specific image, you can set that in the
+`pyproject.toml` file instead.
 
 ## Publishing
 

@@ -12,7 +12,7 @@ interactive_repo_review: true
 You can check the style of a GitHub repository below. Enter any repository, such
 as `scikit-hep/hist`, and the branch you want to check, such as `main` (it must
 exist). This will produce a list of results - green checkmarks mean this rule is
-followed, red x's mean the rule is not. A yellow warning sign means that the
+followed, red errors mean the rule is not. A yellow warning sign means that the
 check was skipped because a previous required check failed. Some checks will
 fail, that's okay - the goal is bring all possible issues to your attention, not
 to force compliance with arbitrary checks.

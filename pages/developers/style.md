@@ -238,7 +238,6 @@ MyPy has a config section in `pyproject.toml` that looks like this:
 [tool.mypy]
 files = "src"
 python_version = "3.7"
-warn_unused_configs = true
 strict = true
 show_error_codes = true
 enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
@@ -309,7 +308,7 @@ complex functions that should be broken up. Here is an opinionated config:
 ```ini
 [flake8]
 max-complexity = 12
-extend-select = B,B9
+extend-select = B9
 extend-ignore = E203, E501, E722, B950
 ```
 
@@ -347,7 +346,6 @@ in your flake8 config:
 
 ```ini
 [flake8]
-extend-select = T
 per-file-ignores =
     tests/*: T
     examples/*: T
@@ -412,7 +410,7 @@ when clearly better (please always use them, they are faster) if you set
   rev: "v2.32.0"
   hooks:
   - id: pyupgrade
-    args: ["--py36-plus"]
+    args: ["--py37-plus"]
 ```
 
 [PyUpgrade]: https://github.com/asottile/pyupgrade:

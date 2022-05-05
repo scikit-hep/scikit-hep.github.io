@@ -427,11 +427,17 @@ when clearly better (please always use them, they are faster) if you set
 > clean up your annotations to 3.7+ style, too!
 
 
-## Setup.cfg format (extra)
+## Configuration format
 
+<div class="skhep-bar d-flex m-2" style="justify-content:center;">
+  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('setup')" id='setup-btn'>setup.cfg</button>
+  <button class="skhep-bar-item btn m-2" onclick="openTab('pyproject')" id='pyproject-btn'>pyproject.toml</button>
+</div>
+
+<div class="skhep-tab" markdown="1" id="setup">
 There is a tool that keeps your `setup.cfg` organized, and makes sure that
 important parts (like Python classifiers) are in sync. This tool,
-`setup-cfg-fmt`, has native support for pre-commit:
+[setup-cfg-fmt][], has native support for pre-commit:
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
@@ -442,6 +448,23 @@ important parts (like Python classifiers) are in sync. This tool,
 
 Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
 or whatever your maximum is.
+
+[setup-cfg-fmt]: https://github.com/asottile/setup-cfg-fmt
+</div>
+<div class="skhep-tab" markdown="1" id="pyproject" style="display:none;">
+
+This is a young tool that helps you format `pyproject.toml` called
+[pyproject-fmt][].  This will style and sort your `build-system` and `project`
+sections in the current iteration. You can use pre-commit:
+
+```yaml
+- repo: https://github.com/tox-dev/pyproject-fmt
+  rev: "0.3.3"
+  hooks:
+    - id: pyproject-fmt
+```
+[pyproject-fmt]: https://github.com/tox-dev/pyproject-fmt
+</div>
 
 
 ## Spelling (extra)
@@ -571,3 +594,20 @@ And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
 
 [Flake8]: https://github.com/pycqa/flake8
 [PyCln]: https://hadialqattan.github.io/pycln
+
+
+<script>
+function openTab(tabName) {
+  var tab = document.getElementsByClassName("skhep-tab");
+  for (const t of tab) {
+    t.style.display = t.id == tabName ? "block" : "none";
+  }
+  var btn = document.getElementsByClassName("skhep-bar-item");
+  for (const b of btn) {
+    if(b.id == tabName.concat("-btn"))
+      b.classList.add("btn-purple");
+    else
+      b.classList.remove("btn-purple");
+  }
+}
+</script>

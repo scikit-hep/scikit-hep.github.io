@@ -536,6 +536,26 @@ If you have shell scripts, you can protect against common mistakes using [shellc
   - id: shellcheck
 ```
 
+## Prettier
+
+The [prettier](https://prettier.io) tool can format a large number of different
+file types. An example of usage:
+
+```yaml
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.6.2"
+    hooks:
+      - id: prettier
+        types_or: [yaml, markdown, html, js]
+```
+
+Since this formats a variety of very common file types (like `html`, `md`,
+`yaml`, `js`, and more), you will usually want to provide a `types_or` setting
+(shown above) with the files you are interested in auto-formatting. You can try
+it without the `types_or` first to see what it can do. Special markups in
+html/markdown files might clash with auto-formatting - check to verify your
+files are supported.
+
 ## PyLint (noisy)
 
 PyLint is very opinionated, with a high signal-to-noise ratio. However, by

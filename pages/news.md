@@ -9,6 +9,8 @@ nav_order: 30
 Project news {#news}
 ============
 
+**May 2022:** Package `awkward-1.0` renamed to `awkward`.
+
 **March 2022:** Creation of this *News* page.
 
 **March 2022:** Packages `resample` and `uproot-browser` joined Scikit-HEP.

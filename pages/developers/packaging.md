@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Packaging
+{: .no_toc }
+
+{% include toc.html %}
 
 The libraries in Scikit-HEP have a variety of different packaging styles, but
 this document is intended to outline a recommended style that new packages
@@ -22,6 +25,7 @@ this page is unneeded for those systems.
 Also see the [Python packaging guide][], especially the [Python packaging tutorial][].
 
 > #### Note
+> {: .no_toc }
 >
 > Raw source lives in git and has a `setup.py`. You *can* install directly from
 > git via pip, but normally users install from distributions hosted on PyPI.

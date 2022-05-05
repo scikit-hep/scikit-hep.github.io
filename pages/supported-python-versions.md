@@ -5,8 +5,10 @@ permalink: /supported-python-versions
 nav_order: 60
 ---
 
-Supported Python Versions
-=========================
+# Supported Python Versions
+{: .no_toc}
+
+{% include toc.html %}
 
 The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy,
 NumPy, and scikit-image have come together and agreed on a plan for Python and
@@ -56,8 +58,7 @@ Users are *highly recommended* to use an interpreter that will be supported by
 NEP 29 during the lifetime of their project (or be willing to upgrade interpreters
 once a year for projects that span more than 42 months).
 
-Statement on Python 2
----------------------
+## Statement on Python 2
 
 Python 2 has reached [end of life as of January 1st, 2020][py2clock]. No more
 code changes to fix bugs and security flaws will be made (the final 2.7 release
@@ -71,8 +72,7 @@ Users starting analysis with our tools, or developing new tools, do not need to
 be using Python 2. Legacy code is just that, and can use legacy versions of our
 software too.
 
-Statement on Python 3.6
------------------------
+## Statement on Python 3.6
 
 This was a very popular version of Python, and is the "default" version of
 Python on CentOS 7, Ubuntu 18.04, and even CentOS 8 (though not well supported,

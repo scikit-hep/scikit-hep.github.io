@@ -6,7 +6,6 @@ nav_order: 2
 has_children: true
 ---
 
-Projects {#projects}
-========
+# Projects {#projects}
 
 {% include package_table.html badges="True" deprecated="True" %}

@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Package requirements and guidelines
+{: .no_toc }
+
+{% include toc.html %}
 
 The guidelines on this page provide minimum requirements for Scikit-HEP
 packages, which we hope help providing high-quality packages with some level of

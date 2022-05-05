@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Intro to Static Type Checking
+{: .no_toc }
+
+{% include toc.html %}
 
 
 ## Basics

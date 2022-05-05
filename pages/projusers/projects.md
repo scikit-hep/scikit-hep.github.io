@@ -7,14 +7,16 @@ parent: Who uses Scikit-HEP?
 ---
 
 
-Projects using Scikit-HEP? {#project_users}
-==========================
+# Projects using Scikit-HEP? {#project_users}
+{: .no_toc}
+
+{% include toc.html %}
+
 
 This page tries to give an overview of who is using one or more packages
 of the Scikit-HEP project.
 
-Experiment collaborations
--------------------------
+## Experiment collaborations
 
 [![img-ATLAS]][ATLAS]
 
@@ -58,8 +60,7 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 {: width="120px"}
 
 
-Computing and software institutes
----------------------------------
+## Computing and software institutes
 
 [![img-iris-hep]][iris-hep]
 
@@ -72,8 +73,8 @@ or contributors to, several core project packages.
 [img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
 {: width="120px"}
 
-Phenomenology projects
-----------------------
+## Phenomenology projects
+
 
 [![img-flavio]][flavio]
 
@@ -84,8 +85,7 @@ the Standard Model and beyond.
 [img-flavio]: {{ site.baseurl }}{% link /assets/images/projusers/logo_flavio.png %}
 {: width="70px"}
 
-Software projects
------------------
+## Software projects
 
 [![img-coffea]][Coffea]
 

@@ -7,20 +7,20 @@ nav_order: 40
 
 
 
-Resources on Scikit-HEP {#resources}
-=======================
+# Resources on Scikit-HEP {#resources}
+{: .no_toc}
+
+{% include toc.html %}
 
 A collection of tutorials and presentations, videos and publications on,
 or related to, the Scikit-HEP project.
 
-Scikit-HEP tutorials
---------------------
+## Scikit-HEP tutorials
 
 See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
 
 
-Publications
-------------
+## Publications
 
 -   *An array-oriented Python interface for FastJet*,
     Aryan Roy, Jim Pivarski and Chad Freer,
@@ -33,8 +33,7 @@ Publications
     [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)
 
 
-Conference proceedings
-----------------------
+## Conference proceedings
 
 -   *Distributed statistical inference with pyhf enabled through funcX*,
     M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
@@ -93,8 +92,7 @@ Press articles
 -   **Jan 2020:** CERN News, [New open release allows theorists to explore LHC data in a new way: The ATLAS collaboration releases full analysis likelihoods, a first for an LHC experiment](https://home.cern/news/news/knowledge-sharing/new-open-release-allows-theorists-explore-lhc-data-new-way)
 
 
-Presentations
--------------
+## Presentations
 
 -   **15 March 2022:** [ATLAS SUSY Background Forum](https://indico.cern.ch/event/1132859/):
     -   *Introduction to cabinetry*, Alexander Held

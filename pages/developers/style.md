@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Style Guide
+{: .no_toc }
+
+{% include toc.html %}
 
 ## Pre-commit
 
@@ -356,7 +359,7 @@ per-file-ignores =
 
 </details>
 
-## YesQA (extra)
+## YesQA
 
 Over time, you can end up with extra "noqa" comments that are no longer needed. This is a flake8 helper that removes those comments when they are no longer required.
 
@@ -369,7 +372,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 
 You need to have the same extra dependencies as flake8. In YAML, you can save the list given to yesqa and repeat it in flake8 using `&flake8-dependencies` and `*flake8-dependencies` after the colon.
 
-## isort (extra)
+## isort
 
 You can have your imports sorted automatically by [isort][]. This will sort your
 imports, and is black compatible. One reason to have sorted imports is to
@@ -397,7 +400,7 @@ profile = "black"
 
 [isort]: https://pycqa.github.io/isort/
 
-## PyUpgrade (extra)
+## PyUpgrade
 
 Another useful tool is [PyUpgrade][], which monitors your codebase for "old" style
 syntax. Most useful to keep Python 2 outdated constructs out, it can even do
@@ -416,6 +419,7 @@ when clearly better (please always use them, they are faster) if you set
 [PyUpgrade]: https://github.com/asottile/pyupgrade:
 
 > #### Note:
+> {: .no_toc }
 > If you set this to `--py37-plus`, you can add the annotations import by adding
 > the following line to your isort pre-commit hook configuration:
 >
@@ -427,7 +431,7 @@ when clearly better (please always use them, they are faster) if you set
 > clean up your annotations to 3.7+ style, too!
 
 
-## Setup.cfg format (extra)
+## Setup.cfg format (setuptools only)
 
 There is a tool that keeps your `setup.cfg` organized, and makes sure that
 important parts (like Python classifiers) are in sync. This tool,
@@ -444,7 +448,7 @@ Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
 or whatever your maximum is.
 
 
-## Spelling (extra)
+## Spelling
 
 You can and should check for spelling errors in your code too. If you want to
 add this, you can use [codespell][] for common spelling mistakes. Unlike most
@@ -482,7 +486,7 @@ errors, such as the one below:
     exclude: .pre-commit-config.yaml
 ```
 
-## PyGrep hooks (extra)
+## PyGrep hooks
 
 This is a repository with a [collection of pre-commit extra hooks](https://github.com/pre-commit/pygrep-hooks) that protect against some common, easy to detect, mistakes. You can pick and choose the hooks you want from the repo; here are some common ones:
 

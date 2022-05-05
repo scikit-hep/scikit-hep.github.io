@@ -6,8 +6,7 @@ nav_order: 30
 ---
 
 
-Project news {#news}
-============
+## Project news {#news}
 
 **March 2022:** Creation of this *News* page.
 

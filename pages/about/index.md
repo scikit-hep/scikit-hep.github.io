@@ -6,8 +6,7 @@ nav_order: 100
 has_children: true
 ---
 
-About {#about}
-=======
+# About {#about}
 
 The Scikit-HEP project
 (HEP stands for High Energy Physics, see more in the [FAQ]({{site.baseurl}}{% link pages/about/faq.md %} ))

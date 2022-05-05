@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # GitHub Actions for Binary Wheels
+{: .no_toc }
+
+{% include toc.html %}
 
 Building binary wheels is a bit more involved, but can still be done
 effectively with GHA. This document will introduce [cibuildwheel][] for use in
@@ -42,6 +45,7 @@ You can even define variables that you can set in the GUI and access in the CI!
 [workflow_dispatch]: https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 
 ### Useful suggestion:
+{: .no_toc }
 
 Since these variables will be used by all jobs, you could make them available
 in your `pyproject.toml` file, so they can be used everywhere (even locally for

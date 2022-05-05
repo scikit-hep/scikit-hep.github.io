@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Task runners
+{: .no_toc }
+
+{% include toc.html %}
 
 A task runner, like [make][] (fully general), [rake][] (Ruby general),
 [invoke][] (Python general), [tox][] (Python packages), or [nox][] (Python

@@ -6,6 +6,9 @@ nav_order: 95
 ---
 
 # Contributor Covenant Code of Conduct {#code-of-conduct}
+{: .no_toc}
+
+{% include toc.html %}
 
 ## Our Pledge
 

@@ -129,6 +129,23 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 </details>
 
+<details markdown="1"><summary>Documentation / README snippets support (click here)</summary>
+
+If you want Black used in your documentation, you can use blacken-docs. This
+can even catch syntax errors in code snippets! It supports markdown and
+restructured text. Note that because black is in `additional_dependencies`,
+you'll have to keep it up to date manually.
+
+```yaml
+- repo: https://github.com/asottile/blacken-docs
+  rev: v1.12.1
+  hooks:
+    - id: blacken-docs
+      additional_dependencies: [black==22.3.0]
+```
+
+</details>
+
 ## Check-Manifest
 
 [Check-manifest](https://pypi.org/project/check-manifest/) is a fantastic,

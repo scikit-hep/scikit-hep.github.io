@@ -7,8 +7,7 @@ parent: About
 ---
 
 
-Funding {#funding}
-=======
+# Funding {#funding}
 
 The project started in Autumn 2016 with a core group of half-a-dozen people,
 many of which were part of the [DIANA/HEP][] project.

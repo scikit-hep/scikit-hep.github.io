@@ -5,11 +5,12 @@ permalink: /getting-in-touch
 nav_order: 95
 ---
 
-Getting in touch {#get_in_touch}
-================
+# Getting in touch {#get_in_touch}
+{: .no_toc}
 
-Gitter
-------
+{% include toc.html %}
+
+## Gitter
 
 The fastest way to contact us is via the Gitter channel
 [Scikit-HEP/community][], ideal for
@@ -29,8 +30,7 @@ which are of particular interest for general exchanges with the "Python in HEP" 
 [HSF/PyHEP]:                https://gitter.im/HSF/PyHEP
 [HSF/PyHEP-newcomers]:      https://gitter.im/HSF/PyHEP-newcomers
 
-Mailing lists
--------------
+## Mailing lists
 
 Forum for general matters, announcements and discussions concerning the
 Scikit-HEP project :
@@ -45,8 +45,7 @@ Note that this list is private but anyone can send an email to it
 without sign-up.
 
 
-StackOverflow
--------------
+## StackOverflow
 
 Certain packages recommend that general questions be asked with relevant
 [StackOverflow tags](https://stackoverflow.com/tags) when the README
@@ -58,8 +57,7 @@ does not immediately provide an answer. The available package tags are:
 - [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
 - [`zfit`](https://stackoverflow.com/questions/tagged/zfit)
 
-On GitHub
----------
+## On GitHub
 
 You can also get in touch via the GitHub pages of the package of
 interest, e.g. to issue a bug.

@@ -6,6 +6,17 @@ nav_order: 11
 parent: Developer information
 ---
 
+# GitHub Actions for pure Python wheels
+{: .no_toc }
+
+<details open markdown="block" class="table-wrapper p-2">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+* TOC
+{:toc .m-1}
+</details>
 
 We will cover binary wheels [on the next page][], but if you do not have a
 compiled extension, this is called a universal (pure Python) package, and the

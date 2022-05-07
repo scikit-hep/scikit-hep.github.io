@@ -6,8 +6,7 @@ nav_order: 98
 ---
 
 
-Citing Scikit-HEP or individual packages {#citing}
-========================================
+# Citing Scikit-HEP or individual packages {#citing}
 
 We appreciate if you consider to acknowledge the Scikit-HEP project in case it has made or is having an impact on your work or research.
 We suggest the following citation for the project as a whole (in BibTeX format):

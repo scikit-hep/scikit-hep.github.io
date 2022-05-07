@@ -8,17 +8,20 @@ parent: Who uses Scikit-HEP?
 
 
 # Scientific publications using Scikit-HEP {#publication_users}
+{: .no_toc}
+
+{% include toc.html %}
 
 A list of publications citing the `pyhf` package or material using it is collected at <https://scikit-hep.org/pyhf/citations.html#use-in-publications>.
 
-### Peer reviewed journal papers
+## Peer reviewed journal papers
 
-#### Experimental Particle Physics
+### Experimental Particle Physics
 
 - [LHCb Collaboration, JHEP 01 (2022) 166](https://link.springer.com/article/10.1007/JHEP01(2022)166) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
-#### Particle Physics Phenomenology
+### Particle Physics Phenomenology
 
 - [Phys. Rev. D 105, 075001 (2021)](https://doi.org/10.1103/PhysRevD.105.075001) ([arXiv:2111.10343 [hep-ph]](https://arxiv.org/abs/2111.10343)) - cites the Scikit-HEP project.
 - [SciPost Phys. 12, 037 (2022)](https://doi.org/10.21468/SciPostPhys.12.1.037) ([arXiv:2109.04981 [hep-ph]](https://arxiv.org/abs/2109.04981)) - cites `cabinetry`, `pyhf`.
@@ -35,7 +38,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 - [JHEP 11 (2019) 034](https://doi.org/10.1007/JHEP11(2019)034) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `uproot`, Scikit-HEP project.
 
-#### Astronomy, Astrophysics and Cosmology
+### Astronomy, Astrophysics and Cosmology
 
 - [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
 - [JCAP 03 (2020) 068](https://doi.org/10.1088/1475-7516/2020/03/068) ([arXiv:1912.02763 [astro-ph.CO]](https://arxiv.org/abs/1912.02763)) - cites `iminuit`.
@@ -45,7 +48,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - cites `iminuit`.
 - [JCAP 11 (2017) 032](https://doi.org/10.1088/1475-7516/2017/11/032) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `iminuit`.
 
-### Conference proceedings
+## Conference proceedings
 
 - [PoS EPS-HEP2021 (2022) 792](https://doi.org/10.22323/1.398.0792),
   [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/) - cites the Scikit-HEP project.
@@ -60,41 +63,41 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001),
   [CHEP 2018 Conference](https://chep2018.org/) - cites `root_pandas`.
 
-### General articles
+## General articles
 
-#### Experimental Particle Physics
+### Experimental Particle Physics
 
 - [arXiv:1706.01420 [hep-ex]](https://arxiv.org/abs/1706.01420) - cites `iminuit`.
 
-#### Particle Physics Phenomenology
+### Particle Physics Phenomenology
 
 - [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621) - cites `scikit-hep`, `uproot3`.
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - cites `iminuit`.
 - [arXiv:1505.01102 [hep-ph]](https://arxiv.org/abs/1505.01102) - cites `iminuit`.
 
-#### Astronomy, Astrophysics and Cosmology
+### Astronomy, Astrophysics and Cosmology
 
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - cites `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
 - [arXiv:1801.06075 [astro-ph.HE]](https://arxiv.org/abs/1801.06075) - cites `iminuit`.
 
-#### Computer Science, Machine Learning
+### Computer Science, Machine Learning
 
 - [arXiv:2104.12615 [cs.DB]](https://arxiv.org/abs/2104.12615) - cites the Scikit-HEP project.
 - [arXiv:2012.11638 [cs.LG]](https://arxiv.org/abs/2012.11638) - cites `pyjet`.
 
-#### Data Analysis, Statistics and Probability
+### Data Analysis, Statistics and Probability
 
 - [arXiv:2202.02194 [physics.data-an]](https://arxiv.org/abs/2202.02194) - cites Scikit-HEP project and various of its packages.
 - [arXiv:2111.12849 [physics.data-an]](https://arxiv.org/abs/2111.12849) - cites `pyjet`, Scikit-HEP project.
 - [arXiv:1811.01242 [physics.data-an]](https://arxiv.org/abs/1811.01242) - cites `iminuit`.
 
-#### Chemical Physics
+### Chemical Physics
 
 - [arXiv:2002.07678 [physics.chem-ph]](https://arxiv.org/abs/2002.07678) - cites `iminuit`.
 
-### PhD theses
+## PhD theses
 
 - [Dalila Salamani (Geneva U.), Dec. 2021](https://doi.org/10.13097/archive-ouverte/unige:158540), ATLAS experiment - cites the Scikit-HEP project.
 - [Srishti Bhasin (Bristol U.), Sep. 2021](https://inspirehep.net/literature/1982380), LHCb experiment - cites `scikit-hep`, Scikit-HEP project.

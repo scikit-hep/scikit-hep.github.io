@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # GitHub Actions
+{: .no_toc }
+
+{% include toc.html %}
 
 The recommended CI for Scikit-HEP is GitHub Actions (GHA), although its
 predecessor Azure is also in heavy usage, and other popular services (Travis,

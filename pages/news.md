@@ -6,8 +6,7 @@ nav_order: 30
 ---
 
 
-Project news {#news}
-============
+## Project news {#news}
 
 **May 2022:** Package `awkward-1.0` renamed to `awkward`.
 

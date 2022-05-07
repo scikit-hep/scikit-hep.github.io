@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Intro to development
+{: .no_toc }
+
+{% include toc.html %}
 
 The libraries in Scikit-HEP try to follow best practices in the community
 for development and deployment (though some packages in Scikit-HEP are still
@@ -108,6 +111,7 @@ Never edit your `PATH` or `PYTHONPATH` manually, or depend on the current
 directory for library development.
 
 > #### Warning
+> {: .no_toc }
 >
 > *Always* use pip to install, do not call `python setup.py` directly for
 > building or installing. Pip inserts shims into setup.py to fix common issues
@@ -145,6 +149,7 @@ conda activate env_name
 To deactivate, use `conda deactivate`, or leave your shell.
 
 > #### Warning
+> {: .no_toc }
 >
 > Building binary components for conda packages takes some care. In general, if
 > there are any binary components, you must use conda-forge's build system to

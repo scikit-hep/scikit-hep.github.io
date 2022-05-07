@@ -7,6 +7,9 @@ parent: Developer information
 ---
 
 # Intro to testing
+{: .no_toc }
+
+{% include toc.html %}
 
 Tests are crucial to writing reliable software. A good test suite allows you to:
 

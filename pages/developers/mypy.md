@@ -197,6 +197,7 @@ from typing import Union, List
 def f(x: int) -> List[int]:
     return list(range(x))
 
+
 # Unions are a list of types that all could be allowed
 def g(x: Union[str, int]) -> None:
     # Type narrowing - Unions get narrowed
@@ -213,8 +214,10 @@ def g(x: Union[str, int]) -> None:
 ```python
 from __future__ import annotations
 
+
 def f(x: int) -> list[int]:
     return list(range(x))
+
 
 def g(x: str | int) -> None:
     if isinstance(x, str):

@@ -87,7 +87,8 @@ Always use pytest. The built-in unittest is _very_ verbose; the simpler the writ
 ```python
 import unittest
 
-class MyTestCase(unittest.TestCase)
+
+class MyTestCase(unittest.TestCase):
     def test_something(self):
         x = 1
         self.assertEquals(x, 2)
@@ -112,8 +113,9 @@ Approximately equals is normally ugly to check, but pytest makes it easy too:
 ```python
 from pytest import approx
 
+
 def test_approx():
-    .3333333333333 == approx(1/3)
+    0.3333333333333 == approx(1 / 3)
 ```
 
 This natively works with NumPy arrays, too! Always prefer `array1 == approx(array2)` over the functions in the `numpy.testing` module if you can, it
@@ -125,6 +127,7 @@ You should make sure that expected errors are thrown:
 
 ```python
 import pytest
+
 
 def test_raises():
     with pytest.raises(ZeroDivisionError):
@@ -150,7 +153,7 @@ def test_printout(capsys):
 Making a new fixture is not too hard, and can be placed in the test file or in `conftest.py`:
 
 ```python
-@pytest.fixture(params=[1,2,3], ids=["one", "two", "three"])
+@pytest.fixture(params=[1, 2, 3], ids=["one", "two", "three"])
 def ints(request):
     return request.param
 ```
@@ -161,7 +164,7 @@ Now, you can use it:
 
 ```python
 def test_on_ints(ints):
-    assert ints**2 == ints*ints
+    assert ints**2 == ints * ints
 ```
 
 Now you will get three tests, `test_on_ints-one`, `test_on_ints-two`, and `test_on_ints-three`!
@@ -174,7 +177,8 @@ Here's an advanced example, which also uses `monkeypatch`, which is a great way 
 import platform
 import pytest
 
-@pytest.fixture(params=['Linux', 'Darwin', 'Windows'], autouse=True)
+
+@pytest.fixture(params=["Linux", "Darwin", "Windows"], autouse=True)
 def platform_system(request, monkeypatch):
     monkeypatch.setattr(platform, "system", lambda _: request.param)
 ```

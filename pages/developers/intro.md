@@ -6,9 +6,6 @@ nav_order: 2
 parent: Developer information
 ---
 
-# Intro to development
-{: .no_toc }
-
 {% include toc.html %}
 
 The libraries in Scikit-HEP try to follow best practices in the community
@@ -44,8 +41,7 @@ pip install pre-commit # or brew install pre-commit on macOS
 pre-commit install # Will install a pre-commit hook into the git repo
 ```
 
-You can also/alternatively run `pre-commit run` (changes only) or `pre-commit
-run --all-files` to check even without installing the hook.
+You can also/alternatively run `pre-commit run` (changes only) or `pre-commit run --all-files` to check even without installing the hook.
 
 # Testing
 
@@ -54,13 +50,13 @@ Use pytest to run the unit checks:
 ```bash
 pytest
 ```
+
 </pre>
 </details>
 
-
 ## Development environment: Pip
 
-If you want to work on Python software, you should *always* have a virtual
+If you want to work on Python software, you should _always_ have a virtual
 environment. A user may not always have one, but a developer always should.
 You do not want to risk breaking your main system environment, you want full
 control over versions of libraries, and you want to avoid "leaking" your main
@@ -110,10 +106,9 @@ to rerun `pip install -e .` if there are binary components and you edit those.
 Never edit your `PATH` or `PYTHONPATH` manually, or depend on the current
 directory for library development.
 
-> #### Warning
-> {: .no_toc }
+> <h4 style="no_toc">Warning:</h4>
 >
-> *Always* use pip to install, do not call `python setup.py` directly for
+> _Always_ use pip to install, do not call `python setup.py` directly for
 > building or installing. Pip inserts shims into setup.py to fix common issues
 > and enable features like PEP 517/518 builds. The only time you directly call
 > setup.py is when making sdists, and even then there are hacks involved.
@@ -132,7 +127,7 @@ conda create -n env_name python=3.8
 ```
 
 You can use `-n name` or `-p path` to specify the environment by name or
-location.  The following assume you used a name, but just replace names with
+location. The following assume you used a name, but just replace names with
 paths if you choose a path.
 
 Some packages provide an environment file, either for CI or developer use. If they
@@ -148,8 +143,7 @@ conda activate env_name
 
 To deactivate, use `conda deactivate`, or leave your shell.
 
-> #### Warning
-> {: .no_toc }
+> <h4 style="no_toc">Warning:</h4>
 >
 > Building binary components for conda packages takes some care. In general, if
 > there are any binary components, you must use conda-forge's build system to
@@ -161,7 +155,7 @@ IDE's can provide useful additions, such as extended type checking, type aware
 completions, and more. We currently do not provide IDE files in our
 repositories, but PyCharm community edition is suggested by some of our members
 for developers looking for an IDE. It includes an extension, IdeaVIM, for VIM
-emulation for users used to that editor.  Setting up an IDE takes extra time
+emulation for users used to that editor. Setting up an IDE takes extra time
 but often provides tools (like smart renaming) that are useful, and if you use
 type hints, will probably pay for the setup time quite quickly when developing.
 

@@ -6,10 +6,6 @@ nav_order: 4
 parent: About
 ---
 
-
-# FAQ
-{: .no_toc}
-
 {% include toc.html %}
 
 ## What is the exact project name?

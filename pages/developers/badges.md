@@ -6,14 +6,9 @@ nav_order: 20
 parent: Developer information
 ---
 
-# Badges
-
-
 ## Scikit-HEP projects
 
 In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-badge]](https://scikit-hep.org/){:.badge}
-
-
 
 ```md
 [![Scikit-HEP][sk-badge]](https://scikit-hep.org/)

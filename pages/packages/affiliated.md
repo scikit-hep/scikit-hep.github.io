@@ -4,11 +4,8 @@ title: Affiliated packages
 permalink: /affiliated
 nav_order: 1
 parent: Packages
+title: Affiliated projects and packages
 ---
-
-
-# Affiliated projects and packages {#affiliated_packages}
-{: .no_toc}
 
 {% include toc.html %}
 
@@ -19,10 +16,14 @@ In the following, projects that work closely together with Scikit-HEP are descri
 {%- assign project = item[1] -%}
 {%- if project.affiliated -%}
 {%- if project.image -%}
+
 ---
+
 [![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }}){: style="{{ project.image-style | default: "height:64px;"}}"}]({{project.url}}){: .largelogo }
 {%- else -%}
+
 ---
+
 {%- endif %}
 
 ## [{{project.name}}]({{project.url}}): {{project.description}}

@@ -6,59 +6,58 @@ nav_order: 10
 parent: Who uses Scikit-HEP?
 ---
 
-
-# Projects using Scikit-HEP? {#project_users}
-{: .no_toc}
-
 {% include toc.html %}
-
 
 This page tries to give an overview of who is using one or more packages
 of the Scikit-HEP project.
 
 ## Experiment collaborations
 
-[![img-ATLAS]][ATLAS]
+[![img-ATLAS]][atlas]
 
 [ATLAS](https://atlas.cern/) - the ATLAS experiment at CERN, Switzerland.
 
-[ATLAS]: https://atlas.cern/
+[atlas]: https://atlas.cern/
+
 [img-ATLAS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_atlas.png %}
 {: width="140px"}
 
-[![img-belle2]][BelleII]
+[![img-belle2]][belleii]
 
 [BelleII](https://www.belle2.org/) - the Belle II experiment at KEK, Japan.
 
-[BelleII]: https://www.belle2.org/
+[belleii]: https://www.belle2.org/
+
 [img-belle2]: {{ site.baseurl }}{% link /assets/images/projusers/logo_belle2.png %}
 {: width="70px"}
 
-[![img-CMS]][CMS]
+[![img-CMS]][cms]
 
 [CMS](https://cms.cern/) - the Compact Muon Solenoid experiment at CERN, Switzerland.
 
-[CMS]: https://cms.cern/
+[cms]: https://cms.cern/
+
 [img-CMS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_cms.gif %}
 {: width="70px"}
 
-[![img-KM3NeT]][KM3NeT]
+[![img-KM3NeT]][km3net]
 
 [KM3NeT](https://www.km3net.org/) - the Kilometre Cube Neutrino Telescope,
 an Astroparticle Physics European research infrastructure located in the Mediterranean Sea.
 
-[KM3NeT]: https://www.km3net.org/
+[km3net]: https://www.km3net.org/
+
 [img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
 {: width="140px"}
 
-[![img-LHCb]][LHCb]
+[![img-LHCb]][lhcb]
 
 [LHCb](http://lhcb.web.cern.ch/) - the LHCb (Large Hadron Collider beauty) experiment at CERN, Switzerland.
 
-[LHCb]: http://lhcb.web.cern.ch/
+[lhcb]: http://lhcb.web.cern.ch/
+
 [img-LHCb]: {{ site.baseurl }}{% link /assets/images/projusers/logo_lhcb.png %}
 {: width="120px"}
-
 
 ## Computing and software institutes
 
@@ -70,11 +69,11 @@ or contributors to, several core project packages.
 [Read on funding →]({{site.baseurl}}{% link pages/about/funding.md %} )
 
 [iris-hep]: https://iris-hep.org/
+
 [img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
 {: width="120px"}
 
 ## Phenomenology projects
-
 
 [![img-flavio]][flavio]
 
@@ -82,12 +81,13 @@ or contributors to, several core project packages.
 the Standard Model and beyond.
 
 [flavio]: https://flav-io.github.io/
+
 [img-flavio]: {{ site.baseurl }}{% link /assets/images/projusers/logo_flavio.png %}
 {: width="70px"}
 
 ## Software projects
 
-[![img-coffea]][Coffea]
+[![img-coffea]][coffea]
 
 [Coffea][] - a prototype [Analysis
 System](http://iris-hep.org/as.html) incorporating Scikit-HEP packages
@@ -95,7 +95,8 @@ to provide a lightweight, scalable, portable, and user-friendly
 interface for columnar analysis of HEP data. Some of the sub-packages of
 Coffea may become Scikit-HEP packages as development continues.
 
-[Coffea]: https://github.com/CoffeaTeam
+[coffea]: https://github.com/CoffeaTeam
+
 [img-coffea]: {{ site.baseurl }}{% link /assets/images/projusers/logo_coffea.jpg %}
 {: width="70px"}
 
@@ -106,5 +107,6 @@ fitting library based on TensorFlow and optimised for simple and direct
 manipulation of probability density functions.
 
 [zfit]: https://github.com/zfit
+
 [img-zfit]: {{ site.baseurl }}{% link /assets/images/projlogo/logo_zfit.png %}
 {: width="70px"}

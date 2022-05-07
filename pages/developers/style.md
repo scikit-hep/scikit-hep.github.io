@@ -4,10 +4,8 @@ title: Style
 permalink: /developer/style
 nav_order: 6
 parent: Developer information
+custom_title: Style guide
 ---
-
-# Style Guide
-{: .no_toc }
 
 {% include toc.html %}
 
@@ -15,8 +13,7 @@ parent: Developer information
 
 Scikit-HEP uses [pre-commit][] to check code style. It can be installed through
 `brew` (macOS) or `pip` (anywhere). There are two modes to use it locally; you
-can check manually with `pre-commit run` (changes only) or `pre-commit run
---all-files` (all). You can also run `pre-commit install` to add checks as a
+can check manually with `pre-commit run` (changes only) or `pre-commit run --all-files` (all). You can also run `pre-commit install` to add checks as a
 git pre-commit hook (which is where it gets its name). It's worth trying, even
 if you've tried and failed to set up a custom pre-commit hook before; it's quite
 elegant and does not add or commit the changes, it just makes the changes and
@@ -28,19 +25,19 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 
 ```yaml
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: "v4.2.0"
-  hooks:
-  - id: check-added-large-files
-  - id: check-case-conflict
-  - id: check-merge-conflict
-  - id: check-symlinks
-  - id: check-yaml
-  - id: debug-statements
-  - id: end-of-file-fixer
-  - id: mixed-line-ending
-  - id: requirements-txt-fixer
-  - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.2.0"
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
 ```
 
 **Helpful tip**: Pre-commit runs top-to-bottom, so put checks that modify content
@@ -66,7 +63,6 @@ Docker based checks will not work (pre-commit.ci already runs in docker), you
 cannot enable a `--manual` flag, so extra checks will not run, and jobs should not
 download packages (use `additional-dependencies:` to add what you need).
 
-
 ## Black
 
 [Black](https://black.readthedocs.io/en/latest/) is a popular auto-formatter
@@ -85,7 +81,7 @@ Also, properly formatted code has other benefits, such as if two developers
 make the same change, they get the same formatting, and merge requests are
 easier. The style choices in Black were explicitly made to optimize git diffs!
 
-There are a *few* options, mostly to enable/disable certain files, remove
+There are a _few_ options, mostly to enable/disable certain files, remove
 string normalization, and to change the line length, and those go in your
 `pyproject.toml` file.
 
@@ -95,7 +91,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 - repo: https://github.com/psf/black
   rev: "22.3.0"
   hooks:
-  - id: black
+    - id: black
 ```
 
 <details><summary>You can add a Black badge to your repo as well (click here)</summary>
@@ -110,15 +106,16 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 ```
+
 {%- endcapture -%}
 
 {{ mymarkdown | markdownify }}
 
 </details>
 
-In *very* specific situations, you may want to retain special formatting. After
+In _very_ specific situations, you may want to retain special formatting. After
 carefully deciding that it is a special use case, you can use `# fmt: on` and
-`# fmt: off` around a code block to have it keep custom formatting. *Always*
+`# fmt: off` around a code block to have it keep custom formatting. _Always_
 consider refactoring before you try this option! Most of the time, you can find
 a way to make the Blacked code look better by rewriting your code; factor out
 long unreadable portions into a variable, avoid writing matrices as 1D lists,
@@ -137,6 +134,7 @@ You also might like the following hook, which cleans Jupyter outputs:
   hooks:
     - id: nbstripout
 ```
+
 {%- endcapture -%}
 
 {{ mymarkdown | markdownify }}
@@ -158,20 +156,19 @@ ignore = [
 ]
 ```
 
-
 Add the following to your pre-commit config:
 
 ```yaml
 - repo: https://github.com/mgedmin/check-manifest
   rev: "0.48"
   hooks:
-  - id: check-manifest
+    - id: check-manifest
 ```
 
 If you use `setuptools_scm`, you might want to add:
 
 ```yaml
-    additional_dependencies: ["setuptools_scm[toml]"]
+additional_dependencies: ["setuptools_scm[toml]"]
 ```
 
 <details><summary>If this is too slow: (click here)</summary>
@@ -180,13 +177,13 @@ If you use `setuptools_scm`, you might want to add:
 
 **Warning**: For a complex package, this may be slow. You can optionally set
 `stages: [manual]` just below the id, and then only run this explicitly
-(probably in CI only).  In GHA, you should enable the manual stage, which will
+(probably in CI only). In GHA, you should enable the manual stage, which will
 run all checks:
 
 ```yaml
-    - uses: pre-commit/action@v2.0.3
-      with:
-        extra_args: --show-diff-on-failure --all-files --hook-stage manual
+- uses: pre-commit/action@v2.0.3
+  with:
+    extra_args: --show-diff-on-failure --all-files --hook-stage manual
 ```
 
 {%- endcapture -%}
@@ -195,12 +192,11 @@ run all checks:
 
 </details>
 
-
 ## Type checking
 
 One of the most exciting advancements in Python in the last 10 years has been
 static type hints. Scikit-HEP is just beginning to make sure packages are
-type-hint ready.  One of the challenges for providing static type hints is that
+type-hint ready. One of the challenges for providing static type hints is that
 it was developed in the Python 3 era and it really shines in a Python 3.7+
 codebase (due to `from __future__ import annotations`, which turns annotations
 into strings and allows you to use future Python features in Python 3.7+
@@ -221,9 +217,9 @@ The MyPy addition for pre-commit:
 - repo: https://github.com/pre-commit/mirrors-mypy
   rev: "v0.950"
   hooks:
-  - id: mypy
-    files: src
-    args: []
+    - id: mypy
+      files: src
+      args: []
 ```
 
 You should always specify args, as the hook's default hides issues - it's
@@ -231,11 +227,10 @@ designed to avoid configuration, but you should add configuration. You can also
 add items to the virtual environment setup for MyPy by pre-commit, for example:
 
 ```yaml
-    additional_dependencies: [attrs==21.2.0]
+additional_dependencies: [attrs==21.2.0]
 ```
 
 MyPy has a config section in `pyproject.toml` that looks like this:
-
 
 ```ini
 [tool.mypy]
@@ -257,10 +252,9 @@ There are a lot of options, and you can start with only typing global code and
 functions with at least one type annotation (the default) and enable more
 checks as you go (possibly by slowly uncommenting items in the list above).
 You can ignore missing imports on libraries as shown above, one section each.
-And you can disable MyPy on a line with `# type: ignore`.  One strategy would
+And you can disable MyPy on a line with `# type: ignore`. One strategy would
 be to enable `check_untyped_defs` first, followed by `disallow_untyped_defs`
-then `disallow_incomplete_defs`.  You can add these *per file* by adding a `#
-mypy: <option>` at the top of a file. You can also pass `--strict` on the
+then `disallow_incomplete_defs`. You can add these _per file_ by adding a `# mypy: <option>` at the top of a file. You can also pass `--strict` on the
 command line. `strict = true` is now allowed in config files, too.
 
 The extra strict options shown above (`warn_unreachable`, `redundant-expr`, and
@@ -281,11 +275,10 @@ stage, it's opt-in instead of automatic.
 - repo: https://github.com/hadialqattan/pycln
   rev: "v1.3.2"
   hooks:
-  - id: pycln
-    args: [--all]
-    stages: [manual]
+    - id: pycln
+      args: [--all]
+      stages: [manual]
 ```
-
 
 ## Flake8
 
@@ -294,7 +287,7 @@ simple style to things that might confuse or detract users, such as unused
 imports, named values that are never used, mutable default arguments, and more.
 Unlike black and some other tools, flake8 does not correct problems, it just
 reports them. Some of the checks could have had automated fixes, sadly (which
-is why Black is nice).  Here is a suggested `.flake8` or `setup.cfg` to enable
+is why Black is nice). Here is a suggested `.flake8` or `setup.cfg` to enable
 compatibility with Black (flake8 does not support pyproject.toml configuration,
 sadly):
 
@@ -304,7 +297,7 @@ extend-ignore = E203, E501
 ```
 
 One recommended plugin for flake8 is `flake8-bugbear`, which catches many
-common bugs.  It is highly opinionated and can be made more so with the `B9`
+common bugs. It is highly opinionated and can be made more so with the `B9`
 setting. You can also set a max complexity, which bugs you when you have
 complex functions that should be broken up. Here is an opinionated config:
 
@@ -321,28 +314,28 @@ extend-ignore = E203, E501, E722, B950
 - repo: https://github.com/pycqa/flake8
   rev: "4.0.1"
   hooks:
-  - id: flake8
-    additional_dependencies: [flake8-bugbear]
+    - id: flake8
+      additional_dependencies: [flake8-bugbear]
 ```
 
-This *will* be too much at first, so you can disable or enable any test by it's
+This _will_ be too much at first, so you can disable or enable any test by it's
 label. You can also disable a check or a list of checks inline with
 `# noqa: X###` (where you list the check label(s)). Over time, you can fix
 and enable more checks. A few interesting plugins:
 
-* [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs. Codes: `B`, `B9`
-* [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker. `--docstring-convention=pep257` is default, `numpy` and `google` also allowed.
-* [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker. Code: `SC`
-* [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (you may prefer isort). Code: `I`
-* [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules. Code: `N`
-* [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in. Code: `T`
+- [`flake8-bugbear`](https://pypi.org/project/flake8-bugbear/): Fantastic checker that catches common situations that tend to create bugs. Codes: `B`, `B9`
+- [`flake8-docstrings`](https://pypi.org/project/flake8-docstrings/): Docstring checker. `--docstring-convention=pep257` is default, `numpy` and `google` also allowed.
+- [`flake8-spellcheck`](https://pypi.org/project/flake8-spellcheck/): Spelling checker. Code: `SC`
+- [`flake8-import-order`](https://pypi.org/project/flake8-import-order/): Enforces PEP8 grouped imports (you may prefer isort). Code: `I`
+- [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules. Code: `N`
+- [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in. Code: `T`
 
 <details><summary>Flake8-print details: (click here)</summary>
 
 {%- capture "mymarkdown" -%}
 
 Having something verify you don't add a print statement by mistake is _very_
-useful.  A common need for the print checker would be to add it to a single
+useful. A common need for the print checker would be to add it to a single
 directory (`src` if you are following the convention recommended). You can do
 the next best thing by removing directories and file just for this check (`T`)
 in your flake8 config:
@@ -353,6 +346,7 @@ per-file-ignores =
     tests/*: T
     examples/*: T
 ```
+
 {%- endcapture -%}
 
 {{ mymarkdown | markdownify }}
@@ -367,7 +361,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 - repo: https://github.com/asottile/yesqa
   rev: "v1.3.0"
   hooks:
-  - id: yesqa
+    - id: yesqa
 ```
 
 You need to have the same extra dependencies as flake8. In YAML, you can save the list given to yesqa and repeat it in flake8 using `&flake8-dependencies` and `*flake8-dependencies` after the colon.
@@ -383,12 +377,11 @@ following pre-commit config will work:
 
 [isort]: https://pycqa.github.io/isort/
 
-
 ```yaml
 - repo: https://github.com/PyCQA/isort
   rev: "5.10.1"
   hooks:
-  - id: isort
+    - id: isort
 ```
 
 In order to use it, you need to add some configuration. You can add it to `pyproject.toml` or classic config files:
@@ -412,24 +405,23 @@ when clearly better (please always use them, they are faster) if you set
 - repo: https://github.com/asottile/pyupgrade
   rev: "v2.32.1"
   hooks:
-  - id: pyupgrade
-    args: ["--py37-plus"]
+    - id: pyupgrade
+      args: ["--py37-plus"]
 ```
 
-[PyUpgrade]: https://github.com/asottile/pyupgrade:
+[pyupgrade]: https://github.com/asottile/pyupgrade:
 
-> #### Note:
-> {: .no_toc }
+> <h4 style="no_toc">Note:</h4>
+>
 > If you set this to `--py37-plus`, you can add the annotations import by adding
 > the following line to your isort pre-commit hook configuration:
 >
 > ```yaml
->     args: ["-a", "from __future__ import annotations"]
+> args: ["-a", "from __future__ import annotations"]
 > ```
 >
 > Also make sure isort comes before pyupgrade. Now when you run pre-commit, it will
 > clean up your annotations to 3.7+ style, too!
-
 
 ## Setup.cfg format (setuptools only)
 
@@ -441,12 +433,11 @@ important parts (like Python classifiers) are in sync. This tool,
 - repo: https://github.com/asottile/setup-cfg-fmt
   rev: "v1.20.1"
   hooks:
-  - id: setup-cfg-fmt
+    - id: setup-cfg-fmt
 ```
 
 Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
 or whatever your maximum is.
-
 
 ## Spelling
 
@@ -459,8 +450,8 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 - repo: https://github.com/codespell-project/codespell
   rev: "v2.1.0"
   hooks:
-  - id: codespell
-    args: ["-L", "sur,nd"]
+    - id: codespell
+      args: ["-L", "sur,nd"]
 ```
 
 You can list allowed spellings in a comma separated string passed to `-L` (or
@@ -479,11 +470,11 @@ errors, such as the one below:
 ```yaml
 - repo: local
   hooks:
-  - id: disallow-caps
-    name: Disallow improper capitalization
-    language: pygrep
-    entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
-    exclude: .pre-commit-config.yaml
+    - id: disallow-caps
+      name: Disallow improper capitalization
+      language: pygrep
+      entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
+      exclude: .pre-commit-config.yaml
 ```
 
 ## PyGrep hooks
@@ -494,17 +485,17 @@ This is a repository with a [collection of pre-commit extra hooks](https://githu
 - repo: https://github.com/pre-commit/pygrep-hooks
   rev: "v1.9.0"
   hooks:
-  - id: python-check-blanket-noqa
-  - id: python-check-blanket-type-ignore
-  - id: python-no-log-warn
-  - id: python-no-eval
-  - id: python-use-type-annotations
-  - id: rst-backticks
-  - id: rst-directive-colons
-  - id: rst-inline-touching-normal
+    - id: python-check-blanket-noqa
+    - id: python-check-blanket-type-ignore
+    - id: python-no-log-warn
+    - id: python-no-eval
+    - id: python-use-type-annotations
+    - id: rst-backticks
+    - id: rst-directive-colons
+    - id: rst-inline-touching-normal
 ```
 
-If you want to add specific type ignores, see [mypy_clean_slate](https://github.com/geo7/mypy_clean_slate) for a tool that will add the specific ignores for you. You'll need to remove the existing type ignores (`git ls-files '*.py' | xargs sed -i '' 's/  # type: ignore//g'`), copy the pre-commit output (with `--show-error-codes` in mypy's args) to a file called `mypy_error_report.txt`, then run `pipx run mypy_clean_slate -a`.
+If you want to add specific type ignores, see [mypy_clean_slate](https://github.com/geo7/mypy_clean_slate) for a tool that will add the specific ignores for you. You'll need to remove the existing type ignores (`git ls-files '*.py' | xargs sed -i '' 's/ # type: ignore//g'`), copy the pre-commit output (with `--show-error-codes` in mypy's args) to a file called `mypy_error_report.txt`, then run `pipx run mypy_clean_slate -a`.
 
 [codespell]: https://github.com/codespell-project/codespell
 
@@ -517,13 +508,12 @@ following pre-commit config:
 - repo: https://github.com/pre-commit/mirrors-clang-format
   rev: "v14.0.3"
   hooks:
-  - id: clang-format
-    types_or: [c++, c, cuda]
+    - id: clang-format
+      types_or: [c++, c, cuda]
 ```
 
 This will use 1-2 MB binary wheels from PyPI on all common platforms. You can
-generated such a file using `pipx run clang-format -style=llvm -dump-config >
-.clang-format`.
+generated such a file using `pipx run clang-format -style=llvm -dump-config > .clang-format`.
 
 ## Shellcheck (shell scripts only)
 
@@ -533,7 +523,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 - repo: https://github.com/shellcheck-py/shellcheck-py
   rev: "v0.8.0.4"
   hooks:
-  - id: shellcheck
+    - id: shellcheck
 ```
 
 ## Prettier
@@ -542,11 +532,11 @@ The [prettier](https://prettier.io) tool can format a large number of different
 file types. An example of usage:
 
 ```yaml
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v2.6.2"
-    hooks:
-      - id: prettier
-        types_or: [yaml, markdown, html, css, scss, javascript, json]
+- repo: https://github.com/pre-commit/mirrors-prettier
+  rev: "v2.6.2"
+  hooks:
+    - id: prettier
+      types_or: [yaml, markdown, html, css, scss, javascript, json]
 ```
 
 Since this formats a variety of very common file types (like `.html`, `.md`,
@@ -600,5 +590,5 @@ def pylint(session: nox.Session) -> None:
 
 And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
 
-[Flake8]: https://github.com/pycqa/flake8
-[PyCln]: https://hadialqattan.github.io/pycln
+[flake8]: https://github.com/pycqa/flake8
+[pycln]: https://hadialqattan.github.io/pycln

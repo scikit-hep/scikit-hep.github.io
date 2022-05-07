@@ -39,10 +39,9 @@ div.project {
   border-radius: 5px;
   background-color: #f5f6fa;
   @media (prefers-color-scheme: dark) {
-      background-color: #000000;
-      box-shadow: 0px 0px 5px rgb(106, 143, 188);
+    background-color: #000000;
+    box-shadow: 0px 0px 5px rgb(106, 143, 188);
   }
-
 }
 
 div.project.affiliated {

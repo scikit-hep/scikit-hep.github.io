@@ -6,9 +6,6 @@ nav_order: 5
 parent: Developer information
 ---
 
-# Packaging
-{: .no_toc }
-
 {% include toc.html %}
 
 The libraries in Scikit-HEP have a variety of different packaging styles, but
@@ -24,17 +21,16 @@ this page is unneeded for those systems.
 
 Also see the [Python packaging guide][], especially the [Python packaging tutorial][].
 
-> #### Note
-> {: .no_toc }
+> <h4 style="no_toc">Note:</h4>
 >
-> Raw source lives in git and has a `setup.py`. You *can* install directly from
+> Raw source lives in git and has a `setup.py`. You _can_ install directly from
 > git via pip, but normally users install from distributions hosted on PyPI.
 > There are three options: **A)** A source package, called an SDist and has a
-> name that ends in `.tar.gz`.  This is a copy of the GitHub repository,
+> name that ends in `.tar.gz`. This is a copy of the GitHub repository,
 > stripped of a few specifics like CI files, and possibly with submodules
 > included (if there are any). **B)** A pure python wheel, which ends in
-> `.whl`;  this is only possible if there are no compiled extensions in the
-> library. This does *not* contain a setup.py, but rather a `PKG_INFO` file
+> `.whl`; this is only possible if there are no compiled extensions in the
+> library. This does _not_ contain a setup.py, but rather a `PKG_INFO` file
 > that is rendered from setup.py (or from another build system). **C)** If not
 > pure Python, a collection of wheels for every binary platform, generally one
 > per supported Python version and OS as well.
@@ -45,8 +41,8 @@ Also see the [Python packaging guide][], especially the [Python packaging tutori
 
 ## Package structure (medium priority)
 
-All packages *should* have a `src` folder, with the package code residing
-inside it, such as `src/<package>/`.  This may seem like extra hassle; after
+All packages _should_ have a `src` folder, with the package code residing
+inside it, such as `src/<package>/`. This may seem like extra hassle; after
 all, you can type "`python`" in the main directory and avoid installing it if
 you don't have a `src` folder! However, this is a bad practice, and it causes
 several common bugs, such as running `pytest` and getting the local version
@@ -55,7 +51,7 @@ parts of the library or if you access package metadata.
 
 ## PEP 517/518 support (high priority)
 
-Packages should provide a `pyproject.toml` file that *at least* looks like this:
+Packages should provide a `pyproject.toml` file that _at least_ looks like this:
 
 ```toml
 [build-system]
@@ -68,14 +64,14 @@ disable it with `--no-build-isolation` in special cases, like when writing
 custom conda-forge recipes). When this file is present, Pip creates a virtual
 environment, installs exactly what it sees here, then builds a wheel (as
 described in PEP 518). It then discards that environment, and installs the
-wheel.  This **a)** makes the build process reproducible and **b)** makes local
-developer installs match the standard install procedure.  Also, **c)** the
+wheel. This **a)** makes the build process reproducible and **b)** makes local
+developer installs match the standard install procedure. Also, **c)** the
 build requirements do not leak into the dev or install environments -- you do
 not need to have `wheel` installed in your dev environment, for example -
 setuptools declares it needs it via PEP 517 (and only when building wheels!). It
 also **d)** allows complete specification of the environment that `setup.py`
 runs in, so you can add packages that can be imported in `setup.py`. You should
-*not* be using `setup_requires`; it does not work properly and is deprecated.
+_not_ be using `setup_requires`; it does not work properly and is deprecated.
 If you want to have source builds that work in Pip 9 or earlier (not common),
 you should have dev instructions on how to install requirements needed to run
 `setup.py`.
@@ -133,22 +129,21 @@ write_to = "src/<package>/_version.py"
 This will write a version file when you build from the GitHub repository. You
 get the following benefits:
 
-* No manual file to change with the version number - always in sync with Git
-    * Simpler release procedure
-    * No more mistakes / confusion
-    * You can force a version with an environment variable
-      `SETUPTOOLS_SCM_PRETEND_VERSION` without source code changes.
-* A new version every commit (both commits since last tag and git hash encoded)
-    * Binaries no longer incorrectly "cache" when installing from pip directly
-      from git
-    * You can always tell the exact commit of every sdist/wheel/install
-    * If your working directory is "dirty" (changes/new files that are not
-      ignored), you will get a version that indicates this.
-* SDists and wheels contain the version file/number just like normal
-    * Note that reading the version number for the SDist requires
-      `setuptools_scm` and `toml` unless you add a workaround to `setup.py`.
-      This is not required for wheels (`setup.py` is not even part of a wheel).
-
+- No manual file to change with the version number - always in sync with Git
+  - Simpler release procedure
+  - No more mistakes / confusion
+  - You can force a version with an environment variable
+    `SETUPTOOLS_SCM_PRETEND_VERSION` without source code changes.
+- A new version every commit (both commits since last tag and git hash encoded)
+  - Binaries no longer incorrectly "cache" when installing from pip directly
+    from git
+  - You can always tell the exact commit of every sdist/wheel/install
+  - If your working directory is "dirty" (changes/new files that are not
+    ignored), you will get a version that indicates this.
+- SDists and wheels contain the version file/number just like normal
+  - Note that reading the version number for the SDist requires
+    `setuptools_scm` and `toml` unless you add a workaround to `setup.py`.
+    This is not required for wheels (`setup.py` is not even part of a wheel).
 
 If you want to set a template, you can control the details of this file if
 needed for historical compatibility, but it is better for new/young projects to
@@ -181,6 +176,7 @@ For GitHub actions, you can add a few lines that will enable you to manually
 trigger builds with custom versions:
 
 {% raw %}
+
 ```yaml
 on:
   workflow_dispatch:
@@ -190,6 +186,7 @@ on:
 env:
   SETUPTOOLS_SCM_PRETEND_VERSION: ${{ github.event.inputs.overrideVersion }}
 ```
+
 {% endraw %}
 
 If you fill in the override version setting when triggering a manual workflow
@@ -230,7 +227,7 @@ using this, as well.
 ## Setup configuration (medium priority)
 
 You should put as much as possible in your `setup.cfg`, and leave `setup.py`
-for *only* parts that need custom logic or binary building. This keeps your
+for _only_ parts that need custom logic or binary building. This keeps your
 `setup.py` cleaner, and many things that normally require a bit of custom code
 can be written without it, such as importing version and descriptions. [The
 official docs are excellent for setup.cfg][setuptools cfg]. Here's a practical example:
@@ -312,8 +309,7 @@ from setuptools import setup
 setup()
 ```
 
-Note that we do not recommend overriding or changing the behavior of `python
-setup.py test` or `python setup.py pytest`; the test command through `setup.py`
+Note that we do not recommend overriding or changing the behavior of `python setup.py test` or `python setup.py pytest`; the test command through `setup.py`
 is deprecated and discouraged - anything that directly calls `setup.py` assumes
 a `setup.py` is present, which is not true for [Flit][] packages and other
 systems.[^2] Instead, assume users call `pytest` directly, or use `nox`.
@@ -327,7 +323,6 @@ See our [Supported Python Versions][] statement for more information on
 
 With the exception of flake8, all package configuration should be possible via
 `pyproject.toml`, such as pytest (6+):
-
 
 ```toml
 [tool.pytest]
@@ -418,22 +413,25 @@ global-exclude __pycache__ *.py[cod] .*
 
 Note that Scikit-build currently may have issues with MANIFEST.in.
 
-[^1]: You shouldn't ever have to run commands like this, they are implementation
-      details of setuptools. For this command, you should use `python -m build -s`
-      instead (and `pip install build`).
+[^1]:
+    You shouldn't ever have to run commands like this, they are implementation
+    details of setuptools. For this command, you should use `python -m build -s`
+    instead (and `pip install build`).
 
-[^2]: Actually, Flit produces a backward-compatible `setup.py` by default when
-      making an SDist - it's only "missing" from the GitHub repository. This
-      default behavior is changing, though, as there's much less reason today
-      to have a legacy `setup.py`.
+[^2]:
+    Actually, Flit produces a backward-compatible `setup.py` by default when
+    making an SDist - it's only "missing" from the GitHub repository. This
+    default behavior is changing, though, as there's much less reason today
+    to have a legacy `setup.py`.
 
-[Flit]:  https://flit.readthedocs.io
-[Poetry]: https://python-poetry.org
+[flit]: https://flit.readthedocs.io
+[poetry]: https://python-poetry.org
 [hypermodern]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
 [setuptools_scm file]: https://github.com/pypa/setuptools_scm/#file-finders-hook-makes-most-of-manifestin-unnecessary
-[MANIFEST.in]: https://packaging.python.org/guides/using-manifest-in/
+[manifest.in]: https://packaging.python.org/guides/using-manifest-in/
 [setuptools]: https://setuptools.readthedocs.io/en/latest/userguide/index.html
 [setuptools cfg]: https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
-[Python packaging guide]: https://packaging.python.org
-[Python packaging tutorial]: https://packaging.python.org/tutorials/packaging-projects/
+[python packaging guide]: https://packaging.python.org
+[python packaging tutorial]: https://packaging.python.org/tutorials/packaging-projects/
+
 [Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}

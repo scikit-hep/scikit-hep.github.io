@@ -6,23 +6,20 @@ nav_order: 3
 parent: Developer information
 ---
 
-# Intro to testing
-{: .no_toc }
-
 {% include toc.html %}
 
 Tests are crucial to writing reliable software. A good test suite allows you to:
 
-* Immediately know if a new platform or software version works,
-* Refactor and cleanup your code with confidence,
-* Evaluate the effect of additions and changes.
+- Immediately know if a new platform or software version works,
+- Refactor and cleanup your code with confidence,
+- Evaluate the effect of additions and changes.
 
 Python used to have three major choices for tests; but now [pytest][] is used almost exclusively. Testing is never an install requirement, so there's no harm in using pytest. The goals of writing good tests are:
 
-* Simplicity: the easier / nicer your tests are to write, the more you will write.
-* Coverage: using as many inputs as possible increases the chances of finding something that breaks.
-* Performance: the faster the tests, the more situations you can run your tests in CI.
-* Reporting: when things break, you should get good information about what broke.
+- Simplicity: the easier / nicer your tests are to write, the more you will write.
+- Coverage: using as many inputs as possible increases the chances of finding something that breaks.
+- Performance: the faster the tests, the more situations you can run your tests in CI.
+- Reporting: when things break, you should get good information about what broke.
 
 > ### What about other choices?
 >
@@ -41,9 +38,8 @@ def test_funct():
 
 This looks simple, but it is doing several things:
 
-* The name of the function includes `test`, so it will run as a test.
-* The Python `assert` statement is rewritten by pytest to capture exactly what happens. If it fails, you will get a clear, detailed report on what each value was.
-
+- The name of the function includes `test`, so it will run as a test.
+- The Python `assert` statement is rewritten by pytest to capture exactly what happens. If it fails, you will get a clear, detailed report on what each value was.
 
 ### Configuring pytest
 
@@ -120,16 +116,12 @@ def test_approx():
     .3333333333333 == approx(1/3)
 ```
 
-This natively works with NumPy arrays, too! Always prefer `array1 ==
-approx(array2)` over the functions in the `numpy.testing` module if you can, it
+This natively works with NumPy arrays, too! Always prefer `array1 == approx(array2)` over the functions in the `numpy.testing` module if you can, it
 is simpler and the reporting is better.
-
 
 ### Tests should test for failures too
 
-
 You should make sure that expected errors are thrown:
-
 
 ```python
 import pytest
@@ -145,7 +137,6 @@ You can check for warnings as well, with `pytest.warns` or `pytest.deprecated_ca
 
 pytest [uses fixtures](https://docs.pytest.org/en/stable/fixture.html) to represent complex ideas, like setup/teardown, temporary resources, or parameterization.
 
-
 A fixture looks like a function argument; pytest recognizes them by name:
 
 ```python
@@ -157,7 +148,6 @@ def test_printout(capsys):
 ```
 
 Making a new fixture is not too hard, and can be placed in the test file or in `conftest.py`:
-
 
 ```python
 @pytest.fixture(params=[1,2,3], ids=["one", "two", "three"])
@@ -220,7 +210,6 @@ If you have to call something that is expensive or hard to call, it is often bet
 
 Say we want to write a function that calls matplotlib. We could use `pytest-mpl` to capture images and compare them in our test, but that's an integration test, not a unit test; and if something does go wrong, we are stuck comparing pictures, and we don't know how our usage of matplotlib changed from the test report. Let's see how we could mock it. We will use the `pytest-mock` plugin for pytest, which simply adapts the built-in `unittest.mock` in a more native pytest fashion as fixtures and such.
 
-
 ```python
 @pytest.fixture
 def mock_matplotlib(mocker):
@@ -259,7 +248,7 @@ it pays off in the long run.
 The documentation at [pytest-mock][] is helpful, though most of it just
 redirects to the standard library [unittest.mock][].
 
-[Hypothesis]: https://hypothesis.readthedocs.io
+[hypothesis]: https://hypothesis.readthedocs.io
 [pytest]: https://docs.pytest.org
 [pytest-mock]: https://pypi.org/project/pytest-mock/
 [unittest.mock]: https://docs.python.org/3/library/unittest.mock.html

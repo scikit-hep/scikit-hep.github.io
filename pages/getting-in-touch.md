@@ -5,9 +5,6 @@ permalink: /getting-in-touch
 nav_order: 95
 ---
 
-# Getting in touch {#get_in_touch}
-{: .no_toc}
-
 {% include toc.html %}
 
 ## Gitter
@@ -26,9 +23,9 @@ with some channels of broad interest hosted under the
 It is worth to mention the related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HSF,
 which are of particular interest for general exchanges with the "Python in HEP" community.
 
-[Scikit-HEP/community]:     https://gitter.im/Scikit-HEP/community
-[HSF/PyHEP]:                https://gitter.im/HSF/PyHEP
-[HSF/PyHEP-newcomers]:      https://gitter.im/HSF/PyHEP-newcomers
+[scikit-hep/community]: https://gitter.im/Scikit-HEP/community
+[hsf/pyhep]: https://gitter.im/HSF/PyHEP
+[hsf/pyhep-newcomers]: https://gitter.im/HSF/PyHEP-newcomers
 
 ## Mailing lists
 
@@ -43,7 +40,6 @@ Mailing list to ping all admins at once:
 [scikit-hep-admins@googlegroups.com](scikit-hep-admins@googlegroups.com).
 Note that this list is private but anyone can send an email to it
 without sign-up.
-
 
 ## StackOverflow
 

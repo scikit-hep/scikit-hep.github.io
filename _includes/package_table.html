@@ -1,63 +1,60 @@
-
-{% for cat in site.data.categories -%}
-  {%- assign listing = site.data.projects[cat.name] | sort -%}
-  <h3 id="{{cat.name}}">{{cat.title}}:</h3>
-  {% for item in listing -%}
-    {%- assign project = item[1] -%}
-    {% if include.deprecated %}
-      {%- assign include_not_deprecated = false -%}
-    {% else %}
-      {%- assign include_not_deprecated = true -%}
-    {% endif %}
-    {%- if include_not_deprecated and project.deprecated -%}
-      {%- continue -%}
+{% for cat in site.data.categories -%} {%- assign listing =
+site.data.projects[cat.name] | sort -%}
+<h3 id="{{cat.name}}">{{cat.title}}:</h3>
+{% for item in listing -%} {%- assign project = item[1] -%} {% if
+include.deprecated %} {%- assign include_not_deprecated = false -%} {% else %}
+{%- assign include_not_deprecated = true -%} {% endif %} {%- if
+include_not_deprecated and project.deprecated -%} {%- continue -%} {%- endif -%}
+{%- assign classes = "project" -%} {%- if project.affiliated -%} {%- assign
+classes = classes | append: " affiliated" -%} {%- endif -%} {%- if
+project.deprecated -%} {%- assign classes = classes | append: " deprecated" -%}
+{%- endif -%}
+<div class="{{classes}}" id="{{item[0]}}">
+  <div class="nameorlogo">
+    {%- if project.projlogo -%}
+    <a href="{{project.url}}" class="logo">
+      <img style="{{ project.projlogo-style | default: "height:48px;"}}"
+      src="{{site.baseurl}}{{ project.projlogo | link }}" alt="{{project.name}}
+      logo"/>
+    </a>
+    {%- else -%}
+    <a href="{{project.url}}" class="package"
+      >{{project.name | markdownify | strip_html }}</a
+    >
     {%- endif -%}
-    {%- assign classes = "project" -%}
-    {%- if project.affiliated -%}
-      {%- assign classes = classes | append: " affiliated" -%}
-    {%- endif -%}
-    {%- if project.deprecated -%}
-      {%- assign classes = classes | append: " deprecated" -%}
-    {%- endif -%}
-    <div class="{{classes}}" id="{{item[0]}}">
-      <div class="nameorlogo">
-        {%- if project.projlogo -%}
-          <a href="{{project.url}}" class="logo">
-            <img style="{{ project.projlogo-style | default: "height:48px;"}}"
-                 src="{{site.baseurl}}{{ project.projlogo | link }}"
-                 alt="{{project.name}} logo"/>
-          </a>
-        {%- else -%}
-          <a href="{{project.url}}" class="package">{{project.name | markdownify | strip_html }}</a>
-        {%- endif -%}
-      </div>
-      <div class="description">
-        <div class="inner">
-          {{project.description | markdownify }}
-          {%- if project.affiliated -%}
-            <div class="noted">🤝 Affiliated</div>
-          {%- endif %}
-          {%- if project.deprecated -%}
-            <div class="noted">❌ Deprecated</div>
-          {%- endif %}
-        </div>
-        {%- if include.badges -%}
-          {%- if project.badges.conda-forge -%}
-            <a class="badge" href="https://github.com/conda-forge/{{ project.badges.conda-forge-feedstock | default: project.badges.conda-forge}}-feedstock">
-              <img src="https://img.shields.io/conda/vn/conda-forge/{{ project.badges.conda-forge}}.svg?logo=Conda-Forge&color=brightgreen&logoColor=white"
-                   alt="Conda-Forge"/>
-            </a>
-          {%- endif -%}
-          {%- if project.badges.pypi -%}
-            <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
-              <img src="https://img.shields.io/pypi/v/{{project.badges.pypi}}?color=blue&logo=PyPI&logoColor=white"
-                   alt="PyPI"/>
-            </a>
-            <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
-              <img src="https://img.shields.io/pypi/wheel/{{project.badges.pypi}}"
-                   alt="Wheel"/>
-            </a>
-            <!-- Interesting to add, not supported properly by all packages though
+  </div>
+  <div class="description">
+    <div class="inner">
+      {{project.description | markdownify }} {%- if project.affiliated -%}
+      <div class="noted">🤝 Affiliated</div>
+      {%- endif %} {%- if project.deprecated -%}
+      <div class="noted">❌ Deprecated</div>
+      {%- endif %}
+    </div>
+    {%- if include.badges -%} {%- if project.badges.conda-forge -%}
+    <a
+      class="badge"
+      href="https://github.com/conda-forge/{{ project.badges.conda-forge-feedstock | default: project.badges.conda-forge}}-feedstock"
+    >
+      <img
+        src="https://img.shields.io/conda/vn/conda-forge/{{ project.badges.conda-forge}}.svg?logo=Conda-Forge&color=brightgreen&logoColor=white"
+        alt="Conda-Forge"
+      />
+    </a>
+    {%- endif -%} {%- if project.badges.pypi -%}
+    <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
+      <img
+        src="https://img.shields.io/pypi/v/{{project.badges.pypi}}?color=blue&logo=PyPI&logoColor=white"
+        alt="PyPI"
+      />
+    </a>
+    <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
+      <img
+        src="https://img.shields.io/pypi/wheel/{{project.badges.pypi}}"
+        alt="Wheel"
+      />
+    </a>
+    <!-- Interesting to add, not supported properly by all packages though
             <a class="badge" href="https://pypi.org/project/{{project.badges.pypi}}">
               <img src="https://img.shields.io/pypi/pyversions/{{project.badges.pypi}}"
                    alt="PyVersions"/>
@@ -67,15 +64,14 @@
                    alt="Status"/>
             </a>
             -->
-          {%- endif -%}
-          {%- if project.docs -%}
-            <a class="badge" href="{{project.docs}}">
-              <img src="https://img.shields.io/badge/docs-available-brightgreen"
-                   alt="Docs available"/>
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
-    </div>
-  {% endfor %}
-{% endfor %}
+    {%- endif -%} {%- if project.docs -%}
+    <a class="badge" href="{{project.docs}}">
+      <img
+        src="https://img.shields.io/badge/docs-available-brightgreen"
+        alt="Docs available"
+      />
+    </a>
+    {%- endif -%} {%- endif -%}
+  </div>
+</div>
+{% endfor %} {% endfor %}

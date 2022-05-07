@@ -3,10 +3,8 @@ layout: page
 title: Citing
 permalink: /citing
 nav_order: 98
+custom_title: Citing Scikit-HEP or individual packages
 ---
-
-
-# Citing Scikit-HEP or individual packages {#citing}
 
 We appreciate if you consider to acknowledge the Scikit-HEP project in case it has made or is having an impact on your work or research.
 We suggest the following citation for the project as a whole (in BibTeX format):

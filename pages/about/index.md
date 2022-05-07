@@ -6,8 +6,6 @@ nav_order: 100
 has_children: true
 ---
 
-# About {#about}
-
 The Scikit-HEP project
 (HEP stands for High Energy Physics, see more in the [FAQ]({{site.baseurl}}{% link pages/about/faq.md %} ))
 is a community-driven and
@@ -21,8 +19,8 @@ the scientific ecosystem in Python, and about improving on
 discoverability of utility packages and projects.
 
 For what concerns the project grand structure, it should be seen as a
-*toolset* rather than a *toolkit*. The project defines a set of five
-*pillars*, which are seen to embrace all major topics involved in a
+_toolset_ rather than a _toolkit_. The project defines a set of five
+_pillars_, which are seen to embrace all major topics involved in a
 physicist\'s work. These are:
 
 - **Datasets**: data in various sources, such as ROOT, NumPy/Pandas,

@@ -1,49 +1,50 @@
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.2.0
-  hooks:
-  - id: check-added-large-files
-  - id: check-case-conflict
-  - id: check-merge-conflict
-  - id: check-symlinks
-  - id: check-yaml
-  - id: debug-statements
-  - id: end-of-file-fixer
-  - id: mixed-line-ending
-  - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
 
-- repo: https://github.com/Lucas-C/pre-commit-hooks
-  rev: v1.1.13
-  hooks:
-  - id: remove-crlf
-  - id: forbid-tabs
-    exclude_types: [svg]
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.13
+    hooks:
+      - id: remove-crlf
+      - id: forbid-tabs
+        exclude_types: [svg]
 
-- repo: local
-  hooks:
-  - id: disallow-caps
-    name: Disallow improper capitalization
-    language: pygrep
-    entry: PyBind|Numpy|Cmake|CCache|PyTest
-    exclude: .pre-commit-config.yaml|pages/developers/style.md
+  - repo: local
+    hooks:
+      - id: disallow-caps
+        name: Disallow improper capitalization
+        language: pygrep
+        entry: PyBind|Numpy|Cmake|CCache|PyTest
+        exclude: .pre-commit-config.yaml|pages/developers/style.md
 
-- repo: https://github.com/codespell-project/codespell
-  rev: v2.1.0
-  hooks:
-  - id: codespell
-    exclude: ^Gemfile.lock$
-    args: ["-L", "hist,sur,nd,theses,ser"]
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.1.0
+    hooks:
+      - id: codespell
+        exclude: ^Gemfile.lock$
+        args: ["-L", "hist,sur,nd,theses,ser"]
 
-- repo: https://github.com/pre-commit/mirrors-prettier
-  rev: "v2.6.2"
-  hooks:
-  - id: prettier
-    types_or: [yaml, markdown, html, css, scss, javascript, json]
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v2.6.2"
+    hooks:
+      - id: prettier
+        types_or: [yaml, markdown, html, css, scss, javascript, json]
+        exclude: assets/js/webapp\.js
 
-- repo: local
-  hooks:
-  - id: data-filenames
-    files: ^_data/.*(?<!\.yml)$
-    name: Force _data files to be .yml
-    entry: files in _data must end in .yml
-    language: fail
+  - repo: local
+    hooks:
+      - id: data-filenames
+        files: ^_data/.*(?<!\.yml)$
+        name: Force _data files to be .yml
+        entry: files in _data must end in .yml
+        language: fail

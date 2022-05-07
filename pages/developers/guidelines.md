@@ -4,37 +4,35 @@ title: Package requirements
 permalink: /developer/guidelines
 nav_order: 1
 parent: Developer information
+custom_title: Package requirements and guidelines
 ---
-
-# Package requirements and guidelines
-{: .no_toc }
 
 {% include toc.html %}
 
 The guidelines on this page provide minimum requirements for Scikit-HEP
 packages, which we hope help providing high-quality packages with some level of
-homogeneity across them.  New packages should adhere to these minimum
+homogeneity across them. New packages should adhere to these minimum
 requirements. Further optional suggestions and assistance are provided in the
 following pages.
 
 ### Package license (required)
 
-Every package is required to have a license.  As a guideline, we try to be as
+Every package is required to have a license. As a guideline, we try to be as
 open as possible with licensing, following what most of the other packages use
 in the wide Python scientific community; Scikit-HEP packages typically use the
-BSD-3 license.  It is acknowledged that exceptions are needed and "sticky
+BSD-3 license. It is acknowledged that exceptions are needed and "sticky
 licenses" such as GPL may be the only viable option.
 
 ### README (required)
 
-A `README.[md,rst]` file is required.  It should provide an overview of the
-package and at least a quick getting started section.  There are several
+A `README.[md,rst]` file is required. It should provide an overview of the
+package and at least a quick getting started section. There are several
 examples on how to go about this in the various Scikit-HEP packages.
 
 ### Documentation (required)
 
-Documentation in the code is a must and  docstrings should permeate the code as
-much as possible.  It is suggested to also provide documentation via
+Documentation in the code is a must and docstrings should permeate the code as
+much as possible. It is suggested to also provide documentation via
 [ReadTheDocs][].
 
 ### Code formatting (optional)
@@ -49,7 +47,7 @@ pages/developers/style.md %}) for details.
 ### Tests and continuous integration (required)
 
 A reasonable test suite is a requirement, and it is desirable to achieve high
-coverage.  We require at least some tests, with [pytest][] being our recommended framework.
+coverage. We require at least some tests, with [pytest][] being our recommended framework.
 You should run your tests in CI; see [our GitHub Actions (GHA) page]({{ site.baseurl }}{% link
 pages/developers/gha_basic.md %}) for a simple introduction to setting up CI.
 
@@ -86,8 +84,7 @@ processes should be avoided and documented if unavoidable.
 If you have a pure Python package, `pip install build; python -m build` will build your
 package's SDist and wheel using the specified PEP 517 backend in `pyproject.toml`.
 
-
-[Black]: https://black.readthedocs.io/en/latest/
-[ReadTheDocs]: https://readthedocs.org/
+[black]: https://black.readthedocs.io/en/latest/
+[readthedocs]: https://readthedocs.org/
 [pytest]: https://docs.pytest.org/
-[PEP 517]: https://www.python.org/dev/peps/pep-0517/
+[pep 517]: https://www.python.org/dev/peps/pep-0517/

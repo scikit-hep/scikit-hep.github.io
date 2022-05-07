@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% unless page contains "custom_title" %}
+<h1 class="no_toc">{{ page.title }}</h1>
+{% endunless %} {% if page contains "custom_title" and page.custom_title != ""
+%}
+<h1 class="no_toc">{{ page.custom_title }}</h1>
+{% endif %} {{ content }}

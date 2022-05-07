@@ -4,16 +4,14 @@ title: "GHA: Binary wheels"
 permalink: /developer/gha_wheels
 nav_order: 12
 parent: Developer information
+custom_title: GitHub Actions for Binary Wheels
 ---
-
-# GitHub Actions for Binary Wheels
-{: .no_toc }
 
 {% include toc.html %}
 
 Building binary wheels is a bit more involved, but can still be done
 effectively with GHA. This document will introduce [cibuildwheel][] for use in
-Scikit-HEP, replacing our in-house [azure-wheel-helpers][].  The benefits of
+Scikit-HEP, replacing our in-house [azure-wheel-helpers][]. The benefits of
 cibuildwheel are a larger user base, fast fixes from CI and pip, works on all
 major CI vendors (no lock-in), and covers cases we were not able to cover (like
 ARM). We will focus on GHA below.
@@ -32,11 +30,11 @@ on:
   workflow_dispatch:
   release:
     types:
-    - published
+      - published
 ```
 
 This will run on releases. If you use a develop branch, you could include
-`pull_request: branches: [stable]`, since it changes rarely.  GitHub actions
+`pull_request: branches: [stable]`, since it changes rarely. GitHub actions
 also [has a `workflow_dispatch` option][workflow_dispatch], which will allow
 you to click a button in the GUI to trigger a build, which is perfect for
 testing wheels before making a release; you can download them from "artifacts".
@@ -44,8 +42,10 @@ You can even define variables that you can set in the GUI and access in the CI!
 
 [workflow_dispatch]: https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
 
+<!-- prettier-ignore-start -->
 ### Useful suggestion:
 {: .no_toc }
+<!-- prettier-ignore-end -->
 
 Since these variables will be used by all jobs, you could make them available
 in your `pyproject.toml` file, so they can be used everywhere (even locally for
@@ -79,14 +79,14 @@ You probably should not forget about making an SDist! A simple job, like
 before, will work:
 
 ```yaml
-  make_sdist:
-    name: Make SDist
-    runs-on: ubuntu-latest
-    steps:
+make_sdist:
+  name: Make SDist
+  runs-on: ubuntu-latest
+  steps:
     - uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Optional, use if you use setuptools_scm
-        submodules: true  # Optional, use if you have submodules
+        fetch-depth: 0 # Optional, use if you use setuptools_scm
+        submodules: true # Optional, use if you have submodules
 
     - name: Build SDist
       run: pipx run build --sdist
@@ -104,16 +104,17 @@ can also pin the version with `pipx run --spec build==... build`.
 The core of the work is down here:
 
 {% raw %}
-```yaml
-  build_wheels:
-    name: Wheel on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-20.04, windows-2019, macos-10.15]
 
-    steps:
+```yaml
+build_wheels:
+  name: Wheel on ${{ matrix.os }}
+  runs-on: ${{ matrix.os }}
+  strategy:
+    fail-fast: false
+    matrix:
+      os: [ubuntu-20.04, windows-2019, macos-10.15]
+
+  steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
@@ -126,13 +127,13 @@ The core of the work is down here:
       with:
         path: wheelhouse/*.whl
 ```
+
 {% endraw %}
 
 There are several things to note here. First, one of the reasons this works is
 because you followed the suggestions in the previous sections, and your package
-builds nicely into a wheel without strange customizations (if you *really* need
+builds nicely into a wheel without strange customizations (if you _really_ need
 them, check out [`CIBW_BEFORE_BUILD`][] and [`CIBW_ENVIRONMENT`][]).
-
 
 This lists all three OS's; if you do not support Windows, you can remove that
 here.
@@ -144,13 +145,13 @@ is usually `CIBW_BUILD` to select the platforms you want to build for - see the
 alternative architectures need emulation, so are not shown here (adds one extra
 step).
 
-You can also select different base images (the *default* is manylinux2010).
+You can also select different base images (the _default_ is manylinux2010).
 If you want manylinux1, just do:
 
 ```yaml
-      env:
-        CIBW_MANYLINUX_X86_64_IMAGE: manylinux1
-        CIBW_MANYLINUX_I686_IMAGE: manylinux1
+env:
+  CIBW_MANYLINUX_X86_64_IMAGE: manylinux1
+  CIBW_MANYLINUX_I686_IMAGE: manylinux1
 ```
 
 You can even put any docker image here, including [Scikit-HEP's
@@ -162,12 +163,13 @@ break. If you always need a specific image, you can set that in the
 ## Publishing
 
 {% raw %}
+
 ```yaml
-  upload_all:
-    needs: [build_wheels, make_sdist]
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release' && github.event.action == 'published'
-    steps:
+upload_all:
+  needs: [build_wheels, make_sdist]
+  runs-on: ubuntu-latest
+  if: github.event_name == 'release' && github.event.action == 'published'
+  steps:
     - uses: actions/download-artifact@v3
       with:
         name: artifact
@@ -178,6 +180,7 @@ break. If you always need a specific image, you can set that in the
         user: __token__
         password: ${{ secrets.pypi_password }}
 ```
+
 {% endraw %}
 
 If you have multiple jobs, you will want to collect your artifacts from above.
@@ -189,16 +192,14 @@ avoiding the sdist, for example).
 
 Remember to set `pypi_password` to your token in secrets.
 
-
 > On Travis, `cibuildwheel` even has the ability to create ARM and PowerPC
 > builds natively. IBM Z builds are also available but in beta. However, due
 > to Travis CI's recent dramatic reduction on open source support, emulating
 > these architectures on GHA or Azure is probably better.
 
-
 [azure-wheel-helpers]: https://github.com/scikit-hep/azure-wheel-helpers
-[`CIBW_BEFORE_BUILD`]: https://cibuildwheel.readthedocs.io/en/stable/options/#before-build
-[`CIBW_ENVIRONMENT`]: https://cibuildwheel.readthedocs.io/en/stable/options/#environment
+[`cibw_before_build`]: https://cibuildwheel.readthedocs.io/en/stable/options/#before-build
+[`cibw_environment`]: https://cibuildwheel.readthedocs.io/en/stable/options/#environment
 [manylinuxgcc]: https://github.com/scikit-hep/manylinuxgcc
 [cibw custom]: https://cibuildwheel.readthedocs.io/en/stable/options/#build-skip
 [cibuildwheel]: https://cibuildwheel.readthedocs.io/en/stable/

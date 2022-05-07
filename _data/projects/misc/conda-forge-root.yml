@@ -9,40 +9,40 @@ affiliated: true
 # repo: only if different from url
 longdescription: |
 
-    CERN's [ROOT][] framework traditionally has been difficult to install --
-    several hours on a single core, with many dependencies.  The situation is
-    better than it used to be, it is easier to build and available in more
-    places, but Python was still a challenge; ROOT is linked to just one
-    version of Python, and the one you get with pre-built ROOT can often be the
-    wrong one.  And, if you use the [Conda Python distribution][miniconda] ,
-    which is a popular choice for Scikit-HEP users, the official ROOT team
-    recommendation for building it on top of the Conda stack was: too hard,
-    don't do it.  But now, the ROOT [Conda-Forge][] package provides a fully
-    featured ROOT binary package for macOS or Linux, fully integrated into the
-    Conda environment system!
+  CERN's [ROOT][] framework traditionally has been difficult to install --
+  several hours on a single core, with many dependencies.  The situation is
+  better than it used to be, it is easier to build and available in more
+  places, but Python was still a challenge; ROOT is linked to just one
+  version of Python, and the one you get with pre-built ROOT can often be the
+  wrong one.  And, if you use the [Conda Python distribution][miniconda] ,
+  which is a popular choice for Scikit-HEP users, the official ROOT team
+  recommendation for building it on top of the Conda stack was: too hard,
+  don't do it.  But now, the ROOT [Conda-Forge][] package provides a fully
+  featured ROOT binary package for macOS or Linux, fully integrated into the
+  Conda environment system!
 
-    The Conda-Forge ROOT project has been developed by Scikit-HEP admins and is
-    used in the Continuous Integration (CI) system of several of our packages
-    to ensure consistency and interoperability with ROOT. It is used or
-    intended to be used in our ROOT-based packages, like `root_numpy`. Analysts
-    can create an environment with ROOT by the following trivial
-    `environment.yml` file, often used to create tutorials on [binder][]:
+  The Conda-Forge ROOT project has been developed by Scikit-HEP admins and is
+  used in the Continuous Integration (CI) system of several of our packages
+  to ensure consistency and interoperability with ROOT. It is used or
+  intended to be used in our ROOT-based packages, like `root_numpy`. Analysts
+  can create an environment with ROOT by the following trivial
+  `environment.yml` file, often used to create tutorials on [binder][]:
 
-    ```yml
-    name: uproot_and_root
-    channels:
-      - conda-forge
-    dependencies:
-      - python
-      - jupyterlab # Interactive environment
-      - root       # Conda-Forge ROOT
-      - uproot     # Can be mixed with other Scikit-HEP packages
-    ```
+  ```yml
+  name: uproot_and_root
+  channels:
+    - conda-forge
+  dependencies:
+    - python
+    - jupyterlab # Interactive environment
+    - root       # Conda-Forge ROOT
+    - uproot     # Can be mixed with other Scikit-HEP packages
+  ```
 
-    [ROOT]:           https://root.cern
-    [miniconda]:      https://docs.conda.io/en/latest/miniconda.html
-    [Conda-Forge]:    https://conda-forge.org
-    [binder]:         https://mybinder.org
+  [ROOT]:           https://root.cern
+  [miniconda]:      https://docs.conda.io/en/latest/miniconda.html
+  [Conda-Forge]:    https://conda-forge.org
+  [binder]:         https://mybinder.org
 
 badges:
   conda-forge: root

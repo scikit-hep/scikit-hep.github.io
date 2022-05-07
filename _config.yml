@@ -7,7 +7,7 @@ description: >-
   2016 and is under active development.
 baseurl: ""
 url: "https://scikit-hep.org"
-github_username:  scikit-hep
+github_username: scikit-hep
 
 # Build settings
 markdown: kramdown
@@ -27,8 +27,8 @@ search_enabled: true
 
 # Aux links for the upper right navigation
 aux_links:
-    "Scikit-HEP on GitHub":
-      - "//github.com/scikit-hep"
+  "Scikit-HEP on GitHub":
+    - "//github.com/scikit-hep"
 
 gh_edit_link: true
 gh_edit_link_text: "View source for this page on GitHub."

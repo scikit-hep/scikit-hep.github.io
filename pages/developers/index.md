@@ -6,16 +6,13 @@ nav_order: 80
 has_children: true
 ---
 
-Developer Information
-=====================
-
 The pages here are intended for developers who are making or maintaining a
 package and want to follow modern best practices in Python. This is especially
 important for packages that are part of Scikit-HEP or being proposed to join -
 if you are here to propose a new package for Scikit-HEP, read [package
 requirements][guidelines] - it is the only Scikit-HEP-specific page.
 
-New developers are encouraged to read the following pages.  Veteran developers
+New developers are encouraged to read the following pages. Veteran developers
 should still check out [introduction][intro], as it has a guide on
 recommendations for your `CONTRIBUTING.md`, and at least glance through other
 sections.
@@ -51,4 +48,4 @@ You can also evaluate your repository against the guidelines by using [scikit-he
 [scikit-hep-repo-review]: {{ site.baseurl }}{% link pages/developers/repo_review.md %}
 
 [cookiecutter]: https://cookiecutter.readthedocs.io
-[Scikit-HEP/cookie]: https://github.com/scikit-hep/cookie
+[scikit-hep/cookie]: https://github.com/scikit-hep/cookie

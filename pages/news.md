@@ -5,12 +5,9 @@ permalink: /news
 nav_order: 30
 ---
 
-
-## Project news {#news}
-
 **May 2022:** Package `awkward-1.0` renamed to `awkward`.
 
-**March 2022:** Creation of this *News* page.
+**March 2022:** Creation of this _News_ page.
 
 **March 2022:** Packages `resample` and `uproot-browser` joined Scikit-HEP.
 
@@ -152,7 +149,7 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **July 2018:** Release `scikit-hep` 0.3.0, dropping Python 2.6 support.
 
-**June 2018:** Packages  `awkward-array`, `histbook` and `vegascope` joined Scikit-HEP.
+**June 2018:** Packages `awkward-array`, `histbook` and `vegascope` joined Scikit-HEP.
 
 **March 2018:** Release `pyjet` 1.1.0 (based on C++ `FastJet` 3.3.0).
 
@@ -173,11 +170,10 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 **August 2016:** First discussions brainstorming the grand picture of the Scikit-HEP project.
 Eduardo Rodrigues, Jim Pivarski and others.
 
-
-[ATLAS experiment]: https://atlas.cern/
-[CMS experiment]: https://cms.cern/
-[IRIS-HEP institute]: https://iris-hep.org/
-[KM3NeT experiment]: https://www.km3net.org/
-[LHCb experiment]: http://lhcb.web.cern.ch/
-[PDG]: https://pdg.lbl.gov/
+[atlas experiment]: https://atlas.cern/
+[cms experiment]: https://cms.cern/
+[iris-hep institute]: https://iris-hep.org/
+[km3net experiment]: https://www.km3net.org/
+[lhcb experiment]: http://lhcb.web.cern.ch/
+[pdg]: https://pdg.lbl.gov/
 [online particle physics information]: https://github.com/particledatagroup/hep-resources

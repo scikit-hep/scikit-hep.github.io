@@ -1,16 +1,12 @@
 ---
 layout: page
-title: "Static Type Checking"
+title: "Static type checking"
 permalink: /developer/mypy
 nav_order: 7
 parent: Developer information
 ---
 
-# Intro to Static Type Checking
-{: .no_toc }
-
 {% include toc.html %}
-
 
 ## Basics
 
@@ -68,14 +64,13 @@ it for parameters and returns from functions. When running MyPy, you can use
 print statement but at type-checking time, or `reveal_locals()` to see all
 local types.
 
-
 ### Configuration
 
 By default, MyPy does as little as possible, so that you can add it iteratively
 to a code base. By default:
 
-* All untyped variables and return values will be `Any`.
-* Code inside untyped functions is not checked _at all_.
+- All untyped variables and return values will be `Any`.
+- Code inside untyped functions is not checked _at all_.
 
 You can add configuration to `pyproject.toml` (and a little bit to the files
 themselves), or you can go all the way and pass `--strict`, which will turn on
@@ -124,7 +119,6 @@ reveal_type(x)
 
 This will print `A` because you removed B via the type narrowing using the
 `assert`.
-
 
 ### Protocols
 
@@ -182,14 +176,13 @@ special methods, like `Iterable`, `Iterator`, etc.
 
 Static typing has some great features worth checking out:
 
-* Unions (New syntax coming in Python 3.10)
-* Generic Types (New syntax in Python 3.9)
-* Literals
-* TypedDict
-* Nicer NamedTuple definition (very popular in Python 3 code)
-* MyPy validates with the Python version you ask for, regardless of what
+- Unions (New syntax coming in Python 3.10)
+- Generic Types (New syntax in Python 3.9)
+- Literals
+- TypedDict
+- Nicer NamedTuple definition (very popular in Python 3 code)
+- MyPy validates with the Python version you ask for, regardless of what
   version you are actually running.
-
 
 ## Complete example
 
@@ -214,8 +207,6 @@ def g(x: Union[str, int]) -> None:
 
     # Calling x.lower() is invalid here!
 ```
-
-
 
 ### Python 3.7+
 

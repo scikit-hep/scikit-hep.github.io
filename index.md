@@ -6,7 +6,7 @@ nav_order: 1
 
 # Scikit-HEP project - welcome!
 
-[![Scikit-HEP GitHub Org][github-badge]][GitHub repository]{:.badge}
+[![Scikit-HEP GitHub Org][github-badge]][github repository]{:.badge}
 [![Gitter badge][gitter-skhep-badge]][gitter-skhep-link]{:.badge}
 
 The Scikit-HEP project is a community-driven and community-oriented project
@@ -23,7 +23,8 @@ technologies and/or popular packages from the Python scientific software
 stack. If you are looking for a deprecated package, see the [full package list][].
 
 [github-badge]: https://img.shields.io/badge/GitHub--blue?style=social&logo=GitHub
-[GitHub repository]: https://github.com/scikit-hep/
-[gitter-skhep-link]:   https://gitter.im/Scikit-HEP/community
-[gitter-skhep-badge]:  https://badges.gitter.im/Scikit-HEP/community.svg
+[github repository]: https://github.com/scikit-hep/
+[gitter-skhep-link]: https://gitter.im/Scikit-HEP/community
+[gitter-skhep-badge]: https://badges.gitter.im/Scikit-HEP/community.svg
+
 [full package list]: {{site.baseurl}}{% link pages/packages/index.md %}

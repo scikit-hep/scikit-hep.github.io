@@ -6,9 +6,6 @@ nav_order: 30
 parent: Developer information
 ---
 
-# Task runners
-{: .no_toc }
-
 {% include toc.html %}
 
 A task runner, like [make][] (fully general), [rake][] (Ruby general),
@@ -43,7 +40,6 @@ other rarely run tasks.
 Nox doesn't handle binary builds very well, so for compiled projects, it might be
 best left to just specialized tasks.
 
-
 [nox]: https://nox.thea.codes
 [tox]: https://tox.readthedocs.io
 [invoke]: https://www.pyinvoke.org
@@ -57,7 +53,6 @@ best left to just specialized tasks.
 Installing nox should be handled like any other Python _application_. You should
 either use a good package manager, like brew on macOS, or you should use pipx; either
 permanently (`pipx install nox`) or by running `pipx run nox` instead of `nox`.
-
 
 On GitHub Actions or Azure, pipx is available by default, so you should use
 `pipx run nox`. To give it access to all Python versions, you can use this action:

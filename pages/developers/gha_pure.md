@@ -4,19 +4,10 @@ title: "GHA: Pure Python wheels"
 permalink: /developer/gha_pure
 nav_order: 11
 parent: Developer information
+custom_title: GitHub Actions for pure Python wheels
 ---
 
-# GitHub Actions for pure Python wheels
-{: .no_toc }
-
-<details open markdown="block" class="table-wrapper p-2">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-* TOC
-{:toc .m-1}
-</details>
+{% include toc.html %}
 
 We will cover binary wheels [on the next page][], but if you do not have a
 compiled extension, this is called a universal (pure Python) package, and the
@@ -27,16 +18,15 @@ recommendations were followed).
 > Note: Why make a wheel when there is nothing to compile? There are a multitude of reasons
 > that a wheel is better than only providing an sdist:
 >
-> * Wheels do not run setup.py, but simply install files into locations
+> - Wheels do not run setup.py, but simply install files into locations
 >   - Lower install requirements - users don't need your setup tools
 >   - Faster installs
 >   - Safer installs - no arbitrary code execution
 >   - Highly consistent installs
-> * Wheels pre-compile bytecode when they install
+> - Wheels pre-compile bytecode when they install
 >   - Initial import is not slower than subsequent import
 >   - Less chance of a permission issue
-> * You can look in the `.whl` (it's a `.zip`, really) and see where everything is going to go
-
+> - You can look in the `.whl` (it's a `.zip`, really) and see where everything is going to go
 
 [on the next page]: {{ site.baseurl }}{% link pages/developers/gha_wheels.md %}
 
@@ -49,10 +39,9 @@ on:
   workflow_dispatch:
   release:
     types:
-    - published
+      - published
 
 jobs:
-
 ```
 
 This will run when you manually trigger a build ([`workflow_dispatch`][]), or
@@ -61,7 +50,7 @@ step requires the event to be a publish event, so that manual triggers (and
 branches/PRs, if those are enabled).
 
 If you want tags instead of releases, you can add the `on: push: tags: "v*"`
-key instead of the releases - however, *please* remember to make a GitHub
+key instead of the releases - however, _please_ remember to make a GitHub
 release of your tag! It shows up in the GUI and it notifies anyone watching
 releases(-only). You will also need to change the event filter below.
 
@@ -72,12 +61,12 @@ with the name "CI/CD", you can just combine the two `on` dicts.
 
 ## Distribution: Pure Python wheels
 
-
 {% raw %}
+
 ```yaml
-  dist:
-    runs-on: ubuntu-latest
-    steps:
+dist:
+  runs-on: ubuntu-latest
+  steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
@@ -91,8 +80,8 @@ with the name "CI/CD", you can just combine the two `on` dicts.
 
     - name: Check metadata
       run: pipx run twine check dist/*
-
 ```
+
 {% endraw %}
 
 We use [PyPA-Build](https://pypa-build.readthedocs.io/en/latest/), a
@@ -134,6 +123,7 @@ use PyPA/build.
 {%- endcapture -%}
 
 {{ mymarkdown | markdownify }}
+
 </details>
 
 We upload the artifact just to make it available via the GitHub PR/Checks API.
@@ -145,13 +135,14 @@ later in the upload action for the release job, as well).
 And then, you need a release job:
 
 {% raw %}
-```yaml
-  publish:
-    needs: [dist]
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release' && github.event.action == 'published'
 
-    steps:
+```yaml
+publish:
+  needs: [dist]
+  runs-on: ubuntu-latest
+  if: github.event_name == 'release' && github.event.action == 'published'
+
+  steps:
     - uses: actions/download-artifact@v3
       with:
         name: artifact
@@ -162,6 +153,7 @@ And then, you need a release job:
         user: __token__
         password: ${{ secrets.pypi_password }}
 ```
+
 {% endraw %}
 
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
@@ -177,6 +169,7 @@ the same interface:
 
 {%- capture "mymarkdown" -%}
 {% raw %}
+
 ```yaml
 name: CD
 
@@ -187,26 +180,25 @@ on:
       - main
   release:
     types:
-    - published
+      - published
 
 jobs:
   dist:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-    - name: Build SDist and wheel
-      run: pipx run build
+      - name: Build SDist and wheel
+        run: pipx run build
 
-    - uses: actions/upload-artifact@v3
-      with:
-        path: dist/*
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/*
 
-    - name: Check metadata
-      run: pipx run twine check dist/*
-
+      - name: Check metadata
+        run: pipx run twine check dist/*
 
   publish:
     needs: [dist]
@@ -214,15 +206,16 @@ jobs:
     if: github.event_name == 'release' && github.event.action == 'published'
 
     steps:
-    - uses: actions/download-artifact@v3
-      with:
-        name: artifact
-        path: dist
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.5.0
-      with:
-        password: ${{ secrets.pypi_password }}
+      - uses: pypa/gh-action-pypi-publish@v1.5.0
+        with:
+          password: ${{ secrets.pypi_password }}
 ```
+
 {% endraw %}
 {%- endcapture -%}
 
@@ -230,5 +223,5 @@ jobs:
 
 </details>
 
-[PEP 517]: https://www.python.org/dev/peps/pep-0517/
-[PEP 518]: https://www.python.org/dev/peps/pep-0518/
+[pep 517]: https://www.python.org/dev/peps/pep-0517/
+[pep 518]: https://www.python.org/dev/peps/pep-0518/

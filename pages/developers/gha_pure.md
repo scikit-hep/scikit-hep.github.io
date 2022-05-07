@@ -98,9 +98,7 @@ and then use `python -m build` or `pyproject-build`, but it's better to use
 `pipx` to install and run python applications. Pipx is provided by default by
 Github Actions (in fact, they use it to setup other applications).
 
-<details><summary>Classic SDist builds (click to expand)</summary>
-
-{%- capture "mymarkdown" -%}
+<details markdown="1"><summary>Classic SDist builds (click to expand)</summary>
 
 If you don't have a pyproject.toml, you might need to use the raw `setup.py` commands.
 This is the classic way to do things, though you should consider direct usage of setup.py
@@ -119,10 +117,6 @@ will be put here, not just the one you wanted to upload. Be sure to use somethin
 like `wheelhouse/my_package*.whl` when you pick your items from this folder so as
 not to pick a random dependency that didn't have a binary wheel already. Or just
 use PyPA/build.
-
-{%- endcapture -%}
-
-{{ mymarkdown | markdownify }}
 
 </details>
 

@@ -76,6 +76,7 @@ pytest. The file it looks for is called `noxfile.py` by default. This is an exam
 ```python
 import nox
 
+
 @nox.session
 def tests(session: nox.Session) -> None:
     """
@@ -120,12 +121,15 @@ You can parametrize sessions. either on Python or on any other item.
 ```python
 # Shortcut to parametrize Python
 @nox.session(python=["3.7", "3.8", "3.9", "3.10"])
-def my_session(session: nox.Session) -> None: ...
+def my_session(session: nox.Session) -> None:
+    ...
+
 
 # General parametrization
 @nox.session
 @nox.parametrize("letter", ["a", "b"], ids=["a", "b"])
-def my_session(session: nox.Session, letter: str) -> None: ...
+def my_session(session: nox.Session, letter: str) -> None:
+    ...
 ```
 
 The optional `ids=` parameter can give the parametrization nice names, like in
@@ -160,13 +164,16 @@ def lint(session: nox.Session) -> None:
     Run the linter.
     """
     session.install("pre-commit")
-    session.run("pre-commit", "run", "--show-diff-on-failure", "--all-files", *session.posargs)
+    session.run(
+        "pre-commit", "run", "--show-diff-on-failure", "--all-files", *session.posargs
+    )
 ```
 
 #### Tests
 
 ```python
 import nox
+
 
 @nox.session
 def tests(session: nox.Session) -> None:
@@ -213,6 +220,7 @@ from pathlib import Path
 import shutil
 
 DIR = Path(__file__).parent.resolve()
+
 
 @nox.session
 def build(session: nox.Session) -> None:

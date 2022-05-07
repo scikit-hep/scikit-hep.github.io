@@ -34,6 +34,12 @@ repos:
     exclude: ^Gemfile.lock$
     args: ["-L", "hist,sur,nd,theses,ser"]
 
+- repo: https://github.com/pre-commit/mirrors-prettier
+  rev: "v2.6.2"
+  hooks:
+  - id: prettier
+    types_or: [yaml, markdown, html, css, scss, javascript, json]
+
 - repo: local
   hooks:
   - id: data-filenames

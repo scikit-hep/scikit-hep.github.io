@@ -557,6 +557,12 @@ html/markdown files might clash with auto-formatting - check to verify your
 files are supported. This check runs using node, but pre-commit handles this
 for you.
 
+If you have a .editor-config file, prettier will respect the rules in it. You
+can also specify [a config file](https://prettier.io/docs/en/configuration.html)
+for prettier, or pass options to `args:` in pre-commit. One such option is [`--prose-wrap`](https://prettier.io/docs/en/options.html#prose-wrap),
+which can be set to `"never"` or `"always"` to have prettier reflow text. You can
+turn off prettier for blocks with [comments depending on language](https://prettier.io/docs/en/ignore.html).
+
 ## PyLint (noisy)
 
 PyLint is very opinionated, with a high signal-to-noise ratio. However, by

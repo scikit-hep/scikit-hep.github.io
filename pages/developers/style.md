@@ -554,7 +554,8 @@ Since this formats a variety of very common file types (like `html`, `md`,
 (shown above) with the files you are interested in auto-formatting. You can try
 it without the `types_or` first to see what it can do. Special markups in
 html/markdown files might clash with auto-formatting - check to verify your
-files are supported.
+files are supported. This check runs using node, but pre-commit handles this
+for you.
 
 ## PyLint (noisy)
 

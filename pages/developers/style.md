@@ -410,7 +410,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.32.0"
+  rev: "v2.32.1"
   hooks:
   - id: pyupgrade
     args: ["--py37-plus"]
@@ -515,7 +515,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v14.0.1"
+  rev: "v14.0.3"
   hooks:
   - id: clang-format
     types_or: [c++, c, cuda]

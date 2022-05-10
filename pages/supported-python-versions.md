@@ -5,8 +5,6 @@ permalink: /supported-python-versions
 nav_order: 60
 ---
 
-{% include toc.html %}
-
 The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy,
 NumPy, and scikit-image have come together and agreed on a plan for Python and
 NumPy version support called [NEP 29][]. In light of this plan, the Scikit-HEP

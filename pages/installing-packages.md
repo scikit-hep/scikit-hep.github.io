@@ -13,9 +13,7 @@ If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fail
 
 ![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
 
-The instructions are at the bottom of this page, after describing what the installation is and what it will do to your computer.
-
-# What is conda-forge?
+<details markdown="1"><summary><h1>What is conda-forge?</h1></summary>
 
 [conda-forge](https://conda-forge.org/) is a "channel" for the [conda](https://docs.conda.io/) package manager containing the Scientific Python ecosystem, Scikit-HEP, and even ROOT (MacOS and Linux) with carefully aligned package versions to ensure that you get a consistent, working system. Within a conda environment, you can still use pip to install packages that are not in this channel, thereby getting access to everything in the [Python Package Index](https://pypi.org/), and everything in the conda environment is kept isolated from any other Python environments, so that you don't disturb any applications that rely on a version of Python that ships with your operating system.
 
@@ -27,17 +25,21 @@ You likely have a package manager for your operating system, such as Homebrew, a
 
 (\* I'm doing conda a disservice by describing conda as a Python package manager, though [it does much more](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/#Myth-#2:-Conda-is-a-Python-package-manager), for the sake of keeping this simple.)
 
-# What is "mamba"?
+</details>
+
+<details markdown="1"><summary><h1>What is "mamba"?</h1></summary>
 
 We recommend using `mamba`, which is a drop-in replacement for `conda` that is many times faster. You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
 
 In fact, the conda developers are [incorporating mamba into conda](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community), though at the time of this writing, that integration is still experimental. These instructions will describe how to use `mamba` directly.
 
-# Where will the files go?
+</details>
+
+<details markdown="1"><summary><h1>Where will the files go?</h1></summary>
 
 The entire Python distribution, with all packages and the shared libraries that support them, will go in a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/`sudo`).
 
-<details markdown="1"><summary>How to get rid of them if you change your mind (click here)</summary>
+<details markdown="1"><summary><h2>How to get rid of them if you change your mind</h2></summary>
 
 1. Delete that directory with `rm -rf ~/mambaforge`.
 2. Delete a file named `~/.condarc`, if you have one.
@@ -47,7 +49,7 @@ Those three steps will remove any vestige of the conda installation.
 
 </details>
 
-<details markdown="1"><summary>How to save an old package list before deleting it (click here)</summary>
+<details markdown="1"><summary><h2>How to save an old package list before deleting it</h2></summary>
 
 If you already have a conda installation, you can bundle your current environment into an environment file with
 
@@ -63,7 +65,9 @@ conda env create -f old-environment.yml
 
 </details>
 
-# Installing Miniforge
+</details>
+
+# Installing a Python environment with Miniforge
 
 Miniforge is [distributed on GitHub](https://github.com/conda-forge/miniforge).
 
@@ -89,7 +93,7 @@ Windows has a `start` command; see [Miniforge's instructions](https://github.com
 
 The interactive prompts will ask you where you want to install it (default is `~/mambaforge`) and whether you want to have it enabled whenever you start a new terminal or shell (probably yes). Saying "yes" to the latter inserts a "`>>> conda initialize`" section in your shell configuration (probably `~/.bashrc`).
 
-## Using Miniforge
+## Regular maintenance of your environment
 
 Now you're ready to go. Instructions online tell you how to install packages, like `conda install package-name`. Since you installed `mamba`, you can replace `conda install` with `mamba install` to make the dependency resolution much faster. There are no other differences, and you can always fall back on using the `conda` command.
 
@@ -109,6 +113,6 @@ mamba clean --all   # or mamba
 
 which removes cached package files (which are not needed, now that they've been installed). Sometimes, you can get gigabytes of disk space back.
 
-## Keeping environments isolated
+## Leveling up: multiple environments
 
 One of conda's major features is that it allows you to have completely separate Python versions and packages in different "environments." [See conda's documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments) on how to use this feature, especially if you need one project to stay fixed at a specified set of version numbers ("pinned") and another to keep up with the latest updates.

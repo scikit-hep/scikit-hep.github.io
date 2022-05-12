@@ -7,7 +7,7 @@ nav_order: 35
 
 # Avoiding the spaghetti installation
 
-Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible.
+Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible. We support both major systems: PyPI with virtual environments and conda-forge. For a newcomer, conda-forge is usually the simplest way to start an analysis, so this page covers the best way to set up a working conda-forge environment.
 
 If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), try following the instructions below to set up a conda-forge environment using `mamba`
 

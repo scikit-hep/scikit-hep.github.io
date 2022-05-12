@@ -9,7 +9,7 @@ nav_order: 35
 
 Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible.
 
-If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), try following the instructions below to set up a conda-forge environment.
+If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), try following the instructions below to set up a conda-forge environment using `mamba`
 
 ![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
 

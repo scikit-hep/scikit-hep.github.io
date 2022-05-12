@@ -37,13 +37,15 @@ In fact, the conda developers are [incorporating mamba into conda](https://www.a
 
 The entire Python distribution, with all packages and the shared libraries that support them, will go in a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/`sudo`).
 
-## How to get rid of them if you change your mind
+<details markdown="1"><summary> How to get rid of them if you change your mind (click here)</summary>
 
 1. Delete that directory with `rm -rf ~/mambaforge`.
 2. Delete a file named `~/.condarc`, if you have one.
 3. Check your shell configuration file, probably named `~/.bashrc`, for a "`>>> conda initialize`" section. If you have one, delete it.
 
 Those three steps will remove any vestige of the conda installation.
+
+</details>
 
 ## How to save an old package list before deleting it
 

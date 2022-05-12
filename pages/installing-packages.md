@@ -67,9 +67,9 @@ conda env create -f old-environment.yml
 
 </details>
 
-# Installing a Python environment with Miniforge
+# Installing a Python environment
 
-Miniforge is [distributed on GitHub](https://github.com/conda-forge/miniforge).
+We're using Miniforge to install the Python environment, which is [distributed here on GitHub](https://github.com/conda-forge/miniforge).
 
 The steps of the installation procedure are (1) download an installer script, (2) run it, and (3) answer interactive prompts.
 

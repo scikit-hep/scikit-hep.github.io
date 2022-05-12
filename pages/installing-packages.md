@@ -23,9 +23,9 @@ The software in conda-forge are not subject to Anaconda's licensing restrictions
 
 Until recently, the (relatively) [hard part](https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge) had been to ensure that you're using conda-forge, rather than an Anaconda default channel. The instructions below describe how to install [Miniforge](https://github.com/conda-forge/miniforge), which is conda-forge without the Anaconda default channel.
 
-You likely have a package manager for your operating system, such as Homebrew, apt-get, or yum. Use conda for your Python packages and your operating system's package manager for applications (web browsers, text editors, etc.).*
+You likely have a package manager for your operating system, such as Homebrew, apt-get, or yum. Use conda for your Python packages and your operating system's package manager for applications (web browsers, text editors, etc.).\*
 
-(* I'm doing conda a disservice by describing conda as a Python package manager, though [it does much more](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/#Myth-#2:-Conda-is-a-Python-package-manager), for the sake of keeping this simple.)
+(\* I'm doing conda a disservice by describing conda as a Python package manager, though [it does much more](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/#Myth-#2:-Conda-is-a-Python-package-manager), for the sake of keeping this simple.)
 
 # What is "mamba"?
 
@@ -39,9 +39,9 @@ The entire Python distribution, with all packages and the shared libraries that 
 
 ## How to get rid of them if you change your mind
 
-  1. Delete that directory with `rm -rf ~/mambaforge`.
-  2. Delete a file named `~/.condarc`, if you have one.
-  3. Check your shell configuration file, probably named `~/.bashrc`, for a "`>>> conda initialize`" section. If you have one, delete it.
+1. Delete that directory with `rm -rf ~/mambaforge`.
+2. Delete a file named `~/.condarc`, if you have one.
+3. Check your shell configuration file, probably named `~/.bashrc`, for a "`>>> conda initialize`" section. If you have one, delete it.
 
 Those three steps will remove any vestige of the conda installation.
 

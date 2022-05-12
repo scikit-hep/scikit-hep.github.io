@@ -9,7 +9,7 @@ nav_order: 35
 
 Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible. We support both major systems: PyPI with virtual environments and conda-forge. For a newcomer, conda-forge is usually the simplest way to start an analysis, so this page covers the best way to set up a working conda-forge environment.
 
-If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), try following the instructions below to set up a conda-forge environment using `mamba`
+If you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), try following the instructions below to set up a conda-forge environment using `mamba`.
 
 ![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
 
@@ -29,15 +29,15 @@ You likely have a package manager for your operating system, such as Homebrew, a
 
 # What is "mamba"?
 
-We recommend using "mamba", which is a drop-in replacement for "conda" that is many times faster. You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
+We recommend using `mamba`, which is a drop-in replacement for `conda` that is many times faster. You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
 
-In fact, the conda developers are [incorporating mamba into conda](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community), though at the time of this writing, that integration is still experimental. These instructions will describe how to use mamba directly.
+In fact, the conda developers are [incorporating mamba into conda](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community), though at the time of this writing, that integration is still experimental. These instructions will describe how to use `mamba` directly.
 
 # Where will the files go?
 
 The entire Python distribution, with all packages and the shared libraries that support them, will go in a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/`sudo`).
 
-<details markdown="1"><summary> How to get rid of them if you change your mind (click here)</summary>
+<details markdown="1"><summary>How to get rid of them if you change your mind (click here)</summary>
 
 1. Delete that directory with `rm -rf ~/mambaforge`.
 2. Delete a file named `~/.condarc`, if you have one.
@@ -47,7 +47,7 @@ Those three steps will remove any vestige of the conda installation.
 
 </details>
 
-## How to save an old package list before deleting it
+<details markdown="1"><summary>How to save an old package list before deleting it (click here)</summary>
 
 If you already have a conda installation, you can bundle your current environment into an environment file with
 
@@ -61,13 +61,15 @@ After reinstalling, you can reconstruct it with
 conda env create -f old-environment.yml
 ```
 
+</details>
+
 # Installing Miniforge
 
 Miniforge is [distributed on GitHub](https://github.com/conda-forge/miniforge).
 
 The steps of the installation procedure are (1) download an installer script, (2) run it, and (3) answer interactive prompts.
 
-Of the four combinations Miniforge gives you (conda vs mamba, Python vs PyPy), [we recommend mamba with Python, which is this table](https://github.com/conda-forge/miniforge#mambaforge).
+Of the four combinations Miniforge gives you (`conda` vs `mamba`, Python vs PyPy), [we recommend mamba with Python, which is this table](https://github.com/conda-forge/miniforge#mambaforge).
 
 Within each table is a list of architectures. On Mac and Linux, you can get the name of your architecture from
 
@@ -89,7 +91,7 @@ The interactive prompts will ask you where you want to install it (default is `~
 
 ## Using Miniforge
 
-Now you're ready to go. Instructions online tell you how to install packages, like `conda install package-name`. Since you installed "mamba", you can replace `conda install` with `mamba install` to make the dependency resolution much faster. There are no other differences, and you can always fall back on using the `conda` command.
+Now you're ready to go. Instructions online tell you how to install packages, like `conda install package-name`. Since you installed `mamba`, you can replace `conda install` with `mamba install` to make the dependency resolution much faster. There are no other differences, and you can always fall back on using the `conda` command.
 
 One of the first commands you'll probably want to do is
 

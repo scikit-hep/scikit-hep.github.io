@@ -7,11 +7,13 @@ nav_order: 35
 
 # Avoiding the spaghetti installation
 
-Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible with each other. Scikit-HEP supports users of the two major systems: (a) pip with virtual environments and (b) conda-forge. For a newcomer, conda-forge is usually the simplest way to get started, so we describe the most reliable way to set up conda-forge. Also, we describe how to use `mamba` because it is the fastest way to install packages into that environment.
+Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible with each other. Scikit-HEP supports users of the two major systems: (a) pip with virtual environments and (b) conda-forge. For a newcomer, conda-forge is usually the simplest and most reliable way to get started, so we describe that. Also, we describe how to replace `conda` with `mamba` because it is the fastest way to install packages into that environment.
 
 This page is for everyone, but especially newcomers to Python or package management. If, for instance, you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), then this page is for you.
 
-![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
+<center>
+  <img src="https://imgs.xkcd.com/comics/python_environment.png" alt="A mess of Python environments">
+</center>
 
 <details markdown="1"><summary><h1>What is conda-forge?</h1></summary>
 

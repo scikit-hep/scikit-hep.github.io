@@ -12,7 +12,7 @@ Many ways to install Python and Python packages have been developed over the yea
 
 This page is for everyone, but especially newcomers to Python or package management. If, for instance, you're having trouble installing Scikit-HEP packages—e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError` after you think you've installed it—then this page is for you.
 
-![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
+<img src="https://imgs.xkcd.com/comics/python_environment.png" alt="A mess of Python environments" style="border: solid white 3px; display: block; margin-left: auto; margin-right: auto;">
 
 <details markdown="1"><summary>What is conda-forge?</summary>
 

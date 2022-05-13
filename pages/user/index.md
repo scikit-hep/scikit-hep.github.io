@@ -8,6 +8,6 @@ has_children: true
 
 The pages here are intended for users of the scikit-hep packages.
 
-Currently, we have a page on [Conda installation instructions][installing conda].
+If you're having trouble installing Python packages or using ROOT with Scikit-HEP packages, see our [Conda installation instructions](Conda installation instructions).
 
 [installing-conda]: {{ site.baseurl }}{% link pages/user/installing-conda.md %}

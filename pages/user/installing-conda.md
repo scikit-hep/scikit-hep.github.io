@@ -14,7 +14,7 @@ This page is for everyone, but especially newcomers to Python or package managem
 
 ![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
 
-<details markdown="1"><summary>What is conda-forge? (click here)</summary>
+<details markdown="1"><summary>What is conda-forge?</summary>
 
 [conda-forge](https://conda-forge.org/) is a "channel" for the [conda](https://docs.conda.io/) package manager containing the Scientific Python ecosystem, Scikit-HEP, and even [ROOT](https://iris-hep.org/projects/rootconda.html) with carefully aligned package versions to ensure that you get a consistent, working system. Within a conda environment, you can still use pip to install packages that are not in this channel, thereby getting access to everything in the [Python Package Index (PyPI)](https://pypi.org/), and everything in the conda environment is kept isolated from all other Python environments, so that you don't disturb any applications that rely on a version of Python that ships with your operating system.
 
@@ -28,7 +28,7 @@ You likely have a package manager for your operating system, such as Homebrew, a
 
 </details>
 
-<details markdown="1"><summary>What is "mamba"? (click here)</summary>
+<details markdown="1"><summary>What is "mamba"?</summary>
 
 We recommend using `mamba`, which is a drop-in replacement for `conda` that is [many times faster](https://wolfv.medium.com/making-conda-fast-again-4da4debfb3b7) (in the "Solving environment: ..." step). You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
 
@@ -36,13 +36,13 @@ In fact, the conda developers are [incorporating mamba into conda](https://www.a
 
 </details>
 
-<details markdown="1"><summary>Where will the files go? (click here)</summary>
+<details markdown="1"><summary>Where will the files go?</summary>
 
 The entire Python distribution, with all packages and the binary shared libraries that support them, will go into a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/requiring `sudo`).
 
 </details>
 
-<details markdown="1"><summary>How to remove conda/mamba cleanly. (click here)</summary>
+<details markdown="1"><summary>How to remove conda/mamba cleanly.</summary>
 
 1. Delete that directory with `rm -rf ~/mambaforge`.
 2. Delete a file named `~/.condarc`, if you have one.
@@ -52,7 +52,7 @@ Those three steps will remove any vestige of the conda installation.
 
 </details>
 
-<details markdown="1"><summary>How to save an old package list before deleting it. (click here)</summary>
+<details markdown="1"><summary>How to save an old package list before deleting it.</summary>
 
 If you already have a conda installation, you can bundle your current environment into an environment file (a list of names and versions of packages) with
 
@@ -94,7 +94,7 @@ Windows has a `start` command; see [Miniforge's instructions](https://github.com
 
 The interactive prompts will ask you where you want to install it (default is `~/mambaforge`) and whether you want to have it enabled whenever you start a new terminal or shell (probably "yes"). Saying "yes" to the latter inserts a "`>>> conda initialize`" section in your shell configuration (probably `~/.bashrc`).
 
-<details markdown="1"><summary>Deciding whether conda should take over your shell? (click here)</summary>
+<details markdown="1"><summary>Deciding whether conda should take over your shell?</summary>
 
 If you say "yes" to let the installer script modify your shell configuration, then the next terminal you open will be in the conda environment. For instance,
 

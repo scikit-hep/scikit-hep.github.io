@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Installing packages
-permalink: /installing-packages
-nav_order: 35
-custom_title: Installing packages with conda-forge
+title: Installing conda
+permalink: /user/installing-conda
+nav_order: 10
+parent: User information
 ---
 
 ## Avoiding the spaghetti installation

@@ -157,4 +157,4 @@ which removes cached package files (which are not needed, now that they've been 
 
 One of conda's major features is that it allows you to have completely separate Python versions and packages in different "environments." See [managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments) in the conda documentation on how to use this feature, especially if you need to switch between projects with different package or version requirements.
 
-**Maintaining separate environments for separate projects is one of our recommended "best practices," whether you're using conda or pip with virtualenv.**
+Maintaining separate environments for separate projects is one of our recommended "best practices," whether you're using conda or pip with virtualenv.

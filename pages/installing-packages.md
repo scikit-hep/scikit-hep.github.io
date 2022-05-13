@@ -9,13 +9,13 @@ nav_order: 35
 
 Many ways to install Python and Python packages have been developed over the years, and not all of them are compatible with each other. Scikit-HEP supports users of the two major systems: (a) pip with virtual environments and (b) conda-forge. For a newcomer, conda-forge is usually the simplest and most reliable way to get started, so we describe that. Also, we describe how to replace `conda` with `mamba` because it is the fastest way to install packages into that environment.
 
-This page is for everyone, but especially newcomers to Python or package management. If, for instance, you're having trouble installing Scikit-HEP packages (e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError`), then this page is for you.
+This page is for everyone, but especially newcomers to Python or package management. If, for instance, you're having trouble installing Scikit-HEP packages—e.g. `pip install` fails with an error or you get an `ImportError`/`ModuleNotFoundError` after you think you've installed it—then this page is for you.
 
 ![A mess of Python environments](https://imgs.xkcd.com/comics/python_environment.png)
 
 <details markdown="1"><summary><h1>What is conda-forge?</h1></summary>
 
-[conda-forge](https://conda-forge.org/) is a "channel" for the [conda](https://docs.conda.io/) package manager containing the Scientific Python ecosystem, Scikit-HEP, and even ROOT (MacOS and Linux) with carefully aligned package versions to ensure that you get a consistent, working system. Within a conda environment, you can still use pip to install packages that are not in this channel, thereby getting access to everything in the [Python Package Index](https://pypi.org/), and everything in the conda environment is kept isolated from all other Python environments, so that you don't disturb any applications that rely on a version of Python that ships with your operating system.
+[conda-forge](https://conda-forge.org/) is a "channel" for the [conda](https://docs.conda.io/) package manager containing the Scientific Python ecosystem, Scikit-HEP, and even [ROOT](https://iris-hep.org/projects/rootconda.html) with carefully aligned package versions to ensure that you get a consistent, working system. Within a conda environment, you can still use pip to install packages that are not in this channel, thereby getting access to everything in the [Python Package Index (PyPI)](https://pypi.org/), and everything in the conda environment is kept isolated from all other Python environments, so that you don't disturb any applications that rely on a version of Python that ships with your operating system.
 
 The software in conda-forge are not subject to Anaconda's licensing restrictions, and the conda package manager is free software, so both can be used without any legal restrictions in national labs and universities.
 
@@ -29,7 +29,7 @@ You likely have a package manager for your operating system, such as Homebrew, a
 
 <details markdown="1"><summary><h1>What is "mamba"?</h1></summary>
 
-We recommend using `mamba`, which is a drop-in replacement for `conda` that is many times faster (in the "solving environment" step). You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
+We recommend using `mamba`, which is a drop-in replacement for `conda` that is [many times faster](https://wolfv.medium.com/making-conda-fast-again-4da4debfb3b7) (in the "Solving environment: ..." step). You particularly notice it when a package has many dependencies or complex version constraints on its dependencies.
 
 In fact, the conda developers are [incorporating mamba into conda](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community). At the time of this writing, however, that integration is still experimental. These instructions will describe how to use `mamba` directly.
 
@@ -37,7 +37,7 @@ In fact, the conda developers are [incorporating mamba into conda](https://www.a
 
 <details markdown="1"><summary><h1>Where will the files go?</h1></summary>
 
-The entire Python distribution, with all packages and the binary shared libraries that support them, will go into a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/`sudo`).
+The entire Python distribution, with all packages and the binary shared libraries that support them, will go into a new directory, most likely in your home directory and named `mambaforge`. All of the files in it are installed with your own user permissions (i.e. not superuser/requiring `sudo`).
 
 <details markdown="1"><summary><h2>How to get rid of them if you change your mind</h2></summary>
 

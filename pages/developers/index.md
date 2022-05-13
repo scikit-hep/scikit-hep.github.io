@@ -2,15 +2,18 @@
 layout: page
 title: Developer information
 permalink: /developer
-nav_order: 80
+nav_order: 30
 has_children: true
 ---
 
 The pages here are intended for developers who are making or maintaining a
-package and want to follow modern best practices in Python. This is especially
-important for packages that are part of Scikit-HEP or being proposed to join -
-if you are here to propose a new package for Scikit-HEP, read [package
-requirements][guidelines] - it is the only Scikit-HEP-specific page.
+package and want to follow modern best practices in Python.
+
+> ## Note
+>
+> If you are here to propose a new package for Scikit-HEP, please read [package
+> requirements][guidelines] for a list of minimum Scikit-HEP requirements for
+> packages joining the organization.
 
 New developers are encouraged to read the following pages. Veteran developers
 should still check out [introduction][intro], as it has a guide on
@@ -34,7 +37,7 @@ Once you have completed the guidelines, there is a [cookiecutter][] project, [Sc
 
 You can also evaluate your repository against the guidelines by using [scikit-hep-repo-review][]!
 
-[guidelines]: {{ site.baseurl }}{% link pages/developers/guidelines.md %}
+[guidelines]: {{ site.baseurl }}{% link pages/packages/guidelines.md %}
 [intro]: {{ site.baseurl }}{% link pages/developers/intro.md %}
 [style]: {{ site.baseurl }}{% link pages/developers/style.md %}
 [mypy]: {{ site.baseurl }}{% link pages/developers/mypy.md %}

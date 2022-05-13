@@ -13,15 +13,15 @@ this document is intended to outline a recommended style that new packages
 should follow, and existing packages should slowly adopt. The reasoning for
 each decision is outlined as well.
 
-There are currently three popular packaging systems. This guide covers
+There are currently several popular packaging systems. This guide covers
 [Setuptools][], which is currently the only system that supports compiled
-extensions. If you are not planning on writing C/C++ code, [Flit][] and
-[Poetry][] are the other two systems, and are drastically simpler - most of
-this page is unneeded for those systems.
+extensions. If you are not planning on writing C/C++ code, other systems like
+[Hatch][] are drastically simpler - most of this page is unneeded for those
+systems.
 
 Also see the [Python packaging guide][], especially the [Python packaging tutorial][].
 
-> <h4 style="no_toc">Note:</h4>
+> <h2 style="no_toc">Note:</h2>
 >
 > Raw source lives in git and has a `setup.py`. You _can_ install directly from
 > git via pip, but normally users install from distributions hosted on PyPI.
@@ -426,6 +426,7 @@ Note that Scikit-build currently may have issues with MANIFEST.in.
 
 [flit]: https://flit.readthedocs.io
 [poetry]: https://python-poetry.org
+[hatch]: https://hatch.pypa.io
 [hypermodern]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
 [setuptools_scm file]: https://github.com/pypa/setuptools_scm/#file-finders-hook-makes-most-of-manifestin-unnecessary
 [manifest.in]: https://packaging.python.org/guides/using-manifest-in/
@@ -434,4 +435,4 @@ Note that Scikit-build currently may have issues with MANIFEST.in.
 [python packaging guide]: https://packaging.python.org
 [python packaging tutorial]: https://packaging.python.org/tutorials/packaging-projects/
 
-[Supported Python Versions]: {{ site.baseurl }}{% link pages/supported-python-versions.md %}
+[Supported Python Versions]: {{ site.baseurl }}{% link pages/packages/supported-python-versions.md %}

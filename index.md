@@ -6,15 +6,21 @@ nav_order: 1
 
 # Scikit-HEP project - welcome!
 
-[![Scikit-HEP GitHub Org][github-badge]][github repository]{:.badge}
-[![Gitter badge][gitter-skhep-badge]][gitter-skhep-link]{:.badge}
-
 The Scikit-HEP project is a community-driven and community-oriented project
 with the aim of providing Particle Physics at large with an ecosystem for data
-analysis in Python. [Read more →]({{site.baseurl}}{% link pages/about/index.md %} )
+analysis in Python. [Read more →]({{site.baseurl}}{% link pages/about/index.md %})
 
-See our [developer pages]({{site.baseurl}}{% link pages/developers/index.md %})
-for information on developing Python packages!
+New users can start with our
+[user pages]({{site.baseurl}}{% link pages/user/index.md %}). See our
+[developer pages]({{site.baseurl}}{% link pages/developers/index.md %})
+for information on developing Python packages.
+
+<div markdown="1" class="text-center text-delta fs-3">
+[News]({{site.baseurl}}{% link pages/news.md %}) •
+[Resources]({{site.baseurl}}{% link pages/user/resources.md %}) •
+[Cite us]({{site.baseurl}}{% link pages/about/citing.md %}) •
+[Get in touch]({{site.baseurl}}{% link pages/about/getting-in-touch.md %})
+</div>
 
 {% include package_table.html %}
 

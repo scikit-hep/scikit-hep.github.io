@@ -106,3 +106,28 @@ details[open] {
   }
   padding-bottom: 0.5em;
 }
+
+blockquote {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+
+  padding: 4px 1em;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  @media (prefers-color-scheme: dark) {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    background-color: black;
+  }
+}
+
+blockquote > h2 {
+  font-size: 16px !important;
+  text-transform: uppercase;
+  line-height: 1.25;
+  font-weight: 300;
+  letter-spacing: 2px;
+}

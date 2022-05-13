@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Citing
+title: Citing Scikit-HEP
 permalink: /citing
-nav_order: 98
+nav_order: 1
+parent: About
 custom_title: Citing Scikit-HEP or individual packages
 ---
 

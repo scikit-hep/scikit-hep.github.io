@@ -2,7 +2,8 @@
 layout: page
 title: Python version policy
 permalink: /supported-python-versions
-nav_order: 60
+parent: Packages
+nav_order: 10
 ---
 
 The maintainers of Matplotlib, scikit-learn, IPython, Jupyter, yt, SciPy,

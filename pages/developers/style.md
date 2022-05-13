@@ -94,7 +94,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
     - id: black
 ```
 
-<details markdown="1"><summary>You can add a Black badge to your repo as well (click here)</summary>
+<details markdown="1"><summary>You can add a Black badge to your repo as well</summary>
 
 ```md
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -115,7 +115,7 @@ a way to make the Blacked code look better by rewriting your code; factor out
 long unreadable portions into a variable, avoid writing matrices as 1D lists,
 etc.
 
-<details markdown="1"><summary>Jupyter notebook support (click here)</summary>
+<details markdown="1"><summary>Jupyter notebook support</summary>
 
 If you want Black for Jupyter notebooks _too_, replace `id: black` with `id:black-jupyter` above.
 You also might like the following hook, which cleans Jupyter outputs:
@@ -129,7 +129,7 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 </details>
 
-<details markdown="1"><summary>Documentation / README snippets support (click here)</summary>
+<details markdown="1"><summary>Documentation / README snippets support</summary>
 
 If you want Black used in your documentation, you can use blacken-docs. This
 can even catch syntax errors in code snippets! It supports markdown and
@@ -176,7 +176,7 @@ If you use `setuptools_scm`, you might want to add:
 additional_dependencies: ["setuptools_scm[toml]"]
 ```
 
-<details markdown="1"><summary>If this is too slow: (click here)</summary>
+<details markdown="1"><summary>If this is too slow:</summary>
 
 **Warning**: For a complex package, this may be slow. You can optionally set
 `stages: [manual]` just below the id, and then only run this explicitly
@@ -329,7 +329,7 @@ and enable more checks. A few interesting plugins:
 - [`pep8-naming`](https://pypi.org/project/pep8-naming/): Enforces PEP8 naming rules. Code: `N`
 - [`flake8-print`](https://pypi.org/project/pep8-naming/): Makes sure you don't have print statements that sneak in. Code: `T`
 
-<details markdown="1"><summary>Flake8-print details: (click here)</summary>
+<details markdown="1"><summary>Flake8-print details:</summary>
 
 Having something verify you don't add a print statement by mistake is _very_
 useful. A common need for the print checker would be to add it to a single

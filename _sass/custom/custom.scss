@@ -91,6 +91,15 @@ details {
   }
 }
 
+details:not([open]) > summary::after {
+  content: "(expand)";
+  float: right;
+}
+details[open] > summary::after {
+  content: "(close)";
+  float: right;
+}
+
 details[open] {
   summary {
     margin-bottom: 1em;

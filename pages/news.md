@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 30
 ---
 
+**May 2022:** Package `repo-review` created in Scikit-HEP.
+
 **May 2022:** Package `awkward-1.0` renamed to `awkward`.
 
 **March 2022:** Creation of this _News_ page.

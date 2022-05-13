@@ -91,7 +91,7 @@ bash filename-of-the-script-you-just-downloaded.sh
 
 Windows has a `start` command; see [Miniforge's instructions](https://github.com/conda-forge/miniforge#windows).
 
-The interactive prompts will ask you where you want to install it (default is `~/mambaforge`) and whether you want to have it enabled whenever you start a new terminal or shell (probably yes). Saying "yes" to the latter inserts a "`>>> conda initialize`" section in your shell configuration (probably `~/.bashrc`).
+The interactive prompts will ask you where you want to install it (default is `~/mambaforge`) and whether you want to have it enabled whenever you start a new terminal or shell (probably "yes"). Saying "yes" to the latter inserts a "`>>> conda initialize`" section in your shell configuration (probably `~/.bashrc`).
 
 <details markdown="1"><summary><h3>Deciding whether conda should take over your shell</h3></summary>
 
@@ -101,7 +101,7 @@ If you say "yes" to let the installer script modify your shell configuation, the
 python
 ```
 
-will run the conda environment's Python, rather than any other Python you have installed. This is what conda calls the "base" environment (though you can create more environments that are independent of this one).
+will run the conda environment's Python, rather than any other Python you have installed on your computer. This is what conda calls the "base" environment (though you can create more environments that are independent of this one).
 
 If, instead, you want to explicitly opt-into conda environments by calling a command, use
 
@@ -117,13 +117,13 @@ conda activate name-of-environment
 
 See [managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments) in the conda documentation for more.
 
-If you say "no" to not let the installer script modify your shell configuration, then you will have to manually find the path to the `conda` executable, which is in `~/mambaforge/bin/conda`.
+If you say "no" to not let the installer script modify your shell configuration, then you will have to manually find the path to the `conda` executable, which is in `~/mambaforge/bin/conda`. All of the above applies, but your shell might not be able to find `conda` or `python`.
 
 </details>
 
 ## Regular maintenance of the environment
 
-Now you're ready to go. Instructions online tell you how to install packages, like
+Now you're ready to go. [Instructions online](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html) tell you how to install packages, like
 
 ```bash
 conda install name-of-package
@@ -156,3 +156,5 @@ which removes cached package files (which are not needed, now that they've been 
 ## Leveling up: multiple environments
 
 One of conda's major features is that it allows you to have completely separate Python versions and packages in different "environments." See [managing environments](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments) in the conda documentation on how to use this feature, especially if you need to switch between projects with different package or version requirements.
+
+**Maintaining separate environments for separate projects is one of our recommended "best practices," whether you're using conda or pip with virtualenv.**

@@ -95,7 +95,7 @@ The interactive prompts will ask you where you want to install it (default is `~
 
 <details markdown="1"><summary><h3>Deciding whether conda should take over your shell</h3></summary>
 
-If you say "yes" to let the installer script modify your shell configuation, then the next terminal you open will be in the conda environment. For instance,
+If you say "yes" to let the installer script modify your shell configuration, then the next terminal you open will be in the conda environment. For instance,
 
 ```bash
 python

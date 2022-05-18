@@ -14,7 +14,10 @@ or related to, the Scikit-HEP project.
 
 ## Scikit-HEP tutorials
 
-See the [Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
+
+* [HSF Scikit-HEP tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/)
+* [WIP Scikit-HEP Jupyter Book](https://scikit-hep.org/scikit-hep-tutorials/).
+* [HSF Uproot tutorial](https://hsf-training.github.io/hsf-training-uproot-webpage/)
 
 ## Publications
 

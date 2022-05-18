@@ -17,6 +17,7 @@ for information on developing Python packages.
 
 <div markdown="1" class="text-center text-delta fs-3">
 [News]({{site.baseurl}}{% link pages/news.md %}) •
+[Tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/) •
 [Resources]({{site.baseurl}}{% link pages/user/resources.md %}) •
 [Cite us]({{site.baseurl}}{% link pages/about/citing.md %}) •
 [Get in touch]({{site.baseurl}}{% link pages/about/getting-in-touch.md %})

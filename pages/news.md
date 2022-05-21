@@ -2,7 +2,7 @@
 layout: page
 title: Project news
 permalink: /news
-nav_order: 30
+nav_order: 2
 ---
 
 **May 2022:** Package `repo-review` created in Scikit-HEP.

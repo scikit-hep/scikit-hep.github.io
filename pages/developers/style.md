@@ -272,7 +272,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v1.3.2"
+  rev: "v1.3.3"
   hooks:
     - id: pycln
       args: [--all]

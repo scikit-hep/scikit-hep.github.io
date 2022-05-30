@@ -214,7 +214,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.950"
+  rev: "v0.960"
   hooks:
     - id: mypy
       files: src

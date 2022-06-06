@@ -56,7 +56,7 @@ lint:
   steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
-    - uses: pre-commit/action@v2.0.3
+    - uses: pre-commit/action@v3.0.0
 ```
 
 {% endraw %}

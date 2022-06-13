@@ -214,7 +214,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.960"
+  rev: "v0.961"
   hooks:
     - id: mypy
       files: src
@@ -396,7 +396,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.32.1"
+  rev: "v2.34.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -499,7 +499,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v14.0.4"
+  rev: "v14.0.4.1"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

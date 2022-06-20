@@ -499,7 +499,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v14.0.4.1"
+  rev: "v14.0.5"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]
@@ -526,7 +526,7 @@ file types. An example of usage:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-prettier
-  rev: "v2.6.2"
+  rev: "v2.7.1"
   hooks:
     - id: prettier
       types_or: [yaml, markdown, html, css, scss, javascript, json]

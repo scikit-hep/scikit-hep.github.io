@@ -93,7 +93,7 @@ tests:
   steps:
     - uses: actions/checkout@v3
       with:
-        fetch-depth: 0  # Only needed if using setuptools-scm
+        fetch-depth: 0 # Only needed if using setuptools-scm
 
     - name: Setup Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4

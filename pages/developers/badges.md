@@ -10,32 +10,52 @@ parent: Developer information
 
 In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-badge]](https://scikit-hep.org/){:.badge}
 
+<div class="skhep-bar d-flex m-2" style="justify-content:center;">
+  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('md')" id='md-btn'>Markdown</button>
+  <button class="skhep-bar-item btn m-2" onclick="openTab('rst')" id='rst-btn'>reStructuredText</button>
+</div>
+
+<div class="skhep-tab" markdown="1" id="md">
 ```md
 [![Scikit-HEP][sk-badge]](https://scikit-hep.org/)
 
 [sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+
 ```
+</div>
+<div class="skhep-tab" markdown="1" id="rst" style="display:none;">
+```
+
+.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+:target: https://scikit-hep.org
+
+````
+</div>
 
 Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/){:.badge}
 
+<div class="skhep-bar d-flex m-2" style="justify-content:center;">
+  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('md')" id='md-btn'>Markdown</button>
+  <button class="skhep-bar-item btn m-2" onclick="openTab('rst')" id='rst-btn'>reStructuredText</button>
+</div>
+
+<div class="skhep-tab" markdown="1" id="md">
 ```md
 [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)
 
 [sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
+````
+
+</div>
+<div class="skhep-tab" markdown="1" id="rst" style="display:none;">
 ```
-
-[sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
-[sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
-
-If you use RestructuredText, use one of these:
-
-```
-.. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
-   :target: https://scikit-hep.org
-
 .. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
    :target: https://scikit-hep.org
 ```
+</div>
+
+[sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
+[sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
 
 To recreate this badge, you can use:
 
@@ -46,3 +66,29 @@ wget -O Scikit--HEP-Project-blue.svg 'https://img.shields.io/badge/Scikit--HEP-P
 ## Other projects
 
 It is highly recommended you have the PyPI and Conda-Forge badges (if applicable). Tests, docs, and Zenodo DOI are generally recommended as well.
+
+<script>
+function openTab(tabName) {
+  var tab = document.getElementsByClassName("skhep-tab");
+  for (const t of tab) {
+    t.style.display = t.id == tabName ? "block" : "none";
+  }
+  var btn = document.getElementsByClassName("skhep-bar-item");
+  for (const b of btn) {
+    if(b.id == tabName.concat("-btn"))
+      b.classList.add("btn-purple");
+    else
+      b.classList.remove("btn-purple");
+  }
+}
+function ready() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tabs = urlParams.getAll("tabs");
+
+  for (const tab of tabs) {
+    openTab(tab);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", ready, false);
+</script>

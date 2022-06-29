@@ -174,7 +174,7 @@ Later steps will see this environment variable.
 
 There are a variety of useful actions. There are GitHub supplied ones:
 
-- [actions/checkout](https://github.com/actions/checkout): Almost always the first action. v2/3 does not keep Git history unless `with: fetch-depth: 0` is included (important for SCM versioning). v1 works on very old docker images.
+- [actions/checkout](https://github.com/actions/checkout): Almost always the first action. v2+ does not keep Git history unless `with: fetch-depth: 0` is included (important for SCM versioning). v1 works on very old docker images.
 - [actions/setup-python](https://github.com/actions/setup-python): Do not use v1; v2+ can setup any Python, including uninstalled ones and pre-releases. v4 requires a Python version to be selected.
 - [actions/cache](https://github.com/actions/cache): Can store files and restore them on future runs, with a settable key.
 - [actions/upload-artifact](https://github.com/actions/upload-artifact): Upload a file to be accessed from the UI or from a later job.

@@ -146,6 +146,14 @@ mamba update --all
 
 to get the newest versions of all the installed packages (newer than the installation script). Then do this approximately once a week to stay up-to-date on all of your packages. (This command updates to the latest _stable_ versions, not bleeding-edge versions unless you explicitly request them by version number.)
 
+> **Note:** until [mamba-org/mamba#1706](https://github.com/mamba-org/mamba/issues/1706) is fixed, update all packages with `mamba update <ExplicitPackageNames>` except for `conda`, which must be kept fixed at `4.12.0`. You can get a list of explicit package names from
+>
+> ```bash
+> mamba update --all --dry-run
+> ```
+>
+> (Conda 4.13.3 changed in a way that breaks mamba.) Hopefully, we'll be able to remove this message soon!
+
 Another good command is
 
 ```bash

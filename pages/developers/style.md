@@ -91,7 +91,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: "22.3.0"
+  rev: "22.6.0"
   hooks:
     - id: black
 ```
@@ -501,7 +501,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v14.0.5"
+  rev: "v14.0.6"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

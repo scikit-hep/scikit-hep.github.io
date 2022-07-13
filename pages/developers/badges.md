@@ -21,16 +21,13 @@ In your README, you should have a Scikit-HEP project badge: [![Scikit-HEP][sk-ba
 [![Scikit-HEP][sk-badge]](https://scikit-hep.org/)
 
 [sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
-
 ```
 </div>
 <div class="skhep-tab" markdown="1" id="rst" style="display:none;">
 ```
-
 .. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg
 :target: https://scikit-hep.org
-
-````
+```
 </div>
 
 Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/){:.badge}
@@ -45,15 +42,13 @@ Or an affiliated package badge if you are an affiliated package: [![Scikit-HEP][
 [![Scikit-HEP][sk-badge-aff]](https://scikit-hep.org/)
 
 [sk-badge-aff]: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
-````
-
+```
 </div>
 <div class="skhep-tab" markdown="1" id="rst" style="display:none;">
 ```
 .. image:: https://scikit-hep.org/assets/images/Scikit--HEP-Affiliated-blue.svg
    :target: https://scikit-hep.org
-
-````
+```
 </div>
 
 [sk-badge]: https://scikit-hep.org/assets/images/Scikit--HEP-Project-blue.svg

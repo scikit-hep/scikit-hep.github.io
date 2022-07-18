@@ -274,7 +274,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v2.0.1"
+  rev: "v2.0.3"
   hooks:
     - id: pycln
       args: [--all]
@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.37.0"
+  rev: "v2.37.1"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]

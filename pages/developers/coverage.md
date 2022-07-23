@@ -11,6 +11,7 @@ parent: Developer information
 The "Code coverage" value of a codebase indicates how much of the production/development code is covered by the running unit tests. Maintainers try their best to keep this percentage high, and this process is often automated using tools like `GitHub Actions` and `Codecov`. Hence, code coverage becomes a good metric (not always) to check if a particular codebase is well tested and reliable.
 
 Tools and libraries used to calculate, read, and visualize coverage reports:
+
 - `pytest-cov`: allows developers to calculate and visualize the coverage value
 - `Codecov`: integrates with remote repositories, allowing developers to see and compare coverage value with each CI run
 - `GitHub Actions`: allows users to automatically upload coverage reports to `Codecov`

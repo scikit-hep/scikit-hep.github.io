@@ -124,7 +124,7 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 ```yaml
 - repo: https://github.com/kynan/nbstripout
-  rev: "0.5.0"
+  rev: "0.6.0"
   hooks:
     - id: nbstripout
 ```
@@ -216,7 +216,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.961"
+  rev: "v0.971"
   hooks:
     - id: mypy
       files: src
@@ -274,7 +274,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v2.0.3"
+  rev: "v2.0.4"
   hooks:
     - id: pycln
       args: [--all]
@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.37.1"
+  rev: "v2.37.2"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -426,7 +426,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v1.20.1"
+  rev: "v1.20.2"
   hooks:
     - id: setup-cfg-fmt
 ```

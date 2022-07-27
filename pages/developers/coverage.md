@@ -43,7 +43,7 @@ Your workflows should also run tests with the `--cov` option, which must be set 
   run: python -m pytest -ra --cov=vector tests/
 ```
 
-This will automatically invoke `pytest-cov`, and generate a `.coverage` file, which can then be uploaded to `Codecov` using the [codecov/codecov-action](https://github.com/codecov/codecov-action) action.
+This will automatically invoke `pytest-cov`, and generate a `.coverage` file, which can then be uploaded to `Codecov` using the [codecov/codecov-action][] action.
 
 ### Configuring Codecov and uploading coverage reports
 
@@ -51,7 +51,7 @@ Interestingly, `Codecov` does not require any initial configurations for your pr
 
 All the `Scikit-HEP` projects using `Codecov`, with detailed coverage reports and graphs, are available here - [https://app.codecov.io/gh/scikit-hep](https://app.codecov.io/gh/scikit-hep). After your workflows push your first coverage report to `Codecov` your repository should also appear here.
 
-Codecov maintains the [codecov/codecov-action](https://github.com/codecov/codecov-action) GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows -
+Codecov maintains the [codecov/codecov-action][] GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows -
 
 ```yaml
 - name: Upload coverage report
@@ -72,8 +72,10 @@ codecov:
     after_n_builds: x
 ```
 
-where `x` is the number of uploaded reports `Codecov` should wait to receive before sending statuses. This would ensure that the `Codecov` checks don't fail before all the coverage reports are uploaded. See [docs](https://docs.codecov.com/docs/codecov-yaml) for all the options.
+where `x` is the number of uploaded reports `Codecov` should wait to receive before sending statuses. This would ensure that the `Codecov` checks don't fail before all the coverage reports are uploaded. See the [docs](https://docs.codecov.com/docs/codecov-yaml) for all the options.
 
 ### Coverage for projects written in Python and C++
 
 <!-- TODO -->
+
+[codecov/codecov-action]: https://github.com/codecov/codecov-action

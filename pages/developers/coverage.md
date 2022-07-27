@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Code coverage with pytest-cov and Codecov"
+title: "Code coverage"
 permalink: /developer/coverage
 nav_order: 4
 parent: Developer information
@@ -38,7 +38,7 @@ python -m pytest -ra --cov=vector tests/
 
 Your workflows should also run tests with the `--cov` option, which must be set to your package name. For example -
 
-```
+```yaml
 - name: Test package
   run: python -m pytest -ra --cov=vector tests/
 ```
@@ -53,7 +53,7 @@ All the `Scikit-HEP` projects using `Codecov`, with detailed coverage reports an
 
 Codecov maintains the [codecov/codecov-action](https://github.com/codecov/codecov-action) GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows -
 
-```
+```yaml
 - name: Upload coverage report
   uses: codecov/codecov-action@v3.1.0
 ```

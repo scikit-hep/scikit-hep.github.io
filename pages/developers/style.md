@@ -274,7 +274,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v2.0.4"
+  rev: "v2.1.1"
   hooks:
     - id: pycln
       args: [--all]
@@ -313,7 +313,7 @@ extend-ignore = E203, E501, E722, B950
 
 ```yaml
 - repo: https://github.com/pycqa/flake8
-  rev: "4.0.1"
+  rev: "5.0.1"
   hooks:
     - id: flake8
       additional_dependencies: [flake8-bugbear]
@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.37.2"
+  rev: "v2.37.3"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -426,7 +426,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v1.20.2"
+  rev: "v2.0.0"
   hooks:
     - id: setup-cfg-fmt
 ```

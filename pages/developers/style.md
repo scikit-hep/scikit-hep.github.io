@@ -313,7 +313,7 @@ extend-ignore = E203, E501, E722, B950
 
 ```yaml
 - repo: https://github.com/pycqa/flake8
-  rev: "5.0.1"
+  rev: "5.0.4"
   hooks:
     - id: flake8
       additional_dependencies: [flake8-bugbear]
@@ -354,7 +354,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 
 ```yaml
 - repo: https://github.com/asottile/yesqa
-  rev: "v1.3.0"
+  rev: "v1.4.0"
   hooks:
     - id: yesqa
 ```

@@ -184,7 +184,7 @@ And many other useful ones:
 
 - [ilammy/msvc-dev-cmd](https://github.com/ilammy/msvc-dev-cmd): Setup MSVC compilers.
 - [jwlawson/actions-setup-cmake](https://github.com/jwlawson/actions-setup-cmake): Setup any version of CMake on almost any image.
-- [excitedleigh/setup-nox](https://github.com/excitedleigh/setup-nox): Setup all versions of Python and provide nox.
+- [wntrblm/nox](https://github.com/wntrblm/nox): Setup all versions of Python and provide nox.
 - [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish): Publish Python packages to PyPI.
 - [pre-commit/action](https://github.com/pre-commit/action): Run pre-commit with built-in caching.
 - [conda-incubator/setup-miniconda](https://github.com/conda-incubator/setup-miniconda): Setup conda or mamba on GitHub Actions.

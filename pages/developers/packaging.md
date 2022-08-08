@@ -196,7 +196,6 @@ run, that version will be forced, otherwise, it works as normal.
 > Python one](https://github.com/github/gitignore/blob/main/Python.gitignore)
 > or using a [generator site](https://www.toptal.com/developers/gitignore).
 
-
 You should also add these two files:
 
 `.git_archival.txt`:

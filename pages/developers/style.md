@@ -143,7 +143,7 @@ you'll have to keep it up to date manually.
   rev: v1.12.1
   hooks:
     - id: blacken-docs
-      additional_dependencies: [black==22.3.0]
+      additional_dependencies: [black==22.6.0]
 ```
 
 </details>
@@ -429,10 +429,10 @@ important parts (like Python classifiers) are in sync. This tool,
   rev: "v2.0.0"
   hooks:
     - id: setup-cfg-fmt
+      args: [--include-version-classifiers, --max-py-version=3.10]
 ```
 
-Make sure you support Python 3.10! Otherwise, add `args: [--max-py-version=3.9]`
-or whatever your maximum is.
+Make sure you list the highest version of Python you are testing with here.
 
 ## Spelling
 

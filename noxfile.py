@@ -51,12 +51,14 @@ def pc_bump(session: nox.Session) -> None:
 def gha_bump(session: nox.Session) -> None:
 
     pages = list(Path("pages/developers").glob("gha_*.md"))
+    pages.append(Path("pages/developers/style.md"))
     full_txt = "\n".join(page.read_text() for page in pages)
 
     # This assumes there is a single version per action
     old_versions = {m[1]: m[2] for m in GHA_VERS.finditer(full_txt)}
 
     for repo, old_version in old_versions.items():
+        print(f"{repo}: {old_version}")
         response = urllib.request.urlopen(f"https://api.github.com/repos/{repo}/tags")
         tags_js = json.loads(response.read())
         tags = [x["name"] for x in tags_js if x["name"].count(".") == old_version.count(".")]

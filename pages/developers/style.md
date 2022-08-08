@@ -186,7 +186,7 @@ additional_dependencies: ["setuptools_scm[toml]"]
 run all checks:
 
 ```yaml
-- uses: pre-commit/action@v2.0.3
+- uses: pre-commit/action@v3.0.0
   with:
     extra_args: --show-diff-on-failure --all-files --hook-stage manual
 ```

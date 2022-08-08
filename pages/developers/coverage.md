@@ -74,8 +74,8 @@ codecov:
 
 where `x` is the number of uploaded reports `Codecov` should wait to receive before sending statuses. This would ensure that the `Codecov` checks don't fail before all the coverage reports are uploaded. See the [docs](https://docs.codecov.com/docs/codecov-yaml) for all the options.
 
-### Coverage for projects written in Python and C++
+<!-- ### Coverage for projects written in Python and C++
 
-<!-- TODO -->
+TODO -->
 
 [codecov/codecov-action]: https://github.com/codecov/codecov-action

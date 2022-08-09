@@ -58,14 +58,19 @@ On GitHub Actions or Azure, pipx is available by default, so you should use
 `pipx run nox`. To give it access to all Python versions, you can use this action:
 
 ```yaml
-- uses: excitedleigh/setup-nox@main
+- uses: wntrblm/nox@2022.8.7
 ```
 
-You can now access all versions of Python from nox. At least in GitHub Actions,
-you should add `--forcecolor` to your nox runs to get color output in your
-logs, or set `env: FORCE_COLOR: 3`. You should also always add
-`--error-on-missing-interpreters` in CI, because nox considers a missing
-interpreter to be "passing".
+You can now access all current versions of Python from nox. At least in GitHub
+Actions, you should add `--forcecolor` to your nox runs to get color output in
+your logs, or set `env: FORCE_COLOR: 3`. If you'd like to customise the versions
+of Python prepared for you, then use this input:
+
+```yaml
+- uses: wntrblm/nox@2022.8.7
+  with:
+    python-versions: "3.7, 3.8, 3.9, 3.10, pypy-3.8, pypy-3.9-nightly"
+```
 
 ### Introduction
 

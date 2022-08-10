@@ -63,10 +63,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
+- [arXiv:2207.07476 [hep-ex]](https://arxiv.org/abs/2207.07476) - cites `pyhf`.
 - [arXiv:1706.01420 [hep-ex]](https://arxiv.org/abs/1706.01420) - cites `iminuit`.
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
+- [arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870) - cites `pyhf`.
 - [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621) - cites `scikit-hep`, `uproot3`.
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - cites `iminuit`.
@@ -95,6 +98,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
+- [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
+- [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.
 - [Dalila Salamani (Geneva U.), Dec. 2021](https://doi.org/10.13097/archive-ouverte/unige:158540), ATLAS experiment - cites the Scikit-HEP project.
 - [Srishti Bhasin (Bristol U.), Sep. 2021](https://inspirehep.net/literature/1982380), LHCb experiment - cites `scikit-hep`, Scikit-HEP project.
 - [Corin J. K. Hoad (Brunel U.), 2020](https://inspirehep.net/literature/1839082), CMS experiment - cites the Scikit-HEP project.

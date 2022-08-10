@@ -14,7 +14,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [LHCb Collaboration, JHEP 01 (2022) 166](<https://link.springer.com/article/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
+- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
+- [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
 ### Particle Physics Phenomenology
@@ -50,6 +51,8 @@ A list of publications citing the `pyhf` package or material using it is collect
   [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/) - cites the Scikit-HEP project.
 - [EPJ Web of Conferences 251, 03067 (2021)](https://doi.org/10.1051/epjconf/202125103067),
   [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/) - cites `awkward`, `boost-histogram`, `mplhep `, `pyhf`, `uproot`.
+- [EPJ Web of Conferences 251, 03002 (2021)](https://doi.org/10.1051/epjconf/202125103002),
+  [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/) - cites `awkward`, `uproot`.
 - [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025),
   [CHEP 2019 Conference](https://chep2019.org/) - cites `hepstats`.
 - [EPJ Web of Conferences 245, 06016 (2020)](https://doi.org/10.1051/epjconf/202024506016),
@@ -69,7 +72,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 ### Particle Physics Phenomenology
 
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
+- [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870) - cites `pyhf`.
+- [arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932) - cites the Scikit-HEP project.
+- [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.
 - [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621) - cites `scikit-hep`, `uproot3`.
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - cites `iminuit`.

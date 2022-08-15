@@ -64,7 +64,7 @@ The lines above should be added after the step that runs your tests with the `--
 
 One can also configure `Codecov` and coverage reports passed to `Codecov` using `codecov.yml`. `codecov.yml` should be placed inside the `.github` folder, along with your `workflows` folder. Additionally, `Codecov` allows you to create and edit this `YAML` file directly through your `Codecov` project's settings!
 
-A recommended configuration for `Codecov` -
+A recommended configuration for `Codecov`:
 
 ```yaml
 codecov:

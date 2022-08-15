@@ -49,7 +49,7 @@ This will automatically invoke `pytest-cov`, and generate a `.coverage` file, wh
 
 Interestingly, `Codecov` does not require any initial configurations for your project, given that you have already signed up for the same using your GitHub account. `Codecov` requires you to push or upload your coverage report, after which it automatically generates a `Codecov` project for you.
 
-All the `Scikit-HEP` projects using `Codecov`, with detailed coverage reports and graphs, are available here - [https://app.codecov.io/gh/scikit-hep](https://app.codecov.io/gh/scikit-hep). After your workflows push your first coverage report to `Codecov` your repository should also appear here.
+All `Scikit-HEP` packages using `Codecov`, with detailed coverage reports and graphs, are available at [https://app.codecov.io/gh/scikit-hep](https://app.codecov.io/gh/scikit-hep). After your workflows push your first coverage report to `Codecov` your repository should also appear here.
 
 Codecov maintains the [codecov/codecov-action][] GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows -
 

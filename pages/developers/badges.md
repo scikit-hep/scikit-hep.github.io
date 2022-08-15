@@ -66,7 +66,7 @@ wget -O Scikit--HEP-Project-blue.svg 'https://img.shields.io/badge/Scikit--HEP-P
 
 ## Other projects
 
-It is highly recommended you have the PyPI and Conda-Forge badges (if applicable). Tests, docs, and Zenodo DOI are generally recommended as well.
+It is highly recommended you have the PyPI and Conda-Forge badges (if applicable). Tests, coverage (codecov, if applicable), docs, and Zenodo DOI are generally recommended as well.
 
 <script>
 function openTab(tabName) {

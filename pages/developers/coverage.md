@@ -8,7 +8,7 @@ parent: Developer information
 
 {% include toc.html %}
 
-The "Code coverage" value of a codebase indicates how much of the production/development code is covered by the running unit tests. Maintainers try their best to keep this percentage high, and this process is often automated using tools like `GitHub Actions` and `Codecov`. Hence, code coverage becomes a good metric (not always) to check if a particular codebase is well tested and reliable.
+The "Code coverage" value of a codebase indicates how much of the production/development code is covered by the running unit tests. Maintainers try their best to keep this percentage high, and this process is often automated using tools such as `GitHub Actions` and `Codecov`. Hence, code coverage becomes a good metric (not always) to check if a particular codebase is well tested and reliable.
 
 Tools and libraries used to calculate, read, and visualize coverage reports:
 

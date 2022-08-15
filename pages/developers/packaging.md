@@ -203,7 +203,7 @@ You should also add these two files:
 ```text
 node: $Format:%H$
 node-date: $Format:%cI$
-describe-name: $Format:%(describe)$
+describe-name: $Format:%(describe:tags=true,match=*[0-9]*)$
 ref-names: $Format:%D$
 ```
 

@@ -51,7 +51,7 @@ Interestingly, `Codecov` does not require any initial configurations for your pr
 
 All `Scikit-HEP` packages using `Codecov`, with detailed coverage reports and graphs, are available at [https://app.codecov.io/gh/scikit-hep](https://app.codecov.io/gh/scikit-hep). After your workflows push your first coverage report to `Codecov` your repository should also appear here.
 
-Codecov maintains the [codecov/codecov-action][] GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows -
+`Codecov` maintains the [codecov/codecov-action][] GitHub Action to make uploading coverage reports easy for users. A minimal working example for uploading coverage reports through your workflow, which should be more than enough for a simple testing suite, can be written as follows:
 
 ```yaml
 - name: Upload coverage report

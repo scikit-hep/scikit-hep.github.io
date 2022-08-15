@@ -32,7 +32,7 @@ Tools and libraries used to calculate, read, and visualize coverage reports:
 python -m pytest -ra --cov=vector tests/
 ```
 
-`--cov` option would also print a minimal coverage report in the terminal itself! See the [docs](https://pytest-cov.readthedocs.io/en/latest/) for more options.
+`--cov` option will also print a minimal coverage report in the terminal itself! See the [docs](https://pytest-cov.readthedocs.io/en/latest/) for more options.
 
 ### Calculating code coverage in your workflows
 

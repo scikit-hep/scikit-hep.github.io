@@ -188,8 +188,7 @@ And many other useful ones:
 - [pypa/gh-action-pypi-publish](https://github.com/pypa/gh-action-pypi-publish): Publish Python packages to PyPI.
 - [pre-commit/action](https://github.com/pre-commit/action): Run pre-commit with built-in caching.
 - [conda-incubator/setup-miniconda](https://github.com/conda-incubator/setup-miniconda): Setup conda or mamba on GitHub Actions.
-- [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages): Deploy built files to to GitHub Pages
-- [ruby/setup-miniconda](https://github.com/ruby/setup-ruby) Setup Ruby if you need it for something.
+- [ruby/setup-ruby](https://github.com/ruby/setup-ruby) Setup Ruby if you need it for something.
 
 There are also a few useful tools installed which can really simplify your workflow or adding custom actions. This includes system package managers (like brew, chocolaty, NuGet, Vcpkg, etc), as well as a fantastic cross platform one:
 
@@ -204,6 +203,77 @@ You can also run GitHub Actions locally:
 You can [write your own actions](https://docs.github.com/en/actions/creating-actions) locally or in a shared GitHub repo in either GitHub actions syntax itself (called "composite"), JavaScript, or Docker. Combined with pipx, composite actions are very easy to write!
 
 You can also make reusable workflows.
+
+### GitHub pages
+
+GitHub has finished moving their pages build infrastructure to Actions, and they [now provide](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/) the ability to directly push to Pages from Actions. This replaced the old workarounds of (force) pushing output to a branch or to separate repository.
+
+<details markdown="1"><summary>Setting up GitHub Pages custom builds</summary>
+
+Before starting, make sure in the Pages settings the source is set to "Actions".
+
+You'll probably want this job to run on both your main branch, as well as `workflow_dispatch`, just in case you want to manually trigger a rebuild. You should set the permission so that the built-in `GITHUB_TOKEN` can write to pages:
+
+```yaml
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+```
+
+You probably only want one deployment at a time, so you can use:
+
+```yaml
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+```
+
+Now you'll want three custom actions in your `steps:`. First, you need to configure Pages.
+
+```yaml
+- name: Setup Pages
+  id: pages
+  uses: actions/configure-pages@v1
+```
+
+{% raw %}
+
+Notice this action sets an `id:`; this will allow you to use the outputs from this action later; specifically, may want to use `${{ steps.pages.outputs.base_path }}` when building (you can also get `origin`, `base_url`, or `host` - see the action [config](https://github.com/actions/configure-pages/blob/main/action.yml)).
+
+{% endraw %}
+
+```yaml
+- name: Upload artifact
+  uses: actions/upload-pages-artifact@v1
+```
+
+This actions defaults to uploading `_site`, but you can give any `with: path:` if you want, including `"."` which is the whole repository.
+
+Finally, you'll need to deploy the artifact (named `github-pages`) to Pages. You can make this a custom job with `needs:` pointing at your previous job (in this example, the previous job is called `build`):
+
+{% raw %}
+
+```yaml
+deploy:
+  environment:
+    name: github-pages
+    url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
+  needs: [build]
+  steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
+```
+
+{% endraw %}
+
+The deploy-pages job gives a `page_url`, which is the same as `base_url` on the configure step, and can be set in the `environment`. If you want to do everything in one job, you only need one of these.
+
+See the [official starter workflows](https://github.com/actions/starter-workflows/tree/main/pages) for examples.
+
+</details>
 
 ## Advanced usage
 

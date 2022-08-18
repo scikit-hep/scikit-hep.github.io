@@ -196,6 +196,27 @@ run, that version will be forced, otherwise, it works as normal.
 > Python one](https://github.com/github/gitignore/blob/main/Python.gitignore)
 > or using a [generator site](https://www.toptal.com/developers/gitignore).
 
+You should also add these two files:
+
+`.git_archival.txt`:
+
+```text
+node: $Format:%H$
+node-date: $Format:%cI$
+describe-name: $Format:%(describe:tags=true,match=*[0-9]*)$
+ref-names: $Format:%D$
+```
+
+And `.gitattributes` (or add this line if you are already using this file):
+
+```text
+.git_archival.txt  export-subst
+```
+
+This will allow git archives (including the ones generated from GitHub) to also
+support versioning. This will only work with `setuptools_scm>=7`, which requires
+Python 3.7+ (though adding the files won't hurt older versions).
+
 ### Classic in-source versioning
 
 Recent versions of `setuptools` have improved in-source versioning. If you have

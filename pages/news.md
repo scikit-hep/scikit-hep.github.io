@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**August 2022:** Major metapackage release `scikit-hep` 4.0.0.
+
 **May 2022:** Package `repo-review` created in Scikit-HEP.
 
 **May 2022:** Package `awkward-1.0` renamed to `awkward`.

@@ -6,7 +6,6 @@ nav_order: 3
 parent: Packages
 ---
 
-<!-- prettier-ignore -->
 Please refer to the documentation provided by the individual packages.
 The table below provides direct links \... Note that in
 some cases the README files are the actual documentation. For certain
@@ -19,11 +18,11 @@ READMEs still contain handy \"getting started\" sections.
 {%-     assign items = items | push: item[1] -%}
 {%-   endfor -%}
 {%- endfor -%}
-{%- assign items = items | sort_natural: "name" -%}
 
+<!-- prettier-ignore-start -->
+{%- assign items = items | sort_natural: "name" -%}
 | Package | README | Documentation |
 | ------- | ------ | ------------- |
-
 {% for project in items %}
 {%- if project.docs  -%}
 {%- capture docs -%} [{{project.docs-title | default: "Read the Docs"}}]({{project.docs}}) {%- endcapture -%}
@@ -38,3 +37,4 @@ READMEs still contain handy \"getting started\" sections.
 {%- endif -%}
 ) | {{docs}} |
 {% endfor %}
+<!-- prettier-ignore-end-->

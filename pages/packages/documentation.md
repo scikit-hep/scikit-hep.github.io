@@ -6,6 +6,7 @@ nav_order: 3
 parent: Packages
 ---
 
+<!-- prettier-ignore -->
 Please refer to the documentation provided by the individual packages.
 The table below provides direct links \... Note that in
 some cases the README files are the actual documentation. For certain

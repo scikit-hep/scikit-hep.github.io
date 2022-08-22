@@ -443,7 +443,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: "v2.1.0"
+  rev: "v2.2.1"
   hooks:
     - id: codespell
       args: ["-L", "sur,nd"]

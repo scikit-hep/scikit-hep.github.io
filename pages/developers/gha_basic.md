@@ -234,7 +234,7 @@ Now you'll want three custom actions in your `steps:`. First, you need to config
 ```yaml
 - name: Setup Pages
   id: pages
-  uses: actions/configure-pages@v1
+  uses: actions/configure-pages@v2
 ```
 
 {% raw %}

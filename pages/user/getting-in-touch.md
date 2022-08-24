@@ -2,7 +2,7 @@
 layout: page
 title: Getting in touch
 permalink: /getting-in-touch
-parent: About
+parent: User information
 nav_order: 9
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: Getting in touch
 permalink: /getting-in-touch
 parent: User information
-nav_order: 9
+nav_order: 10
 ---
 
 {% include toc.html %}

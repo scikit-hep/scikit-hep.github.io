@@ -20,7 +20,7 @@ for information on developing Python packages.
 [Tutorial](https://hsf-training.github.io/hsf-training-scikit-hep-webpage/) •
 [Resources]({{site.baseurl}}{% link pages/user/resources.md %}) •
 [Cite us]({{site.baseurl}}{% link pages/about/citing.md %}) •
-[Get in touch]({{site.baseurl}}{% link pages/about/getting-in-touch.md %})
+[Get in touch]({{site.baseurl}}{% link pages/user/getting-in-touch.md %})
 </div>
 
 {% include package_table.html %}

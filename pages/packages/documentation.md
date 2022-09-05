@@ -7,11 +7,11 @@ parent: Packages
 ---
 
 <!-- prettier-ignore -->
-Please refer to the documentation provided by the individual packages.
-The table below provides direct links \... Note that in
-some cases the README files are the actual documentation. For certain
-packages where ReadTheDocs style of documentation is available, the
-READMEs still contain handy \"getting started\" sections.
+Please refer to the documentation provided by the individual packages.  The
+table below provides direct links. Note that in some cases the README files are
+the actual documentation. For certain packages where ReadTheDocs style of
+documentation is available, the READMEs still contain handy "getting started"
+sections.
 
 {%  assign items = "" | split: "," -%}
 {%- for cat in site.data.categories -%}
@@ -21,11 +21,12 @@ READMEs still contain handy \"getting started\" sections.
 {%- endfor -%}
 
 <!-- prettier-ignore-start -->
-{%- assign items = items | sort_natural: "name" -%}
+
+{% assign items = items | sort_natural: "name" -%}
 | Package | README | Documentation |
 | ------- | ------ | ------------- |
 {% for project in items %}
-{%- if project.docs  -%}
+{%- if project.docs -%}
 {%- capture docs -%} [{{project.docs-title | default: "Read the Docs"}}]({{project.docs}}) {%- endcapture -%}
 {%- else -%}
 {%- assign docs="" -%}
@@ -38,4 +39,5 @@ READMEs still contain handy \"getting started\" sections.
 {%- endif -%}
 ) | {{docs}} |
 {% endfor %}
+
 <!-- prettier-ignore-end-->

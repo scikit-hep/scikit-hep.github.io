@@ -143,7 +143,7 @@ you'll have to keep it up to date manually.
   rev: v1.12.1
   hooks:
     - id: blacken-docs
-      additional_dependencies: [black==22.6.0]
+      additional_dependencies: [black==22.8.0]
 ```
 
 </details>

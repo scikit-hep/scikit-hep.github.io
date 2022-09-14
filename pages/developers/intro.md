@@ -2,7 +2,7 @@
 layout: page
 title: Intro to development
 permalink: /developer/intro
-nav_order: 2
+nav_order: 1
 parent: Developer information
 ---
 

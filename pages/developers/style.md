@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.37.3"
+  rev: "v2.38.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]

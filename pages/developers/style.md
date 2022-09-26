@@ -124,7 +124,7 @@ You also might like the following hook, which cleans Jupyter outputs:
 
 ```yaml
 - repo: https://github.com/kynan/nbstripout
-  rev: "0.6.0"
+  rev: "0.6.1"
   hooks:
     - id: nbstripout
 ```
@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v2.38.0"
+  rev: "v2.38.2"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]

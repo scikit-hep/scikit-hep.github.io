@@ -398,7 +398,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.0.0"
+  rev: "v3.1.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -426,7 +426,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v2.0.0"
+  rev: "v2.1.0"
   hooks:
     - id: setup-cfg-fmt
       args: [--include-version-classifiers, --max-py-version=3.10]
@@ -443,7 +443,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: "v2.2.1"
+  rev: "v2.2.2"
   hooks:
     - id: codespell
       args: ["-L", "sur,nd"]

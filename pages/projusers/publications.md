@@ -20,6 +20,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [Phys. Rev. D 106, 052011 (2022)](https://doi.org/10.1103/PhysRevD.106.052011) ([arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 105, 075001 (2021)](https://doi.org/10.1103/PhysRevD.105.075001) ([arXiv:2111.10343 [hep-ph]](https://arxiv.org/abs/2111.10343)) - cites the Scikit-HEP project.
 - [SciPost Phys. 12, 037 (2022)](https://doi.org/10.21468/SciPostPhys.12.1.037) ([arXiv:2109.04981 [hep-ph]](https://arxiv.org/abs/2109.04981)) - cites `cabinetry`, `pyhf`.
 - [Eur. Phys. J. C 82, 46 (2022)](https://doi.org/10.1140/epjc/s10052-022-10012-w) ([arXiv:2109.08159 [hep-ph]](https://arxiv.org/abs/2109.08159)) - cites `pyjet`.
@@ -71,10 +72,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538) - cites the Scikit-HEP project.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870) - cites `pyhf`.
-- [arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932) - cites the Scikit-HEP project.
 - [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.
 - [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621) - cites `scikit-hep`, `uproot3`.
@@ -86,6 +87,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - cites `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
 - [arXiv:1801.06075 [astro-ph.HE]](https://arxiv.org/abs/1801.06075) - cites `iminuit`.
+
+### Computational Physics
+
+- [2209.14984 [physics.comp-ph]](https://arxiv.org/abs/2209.14984) - cites `awkward-array`, `Hist`, `mplhep`, Scikit-HEP project.
 
 ### Computer Science, Machine Learning
 

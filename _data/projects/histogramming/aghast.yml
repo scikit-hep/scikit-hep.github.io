@@ -4,6 +4,7 @@ description: Convert between histogram representations
 url: https://github.com/scikit-hep/aghast
 # docs: https://aghast.readthedocs.io/
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url
 badges:
   pypi: aghast

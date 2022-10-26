@@ -29,10 +29,11 @@ Tools and libraries used to calculate, read, and visualize coverage reports:
 `pytest` allows users to pass the `--cov` option to automatically invoke `pytest-cov`, which then generates a `.coverage` file with the calculated coverage value. The value of `--cov` option should be set to the name of your package. For example, run the following command to run tests to generate a `.coverage` file for the vector package -
 
 ```
-python -m pytest -ra --cov=vector tests/
+python -m pytest -ra --cov=vector --cov-branch tests/
 ```
 
 `--cov` option will also print a minimal coverage report in the terminal itself! See the [docs](https://pytest-cov.readthedocs.io/en/latest/) for more options.
+The `--cov-branch` option will enable [branch coverage](https://linearb.io/blog/what-is-branch-coverage/).
 
 ### Calculating code coverage in your workflows
 

@@ -8,7 +8,7 @@ parent: Packages
 
 Project and package QR codes are made available for presentations, see the list below.
 
-<div markdown="1" class="text-center">
+<div class="text-center">
 {% for image in site.static_files %}
     {% if image.path contains 'images/projqrcode' %}
         <a href="{{ site.baseurl }}{{ image.path }}">

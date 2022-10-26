@@ -429,7 +429,7 @@ important parts (like Python classifiers) are in sync. This tool,
   rev: "v2.0.0"
   hooks:
     - id: setup-cfg-fmt
-      args: [--include-version-classifiers, --max-py-version=3.10]
+      args: [--include-version-classifiers, --max-py-version=3.11]
 ```
 
 Make sure you list the highest version of Python you are testing with here.

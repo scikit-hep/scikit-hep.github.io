@@ -176,7 +176,7 @@ special methods, like `Iterable`, `Iterator`, etc.
 
 Static typing has some great features worth checking out:
 
-- Unions (New syntax coming in Python 3.10)
+- Unions (New syntax in Python 3.10)
 - Generic Types (New syntax in Python 3.9)
 - Literals
 - TypedDict

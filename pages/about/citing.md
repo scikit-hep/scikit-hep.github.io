@@ -7,7 +7,7 @@ parent: About
 custom_title: Citing Scikit-HEP or individual packages
 ---
 
-We appreciate if you consider to acknowledge the Scikit-HEP project in case it has made or is having an impact on your work or research.
+We appreciate if you consider to acknowledge the Scikit-HEP project in case it has made, or is having, an impact on your work or research.
 We suggest the following citation for the project as a whole (in BibTeX format):
 
 ```BibTeX
@@ -27,5 +27,6 @@ We suggest the following citation for the project as a whole (in BibTeX format):
 ```
 
 Kindly consider citing any specific package if that seems appropriate.
-All package GitHub repositories contain at the very least a Zenodo badge.
+Most package GitHub repositories contain at the very least a Zenodo badge,
+and many exhibit a *Cite this repository* item in the menu, defined via a `CITATION.cff` citation file.
 Some may also have a citation page, as for example <https://github.com/scikit-hep/iminuit/blob/develop/CITATION.rst>.

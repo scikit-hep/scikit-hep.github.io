@@ -216,7 +216,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v0.990"
+  rev: "v0.991"
   hooks:
     - id: mypy
       files: src
@@ -501,7 +501,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v14.0.6"
+  rev: "v15.0.4"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

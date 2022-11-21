@@ -28,5 +28,5 @@ We suggest the following citation for the project as a whole (in BibTeX format):
 
 Kindly consider citing any specific package if that seems appropriate.
 Most package GitHub repositories contain at the very least a Zenodo badge,
-and many exhibit a *Cite this repository* item in the menu, defined via a `CITATION.cff` citation file.
+and many exhibit a _Cite this repository_ item in the menu, defined via a `CITATION.cff` citation file.
 Some may also have a citation page, as for example <https://github.com/scikit-hep/iminuit/blob/develop/CITATION.rst>.

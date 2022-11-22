@@ -20,6 +20,12 @@ or related to, the Scikit-HEP project.
 
 ## Publications
 
+- _Fitting the BumpHunter test statistic distribution and global p-value estimation_,
+  L. Vaslin, S. Calvet, V. Barra, J. Donini,
+  [arXiv:2211.07446 \[hep-ex\]](https://arxiv.org/abs/2211.07446)
+- _pyBumpHunter: A model independent bump hunting tool in Python for High Energy Physics analyses_,
+  L. Vaslin, S. Calvet, V. Barra, J. Donini,
+  [arXiv:2208.14760 \[hep-ex\]](https://arxiv.org/abs/2208.14760)
 - _An array-oriented Python interface for FastJet_,
   Aryan Roy, Jim Pivarski and Chad Freer,
   [arXiv:2202.03911 \[hep-ex\]](https://arxiv.org/abs/2202.03911)

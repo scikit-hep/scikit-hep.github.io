@@ -72,6 +72,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2210.16305 [hep-ph]](https://arxiv.org/abs/2210.16305) - cites the Scikit-HEP project.
 - [arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538) - cites the Scikit-HEP project.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
@@ -99,6 +100,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Data Analysis, Statistics and Probability
 
+- [arXiv:2210.15665 [physics.data-an]](https://arxiv.org/abs/2210.15665) - cites the Scikit-HEP project.
 - [arXiv:2202.02194 [physics.data-an]](https://arxiv.org/abs/2202.02194) - cites Scikit-HEP project and various of its packages.
 - [arXiv:2111.12849 [physics.data-an]](https://arxiv.org/abs/2111.12849) - cites `pyjet`, Scikit-HEP project.
 - [arXiv:1811.01242 [physics.data-an]](https://arxiv.org/abs/1811.01242) - cites `iminuit`.

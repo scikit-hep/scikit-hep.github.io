@@ -94,6 +94,97 @@ or related to, the Scikit-HEP project.
 
 ## Presentations
 
+- **22-23 November 2022:** [Software Citation and Recognition in HEP Workshop](https://indico.cern.ch/event/1211229/):
+
+  - _Scikit-HEP project - On making our work citable_, Eduardo Rodrigues
+    \[[link](https://indico.cern.ch/event/1211229/timetable/?view=standard#23-software-projects-scikit-he)\]
+
+- **25 October 2022:** [ACAT 2022 - 21st International Workshop on Advanced Computing and Analysis Techniques in Physics Research](https://indico.cern.ch/event/1106990/):
+
+  - _Awkward to RDataFrame and back_, Ianna Osborne
+    \[[link](https://indico.cern.ch/event/1106990/contributions/5096930/)\]
+
+- **6 October 2022:** [143rd ROOT Parallelism, Performance and Programming Model Meeting](https://indico.cern.ch/event/1208767/):
+
+  - _Awkward <--> RDataFrame Status_, Ianna Osborne
+    \[[link](https://github.com/ianna/Awkward-RDataFrame/blob/main/Awkward-RDataFrame-status-evaluated.ipynb)\]
+
+- **12-16 September 2022:** [PyHEP 2022 Workshop](https://indico.cern.ch/e/PyHEP2022):
+
+  - _Histograms as Objects: Tools for Efficient Analysis and Interactivity_, Aman Goel, Jay Gohil
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7114511)\]
+  - _Uproot, Awkward Array, hist, Vector: from basics to combinatorics_, Jim Pivarski
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7115788)\]
+  - _iminuit: fitting models to data_, Hans Peter Dembinski
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7127834)\]
+  - _The Particle & DecayLanguage packages_, Eduardo Rodrigues
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7075511)\]
+  - _Constructing HEP vectors and analyzing HEP data using Vector_, Saransh Chopra
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7081003)\]
+  - _pyhepmc: a Pythonic interface to HepMC3_, Hans Peter Dembinski
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7129913)\]
+  - _Awkward RDataFrame Tutorial_, Ianna Osborne
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7081586)\]
+  - _Uproot + Dask_, Kush Kothari
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.7140025)\]
+
+- **6 September 2022:** [ATLAS HDBS Workshop 2022](https://indico.cern.ch/event/1132691/):
+
+  - _pyhf and analysis optimization with automatic differentiation_, Matthew Feickert
+    \[[link](https://indico.cern.ch/event/1132691/contributions/4994710/)\]
+
+- **2 August 2022:** [CAMPFIRE 2022](https://indico.cern.ch/event/1163542/):
+
+  - _Uproot Tutorial_, Mason Proffitt
+    \[[link](https://indico.cern.ch/event/1163542/contributions/4886715/)\]
+
+- **25 July 2022:** [NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting](https://cssi-pi-community.github.io/2022-meeting/):
+
+  - _Awkward Arrays: Accelerating scientific data analysis on irregularly shaped data (poster)_, Jim Pivarski
+    \[[link](https://)\]
+
+- **14 July 2022:** [SciPy 2022](https://www.scipy2022.scipy.org/):
+
+  - _Awkward Packaging: building Scikit-HEP_, Henry Schreiner
+    \[[link](https://www.scipy2022.scipy.org/schedule)\]
+
+- **8 July 2022:** [ICHEP 2022 - International Conference on High Energy Physics](https://agenda.infn.it/event/28874/):
+
+  - _pyhf: a pure-Python statistical fitting library with tensors and automatic differentiation_, Matthew Feickert
+    \[[link](https://agenda.infn.it/event/28874/contributions/169217/)\]
+
+- **28 June 2022:** [Hybrid ATLAS Induction Day + Software Tutorial](https://indico.cern.ch/event/1159574/):
+
+  - _pyhf tutorial_, Alexander Held
+    \[[link](https://indico.cern.ch/event/1159574/contributions/4930681/)\]
+
+- **9 June 2022:** [ATLAS Statistics Forum Meeting](https://indico.cern.ch/event/1166812/):
+
+  - _Introduction to pyhf and experience in the context of ATLAS_, Alexander Held
+    \[[link](https://indico.cern.ch/event/1166812/#15-introduction-to-pyhf-and-ex)\]
+
+- **10 May 2022:** [ROOT Users Workshop](https://indico.fnal.gov/event/23628/):
+
+  - _Awkward Array to RDataFrame and back_, Ianna Osborne
+    \[[link](https://indico.fnal.gov/event/23628/contributions/240305/)\]
+
+- **30 April 2022:** [PyCon US 2022 Lightning talks](https://us.pycon.org/2022/):
+
+  - _Scikit-HEP Developer Pages: Guidelines for modern packaging_, Henry Schreiner
+    \[[link](https://www.slideshare.net/HenrySchreiner/pycon-2022-scikithep-developer-pages-guidelines-for-modern-packaging)\]
+
+- **25 April 2022:** [IRIS-HEP AGC Tools 2022 Workshop](https://indico.cern.ch/event/1126109/):
+
+  - _Statistical inference: pyhf and cabinetry_, Matthew Feickert
+    \[[link](https://indico.cern.ch/event/1126109/contributions/4780155/)\]
+  - _Foundation libraries (uproot, awkward, hist, mplhep)_, Mason Proffitt
+    \[[link](https://indico.cern.ch/event/1126109/contributions/4780138/)\]
+
+- **6 April 2022:** [PyHEP WG Topical Meeting](https://indico.cern.ch/event/1140031/):
+
+  - _Awkward Array Updates_, Jim Pivarski
+    \[[link](https://indico.cern.ch/event/1140031/#2-awkward-array-updates)\]
+
 - **15 March 2022:** [ATLAS SUSY Background Forum](https://indico.cern.ch/event/1132859/):
 
   - _Introduction to cabinetry_, Alexander Held

@@ -313,7 +313,7 @@ extend-ignore = E203, E501, E722, B950
 
 ```yaml
 - repo: https://github.com/pycqa/flake8
-  rev: "5.0.4"
+  rev: "6.0.0"
   hooks:
     - id: flake8
       additional_dependencies: [flake8-bugbear]

@@ -175,7 +175,7 @@ upload_all:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.5.1
+    - uses: pypa/gh-action-pypi-publish@v1.6.1
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}

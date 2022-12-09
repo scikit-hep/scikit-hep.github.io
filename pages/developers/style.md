@@ -560,8 +560,8 @@ you started:
 
 ```toml
 [tool.pylint]
-master.py-version = "3.7"
-master.jobs = "0"
+py-version = "3.7"
+jobs = "0"
 reports.output-format = "colorized"
 similarities.ignore-imports = "yes"
 messages_control.enable = ["useless-suppression"]
@@ -583,7 +583,7 @@ def pylint(session: nox.Session) -> None:
     session.run("pylint", "src", *session.posargs)
 ```
 
-And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
+And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`. You can replace `src` with the module name.
 
 [flake8]: https://github.com/pycqa/flake8
 [pycln]: https://hadialqattan.github.io/pycln

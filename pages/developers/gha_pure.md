@@ -142,7 +142,7 @@ publish:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.6.1
+    - uses: pypa/gh-action-pypi-publish@v1.6.4
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
@@ -205,7 +205,7 @@ jobs:
           name: artifact
           path: dist
 
-      - uses: pypa/gh-action-pypi-publish@v1.6.1
+      - uses: pypa/gh-action-pypi-publish@v1.6.4
         with:
           password: ${{ secrets.pypi_password }}
 ```

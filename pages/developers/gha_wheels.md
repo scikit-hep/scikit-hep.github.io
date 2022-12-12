@@ -120,7 +120,7 @@ build_wheels:
         fetch-depth: 0
         submodules: true
 
-    - uses: pypa/cibuildwheel@v2.11.2
+    - uses: pypa/cibuildwheel@v2.11.3
 
     - name: Upload wheels
       uses: actions/upload-artifact@v3
@@ -175,7 +175,7 @@ upload_all:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.6.1
+    - uses: pypa/gh-action-pypi-publish@v1.6.4
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}

@@ -374,7 +374,7 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: "5.10.1"
+  rev: "5.11.3"
   hooks:
     - id: isort
 ```
@@ -501,7 +501,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v15.0.4"
+  rev: "v15.0.6"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]
@@ -516,7 +516,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: "v0.8.0.4"
+  rev: "v0.9.0.2"
   hooks:
     - id: shellcheck
 ```

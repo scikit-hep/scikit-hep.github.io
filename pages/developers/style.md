@@ -374,7 +374,7 @@ following pre-commit config will work:
 
 ```yaml
 - repo: https://github.com/PyCQA/isort
-  rev: "5.11.3"
+  rev: "5.11.4"
   hooks:
     - id: isort
 ```

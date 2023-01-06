@@ -3,6 +3,7 @@ description: Interface between Pythia and NumPy.
 url: https://github.com/scikit-hep/numpythia
 # docs: <url>
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url
 badges:
   pypi: numpythia

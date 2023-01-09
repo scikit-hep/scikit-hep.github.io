@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**January 2023:** Package `numpythia` deprecated and archived.
+
 **December 2022:** Major releases `awkward` 2.0.0 and `uproot` 5.0.0.
 
 **August 2022:** Major metapackage release `scikit-hep` 4.0.0.

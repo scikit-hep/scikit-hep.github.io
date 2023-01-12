@@ -5,7 +5,9 @@ permalink: /news
 nav_order: 2
 ---
 
-**January 2023:** Package `numpythia` deprecated and archived.
+**January 2023:** Package `numpythia` deprecated and archived. Package `pyjet` archived.
+
+**December 2022:** `pyhf` accepted as an affiliated project of [NumFOCUS][].
 
 **December 2022:** Major releases `awkward` 2.0.0 and `uproot` 5.0.0.
 
@@ -183,5 +185,6 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [iris-hep institute]: https://iris-hep.org/
 [km3net experiment]: https://www.km3net.org/
 [lhcb experiment]: http://lhcb.web.cern.ch/
+[numfocus]: https://numfocus.org/
 [pdg]: https://pdg.lbl.gov/
 [online particle physics information]: https://github.com/particledatagroup/hep-resources

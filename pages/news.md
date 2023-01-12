@@ -5,7 +5,11 @@ permalink: /news
 nav_order: 2
 ---
 
+**January 2023:** Package `pyjet` archived.
+
 **January 2023:** Package `numpythia` deprecated and archived.
+
+**December 2022:** `pyhf` accepted as an affiliated project of NumFOCUS.
 
 **December 2022:** Major releases `awkward` 2.0.0 and `uproot` 5.0.0.
 

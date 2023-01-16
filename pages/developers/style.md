@@ -478,7 +478,7 @@ This is a repository with a [collection of pre-commit extra hooks](https://githu
 
 ```yaml
 - repo: https://github.com/pre-commit/pygrep-hooks
-  rev: "v1.9.0"
+  rev: "v1.10.0"
   hooks:
     - id: python-check-blanket-noqa
     - id: python-check-blanket-type-ignore

@@ -14,19 +14,19 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [LHCb Collaboration, JHEP 01 (2022) 166](https://doi.org/10.1007/JHEP01(2022)166) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
-- [JHEP 12 (2021) 133](https://doi.org/10.1007/JHEP12(2021)133) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
+- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
+- [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
 ### Particle Physics Phenomenology
 
-- [JHEP 10 (2022) 092](https://doi.org/10.1007/JHEP10(2022)092) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
+- [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
 - [Int. J. of Modern Physics A](https://doi.org/10.1142/S0217751X23500033) ([arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 106, 052011 (2022)](https://doi.org/10.1103/PhysRevD.106.052011) ([arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 105, 075001 (2021)](https://doi.org/10.1103/PhysRevD.105.075001) ([arXiv:2111.10343 [hep-ph]](https://arxiv.org/abs/2111.10343)) - cites the Scikit-HEP project.
 - [SciPost Phys. 12, 037 (2022)](https://doi.org/10.21468/SciPostPhys.12.1.037) ([arXiv:2109.04981 [hep-ph]](https://arxiv.org/abs/2109.04981)) - cites `cabinetry`, `pyhf`.
 - [Eur. Phys. J. C 82, 46 (2022)](https://doi.org/10.1140/epjc/s10052-022-10012-w) ([arXiv:2109.08159 [hep-ph]](https://arxiv.org/abs/2109.08159)) - cites `pyjet`.
-- [JHEP 11 (2021) 066](https://doi.org/10.1007/JHEP11(2021)066) ([arXiv:2107.06625 [hep-ph]](https://arxiv.org/abs/2107.06625)) - cites `pyjet`.
+- [JHEP 11 (2021) 066](<https://doi.org/10.1007/JHEP11(2021)066>) ([arXiv:2107.06625 [hep-ph]](https://arxiv.org/abs/2107.06625)) - cites `pyjet`.
 - [Rep. Prog. Phys. 84, 124201 (2021)](https://doi.org/10.1088/1361-6633/ac36b9) ([arXiv:2101.08320 [hep-ph]](https://arxiv.org/abs/2101.08320)) - cites `pyjet`.
 - [Phys. Rev. D 104, 113008 (2021)](https://doi.org/10.1103/PhysRevD.104.113008) ([arXiv:2105.08270 [hep-ph]](https://arxiv.org/abs/2105.08270)) - cites `uproot`, Scikit-HEP project.
 - [Phys. Rev. D 104, 035012 (2021)](https://doi.org/10.1103/PhysRevD.104.035012) ([arXiv:2105.07077 [hep-ph]](https://arxiv.org/abs/2105.07077)) - cites `uproot`, Scikit-HEP project.
@@ -35,9 +35,9 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Phys. Rev. D 102, 015032 (2020)](https://doi.org/10.1103/PhysRevD.102.015032) ([arXiv:2006.10630 [hep-ph]](https://arxiv.org/abs/2006.10630)) - cites `pylhe`, Scikit-HEP project.
 - [Phys. Rev. D 102, 015007 (2020)](https://doi.org/10.1103/PhysRevD.102.015007) ([arXiv:2005.03594 [hep-ph]](https://arxiv.org/abs/2005.03594)) - cites `pylhe`, Scikit-HEP project.
 - [Comput. Softw. Big Sci. 4 (2020) 1, 3](https://doi.org/10.1007/s41781-020-0035-2) ([arxiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621)) (2020) - cites `pylhe`, `scikit-hep`, `uproot`, Scikit-HEP project.
-- [JHEP 03 (2020) 094](https://doi.org/10.1007/JHEP03(2020)094) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - cites `iminuit`.
-- [JHEP 03 (2020) 076](https://doi.org/10.1007/JHEP03(2020)076) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
-- [JHEP 11 (2019) 034](https://doi.org/10.1007/JHEP11(2019)034) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.
+- [JHEP 03 (2020) 094](<https://doi.org/10.1007/JHEP03(2020)094>) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - cites `iminuit`.
+- [JHEP 03 (2020) 076](<https://doi.org/10.1007/JHEP03(2020)076>) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
+- [JHEP 11 (2019) 034](<https://doi.org/10.1007/JHEP11(2019)034>) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.
 - [Phys. Rev. Lett. 123 (2019) 14, 141801](https://doi.org/10.1103/PhysRevLett.123.141801) ([arxiv:1811.06465 [hep-ph]](https://arxiv.org/abs/1811.06465)) - cites `pylhe`.
 
 ### Astronomy, Astrophysics and Cosmology

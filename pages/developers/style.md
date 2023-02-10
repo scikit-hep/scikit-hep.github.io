@@ -412,51 +412,6 @@ when clearly better (please always use them, they are faster) if you set
 
 </details>
 
-## Check-Manifest (setuptools only)
-
-[Check-manifest](https://pypi.org/project/check-manifest/) is a fantastic,
-highly recommended tool that verifies you have working SDists. You can install
-it from PyPI. Run it on your repository and see what it says. If you want to ignore
-files (like test folders, example folders, docs, etc) you can add these into your
-`pyproject.toml` file:
-
-```toml
-[tool.check-manifest]
-ignore = [
-    ".travis.yml",
-]
-```
-
-Add the following to your pre-commit config:
-
-```yaml
-- repo: https://github.com/mgedmin/check-manifest
-  rev: "0.49"
-  hooks:
-    - id: check-manifest
-```
-
-If you use `setuptools_scm`, you might want to add:
-
-```yaml
-additional_dependencies: ["setuptools_scm[toml]"]
-```
-
-<details markdown="1"><summary>If this is too slow:</summary>
-
-**Warning**: For a complex package, this may be slow. You can optionally set
-`stages: [manual]` just below the id, and then only run this explicitly
-(probably in CI only). In GHA, you should enable the manual stage, which will
-run all checks:
-
-```yaml
-- uses: pre-commit/action@v3.0.0
-  with:
-    extra_args: --show-diff-on-failure --all-files --hook-stage manual
-```
-
-</details>
-
 ## Type checking
 
 One of the most exciting advancements in Python in the last 10 years has been
@@ -528,6 +483,51 @@ to be ignored occasionally, but can find some signifiant logic errors in your
 typing.
 
 [mypy page]: {{ site.baseurl }}{% link pages/developers/mypy.md %}
+
+## Check-Manifest (setuptools only)
+
+[Check-manifest](https://pypi.org/project/check-manifest/) is a fantastic,
+highly recommended tool that verifies you have working SDists. You can install
+it from PyPI. Run it on your repository and see what it says. If you want to ignore
+files (like test folders, example folders, docs, etc) you can add these into your
+`pyproject.toml` file:
+
+```toml
+[tool.check-manifest]
+ignore = [
+    ".travis.yml",
+]
+```
+
+Add the following to your pre-commit config:
+
+```yaml
+- repo: https://github.com/mgedmin/check-manifest
+  rev: "0.49"
+  hooks:
+    - id: check-manifest
+```
+
+If you use `setuptools_scm`, you might want to add:
+
+```yaml
+additional_dependencies: ["setuptools_scm[toml]"]
+```
+
+<details markdown="1"><summary>If this is too slow:</summary>
+
+**Warning**: For a complex package, this may be slow. You can optionally set
+`stages: [manual]` just below the id, and then only run this explicitly
+(probably in CI only). In GHA, you should enable the manual stage, which will
+run all checks:
+
+```yaml
+- uses: pre-commit/action@v3.0.0
+  with:
+    extra_args: --show-diff-on-failure --all-files --hook-stage manual
+```
+
+</details>
 
 ## Setup.cfg format (setuptools only)
 

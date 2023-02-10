@@ -190,12 +190,21 @@ select = [
   "UP",          # pyupgrade
   "YTT",         # flake8-2020
 ]
-extend-ignore = ["PLR", "E501"]
+extend-ignore = [
+  "PLR",  # Design related pylint codes
+  "E501",  # Line too long
+  "PT004",  # Use underscore for non-returning fixture (use usefixture instead)
+]
 target-version = "py37"
 typing-modules = ["mypackage._compat.typing"]
 src = ["src"]
-unfixable = ["T20", "F841"]
+unfixable = [
+  "T20",  # Removes print statements
+  "F841", # Removes unused variables
+]
 exclude = []
+flake8-unused-arguments.ignore-variadic-names = true
+isort.required-imports = ["from __future__ import annotations"]
 
 
 [tool.ruff.per-file-ignores]
@@ -245,7 +254,7 @@ Here are some good error codes to enable on most (but not all!) projects:
   mistakes with missing commas.
 - `PGH`: Checks for patterns, such as type ignores or noqa's without a specific error code.
 - `PL`: A set of four code groups that cover some (200 or so out of 600 rules) of PyLint.
-- `PT`: Helps tests follow best pytest practices.
+- `PT`: Helps tests follow best pytest practices. A few codes are not ideal, but many are helpful.
 - `PTH`: Want to move to using modern pathlib? This will help. There are some
   cases where performance matters, but otherwise, pathlib is easier to read and
   use.

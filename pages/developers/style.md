@@ -26,7 +26,7 @@ Here is a minimal `.pre-commit-config.yaml` file with some handy options:
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v4.3.0"
+    rev: "v4.4.0"
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -140,7 +140,7 @@ you'll have to keep it up to date manually.
 
 ```yaml
 - repo: https://github.com/asottile/blacken-docs
-  rev: v1.12.1
+  rev: "v1.13.0"
   hooks:
     - id: blacken-docs
       additional_dependencies: [black==22.8.0]
@@ -157,7 +157,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: v0.0.243
+  rev: "v0.0.244"
   hooks:
     - id: ruff
       args: ["--fix"]

@@ -33,7 +33,7 @@ def pc_bump(session: nox.Session) -> None:
 
     for proj, old_version in old_versions.items():
         opts = ["--pre"] if old_version.startswith("0.") else []
-        
+
         new_version = session.run("lastversion", proj, *opts, silent=True).strip()
 
         if old_version.lstrip("v") == new_version:

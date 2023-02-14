@@ -157,7 +157,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.89"
+  rev: "v0.0.246"
   hooks:
     - id: ruff
       args: ["--fix"]

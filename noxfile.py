@@ -32,7 +32,9 @@ def pc_bump(session: nox.Session) -> None:
     old_versions = {m[1]: m[2].strip('"') for m in PC_VERS.finditer(txt)}
 
     for proj, old_version in old_versions.items():
-        new_version = session.run("lastversion", proj, silent=True).strip()
+        opts = ["--pre"] if old_version.startswith("0.") else []
+        
+        new_version = session.run("lastversion", proj, *opts, silent=True).strip()
 
         if old_version.lstrip("v") == new_version:
             continue

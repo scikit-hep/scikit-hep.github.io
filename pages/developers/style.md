@@ -143,7 +143,7 @@ you'll have to keep it up to date manually.
   rev: "v1.13.0"
   hooks:
     - id: blacken-docs
-      additional_dependencies: [black==22.8.0]
+      additional_dependencies: [black==23.1.0]
 ```
 
 </details>
@@ -157,10 +157,10 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.244"
+  rev: "v0.0.246"
   hooks:
     - id: ruff
-      args: ["--fix"]
+      args: ["--fix", "--show-fixes"]
 ```
 
 The `--fix` argument is optional, and currently will not list the rules fixed when it fixes them.
@@ -171,7 +171,7 @@ Ruff is configured in your pyproject.toml. Here's an example:
 [tool.ruff]
 select = [
   "E", "F", "W", # flake8
-  "B",  "B904",  # flake8-bugbear
+  "B", "B904,    # flake8-bugbear
   "I",           # isort
   "ARG",         # flake8-unused-arguments
   "C4",          # flake8-comprehensions
@@ -191,8 +191,8 @@ select = [
   "YTT",         # flake8-2020
 ]
 extend-ignore = [
-  "PLR",  # Design related pylint codes
-  "E501",  # Line too long
+  "PLR",    # Design related pylint codes
+  "E501",   # Line too long
   "PT004",  # Use underscore for non-returning fixture (use usefixture instead)
 ]
 target-version = "py37"
@@ -205,7 +205,6 @@ unfixable = [
 exclude = []
 flake8-unused-arguments.ignore-variadic-names = true
 isort.required-imports = ["from __future__ import annotations"]
-
 
 [tool.ruff.per-file-ignores]
 "tests/**" = ["T20"]

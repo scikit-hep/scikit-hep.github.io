@@ -171,7 +171,7 @@ Ruff is configured in your pyproject.toml. Here's an example:
 [tool.ruff]
 select = [
   "E", "F", "W", # flake8
-  "B", "B904,    # flake8-bugbear
+  "B", "B904",   # flake8-bugbear
   "I",           # isort
   "ARG",         # flake8-unused-arguments
   "C4",          # flake8-comprehensions

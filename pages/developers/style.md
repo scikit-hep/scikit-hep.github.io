@@ -150,14 +150,17 @@ you'll have to keep it up to date manually.
 
 ## Ruff
 
-Ruff is a Python code linter and autofixer that replaces many other tools in
+[Ruff][] [(docs)][ruff docs] is a Python code linter and autofixer that replaces many other tools in
 the ecosystem with a ultra-fast (written in Rust), single zero-dependency package.
 All plugins are compiled in, so you can't get new failures from plugins updating without
 updating your pre-commit hook.
 
+[ruff docs]: https://beta.ruff.rs
+[ruff]: https://github.com/charliermarsh/ruff
+
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.248"
+  rev: "v0.0.252"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -165,7 +168,7 @@ updating your pre-commit hook.
 
 The `--fix` argument is optional, and currently will not list the rules fixed when it fixes them.
 
-Ruff is configured in your pyproject.toml. Here's an example:
+Ruff is configured in your `pyproject.toml`. Here's an example:
 
 ```toml
 [tool.ruff]
@@ -178,6 +181,7 @@ select = [
   "EM",          # flake8-errmsg
   "ICN",         # flake8-import-conventions
   "ISC",         # flake8-implicit-str-concat
+  "G",           # flake8-logging-format
   "PGH",         # pygrep-hooks
   "PIE",         # flake8-pie
   "PL",          # pylint
@@ -189,6 +193,9 @@ select = [
   "T20",         # flake8-print
   "UP",          # pyupgrade
   "YTT",         # flake8-2020
+  "EXE",         # flake8-executable
+  "NPY",         # NumPy specific rules
+  "PD",          # pandas-vet
 ]
 extend-ignore = [
   "PLR",    # Design related pylint codes
@@ -210,26 +217,25 @@ isort.required-imports = ["from __future__ import annotations"]
 "tests/**" = ["T20"]
 ```
 
-Ruff [provides dozens of rule
-sets](https://github.com/charliermarsh/ruff#table-of-contents); you can select
-what you want from these. Like Flake8, plugins match by whole letter sequences
-(with the special exception of pylint's "PL" shortcut), then you can also
-include leading or whole error codes. Codes starting with 9 must be selected
-explicitly, with at least the letters followed by a 9. You can also ignore
-certain error codes via `extend-ignore`. You can also set codes per paths to
-ignore in `per-file-ignores`. If you don't like certain auto-fixes, you can
-disable auto-fixing for specific error codes via `unfixable`.
+Ruff [provides dozens of rule sets](https://beta.ruff.rs/docs/rules/); you can
+select what you want from these. Like Flake8, plugins match by whole letter
+sequences (with the special exception of pylint's "PL" shortcut), then you can
+also include leading or whole error codes. Codes starting with 9 must be
+selected explicitly, with at least the letters followed by a 9. You can also
+ignore certain error codes via `extend-ignore`. You can also set codes per
+paths to ignore in `per-file-ignores`. If you don't like certain auto-fixes,
+you can disable auto-fixing for specific error codes via `unfixable`.
 
 There are other configuration options, such as `target-version`, which selects
-the minimum version you want to target (primarily for "UP" codes), the `src`
+the minimum version you want to target (primarily for "UP" and "I"), the `src`
 list which tells it where to look for top level packages (mostly for "I" codes,
 which also have a lot of custom configuration options), `typing-modules`, which
 helps apply typing-specific rules to a re-exported typing module (a common
 practice for unifying typing and `typing_extensions` based on Python version).
 There's also a file `exclude` set, which you can override if you are running
-this entirely from pre-commit (default excludes include "build", so if you
-have a `build` module or file named `build.py`, it would get skipped by
-default without this).
+this entirely from pre-commit (default excludes include "build", so if you have
+a `build` module or file named `build.py`, it would get skipped by default
+without this).
 
 Here are some good error codes to enable on most (but not all!) projects:
 

@@ -95,7 +95,7 @@ function Results(props) {
           <MaterialUI.ListSubheader>{key}</MaterialUI.ListSubheader>
           {results_components}
         </ul>
-      </li>
+      </li>,
     );
   }
 
@@ -114,7 +114,7 @@ async function prepare_pyodide() {
   await pyodide.loadPackage("micropip");
   await pyodide.runPythonAsync(`
         import micropip
-        await micropip.install(["scikit_hep_repo_review==0.4.0"])
+        await micropip.install(["scikit_hep_repo_review==0.5.0"])
     `);
   return pyodide;
 }
@@ -123,7 +123,7 @@ const pyodide_promise = prepare_pyodide();
 
 function MyThemeProvider(props) {
   const prefersDarkMode = MaterialUI.useMediaQuery(
-    "(prefers-color-scheme: dark)"
+    "(prefers-color-scheme: dark)",
   );
 
   const theme = React.useMemo(
@@ -133,7 +133,7 @@ function MyThemeProvider(props) {
           mode: prefersDarkMode ? "dark" : "light",
         },
       }),
-    [prefersDarkMode]
+    [prefersDarkMode],
   );
 
   return (
@@ -161,7 +161,7 @@ class App extends React.Component {
       this.setState({ results: [], msg: DEFAULT_MSG });
       window.history.replaceState(null, "", baseurl);
       alert(
-        `Please enter a repo (${this.state.repo}) and branch (${this.state.branch})`
+        `Please enter a repo (${this.state.repo}) and branch (${this.state.branch})`,
       );
       return;
     }

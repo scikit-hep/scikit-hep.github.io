@@ -140,7 +140,7 @@ you'll have to keep it up to date manually.
 
 ```yaml
 - repo: https://github.com/asottile/blacken-docs
-  rev: "v1.13.0"
+  rev: "1.13.0"
   hooks:
     - id: blacken-docs
       additional_dependencies: [black==23.1.0]
@@ -596,6 +596,10 @@ errors, such as the one below:
       entry: PyBind|Numpy|Cmake|CCache|Github|PyTest
       exclude: .pre-commit-config.yaml
 ```
+
+You can also add the `-w` flag to have it automatically correct errors - this
+is probably not something you want regularly, but is very helpful to quickly
+make corrections if you have a lot of them when first adding the check.
 
 ## PyGrep hooks
 

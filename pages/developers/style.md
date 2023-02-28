@@ -702,7 +702,6 @@ def pylint(session: nox.Session) -> None:
 
 And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`. You can replace `src` with the module name.
 
-
 ## Jupyter notebook support
 
 ### NBQA
@@ -716,7 +715,6 @@ You can adapt most tools to noteobooks using [nbqa](https://github.com/nbQA-dev/
     - id: nbqa-ruff
       additional_dependencies: [ruff==0.0.253]
 ```
-
 
 You can pass extra flags to Ruff via the hook, like `args: ["--extend-ignore=F821,F401"]`.
 
@@ -734,8 +732,6 @@ You also might like the following hook, which cleans Jupyter outputs:
   hooks:
     - id: nbstripout
 ```
-
-
 
 [flake8]: https://github.com/pycqa/flake8
 [pycln]: https://hadialqattan.github.io/pycln

@@ -706,7 +706,7 @@ And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`.
 
 ### NBQA
 
-You can adapt most tools to noteobooks using [nbqa](https://github.com/nbQA-dev/nbQA). The most useful one is probably Ruff:
+You can adapt most tools to notebooks using [nbQA](https://github.com/nbQA-dev/nbQA). The most useful one is probably Ruff:
 
 ```yaml
 - repo: https://github.com/nbQA-dev/nbQA
@@ -720,7 +720,7 @@ You can pass extra flags to Ruff via the hook, like `args: ["--extend-ignore=F82
 
 ### Black
 
-For black, just make sure you use the `id: black-jupyter` hook instead of `id: black`; that will also include notebooks.
+For Black, just make sure you use the `id: black-jupyter` hook instead of `id: black`; that will also include notebooks.
 
 ### Stripping output
 

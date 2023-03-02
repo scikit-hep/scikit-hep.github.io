@@ -117,20 +117,6 @@ a way to make the Blacked code look better by rewriting your code; factor out
 long unreadable portions into a variable, avoid writing matrices as 1D lists,
 etc.
 
-<details markdown="1"><summary>Jupyter notebook support</summary>
-
-If you want Black for Jupyter notebooks _too_, replace `id: black` with `id:black-jupyter` above.
-You also might like the following hook, which cleans Jupyter outputs:
-
-```yaml
-- repo: https://github.com/kynan/nbstripout
-  rev: "0.6.1"
-  hooks:
-    - id: nbstripout
-```
-
-</details>
-
 <details markdown="1"><summary>Documentation / README snippets support</summary>
 
 If you want Black used in your documentation, you can use blacken-docs. This
@@ -715,6 +701,37 @@ def pylint(session: nox.Session) -> None:
 ```
 
 And you can add this to your GitHub Actions using `run: pipx run nox -s pylint`. You can replace `src` with the module name.
+
+## Jupyter notebook support
+
+### NBQA
+
+You can adapt most tools to notebooks using [nbQA](https://github.com/nbQA-dev/nbQA). The most useful one is probably Ruff:
+
+```yaml
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.6.3
+  hooks:
+    - id: nbqa-ruff
+      additional_dependencies: [ruff==0.0.253]
+```
+
+You can pass extra flags to Ruff via the hook, like `args: ["--extend-ignore=F821,F401"]`.
+
+### Black
+
+For Black, just make sure you use the `id: black-jupyter` hook instead of `id: black`; that will also include notebooks.
+
+### Stripping output
+
+You also might like the following hook, which cleans Jupyter outputs:
+
+```yaml
+- repo: https://github.com/kynan/nbstripout
+  rev: "0.6.1"
+  hooks:
+    - id: nbstripout
+```
 
 [flake8]: https://github.com/pycqa/flake8
 [pycln]: https://hadialqattan.github.io/pycln

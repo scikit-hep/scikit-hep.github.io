@@ -91,7 +91,7 @@ Here is the snippet to add Black to your `.pre-commit-config.yml`:
 
 ```yaml
 - repo: https://github.com/psf/black
-  rev: "23.1.0"
+  rev: "23.3.0"
   hooks:
     - id: black
 ```
@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.253"
+  rev: "v0.0.261"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -435,7 +435,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v1.0.1"
+  rev: "v1.2.0"
   hooks:
     - id: mypy
       files: src
@@ -554,7 +554,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: "v2.2.2"
+  rev: "v2.2.4"
   hooks:
     - id: codespell
       args: ["-L", "sur,nd"]
@@ -618,7 +618,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v15.0.7"
+  rev: "v16.0.0"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]
@@ -710,7 +710,7 @@ You can adapt most tools to notebooks using [nbQA](https://github.com/nbQA-dev/n
 
 ```yaml
 - repo: https://github.com/nbQA-dev/nbQA
-  rev: 1.6.3
+  rev: "1.7.0"
   hooks:
     - id: nbqa-ruff
       additional_dependencies: [ruff==0.0.253]

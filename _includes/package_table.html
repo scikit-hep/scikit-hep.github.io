@@ -13,9 +13,11 @@ project.deprecated -%} {%- assign classes = classes | append: " deprecated" -%}
   <div class="nameorlogo">
     {%- if project.projlogo -%}
     <a href="{{project.url}}" class="logo">
-      <img style="{{ project.projlogo-style | default: "height:48px;"}}"
-      src="{{site.baseurl}}{{ project.projlogo | link }}" alt="{{project.name}}
-      logo"/>
+      <img
+        style="{{ project.projlogo-style | default: 'height:48px;'}}"
+        src="{{site.baseurl}}{{ project.projlogo | link }}"
+        alt="{{project.name}} logo"
+      />
     </a>
     {%- else -%}
     <a href="{{project.url}}" class="package"

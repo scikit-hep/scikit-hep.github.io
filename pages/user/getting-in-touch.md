@@ -20,6 +20,7 @@ with some channels of broad interest hosted under the
 - [On histogramming](https://gitter.im/HSF/PyHEP-histogramming)
 - [`iminuit`](https://gitter.im/Scikit-HEP/iminuit)
 - [`uproot`](https://gitter.im/Scikit-HEP/uproot)
+- [`zfit`](https://gitter.im/Scikit-HEP/zfit)
 
 It is worth to mention the related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HSF,
 which are of particular interest for general exchanges with the "Python in HEP" community.
@@ -53,6 +54,7 @@ does not immediately provide an answer. The available package tags are:
 - [`pyhf`](https://stackoverflow.com/questions/tagged/pyhf)
 - [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
 - [`zfit`](https://stackoverflow.com/questions/tagged/zfit)
+- [`hepstats`](https://stackoverflow.com/questions/tagged/hepstats)
 
 ## On GitHub
 

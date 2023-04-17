@@ -20,7 +20,7 @@ with some channels of broad interest hosted under the
 - [On histogramming](https://gitter.im/HSF/PyHEP-histogramming)
 - [`iminuit`](https://gitter.im/Scikit-HEP/iminuit)
 - [`uproot`](https://gitter.im/Scikit-HEP/uproot)
-- [`zfit`](https://gitter.im/Scikit-HEP/zfit)
+- [`zfit`](https://gitter.im/zfit/zfit)
 
 It is worth to mention the related rooms [HSF/PyHEP][] and [HSF/PyHEP-newcomers][] from the HSF,
 which are of particular interest for general exchanges with the "Python in HEP" community.

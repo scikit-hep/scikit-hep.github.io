@@ -51,10 +51,10 @@ does not immediately provide an answer. The available package tags are:
 
 - [`awkward-array`](https://stackoverflow.com/questions/tagged/awkward-array)
 - [`boost-histogram`](https://stackoverflow.com/questions/tagged/boost-histogram)
+- [`hepstats`](https://stackoverflow.com/questions/tagged/hepstats)
 - [`pyhf`](https://stackoverflow.com/questions/tagged/pyhf)
 - [`uproot`](https://stackoverflow.com/questions/tagged/uproot)
 - [`zfit`](https://stackoverflow.com/questions/tagged/zfit)
-- [`hepstats`](https://stackoverflow.com/questions/tagged/hepstats)
 
 ## On GitHub
 

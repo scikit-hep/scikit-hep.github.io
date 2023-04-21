@@ -128,6 +128,13 @@ later in the upload action for the release job, as well).
 
 And then, you need a release job:
 
+<div class="skhep-bar d-flex m-2" style="justify-content:center;">
+  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('token')" id='token-btn'>Token</button>
+  <button class="skhep-bar-item btn m-2" onclick="openTab('oidc')" id='oidc-btn'>OpenID Connect</button>
+</div>
+
+<div class="skhep-tab" markdown="1" id="token">
+
 {% raw %}
 
 ```yaml
@@ -135,24 +142,50 @@ publish:
   needs: [dist]
   runs-on: ubuntu-latest
   if: github.event_name == 'release' && github.event.action == 'published'
-
   steps:
     - uses: actions/download-artifact@v3
       with:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.8.5
+    - uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        user: __token__
         password: ${{ secrets.pypi_password }}
 ```
 
 {% endraw %}
 
+</div>
+<div class="skhep-tab" markdown="1" id="oidc" style="display:none;">
+
+{% raw %}
+
+```yaml
+upload_all:
+  needs: [dist]
+  permissions:
+    id-token: write
+  runs-on: ubuntu-latest
+  if: github.event_name == 'release' && github.event.action == 'published'
+  steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: artifact
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@release/v1
+```
+
+{% endraw %}
+
+</div>
+
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
-to go to PyPI, generate a token for your project, and put it into
-`pypi_password` on your repo's secrets page.
+to go to PyPI, generate a token for your user, and put it into `pypi_password`
+on your repo's secrets page. Once you have a project, you can either delete
+your user-scoped token and generate a new project-scoped token, or you can move
+to the OpenID Connect method. You'll just need to tell PyPI which ork, repo,
+workflow, and possibly environment to allow from GitHub.
 
 <details><summary>Complete recipe (click to expand)</summary>
 
@@ -219,3 +252,29 @@ jobs:
 
 [pep 517]: https://www.python.org/dev/peps/pep-0517/
 [pep 518]: https://www.python.org/dev/peps/pep-0518/
+
+<script>
+function openTab(tabName) {
+  var tab = document.getElementsByClassName("skhep-tab");
+  for (const t of tab) {
+    t.style.display = t.id == tabName ? "block" : "none";
+  }
+  var btn = document.getElementsByClassName("skhep-bar-item");
+  for (const b of btn) {
+    if(b.id == tabName.concat("-btn"))
+      b.classList.add("btn-purple");
+    else
+      b.classList.remove("btn-purple");
+  }
+}
+function ready() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tabs = urlParams.getAll("tabs");
+
+  for (const tab of tabs) {
+    openTab(tab);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", ready, false);
+</script>

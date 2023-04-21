@@ -129,34 +129,11 @@ later in the upload action for the release job, as well).
 And then, you need a release job:
 
 <div class="skhep-bar d-flex m-2" style="justify-content:center;">
-  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('token')" id='token-btn'>Token</button>
-  <button class="skhep-bar-item btn m-2" onclick="openTab('oidc')" id='oidc-btn'>OpenID Connect</button>
+  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('oidc')" id='oidc-btn'>OpenID Connect</button>
+  <button class="skhep-bar-item btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
 </div>
 
-<div class="skhep-tab" markdown="1" id="token">
-
-{% raw %}
-
-```yaml
-publish:
-  needs: [dist]
-  runs-on: ubuntu-latest
-  if: github.event_name == 'release' && github.event.action == 'published'
-  steps:
-    - uses: actions/download-artifact@v3
-      with:
-        name: artifact
-        path: dist
-
-    - uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.pypi_password }}
-```
-
-{% endraw %}
-
-</div>
-<div class="skhep-tab" markdown="1" id="oidc" style="display:none;">
+<div class="skhep-tab" markdown="1" id="oidc">
 
 {% raw %}
 
@@ -178,14 +155,41 @@ upload_all:
 
 {% endraw %}
 
+When you make a GitHub release in the web UI, we publish to PyPI. You'll just
+need to tell PyPI which org, repo, workflow, and possibly environment to allow
+from GitHub. If it's the first time you've published a package, go to
+https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/ for
+instructions on preparing PyPI to accept your initial package publish.
+
 </div>
+<div class="skhep-tab" markdown="1" id="token" style="display:none;">
+
+{% raw %}
+
+```yaml
+publish:
+  needs: [dist]
+  runs-on: ubuntu-latest
+  if: github.event_name == 'release' && github.event.action == 'published'
+  steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: artifact
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.pypi_password }}
+```
+
+{% endraw %}
 
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
 to go to PyPI, generate a token for your user, and put it into `pypi_password`
-on your repo's secrets page. Once you have a project, you can either delete
-your user-scoped token and generate a new project-scoped token, or you can move
-to the OpenID Connect method. You'll just need to tell PyPI which ork, repo,
-workflow, and possibly environment to allow from GitHub.
+on your repo's secrets page. Once you have a project, you should delete
+your user-scoped token and generate a new project-scoped token.
+
+</div>
 
 <details><summary>Complete recipe (click to expand)</summary>
 
@@ -214,6 +218,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
         with:
           fetch-depth: 0
 
@@ -253,28 +258,4 @@ jobs:
 [pep 517]: https://www.python.org/dev/peps/pep-0517/
 [pep 518]: https://www.python.org/dev/peps/pep-0518/
 
-<script>
-function openTab(tabName) {
-  var tab = document.getElementsByClassName("skhep-tab");
-  for (const t of tab) {
-    t.style.display = t.id == tabName ? "block" : "none";
-  }
-  var btn = document.getElementsByClassName("skhep-bar-item");
-  for (const b of btn) {
-    if(b.id == tabName.concat("-btn"))
-      b.classList.add("btn-purple");
-    else
-      b.classList.remove("btn-purple");
-  }
-}
-function ready() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const tabs = urlParams.getAll("tabs");
-
-  for (const tab of tabs) {
-    openTab(tab);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", ready, false);
-</script>
+<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>

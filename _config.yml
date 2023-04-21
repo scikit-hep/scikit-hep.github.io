@@ -12,7 +12,7 @@ github_username: scikit-hep
 # Build settings
 markdown: kramdown
 # Local: theme: "just-the-docs"
-remote_theme: "pmarsceill/just-the-docs"
+remote_theme: "just-the-docs/just-the-docs@v0.4.2"
 plugins:
   - jekyll-feed
 

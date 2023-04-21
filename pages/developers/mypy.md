@@ -213,7 +213,7 @@ def g(x: Union[str, int]) -> None:
 ### Types as strings
 
 If you don't access the types at runtime, or if you use Python 3.10+ only, then
-you can use a much nicer syntax.  The `annotations` future feature causes the
+you can use a much nicer syntax. The `annotations` future feature causes the
 annotations to be stored as strings and not evaluated, which allows you to
 write things that are not yet valid, like `list[int]`!
 

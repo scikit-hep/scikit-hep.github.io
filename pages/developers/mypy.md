@@ -20,10 +20,10 @@ def f(x: int) -> int:
     return x * 5
 ```
 
-This does nothing at runtime, except store the object. And in the upcoming
-Python 3.11 (or 3.7+ with `from __future__ import annotations`), it doesn't
-even store the actual object, just the string you type here, so then anything
-that can pass the Python parser is allowed here.
+This does nothing at runtime, except store the object. If you add `from
+__future__ import annotations`, it doesn't even store the actual object, just
+the string you type here, so then anything that can pass the Python parser is
+allowed here.
 
 It is not useless though! For one, it helps the reader. Knowing the types
 expected really gives you a much better idea of what is going on and what you
@@ -186,9 +186,10 @@ Static typing has some great features worth checking out:
 
 ## Complete example
 
-### Python 3.6+
+### Runtime compatible types
 
-Here's the classic syntax, which you need to use if support 3.6+.
+Here's the classic syntax, which you need to use if you want to access
+the type annotations at runtime and you need to support Python < 3.10:
 
 ```python
 from typing import Union, List
@@ -209,7 +210,12 @@ def g(x: Union[str, int]) -> None:
     # Calling x.lower() is invalid here!
 ```
 
-### Python 3.7+
+### Types as strings
+
+If you don't access the types at runtime, or if you use Python 3.10+ only, then
+you can use a much nicer syntax. The `annotations` future feature causes the
+annotations to be stored as strings and not evaluated, which allows you to
+write things that are not yet valid, like `list[int]`!
 
 ```python
 from __future__ import annotations
@@ -228,9 +234,11 @@ def g(x: str | int) -> None:
 
 Notice that there are no imports from typing! Note that you cannot use the
 "new" syntax in non annotation locations (like unions in `isinstance`) unless
-Python supports it at runtime.
+Python supports it at runtime. And some libraries, like Typer and cattrs, use
+the annotations at runtime.
 
-You can use the above in earlier Python versions if you use strings.
+You can use the above in earlier Python versions if you use strings manually,
+with the same caveats.
 
 ## Final words
 

@@ -129,7 +129,7 @@ later in the upload action for the release job, as well).
 And then, you need a release job:
 
 <div class="skhep-bar d-flex m-2" style="justify-content:center;">
-  <button class="skhep-bar-item oidc-btn btn m-2 btn-purple" onclick="openTab('oidc')">OpenID Connect</button>
+  <button class="skhep-bar-item oidc-btn btn m-2 btn-purple" onclick="openTab('oidc')">Trusted Publishing</button>
   <button class="skhep-bar-item token-btn btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
 </div>
 
@@ -140,6 +140,7 @@ And then, you need a release job:
 ```yaml
 upload_all:
   needs: [dist]
+  environment: pypi
   permissions:
     id-token: write
   runs-on: ubuntu-latest
@@ -156,8 +157,9 @@ upload_all:
 {% endraw %}
 
 When you make a GitHub release in the web UI, we publish to PyPI. You'll just
-need to tell PyPI which org, repo, workflow, and possibly environment to allow
-from GitHub. If it's the first time you've published a package, go to
+need to tell PyPI which org, repo, workflow, and set the `pypi` environment to
+allow pushes from from GitHub. If it's the first time you've published a
+package, go to
 https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/ for
 instructions on preparing PyPI to accept your initial package publish.
 
@@ -235,6 +237,7 @@ jobs:
 
   publish:
     needs: [dist]
+    environment: pypi
     permissions:
       id-token: write
     runs-on: ubuntu-latest

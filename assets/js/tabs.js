@@ -1,11 +1,11 @@
 function openTab(tabName) {
   var tab = document.getElementsByClassName("skhep-tab");
   for (const t of tab) {
-    t.style.display = t.id == tabName ? "block" : "none";
+    t.style.display = t.classList.contains(`${tabName}-tab`) ? "block" : "none";
   }
   var btn = document.getElementsByClassName("skhep-bar-item");
   for (const b of btn) {
-    if (b.id == tabName.concat("-btn")) b.classList.add("btn-purple");
+    if (b.classList.contains(`${tabName}-btn`)) b.classList.add("btn-purple");
     else b.classList.remove("btn-purple");
   }
 }

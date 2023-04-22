@@ -129,11 +129,11 @@ later in the upload action for the release job, as well).
 And then, you need a release job:
 
 <div class="skhep-bar d-flex m-2" style="justify-content:center;">
-  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('oidc')" id='oidc-btn'>OpenID Connect</button>
-  <button class="skhep-bar-item btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
+  <button class="skhep-bar-item oidc-btn btn m-2 btn-purple" onclick="openTab('oidc')">OpenID Connect</button>
+  <button class="skhep-bar-item token-btn btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
 </div>
 
-<div class="skhep-tab" markdown="1" id="oidc">
+<div class="skhep-tab oidc-tab" markdown="1">
 
 {% raw %}
 
@@ -162,7 +162,7 @@ https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/ for
 instructions on preparing PyPI to accept your initial package publish.
 
 </div>
-<div class="skhep-tab" markdown="1" id="token" style="display:none;">
+<div class="skhep-tab token-tab" markdown="1" style="display:none;">
 
 {% raw %}
 
@@ -198,7 +198,63 @@ This can be used on almost any package with a standard
 describes exactly how to build your package, hence all packages build exactly via
 the same interface:
 
-{%- capture "mymarkdown" -%}
+<div class="skhep-tab oidc-tab" markdown="1">
+
+{% raw %}
+
+```yaml
+name: CD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+        with:
+          fetch-depth: 0
+
+      - name: Build SDist and wheel
+        run: pipx run build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/*
+
+      - name: Check metadata
+        run: pipx run twine check dist/*
+
+  publish:
+    needs: [dist]
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@v1.8.5
+```
+
+{% endraw %}
+
+
+</div>
+<div class="skhep-tab token-tab" markdown="1" style="display:none;">
+
 {% raw %}
 
 ```yaml
@@ -249,9 +305,8 @@ jobs:
 ```
 
 {% endraw %}
-{%- endcapture -%}
 
-{{ mymarkdown | markdownify }}
+</div>
 
 </details>
 

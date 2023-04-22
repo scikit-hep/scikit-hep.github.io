@@ -163,11 +163,11 @@ break. If you always need a specific image, you can set that in the
 ## Publishing
 
 <div class="skhep-bar d-flex m-2" style="justify-content:center;">
-  <button class="skhep-bar-item btn m-2 btn-purple" onclick="openTab('oidc')" id='oidc-btn'>OpenID Connect</button>
-  <button class="skhep-bar-item btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
+  <button class="skhep-bar-item oidc-btn btn  m-2 btn-purple" onclick="openTab('oidc')">OpenID Connect</button>
+  <button class="skhep-bar-item token-btn btn m-2" onclick="openTab('token')">Token</button>
 </div>
 
-<div class="skhep-tab" markdown="1" id="oidc">
+<div class="skhep-tab oidc-tab" markdown="1">
 
 {% raw %}
 
@@ -196,7 +196,7 @@ https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/ for
 instructions on preparing PyPI to accept your initial package publish.
 
 </div>
-<div class="skhep-tab" markdown="1" id="token" style="display:none;">
+<div class="skhep-tab token-tab" markdown="1" style="display:none;">
 
 {% raw %}
 

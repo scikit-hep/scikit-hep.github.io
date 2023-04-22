@@ -128,6 +128,43 @@ later in the upload action for the release job, as well).
 
 And then, you need a release job:
 
+<div class="skhep-bar d-flex m-2" style="justify-content:center;">
+  <button class="skhep-bar-item oidc-btn btn m-2 btn-purple" onclick="openTab('oidc')">Trusted Publishing</button>
+  <button class="skhep-bar-item token-btn btn m-2" onclick="openTab('token')" id='token-btn'>Token</button>
+</div>
+
+<div class="skhep-tab oidc-tab" markdown="1">
+
+{% raw %}
+
+```yaml
+upload_all:
+  needs: [dist]
+  environment: pypi
+  permissions:
+    id-token: write
+  runs-on: ubuntu-latest
+  if: github.event_name == 'release' && github.event.action == 'published'
+  steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: artifact
+        path: dist
+
+    - uses: pypa/gh-action-pypi-publish@release/v1
+```
+
+{% endraw %}
+
+When you make a GitHub release in the web UI, we publish to PyPI. You'll just
+need to tell PyPI which org, repo, workflow, and set the `pypi` environment to
+allow pushes from GitHub. If it's the first time you've published a
+package, go to the [PyPI trusted publisher docs] for
+instructions on preparing PyPI to accept your initial package publish.
+
+</div>
+<div class="skhep-tab token-tab" markdown="1" style="display:none;">
+
 {% raw %}
 
 ```yaml
@@ -135,24 +172,25 @@ publish:
   needs: [dist]
   runs-on: ubuntu-latest
   if: github.event_name == 'release' && github.event.action == 'published'
-
   steps:
     - uses: actions/download-artifact@v3
       with:
         name: artifact
         path: dist
 
-    - uses: pypa/gh-action-pypi-publish@v1.8.5
+    - uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        user: __token__
         password: ${{ secrets.pypi_password }}
 ```
 
 {% endraw %}
 
 When you make a GitHub release in the web UI, we publish to PyPI. You'll need
-to go to PyPI, generate a token for your project, and put it into
-`pypi_password` on your repo's secrets page.
+to go to PyPI, generate a token for your user, and put it into `pypi_password`
+on your repo's secrets page. Once you have a project, you should delete
+your user-scoped token and generate a new project-scoped token.
+
+</div>
 
 <details><summary>Complete recipe (click to expand)</summary>
 
@@ -161,7 +199,8 @@ This can be used on almost any package with a standard
 describes exactly how to build your package, hence all packages build exactly via
 the same interface:
 
-{%- capture "mymarkdown" -%}
+<div class="skhep-tab oidc-tab" markdown="1">
+
 {% raw %}
 
 ```yaml
@@ -181,6 +220,62 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+        with:
+          fetch-depth: 0
+
+      - name: Build SDist and wheel
+        run: pipx run build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: dist/*
+
+      - name: Check metadata
+        run: pipx run twine check dist/*
+
+  publish:
+    needs: [dist]
+    environment: pypi
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' && github.event.action == 'published'
+
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: artifact
+          path: dist
+
+      - uses: pypa/gh-action-pypi-publish@v1.8.5
+```
+
+{% endraw %}
+
+</div>
+<div class="skhep-tab token-tab" markdown="1" style="display:none;">
+
+{% raw %}
+
+```yaml
+name: CD
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
         with:
           fetch-depth: 0
 
@@ -211,11 +306,13 @@ jobs:
 ```
 
 {% endraw %}
-{%- endcapture -%}
 
-{{ mymarkdown | markdownify }}
+</div>
 
 </details>
 
 [pep 517]: https://www.python.org/dev/peps/pep-0517/
 [pep 518]: https://www.python.org/dev/peps/pep-0518/
+[PyPI trusted publisher docs]: https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/
+
+<script src="{{ site.baseurl }}/assets/js/tabs.js"></script>

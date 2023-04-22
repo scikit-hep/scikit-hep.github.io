@@ -158,9 +158,8 @@ upload_all:
 
 When you make a GitHub release in the web UI, we publish to PyPI. You'll just
 need to tell PyPI which org, repo, workflow, and set the `pypi` environment to
-allow pushes from from GitHub. If it's the first time you've published a
-package, go to
-https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/ for
+allow pushes from GitHub. If it's the first time you've published a
+package, go to the [PyPI trusted publisher docs] for
 instructions on preparing PyPI to accept your initial package publish.
 
 </div>
@@ -314,5 +313,6 @@ jobs:
 
 [pep 517]: https://www.python.org/dev/peps/pep-0517/
 [pep 518]: https://www.python.org/dev/peps/pep-0518/
+[PyPI trusted publisher docs]: https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/
 
 <script src="{{ site.baseurl }}/assets/js/tabs.js"></script>

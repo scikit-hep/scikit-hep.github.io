@@ -138,7 +138,7 @@ And then, you need a release job:
 {% raw %}
 
 ```yaml
-upload_all:
+publish:
   needs: [dist]
   environment: pypi
   permissions:
@@ -192,7 +192,7 @@ your user-scoped token and generate a new project-scoped token.
 
 </div>
 
-<details><summary>Complete recipe (click to expand)</summary>
+<details markdown="1"><summary>Complete recipe (click to expand)</summary>
 
 This can be used on almost any package with a standard
 `.github/workflows/cd.yml` recipe. This works because `pyproject.toml`

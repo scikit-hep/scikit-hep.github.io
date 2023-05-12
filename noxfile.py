@@ -65,6 +65,8 @@ def gha_bump(session: nox.Session) -> None:
 
     for repo, old_version in old_versions.items():
         print(f"{repo}: {old_version}")
+        if "/" in old_version:
+            continue
         response = urllib.request.urlopen(f"https://api.github.com/repos/{repo}/tags")
         tags_js = json.loads(response.read())
         tags = [

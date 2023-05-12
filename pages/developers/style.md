@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.262"
+  rev: "v0.0.265"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -390,7 +390,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.3.1"
+  rev: "v3.4.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -435,7 +435,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v1.2.0"
+  rev: "v1.3.0"
   hooks:
     - id: mypy
       files: src
@@ -618,7 +618,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v16.0.1"
+  rev: "v16.0.3"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

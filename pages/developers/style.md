@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.267"
+  rev: "v0.0.269"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -618,7 +618,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v16.0.3"
+  rev: "v16.0.4"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

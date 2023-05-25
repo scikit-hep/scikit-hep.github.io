@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**May 2023:** `pyhf` project updates published in the [May 2023 NumFOCUS newsletter][].
+
 **March 2023:** `awkward` accepted as an affiliated project of [NumFOCUS][].
 
 **January 2023:** Package `numpythia` deprecated and archived. Package `pyjet` archived.
@@ -190,3 +192,4 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [numfocus]: https://numfocus.org/
 [pdg]: https://pdg.lbl.gov/
 [online particle physics information]: https://github.com/particledatagroup/hep-resources
+[May 2023 NumFOCUS newsletter]: https://numfocus.salsalabs.org/numfocus__newsletter_may2023

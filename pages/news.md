@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**March 2023:** `awkward` accepted as an affiliated project of [NumFOCUS][].
+
 **January 2023:** Package `numpythia` deprecated and archived. Package `pyjet` archived.
 
 **December 2022:** `pyhf` accepted as an affiliated project of [NumFOCUS][].

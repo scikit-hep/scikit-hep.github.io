@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.269"
+  rev: "v0.0.270"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -266,7 +266,7 @@ stage, it's opt-in instead of automatic.
 
 ```yaml
 - repo: https://github.com/hadialqattan/pycln
-  rev: "v2.1.3"
+  rev: "v2.1.5"
   hooks:
     - id: pycln
       args: [--all]
@@ -537,7 +537,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v2.2.0"
+  rev: "v2.3.0"
   hooks:
     - id: setup-cfg-fmt
       args: [--include-version-classifiers, --max-py-version=3.11]
@@ -633,7 +633,7 @@ If you have shell scripts, you can protect against common mistakes using [shellc
 
 ```yaml
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: "v0.9.0.2"
+  rev: "v0.9.0.5"
   hooks:
     - id: shellcheck
 ```

@@ -20,6 +20,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [SciPost Phys. 14, 009 (2023)](https://doi.org/10.21468/SciPostPhys.14.1.009) ([arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870)) - cites `pyhf`.
 - [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
 - [Int. J. of Modern Physics A](https://doi.org/10.1142/S0217751X23500033) ([arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 106, 052011 (2022)](https://doi.org/10.1103/PhysRevD.106.052011) ([arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932)) - cites the Scikit-HEP project.
@@ -80,7 +81,6 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
-- [arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870) - cites `pyhf`.
 - [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.
 - [arXiv:2111.05868 [hep-ph]](https://arxiv.org/abs/2111.05868) - cites `pylhe`, Scikit-HEP project.
 - [arXiv:1712.05401 [hep-ph]](https://arxiv.org/abs/1712.05401) - cites `iminuit`.

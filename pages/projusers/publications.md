@@ -76,8 +76,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578) - cites the Scikit-HEP project.
 - [arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281) - cites `pylhe`.
-- [arXiv:2210.16305 [hep-ph]](https://arxiv.org/abs/2210.16305) - cites the Scikit-HEP project.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870) - cites `pyhf`.

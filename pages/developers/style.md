@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.270"
+  rev: "v0.0.272"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -346,7 +346,7 @@ Over time, you can end up with extra "noqa" comments that are no longer needed. 
 
 ```yaml
 - repo: https://github.com/asottile/yesqa
-  rev: "v1.4.0"
+  rev: "v1.5.0"
   hooks:
     - id: yesqa
 ```
@@ -390,7 +390,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.4.0"
+  rev: "v3.6.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]

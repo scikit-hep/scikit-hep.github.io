@@ -126,7 +126,7 @@ you'll have to keep it up to date manually.
 
 ```yaml
 - repo: https://github.com/asottile/blacken-docs
-  rev: "1.13.0"
+  rev: "1.14.0"
   hooks:
     - id: blacken-docs
       additional_dependencies: [black==23.1.0]
@@ -390,7 +390,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.6.0"
+  rev: "v3.7.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -554,7 +554,7 @@ spell checkers, this has a list of mistakes it looks for, rather than a list of
 
 ```yaml
 - repo: https://github.com/codespell-project/codespell
-  rev: "v2.2.4"
+  rev: "v2.2.5"
   hooks:
     - id: codespell
       args: ["-L", "sur,nd"]
@@ -618,7 +618,7 @@ following pre-commit config:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-clang-format
-  rev: "v16.0.4"
+  rev: "v16.0.6"
   hooks:
     - id: clang-format
       types_or: [c++, c, cuda]

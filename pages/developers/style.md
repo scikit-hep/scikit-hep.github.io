@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.272"
+  rev: "v0.0.275"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -435,7 +435,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v1.3.0"
+  rev: "v1.4.0"
   hooks:
     - id: mypy
       files: src

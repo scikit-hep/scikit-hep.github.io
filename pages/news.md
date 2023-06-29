@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**June 2023:** Developer pages, [`cookie`][], and [`repo-review`][] generalized and accepted into [scientific-python][].
+
 **May 2023:** `pyhf` project updates published in the [May 2023 NumFOCUS newsletter][].
 
 **March 2023:** `awkward` accepted as an affiliated project of [NumFOCUS][].
@@ -200,3 +202,6 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [online particle physics information]: https://github.com/particledatagroup/hep-resources
 [May 2023 NumFOCUS newsletter]: https://numfocus.salsalabs.org/numfocus__newsletter_may2023
 [Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html
+[scientific-python]: https://learn.scientific-python.org/development
+[`cookie`]: https://github.com/scientific-python/cookie
+[`repo-review]: https://repo-review.readthedocs.io

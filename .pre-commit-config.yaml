@@ -39,7 +39,6 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, markdown, html, css, scss, javascript, json]
-        exclude: assets/js/webapp\.js
 
   - repo: https://github.com/asottile/blacken-docs
     rev: 1.14.0

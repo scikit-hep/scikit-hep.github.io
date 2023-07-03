@@ -390,7 +390,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.7.0"
+  rev: "v3.8.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -435,7 +435,7 @@ The MyPy addition for pre-commit:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: "v1.4.0"
+  rev: "v1.4.1"
   hooks:
     - id: mypy
       files: src
@@ -537,7 +537,7 @@ important parts (like Python classifiers) are in sync. This tool,
 
 ```yaml
 - repo: https://github.com/asottile/setup-cfg-fmt
-  rev: "v2.3.0"
+  rev: "v2.4.0"
   hooks:
     - id: setup-cfg-fmt
       args: [--include-version-classifiers, --max-py-version=3.11]

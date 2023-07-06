@@ -17,6 +17,9 @@ nav_order: 2
 
 **August 2022:** Major metapackage release `scikit-hep` 4.0.0.
 
+**July 2022:** Scikit-HEP packages being taught in the "Python for Analysis" training events
+of the HEP Software Foundation (HSF) [Training Working Group][].
+
 **May 2022:** Package `repo-review` created in Scikit-HEP.
 
 **May 2022:** Package `awkward-1.0` renamed to `awkward`.
@@ -36,6 +39,9 @@ nav_order: 2
 **September 2021:** Release `Particle` 0.16.0, 2021 PDG data table is default.
 
 **September 2021:** Package `pyjet` marked as deprecated, superseded by Scikit-HEP's `fastjet`.
+
+**August 2021:** Scikit-HEP packages start to be taught in the "Software Carpentry" type of training events
+of the HEP Software Foundation (HSF) [Training Working Group][].
 
 **June 2021:** First release of `fastjet` to PyPI (version 3.3.4.0rc1).
 
@@ -193,3 +199,4 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [pdg]: https://pdg.lbl.gov/
 [online particle physics information]: https://github.com/particledatagroup/hep-resources
 [May 2023 NumFOCUS newsletter]: https://numfocus.salsalabs.org/numfocus__newsletter_may2023
+[Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html

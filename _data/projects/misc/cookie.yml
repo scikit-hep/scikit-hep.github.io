@@ -1,7 +1,7 @@
 name: cookie
 description: >
   A utility for building a new Python package with multiple backends based on
-  the [Scientific-Python Development Guide](https://learn.scientific-python.org/development/guides/),
+  the [Scientific Python Development Guide](https://learn.scientific-python.org/development/guides/),
   including [sp-repo-review](https://pypi.org/p/sp-repo-review) checks.
 url: https://github.com/scientific-python/cookie
 affilated: true

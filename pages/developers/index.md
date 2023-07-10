@@ -14,7 +14,7 @@ package and want to follow modern best practices in Python.
 If you are here to propose a new package for Scikit-HEP, please read [package
 requirements][guidelines] for a list of minimum Scikit-HEP requirements for
 packages joining the organization. We also have [badge recommendations][badges]
-for your readme, including the Scikit-HEP badge!
+for your README, including the Scikit-HEP badge!
 
 {: .highlight }
 

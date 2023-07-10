@@ -5,7 +5,7 @@ url: https://github.com/scientific-python/repo-review
 docs: https://repo-review.readthedocs.io
 affiliated: true
 longdescription: |
-  This is a framework for building checks designed to check to see if a
+  This is a framework for building checks designed to verify that a
   repository follows guidelines. By itself, it does nothing - it requires at
   least one plugin to be installed.
 

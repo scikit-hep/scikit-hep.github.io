@@ -126,7 +126,7 @@ you'll have to keep it up to date manually.
 
 ```yaml
 - repo: https://github.com/asottile/blacken-docs
-  rev: "1.14.0"
+  rev: "1.15.0"
   hooks:
     - id: blacken-docs
       additional_dependencies: [black==23.1.0]
@@ -146,7 +146,7 @@ updating your pre-commit hook.
 
 ```yaml
 - repo: https://github.com/charliermarsh/ruff-pre-commit
-  rev: "v0.0.275"
+  rev: "v0.0.277"
   hooks:
     - id: ruff
       args: ["--fix", "--show-fixes"]
@@ -390,7 +390,7 @@ when clearly better (please always use them, they are faster) if you set
 
 ```yaml
 - repo: https://github.com/asottile/pyupgrade
-  rev: "v3.8.0"
+  rev: "v3.9.0"
   hooks:
     - id: pyupgrade
       args: ["--py37-plus"]
@@ -645,7 +645,7 @@ file types. An example of usage:
 
 ```yaml
 - repo: https://github.com/pre-commit/mirrors-prettier
-  rev: "v2.7.1"
+  rev: "v3.0.0"
   hooks:
     - id: prettier
       types_or: [yaml, markdown, html, css, scss, javascript, json]

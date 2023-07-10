@@ -12,7 +12,7 @@ github_username: scikit-hep
 # Build settings
 markdown: kramdown
 # Local: theme: "just-the-docs"
-remote_theme: "just-the-docs/just-the-docs"
+remote_theme: "just-the-docs/just-the-docs@v0.5.3"
 plugins:
   - jekyll-feed
 
@@ -47,3 +47,16 @@ gh_edit_view_mode: "tree" # "tree" or "edit"
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+callouts:
+  warning:
+    color: red
+    title: Warning
+  note:
+    color: yellow
+    title: Note
+  important:
+    color: green
+    title: Important
+  highlight:
+    color: blue

@@ -187,7 +187,7 @@ see also the [PDF version](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-online-h
 
 **April 2017:** Package `root_numpy` joined Scikit-HEP.
 
-**November 2016:** Scikit-HEP GitHub organization and <http://scikit-hep.org/> site created.
+**November 2016:** Scikit-HEP GitHub organization and <https://scikit-hep.org/> site created.
 
 **August 2016:** First discussions brainstorming the grand picture of the Scikit-HEP project.
 Eduardo Rodrigues, Jim Pivarski and others.

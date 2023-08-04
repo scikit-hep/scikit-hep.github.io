@@ -141,7 +141,6 @@ or related to, the Scikit-HEP project.
 - **25 July 2022:** [NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting](https://cssi-pi-community.github.io/2022-meeting/):
 
   - _Awkward Arrays: Accelerating scientific data analysis on irregularly shaped data (poster)_, Jim Pivarski
-    \[[link](https://)\]
 
 - **14 July 2022:** [SciPy 2022](https://www.scipy2022.scipy.org/):
 
@@ -504,7 +503,7 @@ or related to, the Scikit-HEP project.
   - _Python in High-Energy Physics_, Hans Dembinski
     \[[PDF]({{ site.baseurl }}{% link assets/resources/dembinski-pygamma19-2019-03-21.pdf %})\]
 
-- **15 October 2018:** [DIANA/HEP](http://www.diana-hep.org/) project
+- **15 October 2018:** [DIANA/HEP](https://www.diana-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/754335/):
 
   - _I/O for uproot_, Pratyush Das
@@ -532,14 +531,14 @@ or related to, the Scikit-HEP project.
   - _Uproot: rapidly moving data from ROOT to NumPy and Pandas_, Jim
     Pivarski
 
-- **23 October 2017:** [DIANA/HEP](http://www.diana-hep.org/) project
+- **23 October 2017:** [DIANA/HEP](https://www.diana-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/664968/), CERN:
 
   - _numpythia & pyjet - interfacing PYTHIA and FastJet with NumPy_,
     Noel Dawe
 
 - **11 September 2017:** project status report,
-  [DIANA/HEP](http://www.diana-hep.org/) project [topical
+  [DIANA/HEP](https://www.diana-hep.org/) project [topical
   meeting](https://indico.cern.ch/event/650630/), CERN:
 
   - _Scikit-HEP project status_, Eduardo Rodrigues
@@ -552,7 +551,7 @@ or related to, the Scikit-HEP project.
     \[[PDF]({{ site.baseurl }}{% link assets/resources/rodrigues-lhcb-2017-04-06.pdf %})\]
 
 - **27 February 2017:** first presentation of the project,
-  [DIANA/HEP](http://www.diana-hep.org/) project [topical
+  [DIANA/HEP](https://www.diana-hep.org/) project [topical
   meeting](https://indico.cern.ch/event/596272/), CERN:
   - _The Scikit-HEP project_, Eduardo Rodrigues
   - _Ostap concepts in Scikit-HEP_, Vanya Belyaev

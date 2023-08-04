@@ -90,7 +90,7 @@ the Standard Model and beyond.
 [![img-coffea]][coffea]
 
 [Coffea][] - a prototype [Analysis
-System](http://iris-hep.org/as.html) incorporating Scikit-HEP packages
+System](https://iris-hep.org/as.html) incorporating Scikit-HEP packages
 to provide a lightweight, scalable, portable, and user-friendly
 interface for columnar analysis of HEP data. Some of the sub-packages of
 Coffea may become Scikit-HEP packages as development continues.

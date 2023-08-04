@@ -28,7 +28,7 @@ search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
   "Scikit-HEP on GitHub":
-    - "//github.com/scikit-hep"
+    - "https://github.com/scikit-hep"
 
 gh_edit_link: true
 gh_edit_link_text: "View source for this page on GitHub."

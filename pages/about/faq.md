@@ -31,9 +31,9 @@ of \"issues\" or files CONTRIBUTING for details on how to get involved.
 
 ## Is there support for PyPy?
 
-It\'s a nice idea. Support for [PyPy](http://pypy.org/) across the various
+It\'s a nice idea. Support for [PyPy](https://pypy.org/) across the various
 packages could be envisaged in the near future but only once the scientific
-stack based on [NumPy](http://www.numpy.org/) supports it. This being
+stack based on [NumPy](https://numpy.org/) supports it. This being
 said, certain packages do support PyPy already.
 
 ## Is there support for GPUs?

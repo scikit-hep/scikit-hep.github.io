@@ -17,7 +17,7 @@ longdescription: |
   system, including setuptools and CMake, without adding any dependencies.
   Unlike [Cython](https://cython.readthedocs.io), there is no new language
   required - you'll just be working in vanilla C++11. Unlike
-  [SWIG](http://swig.org), you can build up your bindings one part at a time,
+  [SWIG](https://swig.org), you can build up your bindings one part at a time,
   adding Pythonizations or custom interfaces. And unlike
   [ROOT](https://root.cern) or
   [cppyy](https://cppyy.readthedocs.io/en/latest/), it creates compiled

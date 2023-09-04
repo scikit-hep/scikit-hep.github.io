@@ -16,6 +16,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
 - [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
+- [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
 ### Particle Physics Phenomenology
@@ -35,7 +36,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Phys. Rev. D 103, 056014 (2021)](https://doi.org/10.1103/PhysRevD.103.056014) ([arXiv:2012.10500 [hep-ph]](https://arxiv.org/abs/2012.10500)) - cites `uproot`, Scikit-HEP project.
 - [Phys. Rev. D 102, 015032 (2020)](https://doi.org/10.1103/PhysRevD.102.015032) ([arXiv:2006.10630 [hep-ph]](https://arxiv.org/abs/2006.10630)) - cites `pylhe`, Scikit-HEP project.
 - [Phys. Rev. D 102, 015007 (2020)](https://doi.org/10.1103/PhysRevD.102.015007) ([arXiv:2005.03594 [hep-ph]](https://arxiv.org/abs/2005.03594)) - cites `pylhe`, Scikit-HEP project.
-- [Comput. Softw. Big Sci. 4 (2020) 1, 3](https://doi.org/10.1007/s41781-020-0035-2) ([arxiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621)) (2020) - cites `pylhe`, `scikit-hep`, `uproot`, Scikit-HEP project.
+- [Comput. Softw. Big Sci. 4, 3 (2020)](https://doi.org/10.1007/s41781-020-0035-2) ([arxiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621)) - cites `pylhe`, `scikit-hep`, `uproot`, Scikit-HEP project.
 - [JHEP 03 (2020) 094](<https://doi.org/10.1007/JHEP03(2020)094>) ([arXiv:2001.11041 [hep-ph]](https://arxiv.org/abs/2001.11041)) - cites `iminuit`.
 - [JHEP 03 (2020) 076](<https://doi.org/10.1007/JHEP03(2020)076>) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 - [JHEP 11 (2019) 034](<https://doi.org/10.1007/JHEP11(2019)034>) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.

@@ -115,6 +115,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
+- [Nathan Simpson(Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
 - [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
 - [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.
 - [Dalila Salamani (Geneva U.), Dec. 2021](https://doi.org/10.13097/archive-ouverte/unige:158540), ATLAS experiment - cites the Scikit-HEP project.

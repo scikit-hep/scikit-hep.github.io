@@ -1,0 +1,5 @@
+name: ragged
+description: Manipulate ragged arrays as NumPy or CuPy arrays.
+url: https://github.com/scikit-hep/ragged
+badges:
+  pypi: ragged

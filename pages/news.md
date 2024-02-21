@@ -206,4 +206,4 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html
 [scientific-python]: https://learn.scientific-python.org/development
 [`cookie`]: https://github.com/scientific-python/cookie
-[`repo-review]: https://repo-review.readthedocs.io
+[`repo-review`]: https://repo-review.readthedocs.io

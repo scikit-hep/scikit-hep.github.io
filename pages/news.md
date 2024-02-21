@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**February 2024:** Packages `hepconvert` and `ragged` joined Scikit-HEP.
+
 **June 2023:** Developer pages, [`cookie`][], and [`repo-review`][] generalized and accepted into [scientific-python][].
 
 **May 2023:** `pyhf` project updates published in the [May 2023 NumFOCUS newsletter][].

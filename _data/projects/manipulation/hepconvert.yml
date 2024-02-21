@@ -1,0 +1,5 @@
+name: hepconvert
+description: Bridge between columnar file formats such as ROOT and Parquet.
+url: https://github.com/scikit-hep/hepconvert
+badges:
+  pypi: hepconvert

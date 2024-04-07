@@ -118,7 +118,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
-- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`,  `iminuit`, `mplhep`, `particle`, `scikit-hep`, `uproot`, `zfit`.
+- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`, `iminuit`, `mplhep`, `particle`, `scikit-hep`, `uproot`, `zfit`.
 - [Nathan Simpson(Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
 - [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
 - [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.

@@ -78,6 +78,9 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
+- [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
+- [arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646) - cites `pylhe`.
 - [arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578) - cites the Scikit-HEP project.
 - [arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
@@ -115,7 +118,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
-- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`,  `iminuit`, `mplhep`, `particle`, `scikit-hep`, `uproot`, `zfit`.
+- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`, `iminuit`, `mplhep`, `particle`, `scikit-hep`, `uproot`, `zfit`.
 - [Nathan Simpson(Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
 - [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
 - [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.

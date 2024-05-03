@@ -54,20 +54,24 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## Conference proceedings
 
-- [PoS EPS-HEP2021 (2022) 792](https://doi.org/10.22323/1.398.0792),
-  [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/) - cites the Scikit-HEP project.
-- [EPJ Web of Conferences 251, 03067 (2021)](https://doi.org/10.1051/epjconf/202125103067),
-  [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/) - cites `awkward`, `boost-histogram`, `mplhep `, `pyhf`, `uproot`.
-- [EPJ Web of Conferences 251, 03002 (2021)](https://doi.org/10.1051/epjconf/202125103002),
-  [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/) - cites `awkward`, `uproot`.
-- [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025),
-  [CHEP 2019 Conference](https://chep2019.org/) - cites `hepstats`.
-- [EPJ Web of Conferences 245, 06016 (2020)](https://doi.org/10.1051/epjconf/202024506016),
-  [CHEP 2019 Conference](https://chep2019.org/) - mentions the Scikit-HEP project.
-- [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/),
+- [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/);
+  [PoS EPS-HEP2021 (2022) 792](https://doi.org/10.22323/1.398.0792) - cites the Scikit-HEP project.
+- [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+  [EPJ Web of Conferences 251, 03068 (2021)](http://doi.org/10.1051/epjconf/202125103068) - cites `awkward`.
+- [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+  [EPJ Web of Conferences 251, 03067 (2021)](https://doi.org/10.1051/epjconf/202125103067) - cites `awkward`, `boost-histogram`, `mplhep `, `pyhf`, `uproot`.
+- [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
+  [EPJ Web of Conferences 251, 03002 (2021)](https://doi.org/10.1051/epjconf/202125103002) - cites `awkward`, `uproot`.
+- [CHEP 2019 Conference](https://chep2019.org/);
+  [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025) - cites `hepstats`.
+- [CHEP 2019 Conference](https://chep2019.org/);
+  [EPJ Web of Conferences 245, 06016 (2020)](https://doi.org/10.1051/epjconf/202024506016) - mentions the Scikit-HEP project.
+- [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/);
   [J. Phys. Conf. Ser. 1525 (2020), 012017](https://doi.org/10.1088/1742-6596/1525/1/012017) - cites the Scikit-HEP project.
-- [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001),
-  [CHEP 2018 Conference](https://chep2018.org/) - cites `root_pandas`.
+- [CHEP 2018 Conference](https://chep2018.org/);
+  [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001) - cites `root_pandas`.
+- [CHEP 2016 Conference](https://chep2016.org/);
+  [J. Phys. Conf. Ser. 898 (2017), 042003](https://doi.org/10.1088/1742-6596/898/4/042003) - cites `root_numpy` and `root_pandas`.
 
 ## General articles
 

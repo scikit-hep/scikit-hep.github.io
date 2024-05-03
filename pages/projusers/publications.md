@@ -14,8 +14,9 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
+- [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
 - [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
-- [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
+- [JHEP 12 (2021) 133](https://doi.org/10.1007/JHEP12(2021)133) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
@@ -42,15 +43,24 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [JHEP 11 (2019) 034](<https://doi.org/10.1007/JHEP11(2019)034>) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.
 - [Phys. Rev. Lett. 123 (2019) 14, 141801](https://doi.org/10.1103/PhysRevLett.123.141801) ([arxiv:1811.06465 [hep-ph]](https://arxiv.org/abs/1811.06465)) - cites `pylhe`.
 
+### Instrumentation and Detectors
+
+- [Eur. Phys. J. C 82, 79 (2022)](https://doi.org/10.1140/epjc/s10052-022-09993-5) ([arXiv:2107.02119 [physics.ins-det]](https://arxiv.org/abs/2107.02119)) - cites `uproot`.
+- [2019 JINST 14 P09013](https://doi.org/10.1088/1748-0221/14/09/P09013) ([arXiv:1903.06568 [stat.CO]](https://arxiv.org/abs/1903.06568)) - cites `uproot`.
+
 ### Astronomy, Astrophysics and Cosmology
 
-- [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
+ [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
 - [JCAP 03 (2020) 068](https://doi.org/10.1088/1475-7516/2020/03/068) ([arXiv:1912.02763 [astro-ph.CO]](https://arxiv.org/abs/1912.02763)) - cites `iminuit`.
 - [Phys. Rev. D 101, 063513 (2020)](https://doi.org/10.1103/PhysRevD.101.063513) ([arXiv:1910.08325 [astro-ph.CO]](https://arxiv.org/abs/1910.08325)) - cites `iminuit`.
 - [Monthly Notices of the Royal Astronomical Society, Volume 497, Issue 4, Oct. 2020, Pages 4407-4415](https://doi.org/10.1093/mnras/staa2310) ([arXiv:1906.11219 [astro-ph.CO]](https://arxiv.org/abs/1906.11219)) - cites `iminuit`.
 - [PoS (ICRC2019) 881](https://pos.sissa.it/358/881/pdf) ([arXiv:1909.08365 [astro-ph.HE]](https://arxiv.org/abs/1909.08365)) - cites `iminuit`.
 - [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - cites `iminuit`.
 - [JCAP 11 (2017) 032](https://doi.org/10.1088/1475-7516/2017/11/032) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `iminuit`.
+
+### Physics in Medicine and Biology
+
+- [2021 Phys. Med. Biol. 66 10TR03](https://doi.org/10.1088/1361-6560/abf276) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `uproot`.
 
 ## Conference proceedings
 
@@ -63,13 +73,17 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
   [EPJ Web of Conferences 251, 03002 (2021)](https://doi.org/10.1051/epjconf/202125103002) - cites `awkward`, `uproot`.
 - [CHEP 2019 Conference](https://chep2019.org/);
+  [EPJ Web of Conferences 245, 07046 (2020)](https://doi.org/10.1051/epjconf/202024507046) - cites `uproot`.
+- [CHEP 2019 Conference](https://chep2019.org/);
   [EPJ Web of Conferences 245, 06025 (2020)](https://doi.org/10.1051/epjconf/202024506025) - cites `hepstats`.
 - [CHEP 2019 Conference](https://chep2019.org/);
   [EPJ Web of Conferences 245, 06016 (2020)](https://doi.org/10.1051/epjconf/202024506016) - mentions the Scikit-HEP project.
+- [CHEP 2019 Conference](https://chep2019.org/);
+  [EPJ Web of Conferences 245, 05014 (2020)](https://doi.org/10.1051/epjconf/202024505014) - cites `uproot`.
 - [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/);
   [J. Phys. Conf. Ser. 1525 (2020), 012017](https://doi.org/10.1088/1742-6596/1525/1/012017) - cites the Scikit-HEP project.
 - [CHEP 2018 Conference](https://chep2018.org/);
-  [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001) - cites `root_pandas`.
+  [EPJ Web of Conferences 214, 02001 (2019)](https://doi.org/10.1051/epjconf/201921402001) - cites `root_pandas` and `uproot`.
 - [CHEP 2016 Conference](https://chep2016.org/);
   [J. Phys. Conf. Ser. 898 (2017), 042003](https://doi.org/10.1088/1742-6596/898/4/042003) - cites `root_numpy` and `root_pandas`.
 
@@ -96,6 +110,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Astronomy, Astrophysics and Cosmology
 
+- [arXiv:2112.01828 [astro-ph.IM]](https://arxiv.org/abs/2112.01828) - cites `uproot`.
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - cites `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
 - [arXiv:1801.06075 [astro-ph.HE]](https://arxiv.org/abs/1801.06075) - cites `iminuit`.

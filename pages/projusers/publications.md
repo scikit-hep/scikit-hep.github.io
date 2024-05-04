@@ -16,7 +16,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
 - [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
-- [JHEP 12 (2021) 133](https://doi.org/10.1007/JHEP12(2021)133) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
+- [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
 
 ### Particle Physics Phenomenology
@@ -58,7 +58,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Astronomy, Astrophysics and Cosmology
 
- [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
+[JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
+
 - [JCAP 03 (2020) 068](https://doi.org/10.1088/1475-7516/2020/03/068) ([arXiv:1912.02763 [astro-ph.CO]](https://arxiv.org/abs/1912.02763)) - cites `iminuit`.
 - [Phys. Rev. D 101, 063513 (2020)](https://doi.org/10.1103/PhysRevD.101.063513) ([arXiv:1910.08325 [astro-ph.CO]](https://arxiv.org/abs/1910.08325)) - cites `iminuit`.
 - [Monthly Notices of the Royal Astronomical Society, Volume 497, Issue 4, Oct. 2020, Pages 4407-4415](https://doi.org/10.1093/mnras/staa2310) ([arXiv:1906.11219 [astro-ph.CO]](https://arxiv.org/abs/1906.11219)) - cites `iminuit`.

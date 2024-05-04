@@ -18,10 +18,12 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
 - [JHEP 12 (2021) 133](https://doi.org/10.1007/JHEP12(2021)133) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
-- [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) - cites `hepstats`, `probfit`.
 
 ### Particle Physics Phenomenology
 
+- [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
+- [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
+- [Phys. Rev. D 108, 035001 (2023)](https://doi.org/10.1103/PhysRevD.108.035001) ([arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281)) - cites `pylhe`.
 - [SciPost Phys. 14, 009 (2023)](https://doi.org/10.21468/SciPostPhys.14.1.009) ([arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870)) - cites `pyhf`.
 - [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
 - [Int. J. of Modern Physics A](https://doi.org/10.1142/S0217751X23500033) ([arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538)) - cites the Scikit-HEP project.
@@ -35,6 +37,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Phys. Rev. D 104, 035012 (2021)](https://doi.org/10.1103/PhysRevD.104.035012) ([arXiv:2105.07077 [hep-ph]](https://arxiv.org/abs/2105.07077)) - cites `uproot`, Scikit-HEP project.
 - [Phys. Rev. D 104, 035014 (2021)](https://doi.org/10.1103/PhysRevD.104.035014) ([arXiv:2010.07941 [hep-ph]](https://arxiv.org/abs/2010.07941)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 103, 056014 (2021)](https://doi.org/10.1103/PhysRevD.103.056014) ([arXiv:2012.10500 [hep-ph]](https://arxiv.org/abs/2012.10500)) - cites `uproot`, Scikit-HEP project.
+- [SciPost Phys. 10, 139 (2021)](https://doi.org/10.21468/SciPostPhys.10.6.139) ([arXiv:2008.06545 [hep-ph]](https://arxiv.org/abs/2008.06545)) - cites `iminuit`, `probfit`.
 - [Phys. Rev. D 102, 015032 (2020)](https://doi.org/10.1103/PhysRevD.102.015032) ([arXiv:2006.10630 [hep-ph]](https://arxiv.org/abs/2006.10630)) - cites `pylhe`, Scikit-HEP project.
 - [Phys. Rev. D 102, 015007 (2020)](https://doi.org/10.1103/PhysRevD.102.015007) ([arXiv:2005.03594 [hep-ph]](https://arxiv.org/abs/2005.03594)) - cites `pylhe`, Scikit-HEP project.
 - [Comput. Softw. Big Sci. 4, 3 (2020)](https://doi.org/10.1007/s41781-020-0035-2) ([arxiv:1907.10621 [hep-ph]](https://arxiv.org/abs/1907.10621)) - cites `pylhe`, `scikit-hep`, `uproot`, Scikit-HEP project.
@@ -42,6 +45,11 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [JHEP 03 (2020) 076](<https://doi.org/10.1007/JHEP03(2020)076>) ([arXiv:1912.09760 [hep-ph]](https://arxiv.org/abs/1912.09760)) - cites `iminuit`.
 - [JHEP 11 (2019) 034](<https://doi.org/10.1007/JHEP11(2019)034>) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.
 - [Phys. Rev. Lett. 123 (2019) 14, 141801](https://doi.org/10.1103/PhysRevLett.123.141801) ([arxiv:1811.06465 [hep-ph]](https://arxiv.org/abs/1811.06465)) - cites `pylhe`.
+
+### Data Analysis, Statistics and Probability
+
+- [J. Phys. G: Nucl. Part. Phys. 49 025001 (2022)](https://doi.org/10.1088/1361-6471/ac3dcd) ([arXiv:2102.04275 [physics.data-an]](https://arxiv.org/abs/2102.04275)) - cites `probfit`.
+- [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) ([arXiv:1910.13429 [physics.data-an]](https://arxiv.org/abs/1910.13429)) - cites `hepstats`, `probfit`.
 
 ### Instrumentation and Detectors
 
@@ -91,16 +99,12 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [arXiv:2207.07476 [hep-ex]](https://arxiv.org/abs/2207.07476) - cites `pyhf`.
 - [arXiv:1706.01420 [hep-ex]](https://arxiv.org/abs/1706.01420) - cites `iminuit`.
 
 ### Particle Physics Phenomenology
 
 - [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
 - [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
-- [arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646) - cites `pylhe`.
-- [arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578) - cites the Scikit-HEP project.
-- [arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.

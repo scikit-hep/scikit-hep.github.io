@@ -75,8 +75,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [A&A 660, A18 (2022)](https://doi.org/10.1051/0004-6361/202142000) ([arXiv:2112.14573 [astro-ph.IM]](https://arxiv.org/abs/2112.14573)) - cites `iminuit`.
 - [Phys. Rev. D 105, 063028 (2022)](https://doi.org/10.1103/PhysRevD.105.063028) ([arXiv:2110.03679 [astro-ph.HE]](https://arxiv.org/abs/2110.03679)) - cites `iminuit`.
 - [Phys. Rev. D 105, 023015 (2022)](https://doi.org/10.1103/PhysRevD.105.023015) ([arXiv:2111.05864 [astro-ph.HE]](https://arxiv.org/abs/2111.05864)) - cites `iminuit`.
-- [Monthly Notices of the Royal Astronomical Society, Volume 509, Issue 3, Jan. 2022, Pages 3904–3923](https://doi.org/10.1093/mnras/stab3252) ([arXiv:2108.03640 [astro-ph.CO]]
-  (https://arxiv.org/abs/2108.03640)) - cites `iminuit`.
+- [Monthly Notices of the Royal Astronomical Society, Volume 509, Issue 3, Jan. 2022, Pages 3904–3923](https://doi.org/10.1093/mnras/stab3252) ([arXiv:2108.03640 [astro-ph.CO]] (https://arxiv.org/abs/2108.03640)) - cites `iminuit`.
 - [Phys. Rev. D 104, 123022 (2021)](https://doi.org/10.1103/PhysRevD.104.123022) ([arXiv:2107.09070 [astro-ph.HE]](https://arxiv.org/abs/2107.09070)) - cites `iminuit`.
 - [A&A 655, A58 (2021)](https://doi.org/10.1051/0004-6361/202141522) ([arXiv:2109.01167 [astro-ph.GA]](https://arxiv.org/abs/2109.01167)) - cites `iminuit`.
 - [JCAP 12 (2021) 007](https://doi.org/10.1088/1475-7516/2021/12/007) ([arXiv:2107.10261 [astro-ph.HE]](https://arxiv.org/abs/2107.10261)) - cites `iminuit`.

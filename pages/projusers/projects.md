@@ -89,11 +89,10 @@ the Standard Model and beyond.
 
 [![img-coffea]][coffea]
 
-[Coffea][] - a prototype [Analysis
+[Coffea][] - an [Analysis
 System](https://iris-hep.org/as.html) incorporating Scikit-HEP packages
-to provide a lightweight, scalable, portable, and user-friendly
-interface for columnar analysis of HEP data. Some of the sub-packages of
-Coffea may become Scikit-HEP packages as development continues.
+providing a lightweight, scalable, portable, and user-friendly
+Column Object Framework For Effective Analysis (COFFEA) for columnar analysis of HEP data.
 
 [coffea]: https://github.com/CoffeaTeam
 
@@ -102,7 +101,7 @@ Coffea may become Scikit-HEP packages as development continues.
 
 [![img-zfit]][zfit]
 
-The [zfit](https://zfit.github.io/zfit/) project - it provides a model
+The [zfit](https://zfit.readthedocs.io/) project - "Scalable pythonic fitting",
 fitting library based on TensorFlow and optimised for simple and direct
 manipulation of probability density functions.
 

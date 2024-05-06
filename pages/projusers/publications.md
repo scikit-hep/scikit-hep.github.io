@@ -15,7 +15,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 ### Experimental Particle Physics
 
 - [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
-- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot3`.
+- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot`.
+- [Phys. Rev. D 104, 112011 (2021)](https://doi.org/10.1103/PhysRevD.104.112011) ([arXiv:2109.01685 [hep-ex]](https://arxiv.org/abs/2109.01685)) - cites `iminuit`.
 - [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
 
@@ -25,13 +26,21 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
 - [Phys. Rev. D 108, 035001 (2023)](https://doi.org/10.1103/PhysRevD.108.035001) ([arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281)) - cites `pylhe`.
 - [SciPost Phys. 14, 009 (2023)](https://doi.org/10.21468/SciPostPhys.14.1.009) ([arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870)) - cites `pyhf`.
+- [Eur. Phys. J. C 82, 326 (2022)](https://doi.org/10.1140/epjc/s10052-022-10231-1) ([arXiv:2104.08921 [hep-ph]](https://arxiv.org/abs/2104.08921)) - cites `iminuit`.
 - [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
 - [Int. J. of Modern Physics A](https://doi.org/10.1142/S0217751X23500033) ([arXiv:2208.09538 [hep-ph]](https://arxiv.org/abs/2208.09538)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 106, 052011 (2022)](https://doi.org/10.1103/PhysRevD.106.052011) ([arXiv:2206.09932 [hep-ph]](https://arxiv.org/abs/2206.09932)) - cites the Scikit-HEP project.
-- [Phys. Rev. D 105, 075001 (2021)](https://doi.org/10.1103/PhysRevD.105.075001) ([arXiv:2111.10343 [hep-ph]](https://arxiv.org/abs/2111.10343)) - cites the Scikit-HEP project.
+- [JHEP 05 (2022) 085](<https://doi.org/10.1007/JHEP05(2022)085>) ([arXiv:2110.02174 [hep-ph]](https://arxiv.org/abs/2110.02174)) - cites `iminuit`.
+- [JHEP 04 (2022) 119](<https://doi.org/10.1007/JHEP04(2022)119>) ([arXiv:2201.01788 [hep-ph]](https://arxiv.org/abs/2201.01788)) - cites `iminuit`.
 - [SciPost Phys. 12, 037 (2022)](https://doi.org/10.21468/SciPostPhys.12.1.037) ([arXiv:2109.04981 [hep-ph]](https://arxiv.org/abs/2109.04981)) - cites `cabinetry`, `pyhf`.
+- [Eur. Phys. J. C 82, 194 (2022)](https://doi.org/10.1140/epjc/s10052-022-10097-3) ([arXiv:2107.07537 [hep-ph]](https://arxiv.org/abs/2107.07537)) - cites `iminuit`.
 - [Eur. Phys. J. C 82, 46 (2022)](https://doi.org/10.1140/epjc/s10052-022-10012-w) ([arXiv:2109.08159 [hep-ph]](https://arxiv.org/abs/2109.08159)) - cites `pyjet`.
+- [Rep. Prog. Phys. 85, 052201 (2022)](https://doi.org/10.1088/1361-6633/ac60ac) ([arXiv:2012.09874 [hep-ph]](https://arxiv.org/abs/2012.09874)) - cites `iminuit`.
+- [Phys. Rev. D 105, 094033 (2022)](https://doi.org/10.1103/PhysRevD.105.094033) ([arXiv:2108.05383 [hep-ph]](https://arxiv.org/abs/2108.05383)) - cites `iminuit`.
+- [Phys. Rev. D 105, 075001 (2021)](https://doi.org/10.1103/PhysRevD.105.075001) ([arXiv:2111.10343 [hep-ph]](https://arxiv.org/abs/2111.10343)) - cites the Scikit-HEP project.
+- [Eur. Phys. J. C 81, 952 (2021)](https://doi.org/10.1140/epjc/s10052-021-09725-1) ([arXiv:2103.13370 [hep-ph]](https://arxiv.org/abs/2103.13370)) - cites `iminuit`.
 - [JHEP 11 (2021) 066](<https://doi.org/10.1007/JHEP11(2021)066>) ([arXiv:2107.06625 [hep-ph]](https://arxiv.org/abs/2107.06625)) - cites `pyjet`.
+- [JHEP 05 (2021) 151](<https://doi.org/10.1007/JHEP05(2021)151>) ([arXiv:2103.03270 [hep-ph]](https://arxiv.org/abs/2103.03270)) - cites `iminuit`.
 - [Rep. Prog. Phys. 84, 124201 (2021)](https://doi.org/10.1088/1361-6633/ac36b9) ([arXiv:2101.08320 [hep-ph]](https://arxiv.org/abs/2101.08320)) - cites `pyjet`.
 - [Phys. Rev. D 104, 113008 (2021)](https://doi.org/10.1103/PhysRevD.104.113008) ([arXiv:2105.08270 [hep-ph]](https://arxiv.org/abs/2105.08270)) - cites `uproot`, Scikit-HEP project.
 - [Phys. Rev. D 104, 035012 (2021)](https://doi.org/10.1103/PhysRevD.104.035012) ([arXiv:2105.07077 [hep-ph]](https://arxiv.org/abs/2105.07077)) - cites `uproot`, Scikit-HEP project.
@@ -46,9 +55,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [JHEP 11 (2019) 034](<https://doi.org/10.1007/JHEP11(2019)034>) ([arXiv:1908.06980 [hep-ph]](https://arxiv.org/abs/1908.06980)) - cites `pylhe`, `uproot`, Scikit-HEP project.
 - [Phys. Rev. Lett. 123 (2019) 14, 141801](https://doi.org/10.1103/PhysRevLett.123.141801) ([arxiv:1811.06465 [hep-ph]](https://arxiv.org/abs/1811.06465)) - cites `pylhe`.
 
+### Experimental Nuclear Physics
+- [J. Phys. G: Nucl. Part. Phys. 49 015104 (2022)](https://doi.org/10.1088/1361-6471/ac3631) ([arXiv:2106.16243 [nucl-ex]](https://arxiv.org/abs/2106.16243)) - cites `iminuit`.
+
 ### Data Analysis, Statistics and Probability
 
 - [J. Phys. G: Nucl. Part. Phys. 49 025001 (2022)](https://doi.org/10.1088/1361-6471/ac3dcd) ([arXiv:2102.04275 [physics.data-an]](https://arxiv.org/abs/2102.04275)) - cites `probfit`.
+- [2021 JINST 16 P06016](https://doi.org/10.1088/1748-0221/16/06/P06016) ([arXiv:1902.01452 [physics.data-an]](https://arxiv.org/abs/1902.01452)) - cites `iminuit`.
 - [SoftwareX 11, 100508 (2020)](https://doi.org/10.1016/j.softx.2020.100508) ([arXiv:1910.13429 [physics.data-an]](https://arxiv.org/abs/1910.13429)) - cites `hepstats`, `probfit`.
 
 ### Instrumentation and Detectors
@@ -58,8 +71,21 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Astronomy, Astrophysics and Cosmology
 
-[JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
-
+- [A&A 660, A18 (2022)](https://doi.org/10.1051/0004-6361/202142000) ([arXiv:2112.14573 [astro-ph.IM]](https://arxiv.org/abs/2112.14573)) - cites `iminuit`.
+- [Phys. Rev. D 105, 063028 (2022)](https://doi.org/10.1103/PhysRevD.105.063028) ([arXiv:2110.03679 [astro-ph.HE]](https://arxiv.org/abs/2110.03679)) - cites `iminuit`.
+- [Phys. Rev. D 105, 023015 (2022)](https://doi.org/10.1103/PhysRevD.105.023015) ([arXiv:2111.05864 [astro-ph.HE]](https://arxiv.org/abs/2111.05864)) - cites `iminuit`.
+- [Monthly Notices of the Royal Astronomical Society, Volume 509, Issue 3, Jan. 2022, Pages 3904–3923](https://doi.org/10.1093/mnras/stab3252) ([arXiv:2108.03640 [astro-ph.CO]]
+(https://arxiv.org/abs/2108.03640)) - cites `iminuit`.
+- [Phys. Rev. D 104, 123022 (2021)](https://doi.org/10.1103/PhysRevD.104.123022) ([arXiv:2107.09070 [astro-ph.HE]](https://arxiv.org/abs/2107.09070)) - cites `iminuit`.
+- [A&A 655, A58 (2021)](https://doi.org/10.1051/0004-6361/202141522) ([arXiv:2109.01167 [astro-ph.GA]](https://arxiv.org/abs/2109.01167)) - cites `iminuit`.
+- [JCAP 12 (2021) 007](https://doi.org/10.1088/1475-7516/2021/12/007) ([arXiv:2107.10261 [astro-ph.HE]](https://arxiv.org/abs/2107.10261)) - cites `iminuit`.
+- [The Astrophysical Journal 923 265 (2021)](https://doi.org/10.3847/1538-4357/ac30d8) ([arXiv:2104.07795 [astro-ph.CO]](https://arxiv.org/abs/2104.07795)) - cites `iminuit`.
+- [The Astrophysical Journal 920 1 (2021)](https://doi.org/10.3847/1538-4357/ac19ae) ([arXiv:2108.00363 [astro-ph.HE]](https://arxiv.org/abs/2108.00363)) - cites `iminuit`.
+- [The Astrophysical Journal 918 86 (2021)](https://doi.org/10.3847/1538-4357/abfa9b) ([arXiv:2006.00909 [astro-ph.IM]](https://arxiv.org/abs/2006.00909)) - cites `iminuit`.
+- [The Astrophysical Journal 918 78 (2021)](https://doi.org/10.3847/1538-4357/ac0d5a) ([arXiv:2104.09196 [astro-ph.HE]](https://arxiv.org/abs/2104.09196)) - cites `iminuit`.
+- [The Astrophysical Journal 915 88 (2021)](https://doi.org/10.3847/1538-4357/ac024b) ([arXiv:2102.03210 [astro-ph.CO]](https://arxiv.org/abs/2102.03210)) - cites `iminuit`.
+- [The Astrophysical Journal 912 46 (2021)](https://doi.org/10.3847/1538-4357/abef05) ([arXiv:2008.09986 [astro-ph.HE]](https://arxiv.org/abs/2008.09986)) - cites `iminuit`.
+- [JCAP 09 (2020) 004](https://doi.org/10.1088/1475-7516/2020/09/004) ([arXiv:2002.01229 [astro-ph.HE]](https://arxiv.org/abs/2002.01229)) - cites `iminuit`.
 - [JCAP 03 (2020) 068](https://doi.org/10.1088/1475-7516/2020/03/068) ([arXiv:1912.02763 [astro-ph.CO]](https://arxiv.org/abs/1912.02763)) - cites `iminuit`.
 - [Phys. Rev. D 101, 063513 (2020)](https://doi.org/10.1103/PhysRevD.101.063513) ([arXiv:1910.08325 [astro-ph.CO]](https://arxiv.org/abs/1910.08325)) - cites `iminuit`.
 - [Monthly Notices of the Royal Astronomical Society, Volume 497, Issue 4, Oct. 2020, Pages 4407-4415](https://doi.org/10.1093/mnras/staa2310) ([arXiv:1906.11219 [astro-ph.CO]](https://arxiv.org/abs/1906.11219)) - cites `iminuit`.
@@ -73,8 +99,14 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## Conference proceedings
 
+- [37th International Cosmic Ray Conference](https://icrc2021.desy.de/);
+  [Proceedings of Science PoS (ICRC2021) 716](https://doi.org/10.22323/1.395.0716) - cites `iminuit`.
+- [International Workshop on Future Linear Colliders (LCWS2021)](https://indico.cern.ch/event/995633/);
+  [arXiv:2105.05718v1 [hep-ex]](https://arxiv.org/abs/2105.05718) - cites `iminuit`.
 - [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/);
   [PoS EPS-HEP2021 (2022) 792](https://doi.org/10.22323/1.398.0792) - cites the Scikit-HEP project.
+- [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/);
+  [PoS EPS-HEP2021 (2022) 137](https://doi.org/10.22323/1.398.0137) - cites `iminuit`.
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
   [EPJ Web of Conferences 251, 03068 (2021)](http://doi.org/10.1051/epjconf/202125103068) - cites `awkward`.
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
@@ -134,6 +166,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [arXiv:2210.15665 [physics.data-an]](https://arxiv.org/abs/2210.15665) - cites the Scikit-HEP project.
 - [arXiv:2202.02194 [physics.data-an]](https://arxiv.org/abs/2202.02194) - cites Scikit-HEP project and various of its packages.
 - [arXiv:2111.12849 [physics.data-an]](https://arxiv.org/abs/2111.12849) - cites `pyjet`, Scikit-HEP project.
+- [arXiv:2110.00294 [stat.AP]](https://arxiv.org/abs/2110.00294) - cites `iminuit`.
 - [arXiv:1811.01242 [physics.data-an]](https://arxiv.org/abs/1811.01242) - cites `iminuit`.
 
 ### Chemical Physics

@@ -39,12 +39,13 @@ or related to, the Scikit-HEP project.
 ## Conference proceedings
 
 - _Bayesian Methodologies with pyhf_,
-  M. Feickert, L. Heinrich2, M. Horstmann,
-  [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023);
-  [EPJ Web of Conferences 295, 06004 (2024)](https://doi.org/10.1051/epjconf/202429506004)
+  M. Feickert, L. Heinrich, M. Horstmann,
+  [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;
+  [EPJ Web of Conferences 295, 06004 (2024)](https://doi.org/10.1051/epjconf/202429506004);
+  [arXiv:2309.17005 \[stat.CO\]](https://arxiv.org/abs/2309.17005)
 - _Awkward Just-In-Time (JIT) Compilation: A Developer’s Experience_,
   I. Osborne, J. Pivarski, I. Ifrim, A. Hollands, H. Schreiner,
-  [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023);
+  [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;
   [EPJ Web of Conferences 295, 06003 (2024)](https://doi.org/10.1051/epjconf/202429506003)
 - _Distributed statistical inference with pyhf enabled through funcX_,
   M. Feickert, L. Heinrich, G. Stark and B. Galewsky,
@@ -57,11 +58,11 @@ or related to, the Scikit-HEP project.
   [arXiv:2102.13516 \[cs.PL\]](https://arxiv.org/abs/2102.13516)
 - _Awkward Array: JSON-like data, NumPy-like idioms_,
   Jim Pivarski, Ianna Osborne, Pratyush Das, Anish Biswas and Peter Elmer,
-  [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
+  [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Online;
   [10.25080/Majora-342d178e-00b](https://doi.org/10.25080/Majora-342d178e-00b)
 - _Boost-histogram: High-Performance Histograms as Objects_,
   Henry Schreiner, Hans Dembinski, Shuo Liu, Jim Pivarski,
-  [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Virtual;
+  [SciPy 2020 Conference](https://www.scipy2020.scipy.org), Online;
   [10.25080/Majora-342d178e-009](https://doi.org/10.25080/Majora-342d178e-009)
 - _Recent developments in histogram libraries_,
   H. Dembinski, J. Pivarski and H. Schreiner,

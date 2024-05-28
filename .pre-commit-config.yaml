@@ -28,7 +28,7 @@ repos:
         exclude: .pre-commit-config.yaml|pages/developers/style.md
 
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.6
+    rev: v2.3.0
     hooks:
       - id: codespell
         exclude: (^Gemfile\.lock|\.svg)$

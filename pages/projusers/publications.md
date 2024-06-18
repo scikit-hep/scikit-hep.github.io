@@ -26,10 +26,11 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [Phys. Rev. D 109, 016010 (2024)](https://doi.org/10.1103/PhysRevD.109.016010) ([arXiv:2309.08604 [hep-ph]](https://arxiv.org/abs/2309.08604)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
-- [Phys. Rev. D 108, 095020 (2023)](https://doi.org/10.1103/PhysRevD.108.095020) ([arXiv:2309.10417 [hep-ph]](https://arxiv.org/abs/2309.10417)) - cites the Scikit-HEP project.
 - [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
 - [Eur. Phys. J. C 84, 363 (2024)](https://doi.org/10.1140/epjc/s10052-024-12726-5) ([arXiv:2309.12793 [hep-ph]](https://arxiv.org/abs/2309.12793)) - cites the Scikit-HEP project.
+- [Phys. Rev. D 108, 095020 (2023)](https://doi.org/10.1103/PhysRevD.108.095020) ([arXiv:2309.10417 [hep-ph]](https://arxiv.org/abs/2309.10417)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 108, 035001 (2023)](https://doi.org/10.1103/PhysRevD.108.035001) ([arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281)) - cites `pylhe`.
+- [SciPost Phys. Core 6, 085 (2023)](https://doi.org/10.21468/SciPostPhysCore.6.4.085) ([arXiv:2212.10493 [hep-ph]](https://arxiv.org/abs/2212.10493)) - cites `pyhepmc`, `pyjet`, Scikit-HEP projec.
 - [SciPost Phys. 14, 009 (2023)](https://doi.org/10.21468/SciPostPhys.14.1.009) ([arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870)) - cites `pyhf`.
 - [Eur. Phys. J. C 82, 326 (2022)](https://doi.org/10.1140/epjc/s10052-022-10231-1) ([arXiv:2104.08921 [hep-ph]](https://arxiv.org/abs/2104.08921)) - cites `iminuit`.
 - [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.
@@ -119,9 +120,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;
   [EPJ Web of Conferences 295, 04006 (2024)](https://doi.org/10.1051/epjconf/202429504006) - cites the Scikit-HEP project.
 - [41st International Conference on High Energy Physics (ICHEP 2022)](http://www.ichep2022.it/), Bologna, Italy;
-  [Proceedings of Science PoS (ICHEP2022) 235](https://doi.org/10.22323/1.414.0235) - cites `awkward`, `boost-histogram`, `cabinetry`, `Hist`, `pyhf`, `uproot`, Scikit-HEP project.
+  [PoS ICHEP2022 (2022) 235](https://doi.org/10.22323/1.414.0235) - cites `awkward`, `boost-histogram`, `cabinetry`, `Hist`, `pyhf`, `uproot`, Scikit-HEP project.
+- [41st International Conference on High Energy Physics (ICHEP 2022)](http://www.ichep2022.it/), Bologna, Italy;
+  [PoS ICHEP2022 (2022) 230](https://doi.org/10.22323/1.414.0230) - cites the Scikit-HEP project.
+- [ACAT 2021 Workshop](https://cern.ch/acat2021);
+  [J. Phys. Conf. Ser. 2438 (2023), 012033](https://doi.org/10.1088/1742-6596/2438/1/012033) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `uproot`, Scikit-HEP project.
 - [37th International Cosmic Ray Conference](https://icrc2021.desy.de/);
-  [Proceedings of Science PoS (ICRC2021) 716](https://doi.org/10.22323/1.395.0716) - cites `iminuit`.
+  [PoS (ICRC2021) 716](https://doi.org/10.22323/1.395.0716) - cites `iminuit`.
 - [International Workshop on Future Linear Colliders (LCWS2021)](https://indico.cern.ch/event/995633/);
   [arXiv:2105.05718v1 [hep-ex]](https://arxiv.org/abs/2105.05718) - cites `iminuit`.
 - [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/);
@@ -153,7 +158,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335) - cites `awkward-array`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
+- [arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335) - cites `awkward`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
+- [arXiv:2302.01317 [hep-ex]](https://arxiv.org/abs/2302.01317) - cites `awkward`, `boost-histogram`, `cabinetry`, `pyhf`, `uproot`, Scikit-HEP project.
+- [arXiv:2212.04889 [hep-ex]](https://arxiv.org/abs/2212.04889) - cites `pyhf`, `uproot`, Scikit-HEP project.
+- [arXiv:2202.02194 [physics.data-an]](https://arxiv.org/abs/2202.02194) - cites `awkward`, `iminuit`, `pyhf`, Scikit-HEP project.
 - [arXiv:1706.01420 [hep-ex]](https://arxiv.org/abs/1706.01420) - cites `iminuit`.
 
 ### Particle Physics Phenomenology

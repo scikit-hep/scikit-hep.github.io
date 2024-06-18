@@ -17,7 +17,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [2024 JINST 19 P05065](https://doi.org/10.1088/1748-0221/19/05/P05065) ([arXiv:2305.10515 [hep-ex]](https://arxiv.org/abs/2305.10515)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 108, L111104 (2023)](https://doi.org/10.1103/PhysRevD.108.L111104) ([arXiv:2306.02830 [hep-ex]](https://arxiv.org/abs/2306.02830)) - cites the Scikit-HEP project.
 - [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
-- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) (([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090))), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot`.
+- [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) ([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090)), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot`.
 - [Phys. Rev. D 104, 112011 (2021)](https://doi.org/10.1103/PhysRevD.104.112011) ([arXiv:2109.01685 [hep-ex]](https://arxiv.org/abs/2109.01685)) - cites `iminuit`.
 - [JHEP 12 (2021) 133](<https://doi.org/10.1007/JHEP12(2021)133>) ([arXiv:2107.2105.13330 [hep-ex]](https://arxiv.org/abs/2105.13330)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 5, 22 (2021)](https://doi.org/10.1007/s41781-021-00069-9) ([arxiv:2103.00659 [hep-ex]](https://arxiv.org/abs/2103.00659)) - cites `uproot`.
@@ -207,13 +207,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
-- [Ethan Lewis Simpson(Glasgow U.), Apr. 2024](https://inspirehep.net/literature/2789867), ATLAS experiment - cites the Scikit-HEP project.
-- [Benjamin Couturier(Ferrara U.), Mar. 2024](https://inspirehep.net/literature/2788933), LHCb experiment - cites the Scikit-HEP project.
+- [Ethan Lewis Simpson (Glasgow U.), Apr. 2024](https://inspirehep.net/literature/2789867), ATLAS experiment - cites the Scikit-HEP project.
+- [Benjamin Couturier (Ferrara U.), Mar. 2024](https://inspirehep.net/literature/2788933), LHCb experiment - cites the Scikit-HEP project.
 - [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`, `iminuit`, `mplhep`, `Particle`, `scikit-hep`, `uproot`, `zfit`.
-- [Sascha Simon Dreyer(Hamburg U.), Dec. 2023](https://inspirehep.net/literature/2767954), Belle-II experiment - cites `hepstats`, Scikit-HEP project.
+- [Sascha Simon Dreyer (Hamburg U.), Dec. 2023](https://inspirehep.net/literature/2767954), Belle-II experiment - cites `hepstats`, Scikit-HEP project.
 - [Davide Zuliani (Padova U.), Sep. 2023](https://inspirehep.net/literature/2766802), LHCb experiment - cites the Scikit-HEP project.
-- [Nathan Simpson(Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
-- [Robin Newhouse(British Columbia U.), Dec. 2022](https://inspirehep.net/literature/2623499), ATLAS experiment - cites the Scikit-HEP project.
+- [Nathan Simpson (Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
+- [Robin Newhouse (British Columbia U.), Dec. 2022](https://inspirehep.net/literature/2623499), ATLAS experiment - cites the Scikit-HEP project.
 - [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
 - [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.
 - [Dalila Salamani (Geneva U.), Dec. 2021](https://doi.org/10.13097/archive-ouverte/unige:158540), ATLAS experiment - cites the Scikit-HEP project.

@@ -30,7 +30,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Eur. Phys. J. C 84, 363 (2024)](https://doi.org/10.1140/epjc/s10052-024-12726-5) ([arXiv:2309.12793 [hep-ph]](https://arxiv.org/abs/2309.12793)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 108, 095020 (2023)](https://doi.org/10.1103/PhysRevD.108.095020) ([arXiv:2309.10417 [hep-ph]](https://arxiv.org/abs/2309.10417)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 108, 035001 (2023)](https://doi.org/10.1103/PhysRevD.108.035001) ([arXiv:2302.08281 [hep-ph]](https://arxiv.org/abs/2302.08281)) - cites `pylhe`.
-- [SciPost Phys. Core 6, 085 (2023)](https://doi.org/10.21468/SciPostPhysCore.6.4.085) ([arXiv:2212.10493 [hep-ph]](https://arxiv.org/abs/2212.10493)) - cites `pyhepmc`, `pyjet`, Scikit-HEP projec.
+- [SciPost Phys. Core 6, 085 (2023)](https://doi.org/10.21468/SciPostPhysCore.6.4.085) ([arXiv:2212.10493 [hep-ph]](https://arxiv.org/abs/2212.10493)) - cites `pyhepmc`, `pyjet`, Scikit-HEP project.
 - [SciPost Phys. 14, 009 (2023)](https://doi.org/10.21468/SciPostPhys.14.1.009) ([arXiv:2206.14870 [hep-ph]](https://arxiv.org/abs/2206.14870)) - cites `pyhf`.
 - [Eur. Phys. J. C 82, 326 (2022)](https://doi.org/10.1140/epjc/s10052-022-10231-1) ([arXiv:2104.08921 [hep-ph]](https://arxiv.org/abs/2104.08921)) - cites `iminuit`.
 - [JHEP 10 (2022) 092](<https://doi.org/10.1007/JHEP10(2022)092>) ([arxiv:2208.10406 [hep-ph]](https://arxiv.org/abs/2208.10406)) - cites `pylhe`.

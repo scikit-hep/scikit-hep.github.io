@@ -1,9 +1,9 @@
 name: vector
 projlogo: /assets/images/projlogo/logo_vector.png
 projlogo-style: height:24px;
-description: Manipulate Lorentz, 3D, and 2D vectors in NumPy, Numba, or Awkward.
+description: Manipulate Lorentz, 3D, and 2D vectors in NumPy, Numba, SymPy, or Awkward.
 url: https://github.com/scikit-hep/vector
 docs: https://vector.readthedocs.io/
 badges:
   pypi: vector
-#  conda-forge: awkward
+  conda-forge: vector

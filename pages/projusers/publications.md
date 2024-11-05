@@ -24,6 +24,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [Phys. Rev. D 110, 035029 (2024)](https://doi.org/10.1103/PhysRevD.110.035029) ([arXiv:2405.07330 [hep-ph]](https://arxiv.org/abs/2405.07330)) - cites the Scikit-HEP project.
+- [JHEP 06 (2024) 163](<https://doi.org/10.1007/JHEP06(2024)163>) ([arxiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 016010 (2024)](https://doi.org/10.1103/PhysRevD.109.016010) ([arXiv:2309.08604 [hep-ph]](https://arxiv.org/abs/2309.08604)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
 - [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
@@ -105,8 +107,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [2021 Phys. Med. Biol. 66 10TR03](https://doi.org/10.1088/1361-6560/abf276) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `uproot`.
 
-## Conference proceedings
+## Conference proceedings and reports
 
+- [PyHEP.dev 2024 Workshop](https://indico.cern.ch/e/PyHEP2024.dev), Aachen, Germany;
+  [arXiv:2410.02112 \[hep-ex\]](https://arxiv.org/abs/2410.02112) - cites the Scikit-HEP project and many of its packages.
 - [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;
   [EPJ Web of Conferences 295, 08017 (2024)](https://doi.org/10.1051/epjconf/202429508017);
   [arXiv:2309.14571 \[hep-ex\]](https://arxiv.org/abs/2309.14571) - cites `pyhf`, Scikit-HEP project.
@@ -166,8 +170,6 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
-- [arXiv:2405.07330 [hep-ph]](https://arxiv.org/abs/2405.07330) - cites the Scikit-HEP project.
-- [arXiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714) - cites the Scikit-HEP project.
 - [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
 - [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.

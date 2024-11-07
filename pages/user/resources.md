@@ -107,7 +107,7 @@ or related to, the Scikit-HEP project.
 
 ## Presentations
 
-- **1-4 July 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
+- **19-25 October 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
 
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
     \[[link](https://indi.to/zTs5b)\]

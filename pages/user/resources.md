@@ -107,6 +107,21 @@ or related to, the Scikit-HEP project.
 
 ## Presentations
 
+- **1-4 July 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
+
+  - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
+    \[[link](https://indi.to/zTs5b)\]
+
+- **1-4 July 2024:** [PyHEP 2024 Workshop](https://indico.cern.ch/event/1384010/):
+
+  - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.12655971)\]
+
+- **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/event/1252095/):
+
+  - _What’s new with Vector? First major release is out!_, Saransh Chopra
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.8430095)\]
+
 - **22-23 November 2022:** [Software Citation and Recognition in HEP Workshop](https://indico.cern.ch/event/1211229/):
 
   - _Scikit-HEP project - On making our work citable_, Eduardo Rodrigues

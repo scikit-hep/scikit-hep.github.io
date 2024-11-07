@@ -117,7 +117,7 @@ or related to, the Scikit-HEP project.
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
     \[[Zenodo link](https://doi.org/10.5281/zenodo.12655971)\]
 
-- **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/event/1252095/):
+- **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/e/PyHEP2023):
 
   - _What’s new with Vector? First major release is out!_, Saransh Chopra
     \[[Zenodo link](https://doi.org/10.5281/zenodo.8430095)\]

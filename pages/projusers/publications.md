@@ -163,6 +163,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 ### Experimental Particle Physics
 
 - [arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335) - cites `awkward`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
+- [arXiv:2404.02100 [hep-ex]](https://arxiv.org/abs/2404.02100) - cites `uproot`.
 - [arXiv:2302.01317 [hep-ex]](https://arxiv.org/abs/2302.01317) - cites `awkward`, `boost-histogram`, `cabinetry`, `pyhf`, `uproot`, Scikit-HEP project.
 - [arXiv:2212.04889 [hep-ex]](https://arxiv.org/abs/2212.04889) - cites `pyhf`, `uproot`, Scikit-HEP project.
 - [arXiv:2202.02194 [physics.data-an]](https://arxiv.org/abs/2202.02194) - cites `awkward`, `iminuit`, `pyhf`, Scikit-HEP project.

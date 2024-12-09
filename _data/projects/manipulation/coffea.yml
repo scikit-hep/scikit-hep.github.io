@@ -1,0 +1,10 @@
+name: coffea
+projlogo: /assets/images/projlogo/logo_coffea.svg
+description: Basic tools and wrappers for enabling not-too-alien syntax when running columnar Collider HEP analysis.
+url: https://github.com/scikit-hep/coffea
+docs: https://coffea-hep.readthedocs.io/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: coffea
+  conda-forge: coffea

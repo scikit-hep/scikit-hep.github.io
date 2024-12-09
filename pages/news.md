@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**December 2024:** Package `coffea` joined Scikit-HEP.
+
 **February 2024:** Packages `hepconvert` and `ragged` joined Scikit-HEP.
 
 **June 2023:** Developer pages, [`cookie`][], and [`repo-review`][] generalized and accepted into [scientific-python][].

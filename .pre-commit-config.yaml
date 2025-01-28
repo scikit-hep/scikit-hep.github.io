@@ -28,11 +28,11 @@ repos:
         exclude: .pre-commit-config.yaml|pages/developers/style.md
 
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.0
     hooks:
       - id: codespell
         exclude: (^Gemfile\.lock|\.svg)$
-        args: ["-L", "hist,sur,nd,theses,ser"]
+        args: ["-L", "hist,sur,nd,theses,ser,HEP,hep"]
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: "v4.0.0-alpha.8"

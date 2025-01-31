@@ -5,7 +5,7 @@ permalink: /news
 nav_order: 2
 ---
 
-**December 2024:** Package `coffea` joined Scikit-HEP.
+**December 2024:** Packages `coffea` and `fsspec-xrootd` joined Scikit-HEP.
 
 **February 2024:** Packages `hepconvert` and `ragged` joined Scikit-HEP.
 

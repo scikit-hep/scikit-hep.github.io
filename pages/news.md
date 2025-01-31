@@ -5,6 +5,8 @@ permalink: /news
 nav_order: 2
 ---
 
+**January 2025:** Package `integration-tests` joined Scikit-HEP.
+
 **December 2024:** Packages `coffea` and `fsspec-xrootd` joined Scikit-HEP.
 
 **February 2024:** Packages `hepconvert` and `ragged` joined Scikit-HEP.

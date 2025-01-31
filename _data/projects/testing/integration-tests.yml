@@ -1,0 +1,3 @@
+name: integration-tests
+description: A suite of GitHub workflows that run nightly to test the HEAD versions of various Scikit-HEP packages.
+url: https://github.com/scikit-hep/integration-tests

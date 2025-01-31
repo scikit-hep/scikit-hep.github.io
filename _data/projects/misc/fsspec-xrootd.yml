@@ -1,0 +1,9 @@
+name: fsspec-xrootd
+description: An XRootD implementation for fsspec
+url: https://github.com/scikit-hep/fsspec-xrootd
+docs: https://scikit-hep.org/fsspec-xrootd/
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: fsspec-xrootd
+  conda-forge: fsspec-xrootd

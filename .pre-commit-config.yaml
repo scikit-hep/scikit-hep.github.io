@@ -32,19 +32,19 @@ repos:
     hooks:
       - id: codespell
         exclude: (^Gemfile\.lock|\.svg)$
-        args: ["-L", "hist,sur,nd,theses,ser,HEP,hep"]
+        args: ["-L", "hist,sur,nd,theses,ser"]
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v4.0.0-alpha.8"
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: "v3.4.2"
     hooks:
       - id: prettier
-        types_or: [yaml, markdown, html, css, scss, javascript, json]
+        types_or: [yaml, markdown, html, css, javascript, json]
 
   - repo: https://github.com/adamchainz/blacken-docs
     rev: 1.19.1
     hooks:
       - id: blacken-docs
-        additional_dependencies: [black==22.8.0]
+        additional_dependencies: [black~=25.0]
 
   - repo: local
     hooks:

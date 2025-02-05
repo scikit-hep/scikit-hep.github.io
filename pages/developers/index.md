@@ -55,8 +55,8 @@ simplify tasks and help new contributors.
 > your repository with the guidelines, runnable right in the guide via
 > WebAssembly! All checks point to a linked badge in the guide.
 
-[guidelines]: {{ site.baseurl }}{% link pages/packages/guidelines.md %}
-[badges]: {{ site.baseurl }}{% link pages/developers/badges.md %}
+[guidelines]: {% link pages/packages/guidelines.md %}
+[badges]: {% link pages/developers/badges.md %}
 [intro]: https://learn.scientific-python.org/development/tutorials/dev-environment/
 [style]: https://learn.scientific-python.org/development/guides/style/
 [coverage]: https://learn.scientific-python.org/development/guides/coverage/

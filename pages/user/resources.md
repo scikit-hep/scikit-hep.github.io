@@ -472,7 +472,7 @@ or related to, the Scikit-HEP project.
 - **18 June 2019:** [LHCb experiment](http://lhcb.cern.ch/) Week, CERN:
 
   - _Particles and decays in the Scikit-HEP project_, Eduardo Rodrigues
-    \[[PDF]({{ site.baseurl }}{% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]
+    \[[PDF]({% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]
 
 - **18 June 2019:** [3rd CMS Machine Learning Workshop](https://indico.cern.ch/event/798721/):
 
@@ -529,7 +529,7 @@ or related to, the Scikit-HEP project.
   Germany:
 
   - _Python in High-Energy Physics_, Hans Dembinski
-    \[[PDF]({{ site.baseurl }}{% link assets/resources/dembinski-pygamma19-2019-03-21.pdf %})\]
+    \[[PDF]({% link assets/resources/dembinski-pygamma19-2019-03-21.pdf %})\]
 
 - **15 October 2018:** [DIANA/HEP](https://www.diana-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/754335/):
@@ -576,7 +576,7 @@ or related to, the Scikit-HEP project.
   Software Week, CERN:
 
   - _The Scikit-HEP project_, Eduardo Rodrigues
-    \[[PDF]({{ site.baseurl }}{% link assets/resources/rodrigues-lhcb-2017-04-06.pdf %})\]
+    \[[PDF]({% link assets/resources/rodrigues-lhcb-2017-04-06.pdf %})\]
 
 - **27 February 2017:** first presentation of the project,
   [DIANA/HEP](https://www.diana-hep.org/) project [topical

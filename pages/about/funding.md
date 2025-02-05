@@ -34,9 +34,9 @@ provide funding for Eduardo Rodrigues (2020-) to work on this project part-time.
 [oac-1450377]: https://nsf.gov/awardsearch/showAward?AWD_ID=1450377
 [oac-1836650]: https://nsf.gov/awardsearch/showAward?AWD_ID=1836650
 
-[img-nsf]: {{ site.baseurl }}{% link /assets/images/funding/nsf-logo-128.png %}
+[img-nsf]: {% link /assets/images/funding/nsf-logo-128.png %}
 {: width="70px"}
-[img-stfc]: {{ site.baseurl }}{% link /assets/images/funding/UKRI_STF_Council-Logo_Horiz-RGB.png %}
+[img-stfc]: {% link /assets/images/funding/UKRI_STF_Council-Logo_Horiz-RGB.png %}
 {: width="140px"}
-[img-liverpool]: {{ site.baseurl }}{% link /assets/images/funding/university-liverpool-logo.png %}
+[img-liverpool]: {% link /assets/images/funding/university-liverpool-logo.png %}
 {: width="140px"}

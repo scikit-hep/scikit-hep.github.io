@@ -19,7 +19,7 @@ of the Scikit-HEP project.
 
 [atlas]: https://atlas.cern/
 
-[img-ATLAS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_atlas.png %}
+[img-ATLAS]: {% link /assets/images/projusers/logo_atlas.png %}
 {: width="140px"}
 
 [![img-belle2]][belleii]
@@ -28,7 +28,7 @@ of the Scikit-HEP project.
 
 [belleii]: https://www.belle2.org/
 
-[img-belle2]: {{ site.baseurl }}{% link /assets/images/projusers/logo_belle2.png %}
+[img-belle2]: {% link /assets/images/projusers/logo_belle2.png %}
 {: width="70px"}
 
 [![img-CMS]][cms]
@@ -37,7 +37,7 @@ of the Scikit-HEP project.
 
 [cms]: https://cms.cern/
 
-[img-CMS]: {{ site.baseurl }}{% link /assets/images/projusers/logo_cms.gif %}
+[img-CMS]: {% link /assets/images/projusers/logo_cms.gif %}
 {: width="70px"}
 
 [![img-KM3NeT]][km3net]
@@ -47,7 +47,7 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 
 [km3net]: https://www.km3net.org/
 
-[img-KM3NeT]: {{ site.baseurl }}{% link /assets/images/projusers/logo_km3net.png %}
+[img-KM3NeT]: {% link /assets/images/projusers/logo_km3net.png %}
 {: width="140px"}
 
 [![img-LHCb]][lhcb]
@@ -56,7 +56,7 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 
 [lhcb]: http://lhcb.web.cern.ch/
 
-[img-LHCb]: {{ site.baseurl }}{% link /assets/images/projusers/logo_lhcb.png %}
+[img-LHCb]: {% link /assets/images/projusers/logo_lhcb.png %}
 {: width="120px"}
 
 ## Computing and software institutes
@@ -66,11 +66,11 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 [IRIS-HEP](https://iris-hep.org/) - the Institute for Research and Innovation in Software for High Energy Physics.
 IRIS-HEP both uses and contributes to Scikit-HEP: several colleagues are the principal developers of,
 or contributors to, several core project packages.
-[Read on funding →]({{site.baseurl}}{% link pages/about/funding.md %} )
+[Read on funding →]({% link pages/about/funding.md %} )
 
 [iris-hep]: https://iris-hep.org/
 
-[img-iris-hep]: {{ site.baseurl }}{% link /assets/images/projusers/logo_iris-hep.png %}
+[img-iris-hep]: {% link /assets/images/projusers/logo_iris-hep.png %}
 {: width="120px"}
 
 ## Phenomenology projects
@@ -82,7 +82,7 @@ the Standard Model and beyond.
 
 [flavio]: https://flav-io.github.io/
 
-[img-flavio]: {{ site.baseurl }}{% link /assets/images/projusers/logo_flavio.png %}
+[img-flavio]: {% link /assets/images/projusers/logo_flavio.png %}
 {: width="70px"}
 
 ## Software projects
@@ -96,7 +96,7 @@ Column Object Framework For Effective Analysis (COFFEA) for columnar analysis of
 
 [coffea]: https://github.com/CoffeaTeam
 
-[img-coffea]: {{ site.baseurl }}{% link /assets/images/projusers/logo_coffea.jpg %}
+[img-coffea]: {% link /assets/images/projusers/logo_coffea.jpg %}
 {: width="70px"}
 
 [![img-zfit]][zfit]
@@ -107,5 +107,5 @@ manipulation of probability density functions.
 
 [zfit]: https://github.com/zfit
 
-[img-zfit]: {{ site.baseurl }}{% link /assets/images/projlogo/logo_zfit.png %}
+[img-zfit]: {% link /assets/images/projlogo/logo_zfit.png %}
 {: width="70px"}

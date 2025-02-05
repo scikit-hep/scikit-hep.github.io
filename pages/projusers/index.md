@@ -14,5 +14,5 @@ of the Scikit-HEP project:
 - Peer reviewed journal papers.
 - General articles.
 
-[projects]: {{ site.baseurl }}{% link pages/projusers/projects.md %}
-[publications]: {{ site.baseurl }}{% link pages/projusers/publications.md %}
+[projects]: {% link pages/projusers/projects.md %}
+[publications]: {% link pages/projusers/publications.md %}

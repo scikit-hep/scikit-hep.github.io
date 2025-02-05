@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -10,7 +10,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll', '~> 3.9'
+gem 'jekyll'
 
 # This is needed for GitHub Flavored Markdown
 gem 'kramdown-parser-gfm'
@@ -23,9 +23,9 @@ gem 'rake'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-feed'
+  gem 'jekyll-redirect-from'
   gem 'jekyll-remote-theme'
   gem 'jekyll-seo-tag'
-  gem 'jekyll-redirect-from'
 end
 
 # Checkers and such
@@ -37,6 +37,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Performance-booster for watching directories on Windows
-gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+gem 'wdm' if Gem.win_platform?
 
-gem "webrick", "~> 1.8"
+gem 'webrick'

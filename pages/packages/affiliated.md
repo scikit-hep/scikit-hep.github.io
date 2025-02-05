@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Affiliated packages
-permalink: /affiliated
+permalink: /affiliated/
 nav_order: 1
 parent: Packages
 title: Affiliated projects and packages

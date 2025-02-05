@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "QR codes"
-permalink: /packages/qr_codes
+permalink: /packages/qr_codes/
 nav_order: 200
 parent: Packages
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Developer information
-permalink: /developer
+permalink: /developer/
 nav_order: 30
 has_children: true
 ---

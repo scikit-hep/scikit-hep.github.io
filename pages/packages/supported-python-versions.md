@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python version policy
-permalink: /supported-python-versions
+permalink: /supported-python-versions/
 parent: Packages
 nav_order: 10
 ---

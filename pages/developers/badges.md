@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Badges
-permalink: /badges
+permalink: /badges/
 nav_order: 1
 parent: Developer information
 ---

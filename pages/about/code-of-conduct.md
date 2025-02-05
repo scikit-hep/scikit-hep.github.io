@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Code of conduct
-permalink: /code-of-conduct
+permalink: /code-of-conduct/
 nav_order: 1
 parent: About
 custom_title: Contributor covenant code of conduct

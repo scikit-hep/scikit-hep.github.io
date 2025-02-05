@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Funding
-permalink: /funding
+permalink: /funding/
 nav_order: 9
 parent: About
 ---

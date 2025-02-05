@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Installing conda
-permalink: /user/installing-conda
+permalink: /user/installing-conda/
 nav_order: 30
 parent: User information
 ---

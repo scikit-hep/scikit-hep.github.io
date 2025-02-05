@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Packages
-permalink: /packages
+permalink: /packages/
 nav_order: 10
 has_children: true
 ---

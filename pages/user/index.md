@@ -1,7 +1,7 @@
 ---
 layout: page
 title: User information
-permalink: /user
+permalink: /user/
 nav_order: 20
 has_children: true
 ---

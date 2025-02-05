@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects using Scikit-HEP
-permalink: /projusers/projects
+permalink: /projusers/projects/
 nav_order: 10
 parent: Who uses Scikit-HEP?
 ---

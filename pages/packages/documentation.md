@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Documentation
-permalink: /documentation
+permalink: /documentation/
 nav_order: 3
 parent: Packages
 ---

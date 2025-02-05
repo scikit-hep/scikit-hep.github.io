@@ -1,0 +1,20 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Set the version of Python and other tools you might need
+build:
+  os: ubuntu-22.04
+
+  tools:
+    ruby: "3.3"
+
+  commands:
+    - bundle install
+    - >
+      JEKYLL_ENV=production bundle exec jekyll build --destination
+      _readthedocs/html --baseurl $(echo -n "$READTHEDOCS_CANONICAL_URL" | cut
+      -d '/' -f 4-)

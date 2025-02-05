@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project news
-permalink: /news
+permalink: /news/
 nav_order: 2
 ---
 

@@ -1,13 +1,13 @@
 ---
 layout: page
 title: About
-permalink: /about
+permalink: /about/
 nav_order: 90
 has_children: true
 ---
 
 The Scikit-HEP project
-(HEP stands for High Energy Physics, see more in the [FAQ]({{site.baseurl}}{% link pages/about/faq.md %} ))
+(HEP stands for High Energy Physics, see more in the [FAQ]({% link pages/about/faq.md %} ))
 is a community-driven and
 community-oriented project with the aim of providing Particle Physics at
 large with an ecosystem for data analysis in Python. The project started

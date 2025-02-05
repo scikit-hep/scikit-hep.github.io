@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Affiliated packages
-permalink: /affiliated
+permalink: /affiliated/
 nav_order: 1
 parent: Packages
 title: Affiliated projects and packages
@@ -19,7 +19,7 @@ In the following, projects that work closely together with Scikit-HEP are descri
 
 ---
 
-[![{{project.name}} logo]({{site.baseurl}}{{ project.image | link }}){: style="{{ project.image-style | default: "height:64px;"}}"}]({{project.url}}){: .largelogo }
+[![{{project.name}} logo]({{ project.image | relative_url }}){: style="{{ project.image-style | default: "height:64px;"}}"}]({{project.url}}){: .largelogo }
 {%- else -%}
 
 ---

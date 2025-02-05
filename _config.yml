@@ -5,14 +5,10 @@ description: >-
   project with the aim of providing Particle Physics at large with an
   ecosystem for data analysis in Python. The project started in Autumn
   2016 and is under active development.
-baseurl: ""
-url: "https://scikit-hep.org"
 github_username: scikit-hep
-
 # Build settings
 markdown: kramdown
-# Local: theme: "just-the-docs"
-remote_theme: "just-the-docs/just-the-docs@v0.5.3"
+theme: "just-the-docs"
 plugins:
   - jekyll-feed
 
@@ -60,3 +56,8 @@ callouts:
     title: Important
   highlight:
     color: blue
+
+# SASS 3 will make stuff break
+sass:
+  quiet_deps: true # https://github.com/just-the-docs/just-the-docs/issues/1541
+  silence_deprecations: ["import"] # https://github.com/just-the-docs/just-the-docs/issues/1607

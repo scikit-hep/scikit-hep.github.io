@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby '>= 3.1'
+
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -20,12 +22,18 @@ gem 'kramdown-parser-gfm'
 # gem 'just-the-docs'
 gem 'rake'
 
+# Used to be in the stdlib
+gem 'logger'
+
+# This is the theme
+gem "just-the-docs"
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-redirect-from'
-  gem 'jekyll-remote-theme'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-sass-converter', '~> 3.1.0'
 end
 
 # Checkers and such

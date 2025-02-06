@@ -11,8 +11,8 @@ Project and package QR codes are made available for presentations, see the list 
 <div class="text-center">
 {% for image in site.static_files %}
     {% if image.path contains 'images/projqrcode' %}
-        <a href="{{ image.path }}">
-            <img src="{{ image.path }}" alt="QR code" />
+        <a href="{{ image.path | relative_url }}">
+            <img src="{{ image.path | relative_url }}" alt="QR code" />
         </a>
     {% endif %}
 {% endfor %}

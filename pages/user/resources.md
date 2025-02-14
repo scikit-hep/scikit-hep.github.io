@@ -519,7 +519,7 @@ or related to, the Scikit-HEP project.
   - _Aghast_, Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/803122/contributions/3339215/attachments/1830076/2996786/pivarski-2019-04-15-irishep-aghast.pdf)\]
 
-- **1 April 2019:** [Software Carpentry at Fermilab](https://davidyakobovitch.github.io/2019-04-01_fnal/):
+- **1 April 2019:** [Software Carpentry at Fermilab](https://indico.fnal.gov/event/20233/):
 
   - _PyROOT, uproot, and awkward-arrays_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski/2019-04-01-fermilab-carpentries)\]

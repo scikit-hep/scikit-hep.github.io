@@ -35,7 +35,7 @@ repos:
         args: ["-L", "hist,sur,nd,theses,ser"]
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.5.0"
+    rev: "v3.5.1"
     hooks:
       - id: prettier
         types_or: [yaml, markdown, html, css, javascript, json]

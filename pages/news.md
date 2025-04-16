@@ -5,7 +5,7 @@ permalink: /news/
 nav_order: 2
 ---
 
-**April 2025:** Scikit-HEP integrates the [Scientific Python Ecosystem Coordination Core Projects][]
+**April 2025:** Scikit-HEP joins the [Scientific Python Ecosystem Coordination Core Projects][]
 as one of the first two domain specific stacks accepted.
 
 **January 2025:** Package `integration-tests` joined Scikit-HEP.

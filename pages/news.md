@@ -5,13 +5,16 @@ permalink: /news/
 nav_order: 2
 ---
 
+**April 2025:** Scikit-HEP joins the [Scientific Python Ecosystem Coordination Core Projects][]
+as one of the first two domain specific stacks accepted.
+
 **January 2025:** Package `integration-tests` joined Scikit-HEP.
 
 **December 2024:** Packages `coffea` and `fsspec-xrootd` joined Scikit-HEP.
 
 **February 2024:** Packages `hepconvert` and `ragged` joined Scikit-HEP.
 
-**June 2023:** Developer pages, [`cookie`][], and [`repo-review`][] generalized and accepted into [scientific-python][].
+**June 2023:** Developer pages, [`cookie`][], and [`repo-review`][] generalized and accepted into the [Scientific Python Development Guide][].
 
 **May 2023:** `pyhf` project updates published in the [May 2023 NumFOCUS newsletter][].
 
@@ -208,6 +211,7 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [online particle physics information]: https://github.com/particledatagroup/hep-resources
 [May 2023 NumFOCUS newsletter]: https://numfocus.salsalabs.org/numfocus__newsletter_may2023
 [Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html
-[scientific-python]: https://learn.scientific-python.org/development
+[Scientific Python Ecosystem Coordination Core Projects]: https://scientific-python.org/specs/core-projects/
+[Scientific Python Development Guide]: https://learn.scientific-python.org/development
 [`cookie`]: https://github.com/scientific-python/cookie
 [`repo-review`]: https://repo-review.readthedocs.io

@@ -110,17 +110,34 @@ or related to, the Scikit-HEP project.
 - **19-25 October 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
 
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
-    \[[link](https://indi.to/zTs5b)\]
+    \[[link](https://indico.cern.ch/event/1338689/contributions/6016211/)\]
 
-- **1-4 July 2024:** [PyHEP 2024 Workshop](https://indico.cern.ch/event/1384010/):
+- **18-20 July 2024:** [US ATLAS / IRIS-HEP Analysis Software Training Event 2024](https://indico.cern.ch/event/1376945):
 
+  - _Statistical tools: pyhf and cabinetry_, Alexander Held, Matthew Feickert
+    \[[link](https://indico.cern.ch/event/1376945/contributions/5787159/)\]
+  - _Introduction to hist_, Ana Peixoto
+    \[[link](https://indico.cern.ch/event/1376945/contributions/6028283/)\]
+
+- **1-4 July 2024:** [PyHEP 2024 Workshop](https://indico.cern.ch/e/PyHEP2024):
+
+  - _Reading RNTuple data with Uproot_, Andres Rios-Tascon
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.12634029)\]
+  - _Easy Columnar File Conversion with 'hepconvert'_, Zoë Bilodeau
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.12655913)\]
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
-    \[[Zenodo link](https://doi.org/10.5281/zenodo.12655971)\]
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.12655970)\]
+  - _General model fitting with zfit and hepstats_, Jonas Eschle
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.12634107)\]
 
 - **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/e/PyHEP2023):
 
+  - _pyhf tutorial and exploration_, Matthew Feickert
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.8436003)\]
   - _What’s new with Vector? First major release is out!_, Saransh Chopra
     \[[Zenodo link](https://doi.org/10.5281/zenodo.8430095)\]
+  - _General likelihood fitting with zfit & hepstats_, Jonas Eschle
+    \[[Zenodo link](https://doi.org/10.5281/zenodo.8421605)\]
 
 - **22-23 November 2022:** [Software Citation and Recognition in HEP Workshop](https://indico.cern.ch/event/1211229/):
 

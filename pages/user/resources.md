@@ -107,6 +107,11 @@ or related to, the Scikit-HEP project.
 
 ## Presentations
 
+- **5-9 May 2025:** [WLCG/HSF Workshop 2025](https://indico.cern.ch/e/wlcg-hsf-2025), IJClab, Orsay (France):
+
+  - _The Scikit-HEP project - news and future directions_, Eduardo Rodrigues
+    \[[link](https://indico.cern.ch/event/1484669/timetable/#23-scikit-hep-project-news-and)\]
+
 - **19-25 October 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
 
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
@@ -129,6 +134,11 @@ or related to, the Scikit-HEP project.
     \[[Zenodo link](https://doi.org/10.5281/zenodo.12655970)\]
   - _General model fitting with zfit and hepstats_, Jonas Eschle
     \[[Zenodo link](https://doi.org/10.5281/zenodo.12634107)\]
+
+- **13-17 May 2024:** [WLCG/HSF Workshop 2024](https://indico.cern.ch/event/1369601/), DESY, Hamburg (Germany):
+
+  - _The Scikit-HEP project - overview and future_, Eduardo Rodrigues
+    \[[link](https://indico.cern.ch/event/1369601/contributions/5883614/attachments/2855719/4994539/2024-05-14_WLCG-HSF-DESYWorkshop.pdf)\]
 
 - **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/e/PyHEP2023):
 

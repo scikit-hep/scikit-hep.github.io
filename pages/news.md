@@ -5,8 +5,12 @@ permalink: /news/
 nav_order: 2
 ---
 
+**May 2025:** Major release `formulate` 1.0.0.
+
 **April 2025:** Scikit-HEP joins the [Scientific Python Ecosystem Coordination Core Projects][]
 as one of the first two domain specific stacks accepted.
+
+**March 2025:** [scikit-hep PyPI organisation][] accepted.
 
 **January 2025:** Package `integration-tests` joined Scikit-HEP.
 
@@ -213,5 +217,6 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html
 [Scientific Python Ecosystem Coordination Core Projects]: https://scientific-python.org/specs/core-projects/
 [Scientific Python Development Guide]: https://learn.scientific-python.org/development
+[scikit-hep PyPI organisation]: https://pypi.org/org/scikit-hep/
 [`cookie`]: https://github.com/scientific-python/cookie
 [`repo-review`]: https://repo-review.readthedocs.io

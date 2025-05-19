@@ -3,4 +3,5 @@ description: Collection of tools and algorithms to enable conversion of HEP ML t
 url: https://github.com/scikit-hep/NNDrone
 # docs: <url>
 # affiliated: set to true for affiliated packages
+deprecated: true
 # repo: only if different from url

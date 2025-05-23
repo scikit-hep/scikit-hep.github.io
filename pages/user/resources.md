@@ -20,6 +20,9 @@ or related to, the Scikit-HEP project.
 
 ## Publications
 
+- _Vector: JIT-compilable mathematical manipulations of ragged Lorentz vectors_,
+  S. Chopra, H. Schreiner, E. Rodrigues, J. Eschle, J. Pivarski
+  [J. Open Source Softw. 10(109), 7791](https://doi.org/10.21105/joss.07791)
 - _Fitting the BumpHunter test statistic distribution and global p-value estimation_,
   L. Vaslin, S. Calvet, V. Barra, J. Donini,
   [arXiv:2211.07446 \[hep-ex\]](https://arxiv.org/abs/2211.07446)

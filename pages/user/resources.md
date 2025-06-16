@@ -113,10 +113,10 @@ or related to, the Scikit-HEP project.
 - **8-13 June 2025:** [MODE Workshop 2025](https://indico.cern.ch/event/1481852/), OAC conference center, Crete (Greece):
 
   - _Differentiable Computation with Awkward Array and JAX_, Ianna Osborne, Saransh Chopra
-    \[[link](https://indi.to/8WZTS)\]
+    \[[link](https://indico.cern.ch/event/1481852/contributions/6464899/)\]
   - _Differentiable Programming in the Scikit-HEP Ecosystem_,
     Alexander Held, Jay Ajitbhai Sandesara, Lino Oscar Gerlach, Manfred Peter Fackeldey, Matthew Feickert, Mohamed Aly
-    \[[link](https://indi.to/BRzZg)\]
+    \[[link](https://indico.cern.ch/event/1481852/contributions/6464860/)\]
 
 - **5-9 May 2025:** [WLCG/HSF Workshop 2025](https://indico.cern.ch/e/wlcg-hsf-2025), IJClab, Orsay (France):
 

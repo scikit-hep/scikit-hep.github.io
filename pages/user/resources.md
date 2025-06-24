@@ -111,7 +111,6 @@ or related to, the Scikit-HEP project.
 ## Presentations
 
 - **8-13 June 2025:** [MODE Workshop 2025](https://indico.cern.ch/event/1481852/), OAC conference center, Crete (Greece):
-
   - _Differentiable Computation with Awkward Array and JAX_, Ianna Osborne, Saransh Chopra
     \[[link](https://indico.cern.ch/event/1481852/contributions/6464899/)\]
   - _Differentiable Programming in the Scikit-HEP Ecosystem_,
@@ -119,24 +118,20 @@ or related to, the Scikit-HEP project.
     \[[link](https://indico.cern.ch/event/1481852/contributions/6464860/)\]
 
 - **5-9 May 2025:** [WLCG/HSF Workshop 2025](https://indico.cern.ch/e/wlcg-hsf-2025), IJClab, Orsay (France):
-
   - _The Scikit-HEP project - news and future directions_, Eduardo Rodrigues
     \[[link](https://indico.cern.ch/event/1484669/timetable/#23-scikit-hep-project-news-and)\]
 
 - **19-25 October 2024:** [CHEP 2024 - 27th International Conference on Computing in High Energy and Nuclear Physics](https://indico.cern.ch/event/1338689/):
-
   - _A new SymPy backend for vector: uniting experimental and theoretical physicists_, Saransh Chopra
     \[[link](https://indico.cern.ch/event/1338689/contributions/6016211/)\]
 
 - **18-20 July 2024:** [US ATLAS / IRIS-HEP Analysis Software Training Event 2024](https://indico.cern.ch/event/1376945):
-
   - _Statistical tools: pyhf and cabinetry_, Alexander Held, Matthew Feickert
     \[[link](https://indico.cern.ch/event/1376945/contributions/5787159/)\]
   - _Introduction to hist_, Ana Peixoto
     \[[link](https://indico.cern.ch/event/1376945/contributions/6028283/)\]
 
 - **1-4 July 2024:** [PyHEP 2024 Workshop](https://indico.cern.ch/e/PyHEP2024):
-
   - _Reading RNTuple data with Uproot_, Andres Rios-Tascon
     \[[Zenodo link](https://doi.org/10.5281/zenodo.12634029)\]
   - _Easy Columnar File Conversion with 'hepconvert'_, Zoë Bilodeau
@@ -147,12 +142,10 @@ or related to, the Scikit-HEP project.
     \[[Zenodo link](https://doi.org/10.5281/zenodo.12634107)\]
 
 - **13-17 May 2024:** [WLCG/HSF Workshop 2024](https://indico.cern.ch/event/1369601/), DESY, Hamburg (Germany):
-
   - _The Scikit-HEP project - overview and future_, Eduardo Rodrigues
     \[[link](https://indico.cern.ch/event/1369601/contributions/5883614/attachments/2855719/4994539/2024-05-14_WLCG-HSF-DESYWorkshop.pdf)\]
 
 - **9-12 October 2023:** [PyHEP 2023 Workshop](https://indico.cern.ch/e/PyHEP2023):
-
   - _pyhf tutorial and exploration_, Matthew Feickert
     \[[Zenodo link](https://doi.org/10.5281/zenodo.8436003)\]
   - _What’s new with Vector? First major release is out!_, Saransh Chopra
@@ -161,22 +154,18 @@ or related to, the Scikit-HEP project.
     \[[Zenodo link](https://doi.org/10.5281/zenodo.8421605)\]
 
 - **22-23 November 2022:** [Software Citation and Recognition in HEP Workshop](https://indico.cern.ch/event/1211229/):
-
   - _Scikit-HEP project - On making our work citable_, Eduardo Rodrigues
     \[[link](https://indico.cern.ch/event/1211229/timetable/?view=standard#23-software-projects-scikit-he)\]
 
 - **25 October 2022:** [ACAT 2022 - 21st International Workshop on Advanced Computing and Analysis Techniques in Physics Research](https://indico.cern.ch/event/1106990/):
-
   - _Awkward to RDataFrame and back_, Ianna Osborne
     \[[link](https://indico.cern.ch/event/1106990/contributions/5096930/)\]
 
 - **6 October 2022:** [143rd ROOT Parallelism, Performance and Programming Model Meeting](https://indico.cern.ch/event/1208767/):
-
   - _Awkward <--> RDataFrame Status_, Ianna Osborne
     \[[link](https://github.com/ianna/Awkward-RDataFrame/blob/main/Awkward-RDataFrame-status-evaluated.ipynb)\]
 
 - **12-16 September 2022:** [PyHEP 2022 Workshop](https://indico.cern.ch/e/PyHEP2022):
-
   - _Histograms as Objects: Tools for Efficient Analysis and Interactivity_, Aman Goel, Jay Gohil
     \[[Zenodo link](https://doi.org/10.5281/zenodo.7114511)\]
   - _Uproot, Awkward Array, hist, Vector: from basics to combinatorics_, Jim Pivarski
@@ -195,112 +184,91 @@ or related to, the Scikit-HEP project.
     \[[Zenodo link](https://doi.org/10.5281/zenodo.7140025)\]
 
 - **6 September 2022:** [ATLAS HDBS Workshop 2022](https://indico.cern.ch/event/1132691/):
-
   - _pyhf and analysis optimization with automatic differentiation_, Matthew Feickert
     \[[link](https://indico.cern.ch/event/1132691/contributions/4994710/)\]
 
 - **2 August 2022:** [CAMPFIRE 2022](https://indico.cern.ch/event/1163542/):
-
   - _Uproot Tutorial_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/1163542/contributions/4886715/)\]
 
 - **25 July 2022:** [NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting](https://cssi-pi-community.github.io/2022-meeting/):
-
   - _Awkward Arrays: Accelerating scientific data analysis on irregularly shaped data (poster)_, Jim Pivarski
 
 - **14 July 2022:** [SciPy 2022](https://www.scipy2022.scipy.org/):
-
   - _Awkward Packaging: building Scikit-HEP_, Henry Schreiner
     \[[link](https://www.scipy2022.scipy.org/schedule)\]
 
 - **8 July 2022:** [ICHEP 2022 - International Conference on High Energy Physics](https://agenda.infn.it/event/28874/):
-
   - _pyhf: a pure-Python statistical fitting library with tensors and automatic differentiation_, Matthew Feickert
     \[[link](https://agenda.infn.it/event/28874/contributions/169217/)\]
 
 - **28 June 2022:** [Hybrid ATLAS Induction Day + Software Tutorial](https://indico.cern.ch/event/1159574/):
-
   - _pyhf tutorial_, Alexander Held
     \[[link](https://indico.cern.ch/event/1159574/contributions/4930681/)\]
 
 - **9 June 2022:** [ATLAS Statistics Forum Meeting](https://indico.cern.ch/event/1166812/):
-
   - _Introduction to pyhf and experience in the context of ATLAS_, Alexander Held
     \[[link](https://indico.cern.ch/event/1166812/#15-introduction-to-pyhf-and-ex)\]
 
 - **10 May 2022:** [ROOT Users Workshop](https://indico.fnal.gov/event/23628/):
-
   - _Awkward Array to RDataFrame and back_, Ianna Osborne
     \[[link](https://indico.fnal.gov/event/23628/contributions/240305/)\]
 
 - **30 April 2022:** [PyCon US 2022 Lightning talks](https://us.pycon.org/2022/):
-
   - _Scikit-HEP Developer Pages: Guidelines for modern packaging_, Henry Schreiner
     \[[link](https://www.slideshare.net/HenrySchreiner/pycon-2022-scikithep-developer-pages-guidelines-for-modern-packaging)\]
 
 - **25 April 2022:** [IRIS-HEP AGC Tools 2022 Workshop](https://indico.cern.ch/event/1126109/):
-
   - _Statistical inference: pyhf and cabinetry_, Matthew Feickert
     \[[link](https://indico.cern.ch/event/1126109/contributions/4780155/)\]
   - _Foundation libraries (uproot, awkward, hist, mplhep)_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/1126109/contributions/4780138/)\]
 
 - **6 April 2022:** [PyHEP WG Topical Meeting](https://indico.cern.ch/event/1140031/):
-
   - _Awkward Array Updates_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/1140031/#2-awkward-array-updates)\]
 
 - **15 March 2022:** [ATLAS SUSY Background Forum](https://indico.cern.ch/event/1132859/):
-
   - _Introduction to cabinetry_, Alexander Held
     \[[link](https://indico.cern.ch/event/1132859/#2-introduction-to-cabinetry)\]
 
 - **1 December 2021:** [ACAT 2021](https://indico.cern.ch/event/855454/):
-
   - _Python histogram developments_ (poster), Henry Schreiner
     \[[link](https://indico.cern.ch/event/855454/contributions/4605013/)\]
 
 - **1 December 2021:** [Analysis Tools Task Force OPEN Wednesday Meeting](https://indico.cern.ch/event/1100873/):
-
   - _pyhf: pure-Python implementation of HistFactory with tensors and automatic differentiation_, Matthew Feickert
     \[[PDF](https://indico.cern.ch/event/1100873/contributions/4631656/attachments/2356196/4021417/Feickert_2021-12-01.pdf)\]
 
 - **3 November 2021:** [IRIS-HEP AGC Tools 2021 Workshop](https://indico.cern.ch/event/1076231/):
-
   - _Data handling: uproot, awkward & vector_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/1076231/contributions/4560398/)\]
   - _From data delivery to statistical inference: ServiceX, coffea, cabinetry & pyhf_, Alexander Held
     \[[link](https://indico.cern.ch/event/1076231/contributions/4560405/)\]
 
 - **27 October 2021:** [Parsl & funcX Fest 2021](https://parsl-project.org/parslfest2021.html):
-
   - _Distributed statistical inference with pyhf powered by funcX_, Matthew Feickert
     \[[PDF](https://parsl-project.org/parslfest2021-files/feickert-pyhf.pdf)\]
 
 - **21 September 2021:** [ATLAS SUSY Workshop 2021](https://indico.cern.ch/event/1056428/):
-
   - _pyhf and cabinetry_, Alexander Held
     \[[link](https://indico.cern.ch/event/1056428/contributions/4523825/)\]
 
 - **13 September 2021:** [STAR Junior's meeting](https://drupal.star.bnl.gov/STAR/meetings/star-collaboration-meeting-september-2021/juniors-day):
-
   - _Uproot/Awkward Array tutorial for STAR_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski-talks/2021-09-13-star-uproot-awkward-tutorial)\]
 
 - **27 August 2021:** [HEP Software Foundation and IRIS-HEP Software Carpentry](https://indico.cern.ch/event/1058873/), virtual:
-
   - _Uproot Tutorial_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/1058873/timetable/#b-430459-python-for-analysis-2)\]
 
 - **12-18 July 2021:** [SciPy 2021, 20th Python in Science Conference](https://www.scipy2021.scipy.org/):
-
   - _Distributed statistical inference with pyhf powered by funcX_, Matthew Feickert
     \[[link](https://doi.org/10.25080/majora-1b6fd038-023)\
   - _Awkward Array 3-minute update_, Jim Pivarski
     \[[YouTube](https://youtu.be/hvHedn8bORU?t=1221)\]
 
 - **5-9 July 2021:** [PyHEP 2021 Workshop](https://indico.cern.ch/e/PyHEP2021):
-
   - _High-Performance Histogramming for HEP Analysis_, Henry Schreiner
     \[[link](https://indico.cern.ch/event/1019958/contributions/4430375/)\]
   - _Distributed statistical inference with pyhf_, Matthew Feickert
@@ -321,54 +289,44 @@ or related to, the Scikit-HEP project.
     \[[link](https://indico.cern.ch/event/1019958/contributions/4418546/)\]
 
 - **14 June 2021:** [Hands-on Advanced Tutorial Session](https://indico.cern.ch/event/1042866/) at the [Fermilab LPC](https://lpc.fnal.gov/):
-
   - _Uproot Awkward Columnar HATS_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski-talks/2021-06-14-uproot-awkward-columnar-hats)\]
 
 - **7-18 June 2021:** Lecture at
   [ESCAPE Summer School 2021 - Data Science for Astronomers, Astroparticle and Particle Physics](https://indico.in2p3.fr/event/20306/), Annecy, France (virtual event):
-
   - _Introduction to the Scikit-HEP Big Data Python ecosystem for analysis in Particle Physics_, Eduardo Rodrigues
 
 - **26 May 2021:** [IRIS-HEP Analysis Systems biweekly meeting](https://indico.cern.ch/event/1032972/):
-
   - _Refactoring Awkward Array_, Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/1032972/contributions/4381811/attachments/2251584/3819590/awkward_refactoring_Jim.pdf)\]
 
 - **21 May 2021:** [Dask Distributed Summit](https://summit.dask.org/):
-
   - _New Dask collection type for Awkward Arrays_, Jim Pivarski
     \[[link](https://summit.dask.org/schedule/presentation/24/dask-in-high-energy-physics-community/)\]
 
 - **17-21 May 2021:** [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/):
-
   - _AwkwardForth: accelerating Uproot with an internal DSL_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/948465/contributions/4324131/)\]
   - _Distributed statistical inference with pyhf enabled through funcX_, Matthew Feickert
     \[[link](https://indico.cern.ch/event/948465/contributions/4324013/)\]
 
 - **7 April 2021:** [PyHEP WG Python Module of the Month Meeting](https://indico.cern.ch/event/985425/):
-
   - _pyhf Tutorial_, Giordon Stark, Lukas Heinrich, Matthew Feickert
     \[[link](https://indico.cern.ch/event/985425/)\]
 
 - **8 December 2020:** [Argonne Lunch Seminar](https://indico.fnal.gov/event/46057/):
-
   - _Steps Towards Differentiable and Scalable Physics Analyses at the LHC_, Matthew Feickert
     \[[link](https://indico.fnal.gov/event/46057/)\]
 
 - **4 December 2020:** [Mini-Workshop on Portable Inference](https://indico.cern.ch/event/972791/):
-
   - _Fitting and Statistical Inference as a Service_, Matthew Feickert
     \[[PDF](https://indico.cern.ch/event/972791/contributions/4121109/attachments/2156140/3636847/Feickert_2020-12-04.pdf)\]
 
 - **3 November 2020:** [TOOLS 2020, Tools for High Energy Physics and Cosmology Workshop](https://indico.cern.ch/event/955391/):
-
   - _pyhf: pure-Python implementation of HistFactory with tensors and automatic differentiation_, Matthew Feickert
     \[[link](https://indico.cern.ch/event/955391/contributions/4075505/)\]
 
 - **26 October 2020:** [IRIS-HEP Future Analysis Systems and Facilities Blueprint Workshop](https://indico.cern.ch/event/960587/):
-
   - _Toward Fitting as a Service with pyhf_, Matthew Feickert
     \[[PDF](https://indico.cern.ch/event/960587/contributions/4070323/attachments/2129368/3585646/Feickert_2020-10-26.pdf)\]
   - _Lorentz Vector Manipulation and Histogram Handling_, Henry Schreiner
@@ -377,12 +335,10 @@ or related to, the Scikit-HEP project.
     \[[PDF](https://indico.cern.ch/event/960587/contributions/4070318/attachments/2129252/3585426/pivarski-as-blueprint.pdf)\]
 
 - **10 August 2020:** [Snowmass 2021 Computational Frontier Workshop](https://indico.fnal.gov/event/43829/):
-
   - _Likelihood Publication and Preservation_, Matthew Feickert
     \[[link](https://indico.fnal.gov/event/43829/contributions/193820/)\]
 
 - **13-17 July 2020:** [PyHEP 2020 Workshop](https://indico.cern.ch/e/PyHEP2020), virtual:
-
   - _Uproot and Awkward Array tutorial_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/882824/contributions/3927101/)\]
   - _The boost-histogram package_, Hans Dembinski and Henry Schreiner
@@ -401,7 +357,6 @@ or related to, the Scikit-HEP project.
     \[[link](https://indico.cern.ch/event/882824/contributions/3931303/)\]
 
 - **6-12 July 2020:** [SciPy 2020 (19th Python in Science Conference)](https://www.scipy2020.scipy.org/):
-
   - _Awkward Array: Manipulating JSON like Data with NumPy like Idioms_, Jim Pivarski
     \[[YouTube](https://youtu.be/WlnUF3LRBj4)\]
   - _Boost-histogram: High-Performance Histograms as Objects_, Henry Schreiner, Hans Dembinski, Jim Pivarski, and Shuo Liu
@@ -410,26 +365,21 @@ or related to, the Scikit-HEP project.
     \[[link](https://doi.org/10.25080/Majora-342d178e-023)\]
 
 - **8 June 2020:** [LPC HATS: Hands-on Training for CMS](https://indico.cern.ch/event/917675/):
-
   - _Uproot Awkward columnar HATS_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski/2020-06-08-uproot-awkward-columnar-hats)\]
 
 - **27 May 2020:** [2020 IRIS-HEP Team Retreat](https://indico.cern.ch/event/896167/):
-
   - _pyhf Roadmap for IRIS-HEP Execution Phase_, Matthew Feickert
     \[[PDF](https://indico.cern.ch/event/896167/contributions/3880229/attachments/2045450/3428542/Feickert_pyhf-execution-phase_2020-05-27.pdf)\]
 
 - **8 April 2020:** [Electron Ion Collider User's meeting](https://indico.bnl.gov/event/8242/):
-
   - _Uproot and Awkward Array tutorials for the Electron Ion Collider_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski-talks/2020-04-08-eic-jlab)\]
 
 - **3 March 2020:** Seminar at [DESY](https://www.desy.de/index_eng.html), Hamburg, Germany:
-
   - _Introduction to the Scikit HEP project_, Eduardo Rodrigues
 
 - **27 February 2020:** [IRIS-HEP Poster Session](https://indico.cern.ch/event/894127/):
-
   - _Awkward Array for Analysis Systems_ (poster), Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3331173/6_-_pivarski-irishep-poster.pdf)\]
   - _Boost-Histogram for Analysis Systems_ (poster), Henry Schreiner
@@ -438,21 +388,17 @@ or related to, the Scikit-HEP project.
     \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3334540/10_-_IRIS-HEP-2020-poster-session-pyhf.pdf)\]
 
 - **27 February 2020:** [IRIS-HEP Postdoc Presentations](https://indico.cern.ch/event/897086/):
-
   - _pyhf: A Pure Python Statistical Fitting Library with Tensors and Autograd_, Matthew Feickert
     \[[PDF](https://indico.cern.ch/event/894127/attachments/1996570/3334540/10_-_IRIS-HEP-2020-poster-session-pyhf.pdf)\]
 
 - **29 November 2021:** [HEP Software Foundation and IRIS-HEP Software Carpentry](https://indico.cern.ch/event/834411/):
-
   - _Uproot Tutorial_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/834411/timetable/#b-351469-python-for-analysis-r)\]
 
 - **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
-
   - _An introduction to pyhf and HistFactory likelihoods_, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 
 - **4-8 November 2019:** [CHEP 2019 conference](http://chep2019.org/):
-
   - _The Scikit-HEP project - overview and prospects_, Eduardo Rodrigues et al.
     \[[PDF](https://indico.cern.ch/event/773049/contributions/3476182/attachments/1938227/3213768/EduardoRodrigues_2019-11-05_CHEP2019Adelaide.pdf)\]
   - _Recent developments in histogram libraries_, Henry Schreiner
@@ -461,7 +407,6 @@ or related to, the Scikit-HEP project.
     \[[PDF](https://indico.cern.ch/event/773049/contributions/3473258/attachments/1934835/3206036/pivarski-chep-awkward.pdf)\]
 
 - **16-18 October 2019:** [PyHEP 2019 Workshop](https://indico.cern.ch/e/PyHEP2019), Abingdon, U.K.:
-
   - _The Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF](https://indico.cern.ch/event/833895/contributions/3576797/attachments/1927163/3190523/EduardoRodrigues_PyHEP2019_Scikit-HEP.pdf)\]
   - _Particles and decays_, Eduardo Rodrigues
@@ -476,7 +421,6 @@ or related to, the Scikit-HEP project.
     \[[PDF](https://indico.cern.ch/event/833895/contributions/3577808/attachments/1927550/3191336/iminuit_intro.html)\]
 
 - **14 July 2019:** [Strange Loop 2019](https://www.thestrangeloop.com/2019/sessions.html):
-
   - _Jagged, ragged, awkward arrays_, Jim Pivarski
     \[[link](https://www.thestrangeloop.com/2019/jagged-ragged-awkward-arrays.html)\]
 
@@ -487,17 +431,14 @@ or related to, the Scikit-HEP project.
   \[[PDF](https://indico.cern.ch/event/840472/contributions/3564389/attachments/1907193/3150006/bhroadmap.pdf)\]
 
 - **29 July 2019:** [2019 Meeting of the Division of Particles & Fields of the American Physical Society](https://indico.cern.ch/event/782953/overview):
-
   - _IRIS-HEP Tutorial: Fast columnar data analysis with data science tools_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/782953/timetable/?view=standard#b-341418-computing-analysis-to)\]
 
 - **10 July 2019:** [IRIS-HEP Analysis Systems Biweekly Meeting](https://indico.cern.ch/event/815512/):
-
   - _Motivation and requirements for awkward 1.0_, Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/815512/contributions/3497823/attachments/1878236/3093661/2019-07-10-awkward-plans-pivarski.pdf)\]
 
 - **19-20 June 2019:** , [IRIS-HEP Analysis Systems Topical Workshop](https://indico.cern.ch/event/822074/)
-
   - _awkward, etc._, Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/822074/contributions/3471451/attachments/1864975/3066189/jim-stuff.pdf)\]
   - _Histograms_, Henry Schreiner
@@ -508,111 +449,92 @@ or related to, the Scikit-HEP project.
     \[[link](https://indico.cern.ch/event/822074/contributions/3471460/)\]
 
 - **18 June 2019:** [LHCb experiment](http://lhcb.cern.ch/) Week, CERN:
-
   - _Particles and decays in the Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF]({% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]
 
 - **18 June 2019:** [3rd CMS Machine Learning Workshop](https://indico.cern.ch/event/798721/):
-
   - _Uproot: accessing ROOT data in the scientific Python ecosystem_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/798721/contributions/3461343/)\]
 
 - **10 June 2019:** [U.S. ATLAS Software Training at Argonne National Lab](https://indico.cern.ch/event/811577/):
-
   - _NumPy, Pandas, PyROOT, and Uproot_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/811577/)\]
 
 - **29 May 2019:** [Hands-on Training for CMS](https://indico.cern.ch/event/814100/) at the [Fermilab LPC](https://lpc.fnal.gov/):
-
   - _Columnar Analysis Tools HATS_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/814100/)\]
 
 - **28 May 2019:** [Hands-on Training for CMS](https://indico.cern.ch/event/814895/) at the [Fermilab LPC](https://lpc.fnal.gov/):
-
   - _Scientific Python and Uproot HATS_, Jim Pivarski
     \[[link](https://indico.cern.ch/event/814895/)\]
 
 - **21 May 2019:** [Belle II](https://www.belle2.org/) experiment
   [Analysis Software Developers\'
   Meeting](https://indico.belle2.org/event/193/)
-
   - _Particles and decays in the Scikit-HEP project_, Eduardo Rodrigues, Henry Schreiner
 
 - **13 May 2019:** [IRIS-HEP](https://iris-hep.org/) project [topical
   meeting](https://indico.cern.ch/event/818864/):
-
   - _Particles and decays in the Scikit-HEP project_, Eduardo Rodrigues, Henry Schreiner
 
 - **17 April 2019:** [IRIS-HEP](https://iris-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/808630/):
-
   - _Awkward Array: Numba_, Jim Pivarski
   - _Awkward Array: Pandas_, Michael Hedges
 
 - **15 April 2019:** [IRIS-HEP](https://iris-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/803122/):
-
   - _boost-histogram and hist_, Henry Schreiner
     \[[PDF](https://indico.cern.ch/event/803122/contributions/3339214/attachments/1830213/2997039/bhandhist.pdf)\]
   - _Aghast_, Jim Pivarski
     \[[PDF](https://indico.cern.ch/event/803122/contributions/3339215/attachments/1830076/2996786/pivarski-2019-04-15-irishep-aghast.pdf)\]
 
 - **1 April 2019:** [Software Carpentry at Fermilab](https://indico.fnal.gov/event/20233/):
-
   - _PyROOT, uproot, and awkward-arrays_, Jim Pivarski
     \[[GitHub repo.](https://github.com/jpivarski/2019-04-01-fermilab-carpentries)\]
 
 - **21 March 2019:** [PyGamma19
   Workshop](https://indico.cern.ch/event/783425/), Heidelberg,
   Germany:
-
   - _Python in High-Energy Physics_, Hans Dembinski
     \[[PDF]({% link assets/resources/dembinski-pygamma19-2019-03-21.pdf %})\]
 
 - **15 October 2018:** [DIANA/HEP](https://www.diana-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/754335/):
-
   - _I/O for uproot_, Pratyush Das
 
 - **10 September 2018:** [ROOT 2018 Users
   Workshop](https://indico.cern.ch/event/697389/), Sarajevo , Bosnia
   and Herzegovina:
-
   - _Writing ROOT files with uproot_, Pratyush Das, Jim Pivarski
 
 - **9 July 2018:** [CHEP 2018 Conference](http://chep2018.org/),
   Sofia, Bulgaria:
-
   - _The Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF](https://indico.cern.ch/event/587955/contributions/2937549/attachments/1683232/2705316/2018-07-09_CHEP18Sofia_EduardoRodrigues.pdf)\]
 
 - **7 July 2018:** [PyHEP 2018
   Workshop](https://indico.cern.ch/event/694818/), Sofia, Bulgaria:
-
   - _The Scikit-HEP project_, Matthieu Marinangeli
 
 - **28 February 2018:** [IML
   Meeting](https://indico.cern.ch/event/686641/), CERN:
-
   - _Uproot: rapidly moving data from ROOT to NumPy and Pandas_, Jim
     Pivarski
 
 - **23 October 2017:** [DIANA/HEP](https://www.diana-hep.org/) project
   [topical meeting](https://indico.cern.ch/event/664968/), CERN:
-
   - _numpythia & pyjet - interfacing PYTHIA and FastJet with NumPy_,
     Noel Dawe
 
 - **11 September 2017:** project status report,
   [DIANA/HEP](https://www.diana-hep.org/) project [topical
   meeting](https://indico.cern.ch/event/650630/), CERN:
-
   - _Scikit-HEP project status_, Eduardo Rodrigues
 
 - **6 April 2017:** presentation of the project to the LHCb
   experiment, [LHCb experiment](http://lhcb.cern.ch/) Analysis &
   Software Week, CERN:
-
   - _The Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF]({% link assets/resources/rodrigues-lhcb-2017-04-06.pdf %})\]
 

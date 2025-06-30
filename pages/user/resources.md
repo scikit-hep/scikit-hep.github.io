@@ -110,6 +110,10 @@ or related to, the Scikit-HEP project.
 
 ## Presentations
 
+- **26 June 2025:** [PUNCH4NFDI PUNCHLunch Seminar](https://indico.desy.de/event/49823/):
+  - _The Scikit-HEP project: overview and future_, Eduardo Rodrigues
+    \[[link](https://indico.desy.de/event/49823/attachments/97791/135099/2025-06-26_PUNCH4NFDI_Seminar.pdf)\]
+
 - **8-13 June 2025:** [MODE Workshop 2025](https://indico.cern.ch/event/1481852/), OAC conference center, Crete (Greece):
   - _Differentiable Computation with Awkward Array and JAX_, Ianna Osborne, Saransh Chopra
     \[[link](https://indico.cern.ch/event/1481852/contributions/6464899/)\]

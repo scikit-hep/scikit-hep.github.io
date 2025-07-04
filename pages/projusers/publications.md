@@ -72,8 +72,9 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Phys. Rev. D 109, 096011 (2024)](https://doi.org/10.1103/PhysRevD.109.096011) ([arXiv:2402.06996 [nucl-th]](https://arxiv.org/abs/2402.06996)) - cites `Particle`, Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 015104 (2022)](https://doi.org/10.1088/1361-6471/ac3631) ([arXiv:2106.16243 [nucl-ex]](https://arxiv.org/abs/2106.16243)) - cites `iminuit`.
 
-### Data Analysis, Statistics and Probability
+### Data Analysis, Machine Learning, Statistics and Probability
 
+- [Mach. Learn.: Sci. Technol. 6 (2025) 025061](https://doi.org/10.1088/2632-2153/addbc1) ([arXiv:2411.16234 [hep-ph]](https://arxiv.org/abs/2411.16234)) - cites `pylhe`.
 - [Comput. Softw. Big Sci. 8, 3 (2024)](https://doi.org/10.1007/s41781-023-00112-x) ([arxiv:2308.09575 [physics.data-an]](https://arxiv.org/abs/2308.09575)) - cites the Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 025001 (2022)](https://doi.org/10.1088/1361-6471/ac3dcd) ([arXiv:2102.04275 [physics.data-an]](https://arxiv.org/abs/2102.04275)) - cites `probfit`.
 - [2021 JINST 16 P06016](https://doi.org/10.1088/1748-0221/16/06/P06016) ([arXiv:1902.01452 [physics.data-an]](https://arxiv.org/abs/1902.01452)) - cites `iminuit`.
@@ -189,8 +190,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
-- [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
+- [arXiv:2409.06651 [hep-ph]](https://arxiv.org/abs/2409.06651) - cites `pylhe`.
+- [arXiv:2405.11271 [hep-ph]](https://arxiv.org/abs/2405.11271) - cites `pylhe`.
 - [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
+- [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.

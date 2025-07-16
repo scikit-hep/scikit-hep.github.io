@@ -102,7 +102,7 @@ or related to, the Scikit-HEP project.
   [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
   [EPJ Web of Conferences 214, 06026 (2019)](https://doi.org/10.1051/epjconf/201921406026)
 
-## Press articles
+## Press articles, podcasts
 
 - **Apr 2021:** CERN Courier May/June 2021, [LHC reinterpreters think long-term](https://cerncourier.com/a/lhc-reinterpreters-think-long-term/)
 - **Jan 2021:** Symmetry Magazine, [ATLAS releases ‘full orchestra’ of analysis instruments](https://www.symmetrymagazine.org/article/atlas-releases-full-orchestra-of-analysis-instruments)
@@ -253,6 +253,10 @@ or related to, the Scikit-HEP project.
 - **27 October 2021:** [Parsl & funcX Fest 2021](https://parsl-project.org/parslfest2021.html):
   - _Distributed statistical inference with pyhf powered by funcX_, Matthew Feickert
     \[[PDF](https://parsl-project.org/parslfest2021-files/feickert-pyhf.pdf)\]
+
+- **21 October 2021:** [Podcast at TalkPython\['Podcast'\]](https://talkpython.fm):
+  - _Using cibuildwheel to manage the Scikit-HEP packages_, Henry Schreiner
+    \[[link](https://talkpython.fm/episodes/show/338/using-cibuildwheel-to-manage-the-scikit-hep-packages)\]
 
 - **21 September 2021:** [ATLAS SUSY Workshop 2021](https://indico.cern.ch/event/1056428/):
   - _pyhf and cabinetry_, Alexander Held

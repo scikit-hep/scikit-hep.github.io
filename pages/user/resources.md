@@ -254,7 +254,7 @@ or related to, the Scikit-HEP project.
   - _Distributed statistical inference with pyhf powered by funcX_, Matthew Feickert
     \[[PDF](https://parsl-project.org/parslfest2021-files/feickert-pyhf.pdf)\]
 
-- **21 October 2021:** [Podcast at TalkPython['Podcast']](<[htl](https://talkpython.fm/)>):
+- **21 October 2021:** [Podcast at TalkPython\['Podcast'\]](https://talkpython.fm):
   - _Using cibuildwheel to manage the Scikit-HEP packages_, Henry Schreiner
     \[[link](https://talkpython.fm/episodes/show/338/using-cibuildwheel-to-manage-the-scikit-hep-packages)\]
 

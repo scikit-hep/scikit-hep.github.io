@@ -15,7 +15,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 ### Experimental Particle Physics
 
 - [Comput Softw Big Sci 9, 14 (2025)](https://doi.org/10.1007/s41781-025-00133-8) ([arxiv:2404.02100 [hep-ex]]
-(https://arxiv.org/abs/2404.02100)) - cites `uproot`.
+  (https://arxiv.org/abs/2404.02100)) - cites `uproot`.
 - [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
 - [Eur. Phys. J. C 85 3, 234 (2025)](https://doi.org/10.1140/epjc/s10052-024-13701-w) ([arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335)) - cites `awkward`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
 - [JHEP 09 (2024) 101](<https://doi.org/10.1007/JHEP09(2024)101>) ([arXiv:2404.14833 [hep-ph]](https://arxiv.org/abs/2404.14833)) - cites `uproot`.

@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**July 2025:** Package `numba-stats` joined Scikit-HEP.
+
 **May 2025:** Major release `formulate` 1.0.0.
 
 **May 2025:** Package `NNDrone` deprecated and archived.

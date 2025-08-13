@@ -1,0 +1,8 @@
+name: numba-stats
+description: Numba-accelerated statistical distributions.
+url: https://github.com/scikit-hep/numba-stats
+# docs: <url>
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: numba-stats

@@ -121,8 +121,6 @@ A list of publications citing the `pyhf` package or material using it is collect
 ## Conference proceedings and reports
 
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
-  [EPJ Web of Conferences 337, 01240 (2025)](https://doi.org/10.1051/epjconf/202533701240) - cites `awkward`, `vector`, Scikit-HEP project.
-- [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
   [arXiv:2502.18266 [cs.PL]](https://arxiv.org/abs/2502.18266) - cites `uproot`.
 - [SciPy 2024 Conference](https://www.scipy2024.scipy.org/), Tacoma, Washington, USA;
   [10.25080/KMXN4784](https://doi.org/10.25080/KMXN4784) - cites `awkward`, `boost-histogram`, `cabinetry`, `hist`, `iminuit`, `mplhep`, `pyhf`, `uproot`, Scikit-HEP project.

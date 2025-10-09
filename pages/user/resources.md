@@ -41,6 +41,10 @@ or related to, the Scikit-HEP project.
 
 ## Conference proceedings
 
+- _A new SymPy backend for Vector: Uniting experimental and theoretical physicists_,
+  S. Chopra, J. Pivarski
+  [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
+  [EPJ Web of Conferences 337, 01240 (2025)](https://doi.org/10.1051/epjconf/202533701240)
 - _Bayesian Methodologies with pyhf_,
   M. Feickert, L. Heinrich, M. Horstmann,
   [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;

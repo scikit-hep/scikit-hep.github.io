@@ -1,0 +1,8 @@
+name: mplhep_data
+description: Sub-package to hold data (fonts) for mplhep.
+url: https://github.com/scikit-hep/mplhep_data
+# affiliated: set to true for affiliated packages
+# repo: only if different from url
+badges:
+  pypi: mplhep_data
+  conda-forge: mplhep_data

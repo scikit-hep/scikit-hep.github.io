@@ -238,6 +238,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [Giuseppe Costantino (Rome U.), Jan. 2025](https://cds.cern.ch/record/2922235), LHCb experiment - cites `uproot`.
 - [Dan Thompson (Birmingham U.), Sep. 2024](https://inspirehep.net/literature/2860785), LHCb experiment - cites `hepstats`, Scikit-HEP project.
+- [Aidan Richard Wiederhold (Warwick U.), May 2024](https://repository.cern/records/dn2za-j4t11), LHCb experiment - cites `iminuit`.
 - [Amine Mahmoud Ben (Antwerp U.), May 2024](https://inspirehep.net/literature/2935424), FORMOSA experiment/demonstrator - cites `uproot`.
 - [Ethan Lewis Simpson (Glasgow U.), Apr. 2024](https://inspirehep.net/literature/2789867), ATLAS experiment - cites the Scikit-HEP project.
 - [Benjamin Couturier (Ferrara U.), Mar. 2024](https://inspirehep.net/literature/2788933), LHCb experiment - cites the Scikit-HEP project.

@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**October 2025:** Major release `pylhe` 1.0.0.
+
 **August 2025:** Major release `UHI` 1.0.0.
 
 **July 2025:** Package `numba-stats` joined Scikit-HEP.

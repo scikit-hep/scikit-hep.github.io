@@ -13,7 +13,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: v1.5.6
     hooks:
       - id: remove-crlf
       - id: forbid-tabs
@@ -35,7 +35,7 @@ repos:
         args: ["-L", "hist,sur,nd,theses,ser"]
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.7.4"
+    rev: "v3.8.0"
     hooks:
       - id: prettier
         types_or: [yaml, markdown, html, css, javascript, json]

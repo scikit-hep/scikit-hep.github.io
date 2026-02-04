@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**January 2026:** Major release `mplhep` 1.0.0.
+
 **October 2025:** Major release `pylhe` 1.0.0.
 
 **August 2025:** Major release `UHI` 1.0.0.

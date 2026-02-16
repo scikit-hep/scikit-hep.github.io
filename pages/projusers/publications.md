@@ -127,7 +127,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 - [MODE 2025 Conference](https://indico.cern.ch/event/1481852/), Kolymbari, Crete, Greece;
   [PoS MODE2025 (2026) 005](https://doi.org/10.22323/1.491.0005);
-  [arXiv:2508.17802 [hep-ex]]([htt66](https://arxiv.org/abs/2508.17802)) - cites `awkward`, `vector`, Scikit-HEP project.
+  [arXiv:2508.17802 [hep-ex]](https://arxiv.org/abs/2508.17802) - cites `awkward`, `vector`, Scikit-HEP project.
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
   [EPJ Web of Conferences 337, 01359 (2025)](https://doi.org/10.1051/epjconf/202533701359) - cites the Scikit-HEP project.
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;

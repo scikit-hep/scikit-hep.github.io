@@ -14,10 +14,12 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
+- [Eur. Phys. J. C 85 (2025) 1272](https://doi.org/10.1140/epjc/s10052-025-14682-0) ([arXiv:2505.13063 [hep-ex]](https://arxiv.org/abs/2505.13063)) - cites the Scikit-HEP project.
+- [JHEP 07 (2025) 198](<https://doi.org/10.1007/JHEP07(2025)198>) ([arXiv:2505.03483 [hep-ex]](https://arxiv.org/abs/2505.03483)) - cites `boost-histogram`, `Hist`, `mplhep`, `Particle`, `uproot`, Scikit-HEP project.
+- [Phys. Rev. D 112, 072009 (2025)](https://doi.org/10.1103/2yq5-vj59) ([arXiv:2502.09770 [hep-ex]](https://arxiv.org/abs/2502.09770)) - cites `pyhf`, Scikit-HEP project.
+- [JHEP 07 (2025) 270](<https://doi.org/10.1007/JHEP07(2025)270>) ([arXiv:2501.06142 [hep-ex]](https://arxiv.org/abs/2501.06142)) - cites the Scikit-HEP project.
 - [Comput Softw Big Sci 9, 14 (2025)](https://doi.org/10.1007/s41781-025-00133-8) ([arxiv:2404.02100 [hep-ex]](https://arxiv.org/abs/2404.02100)) - cites `uproot`.
-- [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
 - [Eur. Phys. J. C 85 3, 234 (2025)](https://doi.org/10.1140/epjc/s10052-024-13701-w) ([arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335)) - cites `awkward`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
-- [JHEP 09 (2024) 101](<https://doi.org/10.1007/JHEP09(2024)101>) ([arXiv:2404.14833 [hep-ph]](https://arxiv.org/abs/2404.14833)) - cites `uproot`.
 - [2024 JINST 19 P05065](https://doi.org/10.1088/1748-0221/19/05/P05065) ([arXiv:2305.10515 [hep-ex]](https://arxiv.org/abs/2305.10515)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 108, L111104 (2023)](https://doi.org/10.1103/PhysRevD.108.L111104) ([arXiv:2306.02830 [hep-ex]](https://arxiv.org/abs/2306.02830)) - cites the Scikit-HEP project.
 - [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
@@ -28,7 +30,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [Phys. Rev. D 113, 013004 (2026)](https://doi.org/10.1103/9757-h3f6) ([arXiv:2507.00262 [hep-ph]](https://arxiv.org/abs/2507.00262)) - cites the Scikit-HEP project.
+- [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
 - [Phys. Rev. D 110, 035029 (2024)](https://doi.org/10.1103/PhysRevD.110.035029) ([arXiv:2405.07330 [hep-ph]](https://arxiv.org/abs/2405.07330)) - cites the Scikit-HEP project.
+- [JHEP 09 (2024) 101](<https://doi.org/10.1007/JHEP09(2024)101>) ([arXiv:2404.14833 [hep-ph]](https://arxiv.org/abs/2404.14833)) - cites `uproot`.
 - [JHEP 06 (2024) 163](<https://doi.org/10.1007/JHEP06(2024)163>) ([arxiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 016010 (2024)](https://doi.org/10.1103/PhysRevD.109.016010) ([arXiv:2309.08604 [hep-ph]](https://arxiv.org/abs/2309.08604)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
@@ -120,6 +125,14 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## Conference proceedings and reports
 
+- [MODE 2025 Conference](https://indico.cern.ch/event/1481852/), Kolymbari, Crete, Greece;
+  [PoS MODE2025 (2026) 005](https://doi.org/10.22323/1.491.0005);
+  [arXiv:2508.17802 [hep-ex]](https://arxiv.org/abs/2508.17802) - cites `awkward`, `vector`, Scikit-HEP project.
+- [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
+  [EPJ Web of Conferences 337, 01359 (2025)](https://doi.org/10.1051/epjconf/202533701359) - cites the Scikit-HEP project.
+- [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
+  [EPJ Web of Conferences 337, 01293 (2025)](https://doi.org/10.1051/epjconf/202533701293);
+  [arXiv:2502.21133 [hep-ex]](https://arxiv.org/abs/2502.21133) - cites the Scikit-HEP project.
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
   [arXiv:2502.18266 [cs.PL]](https://arxiv.org/abs/2502.18266) - cites `uproot`.
 - [SciPy 2024 Conference](https://www.scipy2024.scipy.org/), Tacoma, Washington, USA;
@@ -182,11 +195,10 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [arXiv:2505.03483 [hep-ex]](https://arxiv.org/abs/2505.03483) - cites `boost-histogram`, `Hist`, `mplhep`, `Particle`, `uproot`, Scikit-HEP project.
+- [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
 - [arXiv:2504.01050 [hep-ex]](https://arxiv.org/abs/2504.01050) - cites the Scikit-HEP project.
 - [arXiv:2503.15464 [hep-ex]](https://arxiv.org/abs/2503.15464) - cites `awkward`, `Coffea`, `uproot`, Scikit-HEP project.
-- [arXiv:2502.09770 [hep-ex]](https://arxiv.org/abs/2502.09770) - cites `pyhf`, Scikit-HEP project.
-- [arXiv:2501.06142 [hep-ex]](https://arxiv.org/abs/2501.06142) - cites the Scikit-HEP project.
+- [ATLAS-CONF-2024-014](https://cds.cern.ch/record/2911642) - cites the Scikit-HEP project.
 - [arXiv:2404.02100 [hep-ex]](https://arxiv.org/abs/2404.02100) - cites `uproot`.
 - [arXiv:2302.01317 [hep-ex]](https://arxiv.org/abs/2302.01317) - cites `awkward`, `boost-histogram`, `cabinetry`, `pyhf`, `uproot`, Scikit-HEP project.
 - [arXiv:2212.04889 [hep-ex]](https://arxiv.org/abs/2212.04889) - cites `pyhf`, `uproot`, Scikit-HEP project.
@@ -195,6 +207,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [arXiv:2602.06895 [hep-ph]](https://arxiv.org/abs/2602.06895) - cites the Scikit-HEP project.
+- [arXiv:2511.08359 [hep-ph]](https://arxiv.org/abs/2511.08359) - cites the Scikit-HEP project.
 - [arXiv:2409.06651 [hep-ph]](https://arxiv.org/abs/2409.06651) - cites `pylhe`.
 - [arXiv:2405.11271 [hep-ph]](https://arxiv.org/abs/2405.11271) - cites `pylhe`.
 - [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
@@ -236,6 +250,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
+- [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.
+- [Lukas Bierwirth (Munich, Tech. U.), Sep. 2025](https://inspirehep.net/literature/2971748), Belle-II experiment - cites `iminuit`, Scikit-HEP project.
 - [Giuseppe Costantino (Rome U.), Jan. 2025](https://cds.cern.ch/record/2922235), LHCb experiment - cites `uproot`.
 - [Dan Thompson (Birmingham U.), Sep. 2024](https://inspirehep.net/literature/2860785), LHCb experiment - cites `hepstats`, Scikit-HEP project.
 - [Aidan Richard Wiederhold (Warwick U.), May 2024](https://repository.cern/records/dn2za-j4t11), LHCb experiment - cites `iminuit`.

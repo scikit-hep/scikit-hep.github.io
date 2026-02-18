@@ -32,7 +32,7 @@ repos:
     hooks:
       - id: codespell
         exclude: (^Gemfile\.lock|\.svg)$
-        args: ["-L", "hist,sur,nd,theses,ser"]
+        args: ["-L", "hist,sur,nd,theses,ser,Commun"]
 
   - repo: https://github.com/rbubley/mirrors-prettier
     rev: "v3.8.1"

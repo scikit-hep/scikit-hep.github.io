@@ -1,0 +1,5 @@
+name: hypothesis-awkward
+description: Hypothesis strategies for Awkward Array
+url: https://github.com/scikit-hep/hypothesis-awkward
+badges:
+  pypi: hypothesis-awkward

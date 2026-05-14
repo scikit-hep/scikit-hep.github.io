@@ -268,6 +268,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ## PhD theses
 
+Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) cite the `pyhf` package (list seen [here](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=refersto%3Arecid%3A1845084&doc_type=thesis)).
+
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.
 - [Lukas Bierwirth (Munich, Tech. U.), Sep. 2025](https://inspirehep.net/literature/2971748), Belle-II experiment - cites `iminuit`, Scikit-HEP project.
 - [Rikab Gambhir (MIT), May 2025](https://inspirehep.net/literature/3091641), phenomenology/theory - cites `awkward`.
@@ -279,15 +281,13 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [Amine Mahmoud Ben (Antwerp U.), May 2024](https://inspirehep.net/literature/2935424), FORMOSA experiment/demonstrator - cites `uproot`.
 - [Ethan Lewis Simpson (Glasgow U.), Apr. 2024](https://inspirehep.net/literature/2789867), ATLAS experiment - cites the Scikit-HEP project.
 - [Benjamin Couturier (Ferrara U.), Mar. 2024](https://inspirehep.net/literature/2788933), LHCb experiment - cites the Scikit-HEP project.
-- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`, `iminuit`, `mplhep`, `Particle`, `scikit-hep`, `uproot`, `zfit`.
+- [Jonas Eschle (Zurich U.), Jan. 2024](https://inspirehep.net/literature/2759930), LHCb experiment - cites `boost_histogram`, `hepstats`, `hepunits`, `hist`, `iminuit`, `mplhep`, `Particle`, `pyhf`, `scikit-hep`, `uproot`, `zfit`, Scikit-HEP project.
 - [Sascha Simon Dreyer (Hamburg U.), Dec. 2023](https://inspirehep.net/literature/2767954), Belle-II experiment - cites `hepstats`, Scikit-HEP project.
 - [Andrzej Novák (RWTH Aachen U.), Dec. 2023](https://inspirehep.net/literature/2769087), CMS experiment - cites `awkward`, `hist`, `mplhep`, `uproot`, Scikit-HEP project.
 - [Vidya Sagar Vobbilisetti (IJCLab, Paris-Saclay U), Oct. 2023](https://theses.hal.science/tel-04306669), Belle (II) experiment - cites `DecayLanguage`, `hepstats`.
 - [Davide Zuliani (Padova U.), Sep. 2023](https://inspirehep.net/literature/2766802), LHCb experiment - cites the Scikit-HEP project.
-- [Nathan Simpson (Lund U.), Jan. 2023](https://inspirehep.net/literature/2649074), ATLAS experiment - cites `pyhf`.
 - [Robin Newhouse (British Columbia U.), Dec. 2022](https://inspirehep.net/literature/2623499), ATLAS experiment - cites the Scikit-HEP project.
 - [Tommaso Diotalevi (Bologna U. and INFN Bologna), May 2022](https://inspirehep.net/literature/2168761), CMS experiment - cites `awkward`.
-- [Audrey Kvam (Washington U.), Apr. 2022](https://inspirehep.net/literature/2086276), ATLAS experiment - cites `pyhf`.
 - [Lukas Layer (Naples U.), Apr. 2022](https://inspirehep.net/literature/2683469), CMS experiment - cites `awkward`.
 - [Lucas Santiago Borgna (University College London), Mar. 2022](https://inspirehep.net/literature/2085649), ATLAS experiment - cites `pyhf`.
 - [Chan Kim (George Washington U.), Jan. 2022](https://inspirehep.net/literature/2004225), CLAS experiment - cites `awkward`.

@@ -14,16 +14,21 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
-- [Eur. Phys. J. C 85 (2025) 1272](https://doi.org/10.1140/epjc/s10052-025-14682-0) ([arXiv:2505.13063 [hep-ex]](https://arxiv.org/abs/2505.13063)) - cites the Scikit-HEP project.
+- [Eur. Phys. J. C 85, 1272 (2025)](https://doi.org/10.1140/epjc/s10052-025-14682-0) ([arXiv:2505.13063 [hep-ex]](https://arxiv.org/abs/2505.13063)) - cites the Scikit-HEP project.
 - [JHEP 07 (2025) 198](<https://doi.org/10.1007/JHEP07(2025)198>) ([arXiv:2505.03483 [hep-ex]](https://arxiv.org/abs/2505.03483)) - cites `boost-histogram`, `Hist`, `mplhep`, `Particle`, `uproot`, Scikit-HEP project.
 - [Eur. Phys. J. C 85, 1142 (2025)](https://doi.org/10.1140/epjc/s10052-025-14571-6) ([arXiv:2504.01050 [hep-ex]](https://arxiv.org/abs/2504.01050)) - cites the Scikit-HEP project.
+- [Eur. Phys. J. C 85, 846 (2025)](https://doi.org/10.1140/epjc/s10052-025-14574-3) ([arXiv:2503.07289 [hep-ex]](https://arxiv.org/abs/2503.07289)) - cites `pyBumpHunter`.
 - [Phys. Rev. D 112, 072009 (2025)](https://doi.org/10.1103/2yq5-vj59) ([arXiv:2502.09770 [hep-ex]](https://arxiv.org/abs/2502.09770)) - cites `pyhf`, Scikit-HEP project.
 - [JHEP 07 (2025) 270](<https://doi.org/10.1007/JHEP07(2025)270>) ([arXiv:2501.06142 [hep-ex]](https://arxiv.org/abs/2501.06142)) - cites the Scikit-HEP project.
+- [Phys. Rev. Lett. 134, 151801 (2025)](https://doi.org/10.1103/PhysRevLett.134.151801) ([arXiv:2411.02727 [hep-ex]](https://arxiv.org/abs/2411.02727)) - cites `pyBumpHunter`.
 - [Comput. Phys. Commun. 316 (2025) 109799](https://doi.org/10.1016/j.cpc.2025.109799) ([arxiv:2406.01745 [hep-ex]](https://arxiv.org/abs/2406.01745)) - cites `awkward`.
 - [Comput. Softw. Big Sci. 9, 14 (2025)](https://doi.org/10.1007/s41781-025-00133-8) ([arxiv:2404.02100 [hep-ex]](https://arxiv.org/abs/2404.02100)) - cites `uproot`.
 - [Eur. Phys. J. C 85, 234 (2025)](https://doi.org/10.1140/epjc/s10052-024-13701-w) ([arXiv:2404.06335 [hep-ex]](https://arxiv.org/abs/2404.06335)) - cites `awkward`, `boost-histogram`, `Hist`, `iminuit`, `pyhf`, `uproot`, Scikit-HEP project.
+- [Phys. Rev. D 110, 032002 (2024)](https://doi.org/10.1103/PhysRevD.110.032002) ([arXiv:2403.08547 [hep-ex]](https://arxiv.org/abs/2403.08547)) - cites `pyBumpHunter`.
 - [Comput. Softw. Big Sci. 7, 9 (2023)](https://doi.org/10.1007/s41781-023-00103-y) ([arxiv:2308.12724 [hep-ex]](https://arxiv.org/abs/2308.12724)) - cites `awkward`.
+- [Phys. Rev. D 108, 112005 (2023)](https://doi.org/10.1103/PhysRevD.108.112005) ([arXiv:2307.14944 [hep-ex]](https://arxiv.org/abs/2307.14944)) - cites `pyBumpHunter`.
 - [Phys. Rev. D 108, L111104 (2023)](https://doi.org/10.1103/PhysRevD.108.L111104) ([arXiv:2306.02830 [hep-ex]](https://arxiv.org/abs/2306.02830)) - cites the Scikit-HEP project.
+- [Eur. Phys. J. C 83, 1008 (2023)](https://doi.org/10.1140/epjc/s10052-023-12169-4) ([arXiv:2305.15179 [hep-ex]](https://arxiv.org/abs/2305.15179)) - cites `pyBumpHunter`.
 - [2024 JINST 19 P05065](https://doi.org/10.1088/1748-0221/19/05/P05065) ([arXiv:2305.10515 [hep-ex]](https://arxiv.org/abs/2305.10515)) - cites the Scikit-HEP project.
 - [Scientific Data 9, 31 (2022)](https://doi.org/10.1038/s41597-021-01109-0) ([arXiv:2108.02214 [hep-ex]](https://arxiv.org/abs/2108.02214)) - cites `awkward` and `uproot`.
 - [LHCb Collaboration, JHEP 01 (2022) 166](<https://doi.org/10.1007/JHEP01(2022)166>) ([arXiv:2107.10090 [hep-ex]](https://arxiv.org/abs/2107.10090)), first LHCb analysis performed fully in Python with standard scientific packages and Scikit-HEP packages - cites `boost-histogram`, `iminuit`, `Particle`, `uproot`.
@@ -33,11 +38,12 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Particle Physics Phenomenology
 
+- [Phys. Rev. C 112, 064906 (2025)](https://doi.org/10.1103/dqnx-1fqk) ([arXiv:2507.14036 [hep-ph]](https://arxiv.org/abs/2507.14036)) - cites `fastjet`.
 - [Phys. Rev. D 113, 013004 (2026)](https://doi.org/10.1103/9757-h3f6) ([arXiv:2507.00262 [hep-ph]](https://arxiv.org/abs/2507.00262)) - cites the Scikit-HEP project.
 - [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
 - [Phys. Rev. D 110, 035029 (2024)](https://doi.org/10.1103/PhysRevD.110.035029) ([arXiv:2405.07330 [hep-ph]](https://arxiv.org/abs/2405.07330)) - cites the Scikit-HEP project.
 - [JHEP 09 (2024) 101](<https://doi.org/10.1007/JHEP09(2024)101>) ([arXiv:2404.14833 [hep-ph]](https://arxiv.org/abs/2404.14833)) - cites `uproot`.
-- [JHEP 06 (2024) 163](<https://doi.org/10.1007/JHEP06(2024)163>) ([arxiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714)) - cites the Scikit-HEP project.
+- [JHEP 06 (2024) 163](<https://doi.org/10.1007/JHEP06(2024)163>) ([arxiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714)) - cites `pyBumpHunter`, the Scikit-HEP project.
 - [Phys. Rev. D 109, 016010 (2024)](https://doi.org/10.1103/PhysRevD.109.016010) ([arXiv:2309.08604 [hep-ph]](https://arxiv.org/abs/2309.08604)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
 - [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
@@ -97,6 +103,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Astronomy, Astrophysics and Cosmology
 
+- [Monthly Notices of the Royal Astronomical Society, Volume 544, Issue 4, Dec. 2025, Pages 4288-4305](https://doi.org/10.1093/mnras/staf2004) ([arXiv:2508.03569 [astro-ph.GA]](https://arxiv.org/abs/2508.03569)) - cites `pyBumpHunter`.
 - [A&A 691, A328 (2024)](https://doi.org/10.1051/0004-6361/202450889) ([arXiv:2410.16042 [astro-ph.HE]](https://arxiv.org/abs/2410.16042)) - cites `iminuit`.
 - [A&A 660, A18 (2022)](https://doi.org/10.1051/0004-6361/202142000) ([arXiv:2112.14573 [astro-ph.IM]](https://arxiv.org/abs/2112.14573)) - cites `iminuit`.
 - [Phys. Rev. D 105, 063028 (2022)](https://doi.org/10.1103/PhysRevD.105.063028) ([arXiv:2110.03679 [astro-ph.HE]](https://arxiv.org/abs/2110.03679)) - cites `iminuit`.
@@ -132,6 +139,8 @@ A list of publications citing the `pyhf` package or material using it is collect
 - [MODE 2025 Conference](https://indico.cern.ch/event/1481852/), Kolymbari, Crete, Greece;
   [PoS MODE2025 (2026) 005](https://doi.org/10.22323/1.491.0005);
   [arXiv:2508.17802 [hep-ex]](https://arxiv.org/abs/2508.17802) - cites `awkward`, `Vector`, Scikit-HEP project.
+- [Machine Learning and the Physical Sciences: Workshop at NeurIPS 2024 (ML4PS 2024)](https://ml4physicalsciences.github.io/2024/), Vancouver, BC, Canada;
+  [arXiv:2412.05333 [hep-ph]](https://arxiv.org/abs/2412.05333) - cites `fastjet`.
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
   [EPJ Web of Conferences 337, 01359 (2025)](https://doi.org/10.1051/epjconf/202533701359) - cites the Scikit-HEP project.
 - [CHEP 2024 Conference](https://indico.cern.ch/event/1338689/), Krakow, Poland;
@@ -214,6 +223,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 ### Experimental Particle Physics
 
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
+- [arXiv:2508.13566 [hep-ex]](https://arxiv.org/abs/2508.13566) - cites `pyBumpHunter`.
 - [ATLAS-CONF-2024-014](https://cds.cern.ch/record/2911642) - cites the Scikit-HEP project.
 - [arXiv:2404.02100 [hep-ex]](https://arxiv.org/abs/2404.02100) - cites `uproot`.
 - [arXiv:2302.01317 [hep-ex]](https://arxiv.org/abs/2302.01317) - cites `awkward`, `boost-histogram`, `cabinetry`, `pyhf`, `uproot`, Scikit-HEP project.
@@ -273,10 +283,12 @@ Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) 
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.
 - [Lukas Bierwirth (Munich, Tech. U.), Sep. 2025](https://inspirehep.net/literature/2971748), Belle-II experiment - cites `iminuit`, Scikit-HEP project.
 - [Rikab Gambhir (MIT), May 2025](https://inspirehep.net/literature/3091641), phenomenology/theory - cites `awkward`.
+- [Francisco Sili (La Plata U.), Mar. 2025](https://inspirehep.net/literature/2916331), ATLAS experiment - cites `pyBumpHunter`.
 - [Giuseppe Costantino (Rome U.), Jan. 2025](https://cds.cern.ch/record/2922235), LHCb experiment - cites `uproot`.
 - [Massimiliano Galli (ETH Zurich), Dec. 2024](https://inspirehep.net/literature/2877945), CMS experiment - cites `awkward`, `coffea`.
 - [Dan Thompson (Birmingham U.), Sep. 2024](https://inspirehep.net/literature/2860785), LHCb experiment - cites `hepstats`, Scikit-HEP project.
 - [Annika Stein (RWTH Aachen U.), Jun. 2024](https://inspirehep.net/literature/2843029), CMS experiment - cites `awkward`, `coffea`, `uproot`.
+- [Gray Louis Campbell Putnam (Chicago U.), Jun. 2024](https://inspirehep.net/literature/2813469), ICARUS experiment - cites `pyBumpHunter`.
 - [Aidan Richard Wiederhold (Warwick U.), May 2024](https://repository.cern/records/dn2za-j4t11), LHCb experiment - cites `iminuit`.
 - [Amine Mahmoud Ben (Antwerp U.), May 2024](https://inspirehep.net/literature/2935424), FORMOSA experiment/demonstrator - cites `uproot`.
 - [Ethan Lewis Simpson (Glasgow U.), Apr. 2024](https://inspirehep.net/literature/2789867), ATLAS experiment - cites the Scikit-HEP project.

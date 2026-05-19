@@ -8,7 +8,8 @@ parent: Who uses Scikit-HEP?
 
 {% include toc.html %}
 
-A list of publications citing the `pyhf` package or material using it is collected at <https://scikit-hep.org/pyhf/citations.html#use-in-publications>.
+A list of publications citing the `pyhf` package or material using it is collected at <https://scikit-hep.org/pyhf/citations.html#use-in-publications>;
+over 220 publications cite its JOSS paper (list from [here](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=refersto%3Arecid%3A1845084)).
 
 ## Peer reviewed journal papers
 
@@ -222,6 +223,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Experimental Particle Physics
 
+- [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
 - [arXiv:2508.13566 [hep-ex]](https://arxiv.org/abs/2508.13566) - cites `pyBumpHunter`.
 - [ATLAS-CONF-2024-014](https://cds.cern.ch/record/2911642) - cites the Scikit-HEP project.
@@ -250,6 +252,7 @@ A list of publications citing the `pyhf` package or material using it is collect
 
 ### Astronomy, Astrophysics and Cosmology
 
+- [arXiv:2604.01850 [astro-ph.IM]](https://arxiv.org/abs/2604.01850) - cites `boost-histogram`, `mplhep`, `Particle`.
 - [arXiv:2112.01828 [astro-ph.IM]](https://arxiv.org/abs/2112.01828) - cites `uproot`.
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - cites `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
@@ -282,6 +285,7 @@ Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) 
 
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.
 - [Lukas Bierwirth (Munich, Tech. U.), Sep. 2025](https://inspirehep.net/literature/2971748), Belle-II experiment - cites `iminuit`, Scikit-HEP project.
+- [Jacan Chaplais (Southampton U.), Jul. 2025](https://eprints.soton.ac.uk/502649/), Computer Science - cites `numpythia`, `Particle`, `Vector`, Scikit-HEP project.
 - [Rikab Gambhir (MIT), May 2025](https://inspirehep.net/literature/3091641), phenomenology/theory - cites `awkward`.
 - [Francisco Sili (La Plata U.), Mar. 2025](https://inspirehep.net/literature/2916331), ATLAS experiment - cites `pyBumpHunter`.
 - [Giuseppe Costantino (Rome U.), Jan. 2025](https://cds.cern.ch/record/2922235), LHCb experiment - cites `uproot`.

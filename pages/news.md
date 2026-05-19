@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**May 2026:** [Scientific Python][] blog post ["mplhep: matplotlib for particle physics"](https://blog.scientific-python.org/introducing-mplhep/).
+
 **March 2026:** Package `hypothesis-awkward` joined Scikit-HEP.
 
 **January 2026:** Major release `mplhep` 1.0.0.
@@ -227,6 +229,7 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [Training Working Group]: https://hepsoftwarefoundation.org/workinggroups/training.html
 [Scientific Python Ecosystem Coordination Core Projects]: https://scientific-python.org/specs/core-projects/
 [Scientific Python Development Guide]: https://learn.scientific-python.org/development
+[Scientific Python]: https://scientific-python.org
 [scikit-hep PyPI organisation]: https://pypi.org/org/scikit-hep/
 [`cookie`]: https://github.com/scientific-python/cookie
 [`repo-review`]: https://repo-review.readthedocs.io

@@ -175,6 +175,8 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [CHEP 2023 Conference](https://www.jlab.org/conference/CHEP2023), Norfolk, USA;
   [EPJ Web of Conferences 295, 04006 (2024)](https://doi.org/10.1051/epjconf/202429504006) - cites the Scikit-HEP project.
 - [ACAT 2022 Workshop](https://indico.cern.ch/event/1106990/), Bari, Italy;
+  [J. Phys. Conf. Ser. 3206 (2026), 012002](https://doi.org/10.1088/1742-6596/3206/1/012002) - cites `awkward`, Scikit-HEP project.
+- [ACAT 2022 Workshop](https://indico.cern.ch/event/1106990/), Bari, Italy;
   [arXiv:2303.02202 [hep-ex]](https://arxiv.org/abs/2303.02202) - cites `awkward`, `uproot`.
 - [41st International Conference on High Energy Physics (ICHEP 2022)](http://www.ichep2022.it/), Bologna, Italy;
   [PoS ICHEP2022 (2022) 235](https://doi.org/10.22323/1.414.0235) - cites `awkward`, `boost-histogram`, `cabinetry`, `Hist`, `pyhf`, `uproot`, Scikit-HEP project.
@@ -223,6 +225,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Experimental Particle Physics
 
+- [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, the Scikit-HEP project.
 - [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
 - [arXiv:2508.13566 [hep-ex]](https://arxiv.org/abs/2508.13566) - cites `pyBumpHunter`.
@@ -236,6 +239,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 ### Particle Physics Phenomenology
 
 - [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites the Scikit-HEP project.
+- [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites `uproot`, `awkward`, the Scikit-HEP project.
 - [arXiv:2602.06895 [hep-ph]](https://arxiv.org/abs/2602.06895) - cites the Scikit-HEP project.
 - [arXiv:2512.04149 [hep-ph]](https://arxiv.org/abs/2512.04149) - cites `awkward`, `fastjet`, `Vector`.
 - [arXiv:2511.08359 [hep-ph]](https://arxiv.org/abs/2511.08359) - cites the Scikit-HEP project.
@@ -283,8 +287,13 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) cite the `pyhf` package (list seen [here](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=refersto%3Arecid%3A1845084&doc_type=thesis)).
 
+- [Lars Kolk (Tech. U., Dortmund), Feb. 2026](https://inspirehep.net/literature/3156976), LHCb experiment - cites `awkward`, `boost-histogram`, `iminuit`, `numba-stats`, `Particle`, `uproot`, `Vector`, Scikit-HEP project.
+- [Frederic Renner (Humboldt U., Berlin), Jan. 2026](https://inspirehep.net/literature/3103537), ATLAS experiment - cites `cabinetry`, `pyhf`.
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.
+- [Tommy Martinov (U. Hamburg), Sep. 2025](https://inspirehep.net/literature/3063854), Belle-II experiment - cites `cabinetry`, `pyhf`.
 - [Lukas Bierwirth (Munich, Tech. U.), Sep. 2025](https://inspirehep.net/literature/2971748), Belle-II experiment - cites `iminuit`, Scikit-HEP project.
+- [Mason Proffitt (U. Washington, Seattle), Aug. 2025](https://inspirehep.net/literature/2970331), ATLAS experiment - cites `awkward`, `coffea`, `pyhf`, `uproot`.
+- [Anselm Baur (U. Hamburg), Jul. 2025](https://inspirehep.net/literature/2965435), Belle II experiment - cites `cabinetry`, `pyhf`, `uproot`.
 - [Jacan Chaplais (Southampton U.), Jul. 2025](https://eprints.soton.ac.uk/502649/), Computer Science - cites `numpythia`, `Particle`, `Vector`, Scikit-HEP project.
 - [Rikab Gambhir (MIT), May 2025](https://inspirehep.net/literature/3091641), phenomenology/theory - cites `awkward`.
 - [Francisco Sili (La Plata U.), Mar. 2025](https://inspirehep.net/literature/2916331), ATLAS experiment - cites `pyBumpHunter`.

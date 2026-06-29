@@ -42,14 +42,14 @@ Python Software Foundation and provides a consistent style across many
 different packages. For special cases, you can disable formatting for that
 line/section only. It is also recommended that you use pre-commit to control
 these checks with a standard interface. See [Style]({% link
-pages/developers/style.md %}) for details.
+) for details.
 
 ### Tests and continuous integration (required)
 
 A reasonable test suite is a requirement, and it is desirable to achieve high
 coverage. We require at least some tests, with [pytest][] being our recommended framework.
 You should run your tests in CI; see [our GitHub Actions (GHA) page]({% link
-pages/developers/gha_basic.md %}) for a simple introduction to setting up CI.
+) for a simple introduction to setting up CI.
 
 ### Packaging (required)
 
@@ -76,7 +76,7 @@ Except in special circumstances, you must provide SDists and wheels on PyPI.
 This also means your package must be "installable", and therefore should be
 using a [PEP 517][] compliant packaging framework. Since many Scikit-HEP packages
 have [a binary component]({% link
-pages/developers/gha_wheels.md %}), we recommend setuptools. It is highly recommended you
+), we recommend setuptools. It is highly recommended you
 automate the building and uploading process so that other Scikit-HEP admins can
 make emergency (patch) releases if the need arises; non-standard/non-trivial
 processes should be avoided and documented if unavoidable.

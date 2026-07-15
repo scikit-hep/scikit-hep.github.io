@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**July 2026:** Major release `pylhe` 2.0.0.
+
 **June 2026:** Major releases `Particle` and `DecayLanguage` 1.0.0.
 
 **May 2026:** [Scientific Python][] blog post ["mplhep: matplotlib for particle physics"](https://blog.scientific-python.org/introducing-mplhep/).

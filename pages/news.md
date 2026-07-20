@@ -5,7 +5,9 @@ permalink: /news/
 nav_order: 2
 ---
 
-**July 2026:** Major release `pylhe` 2.0.0. Package `histserv` joined Scikit-HEP.
+**July 2026:** Package `HistServ` joined Scikit-HEP.
+
+**July 2026:** Major release `pylhe` 2.0.0.
 
 **June 2026:** Major releases `Particle` and `DecayLanguage` 1.0.0.
 

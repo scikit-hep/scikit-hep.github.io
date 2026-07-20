@@ -1,5 +1,5 @@
-name: histserv
-description: histserv provides a gRPC (+ Python client) implementation for histogramming-as-a-service.
+name: HistServ
+description: HistServ provides a gRPC (+ Python client) implementation for histogramming-as-a-service.
 url: https://github.com/scikit-hep/histserv
 # docs:
 # affiliated: set to true for affiliated packages

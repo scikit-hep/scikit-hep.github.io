@@ -1,5 +1,6 @@
 name: histoprint
-description: Histoprint nicely displays histograms in the terminal.
+projlogo: /assets/images/projlogo/logo_histoprint.png
+description: Pretty print histograms to the console.
 url: https://github.com/scikit-hep/histoprint
 # docs:
 # affiliated: set to true for affiliated packages

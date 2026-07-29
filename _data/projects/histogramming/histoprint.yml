@@ -1,4 +1,5 @@
 name: histoprint
+projlogo: /assets/images/projlogo/logo_histoprint.png
 description: Histoprint nicely displays histograms in the terminal.
 url: https://github.com/scikit-hep/histoprint
 # docs:

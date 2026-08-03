@@ -44,9 +44,12 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [Phys. Rev. C 112, 064906 (2025)](https://doi.org/10.1103/dqnx-1fqk) ([arXiv:2507.14036 [hep-ph]](https://arxiv.org/abs/2507.14036)) - cites `fastjet`.
 - [Phys. Rev. D 113, 013004 (2026)](https://doi.org/10.1103/9757-h3f6) ([arXiv:2507.00262 [hep-ph]](https://arxiv.org/abs/2507.00262)) - cites the Scikit-HEP project.
 - [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
+- [JHEP 04 (2025) 094](<https://doi.org/10.1007/JHEP04(2025)094>) ([arXiv:2409.06651 [hep-ph]](https://arxiv.org/abs/2409.06651)) - cites `pylhe`.
 - [Phys. Rev. D 110, 035029 (2024)](https://doi.org/10.1103/PhysRevD.110.035029) ([arXiv:2405.07330 [hep-ph]](https://arxiv.org/abs/2405.07330)) - cites the Scikit-HEP project.
 - [JHEP 09 (2024) 101](<https://doi.org/10.1007/JHEP09(2024)101>) ([arXiv:2404.14833 [hep-ph]](https://arxiv.org/abs/2404.14833)) - cites `uproot`.
+- [Phys. Rev. D 110, 09201 (2024)](https://doi.org/10.1103/PhysRevD.110.092016) ([arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336)) - cites `pylhe`.
 - [JHEP 06 (2024) 163](<https://doi.org/10.1007/JHEP06(2024)163>) ([arxiv:2402.17714 [hep-ph]](https://arxiv.org/abs/2402.17714)) - cites `pyBumpHunter`, the Scikit-HEP project.
+- [JHEP 05 (2024) 094](<https://doi.org/10.1007/JHEP05(2024)094>) ([arxiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168)) - cites `pylhe`.
 - [Phys. Rev. D 109, 016010 (2024)](https://doi.org/10.1103/PhysRevD.109.016010) ([arXiv:2309.08604 [hep-ph]](https://arxiv.org/abs/2309.08604)) - cites the Scikit-HEP project.
 - [Phys. Rev. D 109, 014040 (2024)](https://doi.org/10.1103/PhysRevD.109.014040) ([arXiv:2306.01578 [hep-ph]](https://arxiv.org/abs/2306.01578)) - cites the Scikit-HEP project.
 - [Eur. Phys. J. C 84, 366 (2024)](https://doi.org/10.1140/epjc/s10052-024-12722-9) ([arXiv:2312.04646 [hep-ph]](https://arxiv.org/abs/2312.04646)) - cites `pylhe`.
@@ -246,10 +249,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [arXiv:2512.04149 [hep-ph]](https://arxiv.org/abs/2512.04149) - cites `awkward`, `fastjet`, `Vector`.
 - [arXiv:2511.08359 [hep-ph]](https://arxiv.org/abs/2511.08359) - cites the Scikit-HEP project.
 - [arXiv:2511.07599 [hep-ph]](https://arxiv.org/abs/2511.07599) - cites `pylhe`.
-- [arXiv:2409.06651 [hep-ph]](https://arxiv.org/abs/2409.06651) - cites `pylhe`.
 - [arXiv:2405.11271 [hep-ph]](https://arxiv.org/abs/2405.11271) - cites `pylhe`.
-- [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.
-- [arXiv:2401.03168 [hep-ph]](https://arxiv.org/abs/2401.03168) - cites `pylhe`.
 - [arXiv:2207.10756 [hep-ph]](https://arxiv.org/abs/2207.10756) - cites `pyhf`.
 - [arXiv:2207.04137 [hep-ph]](https://arxiv.org/abs/2207.04137) - cites `Particle`, `pyhepmc`, Scikit-HEP project.
 - [arXiv:2205.09137 [hep-ph]](https://arxiv.org/abs/2205.09137) - cites `pylhe`, `Vector`, Scikit-HEP project.

@@ -230,7 +230,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Experimental Particle Physics
 
-- [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, the Scikit-HEP project.
+- [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, Scikit-HEP project.
 - [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
 - [arXiv:2508.13566 [hep-ex]](https://arxiv.org/abs/2508.13566) - cites `pyBumpHunter`.
@@ -244,7 +244,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 ### Particle Physics Phenomenology
 
 - [arXiv:2607.04481 [hep-ph]](https://arxiv.org/abs/2607.04481) - cites `iminuit`.
-- [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites `uproot`, `awkward`, the Scikit-HEP project.
+- [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites `uproot`, `awkward`, Scikit-HEP project.
 - [arXiv:2602.06895 [hep-ph]](https://arxiv.org/abs/2602.06895) - cites the Scikit-HEP project.
 - [arXiv:2512.04149 [hep-ph]](https://arxiv.org/abs/2512.04149) - cites `awkward`, `fastjet`, `Vector`.
 - [arXiv:2511.08359 [hep-ph]](https://arxiv.org/abs/2511.08359) - cites the Scikit-HEP project.
@@ -290,6 +290,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) cite the `pyhf` package (list seen [here](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=refersto%3Arecid%3A1845084&doc_type=thesis)).
 
+- [Tommy Lam (Virginia Tech., Blacksburg), Jun. 2026](https://inspirehep.net/literature/3179449), Belle II experiment - cites `iminuit`, `pyhf`, Scikit-HEP project.
 - [Lars Kolk (Tech. U., Dortmund), Feb. 2026](https://inspirehep.net/literature/3156976), LHCb experiment - cites `awkward`, `boost-histogram`, `iminuit`, `numba-stats`, `Particle`, `uproot`, `Vector`, Scikit-HEP project.
 - [Frederic Renner (Humboldt U., Berlin), Jan. 2026](https://inspirehep.net/literature/3103537), ATLAS experiment - cites `cabinetry`, `pyhf`.
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.

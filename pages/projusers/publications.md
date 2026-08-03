@@ -39,6 +39,8 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Particle Physics Phenomenology
 
+- [Phys. Scr. 101 231501 (2026)](https://doi.org/10.1088/1402-4896/ae7772) ([arXiv:2603.01489 [hep-ph]](https://arxiv.org/abs/2603.01489)) - cites `pylhe`.
+- [Phys. Rev. D 112, 114046 (2025)](https://doi.org/10.1103/lyh6-727b) ([arXiv:2508.15073 [hep-ph]](https://arxiv.org/abs/2508.15073)) - cites `iminuit`.
 - [Phys. Rev. C 112, 064906 (2025)](https://doi.org/10.1103/dqnx-1fqk) ([arXiv:2507.14036 [hep-ph]](https://arxiv.org/abs/2507.14036)) - cites `fastjet`.
 - [Phys. Rev. D 113, 013004 (2026)](https://doi.org/10.1103/9757-h3f6) ([arXiv:2507.00262 [hep-ph]](https://arxiv.org/abs/2507.00262)) - cites the Scikit-HEP project.
 - [JHEP 04 (2025) 024](<https://doi.org/10.1007/JHEP04(2025)024>) ([arXiv:2412.08212 [hep-ph]](https://arxiv.org/abs/2412.08212)) - cites `uproot`.
@@ -238,11 +240,12 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Particle Physics Phenomenology
 
-- [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites the Scikit-HEP project.
+- [arXiv:2607.04481 [hep-ph]](https://arxiv.org/abs/2607.04481) - cites `iminuit`.
 - [arXiv:2603.14553 [hep-ph]](https://arxiv.org/abs/2603.14553) - cites `uproot`, `awkward`, the Scikit-HEP project.
 - [arXiv:2602.06895 [hep-ph]](https://arxiv.org/abs/2602.06895) - cites the Scikit-HEP project.
 - [arXiv:2512.04149 [hep-ph]](https://arxiv.org/abs/2512.04149) - cites `awkward`, `fastjet`, `Vector`.
 - [arXiv:2511.08359 [hep-ph]](https://arxiv.org/abs/2511.08359) - cites the Scikit-HEP project.
+- [arXiv:2511.07599 [hep-ph]](https://arxiv.org/abs/2511.07599) - cites `pylhe`.
 - [arXiv:2409.06651 [hep-ph]](https://arxiv.org/abs/2409.06651) - cites `pylhe`.
 - [arXiv:2405.11271 [hep-ph]](https://arxiv.org/abs/2405.11271) - cites `pylhe`.
 - [arXiv:2403.06336 [hep-ph]](https://arxiv.org/abs/2403.06336) - cites `pylhe`.

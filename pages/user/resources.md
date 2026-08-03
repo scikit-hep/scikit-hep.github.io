@@ -20,6 +20,9 @@ or related to, the Scikit-HEP project.
 
 ## Publications
 
+- _pylhe: A Lightweight Python interface to Les Houches Event files_,
+  Alexander Puck Neuwirth, Matthew Feickert, Lukas Heinrich, Eduardo Rodrigues,
+  [arXiv:2607.29352 \[hep-ph\]](https://arxiv.org/abs/2607.29352)
 - _Vector: JIT-compilable mathematical manipulations of ragged Lorentz vectors_,
   S. Chopra, H. Schreiner, E. Rodrigues, J. Eschle, J. Pivarski
   [J. Open Source Softw. 10(109), 7791](https://doi.org/10.21105/joss.07791)

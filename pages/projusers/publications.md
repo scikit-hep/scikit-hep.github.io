@@ -39,6 +39,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Particle Physics Phenomenology
 
+- [Eur. Phys. J. Plus 141 (2026) 927](https://doi.org/10.1140/epjp/s13360-026-08025-5) ([arXiv:2605.14083 [hep-ph]](https://arxiv.org/abs/2605.14083)) - cites `iminuit`.
 - [Phys. Scr. 101 231501 (2026)](https://doi.org/10.1088/1402-4896/ae7772) ([arXiv:2603.01489 [hep-ph]](https://arxiv.org/abs/2603.01489)) - cites `pylhe`.
 - [Phys. Rev. D 112, 114046 (2025)](https://doi.org/10.1103/lyh6-727b) ([arXiv:2508.15073 [hep-ph]](https://arxiv.org/abs/2508.15073)) - cites `iminuit`.
 - [Phys. Rev. C 112, 064906 (2025)](https://doi.org/10.1103/dqnx-1fqk) ([arXiv:2507.14036 [hep-ph]](https://arxiv.org/abs/2507.14036)) - cites `fastjet`.
@@ -110,7 +111,12 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 ### Astronomy, Astrophysics and Cosmology
 
 - [Monthly Notices of the Royal Astronomical Society, Volume 544, Issue 4, Dec. 2025, Pages 4288-4305](https://doi.org/10.1093/mnras/staf2004) ([arXiv:2508.03569 [astro-ph.GA]](https://arxiv.org/abs/2508.03569)) - cites `pyBumpHunter`.
+- [JCAP 06 (2025) 029](https://doi.org/10.1088/1475-7516/2025/06/029) ([arXiv:2411.17623 [astro-ph.CO]](https://arxiv.org/abs/2411.17623)) - cites `iminuit`.
 - [A&A 691, A328 (2024)](https://doi.org/10.1051/0004-6361/202450889) ([arXiv:2410.16042 [astro-ph.HE]](https://arxiv.org/abs/2410.16042)) - cites `iminuit`.
+- [Phys. Rev. D 111, L061307 (2025)](https://doi.org/10.1103/PhysRevD.111.L061307) ([arXiv:2407.06117 [astro-ph.CO]](https://arxiv.org/abs/2407.06117)) - cites `iminuit`.
+- [A&A 694, A8 (2025)](https://doi.org/10.1051/0004-6361/202450389) ([arXiv:2405.20409 [astro-ph.CO]](https://arxiv.org/abs/2405.20409)) - cites `iminuit`.
+- [JCAP 01 (2025) 148](https://doi.org/10.1088/1475-7516/2025/01/148) ([arXiv:2404.03004 [astro-ph.CO]](https://arxiv.org/abs/2404.03004)) - cites `iminuit`.
+- [JCAP 01 (2025) 124](https://doi.org/10.1088/1475-7516/2025/01/124) ([arXiv:2404.03001 [astro-ph.CO]](https://arxiv.org/abs/2404.03001)) - cites `iminuit`.
 - [A&A 660, A18 (2022)](https://doi.org/10.1051/0004-6361/202142000) ([arXiv:2112.14573 [astro-ph.IM]](https://arxiv.org/abs/2112.14573)) - cites `iminuit`.
 - [Phys. Rev. D 105, 063028 (2022)](https://doi.org/10.1103/PhysRevD.105.063028) ([arXiv:2110.03679 [astro-ph.HE]](https://arxiv.org/abs/2110.03679)) - cites `iminuit`.
 - [Phys. Rev. D 105, 023015 (2022)](https://doi.org/10.1103/PhysRevD.105.023015) ([arXiv:2111.05864 [astro-ph.HE]](https://arxiv.org/abs/2111.05864)) - cites `iminuit`.
@@ -230,6 +236,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Experimental Particle Physics
 
+- [arXiv:2607.06775 [hep-ex]](https://arxiv.org/abs/2607.06775) - cites `awkward`, `uproot`.
 - [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, Scikit-HEP project.
 - [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.
@@ -260,6 +267,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 ### Astronomy, Astrophysics and Cosmology
 
 - [arXiv:2604.01850 [astro-ph.IM]](https://arxiv.org/abs/2604.01850) - cites `boost-histogram`, `mplhep`, `Particle`.
+- [arXiv:2603.09017 [astro-ph.IM]](https://arxiv.org/abs/2603.09017) - cites `iminuit`.
 - [arXiv:2112.01828 [astro-ph.IM]](https://arxiv.org/abs/2112.01828) - cites `uproot`.
 - [arXiv:2001.01804 [astro-ph.IM]](https://arxiv.org/abs/2001.01804) - cites `iminuit`.
 - [arXiv:1806.03167 [astro-ph.IM]](https://arxiv.org/abs/1806.03167) - cites `iminuit`.
@@ -291,6 +299,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 Over 80 PhD theses (from ATLAS, Belle II, CMS, MicroBooNE, phenomenology, etc.) cite the `pyhf` package (list seen [here](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=refersto%3Arecid%3A1845084&doc_type=thesis)).
 
 - [Tommy Lam (Virginia Tech., Blacksburg), Jun. 2026](https://inspirehep.net/literature/3179449), Belle II experiment - cites `iminuit`, `pyhf`, Scikit-HEP project.
+- [James Andrew Gooding (Dortmund U.), Mar. 2026](https://inspirehep.net/literature/3140144), LHCb experiment - cites `iminuit`.
 - [Lars Kolk (Tech. U., Dortmund), Feb. 2026](https://inspirehep.net/literature/3156976), LHCb experiment - cites `awkward`, `boost-histogram`, `iminuit`, `numba-stats`, `Particle`, `uproot`, `Vector`, Scikit-HEP project.
 - [Frederic Renner (Humboldt U., Berlin), Jan. 2026](https://inspirehep.net/literature/3103537), ATLAS experiment - cites `cabinetry`, `pyhf`.
 - [Marie Hartmann (IJCLab, Orsay), Nov. 2025](https://inspirehep.net/literature/3083059), LHCb experiment - cites the Scikit-HEP project.

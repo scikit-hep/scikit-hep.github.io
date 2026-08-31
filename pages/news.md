@@ -5,6 +5,8 @@ permalink: /news/
 nav_order: 2
 ---
 
+**August 2026:** Scikit-HEP turns 10!
+
 **July 2026:** Package `HistServ` joined Scikit-HEP.
 
 **July 2026:** Major release `pylhe` 2.0.0.

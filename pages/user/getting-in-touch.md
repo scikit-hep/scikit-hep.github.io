@@ -13,7 +13,7 @@ nav_order: 10
 The fastest and most effective way to get in touch with us is via the GitHub pages and discussions tabs
 of the packages of interest. Often, the creation of a GitHub Issue is the best way.
 
-# Mailing lists
+## Mailing lists
 
 Forum for general matters, announcements and discussions concerning the
 Scikit-HEP project :

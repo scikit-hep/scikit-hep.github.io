@@ -31,7 +31,5 @@ stack. If you are looking for a deprecated package, see the [full package list][
 
 [github-badge]: https://img.shields.io/badge/GitHub--blue?style=social&logo=GitHub
 [github repository]: https://github.com/scikit-hep/
-[gitter-skhep-link]: https://gitter.im/Scikit-HEP/community
-[gitter-skhep-badge]: https://badges.gitter.im/Scikit-HEP/community.svg
 
 [full package list]: {% link pages/packages/index.md %}

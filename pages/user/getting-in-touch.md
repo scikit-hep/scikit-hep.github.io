@@ -15,13 +15,6 @@ of the packages of interest. Often, the creation of a GitHub Issue is the best w
 
 ## Mailing lists
 
-Forum for general matters, announcements and discussions concerning the
-Scikit-HEP project :
-[scikit-hep-forum@googlegroups.com](mailto:scikit-hep-forum@googlegroups.com).
-Please go
-[here](https://groups.google.com/forum/#!forum/scikit-hep-forum) to
-subscribe.
-
 Mailing list to ping all admins at once:
 [scikit-hep-admins@googlegroups.com](mailto:scikit-hep-admins@googlegroups.com).
 Note that this list is private but anyone can send an email to it

@@ -139,6 +139,10 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - cites `iminuit`.
 - [JCAP 11 (2017) 032](https://doi.org/10.1088/1475-7516/2017/11/032) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `iminuit`.
 
+### Computer Science, Machine Learning
+
+- [The VLDB Journal 34, 55 (2025)](https://doi.org/10.1007/s00778-025-00924-w) - cites the Scikit-HEP project.
+
 ### Instrumentation and Detectors
 
 - [Eur. Phys. J. C 82, 79 (2022)](https://doi.org/10.1140/epjc/s10052-022-09993-5) ([arXiv:2107.02119 [physics.ins-det]](https://arxiv.org/abs/2107.02119)) - cites `uproot`.
@@ -242,7 +246,10 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Experimental Particle Physics
 
+- [arXiv:2609.34698 [hep-ex]](https://arxiv.org/abs/2609.34698) - cites `awkward`, `coffea`, `hist`, `histserv`, `uproot`, Scikit-HEP project.
+- [arXiv:2609.22555 [hep-ex]](https://arxiv.org/abs/2609.22555) - cites `iminuit`, Scikit-HEP project.
 - [arXiv:2607.06775 [hep-ex]](https://arxiv.org/abs/2607.06775) - cites `awkward`, `uproot`.
+- [arXiv:2606.26089 [hep-ex]](https://arxiv.org/abs/2606.26089) - cites `uproot`.
 - [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, Scikit-HEP project.
 - [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.

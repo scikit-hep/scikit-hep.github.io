@@ -96,8 +96,9 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [Phys. Rev. D 109, 096011 (2024)](https://doi.org/10.1103/PhysRevD.109.096011) ([arXiv:2402.06996 [nucl-th]](https://arxiv.org/abs/2402.06996)) - cites `Particle`, Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 015104 (2022)](https://doi.org/10.1088/1361-6471/ac3631) ([arXiv:2106.16243 [nucl-ex]](https://arxiv.org/abs/2106.16243)) - cites `iminuit`.
 
-### Data Analysis, Machine Learning, Statistics and Probability
+### Data Analysis, Computer Science, Machine Learning, Statistics and Probability
 
+- [The VLDB Journal 34, 55 (2025)](https://doi.org/10.1007/s00778-025-00924-w) - cites the Scikit-HEP project.
 - [Mach. Learn.: Sci. Technol. 6 (2025) 025061](https://doi.org/10.1088/2632-2153/addbc1) ([arXiv:2411.16234 [hep-ph]](https://arxiv.org/abs/2411.16234)) - cites `pylhe`.
 - [Comput. Softw. Big Sci. 8, 3 (2024)](https://doi.org/10.1007/s41781-023-00112-x) ([arxiv:2308.09575 [physics.data-an]](https://arxiv.org/abs/2308.09575)) - cites the Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 025001 (2022)](https://doi.org/10.1088/1361-6471/ac3dcd) ([arXiv:2102.04275 [physics.data-an]](https://arxiv.org/abs/2102.04275)) - cites `probfit`.
@@ -242,7 +243,10 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 
 ### Experimental Particle Physics
 
+- [arXiv:2609.34698 [hep-ex]](https://arxiv.org/abs/2609.34698) - cites `awkward`, `coffea`, `hist`, `histserv`, `uproot`, Scikit-HEP project.
+- [arXiv:2609.22555 [hep-ex]](https://arxiv.org/abs/2609.22555) - cites `iminuit`, Scikit-HEP project.
 - [arXiv:2607.06775 [hep-ex]](https://arxiv.org/abs/2607.06775) - cites `awkward`, `uproot`.
+- [arXiv:2606.26089 [hep-ex]](https://arxiv.org/abs/2606.26089) - cites `uproot`.
 - [arXiv:2605.29778 [hep-ex]](https://arxiv.org/abs/2605.29778) - cites `hepstats`, Scikit-HEP project.
 - [arXiv:2603.20179 [hep-ex]](https://arxiv.org/abs/2603.20179) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `Particle`, `pyhf`, `uproot`, `Vector`.
 - [CERN Yellow Rep. Monogr. 8 (2025)](https://doi.org/10.17181/CERN.35CH.2O2P) ([arXiv:2511.03883 [hep-ex]](https://arxiv.org/abs/2511.03883)) - cites the Scikit-HEP project.

@@ -96,8 +96,9 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [Phys. Rev. D 109, 096011 (2024)](https://doi.org/10.1103/PhysRevD.109.096011) ([arXiv:2402.06996 [nucl-th]](https://arxiv.org/abs/2402.06996)) - cites `Particle`, Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 015104 (2022)](https://doi.org/10.1088/1361-6471/ac3631) ([arXiv:2106.16243 [nucl-ex]](https://arxiv.org/abs/2106.16243)) - cites `iminuit`.
 
-### Data Analysis, Machine Learning, Statistics and Probability
+### Data Analysis, Computer Science, Machine Learning, Statistics and Probability
 
+- [The VLDB Journal 34, 55 (2025)](https://doi.org/10.1007/s00778-025-00924-w) - cites the Scikit-HEP project.
 - [Mach. Learn.: Sci. Technol. 6 (2025) 025061](https://doi.org/10.1088/2632-2153/addbc1) ([arXiv:2411.16234 [hep-ph]](https://arxiv.org/abs/2411.16234)) - cites `pylhe`.
 - [Comput. Softw. Big Sci. 8, 3 (2024)](https://doi.org/10.1007/s41781-023-00112-x) ([arxiv:2308.09575 [physics.data-an]](https://arxiv.org/abs/2308.09575)) - cites the Scikit-HEP project.
 - [J. Phys. G: Nucl. Part. Phys. 49 025001 (2022)](https://doi.org/10.1088/1361-6471/ac3dcd) ([arXiv:2102.04275 [physics.data-an]](https://arxiv.org/abs/2102.04275)) - cites `probfit`.
@@ -138,10 +139,6 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [PoS (ICRC2019) 881](https://pos.sissa.it/358/881/pdf) ([arXiv:1909.08365 [astro-ph.HE]](https://arxiv.org/abs/1909.08365)) - cites `iminuit`.
 - [A&A 625, A15 (2019)](https://doi.org/10.1051/0004-6361/201833032) ([arXiv:1803.06197 [astro-ph.CO]](https://arxiv.org/abs/1803.06197)) - cites `iminuit`.
 - [JCAP 11 (2017) 032](https://doi.org/10.1088/1475-7516/2017/11/032) ([arXiv:1709.06022 [astro-ph.CO]](https://arxiv.org/abs/1709.06022)) - cites `iminuit`.
-
-### Computer Science, Machine Learning
-
-- [The VLDB Journal 34, 55 (2025)](https://doi.org/10.1007/s00778-025-00924-w) - cites the Scikit-HEP project.
 
 ### Instrumentation and Detectors
 

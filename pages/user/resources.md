@@ -22,10 +22,11 @@ or related to, the Scikit-HEP project.
 
 - _pylhe: A Lightweight Python interface to Les Houches Event files_,
   Alexander Puck Neuwirth, Matthew Feickert, Lukas Heinrich, Eduardo Rodrigues,
+  [J. Open Source Softw. 11, 11128 (2026)](https://doi.org/10.21105/joss.11128),
   [arXiv:2607.29352 \[hep-ph\]](https://arxiv.org/abs/2607.29352)
 - _Vector: JIT-compilable mathematical manipulations of ragged Lorentz vectors_,
   S. Chopra, H. Schreiner, E. Rodrigues, J. Eschle, J. Pivarski
-  [J. Open Source Softw. 10(109), 7791](https://doi.org/10.21105/joss.07791)
+  [J. Open Source Softw. 10, 7791 (2025)](https://doi.org/10.21105/joss.07791)
 - _Fitting the BumpHunter test statistic distribution and global p-value estimation_,
   L. Vaslin, S. Calvet, V. Barra, J. Donini,
   [arXiv:2211.07446 \[hep-ex\]](https://arxiv.org/abs/2211.07446)
@@ -37,7 +38,8 @@ or related to, the Scikit-HEP project.
   [arXiv:2202.03911 \[hep-ex\]](https://arxiv.org/abs/2202.03911)
 - _pyhf: pure-Python implementation of HistFactory statistical models_,
   L. Heinrich, M. Feickert, G. Stark and K. Cranmer,
-  [J. Open Source Softw. 6 2823 (2021)](https://doi.org/10.21105/joss.02823)
+  [J. Open Source Softw. 6, 2823 (2021)](https://doi.org/10.21105/joss.02823),
+  [arXiv:2211.15838 \[hep-ex\]](https://arxiv.org/abs/2211.15838)
 - _Bayesian Block Histogramming for High Energy Physics_,
   Brian Pollack, Saptaparna Bhattacharya, Michael Schmitt,
   [arXiv:1708.00810 \[physics.data-an\]](https://arxiv.org/abs/1708.00810)

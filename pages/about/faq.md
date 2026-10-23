@@ -25,7 +25,7 @@ Of course \"sci\" stands for science.
 ## How to get started contributing?
 
 You are most welcome and encouraged to get in touch via the resources
-listed at [Getting in touch](getting-in-touch).
+listed at [Getting in touch]({% link pages/user/getting-in-touch.md %}).
 Please also refer to each package repository and browse through the list
 of \"issues\" or files CONTRIBUTING for details on how to get involved.
 

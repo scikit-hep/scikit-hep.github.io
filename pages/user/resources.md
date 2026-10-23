@@ -103,12 +103,12 @@ or related to, the Scikit-HEP project.
   [ACAT 2019 Workshop](https://indico.cern.ch/event/708041/), Saas Fee, Switzerland;
   [J. Phys. Conf. Ser. 1525 (2020), 012053](https://doi.org/10.1088/1742-6596/1525/1/012053)
 - _The Scikit-HEP project_, Eduardo Rodrigues,
-  [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
+  [CHEP 2018 Conference](https://chep2018.org/), Sofia, Bulgaria;
   [EPJ Web of Conferences 214, 06005 (2019)](https://doi.org/10.1051/epjconf/201921406005);
   [arXiv:1905.00002 \[physics.comp-ph\]](https://arxiv.org/abs/1905.00002)
 - _Columnar data processing for HEP analysis_,
   Jim Pivarski, Jaydeep Nandi, David Lange and Peter Elmer,
-  [CHEP 2018 Conference](http://chep2018.org/), Sofia, Bulgaria;
+  [CHEP 2018 Conference](https://chep2018.org/), Sofia, Bulgaria;
   [EPJ Web of Conferences 214, 06026 (2019)](https://doi.org/10.1051/epjconf/201921406026)
 
 ## Press articles, podcasts
@@ -412,10 +412,10 @@ or related to, the Scikit-HEP project.
   - _Uproot Tutorial_, Mason Proffitt
     \[[link](https://indico.cern.ch/event/834411/timetable/#b-351469-python-for-analysis-r)\]
 
-- **25 November 2019:** [LHCb experiment](http://lhcb.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
+- **25 November 2019:** [LHCb experiment](https://lhcb.web.cern.ch/) [Statistics Working Group meeting](https://indico.cern.ch/event/863729/), CERN:
   - _An introduction to pyhf and HistFactory likelihoods_, Matthew Feickert \[[slides](https://matthewfeickert.github.io/talk-LHCb-Stats-Forum/index.html)\]
 
-- **4-8 November 2019:** [CHEP 2019 conference](http://chep2019.org/):
+- **4-8 November 2019:** [CHEP 2019 conference](https://indico.cern.ch/event/773049/):
   - _The Scikit-HEP project - overview and prospects_, Eduardo Rodrigues et al.
     \[[PDF](https://indico.cern.ch/event/773049/contributions/3476182/attachments/1938227/3213768/EduardoRodrigues_2019-11-05_CHEP2019Adelaide.pdf)\]
   - _Recent developments in histogram libraries_, Henry Schreiner
@@ -465,7 +465,7 @@ or related to, the Scikit-HEP project.
   - _AmpGen & Particle/DecayLanguage_, Henry Schreiner
     \[[link](https://indico.cern.ch/event/822074/contributions/3471460/)\]
 
-- **18 June 2019:** [LHCb experiment](http://lhcb.cern.ch/) Week, CERN:
+- **18 June 2019:** [LHCb experiment](https://lhcb.web.cern.ch/) Week, CERN:
   - _Particles and decays in the Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF]({% link assets/resources/rodrigues-lhcb-2019-08-18.pdf %})\]
 
@@ -525,7 +525,7 @@ or related to, the Scikit-HEP project.
   and Herzegovina:
   - _Writing ROOT files with uproot_, Pratyush Das, Jim Pivarski
 
-- **9 July 2018:** [CHEP 2018 Conference](http://chep2018.org/),
+- **9 July 2018:** [CHEP 2018 Conference](https://chep2018.org/),
   Sofia, Bulgaria:
   - _The Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF](https://indico.cern.ch/event/587955/contributions/2937549/attachments/1683232/2705316/2018-07-09_CHEP18Sofia_EduardoRodrigues.pdf)\]
@@ -550,7 +550,7 @@ or related to, the Scikit-HEP project.
   - _Scikit-HEP project status_, Eduardo Rodrigues
 
 - **6 April 2017:** presentation of the project to the LHCb
-  experiment, [LHCb experiment](http://lhcb.cern.ch/) Analysis &
+  experiment, [LHCb experiment](https://lhcb.web.cern.ch/) Analysis &
   Software Week, CERN:
   - _The Scikit-HEP project_, Eduardo Rodrigues
     \[[PDF]({% link assets/resources/rodrigues-lhcb-2017-04-06.pdf %})\]

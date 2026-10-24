@@ -229,7 +229,7 @@ Eduardo Rodrigues, Jim Pivarski and others.
 [cms experiment]: https://cms.cern/
 [iris-hep institute]: https://iris-hep.org/
 [km3net experiment]: https://www.km3net.org/
-[lhcb experiment]: http://lhcb.web.cern.ch/
+[lhcb experiment]: https://lhcb.web.cern.ch/
 [numfocus]: https://numfocus.org/
 [pdg]: https://pdg.lbl.gov/
 [online particle physics information]: https://github.com/particledatagroup/hep-resources

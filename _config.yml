@@ -10,7 +10,8 @@ github_username: scikit-hep
 markdown: kramdown
 theme: "just-the-docs"
 plugins:
-  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
 
 # Theme settings
 
@@ -32,17 +33,10 @@ gh_edit_repository: "https://github.com/scikit-hep/scikit-hep.github.io"
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree" # "tree" or "edit"
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - LICENSE
+  - Rakefile
+  - README.md
 
 callouts:
   warning:

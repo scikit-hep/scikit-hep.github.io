@@ -196,9 +196,9 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
   [J. Phys. Conf. Ser. 3206 (2026), 012002](https://doi.org/10.1088/1742-6596/3206/1/012002) - cites `awkward`, Scikit-HEP project.
 - [ACAT 2022 Workshop](https://indico.cern.ch/event/1106990/), Bari, Italy;
   [arXiv:2303.02202 [hep-ex]](https://arxiv.org/abs/2303.02202) - cites `awkward`, `uproot`.
-- [41st International Conference on High Energy Physics (ICHEP 2022)](http://www.ichep2022.it/), Bologna, Italy;
+- [41st International Conference on High Energy Physics (ICHEP 2022)](https://www.ichep2022.it/), Bologna, Italy;
   [PoS ICHEP2022 (2022) 235](https://doi.org/10.22323/1.414.0235) - cites `awkward`, `boost-histogram`, `cabinetry`, `Hist`, `pyhf`, `uproot`, Scikit-HEP project.
-- [41st International Conference on High Energy Physics (ICHEP 2022)](http://www.ichep2022.it/), Bologna, Italy;
+- [41st International Conference on High Energy Physics (ICHEP 2022)](https://www.ichep2022.it/), Bologna, Italy;
   [PoS ICHEP2022 (2022) 230](https://doi.org/10.22323/1.414.0230) - cites the Scikit-HEP project.
 - [ACAT 2021 Workshop](https://cern.ch/acat2021);
   [J. Phys. Conf. Ser. 2438 (2023), 012033](https://doi.org/10.1088/1742-6596/2438/1/012033) - cites `awkward`, `boost-histogram`, `Hist`, `mplhep`, `uproot`, Scikit-HEP project.
@@ -211,7 +211,7 @@ over 220 publications cite its JOSS paper (list from [here](https://inspirehep.n
 - [EPS-HEP 2021 Conference](https://www.eps-hep2021.eu/);
   [PoS EPS-HEP2021 (2022) 137](https://doi.org/10.22323/1.398.0137) - cites `iminuit`.
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
-  [EPJ Web of Conferences 251, 03068 (2021)](http://doi.org/10.1051/epjconf/202125103068) - cites `awkward`.
+  [EPJ Web of Conferences 251, 03068 (2021)](https://doi.org/10.1051/epjconf/202125103068) - cites `awkward`.
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);
   [EPJ Web of Conferences 251, 03067 (2021)](https://doi.org/10.1051/epjconf/202125103067) - cites `awkward`, `boost-histogram`, `mplhep `, `pyhf`, `uproot`.
 - [virtual CHEP 2021 Conference](https://indico.cern.ch/event/948465/);

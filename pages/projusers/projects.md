@@ -52,9 +52,9 @@ an Astroparticle Physics European research infrastructure located in the Mediter
 
 [![img-LHCb]][lhcb]
 
-[LHCb](http://lhcb.web.cern.ch/) - the LHCb (Large Hadron Collider beauty) experiment at CERN, Switzerland.
+[LHCb](https://lhcb.web.cern.ch/) - the LHCb (Large Hadron Collider beauty) experiment at CERN, Switzerland.
 
-[lhcb]: http://lhcb.web.cern.ch/
+[lhcb]: https://lhcb.web.cern.ch/
 
 [img-LHCb]: {% link /assets/images/projusers/logo_lhcb.png %}
 {: width="120px"}
